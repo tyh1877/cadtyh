@@ -64,3 +64,23 @@ required before a final claim about general Mesh/B-Rep agreement.
    frozen audit set.
 4. Add STEP pairs from at least three more manufacturers before claiming B-Rep
    agreement. The current official Trossen subset is calibration-only.
+
+## Equal-weight v2 development result
+
+After the original failure, a hierarchically equal-weighted development score was
+tested. Every raw feature was converted to a 0–1 percentile. Features were averaged
+equally within their module, and modules were then averaged equally. Geometry,
+assembly, and kinematic scores remain separately available.
+
+| v2 check | Result | Threshold | Status |
+|---|---:|---:|---|
+| Remesh rank stability, 50% faces | rho=0.960 | >=0.85 | pass |
+| Remesh rank stability, 25% faces | rho=0.948 | >=0.85 | pass |
+| Triangle-count confounding | rho=0.119 | abs(rho)<0.30 | pass |
+| Independent URDF Mesh vs B-Rep | n=9, rho=-0.227 | >=0.50 | fail |
+| Same-geometry STEP mesh vs B-Rep | n=10, rho=-0.016 | >=0.50 | fail |
+
+Equal weighting therefore improves methodological defensibility and tessellation
+stability but does not solve construct validity. The current No-Go remains a metric
+No-Go, not a Mesh+URDF dataset No-Go. The next revision must add scale-aware feature,
+concavity, surface-type, and task-difficulty modules on a declared development set.

@@ -1,0 +1,29 @@
+{
+  "status": "development_only_post_failure_revision",
+  "n_entities": 142,
+  "normalization": "within-ratio percentile ranks in [0,1]",
+  "weighting": "equal within modules; equal across modules",
+  "geometry_modules": {
+    "orientation": [
+      "normal_spectral_entropy"
+    ],
+    "curvature": [
+      "curvature_entropy",
+      "dihedral_q90_deg",
+      "sharp_rate_30deg"
+    ]
+  },
+  "remesh_rho_original_vs_50pct": 0.9604190284075332,
+  "remesh_rho_original_vs_25pct": 0.9475830066910826,
+  "triangle_count_rho": 0.11903616606363251,
+  "independent_mesh_brep_n": 9,
+  "independent_mesh_brep_rho": -0.2273366604543674,
+  "same_geometry_mesh_brep_n": 10,
+  "same_geometry_mesh_brep_rho": -0.015731050463508815,
+  "checks": {
+    "remesh": true,
+    "triangle_confound": true,
+    "independent_brep": false,
+    "same_geometry_brep": false
+  }
+}

@@ -55,6 +55,21 @@ or diversity is incomplete; proceed only with the limitation explicitly scoped.
 No-Go: expert agreement fails, mesh score fails expert validity, or the score is
 primarily tessellation/triangle-count driven after one allowed metric revision.
 
+## Post-failure development revision: equal-weight v2
+
+The original frozen score failed B-Rep validity. The following revision is therefore
+explicitly **development-only** and cannot reverse the original result on Audit-30.
+
+- Normalize every raw feature to a 0–1 percentile within the eligible development
+  population, after aligning all directions so larger means more complex.
+- Average features equally within their semantic module.
+- Average semantic modules equally; do not let a module gain weight merely because
+  it contains more raw indicators.
+- Report geometry, assembly, and kinematic complexity separately. Geometry is the
+  primary score; an equal three-way overall score is secondary only.
+- Do not learn weights from experts or Audit-30. A new holdout must be frozen before
+  v2 can be described as independently validated.
+
 ## Leakage controls
 
 - Thresholds above are frozen before looking at correlations.

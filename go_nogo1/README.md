@@ -14,6 +14,13 @@ python -c "import sys; print(sys.executable)"
 All automated experiment commands must call `.venv\Scripts\python.exe` directly so
 they do not depend on shell activation state.
 
+The environment is isolated (`include-system-site-packages = false`). Validate it
+before an experiment with:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip check
+```
+
 ## Data regeneration
 
 Downloaded datasets are intentionally excluded from Git.
@@ -31,3 +38,9 @@ Downloaded datasets are intentionally excluded from Git.
 See `STATUS.md`. The original mesh descriptor passes tessellation robustness but
 fails the current B-Rep validity gate. The next experiment revision uses normalized,
 hierarchically equal-weighted metric groups; experts remain an auxiliary validation.
+
+Run the equal-weight development revision with:
+
+```powershell
+.\scripts\run_equal_weight_v2.ps1
+```
