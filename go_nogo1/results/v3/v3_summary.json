@@ -1,0 +1,65 @@
+{
+  "formula": "equal mean(orientation, local curvature, multiscale persistence)",
+  "validation_target": "equal mean of percentile-normalized Chamfer, Hausdorff, and normal error at 1k/5k/10k nominal face budgets",
+  "final_holdout_touched": false,
+  "development_n": 80,
+  "validation_n": 32,
+  "development_primary_diagnostic": {
+    "rho": 0.3430852483930065,
+    "n": 80
+  },
+  "validation_primary": {
+    "rho": 0.36692036495005076,
+    "n": 32
+  },
+  "validation_by_budget": {
+    "1000": {
+      "rho": 0.552539923465138,
+      "n": 32
+    },
+    "5000": {
+      "rho": 0.2593921815386216,
+      "n": 32
+    },
+    "10000": {
+      "rho": 0.28120046849829117,
+      "n": 32
+    }
+  },
+  "validation_remesh_stability": {
+    "original_vs_50": {
+      "rho": 0.7819701549004938,
+      "n": 32
+    },
+    "original_vs_25": {
+      "rho": 0.7908023964229446,
+      "n": 32
+    }
+  },
+  "validation_triangle_confound": {
+    "rho": 0.26472206934507425,
+    "n": 32
+  },
+  "validation_leave_one_module_out": {
+    "score_without_orientation": {
+      "rho": 0.7663517140767382,
+      "n": 32
+    },
+    "score_without_local_curvature": {
+      "rho": 0.8530789188373767,
+      "n": 32
+    },
+    "score_without_persistence": {
+      "rho": 0.9034862537410362,
+      "n": 32
+    }
+  },
+  "criteria": {
+    "validation_objective_rho_gte_0.60": false,
+    "remesh_rho_gte_0.85": false,
+    "triangle_confound_abs_rho_lt_0.30": true,
+    "leave_one_module_out_rho_gte_0.80": false,
+    "all_budget_directions_positive": true
+  },
+  "decision": "NO-GO"
+}

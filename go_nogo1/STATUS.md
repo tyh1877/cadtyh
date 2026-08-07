@@ -84,3 +84,24 @@ Equal weighting therefore improves methodological defensibility and tessellation
 stability but does not solve construct validity. The current No-Go remains a metric
 No-Go, not a Mesh+URDF dataset No-Go. The next revision must add scale-aware feature,
 concavity, surface-type, and task-difficulty modules on a declared development set.
+
+## Objective-task v3 result (2026-08-07)
+
+The product-family split is frozen at 80 Development, 32 Validation, and 30 sealed
+Final Holdout entities. Fixed-budget approximation completed for all 112 Development
+and Validation entities at 1k, 5k, and 10k nominal face budgets (336/336 successful,
+zero mesh failures). Final Holdout was not touched.
+
+| v3 check | Validation result | Threshold | Status |
+|---|---:|---:|---|
+| Geometry score vs objective approximation difficulty | rho=0.367, n=32 | >=0.60 | fail |
+| At 1k / 5k / 10k budgets | 0.553 / 0.259 / 0.281 | all positive | pass |
+| Remesh rank stability, 50% / 25% | 0.782 / 0.791 | >=0.85 | fail |
+| Triangle-count confounding | rho=0.265 | abs(rho)<0.30 | pass |
+| Leave-one-module-out stability | min rho=0.766 | >=0.80 | fail |
+
+**Decision: NO-GO for geometry score v3.** The failure is not caused primarily by
+triangle count, and the consistently positive budget directions suggest weak signal.
+However, it is not strong or stable enough for the paper's complexity claim. The
+result rejects this metric revision, not Mesh+URDF as the benchmark representation.
+The Final Holdout remains available only for a materially different descriptor.

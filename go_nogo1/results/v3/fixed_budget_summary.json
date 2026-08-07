@@ -1,0 +1,16 @@
+{
+  "splits_run": [
+    "development",
+    "validation"
+  ],
+  "final_holdout_touched": false,
+  "n_entities": 112,
+  "n_rows": 336,
+  "budgets": [
+    1000,
+    5000,
+    10000
+  ],
+  "successful_rows": 336,
+  "rows_with_failures": 0
+}

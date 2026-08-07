@@ -77,3 +77,28 @@ explicitly **development-only** and cannot reverse the original result on Audit-
 - Experts do not see automated scores, source, triangle counts, or B-Rep results.
 - One metric revision is allowed only on a separately recorded development subset;
   the frozen audit set is not reused for tuning.
+
+## v3 objective-task amendment (2026-08-07)
+
+This amendment replaces expert opinion as the primary development target. Expert
+blind ratings remain an auxiliary construct-validity check and do not determine
+feature weights.
+
+- Freeze 142 eligible entities by product family into Development (80), Validation
+  (32), and Final Holdout (30), using deterministic seed `20260807`.
+- Frozen manifest SHA-256:
+  `dbed8515b7af0ab5a577b037a5f99c7277b7239af2f2eb0ab3e0a98f7c786c63`.
+- Fit every empirical percentile transform on Development only.
+- Geometry v3 is the equal mean of three equal-weight modules: orientation
+  distribution, local curvature, and multiscale curvature persistence. No learned
+  weights and no triangle-count feature are permitted.
+- The external objective target is approximation difficulty at nominal robot-level
+  budgets of 1k, 5k, and 10k faces. At each budget, normalized Chamfer, normalized
+  Hausdorff, and normal error receive equal weight; budgets then receive equal weight.
+- Per-link simplification has a 20-face minimum, so achieved faces are recorded and
+  may exceed the nominal robot-level budget.
+- Go requires, on Validation: primary Spearman rho >= 0.60; remesh rank rho >= 0.85;
+  |triangle-count rho| < 0.30; leave-one-module-out rho >= 0.80; and positive
+  correlations at every budget.
+- Final Holdout must not be read until a materially revised formula is frozen after
+  passing Development diagnostics and the one-use Validation decision.

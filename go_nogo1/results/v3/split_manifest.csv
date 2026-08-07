@@ -1,0 +1,143 @@
+﻿entity_id,manufacturer,name,product_family,source,complexity_stratum,v3_split,split_seed,split_manifest_hash
+arm-f7b0b901d3,ABB,IRB 120,ABB|irb 120,matlab,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-7d8304122a,ABB,IRB 120-3/0.6,ABB|irb 120,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-d23914e41d,ABB,IRB 1200-5/0.9,ABB|irb 1200,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-402d7168a6,ABB,IRB 1200-7/0.7,ABB|irb 1200,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-936a2bbc83,ABB,IRB 120T,ABB|irb 120t,matlab,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-30008f0a9e,ABB,IRB 120T-3/0.6,ABB|irb 120t,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-d8cf128269,ABB,IRB 140,ABB|irb 140,robotics-toolbox,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-f86e598566,ABB,IRB 140T,ABB|irb 140,robotics-toolbox,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-4e79777e86,ABB,IRB 1600,ABB|irb 1600,matlab,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-c92ba5c644,ABB,IRB 1600-6/1.2,ABB|irb 1600,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-674fb8e440,ABB,IRB 1600-8/1.45,ABB|irb 1600,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-8fcf241b6f,ABB,IRB 52-7/1.2,ABB|irb 52,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-91f018718c,ABB,IRB 52-7/1.45,ABB|irb 52,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-065970a45f,ABB,IRB 5400,ABB|irb 5400,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-6af92e32a6,ABB,IRB 6600-255/2.55,ABB|irb 6600,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-19acb3833f,Fanuc,CR-35iA,Fanuc|cr-35ia,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-8802f2b8b4,Fanuc,CR-7iA,Fanuc|cr-7ia,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-3acdb3f5e2,Fanuc,CR-7iA/L,Fanuc|cr-7ia,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-98c28568ba,Fanuc,CRX-10iA/L,Fanuc|crx-10ia,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-cf88bb5d3f,Fanuc,LR Mate 200i,Fanuc|lr mate 200i,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-fa86494fa0,Fanuc,LR Mate 200iB,Fanuc|lr mate 200i,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-4c7b408826,Fanuc,LR Mate 200iB/3L,Fanuc|lr mate 200i,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-cb42051aad,Fanuc,LR Mate 200iC,Fanuc|lr mate 200i,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-de1be0b74e,Fanuc,LR Mate 200iC/5F,Fanuc|lr mate 200i,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-53f9b9bc6b,Fanuc,LR Mate 200iC/5H,Fanuc|lr mate 200i,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-63ba00c5ba,Fanuc,LR Mate 200iC/5HS,Fanuc|lr mate 200i,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-697cb5dd8b,Fanuc,LR Mate 200iC/5L,Fanuc|lr mate 200i,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-b9fde37ad7,Fanuc,M-16iB,Fanuc|m-16ib,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ca973d7c40,Fanuc,M-20iA,Fanuc|m-20ia,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-58bea95949,Fanuc,M-20iA/10L,Fanuc|m-20ia,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-f39f0bc934,Fanuc,M-20iB/25,Fanuc|m-20ib,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-80ddefb001,Fanuc,M-430iA/2F,Fanuc|m-430ia,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-de477bc804,Fanuc,M-430iA/2P,Fanuc|m-430ia,ros-industrial,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-c10bd68349,Fanuc,M-6iB,Fanuc|m-6ib,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-b7a6f7cec6,Fanuc,M-6iB/6S,Fanuc|m-6ib,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ac0ed3c3ba,Fanuc,M-710iC/45M,Fanuc|m-710ic,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-0cf081ce97,Fanuc,M-710iC/50,Fanuc|m-710ic,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ee37d02375,Fanuc,M-900iA/260L,Fanuc|m-900ia,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ad68760742,Fanuc,M-900iB/700,Fanuc|m-900ib,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-f999a17088,Fanuc,R-2000iB/210F,Fanuc|r-2000ib,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-43fa322555,Franka Emika,FR3,Franka Emika|fr3,oems,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-07307859e2,Franka Emika,Panda,Franka Emika|panda,matlab,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-dcc2b0ce1e,KUKA,KR 10 R1100 sixx,KUKA|kr 10,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-a751040684,KUKA,KR 10 R1420,KUKA|kr 10,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-3ce41d3c31,KUKA,KR 10 R900-2,KUKA|kr 10,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-a49344adee,KUKA,KR 16-2,KUKA|kr 16,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-e07d114785,KUKA,KR 6 R700 sixx,KUKA|kr 6,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-c8e061a405,KUKA,KR 6 R900 sixx,KUKA|kr 6,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-aa1b44f60a,KUKA,KR 6 R900-2,KUKA|kr 6,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-8feb5af658,Kinova Robotics,Jaco J2N4S300,Kinova Robotics|jaco,oems,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-0d0d196c9d,Kinova Robotics,Jaco J2N6S200,Kinova Robotics|jaco,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-9c4ffe22a9,Kinova Robotics,Jaco J2N6S300,Kinova Robotics|jaco,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-fb66eee2b5,Kinova Robotics,Jaco J2N7S300,Kinova Robotics|jaco,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-1998f45a5c,Kinova Robotics,Jaco J2S6S200,Kinova Robotics|jaco,oems,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-9c6c2f8aef,Kinova Robotics,Jaco J2S6S300,Kinova Robotics|jaco,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-296b557ef0,Kinova Robotics,Jaco J2S7S300,Kinova Robotics|jaco,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-30ac22fcc7,Kinova Robotics,Mico M1N4S200,Kinova Robotics|mico,matlab,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-fbeebf16bf,Kinova Robotics,Mico M1N6S200,Kinova Robotics|mico,matlab,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-6db670c663,Kinova Robotics,Mico M1N6S300,Kinova Robotics|mico,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ab15a75247,Lynxmotion,AL5D,Lynxmotion|al5d,robotics-toolbox,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-10f5f05385,Quanser,QArm,Quanser|qarm,matlab,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-d55f01b988,ROBOTIS,Open Manipulator,ROBOTIS|open-manipulator,matlab,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-0417f43b13,Staubli,RX 160,Staubli|rx 160,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-24f259efca,Staubli,RX 160L,Staubli|rx 160,ros-industrial,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-0573e1e127,Staubli,TX-60,Staubli|tx-60,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-5547a74654,Staubli,TX-60L,Staubli|tx-60,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-e93307d9bd,Staubli,TX-90,Staubli|tx-90,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-d07d771ab2,Staubli,TX-90L,Staubli|tx-90,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-c19ddd110e,Staubli,TX-90XL,Staubli|tx-90,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-7e62b38268,Staubli,TX2-60,Staubli|tx2-60,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-34e953c5c7,Staubli,TX2-60L,Staubli|tx2-60,ros-industrial,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-84f18dca29,Trossen Robotics,PhantomX Pincher,Trossen Robotics|phantomx-pincher,robotics-toolbox,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-c19394961c,Trossen Robotics,Turtlebot Arm,Trossen Robotics|turtlebot-arm,robotics-toolbox,high,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-1e30cc03ac,Trossen Robotics,ViperX-300,Trossen Robotics|viperx,robotics-toolbox,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-3cd0743b5b,Trossen Robotics,ViperX-300s,Trossen Robotics|viperx,robotics-toolbox,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-01df249d91,Trossen Robotics,WidowX-200,Trossen Robotics|widowx,robotics-toolbox,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-1293f54184,Trossen Robotics,WidowX-250,Trossen Robotics|widowx,robotics-toolbox,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-787fc29345,Trossen Robotics,WidowX-250s,Trossen Robotics|widowx,robotics-toolbox,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-c83ebf2672,Universal Robots,UR10,Universal Robots|ur10,matlab,medium,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-acd806343f,Universal Robots,UR10e,Universal Robots|ur10,matlab,low,development,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-24c767f546,ABB,IRB 4600-20/2.50,ABB|irb 4600,ros-industrial,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-304c9a08a5,ABB,IRB 4600-40/2.55,ABB|irb 4600,ros-industrial,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-44d423d29d,ABB,IRB 4600-60/2.05,ABB|irb 4600,ros-industrial,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-0ef5af4e54,ABB,IRB 6640,ABB|irb 6640,ros-industrial,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-897106e190,ABB,IRB 6640-185/2.8,ABB|irb 6640,ros-industrial,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ef24cb935c,ABB,IRB 6650S-125/3.50,ABB|irb 6650s,ros-industrial,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-cd4762843b,ABB,IRB 6650S-90/3.90,ABB|irb 6650s,ros-industrial,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-fa8324d39f,ABB,IRB 6700-200/2.60,ABB|irb 6700,ros-industrial,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-87daff3862,ABB,IRB 6700-235/2.65,ABB|irb 6700,ros-industrial,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-927835d1e3,Fanuc,LR Mate 200iD,Fanuc|lr mate 200id,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-81ab4eaee7,Fanuc,LR Mate 200iD/4S,Fanuc|lr mate 200id,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-417b7c6e76,Fanuc,LR Mate 200iD/4SC,Fanuc|lr mate 200id,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ed32f9fe54,Fanuc,LR Mate 200iD/4SH,Fanuc|lr mate 200id,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-f9636ec28a,Fanuc,LR Mate 200iD/7H,Fanuc|lr mate 200id,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-7e0c14e59c,Fanuc,LR Mate 200iD/7L,Fanuc|lr mate 200id,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-d7b62265c9,Fanuc,LR Mate 200iD/7LC,Fanuc|lr mate 200id,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-785e16bb50,Fanuc,M-10iA,Fanuc|m-10ia,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-1a2726f62c,Fanuc,M-10iA/7L,Fanuc|m-10ia,ros-industrial,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-1ec48d9c1f,Fanuc,R-1000iA/80F,Fanuc|r-1000ia,ros-industrial,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-a0fb4a920d,KUKA,KR 120 R2500 pro,KUKA|kr 120,ros-industrial,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-eb642d29c4,KUKA,KR 210 L150,KUKA|kr 210,ros-industrial,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-b746f2cfd4,KUKA,KR 5 ARC,KUKA|kr 5,ros-industrial,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-f1f8f0dd95,KUKA,LBR iiwa 14,KUKA|lbr iiwa,matlab,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-6e913f41ef,KUKA,LBR iiwa 14 R820,KUKA|lbr iiwa,robotics-toolbox,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-91bce84f44,KUKA,LBR iiwa 7,KUKA|lbr iiwa,matlab,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-23fbd5742a,Kinova Robotics,Gen3,Kinova Robotics|gen3,matlab,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-19d6bdecaf,Kinova Robotics,Gen3 V12,Kinova Robotics|gen3,matlab,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-42e898b1a2,Mecademic Robotics,Meca500-R3,Mecademic Robotics|meca500-r3,matlab,high,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-d656d85ceb,Unimation,PUMA 560,Unimation|puma-560,robotics-toolbox,medium,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ef48297ba4,Universal Robots,UR16e,Universal Robots|ur16,matlab,low,final_holdout,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-fdadfa8bdd,ABB,CRB 15000,ABB|crb 15000,ros-industrial,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-081210e630,ABB,IRB 2400,ABB|irb 2400,ros-industrial,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-f3a89fcc9e,ABB,IRB 2600,ABB|irb 2600,ros-industrial,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-f817901d6a,ABB,IRB 4400L/30,ABB|irb 4400,ros-industrial,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-022ef09303,ABB,IRB 7600-150/3.50,ABB|irb 7600,ros-industrial,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-3179bae95f,Fanuc,R-2000iC/125L,Fanuc|r-2000ic,ros-industrial,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-41abb9dda3,Fanuc,R-2000iC/165F,Fanuc|r-2000ic,ros-industrial,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-594e86b100,Fanuc,R-2000iC/210F,Fanuc|r-2000ic,ros-industrial,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-6c6b40b711,Fanuc,R-2000iC/210L,Fanuc|r-2000ic,ros-industrial,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-42320609fa,Fanuc,R-2000iC/270F,Fanuc|r-2000ic,ros-industrial,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-79c861f26a,KUKA,KR 150 R3100-2,KUKA|kr 150,ros-industrial,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-a72160b62d,KUKA,KR 150-2,KUKA|kr 150,ros-industrial,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-1d928e951e,KUKA,KR 3 R540,KUKA|kr 3,ros-industrial,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-551a9c392e,Rethink Robotics,Sawyer,Rethink Robotics|sawyer,matlab,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-21b8992ec4,Schunk,LWA 4D,Schunk|lwa,random,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-25d4f5567f,Schunk,LWA 4P,Schunk|lwa,random,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-144f1962ce,Staubli,TX2-90,Staubli|tx2-90,ros-industrial,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-2a2b0eb0bf,Staubli,TX2-90L,Staubli|tx2-90,ros-industrial,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-b10f1f90f2,Staubli,TX2-90XL,Staubli|tx2-90,ros-industrial,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-b7ba94bbd4,Trossen Robotics,PincherX-100,Trossen Robotics|pincherx,robotics-toolbox,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-355efc5b8b,Trossen Robotics,PincherX-150,Trossen Robotics|pincherx,robotics-toolbox,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-ab859c237c,Trossen Robotics,ReactorX-150,Trossen Robotics|reactorx,robotics-toolbox,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-c4fb1c3613,Trossen Robotics,ReactorX-200,Trossen Robotics|reactorx,robotics-toolbox,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-447dd175af,Universal Robots,UR3,Universal Robots|ur3,matlab,high,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-e99fababe4,Universal Robots,UR3e,Universal Robots|ur3,matlab,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-17a4199cfb,Universal Robots,UR5,Universal Robots|ur5,matlab,medium,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-31ecc95a27,Universal Robots,UR5e,Universal Robots|ur5,matlab,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-e8a782b5bc,Yaskawa Motoman,Motoman MH5,Yaskawa Motoman|motoman mh,matlab,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-3d848aeb52,Yaskawa Motoman,Motoman SIA10D,Yaskawa Motoman|motoman sia,ros-industrial,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-eee1fac0b3,Yaskawa Motoman,Motoman SIA10F,Yaskawa Motoman|motoman sia,ros-industrial,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-10582c0edf,Yaskawa Motoman,Motoman SIA20D,Yaskawa Motoman|motoman sia,ros-industrial,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a
+arm-33a606333c,Yaskawa Motoman,Motoman SIA5D,Yaskawa Motoman|motoman sia,ros-industrial,low,validation,20260807,c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a

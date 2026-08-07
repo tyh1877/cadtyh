@@ -1,0 +1,58 @@
+{
+  "seed": 20260807,
+  "trials": 20000,
+  "assignment_score": 72.54999999999998,
+  "counts": {
+    "development": 80,
+    "validation": 32,
+    "final_holdout": 30
+  },
+  "family_counts": {
+    "development": 40,
+    "final_holdout": 15,
+    "validation": 17
+  },
+  "manufacturer_counts": {
+    "development": 11,
+    "final_holdout": 7,
+    "validation": 9
+  },
+  "source_distributions": {
+    "development": {
+      "ros-industrial": 49,
+      "matlab": 18,
+      "robotics-toolbox": 10,
+      "oems": 3
+    },
+    "validation": {
+      "ros-industrial": 20,
+      "matlab": 6,
+      "robotics-toolbox": 4,
+      "random": 2
+    },
+    "final_holdout": {
+      "ros-industrial": 22,
+      "matlab": 6,
+      "robotics-toolbox": 2
+    }
+  },
+  "stratum_distributions": {
+    "development": {
+      "low": 28,
+      "medium": 26,
+      "high": 26
+    },
+    "validation": {
+      "medium": 11,
+      "high": 11,
+      "low": 10
+    },
+    "final_holdout": {
+      "high": 10,
+      "medium": 10,
+      "low": 10
+    }
+  },
+  "max_family_split_count": 1,
+  "manifest_hash": "c9c04b30c31ed857caca9dd3512de95fd0e7f7f29fc818f970623919fb79020a"
+}
