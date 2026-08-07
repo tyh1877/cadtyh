@@ -1,0 +1,1 @@
+Generate a complete articulated robot arm with 11 links and 10 joints (6 actuated; 4 fixed, 6 revolute). Produce link-level mesh geometry plus a consistent URDF containing parent-child relations, joint types, axes, origins, limits, and a valid canonical pose.

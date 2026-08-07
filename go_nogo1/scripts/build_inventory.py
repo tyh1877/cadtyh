@@ -73,6 +73,13 @@ def suffix_score(candidate: Path, reference: str) -> tuple[int, int]:
     return matched, -len(a)
 
 
+def common_prefix_depth(candidate: Path, urdf: Path) -> int:
+    """Prefer a same-package mesh when short package URIs are ambiguous."""
+    candidate_parts = [part.casefold() for part in candidate.resolve().parts]
+    urdf_parts = [part.casefold() for part in urdf.resolve().parts]
+    return sum(a == b for a, b in zip(candidate_parts, urdf_parts))
+
+
 def resolve_mesh(uri: str, urdf: Path, dataset_root: Path, by_name):
     ref = clean_uri(uri)
     if not ref:
@@ -91,11 +98,17 @@ def resolve_mesh(uri: str, urdf: Path, dataset_root: Path, by_name):
             break
     candidates = by_name.get(PurePosixPath(ref).name.casefold(), [])
     if candidates:
-        ranked = sorted(candidates, key=lambda c: suffix_score(c, ref), reverse=True)
-        best = suffix_score(ranked[0], ref)[0]
-        tied = [c for c in ranked if suffix_score(c, ref)[0] == best]
-        if len(tied) == 1 or best >= 2:
-            return ranked[0], "indexed_suffix"
+        ranked = sorted(
+            candidates,
+            key=lambda c: (suffix_score(c, ref)[0], common_prefix_depth(c, urdf),
+                           suffix_score(c, ref)[1]),
+            reverse=True,
+        )
+        best_key = (suffix_score(ranked[0], ref)[0], common_prefix_depth(ranked[0], urdf))
+        tied = [c for c in ranked
+                if (suffix_score(c, ref)[0], common_prefix_depth(c, urdf)) == best_key]
+        if len(tied) == 1:
+            return ranked[0], "indexed_suffix_nearest_package"
     return None, "unresolved"
 
 

@@ -1,0 +1,17 @@
+{
+  "entity_id": "arm-551a9c392e",
+  "text": "Generate a complete articulated robot arm with 21 links and 20 joints (8 actuated; 12 fixed, 8 revolute). Produce link-level mesh geometry plus a consistent URDF containing parent-child relations, joint types, axes, origins, limits, and a valid canonical pose.",
+  "images": [
+    "D:\\CADtest\\papertest\\go_nogo1\\results\\prototype_feasibility\\renders\\arm-551a9c392e\\14_arm-551a9c392e_front.png",
+    "D:\\CADtest\\papertest\\go_nogo1\\results\\prototype_feasibility\\renders\\arm-551a9c392e\\14_arm-551a9c392e_rear.png",
+    "D:\\CADtest\\papertest\\go_nogo1\\results\\prototype_feasibility\\renders\\arm-551a9c392e\\14_arm-551a9c392e_left.png",
+    "D:\\CADtest\\papertest\\go_nogo1\\results\\prototype_feasibility\\renders\\arm-551a9c392e\\14_arm-551a9c392e_right.png",
+    "D:\\CADtest\\papertest\\go_nogo1\\results\\prototype_feasibility\\renders\\arm-551a9c392e\\14_arm-551a9c392e_top.png",
+    "D:\\CADtest\\papertest\\go_nogo1\\results\\prototype_feasibility\\renders\\arm-551a9c392e\\14_arm-551a9c392e_iso.png"
+  ],
+  "modalities": [
+    "text",
+    "image",
+    "text+image"
+  ]
+}

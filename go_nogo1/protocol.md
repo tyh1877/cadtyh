@@ -1,86 +1,101 @@
-# Go/No-Go 1 — Unified Mesh+URDF Benchmark Feasibility
+# Go/No-Go 1 — Dataset and Evaluation-Protocol Feasibility
 
-## Frozen primary question (v4, 2026-08-07)
+## Frozen primary question (v5, 2026-08-08)
 
-Can the public Mesh+URDF candidate pool support one technically valid, traceable,
-and uniformly evaluated 80-robot benchmark for robot-arm CAD generation?
+Can public data be used to build a small, high-quality Mesh+URDF robot-arm set
+and support deterministic geometric and kinematic evaluation of generated results?
 
-This gate tests **benchmark feasibility**, not whether a hand-designed robot
-complexity score agrees with experts, STEP topology, or mesh simplification error.
+This is a **20-case prototype feasibility gate**, not a 100-case benchmark and not
+a complexity-ranking experiment.
 
-## Benchmark design implied by the gate
+## Frozen denominator and selection
 
-- One benchmark and one case manifest; no Easy/Medium/Hard tracks.
-- No G1/G2/G3 × A1/A2/A3 benchmark matrix.
-- Direct, CADIR, ArtiCAD, AssemCAD, and the proposed method must be evaluated on
-  exactly the same cases, inputs, geometry normalization, and evaluator versions.
-- Input-modality comparison (Text, Image, Text+Image), geometry/surface evaluation,
-  assembly/kinematics evaluation, and ablations are experiments on the same benchmark,
-  not separate complexity tracks.
-- STEP is an optional diagnostic/calibration subset. It is not an entry requirement.
+- Start from the complexity-blind candidate Benchmark-80 manifest.
+- Select exactly 20 cases: one per manufacturer in stable order, then a second per
+  manufacturer until 20 is reached.
+- Never use complexity features, expert scores, STEP/B-Rep results, or method
+  performance for selection.
+- Failed cases remain in the denominator of 20.
 
-## Technical eligibility for one robot case
+## Required output for each case
 
-A candidate is technically eligible only when all of the following hold:
+Every complete case must contain:
 
-1. It is a distinct robot-arm entity rather than a duplicate URDF variant.
-2. Source URL and local URDF path are recorded.
-3. URDF parses and its kinematic graph is valid.
-4. It has at least one actuated joint and a recorded kinematic depth.
-5. At least 90% of visual mesh references resolve and at least 80% of non-fixed
-   links have visual geometry.
-6. At least one visual mesh loads and yields finite mesh features.
+- URDF links and joints with type, parent/child, axis, origin, limits, and a
+  deterministic canonical pose;
+- link-level visual meshes;
+- six deterministic views: front, rear, left, right, top, and isometric;
+- a deterministic text description and bundles for Text, Image, and Text+Image;
+- callable deterministic geometry, assembly, and multi-pose evaluators.
 
-## Automated Go/No-Go criteria
+## Five checks
 
-Technical Go requires that a complexity-blind selection procedure can construct a
-candidate Benchmark-80 satisfying all of these conditions:
+### 1. Mesh quality
 
-- exactly 80 technically eligible, distinct robot entities;
-- at least 10 manufacturers;
-- no manufacturer supplies more than 25% of Benchmark-80;
-- no upstream source supplies more than 50% of Benchmark-80;
-- every selected case has both mesh geometry and URDF kinematic structure available.
+- At least 90% of visual mesh references resolve and load for the case.
+- At least 80% of actuated child links have visual meshes.
+- The assembled mesh is finite, has non-zero extent, and contains at least 1,000 faces.
+- Any empty/unloadable referenced mesh fails the case.
+- Six-view review must find no obvious missing, exploded, severely broken, or
+  box/cylinder-only proxy geometry.
 
-The caps are diversity safeguards, not difficulty strata. The selection procedure
-must not read preliminary complexity scores, expert ratings, B-Rep scores, or method
-performance.
+### 2. URDF quality
 
-No-Go is issued only if an 80-case set satisfying these technical conditions cannot
-be constructed from the current public candidate pool.
+- Link and joint names are present and unique.
+- Joint types belong to the supported URDF set.
+- Parent and child links exist and form one rooted tree.
+- Actuated joint axes are finite and non-zero.
+- Revolute and prismatic joints have finite ordered limits.
 
-## Release prerequisites outside the automated gate
+### 3. Mesh–URDF consistency
 
-Technical Go does not by itself authorize dataset publication or a benchmark claim.
-Before release, the project must additionally:
+- Every loaded visual mesh remains attached to its declared link.
+- Visual origins, joint origins, and Collada scene-node transforms are applied.
+- At least 90% of checked joint origins lie within 0.25 robot-diagonal of both
+  adjacent-link AABBs; this is a conservative connection-region diagnostic.
+- Neutral, lower-quarter, and upper-quarter poses produce finite forward kinematics,
+  non-zero articulated motion, and no unbounded transform explosion.
 
-- complete a file-level license and redistribution audit;
-- manually review and freeze the final Benchmark-80 manifest;
-- canonicalize units, coordinate frames, link naming, and train/test leakage rules;
-- implement one versioned evaluator used unchanged for all methods;
-- verify geometry metrics (Validity, IoU, CD, HD95, normal error, high-curvature CD);
-- verify assembly metrics (PartMatch F1, Graph F1, joint type, axis/origin error,
-  and multi-pose error);
-- run every baseline on the identical frozen cases and modalities.
+### 4. Deterministic evaluator loop
 
-## Complexity is a post-hoc diagnostic
+The smoke test must expose and execute:
 
-Complexity does not affect case inclusion, the primary leaderboard, or fairness.
-After the main results are frozen, inexpensive objective attributes may be reported:
+- geometry: normalized CD, HD95, whole-geometry similarity, per-link CD, and
+  quantized surface-occupancy IoU;
+- assembly: link/part match F1, kinematic graph F1, joint-type accuracy, joint-axis
+  error, and joint-origin error;
+- dynamics: multi-pose link-transform error.
 
-- assembly: link count, joint count, DOF, kinematic depth, joint-axis diversity;
-- geometry: normal/curvature variation, surface-area-to-bounding-box-volume ratio,
-  local curvature distribution, and high-curvature area ratio;
-- STEP-only optional attributes: B-spline/Bezier/freeform surface proportions.
+Identity input must return exact zero distance/error and unit similarity/F1/IoU.
+A deterministic synthetic corruption must worsen geometry, per-link, and multi-pose
+metrics. This proves callability and directionality, not production-level validity.
 
-Permitted analyses include performance versus continuous geometry attributes,
-Graph F1 versus joint count, and improvement over the strongest baseline versus
-complexity. Expert ratings and composite complexity weights are optional validation,
-not Go/No-Go requirements.
+### 5. Multimodal input construction
 
-## Historical note
+Each case must have a non-empty text prompt, six images, and an explicit modality
+bundle supporting Text, Image, and Text+Image.
 
-The original audit and v2/v3 revisions tested whether an automated complexity score
-could be validated against experts, B-Rep structure, or fixed-budget approximation.
-Those results remain reproducible diagnostics. Their No-Go decisions apply to the
-respective complexity metrics only and no longer determine Benchmark feasibility.
+## Frozen decision rule
+
+Go requires all of the following:
+
+- at least 15 of the fixed 20 candidates are complete cases;
+- aggregate link visual-mesh readability is at least 90%;
+- 100% of complete cases pass URDF parse and graph construction;
+- 100% of complete cases have no clear multi-pose GT error under the checks above;
+- geometry and kinematic evaluators run for 100% of complete cases;
+- multimodal inputs exist for 100% of complete cases;
+- all 20 six-view reviews are completed, including failed cases.
+
+No-Go applies if any global criterion fails. Thresholds may not be relaxed after
+seeing results. Parser defects may be repaired, but the inventory and experiment
+must then be rebuilt from source and rerun with the same denominator rule.
+
+## Scope of a Go decision
+
+Go authorizes the next engineering stage: evaluator hardening, controlled-set design,
+and baseline integration. It does not establish license/redistribution clearance,
+Benchmark-80 release readiness, train/test leakage safety, or SOTA superiority.
+
+Complexity remains an optional post-hoc sensitivity analysis and is not part of
+this decision.

@@ -1,0 +1,44 @@
+{
+  "target": "screenshot-defined Go/No-Go 1 prototype feasibility",
+  "denominator": 20,
+  "minimum_complete_cases": 15,
+  "prototype_selection": "complexity-blind; one per manufacturer then a second",
+  "prototype_manufacturers": 16,
+  "automated_complete_cases": 18,
+  "visual_reviews_completed": 20,
+  "complete_cases": 17,
+  "criterion_results": {
+    "at_least_15_of_20_complete_cases": true,
+    "link_visual_mesh_readability_at_least_90_percent": true,
+    "100_percent_complete_cases_urdf_parse_and_graph_valid": true,
+    "100_percent_complete_cases_multi_pose_no_clear_gt_error": true,
+    "100_percent_complete_cases_evaluators_callable": true,
+    "100_percent_complete_cases_multimodal_inputs_constructed": true,
+    "all_20_visual_reviews_completed": true
+  },
+  "decision": "GO",
+  "decision_rule": "all global criteria must pass; failures remain in denominator",
+  "case_failures": [
+    {
+      "entity_id": "arm-23fbd5742a",
+      "manufacturer": "Kinova Robotics",
+      "name": "Gen3",
+      "failed_gates": "[\"mesh_quality\"]",
+      "failures": "[\"empty:EndEffector_Link.STL\"]"
+    },
+    {
+      "entity_id": "arm-84f18dca29",
+      "manufacturer": "Trossen Robotics",
+      "name": "PhantomX Pincher",
+      "failed_gates": "[\"visual_review\"]",
+      "failures": "[]"
+    },
+    {
+      "entity_id": "arm-d656d85ceb",
+      "manufacturer": "Unimation",
+      "name": "PUMA 560",
+      "failed_gates": "[\"mesh_urdf_consistency\"]",
+      "failures": "[]"
+    }
+  ]
+}

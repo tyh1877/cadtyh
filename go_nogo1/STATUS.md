@@ -1,54 +1,60 @@
-# Go/No-Go 1 — current status under the v4 target
+# Go/No-Go 1 — v5 prototype feasibility result
 
-## Current decision
+## Decision: GO (17/20 complete)
 
-**Technical Go: the candidate pool can support a unified Mesh+URDF Benchmark-80.**
+The screenshot-defined 20-case prototype passes. Seventeen cases satisfy mesh,
+URDF, Mesh–URDF/multi-pose, deterministic evaluator, multimodal-input, and visual
+review requirements. The frozen threshold is at least 15 complete cases.
 
-This decision concerns data and evaluation feasibility. It does not claim that the
-benchmark is release-ready, nor that the current complexity score is valid.
+## Gate evidence
 
-## Automated evidence
+| Criterion | Result | Required | Status |
+|---|---:|---:|---|
+| Complete cases | 17/20 (85%) | at least 15/20 | pass |
+| Prototype manufacturers | 16 | descriptive | — |
+| Aggregate mesh-reference readability | 161/162 (99.38%) | at least 90% | pass |
+| Complete-case URDF parse and graph | 17/17 | 100% | pass |
+| Complete-case multi-pose consistency | 17/17 | 100% | pass |
+| Complete-case deterministic evaluator | 17/17 | 100% | pass |
+| Complete-case multimodal bundle | 17/17 | 100% | pass |
+| Six-view reviews completed | 20/20 | 20/20 | pass |
 
-| Check | Current evidence | Gate |
-|---|---:|---:|
-| Strictly eligible robot entities | 142 | at least 80 |
-| Manufacturers in eligible pool | 16 | candidate diversity |
-| URDF parse and graph validity | 142/142 | required per selected case |
-| Visual mesh resolution >=90% | 142/142 | required per selected case |
-| Non-fixed-link visual coverage >=80% | 142/142 | required per selected case |
-| Actuated joint and kinematic depth present | 142/142 | required per selected case |
-| Loadable visual mesh and finite features | 142/142 | required per selected case |
-| Complexity-blind candidate manifest | 80 entities | exactly 80 |
-| Manufacturers in candidate Benchmark-80 | 16 | at least 10 |
-| Maximum manufacturer share | 17.5% | at most 25% |
-| Maximum upstream-source share | 50.0% | at most 50% |
+## Three retained failures
 
-The machine-readable result is written to
-`results/benchmark_readiness/readiness_summary.json`. The candidate manifest is an
-existence proof and review draft, not the final frozen paper test set.
+1. **Kinova Gen3:** one referenced `EndEffector_Link.STL` is empty; per-case
+   reference readability is 88.9%, below 90%.
+2. **Trossen PhantomX Pincher:** six-view review finds the visual geometry dominated
+   by coarse box-like proxy solids.
+3. **Unimation PUMA 560:** only 5/6 joint connection checks satisfy the conservative
+   AABB-distance rule (83.3%, below 90%).
 
-## What is no longer a gate
+All three remain in the denominator. They were not replaced with easier cases.
 
-- Complexity low/medium/high balance.
-- Expert agreement on a composite complexity score.
-- Mesh-complexity correlation with STEP/B-Rep.
-- Mesh-complexity correlation with fixed-budget simplification error.
-- Remesh rank stability of a composite complexity score.
+## Parser defect found and repaired
 
-These can inform a post-hoc sensitivity section but cannot turn an otherwise fair
-same-case SOTA comparison into No-Go.
+The first visual run exposed exploded KUKA geometry. Root cause analysis found two
+pipeline defects:
 
-## Release readiness
+- ambiguous short `package://visual/...` URIs could resolve to a same-named mesh
+  from another robot package;
+- internal Collada scene-node transforms were discarded before applying URDF
+  link/visual transforms.
 
-The benchmark is **not yet release-ready**. Remaining work includes license audit,
-manual manifest review, canonical normalization, evaluator implementation, leakage
-review, and same-case baseline execution. These are tracked separately from the
-technical feasibility decision.
+The resolver now prioritizes the candidate sharing the deepest path prefix with the
+current URDF and rejects unresolved ties. Collada scenes are flattened with their
+node transforms. Inventory, entity features, Benchmark-80 selection, and the full
+20-case prototype were rebuilt and rerun after the fix.
 
-## Historical complexity diagnostics
+## What the result establishes
 
-The original descriptor was stable under remeshing but failed Mesh/B-Rep agreement.
-The equal-weight v2 descriptor also failed B-Rep agreement. Objective-task v3 reached
-Validation rho=0.367 against fixed-budget approximation difficulty, below its 0.60
-target. Therefore v3 remains No-Go **as a validated complexity metric**, while the
-Mesh+URDF benchmark feasibility decision is Technical Go.
+- A small public Mesh+URDF prototype can support deterministic geometry and
+  kinematic evaluation.
+- Six-view and Text/Image/Text+Image inputs can be generated consistently.
+- The evaluation API responds correctly to identity and synthetic corruption cases.
+
+It does **not** establish release licensing, evaluator correlation with human quality,
+train/test leakage safety, production-scale performance, or Benchmark-80 readiness.
+
+Machine-readable evidence is in `results/prototype_feasibility/summary.json` and
+`case_audit.csv`; the executable audit is in
+`notebooks/03_prototype_feasibility_audit.ipynb`.

@@ -12,6 +12,8 @@ go_nogo1/sources/
 # Large generated visual and tessellation artifacts
 go_nogo1/results/audit30/renders/
 go_nogo1/results/brep/step_tessellations/
+go_nogo1/results/prototype_feasibility/renders/
+go_nogo1/results/prototype_feasibility/contact_sheets/
 
 # Local/temporary outputs
 *.tmp

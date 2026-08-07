@@ -1,9 +1,9 @@
-# Go/No-Go 1: unified Mesh+URDF benchmark feasibility
+# Go/No-Go 1: Mesh+URDF prototype feasibility
 
-Go/No-Go 1 now asks whether the public candidate pool can support one fair,
-traceable, uniformly evaluated 80-robot benchmark. It does not require complexity
-strata or a validated composite complexity score. See `protocol.md` for the frozen
-v4 target and `STATUS.md` for the current decision.
+Go/No-Go 1 now asks whether public data can support a 20-case high-quality Mesh+URDF
+prototype with deterministic geometry and kinematic evaluation. At least 15 cases
+must be complete. Complexity is not a selection variable or decision gate. See
+`protocol.md` for the frozen v5 target and `STATUS.md` for the result.
 
 ## Paper-wide environment
 
@@ -33,9 +33,18 @@ Downloaded datasets are excluded from Git.
   --output-dir go_nogo1\results\benchmark_readiness
 ```
 
-The generated Benchmark-80 manifest proves that a compliant set exists. It remains
-a review candidate until license, leakage, normalization, and evaluator checks are
-complete.
+4. Run the screenshot-defined 20-case prototype audit:
+
+```powershell
+.\.venv\Scripts\python.exe go_nogo1\scripts\prototype_feasibility.py `
+  --candidate80 go_nogo1\results\benchmark_readiness\candidate_benchmark80.csv `
+  --entities go_nogo1\results\robot_entities.csv `
+  --dataset-root go_nogo1\sources\urdf_files_dataset\urdf_files `
+  --output-dir go_nogo1\results\prototype_feasibility
+```
+
+Complete `visual_review.csv` from the generated six-view contact sheets, then rerun
+the same command for the final decision. The current result is 17/20: Go.
 
 ## Complexity diagnostics
 

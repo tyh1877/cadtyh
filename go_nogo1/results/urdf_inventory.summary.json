@@ -6,9 +6,9 @@
   "metadata_matched": 322,
   "parse_ok": 321,
   "qc_grades": {
-    "A": 302,
-    "C": 15,
-    "B": 5
+    "A": 300,
+    "C": 16,
+    "B": 6
   },
   "types": {
     "end effector": 24,

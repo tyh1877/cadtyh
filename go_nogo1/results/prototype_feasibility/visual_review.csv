@@ -1,0 +1,21 @@
+entity_id,visual_review_pass,notes
+arm-fdadfa8bdd,pass,coherent in all six views; no obvious missing or exploded part
+arm-f7b0b901d3,pass,coherent in all six views; no obvious missing or exploded part
+arm-4c7b408826,pass,coherent low-poly geometry; not a box-or-cylinder-only proxy
+arm-cb42051aad,pass,coherent in all six views; no obvious missing or exploded part
+arm-43fa322555,pass,coherent in all six views; top-view foreshortening is consistent with iso view
+arm-07307859e2,pass,coherent in all six views; top-view foreshortening is consistent with iso view
+arm-dcc2b0ce1e,pass,coherent in all six views; no obvious missing or exploded part
+arm-3ce41d3c31,pass,coherent in all six views; no obvious missing or exploded part
+arm-23fbd5742a,pass,visible geometry is coherent; missing end-effector mesh remains an automated failure
+arm-ab15a75247,pass,coherent in all six views; no obvious missing or exploded part
+arm-42e898b1a2,pass,coherent in all six views; no obvious missing or exploded part
+arm-10f5f05385,pass,coherent in all six views; no obvious missing or exploded part
+arm-d55f01b988,pass,coherent in all six views; no obvious missing or exploded part
+arm-551a9c392e,pass,coherent in all six views; no obvious missing or exploded part
+arm-21b8992ec4,pass,coherent in all six views; no obvious missing or exploded part
+arm-0573e1e127,pass,Collada transforms produce connected geometry in iso and orthographic views
+arm-84f18dca29,fail,visual geometry is dominated by coarse box-like proxy solids
+arm-d656d85ceb,pass,visible geometry is coherent; joint-axis plausibility remains an automated failure
+arm-c83ebf2672,pass,coherent in all six views; no obvious missing or exploded part
+arm-3d848aeb52,pass,coherent articulated geometry in iso view; orthographic foreshortening is expected
