@@ -1,0 +1,31 @@
+{
+  "dataset_root": "D:\\CADtest\\papertest\\go_nogo1\\sources\\urdf_files_dataset\\urdf_files",
+  "n_urdf_files": 322,
+  "n_metadata_records": 322,
+  "n_mesh_files": 3618,
+  "metadata_matched": 322,
+  "parse_ok": 321,
+  "qc_grades": {
+    "A": 302,
+    "C": 15,
+    "B": 5
+  },
+  "types": {
+    "end effector": 24,
+    "humanoid robot": 59,
+    "dual arm robot": 9,
+    "robotic arm": 193,
+    "mobile manipulator": 8,
+    "mobile robot": 20,
+    "quadrupedal robot": 4,
+    "unknown": 5
+  },
+  "sources": {
+    "drake": 16,
+    "matlab": 52,
+    "oems": 35,
+    "random": 67,
+    "robotics-toolbox": 44,
+    "ros-industrial": 108
+  }
+}

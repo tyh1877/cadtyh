@@ -1,0 +1,35 @@
+{
+  "n": 30,
+  "strata": {
+    "medium": 10,
+    "high": 10,
+    "low": 10
+  },
+  "sources": {
+    "ros-industrial": 9,
+    "matlab": 8,
+    "robotics-toolbox": 8,
+    "oems": 3,
+    "random": 2
+  },
+  "manufacturers": {
+    "Trossen Robotics": 4,
+    "ABB": 3,
+    "Kinova Robotics": 3,
+    "KUKA": 3,
+    "Schunk": 2,
+    "Universal Robots": 2,
+    "Fanuc": 2,
+    "Yaskawa Motoman": 2,
+    "Staubli": 2,
+    "ROBOTIS": 1,
+    "Lynxmotion": 1,
+    "Mecademic Robotics": 1,
+    "Franka Emika": 1,
+    "Rethink Robotics": 1,
+    "Unimation": 1,
+    "Quanser": 1
+  },
+  "max_source_share": 0.3,
+  "max_manufacturer_share": 0.13333333333333333
+}

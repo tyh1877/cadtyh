@@ -1,0 +1,31 @@
+﻿blind_id,render_ok,n_mesh_parts,failures,output
+G1-036F5E,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\01_G1-036F5E.png
+G1-14B739,True,34,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\02_G1-14B739.png
+G1-155831,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\03_G1-155831.png
+G1-18AAC1,True,17,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\04_G1-18AAC1.png
+G1-1B3FD8,True,17,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\05_G1-1B3FD8.png
+G1-1BB9C4,True,10,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\06_G1-1BB9C4.png
+G1-23E8B8,True,17,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\07_G1-23E8B8.png
+G1-280DD8,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\08_G1-280DD8.png
+G1-2A6406,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\09_G1-2A6406.png
+G1-2E5FC2,True,8,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\10_G1-2E5FC2.png
+G1-3D4595,True,8,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\11_G1-3D4595.png
+G1-46205D,True,11,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\12_G1-46205D.png
+G1-4AF07B,True,11,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\13_G1-4AF07B.png
+G1-5541AC,True,27,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\14_G1-5541AC.png
+G1-641D8F,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\15_G1-641D8F.png
+G1-6A827F,True,5,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\16_G1-6A827F.png
+G1-82105F,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\17_G1-82105F.png
+G1-88720F,True,2,meca_500_r3_base.dae: ModuleNotFoundError; meca_500_r3_j2.dae: ModuleNotFoundError; meca_500_r3_j3.dae: ModuleNotFoundError; meca_500_r3_j4.dae: ModuleNotFoundError; meca_500_r3_j5.dae: ModuleNotFoundError,D:\CADtest\papertest\go_nogo1\results\audit30\renders\18_G1-88720F.png
+G1-890FEE,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\19_G1-890FEE.png
+G1-89386A,True,6,link_1.stl: ModuleNotFoundError,D:\CADtest\papertest\go_nogo1\results\audit30\renders\20_G1-89386A.png
+G1-9D2E6B,True,50,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\21_G1-9D2E6B.png
+G1-A3A08D,True,6,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\22_G1-A3A08D.png
+G1-B16432,True,15,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\23_G1-B16432.png
+G1-B3AE69,True,54,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\24_G1-B3AE69.png
+G1-CAF332,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\25_G1-CAF332.png
+G1-E7FC14,True,22,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\26_G1-E7FC14.png
+G1-F44692,True,7,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\27_G1-F44692.png
+G1-F52B8E,True,6,link_4.stl: ModuleNotFoundError,D:\CADtest\papertest\go_nogo1\results\audit30\renders\28_G1-F52B8E.png
+G1-FDC0AB,True,4,FOREARM.STL: ModuleNotFoundError,D:\CADtest\papertest\go_nogo1\results\audit30\renders\29_G1-FDC0AB.png
+G1-FF4486,True,10,,D:\CADtest\papertest\go_nogo1\results\audit30\renders\30_G1-FF4486.png

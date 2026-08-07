@@ -1,0 +1,19 @@
+{
+  "robotic_arm_urdf_records": 193,
+  "distinct_name_manufacturer_entities": 146,
+  "eligible_entities": 142,
+  "feature_failures": 0,
+  "selected_source_distribution": {
+    "ros-industrial": 91,
+    "matlab": 30,
+    "robotics-toolbox": 16,
+    "oems": 3,
+    "random": 2
+  },
+  "manufacturer_count": 16,
+  "strata": {
+    "low": 48,
+    "medium": 47,
+    "high": 47
+  }
+}

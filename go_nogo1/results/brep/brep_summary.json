@@ -1,0 +1,13 @@
+{
+  "n_step_models": 10,
+  "n_step_parsed": 10,
+  "n_mesh_brep_pairs": 9,
+  "manufacturers": 1,
+  "mesh_brep_spearman_rho": -0.049999999999999996,
+  "passes_threshold_0_50": false,
+  "meets_target_0_60": false,
+  "same_geometry_step_tessellation_n": 10,
+  "same_geometry_mesh_brep_spearman_rho": 0.19999999999999998,
+  "same_geometry_passes_threshold_0_50": false,
+  "scope_warning": "All current STEP pairs are from one manufacturer/product family; external validity is not established."
+}

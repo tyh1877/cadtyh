@@ -1,0 +1,15 @@
+# Direct dependencies for Go/No-Go 1 (Python 3.12)
+numpy==2.3.5
+pandas==3.0.1
+scipy==1.18.0
+trimesh==4.12.2
+fast-simplification==0.1.13
+pycollada==0.9.3
+lxml==6.0.2
+networkx==3.6.1
+matplotlib==3.11.1
+pillow==12.2.0
+cadquery-ocp==7.9.3.1.1
+nbformat==5.11.0
+nbclient==0.11.0
+ipykernel==7.3.0

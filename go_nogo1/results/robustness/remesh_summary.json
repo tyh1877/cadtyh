@@ -1,0 +1,29 @@
+{
+  "n_entities": 142,
+  "n_complete_all_ratios": 142,
+  "rank_rho_original_vs_50pct": 0.8754925303063328,
+  "rank_rho_original_vs_25pct": 0.8931104441575427,
+  "triangle_count_rho_full_pool": -0.06780570412970942,
+  "audit30_rank_rho_original_vs_50pct": 0.9737486095661846,
+  "audit30_rank_rho_original_vs_25pct": 0.9724137931034482,
+  "passes_remesh_threshold_0_85": true,
+  "passes_triangle_confound_threshold_abs_0_30": true,
+  "score_scaling": {
+    "normal_spectral_entropy": {
+      "median": 0.9252235922729279,
+      "robust_scale": 0.03801848443811328
+    },
+    "curvature_entropy": {
+      "median": 0.35653412151085584,
+      "robust_scale": 0.2271169883734
+    },
+    "dihedral_q90_deg": {
+      "median": 46.44419873573413,
+      "robust_scale": 47.284509236671134
+    },
+    "sharp_rate_30deg": {
+      "median": 0.15118800495921447,
+      "robust_scale": 0.14212635496692738
+    }
+  }
+}

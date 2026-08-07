@@ -1,0 +1,17 @@
+# Project virtual environment and Python caches
+go_nogo1/.venv/
+**/__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Downloaded third-party datasets and CAD archives (reproducible via scripts)
+go_nogo1/sources/
+
+# Large generated visual and tessellation artifacts
+go_nogo1/results/audit30/renders/
+go_nogo1/results/brep/step_tessellations/
+
+# Local/temporary outputs
+*.tmp
+*.log
+.codex_docx_render/
