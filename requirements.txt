@@ -1,4 +1,4 @@
-# Direct dependencies for Go/No-Go 1 (Python 3.12)
+# Direct dependencies shared by the paper experiments (Python 3.12)
 numpy==2.3.5
 pandas==3.0.1
 scipy==1.18.0

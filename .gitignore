@@ -1,4 +1,6 @@
-# Project virtual environment and Python caches
+# Paper-wide virtual environment and Python caches
+.venv/
+# Legacy sub-experiment environment; safe to ignore during migration/cleanup.
 go_nogo1/.venv/
 **/__pycache__/
 *.py[cod]

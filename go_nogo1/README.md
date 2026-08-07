@@ -1,18 +1,19 @@
 # Go/No-Go 1 experiment project
 
-## Environment
+## Paper-wide environment
 
-The project uses the repository-local Python 3.12 environment at `.venv`.
+This sub-experiment uses the paper repository's shared Python 3.12 environment at
+`D:\CADtest\papertest\.venv`. It does not maintain a separate environment.
 
 ```powershell
-cd D:\CADtest\papertest\go_nogo1
+cd D:\CADtest\papertest
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python -c "import sys; print(sys.executable)"
 ```
 
-All automated experiment commands must call `.venv\Scripts\python.exe` directly so
-they do not depend on shell activation state.
+All automated experiment commands call the root `.venv\Scripts\python.exe` directly
+so they do not depend on shell activation state.
 
 The environment is isolated (`include-system-site-packages = false`). Validate it
 before an experiment with:

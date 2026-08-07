@@ -2,9 +2,9 @@
 
 ## Python environment
 
-- Run every project Python command with `go_nogo1/.venv/Scripts/python.exe`.
+- Run every paper experiment with the repository-wide `.venv/Scripts/python.exe`.
 - Do not install experiment dependencies into the system Python environment.
-- When adding or changing a direct dependency, update `go_nogo1/requirements.txt`.
+- When adding or changing a direct dependency, update the root `requirements.txt`.
 
 ## Experiment reproducibility
 

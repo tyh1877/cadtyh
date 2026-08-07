@@ -1,9 +1,10 @@
 $ErrorActionPreference = "Stop"
 $projectRoot = Split-Path -Parent $PSScriptRoot
-$python = Join-Path $projectRoot ".venv\Scripts\python.exe"
+$paperRoot = Split-Path -Parent $projectRoot
+$python = Join-Path $paperRoot ".venv\Scripts\python.exe"
 
 if (-not (Test-Path -LiteralPath $python -PathType Leaf)) {
-    throw "Project virtual environment not found: $python"
+    throw "Paper-wide virtual environment not found: $python"
 }
 
 & $python (Join-Path $PSScriptRoot "equal_weight_v2.py") `
