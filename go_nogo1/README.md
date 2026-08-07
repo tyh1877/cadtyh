@@ -1,47 +1,44 @@
-# Go/No-Go 1 experiment project
+# Go/No-Go 1: unified Mesh+URDF benchmark feasibility
+
+Go/No-Go 1 now asks whether the public candidate pool can support one fair,
+traceable, uniformly evaluated 80-robot benchmark. It does not require complexity
+strata or a validated composite complexity score. See `protocol.md` for the frozen
+v4 target and `STATUS.md` for the current decision.
 
 ## Paper-wide environment
 
-This sub-experiment uses the paper repository's shared Python 3.12 environment at
-`D:\CADtest\papertest\.venv`. It does not maintain a separate environment.
+All experiments use the repository-wide isolated Python 3.12 environment:
 
 ```powershell
 cd D:\CADtest\papertest
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-python -c "import sys; print(sys.executable)"
-```
-
-All automated experiment commands call the root `.venv\Scripts\python.exe` directly
-so they do not depend on shell activation state.
-
-The environment is isolated (`include-system-site-packages = false`). Validate it
-before an experiment with:
-
-```powershell
-.\.venv\Scripts\python.exe -m pip check
+python -m pip check
 ```
 
 ## Data regeneration
 
-Downloaded datasets are intentionally excluded from Git.
+Downloaded datasets are excluded from Git.
 
 1. Clone `https://github.com/utecrobotics/urdf_files_dataset` into
    `sources/urdf_files_dataset` and checkout commit
    `81f4cdac42c3a51ba88833180db5bf3697988c87`.
-2. Run `scripts/download_trossen_step.py` to obtain the official public STEP
-   calibration files and their checksums.
-3. Run the inventory, entity-feature, sample-selection, robustness, rendering, and
-   B-Rep scripts in that order. Exact thresholds are in `protocol.md`.
-
-## Current status
-
-See `STATUS.md`. The original mesh descriptor passes tessellation robustness but
-fails the current B-Rep validity gate. The next experiment revision uses normalized,
-hierarchically equal-weighted metric groups; experts remain an auxiliary validation.
-
-Run the equal-weight development revision with:
+2. Run the inventory and entity-feature scripts to regenerate
+   `results/robot_entities.csv`.
+3. Run the v4 readiness audit:
 
 ```powershell
-.\scripts\run_equal_weight_v2.ps1
+.\.venv\Scripts\python.exe go_nogo1\scripts\benchmark_readiness.py `
+  --entities go_nogo1\results\robot_entities.csv `
+  --output-dir go_nogo1\results\benchmark_readiness
 ```
+
+The generated Benchmark-80 manifest proves that a compliant set exists. It remains
+a review candidate until license, leakage, normalization, and evaluator checks are
+complete.
+
+## Complexity diagnostics
+
+Earlier Audit-30, v2, and v3 scripts/results are retained for reproducibility. They
+are optional post-hoc diagnostic analyses and do not select Benchmark-80 or determine
+the primary Go/No-Go outcome.

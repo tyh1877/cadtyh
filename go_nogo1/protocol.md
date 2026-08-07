@@ -1,104 +1,86 @@
-# Go/No-Go 1 — Mesh-Based Geometric Complexity Validity Audit
+# Go/No-Go 1 — Unified Mesh+URDF Benchmark Feasibility
 
-## Frozen question
+## Frozen primary question (v4, 2026-08-07)
 
-Can geometric complexity of articulated robot CAD be measured reliably from the
-visual meshes referenced by URDF, without requiring STEP as the main-entry format?
+Can the public Mesh+URDF candidate pool support one technically valid, traceable,
+and uniformly evaluated 80-robot benchmark for robot-arm CAD generation?
 
-This audit is diagnostic. It does **not** test downstream CAD generation quality.
+This gate tests **benchmark feasibility**, not whether a hand-designed robot
+complexity score agrees with experts, STEP topology, or mesh simplification error.
 
-## Data and provenance
+## Benchmark design implied by the gate
 
-- Primary source: URDF Files Dataset.
-- Frozen repository commit: `81f4cdac42c3a51ba88833180db5bf3697988c87`.
-- Unit of sampling: a distinct robot model, not a URDF file or collision variant.
-- Primary geometry: URDF visual meshes. Collision meshes are retained only for QC.
-- Eligible types: `robotic arm`; `dual arm robot` and `mobile manipulator` are kept
-  in inventory but excluded from the primary sample unless required as a stated
-  sensitivity analysis.
+- One benchmark and one case manifest; no Easy/Medium/Hard tracks.
+- No G1/G2/G3 × A1/A2/A3 benchmark matrix.
+- Direct, CADIR, ArtiCAD, AssemCAD, and the proposed method must be evaluated on
+  exactly the same cases, inputs, geometry normalization, and evaluator versions.
+- Input-modality comparison (Text, Image, Text+Image), geometry/surface evaluation,
+  assembly/kinematics evaluation, and ablations are experiments on the same benchmark,
+  not separate complexity tracks.
+- STEP is an optional diagnostic/calibration subset. It is not an entry requirement.
 
-## Stages
+## Technical eligibility for one robot case
 
-1. Build a complete URDF-level inventory and resolve all visual mesh references.
-2. Collapse duplicate sources/variants to robot entities and assign QC grades.
-3. Freeze Audit-30, stratified by manufacturer/family and preliminary complexity.
-4. Compute mesh complexity features on canonicalized meshes and test sensitivity
-   to remeshing/tessellation.
-5. Obtain blinded expert ordinal ratings for Audit-30.
-6. Compare a 10–15 model STEP/B-Rep calibration subset where lawful data exists.
+A candidate is technically eligible only when all of the following hold:
 
-## QC grades
+1. It is a distinct robot-arm entity rather than a duplicate URDF variant.
+2. Source URL and local URDF path are recorded.
+3. URDF parses and its kinematic graph is valid.
+4. It has at least one actuated joint and a recorded kinematic depth.
+5. At least 90% of visual mesh references resolve and at least 80% of non-fixed
+   links have visual geometry.
+6. At least one visual mesh loads and yields finite mesh features.
 
-- A: XML parses; kinematic graph is valid; at least 90% of visual mesh references
-  resolve; at least 80% of non-fixed links have visual geometry.
-- B: XML parses and graph is usable; at least 70% of visual references resolve;
-  shortcomings are documented and do not erase the arm's main morphology.
-- C: parse failure, invalid graph, under 70% visual resolution, or predominantly
-  primitive/no visual geometry. C records are excluded from Audit-30.
+## Automated Go/No-Go criteria
 
-## Pre-registered decision thresholds
+Technical Go requires that a complexity-blind selection procedure can construct a
+candidate Benchmark-80 satisfying all of these conditions:
 
-Full Go requires all of the following:
+- exactly 80 technically eligible, distinct robot entities;
+- at least 10 manufacturers;
+- no manufacturer supplies more than 25% of Benchmark-80;
+- no upstream source supplies more than 50% of Benchmark-80;
+- every selected case has both mesh geometry and URDF kinematic structure available.
 
-- at least 24 valid robot entities after QC;
-- at least 8 expert-rated high-complexity robots from at least 4 model families;
-- expert agreement: weighted kappa >= 0.65 or ICC >= 0.75;
-- mesh score versus expert median: Spearman rho >= 0.60;
-- mesh score versus STEP/B-Rep score: Spearman rho >= 0.50 (target >= 0.60);
-- remeshing robustness: rank rho >= 0.85;
-- triangle-count confounding after canonicalization: |rho| < 0.30;
-- no single upstream source supplies over 50% of Audit-30.
+The caps are diversity safeguards, not difficulty strata. The selection procedure
+must not read preliminary complexity scores, expert ratings, B-Rep scores, or method
+performance.
 
-Conditional Go: the expert and mesh-validity thresholds pass but STEP calibration
-or diversity is incomplete; proceed only with the limitation explicitly scoped.
+No-Go is issued only if an 80-case set satisfying these technical conditions cannot
+be constructed from the current public candidate pool.
 
-No-Go: expert agreement fails, mesh score fails expert validity, or the score is
-primarily tessellation/triangle-count driven after one allowed metric revision.
+## Release prerequisites outside the automated gate
 
-## Post-failure development revision: equal-weight v2
+Technical Go does not by itself authorize dataset publication or a benchmark claim.
+Before release, the project must additionally:
 
-The original frozen score failed B-Rep validity. The following revision is therefore
-explicitly **development-only** and cannot reverse the original result on Audit-30.
+- complete a file-level license and redistribution audit;
+- manually review and freeze the final Benchmark-80 manifest;
+- canonicalize units, coordinate frames, link naming, and train/test leakage rules;
+- implement one versioned evaluator used unchanged for all methods;
+- verify geometry metrics (Validity, IoU, CD, HD95, normal error, high-curvature CD);
+- verify assembly metrics (PartMatch F1, Graph F1, joint type, axis/origin error,
+  and multi-pose error);
+- run every baseline on the identical frozen cases and modalities.
 
-- Normalize every raw feature to a 0–1 percentile within the eligible development
-  population, after aligning all directions so larger means more complex.
-- Average features equally within their semantic module.
-- Average semantic modules equally; do not let a module gain weight merely because
-  it contains more raw indicators.
-- Report geometry, assembly, and kinematic complexity separately. Geometry is the
-  primary score; an equal three-way overall score is secondary only.
-- Do not learn weights from experts or Audit-30. A new holdout must be frozen before
-  v2 can be described as independently validated.
+## Complexity is a post-hoc diagnostic
 
-## Leakage controls
+Complexity does not affect case inclusion, the primary leaderboard, or fairness.
+After the main results are frozen, inexpensive objective attributes may be reported:
 
-- Thresholds above are frozen before looking at correlations.
-- Audit-30 membership is frozen before expert scoring.
-- Experts do not see automated scores, source, triangle counts, or B-Rep results.
-- One metric revision is allowed only on a separately recorded development subset;
-  the frozen audit set is not reused for tuning.
+- assembly: link count, joint count, DOF, kinematic depth, joint-axis diversity;
+- geometry: normal/curvature variation, surface-area-to-bounding-box-volume ratio,
+  local curvature distribution, and high-curvature area ratio;
+- STEP-only optional attributes: B-spline/Bezier/freeform surface proportions.
 
-## v3 objective-task amendment (2026-08-07)
+Permitted analyses include performance versus continuous geometry attributes,
+Graph F1 versus joint count, and improvement over the strongest baseline versus
+complexity. Expert ratings and composite complexity weights are optional validation,
+not Go/No-Go requirements.
 
-This amendment replaces expert opinion as the primary development target. Expert
-blind ratings remain an auxiliary construct-validity check and do not determine
-feature weights.
+## Historical note
 
-- Freeze 142 eligible entities by product family into Development (80), Validation
-  (32), and Final Holdout (30), using deterministic seed `20260807`.
-- Frozen manifest SHA-256:
-  `dbed8515b7af0ab5a577b037a5f99c7277b7239af2f2eb0ab3e0a98f7c786c63`.
-- Fit every empirical percentile transform on Development only.
-- Geometry v3 is the equal mean of three equal-weight modules: orientation
-  distribution, local curvature, and multiscale curvature persistence. No learned
-  weights and no triangle-count feature are permitted.
-- The external objective target is approximation difficulty at nominal robot-level
-  budgets of 1k, 5k, and 10k faces. At each budget, normalized Chamfer, normalized
-  Hausdorff, and normal error receive equal weight; budgets then receive equal weight.
-- Per-link simplification has a 20-face minimum, so achieved faces are recorded and
-  may exceed the nominal robot-level budget.
-- Go requires, on Validation: primary Spearman rho >= 0.60; remesh rank rho >= 0.85;
-  |triangle-count rho| < 0.30; leave-one-module-out rho >= 0.80; and positive
-  correlations at every budget.
-- Final Holdout must not be read until a materially revised formula is frozen after
-  passing Development diagnostics and the one-use Validation decision.
+The original audit and v2/v3 revisions tested whether an automated complexity score
+could be validated against experts, B-Rep structure, or fixed-budget approximation.
+Those results remain reproducible diagnostics. Their No-Go decisions apply to the
+respective complexity metrics only and no longer determine Benchmark feasibility.

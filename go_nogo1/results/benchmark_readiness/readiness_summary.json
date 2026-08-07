@@ -1,0 +1,56 @@
+{
+  "target_version": "v4",
+  "primary_question": "Can a unified, fair Mesh+URDF Benchmark-80 be constructed?",
+  "complexity_is_gate": false,
+  "eligible_pool_size": 142,
+  "eligible_pool_manufacturers": 16,
+  "candidate_size": 80,
+  "candidate_manufacturers": 16,
+  "manufacturer_counts": {
+    "Fanuc": 14,
+    "ABB": 12,
+    "KUKA": 11,
+    "Trossen Robotics": 9,
+    "Kinova Robotics": 8,
+    "Staubli": 7,
+    "Universal Robots": 6,
+    "Yaskawa Motoman": 3,
+    "Franka Emika": 2,
+    "Schunk": 2,
+    "Lynxmotion": 1,
+    "Mecademic Robotics": 1,
+    "Quanser": 1,
+    "ROBOTIS": 1,
+    "Rethink Robotics": 1,
+    "Unimation": 1
+  },
+  "source_counts": {
+    "ros-industrial": 40,
+    "matlab": 24,
+    "robotics-toolbox": 13,
+    "random": 2,
+    "oems": 1
+  },
+  "maximum_manufacturer_share": 0.175,
+  "maximum_source_share": 0.5,
+  "selection_seed": 20260807,
+  "selection_trials": 5000,
+  "manifest_hash": "7883f213384bc43b145270134c5f68e71b5316fb22a0eeb95d2ac2a3cb2ce598",
+  "automated_gates": {
+    "exactly_80_entities": true,
+    "at_least_10_manufacturers": true,
+    "manufacturer_share_at_most_25_percent": true,
+    "source_share_at_most_50_percent": true,
+    "all_cases_geometry_and_kinematics_ready": true
+  },
+  "technical_decision": "GO",
+  "release_ready": false,
+  "release_blockers": [
+    "file-level license and redistribution audit",
+    "manual review and freeze of final Benchmark-80",
+    "canonical units/frames and leakage policy",
+    "versioned common evaluator",
+    "same-case baseline execution"
+  ],
+  "manifest_status": "review candidate; not the frozen paper test set"
+}
