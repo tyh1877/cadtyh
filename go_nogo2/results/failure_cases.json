@@ -1,0 +1,242 @@
+[
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_08_arm-d55f01b988",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_08_arm-d55f01b988",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "availability_blocker",
+    "failure_pattern": "missing_openai_api_key"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_08_arm-d55f01b988",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "articad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_08_arm-d55f01b988",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  },
+  {
+    "method": "assemcad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "availability_blocker",
+    "failure_pattern": "blocked_no_runnable_official_implementation_verified"
+  }
+]

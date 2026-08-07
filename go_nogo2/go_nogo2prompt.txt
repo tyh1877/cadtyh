@@ -1,0 +1,272 @@
+# Go/No-Go 2 SOTA Gap Validation Pilot
+
+## 目标
+
+实现一个小规模实验，用于验证当前CAD Agent在机械臂参数化CAD生成任务中是否存在明确研究缺口。
+
+该实验不是正式Benchmark，而是研究方向可行性验证。
+
+核心问题：
+
+1. Direct Frontier MLLM 是否能够生成可用机械臂CAD？
+2. CADIR/SimpleCAD、ArtiCAD、AssemCAD是否已经解决机械臂几何、装配和运动学问题？
+3. 是否存在 Geometry–Assembly–Kinematics 三者无法同时满足的gap？
+
+
+---
+
+# 实验范围
+
+## Dataset
+
+使用10个代表性机械臂case。
+
+每个case包含：
+
+robot/
+├── urdf/
+├── meshes/
+├── kinematic_gt.json
+├── prompt.txt
+└── renders/
+
+
+要求：
+
+- URDF可解析
+- mesh可加载
+- link/joint信息完整
+
+
+---
+
+# Baseline
+
+实现统一实验接口：
+
+Methods:
+
+1. Direct Frontier MLLM
+2. CADIR/SimpleCAD
+3. ArtiCAD
+4. AssemCAD
+
+
+要求：
+
+- 使用相同输入prompt
+- 使用相同图片
+- 使用相同基础LLM（如果方法支持）
+- 保存完整生成结果
+
+
+---
+
+# 输入
+
+统一输入：
+
+- 机械臂多视图图片
+- 机械臂功能描述
+- 基本规格（DOF、joint数量等）
+
+
+输出：
+
+每个方法生成：
+
+- CAD模型
+- assembly结构
+- （如果支持）URDF
+
+
+---
+
+# Evaluator
+
+实现确定性评价，不使用AI Judge。
+
+
+## 1. Geometry Evaluation
+
+计算：
+
+- Chamfer Distance
+- Hausdorff Distance
+- Voxel IoU（mesh可用时）
+
+支持：
+
+- whole robot
+- per-link
+
+
+输出：
+
+geometry_metrics.json
+
+
+---
+
+## 2. Assembly Evaluation
+
+解析预测结果：
+
+比较：
+
+- link数量
+- part matching
+- parent-child关系
+
+
+指标：
+
+- Part Precision
+- Part Recall
+- Part F1
+- Assembly Graph F1
+
+
+输出：
+
+assembly_metrics.json
+
+
+---
+
+## 3. Kinematics Evaluation
+
+比较GT URDF和预测运动结构：
+
+指标：
+
+- joint type accuracy
+- joint axis angular error
+- joint origin position error
+
+
+输出：
+
+kinematic_metrics.json
+
+
+---
+
+## 4. Multi-pose Evaluation
+
+随机采样多个joint configuration。
+
+比较：
+
+GT robot:
+
+T_gt(q)
+
+Prediction:
+
+T_pred(q)
+
+
+计算：
+
+- link pose error
+- end-effector pose error
+
+
+输出：
+
+motion_metrics.json
+
+
+---
+
+# 输出结果
+
+
+生成：
+
+results/
+
+├── geometry_results.csv
+├── assembly_results.csv
+├── kinematic_results.csv
+├── motion_results.csv
+├── failure_cases.json
+└── summary_report.md
+
+
+summary_report需要自动生成：
+
+1. 各baseline总体指标
+2. 每个case指标
+3. failure pattern统计
+
+
+---
+
+# Failure Analysis
+
+自动统计：
+
+- missing parts
+- wrong topology
+- wrong joint type
+- wrong joint axis
+- wrong joint origin
+- poor curved geometry
+- invalid CAD
+
+
+输出：
+
+failure_breakdown.csv
+
+
+---
+
+# Go/No-Go判断辅助
+
+最终生成：
+
+go_nogo_report.md
+
+
+包含：
+
+## Go信号
+
+如果发现：
+
+- 不同方法分别擅长geometry或assembly
+- 没有方法同时达到高geometry+assembly+kinematics
+- 存在稳定失败模式
+
+则建议：
+
+GO:
+继续开发Kinematic/interface-first + surface-aware方法。
+
+
+## No-Go信号
+
+如果发现：
+
+- 某个baseline已经全面解决geometry、assembly、kinematics
+- 失败主要来自数据不足而非方法能力
+
+则建议：
+
+NO-GO:
+重新评估研究方向。
+
+
+---
+
+# 开发原则
+
+1. 所有评价必须确定性计算。
+2. 不使用LLM作为评价器。
+3. 不开发新的AI CAD方法。
+4. 重点完成：
+   数据读取 → baseline运行接口 → evaluator → failure analysis。
+5. 保证后续可以扩展到正式Benchmark。

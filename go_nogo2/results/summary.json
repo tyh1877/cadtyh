@@ -1,0 +1,31 @@
+{
+  "decision": "INCONCLUSIVE",
+  "comparison_complete": false,
+  "fixed_cases": 10,
+  "required_methods": [
+    "direct_frontier_mllm",
+    "cadir_simplecad",
+    "articad",
+    "assemcad"
+  ],
+  "complete_methods": [],
+  "terminal_case_counts": {
+    "articad": 0,
+    "assemcad": 0,
+    "cadir_simplecad": 0,
+    "direct_frontier_mllm": 0
+  },
+  "simultaneous_success_counts": {
+    "direct_frontier_mllm": 0,
+    "cadir_simplecad": 0,
+    "articad": 0,
+    "assemcad": 0
+  },
+  "not_run_counts": {
+    "direct_frontier_mllm": 10,
+    "cadir_simplecad": 10,
+    "articad": 10,
+    "assemcad": 10
+  },
+  "decision_rule": "protocol.md frozen v1"
+}

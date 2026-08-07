@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-08-08",
+  "comparison_policy": "Only same-10-case executable outputs are scored; paper numbers are not substituted.",
+  "methods": [
+    {
+      "id": "direct_frontier_mllm",
+      "status": "blocked_missing_api_key",
+      "implementation": "OpenAI Responses API adapter (to be enabled after credential gate)",
+      "model_default": "gpt-5.6-sol",
+      "source": "https://developers.openai.com/api/docs/models",
+      "notes": "Official model catalog recommends GPT-5.6 Sol for complex reasoning/coding and states image input is supported."
+    },
+    {
+      "id": "cadir_simplecad",
+      "status": "sdk_runtime_verified_adapter_blocked_missing_api_key",
+      "paper": "https://arxiv.org/abs/2608.00891",
+      "repository": "https://github.com/NiJingzhe/SimpleCADAPI",
+      "commit": "6fee370297c29296768f282d2e40174ee5a82795",
+      "license": "AGPL-3.0",
+      "notes": "Pinned source installed in the paper .venv; OCP solid creation plus STEP/STL export passed a local smoke test. Multimodal generation remains blocked by the same missing GPT credential as the direct baseline."
+    },
+    {
+      "id": "articad",
+      "status": "blocked_no_runnable_official_implementation_verified",
+      "paper": "https://arxiv.org/abs/2604.10992",
+      "project": "https://shui-yuan.github.io/articad/",
+      "notes": "The project describes multimodal input and URDF export, but the visible Code link did not resolve to a runnable repository during this audit."
+    },
+    {
+      "id": "assemcad",
+      "status": "blocked_no_runnable_official_implementation_verified",
+      "paper": "https://arxiv.org/abs/2607.05123",
+      "notes": "The arXiv record and paper describe the method, but no official runnable repository was verified during this audit."
+    }
+  ]
+}

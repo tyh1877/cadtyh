@@ -15,6 +15,11 @@ go_nogo1/results/brep/step_tessellations/
 go_nogo1/results/prototype_feasibility/renders/
 go_nogo1/results/prototype_feasibility/contact_sheets/
 
+# Go/No-Go 2 reproducible datasets, third-party baselines, and raw generations
+go_nogo2/data/
+go_nogo2/external/
+go_nogo2/runs/
+
 # Local/temporary outputs
 *.tmp
 *.log

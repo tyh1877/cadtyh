@@ -13,3 +13,4 @@ cadquery-ocp==7.9.3.1.1
 nbformat==5.11.0
 nbclient==0.11.0
 ipykernel==7.3.0
+simplecadapi @ git+https://github.com/NiJingzhe/SimpleCADAPI.git@6fee370297c29296768f282d2e40174ee5a82795
