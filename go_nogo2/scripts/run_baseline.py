@@ -10,6 +10,7 @@ import json
 import mimetypes
 import shutil
 import time
+from dataclasses import replace
 from pathlib import Path
 from typing import Any
 
@@ -21,6 +22,7 @@ from robot_blueprint import BlueprintError, blueprint_contract, extract_json, va
 ROOT = Path(__file__).resolve().parents[1]
 VIEWS = ("front", "rear", "left", "right", "top", "iso")
 METHODS = ("direct_frontier_mllm", "cadir_simplecad")
+ALLOWED_MODELS = ("qwen3.7-plus", "qwen3.7-max-2026-06-08")
 CADIR_IMPLEMENTATION = "SimpleCADAPI@6fee370 + SDK-conditioned generate/validate/repair"
 
 
@@ -91,7 +93,10 @@ def user_content(case_dir: Path, feedback: str | None = None) -> list[dict[str, 
     return content
 
 
-def call_model(client: Any, config: Any, method: str, case_dir: Path, feedback: str | None) -> Any:
+def call_model(
+    client: Any, config: Any, method: str, case_dir: Path, feedback: str | None,
+    max_tokens: int,
+) -> Any:
     return client.chat.completions.create(
         model=config.model,
         messages=[
@@ -101,13 +106,15 @@ def call_model(client: Any, config: Any, method: str, case_dir: Path, feedback: 
         response_format={"type": "json_object"},
         temperature=config.temperature,
         top_p=config.top_p,
-        max_tokens=config.max_output_tokens,
+        max_tokens=max_tokens,
     )
 
 
 def write_manifest(
     run_dir: Path, case_dir: Path, method: str, status: str, attempts: int,
     latency: float, model: str, request_id: str | None, error: str | None,
+    token_usage: dict[str, int], max_total_output_tokens: int,
+    max_total_model_tokens: int, max_repair_iterations: int,
 ) -> None:
     urdf = run_dir / "urdf" / "model.urdf"
     manifest = {
@@ -115,6 +122,13 @@ def write_manifest(
         "status": status, "prompt_sha256": sha256(case_dir / "prompt.txt"),
         "image_sha256": {view: sha256(case_dir / "renders" / f"{view}.png") for view in VIEWS},
         "attempts": attempts, "latency_seconds": latency,
+        "budget": {
+            "max_total_output_tokens": max_total_output_tokens,
+            "max_total_model_tokens": max_total_model_tokens,
+            "max_repair_iterations": max_repair_iterations,
+            "api_calls": attempts,
+            **token_usage,
+        },
         "artifacts": {
             "raw_response": "raw_response.txt" if (run_dir / "raw_response.txt").is_file() else None,
             "prediction_urdf": "urdf/model.urdf" if urdf.is_file() else None,
@@ -138,17 +152,36 @@ def write_manifest(
     )
 
 
-def run_case(method: str, case_dir: Path, run_dir: Path, config_path: Path, overwrite: bool) -> str:
+def usage_dict(response: Any) -> dict[str, int]:
+    usage = getattr(response, "usage", None)
+    return {
+        "input_tokens": int(getattr(usage, "prompt_tokens", 0) or 0),
+        "output_tokens": int(getattr(usage, "completion_tokens", 0) or 0),
+        "total_tokens": int(getattr(usage, "total_tokens", 0) or 0),
+    }
+
+
+def run_case(
+    method: str, case_dir: Path, run_dir: Path, config_path: Path, overwrite: bool,
+    model_override: str | None, max_total_output_tokens: int,
+    max_total_model_tokens: int, max_repair_iterations: int,
+) -> str:
     if run_dir.exists() and overwrite:
         shutil.rmtree(run_dir)
     if (run_dir / "prediction_manifest.json").is_file() and not overwrite:
         return "SKIP"
     run_dir.mkdir(parents=True, exist_ok=True)
     config = load_shared_llm(config_path)
+    if model_override:
+        if model_override not in ALLOWED_MODELS:
+            raise ValueError(f"model must be one of {ALLOWED_MODELS}")
+        config = replace(config, model=model_override)
     client = config.create_client()
     expected_links, expected_joints, expected_dof = case_metadata(case_dir)
-    max_attempts = 1 if method == "direct_frontier_mllm" else 3
+    max_attempts = 1 if method == "direct_frontier_mllm" else 1 + max_repair_iterations
+    per_attempt_output_tokens = max(1, max_total_output_tokens // max_attempts)
     feedback, raw_history, request_id, error = None, [], None, None
+    token_usage = {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0}
     started = time.perf_counter()
     for attempt in range(1, max_attempts + 1):
         print(
@@ -156,10 +189,13 @@ def run_case(method: str, case_dir: Path, run_dir: Path, config_path: Path, over
             flush=True,
         )
         try:
-            response = call_model(client, config, method, case_dir, feedback)
+            response = call_model(client, config, method, case_dir, feedback, per_attempt_output_tokens)
             request_id = response.id
             raw = response.choices[0].message.content or ""
-            raw_history.append({"attempt": attempt, "request_id": request_id, "response": raw})
+            usage = usage_dict(response)
+            for key, value in usage.items():
+                token_usage[key] += value
+            raw_history.append({"attempt": attempt, "request_id": request_id, "usage": usage, "response": raw})
             blueprint = validate_blueprint(
                 extract_json(raw), expected_links=expected_links,
                 expected_joints=expected_joints, expected_dof=expected_dof,
@@ -176,7 +212,8 @@ def run_case(method: str, case_dir: Path, run_dir: Path, config_path: Path, over
             )
             write_manifest(
                 run_dir, case_dir, method, "SUCCESS", attempt,
-                time.perf_counter() - started, config.model, request_id, None,
+                time.perf_counter() - started, config.model, request_id, None, token_usage,
+                max_total_output_tokens, max_total_model_tokens, max_repair_iterations,
             )
             return "SUCCESS"
         except Exception as caught:
@@ -195,12 +232,16 @@ def run_case(method: str, case_dir: Path, run_dir: Path, config_path: Path, over
             feedback = error
             if method == "direct_frontier_mllm":
                 break
+            if token_usage["total_tokens"] >= max_total_model_tokens:
+                error = f"TokenBudgetExceeded: consumed {token_usage['total_tokens']} of {max_total_model_tokens} tokens"
+                break
     (run_dir / "raw_response.txt").write_text(
         json.dumps(raw_history, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     write_manifest(
         run_dir, case_dir, method, "FAILURE", len(raw_history),
-        time.perf_counter() - started, config.model, request_id, error,
+        time.perf_counter() - started, config.model, request_id, error, token_usage,
+        max_total_output_tokens, max_total_model_tokens, max_repair_iterations,
     )
     return "FAILURE"
 
@@ -223,11 +264,20 @@ def main() -> None:
     parser.add_argument("--case")
     parser.add_argument("--limit", type=int)
     parser.add_argument("--overwrite", action="store_true")
+    parser.add_argument("--model", choices=ALLOWED_MODELS)
+    parser.add_argument("--max-total-output-tokens", type=int, default=32768)
+    parser.add_argument("--max-total-model-tokens", type=int, default=100000)
+    parser.add_argument("--max-repair-iterations", type=int, default=1)
     args = parser.parse_args()
     rows = []
     for case_dir in selected_cases(args.data_root.resolve(), args.case, args.limit):
         run_dir = args.runs_root.resolve() / args.method / case_dir.name
-        status = run_case(args.method, case_dir, run_dir, args.config, args.overwrite)
+        if args.max_total_output_tokens <= 0 or args.max_total_model_tokens <= 0 or args.max_repair_iterations < 0:
+            raise SystemExit("token budgets must be positive and repair iterations non-negative")
+        status = run_case(
+            args.method, case_dir, run_dir, args.config, args.overwrite, args.model,
+            args.max_total_output_tokens, args.max_total_model_tokens, args.max_repair_iterations,
+        )
         rows.append((case_dir.name, status))
         print(f"{args.method} {case_dir.name}: {status}", flush=True)
     print(json.dumps(dict(rows), indent=2))

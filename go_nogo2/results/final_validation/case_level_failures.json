@@ -1,0 +1,1332 @@
+[
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_08_arm-d55f01b988",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_08_arm-d55f01b988",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-plus",
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "transport",
+    "failure_pattern": "transport_api_timeout"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_08_arm-d55f01b988",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "direct_frontier_mllm",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_08_arm-d55f01b988",
+    "category": "deterministic",
+    "failure_pattern": "invalid_cad"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_topology"
+  },
+  {
+    "backbone": "qwen3.7-max-2026-06-08",
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "deterministic",
+    "failure_pattern": "wrong_part_decomposition"
+  }
+]

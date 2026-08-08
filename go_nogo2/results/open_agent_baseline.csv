@@ -1,0 +1,2 @@
+﻿agent,repository,commit,official_implementation,license,run_status,reason,geometry_cad_validity,assembly,kinematics,motion
+CADSmith,https://github.com/jabarkle/CADSmith,a856517e4e9449eb71dd6f7f83aa9fffa40f5bbb,True,NOT_DECLARED,NOT_RUN,Official setup requires ANTHROPIC_API_KEY and a separate Python 3.10/VTK environment; current credentials are Alibaba-only.,NOT_RUN,UNSUPPORTED,UNSUPPORTED,UNSUPPORTED
