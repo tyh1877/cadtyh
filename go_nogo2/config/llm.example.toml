@@ -1,0 +1,20 @@
+# Tracked, secret-free template for both executable Go/No-Go 2 baselines.
+# Copy this file to llm.local.toml and paste the key there. The local file is
+# ignored by Git. The default endpoint is Alibaba Cloud Beijing (DashScope).
+
+[provider]
+name = "alibaba_model_studio"
+api_key = "PASTE_DASHSCOPE_API_KEY_HERE"
+base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+
+[generation]
+model = "qwen3.7-plus"
+temperature = 0.0
+top_p = 1.0
+max_output_tokens = 32768
+timeout_seconds = 600.0
+max_retries = 2
+
+[experiment]
+config_version = "1.0"
+shared_by = ["direct_frontier_mllm", "cadir_simplecad"]
