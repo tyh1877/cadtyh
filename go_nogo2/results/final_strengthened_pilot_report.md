@@ -30,7 +30,7 @@ All four tracks have 0 simultaneous successes: **True**. Deterministic structura
 
 ## D. Runnable public-agent baseline
 
-CADSmith was audited at the recorded commit. Its official repository has no declared license file, requires an Anthropic key not available in this environment, and targets single-part CAD rather than native URDF/articulation. It is therefore explicitly NOT_RUN for geometry/CAD validity and UNSUPPORTED (not scored as zero) for assembly, kinematics and motion. No surrogate reimplementation was used.
+CADSmith was audited at the recorded commit. Its official repository has no declared license file, requires an Anthropic key not available in this environment, and targets single-part CAD rather than native URDF/articulation. The official Claude configuration remains NOT_RUN. A Qwen client adaptation preserved the execution-only workflow but disabled the LLM Judge; its frozen-case status is `UNSUPPORTED_INPUT=10` because all ten articulated inputs are outside CADSmith's native contract. It is not scored as zero for unsupported dimensions.
 
 ## E. Case-level structural gap
 

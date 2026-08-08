@@ -67,6 +67,7 @@ def main() -> None:
     parser.add_argument("--runs-root", type=Path, required=True)
     parser.add_argument("--results-root", type=Path, required=True)
     parser.add_argument("--sanity-report", type=Path, required=True)
+    parser.add_argument("--cadsmith-runs-root", type=Path)
     args = parser.parse_args()
     runs_root, results_root = args.runs_root.resolve(), args.results_root.resolve()
     validation_dir = results_root / "final_validation"
@@ -162,12 +163,24 @@ def main() -> None:
             })
     write_csv(results_root / "backbone_generalization.csv", summary_rows)
 
+    cadsmith_statuses: list[str] = []
+    if args.cadsmith_runs_root:
+        for manifest_path in sorted(args.cadsmith_runs_root.glob("case_*/cadsmith_manifest.json")):
+            cadsmith_statuses.append(load_json(manifest_path)["status"])
+    cadsmith_summary = "; ".join(f"{status}={cadsmith_statuses.count(status)}" for status in sorted(set(cadsmith_statuses))) or "NOT_RUN"
     public_rows = [{
         "agent": "CADSmith", "repository": "https://github.com/jabarkle/CADSmith",
         "commit": "a856517e4e9449eb71dd6f7f83aa9fffa40f5bbb", "official_implementation": True,
         "license": "NOT_DECLARED", "run_status": "NOT_RUN",
         "reason": "Official setup requires ANTHROPIC_API_KEY and a separate Python 3.10/VTK environment; current credentials are Alibaba-only.",
         "geometry_cad_validity": "NOT_RUN", "assembly": "UNSUPPORTED",
+        "kinematics": "UNSUPPORTED", "motion": "UNSUPPORTED",
+    }, {
+        "agent": "CADSmith-Qwen adaptation", "repository": "https://github.com/jabarkle/CADSmith",
+        "commit": "a856517e4e9449eb71dd6f7f83aa9fffa40f5bbb", "official_implementation": False,
+        "license": "NOT_DECLARED", "run_status": cadsmith_summary,
+        "reason": "Qwen client adapter preserves execution-only workflow and disables the LLM validator; all frozen articulated inputs are outside CADSmith's native single-part contract.",
+        "geometry_cad_validity": "UNSUPPORTED_INPUT", "assembly": "UNSUPPORTED",
         "kinematics": "UNSUPPORTED", "motion": "UNSUPPORTED",
     }]
     write_csv(results_root / "open_agent_baseline.csv", public_rows)
@@ -178,6 +191,9 @@ def main() -> None:
         {"system": "CADIR/SimpleCAD SDK-conditioned", "official_public_agent": False, "geometry": "SUPPORTED",
          "cad_validity": "SUPPORTED", "assembly": "SUPPORTED", "kinematics": "SUPPORTED", "motion": "SUPPORTED",
          "note": "Public SDK execution/replay; learned CADIR retrieval index unavailable."},
+        {"system": "CADSmith-Qwen adaptation", "official_public_agent": False, "geometry": "SUPPORTED_FOR_SINGLE_PART_ONLY",
+         "cad_validity": "SUPPORTED_FOR_SINGLE_PART_ONLY", "assembly": "UNSUPPORTED", "kinematics": "UNSUPPORTED", "motion": "UNSUPPORTED",
+         "note": "Qwen adapter; no LLM Judge; frozen articulated inputs rejected by capability preflight."},
         {"system": "CADSmith", "official_public_agent": True, "geometry": "NOT_RUN", "cad_validity": "NOT_RUN",
          "assembly": "UNSUPPORTED", "kinematics": "UNSUPPORTED", "motion": "UNSUPPORTED",
          "note": "Official code targets single-part CAD; no native URDF/articulation output."}]
@@ -208,7 +224,7 @@ def main() -> None:
         "The second run uses Qwen3.7-Max-2026-06-08, a distinct released Max snapshot, under the identical protocol. It is independent model evidence but not cross-provider evidence, since both backbones are from the same provider/family.",
         f"All four tracks have 0 simultaneous successes: **{all_zero_joint}**. Deterministic structural failure patterns occur in {structural_tracks}/4 tracks.", "",
         "## D. Runnable public-agent baseline", "",
-        "CADSmith was audited at the recorded commit. Its official repository has no declared license file, requires an Anthropic key not available in this environment, and targets single-part CAD rather than native URDF/articulation. It is therefore explicitly NOT_RUN for geometry/CAD validity and UNSUPPORTED (not scored as zero) for assembly, kinematics and motion. No surrogate reimplementation was used.", "",
+        "CADSmith was audited at the recorded commit. Its official repository has no declared license file, requires an Anthropic key not available in this environment, and targets single-part CAD rather than native URDF/articulation. The official Claude configuration remains NOT_RUN. A Qwen client adaptation preserved the execution-only workflow but disabled the LLM Judge; its frozen-case status is `" + cadsmith_summary + "` because all ten articulated inputs are outside CADSmith's native contract. It is not scored as zero for unsupported dimensions.", "",
         "## E. Case-level structural gap", "",
         "The failure taxonomy is deterministic: invalid CAD, missing/extra part, wrong decomposition, topology, joint type, axis, origin, poor geometry/curved geometry and wrong multi-pose motion. Self-collision is UNSUPPORTED by this evaluator. See `results/final_validation/case_level_failures.csv` and `failure_breakdown.csv`.", "",
     ]

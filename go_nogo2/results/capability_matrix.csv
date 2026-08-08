@@ -1,4 +1,5 @@
 ﻿system,official_public_agent,geometry,cad_validity,assembly,kinematics,motion,note
 Direct LLM,False,SUPPORTED,SUPPORTED,SUPPORTED,SUPPORTED,SUPPORTED,Frozen benchmark adapter outputs Mesh + URDF.
 CADIR/SimpleCAD SDK-conditioned,False,SUPPORTED,SUPPORTED,SUPPORTED,SUPPORTED,SUPPORTED,Public SDK execution/replay; learned CADIR retrieval index unavailable.
+CADSmith-Qwen adaptation,False,SUPPORTED_FOR_SINGLE_PART_ONLY,SUPPORTED_FOR_SINGLE_PART_ONLY,UNSUPPORTED,UNSUPPORTED,UNSUPPORTED,Qwen adapter; no LLM Judge; frozen articulated inputs rejected by capability preflight.
 CADSmith,True,NOT_RUN,NOT_RUN,UNSUPPORTED,UNSUPPORTED,UNSUPPORTED,Official code targets single-part CAD; no native URDF/articulation output.
