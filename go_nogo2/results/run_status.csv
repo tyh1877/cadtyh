@@ -1,41 +1,41 @@
-﻿method,case_id,pilot_index,manufacturer,name,run_status,reason,model,attempts,simultaneous_success
-direct_frontier_mllm,case_01_arm-fdadfa8bdd,1,ABB,CRB 15000,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_02_arm-4c7b408826,2,Fanuc,LR Mate 200iB/3L,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_03_arm-43fa322555,3,Franka Emika,FR3,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_04_arm-dcc2b0ce1e,4,KUKA,KR 10 R1100 sixx,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_05_arm-ab15a75247,5,Lynxmotion,AL5D,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_06_arm-42e898b1a2,6,Mecademic Robotics,Meca500-R3,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_07_arm-10f5f05385,7,Quanser,QArm,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_08_arm-d55f01b988,8,ROBOTIS,Open Manipulator,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_09_arm-551a9c392e,9,Rethink Robotics,Sawyer,NOT_RUN,missing_openai_api_key,,0,
-direct_frontier_mllm,case_10_arm-21b8992ec4,10,Schunk,LWA 4D,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_01_arm-fdadfa8bdd,1,ABB,CRB 15000,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_02_arm-4c7b408826,2,Fanuc,LR Mate 200iB/3L,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_03_arm-43fa322555,3,Franka Emika,FR3,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_04_arm-dcc2b0ce1e,4,KUKA,KR 10 R1100 sixx,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_05_arm-ab15a75247,5,Lynxmotion,AL5D,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_06_arm-42e898b1a2,6,Mecademic Robotics,Meca500-R3,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_07_arm-10f5f05385,7,Quanser,QArm,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_08_arm-d55f01b988,8,ROBOTIS,Open Manipulator,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_09_arm-551a9c392e,9,Rethink Robotics,Sawyer,NOT_RUN,missing_openai_api_key,,0,
-cadir_simplecad,case_10_arm-21b8992ec4,10,Schunk,LWA 4D,NOT_RUN,missing_openai_api_key,,0,
-articad,case_01_arm-fdadfa8bdd,1,ABB,CRB 15000,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_02_arm-4c7b408826,2,Fanuc,LR Mate 200iB/3L,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_03_arm-43fa322555,3,Franka Emika,FR3,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_04_arm-dcc2b0ce1e,4,KUKA,KR 10 R1100 sixx,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_05_arm-ab15a75247,5,Lynxmotion,AL5D,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_06_arm-42e898b1a2,6,Mecademic Robotics,Meca500-R3,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_07_arm-10f5f05385,7,Quanser,QArm,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_08_arm-d55f01b988,8,ROBOTIS,Open Manipulator,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_09_arm-551a9c392e,9,Rethink Robotics,Sawyer,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-articad,case_10_arm-21b8992ec4,10,Schunk,LWA 4D,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_01_arm-fdadfa8bdd,1,ABB,CRB 15000,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_02_arm-4c7b408826,2,Fanuc,LR Mate 200iB/3L,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_03_arm-43fa322555,3,Franka Emika,FR3,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_04_arm-dcc2b0ce1e,4,KUKA,KR 10 R1100 sixx,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_05_arm-ab15a75247,5,Lynxmotion,AL5D,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_06_arm-42e898b1a2,6,Mecademic Robotics,Meca500-R3,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_07_arm-10f5f05385,7,Quanser,QArm,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_08_arm-d55f01b988,8,ROBOTIS,Open Manipulator,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_09_arm-551a9c392e,9,Rethink Robotics,Sawyer,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
-assemcad,case_10_arm-21b8992ec4,10,Schunk,LWA 4D,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,
+﻿method,case_id,pilot_index,manufacturer,name,run_status,reason,model,attempts,latency_seconds,simultaneous_success
+direct_frontier_mllm,case_01_arm-fdadfa8bdd,1,ABB,CRB 15000,SUCCESS,,qwen3.7-plus,1,172.34076169999025,False
+direct_frontier_mllm,case_02_arm-4c7b408826,2,Fanuc,LR Mate 200iB/3L,SUCCESS,,qwen3.7-plus,1,94.75514919999114,False
+direct_frontier_mllm,case_03_arm-43fa322555,3,Franka Emika,FR3,FAILURE,"BlueprintError: expected 7 actuated DOF, got 9",qwen3.7-plus,1,97.2784427000006,False
+direct_frontier_mllm,case_04_arm-dcc2b0ce1e,4,KUKA,KR 10 R1100 sixx,SUCCESS,,qwen3.7-plus,1,89.34499309999228,False
+direct_frontier_mllm,case_05_arm-ab15a75247,5,Lynxmotion,AL5D,SUCCESS,,qwen3.7-plus,1,65.4343799999915,False
+direct_frontier_mllm,case_06_arm-42e898b1a2,6,Mecademic Robotics,Meca500-R3,SUCCESS,,qwen3.7-plus,1,127.70800909999525,False
+direct_frontier_mllm,case_07_arm-10f5f05385,7,Quanser,QArm,SUCCESS,,qwen3.7-plus,1,87.6262621999922,False
+direct_frontier_mllm,case_08_arm-d55f01b988,8,ROBOTIS,Open Manipulator,FAILURE,"BlueprintError: expected 6 actuated DOF, got 8",qwen3.7-plus,1,231.19122959999368,False
+direct_frontier_mllm,case_09_arm-551a9c392e,9,Rethink Robotics,Sawyer,FAILURE,"BlueprintError: expected 21 links, got 22",qwen3.7-plus,1,100.63297399999283,False
+direct_frontier_mllm,case_10_arm-21b8992ec4,10,Schunk,LWA 4D,FAILURE,BlueprintError: joints/7/axis must be non-zero,qwen3.7-plus,1,53.91412620000483,False
+cadir_simplecad,case_01_arm-fdadfa8bdd,1,ABB,CRB 15000,SUCCESS,,qwen3.7-plus,3,218.36291859998892,False
+cadir_simplecad,case_02_arm-4c7b408826,2,Fanuc,LR Mate 200iB/3L,SUCCESS,,qwen3.7-plus,1,130.56621409999207,False
+cadir_simplecad,case_03_arm-43fa322555,3,Franka Emika,FR3,SUCCESS,,qwen3.7-plus,2,248.14282590000948,False
+cadir_simplecad,case_04_arm-dcc2b0ce1e,4,KUKA,KR 10 R1100 sixx,SUCCESS,,qwen3.7-plus,1,81.97161749999213,False
+cadir_simplecad,case_05_arm-ab15a75247,5,Lynxmotion,AL5D,SUCCESS,,qwen3.7-plus,1,40.40317299999879,False
+cadir_simplecad,case_06_arm-42e898b1a2,6,Mecademic Robotics,Meca500-R3,SUCCESS,,qwen3.7-plus,1,57.85205670000869,False
+cadir_simplecad,case_07_arm-10f5f05385,7,Quanser,QArm,SUCCESS,,qwen3.7-plus,1,195.58022230000643,False
+cadir_simplecad,case_08_arm-d55f01b988,8,ROBOTIS,Open Manipulator,FAILURE,"BlueprintError: expected 6 actuated DOF, got 7",qwen3.7-plus,3,366.2235789999977,False
+cadir_simplecad,case_09_arm-551a9c392e,9,Rethink Robotics,Sawyer,SUCCESS,,qwen3.7-plus,1,97.03105419999338,False
+cadir_simplecad,case_10_arm-21b8992ec4,10,Schunk,LWA 4D,SUCCESS,,qwen3.7-plus,2,261.99496630000067,False
+articad,case_01_arm-fdadfa8bdd,1,ABB,CRB 15000,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_02_arm-4c7b408826,2,Fanuc,LR Mate 200iB/3L,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_03_arm-43fa322555,3,Franka Emika,FR3,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_04_arm-dcc2b0ce1e,4,KUKA,KR 10 R1100 sixx,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_05_arm-ab15a75247,5,Lynxmotion,AL5D,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_06_arm-42e898b1a2,6,Mecademic Robotics,Meca500-R3,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_07_arm-10f5f05385,7,Quanser,QArm,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_08_arm-d55f01b988,8,ROBOTIS,Open Manipulator,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_09_arm-551a9c392e,9,Rethink Robotics,Sawyer,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+articad,case_10_arm-21b8992ec4,10,Schunk,LWA 4D,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_01_arm-fdadfa8bdd,1,ABB,CRB 15000,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_02_arm-4c7b408826,2,Fanuc,LR Mate 200iB/3L,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_03_arm-43fa322555,3,Franka Emika,FR3,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_04_arm-dcc2b0ce1e,4,KUKA,KR 10 R1100 sixx,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_05_arm-ab15a75247,5,Lynxmotion,AL5D,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_06_arm-42e898b1a2,6,Mecademic Robotics,Meca500-R3,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_07_arm-10f5f05385,7,Quanser,QArm,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_08_arm-d55f01b988,8,ROBOTIS,Open Manipulator,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_09_arm-551a9c392e,9,Rethink Robotics,Sawyer,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,
+assemcad,case_10_arm-21b8992ec4,10,Schunk,LWA 4D,NOT_RUN,blocked_no_runnable_official_implementation_verified,,0,,

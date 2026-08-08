@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.paper/go_nogo2/robot_blueprint.schema.json",
+  "title": "Blind multimodal robot reconstruction blueprint",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "units", "links", "joints"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "units": {"const": "mm"},
+    "links": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "primitives"],
+        "properties": {
+          "name": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]{0,47}$"},
+          "primitives": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "center", "size"],
+                  "properties": {
+                    "type": {"const": "box"},
+                    "center": {"$ref": "#/$defs/vector3"},
+                    "size": {"$ref": "#/$defs/positiveVector3"}
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "center", "radius", "height", "axis"],
+                  "properties": {
+                    "type": {"const": "cylinder"},
+                    "center": {"$ref": "#/$defs/vector3"},
+                    "radius": {"$ref": "#/$defs/positiveScalar"},
+                    "height": {"$ref": "#/$defs/positiveScalar"},
+                    "axis": {"$ref": "#/$defs/vector3"}
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "center", "radius"],
+                  "properties": {
+                    "type": {"const": "sphere"},
+                    "center": {"$ref": "#/$defs/vector3"},
+                    "radius": {"$ref": "#/$defs/positiveScalar"}
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["type", "center", "bottom_radius", "top_radius", "height", "axis"],
+                  "properties": {
+                    "type": {"const": "cone"},
+                    "center": {"$ref": "#/$defs/vector3"},
+                    "bottom_radius": {"$ref": "#/$defs/positiveScalar"},
+                    "top_radius": {"type": "number", "minimum": 0.0, "maximum": 2000.0},
+                    "height": {"$ref": "#/$defs/positiveScalar"},
+                    "axis": {"$ref": "#/$defs/vector3"}
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "joints": {
+      "type": "array",
+      "maxItems": 29,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "parent", "child", "type", "origin_xyz", "origin_rpy", "axis", "lower", "upper"],
+        "properties": {
+          "name": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]{0,47}$"},
+          "parent": {"type": "string"},
+          "child": {"type": "string"},
+          "type": {"enum": ["fixed", "revolute", "continuous", "prismatic"]},
+          "origin_xyz": {"$ref": "#/$defs/vector3"},
+          "origin_rpy": {"$ref": "#/$defs/vector3"},
+          "axis": {"$ref": "#/$defs/vector3"},
+          "lower": {"type": "number"},
+          "upper": {"type": "number"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "vector3": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {"type": "number", "minimum": -5000.0, "maximum": 5000.0}
+    },
+    "positiveVector3": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {"$ref": "#/$defs/positiveScalar"}
+    },
+    "positiveScalar": {"type": "number", "exclusiveMinimum": 0.1, "maximum": 2000.0}
+  }
+}

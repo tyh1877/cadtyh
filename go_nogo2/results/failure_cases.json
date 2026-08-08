@@ -2,122 +2,554 @@
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_01_arm-fdadfa8bdd",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_02_arm-4c7b408826",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_03_arm-43fa322555",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "invalid_cad"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_04_arm-dcc2b0ce1e",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_05_arm-ab15a75247",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_06_arm-42e898b1a2",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_07_arm-10f5f05385",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "direct_frontier_mllm",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_08_arm-d55f01b988",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "invalid_cad"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_09_arm-551a9c392e",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "invalid_cad"
   },
   {
     "method": "direct_frontier_mllm",
     "case_id": "case_10_arm-21b8992ec4",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "invalid_cad"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_01_arm-fdadfa8bdd",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_01_arm-fdadfa8bdd",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_02_arm-4c7b408826",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_02_arm-4c7b408826",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_03_arm-43fa322555",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_03_arm-43fa322555",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_04_arm-dcc2b0ce1e",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_04_arm-dcc2b0ce1e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_05_arm-ab15a75247",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_05_arm-ab15a75247",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_06_arm-42e898b1a2",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_06_arm-42e898b1a2",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_07_arm-10f5f05385",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_07_arm-10f5f05385",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_08_arm-d55f01b988",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "invalid_cad"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_09_arm-551a9c392e",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "model_failure",
+    "failure_pattern": "poor_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_09_arm-551a9c392e",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "cadir_simplecad",
     "case_id": "case_10_arm-21b8992ec4",
-    "category": "availability_blocker",
-    "failure_pattern": "missing_openai_api_key"
+    "category": "model_failure",
+    "failure_pattern": "poor_curved_geometry"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_axis"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_origin"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "model_failure",
+    "failure_pattern": "wrong_joint_type"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "model_failure",
+    "failure_pattern": "wrong_motion"
+  },
+  {
+    "method": "cadir_simplecad",
+    "case_id": "case_10_arm-21b8992ec4",
+    "category": "model_failure",
+    "failure_pattern": "wrong_topology"
   },
   {
     "method": "articad",

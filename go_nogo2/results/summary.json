@@ -8,12 +8,15 @@
     "articad",
     "assemcad"
   ],
-  "complete_methods": [],
+  "complete_methods": [
+    "cadir_simplecad",
+    "direct_frontier_mllm"
+  ],
   "terminal_case_counts": {
     "articad": 0,
     "assemcad": 0,
-    "cadir_simplecad": 0,
-    "direct_frontier_mllm": 0
+    "cadir_simplecad": 10,
+    "direct_frontier_mllm": 10
   },
   "simultaneous_success_counts": {
     "direct_frontier_mllm": 0,
@@ -22,10 +25,24 @@
     "assemcad": 0
   },
   "not_run_counts": {
-    "direct_frontier_mllm": 10,
-    "cadir_simplecad": 10,
+    "direct_frontier_mllm": 0,
+    "cadir_simplecad": 0,
     "articad": 10,
     "assemcad": 10
   },
-  "decision_rule": "protocol.md frozen v1"
+  "decision_rule": "protocol.md frozen v1",
+  "executable_method_results": {
+    "direct_frontier_mllm": {
+      "generation_success_cases": 6,
+      "generation_failure_cases": 4,
+      "simultaneous_success_cases": 0,
+      "attempts_total": 10
+    },
+    "cadir_simplecad": {
+      "generation_success_cases": 9,
+      "generation_failure_cases": 1,
+      "simultaneous_success_cases": 0,
+      "attempts_total": 16
+    }
+  }
 }

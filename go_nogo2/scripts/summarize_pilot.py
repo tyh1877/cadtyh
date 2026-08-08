@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 from collections import Counter
 from pathlib import Path
 
@@ -28,8 +27,6 @@ def read_json(path: Path) -> dict:
 
 def not_run_reason(method: str, registry: dict) -> str:
     status = next(item["status"] for item in registry["methods"] if item["id"] == method)
-    if method in {"direct_frontier_mllm", "cadir_simplecad"} and not os.getenv("OPENAI_API_KEY"):
-        return "missing_openai_api_key"
     return status
 
 
@@ -69,14 +66,18 @@ def main() -> None:
                 reason = prediction.get("error")
                 model = prediction.get("provenance", {}).get("model")
                 attempts = prediction.get("attempts", 0)
+                latency_seconds = prediction.get("latency_seconds")
             else:
-                status, reason, model, attempts = "NOT_RUN", not_run_reason(method, registry), None, 0
+                status, reason, model, attempts, latency_seconds = (
+                    "NOT_RUN", not_run_reason(method, registry), None, 0, None
+                )
             outcome = read_json(outcome_path) if outcome_path.is_file() else {}
             base = {
                 "method": method, "case_id": case.case_id,
                 "pilot_index": int(case.pilot_index), "manufacturer": case.manufacturer,
                 "name": case.name, "run_status": status, "reason": reason,
                 "model": model, "attempts": attempts,
+                "latency_seconds": latency_seconds,
                 "simultaneous_success": outcome.get("simultaneous_success"),
             }
             status_rows.append(base)
@@ -138,6 +139,43 @@ def main() -> None:
         for row in failures if row["category"] == "model_failure"
     )
     recurrent_methods = {method for (method, _), count in recurrent.items() if count >= 3}
+
+    metric_frames = {
+        "geometry": pd.DataFrame(geometry_rows),
+        "assembly": pd.DataFrame(assembly_rows),
+        "kinematic": pd.DataFrame(kinematic_rows),
+        "motion": pd.DataFrame(motion_rows),
+    }
+    aggregate_rows = []
+    for method in METHODS:
+        method_status = status.loc[status.method == method]
+        successful = method_status.loc[method_status.run_status == "SUCCESS"]
+        row = {
+            "method": method,
+            "terminal_cases": int(method_status.run_status.isin(["SUCCESS", "FAILURE"]).sum()),
+            "generation_success_cases": int((method_status.run_status == "SUCCESS").sum()),
+            "generation_failure_cases": int((method_status.run_status == "FAILURE").sum()),
+            "not_run_cases": int((method_status.run_status == "NOT_RUN").sum()),
+            "attempts_total": int(method_status.attempts.sum()),
+            "latency_seconds_median_success": successful.latency_seconds.median(),
+            "simultaneous_success_cases": int(strong[method]),
+        }
+        field_map = {
+            "geometry": ["chamfer", "hd95", "voxel_iou"],
+            "assembly": ["part_f1", "assembly_graph_f1"],
+            "kinematic": ["joint_type_accuracy", "axis_error_degrees_median",
+                          "joint_origin_error_normalized_median"],
+            "motion": ["link_translation_error_normalized_median",
+                       "link_rotation_error_degrees_median"],
+        }
+        for family, fields in field_map.items():
+            frame = metric_frames[family]
+            valid = frame.loc[(frame.method == method) & (frame.run_status == "SUCCESS")]
+            for field in fields:
+                row[f"{field}_median_successful_outputs"] = valid[field].median()
+        aggregate_rows.append(row)
+    aggregate = pd.DataFrame(aggregate_rows)
+    aggregate.to_csv(args.output_dir / "aggregate_results.csv", index=False, encoding="utf-8-sig")
     if comparison_complete and any(strong[method] >= 8 for method in METHODS):
         decision = "NO-GO"
     elif comparison_complete and len(recurrent_methods) >= 2:
@@ -158,6 +196,15 @@ def main() -> None:
             for method in METHODS
         },
         "decision_rule": "protocol.md frozen v1",
+        "executable_method_results": {
+            row["method"]: {
+                "generation_success_cases": row["generation_success_cases"],
+                "generation_failure_cases": row["generation_failure_cases"],
+                "simultaneous_success_cases": row["simultaneous_success_cases"],
+                "attempts_total": row["attempts_total"],
+            }
+            for row in aggregate_rows if row["method"] in {"direct_frontier_mllm", "cadir_simplecad"}
+        },
     }
     (args.output_dir / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
@@ -168,12 +215,23 @@ def main() -> None:
         "blockers and are not model scores.", "", "## Run coverage", "",
         markdown_table(status_table), "", "## Simultaneous successes", "",
         markdown_table(strong.rename("cases").to_frame()), "",
+        "## Executable-method aggregate", "",
+        "Metric medians below use successful generated outputs only; generation failures remain",
+        "visible in their own columns and in the fixed denominator of ten.", "",
+        markdown_table(aggregate.loc[aggregate.method.isin(["direct_frontier_mllm", "cadir_simplecad"])], include_index=False), "",
+        "## Failure patterns", "",
+        markdown_table(failure_breakdown.loc[
+            (failure_breakdown.category == "model_failure") &
+            failure_breakdown.method.isin(["direct_frontier_mllm", "cadir_simplecad"])
+        ], include_index=False), "",
         "## Interpretation", "",
     ]
     if decision == "INCONCLUSIVE":
         report.extend([
             "The four-baseline comparison is incomplete, so neither a SOTA gap nor its absence is established.",
-            "Current evidence supports the dataset/evaluator feasibility only.",
+            "For the two executable tracks, both have 0/10 simultaneous successes. The SDK-conditioned",
+            "CADIR track improves generation success from 6/10 to 9/10, but it does not close the joint",
+            "geometry-assembly-kinematics gap. This is provisional evidence, not a four-method decision.",
         ])
     elif decision == "GO":
         report.append("No method is jointly strong and stable failure modes recur across methods.")
@@ -188,7 +246,14 @@ def main() -> None:
     ]
     if decision == "INCONCLUSIVE":
         blockers = failure_breakdown.loc[failure_breakdown.category == "availability_blocker"]
-        go_report.extend(["", "## Blocking evidence", "", markdown_table(blockers, include_index=False)])
+        go_report.extend([
+            "", "## Provisional executable-method evidence", "",
+            "Direct LLM: 6/10 generation successes, 0/10 simultaneous successes.",
+            "CADIR/SimpleCADAPI SDK-conditioned: 9/10 generation successes, 0/10 simultaneous successes.",
+            "", "## Blocking evidence", "", markdown_table(blockers, include_index=False),
+            "", "ArtiCAD and AssemCAD have no verified runnable official method code, so the frozen",
+            "four-baseline rule prevents a final GO or NO-GO decision.",
+        ])
     (args.output_dir / "go_nogo_report.md").write_text("\n".join(go_report) + "\n", encoding="utf-8")
     print(json.dumps(summary, indent=2))
 

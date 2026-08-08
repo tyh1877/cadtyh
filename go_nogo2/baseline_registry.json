@@ -4,7 +4,7 @@
   "methods": [
     {
       "id": "direct_frontier_mllm",
-      "status": "adapter_configured_missing_api_key",
+      "status": "executed_10_terminal",
       "implementation": "Shared OpenAI-compatible Alibaba Cloud Model Studio adapter",
       "model_default": "qwen3.7-plus",
       "source": "https://help.aliyun.com/en/model-studio/models",
@@ -12,19 +12,19 @@
     },
     {
       "id": "cadir_simplecad",
-      "status": "sdk_runtime_verified_adapter_configured_missing_api_key",
+      "status": "executed_10_terminal_sdk_conditioned_no_learned_retrieval",
       "paper": "https://arxiv.org/abs/2608.00891",
       "repository": "https://github.com/NiJingzhe/SimpleCADAPI",
       "commit": "6fee370297c29296768f282d2e40174ee5a82795",
       "license": "AGPL-3.0",
-      "notes": "Pinned source installed in the paper .venv; OCP solid creation plus STEP/STL export passed a local smoke test. It shares the exact Qwen 3.7 Plus client configuration used by the direct baseline."
+      "notes": "Nine of ten cases produced strict-replay construction graphs plus STEP/STL/URDF. The public repository supplies the SDK and agent skill, but not the paper's five-agent orchestrator, learned retrieval encoders, or indexed case library; this is explicitly an SDK-conditioned baseline rather than a full paper reproduction."
     },
     {
       "id": "articad",
       "status": "blocked_no_runnable_official_implementation_verified",
       "paper": "https://arxiv.org/abs/2604.10992",
       "project": "https://shui-yuan.github.io/articad/",
-      "notes": "The project describes multimodal input and URDF export, but the visible Code link did not resolve to a runnable repository during this audit."
+      "notes": "The public GitHub repository contains the project website and viewer assets, but no runnable method implementation."
     },
     {
       "id": "assemcad",

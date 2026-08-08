@@ -12,8 +12,8 @@ model = "qwen3.7-plus"
 temperature = 0.0
 top_p = 1.0
 max_output_tokens = 32768
-timeout_seconds = 600.0
-max_retries = 2
+timeout_seconds = 300.0
+max_retries = 0
 
 [experiment]
 config_version = "1.0"
