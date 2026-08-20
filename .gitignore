@@ -20,6 +20,10 @@ go_nogo2/data/
 go_nogo2/external/
 go_nogo2/runs/
 
+# Go/No-Go 3 development data, raw model responses, and generated CAD outputs
+go_nogo3/data/
+go_nogo3/runs/
+
 # Local LLM credential file. Copy/edit the tracked example; never commit this file.
 go_nogo2/config/llm.local.toml
 
