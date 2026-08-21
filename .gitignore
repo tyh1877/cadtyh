@@ -24,6 +24,10 @@ go_nogo2/runs/
 go_nogo3/data/
 go_nogo3/runs/
 
+# Go/No-Go 4 derived multi-pose renders and raw generations
+go_nogo4/data/
+go_nogo4/runs/
+
 # Local LLM credential file. Copy/edit the tracked example; never commit this file.
 go_nogo2/config/llm.local.toml
 
