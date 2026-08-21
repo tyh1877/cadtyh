@@ -31,6 +31,10 @@ go_nogo4/runs/
 # Go/No-Go 5 raw copied baselines, verification meshes, and repair generations
 go_nogo5/runs/
 
+# Mesh Oracle Diagnostic derived point clouds, oracle meshes, and raw generations
+mesh_oracle_diagnostic/data/
+mesh_oracle_diagnostic/runs/
+
 # Local LLM credential file. Copy/edit the tracked example; never commit this file.
 go_nogo2/config/llm.local.toml
 

@@ -1,0 +1,4 @@
+﻿condition,cases,executed,failed,tokens_total,median_assembly_assembly_graph_f1,median_kinematic_joint_type_accuracy,median_kinematic_axis_error_degrees_median,median_kinematic_joint_origin_error_normalized_median,median_motion_link_translation_error_normalized_median,median_motion_link_rotation_error_degrees_median
+I_image_baseline,7,7,0,55242,0.4615384615384615,0.375,90.0,0.16628177251048046,0.1848394250002462,44.48009043156891
+M_monolithic_mesh,7,5,2,84050,0.0,0.0,,,,
+L_per_link_mesh_oracle,7,5,2,126320,0.6,0.5,22.5,0.19608970030442327,0.1936854244898613,92.66472678426761
