@@ -28,6 +28,9 @@ go_nogo3/runs/
 go_nogo4/data/
 go_nogo4/runs/
 
+# Go/No-Go 5 raw copied baselines, verification meshes, and repair generations
+go_nogo5/runs/
+
 # Local LLM credential file. Copy/edit the tracked example; never commit this file.
 go_nogo2/config/llm.local.toml
 
