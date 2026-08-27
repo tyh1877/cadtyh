@@ -19,9 +19,10 @@ def call(client, model, prompt, packet, cap, json_mode):
     args={"model":model,"messages":[{"role":"system","content":prompt},{"role":"user","content":content(packet)}],"temperature":0.0,"top_p":1.0,"max_tokens":cap}
     if json_mode:
         args["response_format"]={"type":"json_object"}
-        # This GLM model is always-thinking; request its lowest supported mode
-        # and reserve enough of the fixed total budget for JSON emission.
-        args["extra_body"]={"thinking":{"type":"low"}}
+        # This GLM model is always-thinking.  The API requires an enabled
+        # thinking object plus a separate effort selector; minimal reserves the
+        # fixed completion budget for schema-constrained JSON.
+        args["extra_body"]={"thinking":{"type":"enabled"},"reasoning_effort":"minimal"}
     r=client.chat.completions.create(**args); u=r.usage; return r.choices[0].message.content or "", {"input_tokens":int(getattr(u,"prompt_tokens",0)or 0),"output_tokens":int(getattr(u,"completion_tokens",0)or 0),"total_tokens":int(getattr(u,"total_tokens",0)or 0),"request_id":getattr(r,"id",None)}
 def main():
  p=argparse.ArgumentParser();p.add_argument("--condition",choices=CAPS,required=True);p.add_argument("--case");p.add_argument("--overwrite",action="store_true");a=p.parse_args(); cfg=load_glm(); packets=sorted((ROOT/"try1/inputs/image_text_v1").glob("*.json")); packets=[x for x in packets if not a.case or x.stem==a.case]
