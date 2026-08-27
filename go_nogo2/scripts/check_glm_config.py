@@ -28,7 +28,9 @@ def main() -> None:
         messages=[{"role": "user", "content": "Reply with exactly: GLM_CONFIG_OK"}],
         temperature=config.temperature,
         top_p=config.top_p,
-        max_tokens=16,
+        # GLM may use part of the completion budget for reasoning before emitting
+        # the short verification string, so 16 tokens can truncate valid output.
+        max_tokens=128,
     )
     answer = (response.choices[0].message.content or "").strip()
     if "GLM_CONFIG_OK" not in answer:
