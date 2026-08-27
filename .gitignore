@@ -37,6 +37,7 @@ mesh_oracle_diagnostic/runs/
 
 # Local LLM credential file. Copy/edit the tracked example; never commit this file.
 go_nogo2/config/llm.local.toml
+go_nogo2/config/glm.local.toml
 
 # Local/temporary outputs
 *.tmp

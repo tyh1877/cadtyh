@@ -70,6 +70,20 @@ After the offline check passes, make one minimal paid connectivity request:
 Both baselines must call `load_shared_llm()` from `scripts/llm_config.py`; this
 prevents either baseline from silently changing the model or sampling settings.
 
+## Default configuration for new experiments: GLM
+
+Completed Go/No-Go experiments remain tied to their recorded Qwen settings. New
+LLM/VLM experiments should instead use the project default GLM configuration:
+copy `config/glm.example.toml` to the already-created, ignored
+`config/glm.local.toml`, paste the Zhipu API key after `api_key =`, then run:
+
+```powershell
+.\.venv\Scripts\python.exe go_nogo2\scripts\check_glm_config.py
+```
+
+The model is frozen to the user-selected `glm-5.3-flash`. Add `--live` only
+when you intend to make a small paid connectivity request.
+
 ## Run the executable baselines
 
 ```powershell

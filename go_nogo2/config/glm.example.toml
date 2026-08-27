@@ -1,0 +1,27 @@
+# Tracked, secret-free template for future LLM/VLM experiments.
+# Copy this file to glm.local.toml, then paste the Zhipu API key there.
+# The local file is ignored by Git and must never be committed.
+
+[provider]
+name = "zhipu_bigmodel"
+api_key = "PASTE_ZHIPU_API_KEY_HERE"
+base_url = "https://open.bigmodel.cn/api/paas/v4"
+
+[generation]
+# This is the project's user-selected default. Experiment code records any
+# deliberate model migration separately; do not alter historical runs.
+model = "glm-5.3-flash"
+temperature = 0.0
+top_p = 1.0
+max_output_tokens = 32768
+timeout_seconds = 600.0
+max_retries = 2
+
+[capabilities]
+# The OpenAI-compatible message format supports image content. Actual availability
+# remains subject to the selected model and account entitlement.
+input_modalities = ["text", "image"]
+
+[experiment]
+config_version = "1.0"
+default_for_new_experiments = true
