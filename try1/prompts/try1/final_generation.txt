@@ -1,0 +1,5 @@
+Generate the final editable primitive CAD blueprint and explicit kinematic model from Image+Text and the intermediate plan below. Treat a valid RMDG as the binding mechanical structure; a generic planning note is advisory. Return JSON only, following the supplied CAD contract.
+
+<INTERMEDIATE_PLAN>
+{intermediate_plan}
+</INTERMEDIATE_PLAN>

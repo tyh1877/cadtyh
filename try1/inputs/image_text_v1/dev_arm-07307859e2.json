@@ -1,0 +1,19 @@
+{
+  "protocol_version": "image_text_v1",
+  "case_id": "dev_arm-07307859e2",
+  "images": {
+    "front": "go_nogo3\\data\\dev15\\dev_arm-07307859e2\\renders\\front.png",
+    "rear": "go_nogo3\\data\\dev15\\dev_arm-07307859e2\\renders\\rear.png",
+    "left": "go_nogo3\\data\\dev15\\dev_arm-07307859e2\\renders\\left.png",
+    "right": "go_nogo3\\data\\dev15\\dev_arm-07307859e2\\renders\\right.png",
+    "top": "go_nogo3\\data\\dev15\\dev_arm-07307859e2\\renders\\top.png",
+    "isometric": "go_nogo3\\data\\dev15\\dev_arm-07307859e2\\renders\\iso.png"
+  },
+  "text_fields": {
+    "semantic_category": "articulated industrial robot arm",
+    "overall_height_home_mm": 1114.7,
+    "max_reach_mm": 1224.9
+  },
+  "rendered_prompt": "Reconstruct the articulated industrial robot arm shown in the six reference images as an editable parametric CAD assembly and an explicit kinematic model. Use millimeters. In the shown canonical/home configuration, the overall height is 1114.7 mm. The nominal maximum reach from the base reference to the end-effector reference is 1224.9 mm. Infer the rigid-link decomposition, parent-child topology, joint types, joint axes, joint origins, and detailed link geometry from the references. Do not assume access to original CAD, mesh, URDF, product identity, or hidden part labels.",
+  "units": "mm"
+}

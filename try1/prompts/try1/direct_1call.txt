@@ -1,0 +1,1 @@
+Generate the final editable primitive CAD blueprint and explicit kinematic model in one response from the Image+Text input. Infer all structure yourself. Return JSON only, following the supplied CAD contract.

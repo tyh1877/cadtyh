@@ -39,6 +39,10 @@ mesh_oracle_diagnostic/runs/
 go_nogo2/config/llm.local.toml
 go_nogo2/config/glm.local.toml
 
+# Try-1 raw model requests and generated CAD artifacts
+try1/runs/
+try1/hidden_gt_rmdg/
+
 # Local/temporary outputs
 *.tmp
 *.log

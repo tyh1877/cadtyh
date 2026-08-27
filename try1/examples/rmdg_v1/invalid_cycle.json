@@ -1,0 +1,1 @@
+{"schema_version":"rmdg_v1","robot":{"mechanism_class":"serial_manipulator","base_link_id":"L0","end_effector_link_id":"L1","units":"mm"},"links":[],"joints":[]}
