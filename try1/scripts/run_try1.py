@@ -9,7 +9,7 @@ from compile_blueprint import compile_direct
 from run_prototype import generic_validate
 from validate_rmdg_v1 import validate as validate_rmdg
 from evaluate_prediction import evaluate, load_robot, write_json
-VIEWS=("front","rear","left","right","top","isometric"); CAPS={"D1":(32768,),"D2":(8192,24576),"G1":(8192,24576),"O_GT":(24576,)}
+VIEWS=("front","rear","left","right","top","isometric"); CAPS={"D1":(32768,),"D2":(1024,31744),"G1":(8192,24576),"O_GT":(24576,)}
 def content(packet, extra=""):
     out=[{"type":"text","text":packet["rendered_prompt"]+extra}]
     for v in VIEWS:

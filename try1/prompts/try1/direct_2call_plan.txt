@@ -1,1 +1,1 @@
-Produce a concise free-form mechanical and CAD planning note from the Image+Text input. Do not use JSON, node/edge tables, named graph schemas, or machine-readable graph notation. Do not claim hidden file access.
+Produce a concise free-form mechanical and CAD planning note from the Image+Text input in at most 300 words. Do not use JSON, node/edge tables, named graph schemas, or machine-readable graph notation. Do not claim hidden file access.
