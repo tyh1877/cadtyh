@@ -10,7 +10,7 @@ file existing, or a partial aggregate does not establish completion.
 | A/C primitive runs retain every terminal case | manifests and evaluator outcomes | PASS |
 | B/D use real Fusion API rather than primitive compiler | native F3D/STEP/STL plus Fusion execution log | PASS, subject to assembly checks |
 | Fusion components assembled at canonical FK pose | Fusion-exported occurrence transform audit vs expected FK | PENDING |
-| Fusion joints preserve type, axis, origin and limits | native joint audit vs skeleton/blueprint | PENDING |
+| Fusion joints preserve type, axis, origin and limits | native joint audit vs skeleton/blueprint | FAIL: current layer creates Z-axis joints only |
 | Native editability | component/feature/joint/rebuild/native-save audit | PARTIAL (rebuild audit pending) |
 | All B/D geometry sent to evaluator comes from Fusion occurrence STL | per-component export manifest and mesh hashes | PENDING |
 | Per-link geometry metrics | per-link Chamfer/IoU/HD95 table | PENDING |
