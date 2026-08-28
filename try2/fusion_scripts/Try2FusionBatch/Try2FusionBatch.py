@@ -15,6 +15,9 @@ def add_box(comp,p):
  sk=comp.sketches.add(comp.xYConstructionPlane); c=p['center'];s=p['size']; sk.sketchCurves.sketchLines.addTwoPointRectangle(adsk.core.Point3D.create((c[0]-s[0]/2)/10,(c[1]-s[1]/2)/10,0),adsk.core.Point3D.create((c[0]+s[0]/2)/10,(c[1]+s[1]/2)/10,0)); inp=comp.features.extrudeFeatures.createInput(sk.profiles.item(0),adsk.fusion.FeatureOperations.NewBodyFeatureOperation);inp.setDistanceExtent(False,adsk.core.ValueInput.createByReal(s[2]/10));comp.features.extrudeFeatures.add(inp)
 def add_cylinder(comp,p):
  sk=comp.sketches.add(comp.xYConstructionPlane);c=p['center'];sk.sketchCurves.sketchCircles.addByCenterRadius(adsk.core.Point3D.create(c[0]/10,c[1]/10,0),p['radius']/10);inp=comp.features.extrudeFeatures.createInput(sk.profiles.item(0),adsk.fusion.FeatureOperations.NewBodyFeatureOperation);inp.setDistanceExtent(False,adsk.core.ValueInput.createByReal(p['height']/10));comp.features.extrudeFeatures.add(inp)
+def add_envelope(comp,p):
+ if p['type']=='sphere': add_cylinder(comp,{'center':p['center'],'radius':p['radius'],'height':2*p['radius']})
+ elif p['type']=='cone': add_cylinder(comp,{'center':p['center'],'radius':max(p['bottom_radius'],p['top_radius']),'height':p['height']})
 def run(context):
  results=[]
  try: jobs=json.load(open(JOBS,encoding='utf-8'))['jobs']
@@ -39,7 +42,7 @@ def run(context):
     for primitive in link['primitives']:
      if primitive['type']=='box':add_box(comp,primitive)
      elif primitive['type']=='cylinder':add_cylinder(comp,primitive)
-     else: continue
+     else:add_envelope(comp,primitive)
      record['fusion_operations']+=1
    em=design.exportManager; mesh_dir=os.path.join(out,'meshes');os.makedirs(mesh_dir,exist_ok=True);em.execute(em.createFusionArchiveExportOptions(os.path.join(out,'model.f3d'),root));em.execute(em.createSTEPExportOptions(os.path.join(out,'model.step'),root));em.execute(em.createSTLExportOptions(root,os.path.join(out,'model.stl')))
    for occ in root.occurrences:
