@@ -54,7 +54,8 @@ def run(context):
         report["component_count"] = root.occurrences.count
         report["feature_count"] = (comp0.features.extrudeFeatures.count + comp1.features.extrudeFeatures.count)
         try:
-            geometry = adsk.fusion.JointGeometry.createByPoint(body0.vertices.item(0))
+            body_proxy = body0.createForAssemblyContext(occ0)
+            geometry = adsk.fusion.JointGeometry.createByPoint(body_proxy.vertices.item(0))
             joint_input = root.asBuiltJoints.createInput(occ0, occ1, geometry)
             joint_input.setAsRevoluteJointMotion(
                 adsk.fusion.JointDirections.ZAxisJointDirection
