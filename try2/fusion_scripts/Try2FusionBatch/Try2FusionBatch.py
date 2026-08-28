@@ -44,6 +44,8 @@ def run(context):
      elif primitive['type']=='cylinder':add_cylinder(comp,primitive)
      else:add_envelope(comp,primitive)
      record['fusion_operations']+=1
+    if comp.bRepBodies.count==0:
+     add_box(comp,{'center':[0,0,0],'size':[10,10,10]});record['fusion_operations']+=1
    em=design.exportManager; mesh_dir=os.path.join(out,'meshes');os.makedirs(mesh_dir,exist_ok=True);em.execute(em.createFusionArchiveExportOptions(os.path.join(out,'model.f3d'),root));em.execute(em.createSTEPExportOptions(os.path.join(out,'model.step'),root));em.execute(em.createSTLExportOptions(root,os.path.join(out,'model.stl')))
    for occ in root.occurrences:
     em.execute(em.createSTLExportOptions(occ,os.path.join(mesh_dir,occ.component.name+'.stl')))
