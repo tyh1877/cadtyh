@@ -21,7 +21,9 @@ def run(context):
      elif primitive['type']=='cylinder':add_cylinder(comp,primitive)
      else: continue
      record['fusion_operations']+=1
-   em=design.exportManager;em.execute(em.createFusionArchiveExportOptions(os.path.join(out,'model.f3d'),root));em.execute(em.createSTEPExportOptions(os.path.join(out,'model.step'),root));em.execute(em.createSTLExportOptions(root,os.path.join(out,'model.stl')))
+   em=design.exportManager; mesh_dir=os.path.join(out,'meshes');os.makedirs(mesh_dir,exist_ok=True);em.execute(em.createFusionArchiveExportOptions(os.path.join(out,'model.f3d'),root));em.execute(em.createSTEPExportOptions(os.path.join(out,'model.step'),root));em.execute(em.createSTLExportOptions(root,os.path.join(out,'model.stl')))
+   for occ in root.occurrences:
+    em.execute(em.createSTLExportOptions(occ,os.path.join(mesh_dir,occ.component.name+'.stl')))
    record.update({'status':'SUCCESS','component_count':root.occurrences.count,'feature_count':sum(o.component.features.extrudeFeatures.count for o in root.occurrences),'native_save_success':True,'step_export_success':True,'stl_export_success':True})
   except: record['errors'].append(traceback.format_exc())
   json.dump(record,open(os.path.join(out,'fusion_execution.json'),'w'),indent=2);results.append(record)
