@@ -35,7 +35,7 @@ def _component(root, name, x_offset_cm):
     extrude_input.setDistanceExtent(False, adsk.core.ValueInput.createByReal(6.0))
     feature = component.features.extrudeFeatures.add(extrude_input)
     feature.name = f"{name}_extrude"
-    return occurrence, component
+    return occurrence, component, feature.bodies.item(0)
 
 
 def run(context):
@@ -49,12 +49,13 @@ def run(context):
         document = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
         design = adsk.fusion.Design.cast(app.activeProduct)
         root = design.rootComponent
-        occ0, comp0 = _component(root, "L0", 0.0)
-        occ1, comp1 = _component(root, "L1", 8.0)
+        occ0, comp0, body0 = _component(root, "L0", 0.0)
+        occ1, comp1, _ = _component(root, "L1", 8.0)
         report["component_count"] = root.occurrences.count
         report["feature_count"] = (comp0.features.extrudeFeatures.count + comp1.features.extrudeFeatures.count)
         try:
-            joint_input = root.asBuiltJoints.createInput(occ0, occ1, None)
+            geometry = adsk.fusion.JointGeometry.createByPoint(body0.vertices.item(0))
+            joint_input = root.asBuiltJoints.createInput(occ0, occ1, geometry)
             joint_input.setAsRevoluteJointMotion(
                 adsk.fusion.JointDirections.ZAxisJointDirection
             )
