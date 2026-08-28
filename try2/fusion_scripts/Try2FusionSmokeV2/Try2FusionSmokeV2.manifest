@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "RobotCAD Try-2",
+  "description": "Fresh entry point for the Try-2 Fusion smoke test.",
+  "supportedOS": "windows",
+  "editEnabled": true
+}
