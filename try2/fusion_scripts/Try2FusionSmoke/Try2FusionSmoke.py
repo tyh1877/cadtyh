@@ -55,7 +55,9 @@ def run(context):
         report["feature_count"] = (comp0.features.extrudeFeatures.count + comp1.features.extrudeFeatures.count)
         try:
             joint_input = root.asBuiltJoints.createInput(occ0, occ1, None)
-            joint_input.setAsRevoluteJointMotion(adsk.core.Vector3D.create(0, 0, 1))
+            joint_input.setAsRevoluteJointMotion(
+                adsk.fusion.JointDirections.ZAxisJointDirection
+            )
             root.asBuiltJoints.add(joint_input)
             report["joint_create_success"] = True
         except Exception:
