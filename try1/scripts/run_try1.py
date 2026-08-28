@@ -9,18 +9,25 @@ from compile_blueprint import compile_direct
 from run_prototype import generic_validate
 from validate_rmdg_v1 import validate as validate_rmdg
 from evaluate_prediction import evaluate, load_robot, write_json
-VIEWS=("front","rear","left","right","top","isometric"); CAPS={"D1":(32768,),"D2":(1024,31744),"G1":(16384,16384),"O_GT":(24576,)}
+VIEWS=("front","rear","left","right","top","isometric"); CAPS={"D1":(32768,),"D2":(1024,31744),"G1":(8192,24576),"O_GT":(24576,)}
 def content(packet, extra=""):
     out=[{"type":"text","text":packet["rendered_prompt"]+extra}]
     for v in VIEWS:
         p=ROOT/packet["images"][v]; mime=mimetypes.guess_type(p.name)[0] or "image/png"; out += [{"type":"text","text":f"view={v}"},{"type":"image_url","image_url":{"url":f"data:{mime};base64,{base64.b64encode(p.read_bytes()).decode()}"}}]
     return out
 def call(client, model, prompt, packet, cap, json_mode):
-    args={"model":model,"messages":[{"role":"system","content":prompt},{"role":"user","content":content(packet)}],"temperature":0.0,"top_p":1.0,"max_tokens":cap}
-    # The selected always-thinking GLM endpoint rejects OpenAI JSON mode as an
-    # implicit request to disable thinking.  JSON is therefore enforced by the
-    # prompt plus parse/schema validation, with every raw reply retained.
-    r=client.chat.completions.create(**args); u=r.usage; return r.choices[0].message.content or "", {"input_tokens":int(getattr(u,"prompt_tokens",0)or 0),"output_tokens":int(getattr(u,"completion_tokens",0)or 0),"total_tokens":int(getattr(u,"total_tokens",0)or 0),"request_id":getattr(r,"id",None)}
+    args={"model":model,"messages":[{"role":"system","content":prompt},{"role":"user","content":content(packet)}],"temperature":0.0,"top_p":1.0,"max_tokens":cap,"stream":True}
+    body, reasoning, finish, usage, request_id = [], [], None, None, None
+    for chunk in client.chat.completions.create(**args):
+        request_id = getattr(chunk, "id", request_id)
+        if getattr(chunk, "usage", None) is not None: usage = chunk.usage
+        if not chunk.choices: continue
+        choice = chunk.choices[0]; delta = choice.delta
+        if getattr(delta, "content", None): body.append(delta.content)
+        if getattr(delta, "reasoning_content", None): reasoning.append(delta.reasoning_content)
+        finish = choice.finish_reason or finish
+    u = usage
+    return "".join(body), {"input_tokens":int(getattr(u,"prompt_tokens",0)or 0),"output_tokens":int(getattr(u,"completion_tokens",0)or 0),"total_tokens":int(getattr(u,"total_tokens",0)or 0),"reasoning_characters":len("".join(reasoning)),"content_characters":len("".join(body)),"finish_reason":finish,"request_id":request_id}
 def main():
  p=argparse.ArgumentParser();p.add_argument("--condition",choices=CAPS,required=True);p.add_argument("--case");p.add_argument("--overwrite",action="store_true");a=p.parse_args(); cfg=load_glm(); packets=sorted((ROOT/"try1/inputs/image_text_v1").glob("*.json")); packets=[x for x in packets if not a.case or x.stem==a.case]
  for path in packets:
