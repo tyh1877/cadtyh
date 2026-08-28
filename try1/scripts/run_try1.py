@@ -16,7 +16,7 @@ def content(packet, extra=""):
         p=ROOT/packet["images"][v]; mime=mimetypes.guess_type(p.name)[0] or "image/png"; out += [{"type":"text","text":f"view={v}"},{"type":"image_url","image_url":{"url":f"data:{mime};base64,{base64.b64encode(p.read_bytes()).decode()}"}}]
     return out
 def call(client, model, prompt, packet, cap, json_mode):
-    args={"model":model,"messages":[{"role":"system","content":prompt},{"role":"user","content":content(packet)}],"temperature":0.0,"top_p":1.0,"max_tokens":cap,"stream":True}
+    args={"model":model,"messages":[{"role":"system","content":prompt},{"role":"user","content":content(packet)}],"temperature":0.0,"top_p":1.0,"max_tokens":cap,"stream":True,"extra_body":{"reasoning_effort":"low"}}
     body, reasoning, finish, usage, request_id = [], [], None, None, None
     for chunk in client.chat.completions.create(**args):
         request_id = getattr(chunk, "id", request_id)
@@ -39,7 +39,7 @@ def main():
    if a.condition=="D1": final_prompt=(ROOT/"try1/prompts/try1/direct_1call.txt").read_text(); raw,u=call(cfg.create_client(),cfg.model,final_prompt+"\n"+__import__("robot_blueprint").blueprint_contract(),packet,CAPS[a.condition][0],True);history.append({"stage":"final","raw":raw,**u})
    else:
     if a.condition=="D2": prompt=(ROOT/"try1/prompts/try1/direct_2call_plan.txt").read_text(); raw,u=call(cfg.create_client(),cfg.model,prompt,packet,CAPS[a.condition][0],False); intermediate={"kind":"generic_plan","text":raw};history.append({"stage":"generic_plan","raw":raw,**u})
-    elif a.condition=="G1": prompt=(ROOT/"try1/prompts/try1/rmdg_predict.txt").read_text()+"\nSchema: "+(ROOT/"try1/schemas/rmdg_v1.schema.json").read_text(); raw,u=call(cfg.create_client(),cfg.model,prompt,packet,CAPS[a.condition][0],True); intermediate=extract_json(raw); report=validate_rmdg(intermediate);history.append({"stage":"rmdg","raw":raw,"validation":report,**u});
+    elif a.condition=="G1": prompt=(ROOT/"try1/prompts/try1/rmdg_predict.txt").read_text()+"\nSchema: "+(ROOT/"try1/schemas/rmdg_v1.schema.json").read_text(); raw,u=call(cfg.create_client(),cfg.model,prompt,packet,CAPS[a.condition][0],True); history.append({"stage":"rmdg","raw":raw,**u}); intermediate=extract_json(raw); report=validate_rmdg(intermediate);history[-1]["validation"]=report;
     else: intermediate=json.loads((ROOT/"try1/hidden_gt_rmdg"/f"{path.stem}.json").read_text()); report=validate_rmdg(intermediate);history.append({"stage":"oracle_rmdg","validation":report})
     if a.condition=="G1" and not report["semantic_valid"]: raise ValueError("predicted RMDG invalid")
     final=(ROOT/"try1/prompts/try1/final_generation.txt").read_text().format(intermediate_plan=json.dumps(intermediate,separators=(",",":")))+"\n"+__import__("robot_blueprint").blueprint_contract(); raw,u=call(cfg.create_client(),cfg.model,final,packet,CAPS[a.condition][-1],True);history.append({"stage":"final","raw":raw,**u})
