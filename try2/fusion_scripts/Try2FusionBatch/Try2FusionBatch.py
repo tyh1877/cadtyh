@@ -11,6 +11,9 @@ def fusion_matrix(a):
  for i in range(4):
   for j in range(4):m.setCell(i,j,a[i][j])
  return m
+def direction(axis):
+ i=max(range(3),key=lambda k:abs(axis[k]))
+ return (adsk.fusion.JointDirections.XAxisJointDirection,adsk.fusion.JointDirections.YAxisJointDirection,adsk.fusion.JointDirections.ZAxisJointDirection)[i]
 def add_box(comp,p):
  sk=comp.sketches.add(comp.xYConstructionPlane); c=p['center'];s=p['size']; sk.sketchCurves.sketchLines.addTwoPointRectangle(adsk.core.Point3D.create((c[0]-s[0]/2)/10,(c[1]-s[1]/2)/10,0),adsk.core.Point3D.create((c[0]+s[0]/2)/10,(c[1]+s[1]/2)/10,0)); inp=comp.features.extrudeFeatures.createInput(sk.profiles.item(0),adsk.fusion.FeatureOperations.NewBodyFeatureOperation);inp.setDistanceExtent(False,adsk.core.ValueInput.createByReal(s[2]/10));comp.features.extrudeFeatures.add(inp)
 def add_cylinder(comp,p):
@@ -54,7 +57,8 @@ def run(context):
     try:
      b=occs[j['child']].component.bRepBodies.item(0).createForAssemblyContext(occs[j['child']]);geo=adsk.fusion.JointGeometry.createByPoint(b.vertices.item(0));inp=root.asBuiltJoints.createInput(occs[j['parent']],occs[j['child']],geo)
      if j['type']=='fixed':inp.setAsRigidJointMotion()
-     else:inp.setAsRevoluteJointMotion(adsk.fusion.JointDirections.ZAxisJointDirection)
+     elif j['type']=='prismatic':inp.setAsSliderJointMotion(direction(j['axis']))
+     else:inp.setAsRevoluteJointMotion(direction(j['axis']))
      root.asBuiltJoints.add(inp);joint_ok+=1
     except: record['errors'].append('joint '+j['name']+': '+traceback.format_exc())
    record.update({'status':'SUCCESS','component_count':root.occurrences.count,'feature_count':sum(o.component.features.extrudeFeatures.count for o in root.occurrences),'joint_count':joint_ok,'native_save_success':True,'step_export_success':True,'stl_export_success':True})
