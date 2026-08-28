@@ -42,6 +42,8 @@ go_nogo2/config/glm.local.toml
 # Try-1 raw model requests and generated CAD artifacts
 try1/runs/
 try1/hidden_gt_rmdg/
+try2/runs/
+try2/fusion_smoke/
 
 # Local/temporary outputs
 *.tmp

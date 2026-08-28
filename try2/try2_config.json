@@ -1,0 +1,20 @@
+{
+  "experiment": "RobotCAD Try-2",
+  "cases": "../try1/frozen_cases.csv",
+  "image_text_packets": "../try1/inputs/image_text_v1",
+  "sanitized_urdf": "inputs/sanitized_urdf",
+  "model": "glm-5.3-flash",
+  "reasoning_effort": "low",
+  "limits": {
+    "max_model_calls_per_case": 2,
+    "max_total_output_tokens_per_case": 32768,
+    "max_total_model_tokens_per_case": 100000,
+    "max_fusion_operations_per_case": 128
+  },
+  "conditions": {
+    "A": {"kinematic_input": "none", "backend": "primitive"},
+    "B": {"kinematic_input": "none", "backend": "fusion"},
+    "C": {"kinematic_input": "sanitized_urdf", "backend": "primitive"},
+    "D": {"kinematic_input": "sanitized_urdf", "backend": "fusion"}
+  }
+}
