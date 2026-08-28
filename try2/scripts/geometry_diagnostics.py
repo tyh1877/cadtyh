@@ -16,7 +16,7 @@ def main():
    gt,pred=load_robot(ROOT/'go_nogo3/data/dev15'/run.name/'urdf/model.urdf'),load_robot(run/'urdf/model.urdf')
    gt_names=gt.links;pred_names=pred.links
    for i,name in enumerate(pred_names):
-    if i>=len(gt_names) or name not in pred.world_meshes:continue
+    if i>=len(gt_names) or name not in pred.world_meshes or gt_names[i] not in gt.world_meshes:continue
     a=deterministic_surface_points(gt.world_meshes[gt_names[i]],500,20260828+i);b=deterministic_surface_points(pred.world_meshes[name],500,20260928+i);links.append({'condition':c,'case_id':run.name,'gt_link':gt_names[i],'pred_link':name,'chamfer_mm2':chamfer(a,b)})
    tf=forward_kinematics(gt.links,gt.joints,{})
    for i,j in enumerate(gt.joints):
