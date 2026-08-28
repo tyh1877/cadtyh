@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="kinematic_skeleton">
+  <link name="L0" />
+  <link name="L1" />
+  <link name="L2" />
+  <link name="L3" />
+  <link name="L4" />
+  <link name="L5" />
+  <link name="L6" />
+  <link name="L7" />
+  <link name="L8" />
+  <joint name="J0" type="fixed">
+    <parent link="L0" />
+    <child link="L1" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <joint name="J1" type="revolute">
+    <parent link="L1" />
+    <child link="L2" />
+    <origin rpy="0 0 0" xyz="0.012 0.0 0.017" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" lower="-2.82743338823" upper="2.82743338823" velocity="4.8" />
+  </joint>
+  <joint name="J2" type="revolute">
+    <parent link="L2" />
+    <child link="L3" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0595" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" lower="-1.79070781255" upper="1.57079632679" velocity="4.8" />
+  </joint>
+  <joint name="J3" type="revolute">
+    <parent link="L3" />
+    <child link="L4" />
+    <origin rpy="0 0 0" xyz="0.024 0 0.128" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" lower="-0.942477796077" upper="1.38230076758" velocity="4.8" />
+  </joint>
+  <joint name="J4" type="revolute">
+    <parent link="L4" />
+    <child link="L5" />
+    <origin rpy="0 0 0" xyz="0.124 0.0 0.0" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" lower="-1.79070781255" upper="2.04203522483" velocity="4.8" />
+  </joint>
+  <joint name="J5" type="prismatic">
+    <parent link="L5" />
+    <child link="L6" />
+    <origin rpy="0 0 0" xyz="0.0817 0.021 0.0" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" lower="-0.010" upper="0.019" velocity="4.8" />
+  </joint>
+  <joint name="J6" type="prismatic">
+    <parent link="L5" />
+    <child link="L7" />
+    <origin rpy="0 0 0" xyz="0.0817 -0.021 0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="1" lower="-0.010" upper="0.019" velocity="4.8" />
+  </joint>
+  <joint name="J7" type="fixed">
+    <parent link="L5" />
+    <child link="L8" />
+    <origin rpy="0 0 0" xyz="0.126 0.0 0.0" />
+  </joint>
+</robot>

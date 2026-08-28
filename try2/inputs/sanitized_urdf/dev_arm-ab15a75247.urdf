@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="kinematic_skeleton">
+  <link name="L0" />
+  <link name="L1" />
+  <link name="L2" />
+  <link name="L3" />
+  <link name="L4" />
+  <joint name="J0" type="revolute">
+    <parent link="L0" />
+    <child link="L1" />
+    <origin rpy="0 3.141592653 0" xyz="0 0 0.06858" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-1.570796325" upper="1.570796325" velocity="0" />
+  </joint>
+  <joint name="J1" type="revolute">
+    <parent link="L1" />
+    <child link="L2" />
+    <origin rpy="0 1.570796325 -1.570796325" xyz="0.002 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-1.570796325" upper="1.570796325" velocity="0" />
+  </joint>
+  <joint name="J2" type="revolute">
+    <parent link="L2" />
+    <child link="L3" />
+    <origin rpy="0 3.141592653 1.570796325" xyz="0.14679 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-1.570796325" upper="1.570796325" velocity="0" />
+  </joint>
+  <joint name="J3" type="revolute">
+    <parent link="L3" />
+    <child link="L4" />
+    <origin rpy="3.141592653 0 1.570796325" xyz="0.17751 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000.0" lower="-1.570796325" upper="1.570796325" velocity="0" />
+  </joint>
+</robot>

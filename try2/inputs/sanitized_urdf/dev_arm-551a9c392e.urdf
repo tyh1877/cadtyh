@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="kinematic_skeleton">
+  <link name="L0" />
+  <link name="L1" />
+  <link name="L2" />
+  <link name="L3" />
+  <link name="L4" />
+  <link name="L5" />
+  <link name="L6" />
+  <link name="L7" />
+  <link name="L8" />
+  <link name="L9" />
+  <link name="L10" />
+  <link name="L11" />
+  <link name="L12" />
+  <link name="L13" />
+  <link name="L14" />
+  <link name="L15" />
+  <link name="L16" />
+  <link name="L17" />
+  <link name="L18" />
+  <link name="L19" />
+  <link name="L20" />
+  <joint name="J0" type="fixed">
+    <parent link="L0" />
+    <child link="L3" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <joint name="J1" type="fixed">
+    <parent link="L0" />
+    <child link="L4" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <joint name="J2" type="fixed">
+    <parent link="L0" />
+    <child link="L1" />
+    <origin rpy="0 0 0" xyz="0 0 0" />
+  </joint>
+  <joint name="J3" type="fixed">
+    <parent link="L0" />
+    <child link="L2" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <joint name="J4" type="fixed">
+    <parent link="L0" />
+    <child link="L5" />
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <joint name="J5" type="revolute">
+    <parent link="L5" />
+    <child link="L6" />
+    <origin rpy="0 0 0" xyz="0 0 0.08" />
+    <axis xyz="0 0 1" />
+    <limit effort="80.0" lower="-3.0503" upper="3.0503" velocity="1.74" />
+  </joint>
+  <joint name="J6" type="revolute">
+    <parent link="L6" />
+    <child link="L7" />
+    <origin rpy="0 0 0" xyz="0 0 0.2965" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" lower="-5.1477" upper="0.9559" velocity="1.8" />
+  </joint>
+  <joint name="J7" type="fixed">
+    <parent link="L6" />
+    <child link="L8" />
+    <origin rpy="0 -1.57079632679 0" xyz="-.055 0 .22" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="J8" type="revolute">
+    <parent link="L6" />
+    <child link="L9" />
+    <origin rpy="-1.57079632679 1.57079632679 0" xyz="0.081 0.05 0.237" />
+    <axis xyz="0 0 1" />
+    <limit effort="80.0" lower="-3.8183" upper="2.2824" velocity="1.328" />
+  </joint>
+  <joint name="J9" type="revolute">
+    <parent link="L9" />
+    <child link="L10" />
+    <origin rpy="1.57079632679 0 0" xyz="0 -0.14 0.1425" />
+    <axis xyz="0 0 1" />
+    <limit effort="40.0" lower="-3.0514" upper="3.0514" velocity="1.957" />
+  </joint>
+  <joint name="J10" type="revolute">
+    <parent link="L10" />
+    <child link="L11" />
+    <origin rpy="-1.57079632679 0 0" xyz="0 -0.042 0.26" />
+    <axis xyz="0 0 1" />
+    <limit effort="40.0" lower="-3.0514" upper="3.0514" velocity="1.957" />
+  </joint>
+  <joint name="J11" type="revolute">
+    <parent link="L11" />
+    <child link="L12" />
+    <origin rpy="1.57079632679 0 0" xyz="0 -0.125 -0.1265" />
+    <axis xyz="0 0 1" />
+    <limit effort="9.0" lower="-2.9842" upper="2.9842" velocity="3.485" />
+  </joint>
+  <joint name="J12" type="fixed">
+    <parent link="L12" />
+    <child link="L13" />
+    <origin rpy="0 -1.57079632679 0" xyz="-.055 0 .075" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="J13" type="revolute">
+    <parent link="L12" />
+    <child link="L14" />
+    <origin rpy="-1.57079632679 0 0" xyz="0 0.031 0.275" />
+    <axis xyz="0 0 1" />
+    <limit effort="9.0" lower="-2.9842" upper="2.9842" velocity="3.485" />
+  </joint>
+  <joint name="J14" type="fixed">
+    <parent link="L14" />
+    <child link="L15" />
+    <origin rpy="0 1.57079632679 0" xyz="0.039552 -0.033 0.0695" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <joint name="J15" type="fixed">
+    <parent link="L14" />
+    <child link="L16" />
+    <origin rpy="1.57079632679 0 0" xyz="0 0 0.10541" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <joint name="J16" type="revolute">
+    <parent link="L14" />
+    <child link="L17" />
+    <origin rpy="-1.57079632679 -0.17453 3.1416" xyz="0 -0.11 0.1053" />
+    <axis xyz="0 0 1" />
+    <limit effort="9.0" lower="-4.7104" upper="4.7104" velocity="4.545" />
+  </joint>
+  <joint name="J17" type="fixed">
+    <parent link="L17" />
+    <child link="L18" />
+    <origin rpy="0 0 1.570796" xyz="0 0 0.0245" />
+    <axis xyz="0 0 1" />
+  </joint>
+  <joint name="J18" type="fixed">
+    <parent link="L7" />
+    <child link="L19" />
+    <origin rpy="1.57079632679 0 1.57079632679" xyz="0.03 0.0 0.105" />
+  </joint>
+  <joint name="J19" type="fixed">
+    <parent link="L7" />
+    <child link="L20" />
+    <origin rpy="-2.1293 0 -1.57079632679" xyz="0.0228027 0 0.216572" />
+    <axis xyz="0 0 0" />
+  </joint>
+</robot>
