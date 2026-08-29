@@ -31,15 +31,11 @@ def run(context):
         child_transform = adsk.core.Matrix3D.create(); child_transform.translation = adsk.core.Vector3D.create(0, 0, 3)
         child_occ = root.occurrences.addNewComponent(child_transform)
         parent_body, child_body = box(parent_occ.component, 0), box(child_occ.component, 0)
-        # Parametric construction points make a custom joint axis legal in
-        # parametric design, where AsBuiltJoint is supported.
-        points = root.constructionPoints
-        point_input = points.createInput()
-        point_input.setByPoint(adsk.core.Point3D.create(0, 0, 3))
-        axis_start = points.add(point_input)
-        point_input = points.createInput()
-        point_input.setByPoint(adsk.core.Point3D.create(0, 1, 3))
-        axis_end = points.add(point_input)
+        # Sketch points are supported in a parametric Fusion design and can
+        # define a persistent construction axis without Direct Design APIs.
+        axis_sketch = root.sketches.add(root.yZConstructionPlane)
+        axis_start = axis_sketch.sketchPoints.add(adsk.core.Point3D.create(0, 3, 0))
+        axis_end = axis_sketch.sketchPoints.add(adsk.core.Point3D.create(1, 3, 0))
         axes = root.constructionAxes
         axis_input = axes.createInput()
         axis_input.setByTwoPoints(axis_start, axis_end)
