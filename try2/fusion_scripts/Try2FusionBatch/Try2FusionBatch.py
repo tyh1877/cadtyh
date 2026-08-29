@@ -1,5 +1,5 @@
 """Execute precomputed Try-2 blueprints as native Fusion feature assemblies."""
-import adsk.core, adsk.fusion, json, os, traceback
+import adsk.core, adsk.fusion, json, os, traceback, time
 ROOT=r'D:\CADtest\papertest'; JOBS=os.path.join(ROOT,'try2','fusion_jobs.json')
 # Wrappers may override these two module variables for a non-destructive smoke
 # run.  Formal B/D artifacts are only written when the default RUNS is used.
@@ -31,6 +31,7 @@ def run(context):
  except: jobs=[]
  app=adsk.core.Application.get()
  for job in jobs:
+  started=time.perf_counter()
   out=os.path.join(RUNS,job['target_condition'],job['case_id']);os.makedirs(out,exist_ok=True);record={'case_id':job['case_id'],'status':'FAILURE','fusion_operations':0,'errors':[],'occurrence_transforms':{}}
   try:
    doc=app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType);design=adsk.fusion.Design.cast(app.activeProduct);root=design.rootComponent
@@ -79,6 +80,7 @@ def run(context):
     except: record['errors'].append('joint '+j['name']+': '+traceback.format_exc())
    record.update({'status':'SUCCESS','component_count':root.occurrences.count,'feature_count':sum(o.component.features.extrudeFeatures.count for o in root.occurrences),'joint_count':joint_ok,'native_save_success':True,'step_export_success':True,'stl_export_success':True})
   except: record['errors'].append(traceback.format_exc())
+  record['cad_execution_seconds']=time.perf_counter()-started
   json.dump(record,open(os.path.join(out,'fusion_execution.json'),'w'),indent=2);results.append(record)
  json.dump(results,open(BATCH_RESULTS,'w'),indent=2)
  app.userInterface.messageBox('Try-2 Fusion batch finished')
