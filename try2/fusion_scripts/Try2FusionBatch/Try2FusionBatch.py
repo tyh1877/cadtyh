@@ -49,6 +49,8 @@ def run(context):
      record['fusion_operations']+=1
     if comp.bRepBodies.count==0:
      add_box(comp,{'center':[0,0,0],'size':[10,10,10]});record['fusion_operations']+=1
+    occ.isLightBulbOn=True
+    for body in comp.bRepBodies: body.isLightBulbOn=True
    design.computeAll();record['rebuild_success']=True
    em=design.exportManager; mesh_dir=os.path.join(out,'meshes');os.makedirs(mesh_dir,exist_ok=True);em.execute(em.createFusionArchiveExportOptions(os.path.join(out,'model.f3d'),root));em.execute(em.createSTEPExportOptions(os.path.join(out,'model.step'),root));em.execute(em.createSTLExportOptions(root,os.path.join(out,'model.stl')))
    for occ in root.occurrences:
