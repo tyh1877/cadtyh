@@ -1,6 +1,10 @@
 """Execute precomputed Try-2 blueprints as native Fusion feature assemblies."""
 import adsk.core, adsk.fusion, json, os, traceback
 ROOT=r'D:\CADtest\papertest'; JOBS=os.path.join(ROOT,'try2','fusion_jobs.json')
+# Wrappers may override these two module variables for a non-destructive smoke
+# run.  Formal B/D artifacts are only written when the default RUNS is used.
+RUNS=os.path.join(ROOT,'try2','runs')
+BATCH_RESULTS=os.path.join(ROOT,'try2','fusion_batch_results.json')
 def mmatrix(rpy,xyz):
  import math
  r,p,y=rpy;cr,sr=math.cos(r),math.sin(r);cp,sp=math.cos(p),math.sin(p);cy,sy=math.cos(y),math.sin(y)
@@ -27,7 +31,7 @@ def run(context):
  except: jobs=[]
  app=adsk.core.Application.get()
  for job in jobs:
-  out=os.path.join(ROOT,'try2','runs',job['target_condition'],job['case_id']);os.makedirs(out,exist_ok=True);record={'case_id':job['case_id'],'status':'FAILURE','fusion_operations':0,'errors':[]}
+  out=os.path.join(RUNS,job['target_condition'],job['case_id']);os.makedirs(out,exist_ok=True);record={'case_id':job['case_id'],'status':'FAILURE','fusion_operations':0,'errors':[],'occurrence_transforms':{}}
   try:
    doc=app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType);design=adsk.fusion.Design.cast(app.activeProduct);root=design.rootComponent
    world={job['blueprint']['links'][0]['name']:[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]};pending=list(job['blueprint']['joints'])
@@ -40,8 +44,17 @@ def run(context):
     pending=rest
    occs={}
    for link in job['blueprint']['links']:
-    occ=root.occurrences.addNewComponent(adsk.core.Matrix3D.create());comp=occ.component;comp.name=link['name']
-    occ.transform= fusion_matrix(world[link['name']]);occs[link['name']]=occ
+    # Fusion persists an occurrence placement reliably when the transform is
+    # supplied at creation.  The prior assign-after-create path produced
+    # overlapping links in exported root assemblies.
+    expected=fusion_matrix(world[link['name']])
+    occ=root.occurrences.addNewComponent(expected);comp=occ.component;comp.name=link['name']
+    occs[link['name']]=occ
+    actual=occ.transform
+    record['occurrence_transforms'][link['name']]={
+      'expected_translation_cm':[world[link['name']][0][3],world[link['name']][1][3],world[link['name']][2][3]],
+      'actual_translation_cm':[actual.getCell(0,3),actual.getCell(1,3),actual.getCell(2,3)]
+    }
     for primitive in link['primitives']:
      if primitive['type']=='box':add_box(comp,primitive)
      elif primitive['type']=='cylinder':add_cylinder(comp,primitive)
@@ -67,5 +80,5 @@ def run(context):
    record.update({'status':'SUCCESS','component_count':root.occurrences.count,'feature_count':sum(o.component.features.extrudeFeatures.count for o in root.occurrences),'joint_count':joint_ok,'native_save_success':True,'step_export_success':True,'stl_export_success':True})
   except: record['errors'].append(traceback.format_exc())
   json.dump(record,open(os.path.join(out,'fusion_execution.json'),'w'),indent=2);results.append(record)
- json.dump(results,open(os.path.join(ROOT,'try2','fusion_batch_results.json'),'w'),indent=2)
+ json.dump(results,open(BATCH_RESULTS,'w'),indent=2)
  app.userInterface.messageBox('Try-2 Fusion batch finished')

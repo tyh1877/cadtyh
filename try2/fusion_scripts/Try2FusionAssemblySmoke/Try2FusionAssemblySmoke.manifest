@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "RobotCAD Try-2",
+  "description": "Non-destructive single-case FK assembly-placement smoke test.",
+  "supportedOS": "windows",
+  "editEnabled": true
+}
