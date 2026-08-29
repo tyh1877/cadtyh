@@ -23,21 +23,23 @@ def run(context):
         app = adsk.core.Application.get()
         doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
         design = adsk.fusion.Design.cast(app.activeProduct)
-        # Fusion only permits ConstructionAxisInput.setByLine in Direct Design.
-        # This smoke is limited to testing custom joint-axis representation;
-        # the main Try-3 editable-component executor remains parametric.
-        design.designType = adsk.fusion.DesignTypes.DirectDesignType
         root = design.rootComponent
         parent_occ = root.occurrences.addNewComponent(adsk.core.Matrix3D.create())
         child_transform = adsk.core.Matrix3D.create(); child_transform.translation = adsk.core.Vector3D.create(0, 0, 3)
         child_occ = root.occurrences.addNewComponent(child_transform)
         parent_body, child_body = box(parent_occ.component, 0), box(child_occ.component, 0)
-        # Construction axis in root coordinates through canonical joint point.
+        # Parametric construction points make a custom joint axis legal in
+        # parametric design, where AsBuiltJoint is supported.
+        points = root.constructionPoints
+        point_input = points.createInput()
+        point_input.setByPoint(adsk.core.Point3D.create(0, 0, 3))
+        axis_start = points.add(point_input)
+        point_input = points.createInput()
+        point_input.setByPoint(adsk.core.Point3D.create(0, 1, 3))
+        axis_end = points.add(point_input)
         axes = root.constructionAxes
         axis_input = axes.createInput()
-        axis_input.setByLine(adsk.core.InfiniteLine3D.create(
-            adsk.core.Point3D.create(0, 0, 3), adsk.core.Vector3D.create(0, 1, 0)
-        ))
+        axis_input.setByTwoPoints(axis_start, axis_end)
         custom_axis = axes.add(axis_input)
         geometry = adsk.fusion.JointGeometry.createByPoint(
             child_body.vertices.item(0).createForAssemblyContext(child_occ)
