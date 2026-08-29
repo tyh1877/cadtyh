@@ -10,7 +10,7 @@ def main():
    m=json.loads((run/'manifest.json').read_text()); row={'condition':c,'case_id':run.name,'status':m['status']}
    if m['status']=='SUCCESS':
     try:
-     g,a,k,mo,o=evaluate(load_robot(ROOT/'go_nogo3/data/dev15'/run.name/'urdf/model.urdf'),load_robot(run/'urdf/model.urdf'),20260828);row.update(graph_f1=a['assembly_graph_f1'],joint_type=k['joint_type_accuracy'],axis=k['axis_error_degrees_median'],origin=k['joint_origin_error_normalized_median'],motion=mo['link_translation_error_normalized_median'],chamfer=g['chamfer'],voxel_iou=g['voxel_iou'])
+     g,a,k,mo,o=evaluate(load_robot(ROOT/'go_nogo3/data/dev15'/run.name/'urdf/model.urdf'),load_robot(run/'urdf/model.urdf'),20260828);row.update(graph_f1=a['assembly_graph_f1'],joint_type=k['joint_type_accuracy'],axis=k['axis_error_degrees_median'],origin=k['joint_origin_error_normalized_median'],motion=mo['link_translation_error_normalized_median'],chamfer=g['chamfer'],hd95=g['hd95'],voxel_iou=g['voxel_iou'])
     except Exception as e:row.update(status='EVALUATION_FAILURE',error=f'{type(e).__name__}:{e}')
    rows.append(row)
  out=ROOT/'try2/results';out.mkdir(exist_ok=True)

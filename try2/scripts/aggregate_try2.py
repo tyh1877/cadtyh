@@ -2,7 +2,7 @@ from __future__ import annotations
 import csv,json,statistics
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-METRICS=('graph_f1','joint_type','axis','origin','motion','chamfer','voxel_iou')
+METRICS=('graph_f1','joint_type','axis','origin','motion','chamfer','hd95','voxel_iou')
 def num(x):
  try:return float(x)
  except:return None

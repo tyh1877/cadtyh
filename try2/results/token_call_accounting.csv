@@ -23,8 +23,10 @@ api_calls,case_id,condition,latency_seconds,status,total_tokens
 0,dev_arm-43fa322555,B,0,SUCCESS,0
 0,dev_arm-4c7b408826,B,0,SUCCESS,0
 0,dev_arm-551a9c392e,B,0,SUCCESS,0
+0,dev_arm-ab15a75247,B,0,UPSTREAM_FAILURE,0
 0,dev_arm-cb42051aad,B,0,SUCCESS,0
 0,dev_arm-d55f01b988,B,0,SUCCESS,0
+0,dev_arm-dcc2b0ce1e,B,0,UPSTREAM_FAILURE,0
 0,dev_arm-f7b0b901d3,B,0,SUCCESS,0
 0,dev_arm-fdadfa8bdd,B,0,SUCCESS,0
 1,dev_arm-0573e1e127,C,20.83900310000172,SUCCESS,4091

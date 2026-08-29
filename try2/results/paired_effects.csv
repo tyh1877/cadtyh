@@ -5,6 +5,7 @@ fusion_no_urdf,dev_arm-0573e1e127,axis,0.0
 fusion_no_urdf,dev_arm-0573e1e127,origin,0.0
 fusion_no_urdf,dev_arm-0573e1e127,motion,0.0001733343874051052
 fusion_no_urdf,dev_arm-0573e1e127,chamfer,-1.6682708689289612e-05
+fusion_no_urdf,dev_arm-0573e1e127,hd95,0.01084545982013202
 fusion_no_urdf,dev_arm-0573e1e127,voxel_iou,0.04487472547174043
 fusion_no_urdf,dev_arm-07307859e2,graph_f1,0.0
 fusion_no_urdf,dev_arm-07307859e2,joint_type,0.0
@@ -12,6 +13,7 @@ fusion_no_urdf,dev_arm-07307859e2,axis,0.0
 fusion_no_urdf,dev_arm-07307859e2,origin,0.0
 fusion_no_urdf,dev_arm-07307859e2,motion,-0.0049332465620707255
 fusion_no_urdf,dev_arm-07307859e2,chamfer,-5.829300254337898e-05
+fusion_no_urdf,dev_arm-07307859e2,hd95,-0.0011920043499784594
 fusion_no_urdf,dev_arm-07307859e2,voxel_iou,0.016319297503173957
 fusion_no_urdf,dev_arm-10f5f05385,graph_f1,0.0
 fusion_no_urdf,dev_arm-10f5f05385,joint_type,0.0
@@ -19,6 +21,7 @@ fusion_no_urdf,dev_arm-10f5f05385,axis,0.0
 fusion_no_urdf,dev_arm-10f5f05385,origin,0.0
 fusion_no_urdf,dev_arm-10f5f05385,motion,-0.003934533765233894
 fusion_no_urdf,dev_arm-10f5f05385,chamfer,-0.0004333278065187015
+fusion_no_urdf,dev_arm-10f5f05385,hd95,-0.005419813559798828
 fusion_no_urdf,dev_arm-10f5f05385,voxel_iou,0.02647683277132512
 fusion_no_urdf,dev_arm-21b8992ec4,graph_f1,0.0
 fusion_no_urdf,dev_arm-21b8992ec4,joint_type,0.0
@@ -26,6 +29,7 @@ fusion_no_urdf,dev_arm-21b8992ec4,axis,0.0
 fusion_no_urdf,dev_arm-21b8992ec4,origin,0.0
 fusion_no_urdf,dev_arm-21b8992ec4,motion,0.005277622852843528
 fusion_no_urdf,dev_arm-21b8992ec4,chamfer,8.365509661923125e-05
+fusion_no_urdf,dev_arm-21b8992ec4,hd95,0.0023921880290959166
 fusion_no_urdf,dev_arm-21b8992ec4,voxel_iou,-0.011777581756999611
 fusion_no_urdf,dev_arm-3ce41d3c31,graph_f1,0.0
 fusion_no_urdf,dev_arm-3ce41d3c31,joint_type,0.0
@@ -33,6 +37,7 @@ fusion_no_urdf,dev_arm-3ce41d3c31,axis,0.0
 fusion_no_urdf,dev_arm-3ce41d3c31,origin,0.0
 fusion_no_urdf,dev_arm-3ce41d3c31,motion,-0.0011579163912460166
 fusion_no_urdf,dev_arm-3ce41d3c31,chamfer,-0.00010937533202153862
+fusion_no_urdf,dev_arm-3ce41d3c31,hd95,-0.0025272270587104045
 fusion_no_urdf,dev_arm-3ce41d3c31,voxel_iou,0.05529568616816938
 fusion_no_urdf,dev_arm-42e898b1a2,graph_f1,0.0
 fusion_no_urdf,dev_arm-42e898b1a2,joint_type,0.0
@@ -40,6 +45,7 @@ fusion_no_urdf,dev_arm-42e898b1a2,axis,0.0
 fusion_no_urdf,dev_arm-42e898b1a2,origin,0.0
 fusion_no_urdf,dev_arm-42e898b1a2,motion,6.568534273443394e-08
 fusion_no_urdf,dev_arm-42e898b1a2,chamfer,-0.00016010678121945905
+fusion_no_urdf,dev_arm-42e898b1a2,hd95,-0.008874991224943785
 fusion_no_urdf,dev_arm-42e898b1a2,voxel_iou,0.01738985674177526
 fusion_no_urdf,dev_arm-43fa322555,graph_f1,0.0
 fusion_no_urdf,dev_arm-43fa322555,joint_type,0.0
@@ -47,6 +53,7 @@ fusion_no_urdf,dev_arm-43fa322555,axis,0.0
 fusion_no_urdf,dev_arm-43fa322555,origin,0.0
 fusion_no_urdf,dev_arm-43fa322555,motion,-0.001583145502850991
 fusion_no_urdf,dev_arm-43fa322555,chamfer,-2.5173201468924305e-05
+fusion_no_urdf,dev_arm-43fa322555,hd95,-0.001643358458904301
 fusion_no_urdf,dev_arm-43fa322555,voxel_iou,0.0014710728239890614
 fusion_no_urdf,dev_arm-4c7b408826,graph_f1,0.0
 fusion_no_urdf,dev_arm-4c7b408826,joint_type,0.0
@@ -54,6 +61,7 @@ fusion_no_urdf,dev_arm-4c7b408826,axis,0.0
 fusion_no_urdf,dev_arm-4c7b408826,origin,0.0
 fusion_no_urdf,dev_arm-4c7b408826,motion,-0.005614219803877718
 fusion_no_urdf,dev_arm-4c7b408826,chamfer,-0.00037872810913825664
+fusion_no_urdf,dev_arm-4c7b408826,hd95,-0.01068697592010491
 fusion_no_urdf,dev_arm-4c7b408826,voxel_iou,0.017925991387899742
 fusion_no_urdf,dev_arm-551a9c392e,graph_f1,0.0
 fusion_no_urdf,dev_arm-551a9c392e,joint_type,0.0
@@ -61,6 +69,7 @@ fusion_no_urdf,dev_arm-551a9c392e,axis,0.0
 fusion_no_urdf,dev_arm-551a9c392e,origin,0.0
 fusion_no_urdf,dev_arm-551a9c392e,motion,-0.0009590230824268187
 fusion_no_urdf,dev_arm-551a9c392e,chamfer,-0.00041639709842233993
+fusion_no_urdf,dev_arm-551a9c392e,hd95,-0.010971187644224403
 fusion_no_urdf,dev_arm-551a9c392e,voxel_iou,-0.01550387596899222
 fusion_no_urdf,dev_arm-cb42051aad,graph_f1,0.0
 fusion_no_urdf,dev_arm-cb42051aad,joint_type,0.0
@@ -68,6 +77,7 @@ fusion_no_urdf,dev_arm-cb42051aad,axis,0.0
 fusion_no_urdf,dev_arm-cb42051aad,origin,0.0
 fusion_no_urdf,dev_arm-cb42051aad,motion,0.0005498877830149573
 fusion_no_urdf,dev_arm-cb42051aad,chamfer,-0.0002503387361174475
+fusion_no_urdf,dev_arm-cb42051aad,hd95,-0.010687275976683105
 fusion_no_urdf,dev_arm-cb42051aad,voxel_iou,-0.001410662625705994
 fusion_no_urdf,dev_arm-d55f01b988,graph_f1,0.0
 fusion_no_urdf,dev_arm-d55f01b988,joint_type,0.0
@@ -75,6 +85,7 @@ fusion_no_urdf,dev_arm-d55f01b988,axis,0.0
 fusion_no_urdf,dev_arm-d55f01b988,origin,0.0
 fusion_no_urdf,dev_arm-d55f01b988,motion,0.023309661188079422
 fusion_no_urdf,dev_arm-d55f01b988,chamfer,-0.00019538398917208575
+fusion_no_urdf,dev_arm-d55f01b988,hd95,0.005447911975378944
 fusion_no_urdf,dev_arm-d55f01b988,voxel_iou,0.01614273576890396
 fusion_no_urdf,dev_arm-f7b0b901d3,graph_f1,0.0
 fusion_no_urdf,dev_arm-f7b0b901d3,joint_type,0.0
@@ -82,6 +93,7 @@ fusion_no_urdf,dev_arm-f7b0b901d3,axis,0.0
 fusion_no_urdf,dev_arm-f7b0b901d3,origin,0.0
 fusion_no_urdf,dev_arm-f7b0b901d3,motion,-0.005711348335320943
 fusion_no_urdf,dev_arm-f7b0b901d3,chamfer,9.725418560173945e-05
+fusion_no_urdf,dev_arm-f7b0b901d3,hd95,0.0020231029877182116
 fusion_no_urdf,dev_arm-f7b0b901d3,voxel_iou,-0.0038073845289905983
 fusion_no_urdf,dev_arm-fdadfa8bdd,graph_f1,0.0
 fusion_no_urdf,dev_arm-fdadfa8bdd,joint_type,0.0
@@ -89,6 +101,7 @@ fusion_no_urdf,dev_arm-fdadfa8bdd,axis,0.0
 fusion_no_urdf,dev_arm-fdadfa8bdd,origin,0.0
 fusion_no_urdf,dev_arm-fdadfa8bdd,motion,0.009693825894210306
 fusion_no_urdf,dev_arm-fdadfa8bdd,chamfer,-0.0009580555580555126
+fusion_no_urdf,dev_arm-fdadfa8bdd,hd95,-0.02146243058088422
 fusion_no_urdf,dev_arm-fdadfa8bdd,voxel_iou,0.015083657258745997
 fusion_with_urdf,dev_arm-0573e1e127,graph_f1,0.0
 fusion_with_urdf,dev_arm-0573e1e127,joint_type,0.0
@@ -96,6 +109,7 @@ fusion_with_urdf,dev_arm-0573e1e127,axis,0.0
 fusion_with_urdf,dev_arm-0573e1e127,origin,0.0
 fusion_with_urdf,dev_arm-0573e1e127,motion,0.0077195511913472955
 fusion_with_urdf,dev_arm-0573e1e127,chamfer,0.0004368614524846899
+fusion_with_urdf,dev_arm-0573e1e127,hd95,0.018183148235175972
 fusion_with_urdf,dev_arm-0573e1e127,voxel_iou,-0.11279190331017186
 fusion_with_urdf,dev_arm-07307859e2,graph_f1,0.0
 fusion_with_urdf,dev_arm-07307859e2,joint_type,0.0
@@ -103,6 +117,7 @@ fusion_with_urdf,dev_arm-07307859e2,axis,0.0
 fusion_with_urdf,dev_arm-07307859e2,origin,0.0
 fusion_with_urdf,dev_arm-07307859e2,motion,-0.0013514670902764689
 fusion_with_urdf,dev_arm-07307859e2,chamfer,6.464534598117958e-05
+fusion_with_urdf,dev_arm-07307859e2,hd95,0.00432858551624523
 fusion_with_urdf,dev_arm-07307859e2,voxel_iou,-0.028791996533931996
 fusion_with_urdf,dev_arm-10f5f05385,graph_f1,0.0
 fusion_with_urdf,dev_arm-10f5f05385,joint_type,0.0
@@ -110,6 +125,7 @@ fusion_with_urdf,dev_arm-10f5f05385,axis,0.0
 fusion_with_urdf,dev_arm-10f5f05385,origin,0.0
 fusion_with_urdf,dev_arm-10f5f05385,motion,0.001111113953191467
 fusion_with_urdf,dev_arm-10f5f05385,chamfer,-0.0006877977995807978
+fusion_with_urdf,dev_arm-10f5f05385,hd95,-0.003235281681438662
 fusion_with_urdf,dev_arm-10f5f05385,voxel_iou,-4.8983190601758174e-05
 fusion_with_urdf,dev_arm-21b8992ec4,graph_f1,0.0
 fusion_with_urdf,dev_arm-21b8992ec4,joint_type,0.0
@@ -117,6 +133,7 @@ fusion_with_urdf,dev_arm-21b8992ec4,axis,0.0
 fusion_with_urdf,dev_arm-21b8992ec4,origin,0.0
 fusion_with_urdf,dev_arm-21b8992ec4,motion,-0.010627835516644812
 fusion_with_urdf,dev_arm-21b8992ec4,chamfer,-1.5032334623258736e-05
+fusion_with_urdf,dev_arm-21b8992ec4,hd95,-0.001584145966765465
 fusion_with_urdf,dev_arm-21b8992ec4,voxel_iou,0.03111111111111109
 fusion_with_urdf,dev_arm-3ce41d3c31,graph_f1,0.0
 fusion_with_urdf,dev_arm-3ce41d3c31,joint_type,0.0
@@ -124,6 +141,7 @@ fusion_with_urdf,dev_arm-3ce41d3c31,axis,0.0
 fusion_with_urdf,dev_arm-3ce41d3c31,origin,0.0
 fusion_with_urdf,dev_arm-3ce41d3c31,motion,-0.010772424611565502
 fusion_with_urdf,dev_arm-3ce41d3c31,chamfer,0.0006792484926236425
+fusion_with_urdf,dev_arm-3ce41d3c31,hd95,0.031152945444136326
 fusion_with_urdf,dev_arm-3ce41d3c31,voxel_iou,-0.08144932284840539
 fusion_with_urdf,dev_arm-42e898b1a2,graph_f1,0.0
 fusion_with_urdf,dev_arm-42e898b1a2,joint_type,0.0
@@ -131,6 +149,7 @@ fusion_with_urdf,dev_arm-42e898b1a2,axis,0.0
 fusion_with_urdf,dev_arm-42e898b1a2,origin,0.0
 fusion_with_urdf,dev_arm-42e898b1a2,motion,0.02025777375660369
 fusion_with_urdf,dev_arm-42e898b1a2,chamfer,8.223106401487857e-05
+fusion_with_urdf,dev_arm-42e898b1a2,hd95,0.0016618229834950635
 fusion_with_urdf,dev_arm-42e898b1a2,voxel_iou,-0.030899811979586356
 fusion_with_urdf,dev_arm-43fa322555,graph_f1,0.0
 fusion_with_urdf,dev_arm-43fa322555,joint_type,0.0
@@ -138,6 +157,7 @@ fusion_with_urdf,dev_arm-43fa322555,axis,0.0
 fusion_with_urdf,dev_arm-43fa322555,origin,0.0
 fusion_with_urdf,dev_arm-43fa322555,motion,0.035506583707923214
 fusion_with_urdf,dev_arm-43fa322555,chamfer,0.0015986007712119783
+fusion_with_urdf,dev_arm-43fa322555,hd95,0.06134665939218193
 fusion_with_urdf,dev_arm-43fa322555,voxel_iou,-0.214023851590106
 fusion_with_urdf,dev_arm-4c7b408826,graph_f1,0.0
 fusion_with_urdf,dev_arm-4c7b408826,joint_type,0.0
@@ -145,6 +165,7 @@ fusion_with_urdf,dev_arm-4c7b408826,axis,0.0
 fusion_with_urdf,dev_arm-4c7b408826,origin,0.0
 fusion_with_urdf,dev_arm-4c7b408826,motion,-0.005586584410632207
 fusion_with_urdf,dev_arm-4c7b408826,chamfer,0.00047013052058179883
+fusion_with_urdf,dev_arm-4c7b408826,hd95,0.01427761390711671
 fusion_with_urdf,dev_arm-4c7b408826,voxel_iou,-0.12698412698412698
 fusion_with_urdf,dev_arm-551a9c392e,graph_f1,0.0
 fusion_with_urdf,dev_arm-551a9c392e,joint_type,0.0
@@ -152,6 +173,7 @@ fusion_with_urdf,dev_arm-551a9c392e,axis,0.0
 fusion_with_urdf,dev_arm-551a9c392e,origin,0.0
 fusion_with_urdf,dev_arm-551a9c392e,motion,-0.0018455949407177319
 fusion_with_urdf,dev_arm-551a9c392e,chamfer,-1.0790100794974469e-05
+fusion_with_urdf,dev_arm-551a9c392e,hd95,0.0025163406660315413
 fusion_with_urdf,dev_arm-551a9c392e,voxel_iou,0.000408428478603895
 fusion_with_urdf,dev_arm-ab15a75247,graph_f1,0.0
 fusion_with_urdf,dev_arm-ab15a75247,joint_type,0.0
@@ -159,6 +181,7 @@ fusion_with_urdf,dev_arm-ab15a75247,axis,0.0
 fusion_with_urdf,dev_arm-ab15a75247,origin,0.0
 fusion_with_urdf,dev_arm-ab15a75247,motion,0.005986774203519896
 fusion_with_urdf,dev_arm-ab15a75247,chamfer,-0.0012780462599023459
+fusion_with_urdf,dev_arm-ab15a75247,hd95,-0.002258219166110187
 fusion_with_urdf,dev_arm-ab15a75247,voxel_iou,0.0571561812326032
 fusion_with_urdf,dev_arm-cb42051aad,graph_f1,0.0
 fusion_with_urdf,dev_arm-cb42051aad,joint_type,0.0
@@ -166,6 +189,7 @@ fusion_with_urdf,dev_arm-cb42051aad,axis,0.0
 fusion_with_urdf,dev_arm-cb42051aad,origin,0.0
 fusion_with_urdf,dev_arm-cb42051aad,motion,-0.00401661182299437
 fusion_with_urdf,dev_arm-cb42051aad,chamfer,-0.0004128630693952381
+fusion_with_urdf,dev_arm-cb42051aad,hd95,-0.003818572500851297
 fusion_with_urdf,dev_arm-cb42051aad,voxel_iou,0.00751104565537555
 fusion_with_urdf,dev_arm-d55f01b988,graph_f1,0.0
 fusion_with_urdf,dev_arm-d55f01b988,joint_type,0.0
@@ -173,6 +197,7 @@ fusion_with_urdf,dev_arm-d55f01b988,axis,0.0
 fusion_with_urdf,dev_arm-d55f01b988,origin,0.0
 fusion_with_urdf,dev_arm-d55f01b988,motion,-0.0025622159053177544
 fusion_with_urdf,dev_arm-d55f01b988,chamfer,1.9332140806861177e-05
+fusion_with_urdf,dev_arm-d55f01b988,hd95,0.0005793713735146311
 fusion_with_urdf,dev_arm-d55f01b988,voxel_iou,-0.04707993335327043
 fusion_with_urdf,dev_arm-dcc2b0ce1e,graph_f1,0.0
 fusion_with_urdf,dev_arm-dcc2b0ce1e,joint_type,0.0
@@ -180,6 +205,7 @@ fusion_with_urdf,dev_arm-dcc2b0ce1e,axis,0.0
 fusion_with_urdf,dev_arm-dcc2b0ce1e,origin,0.0
 fusion_with_urdf,dev_arm-dcc2b0ce1e,motion,0.006809486873792018
 fusion_with_urdf,dev_arm-dcc2b0ce1e,chamfer,3.7229180319241694e-05
+fusion_with_urdf,dev_arm-dcc2b0ce1e,hd95,0.0015056348112423568
 fusion_with_urdf,dev_arm-dcc2b0ce1e,voxel_iou,-0.0032051282051281937
 fusion_with_urdf,dev_arm-f7b0b901d3,graph_f1,0.0
 fusion_with_urdf,dev_arm-f7b0b901d3,joint_type,0.0
@@ -187,6 +213,7 @@ fusion_with_urdf,dev_arm-f7b0b901d3,axis,0.0
 fusion_with_urdf,dev_arm-f7b0b901d3,origin,0.0
 fusion_with_urdf,dev_arm-f7b0b901d3,motion,-0.016619894093954292
 fusion_with_urdf,dev_arm-f7b0b901d3,chamfer,0.00025203118538014613
+fusion_with_urdf,dev_arm-f7b0b901d3,hd95,0.023529642966901007
 fusion_with_urdf,dev_arm-f7b0b901d3,voxel_iou,0.0004967454607742172
 fusion_with_urdf,dev_arm-fdadfa8bdd,graph_f1,0.0
 fusion_with_urdf,dev_arm-fdadfa8bdd,joint_type,0.0
@@ -194,6 +221,7 @@ fusion_with_urdf,dev_arm-fdadfa8bdd,axis,0.0
 fusion_with_urdf,dev_arm-fdadfa8bdd,origin,0.0
 fusion_with_urdf,dev_arm-fdadfa8bdd,motion,-0.004049332953202385
 fusion_with_urdf,dev_arm-fdadfa8bdd,chamfer,-3.435629762766116e-05
+fusion_with_urdf,dev_arm-fdadfa8bdd,hd95,-0.0006490229793055385
 fusion_with_urdf,dev_arm-fdadfa8bdd,voxel_iou,-0.011118358029472253
 urdf_primitive,dev_arm-0573e1e127,graph_f1,-0.13333333333333341
 urdf_primitive,dev_arm-0573e1e127,joint_type,0.0
@@ -201,6 +229,7 @@ urdf_primitive,dev_arm-0573e1e127,axis,0.0
 urdf_primitive,dev_arm-0573e1e127,origin,-0.14458520373293182
 urdf_primitive,dev_arm-0573e1e127,motion,-0.17057371138911448
 urdf_primitive,dev_arm-0573e1e127,chamfer,-0.00033196624878330965
+urdf_primitive,dev_arm-0573e1e127,hd95,-0.011674001497625472
 urdf_primitive,dev_arm-0573e1e127,voxel_iou,0.05668272150266607
 urdf_primitive,dev_arm-07307859e2,graph_f1,0.11229946524064183
 urdf_primitive,dev_arm-07307859e2,joint_type,0.2727272727272728
@@ -208,6 +237,7 @@ urdf_primitive,dev_arm-07307859e2,axis,-90.0
 urdf_primitive,dev_arm-07307859e2,origin,-0.183339914320643
 urdf_primitive,dev_arm-07307859e2,motion,-0.13689843772611626
 urdf_primitive,dev_arm-07307859e2,chamfer,-6.88006489070218e-05
+urdf_primitive,dev_arm-07307859e2,hd95,-0.004476407725533968
 urdf_primitive,dev_arm-07307859e2,voxel_iou,-0.07171137685843565
 urdf_primitive,dev_arm-10f5f05385,graph_f1,0.20000000000000018
 urdf_primitive,dev_arm-10f5f05385,joint_type,0.20000000000000007
@@ -215,6 +245,7 @@ urdf_primitive,dev_arm-10f5f05385,axis,-90.0
 urdf_primitive,dev_arm-10f5f05385,origin,-0.3641750980680947
 urdf_primitive,dev_arm-10f5f05385,motion,-0.21321978399718636
 urdf_primitive,dev_arm-10f5f05385,chamfer,0.020564759495120717
+urdf_primitive,dev_arm-10f5f05385,hd95,0.19767817316840994
 urdf_primitive,dev_arm-10f5f05385,voxel_iou,-0.34319034245611457
 urdf_primitive,dev_arm-21b8992ec4,graph_f1,0.475
 urdf_primitive,dev_arm-21b8992ec4,joint_type,0.5
@@ -222,6 +253,7 @@ urdf_primitive,dev_arm-21b8992ec4,axis,-90.0
 urdf_primitive,dev_arm-21b8992ec4,origin,-0.23413706689437783
 urdf_primitive,dev_arm-21b8992ec4,motion,-0.15939111155617872
 urdf_primitive,dev_arm-21b8992ec4,chamfer,-0.0005322560983038317
+urdf_primitive,dev_arm-21b8992ec4,hd95,-0.030215246238996955
 urdf_primitive,dev_arm-21b8992ec4,voxel_iou,0.15286549707602337
 urdf_primitive,dev_arm-3ce41d3c31,graph_f1,-0.13333333333333341
 urdf_primitive,dev_arm-3ce41d3c31,joint_type,0.11111111111111105
@@ -229,6 +261,7 @@ urdf_primitive,dev_arm-3ce41d3c31,axis,0.0
 urdf_primitive,dev_arm-3ce41d3c31,origin,-0.11899427803712767
 urdf_primitive,dev_arm-3ce41d3c31,motion,-0.3149838982572865
 urdf_primitive,dev_arm-3ce41d3c31,chamfer,-0.00029310564052923457
+urdf_primitive,dev_arm-3ce41d3c31,hd95,-0.004879179535516823
 urdf_primitive,dev_arm-3ce41d3c31,voxel_iou,0.06230025567273889
 urdf_primitive,dev_arm-42e898b1a2,graph_f1,0.09090909090909094
 urdf_primitive,dev_arm-42e898b1a2,joint_type,0.16666666666666663
@@ -236,6 +269,7 @@ urdf_primitive,dev_arm-42e898b1a2,axis,0.0
 urdf_primitive,dev_arm-42e898b1a2,origin,-0.05872570502517459
 urdf_primitive,dev_arm-42e898b1a2,motion,-0.09094064315907399
 urdf_primitive,dev_arm-42e898b1a2,chamfer,-0.006277513780314796
+urdf_primitive,dev_arm-42e898b1a2,hd95,-0.13103586470118675
 urdf_primitive,dev_arm-42e898b1a2,voxel_iou,0.4518776863563797
 urdf_primitive,dev_arm-43fa322555,graph_f1,-0.10795454545454541
 urdf_primitive,dev_arm-43fa322555,joint_type,0.0625
@@ -243,6 +277,7 @@ urdf_primitive,dev_arm-43fa322555,axis,-45.0
 urdf_primitive,dev_arm-43fa322555,origin,-0.1920476123448246
 urdf_primitive,dev_arm-43fa322555,motion,-0.2788537427110486
 urdf_primitive,dev_arm-43fa322555,chamfer,-0.00019908036326477966
+urdf_primitive,dev_arm-43fa322555,hd95,-0.014940985297766773
 urdf_primitive,dev_arm-43fa322555,voxel_iou,0.03732711619491702
 urdf_primitive,dev_arm-4c7b408826,graph_f1,-0.13333333333333341
 urdf_primitive,dev_arm-4c7b408826,joint_type,0.0
@@ -250,6 +285,7 @@ urdf_primitive,dev_arm-4c7b408826,axis,0.0
 urdf_primitive,dev_arm-4c7b408826,origin,-0.24447991834787183
 urdf_primitive,dev_arm-4c7b408826,motion,-0.2629743708613061
 urdf_primitive,dev_arm-4c7b408826,chamfer,-0.0020973684418817222
+urdf_primitive,dev_arm-4c7b408826,hd95,-0.057869070708134546
 urdf_primitive,dev_arm-4c7b408826,voxel_iou,0.21513314429125519
 urdf_primitive,dev_arm-551a9c392e,graph_f1,0.042307692307692324
 urdf_primitive,dev_arm-551a9c392e,joint_type,0.14999999999999997
@@ -257,6 +293,7 @@ urdf_primitive,dev_arm-551a9c392e,axis,-90.0
 urdf_primitive,dev_arm-551a9c392e,origin,-0.1618192369785822
 urdf_primitive,dev_arm-551a9c392e,motion,-0.11416112508402279
 urdf_primitive,dev_arm-551a9c392e,chamfer,-0.00031358085528369146
+urdf_primitive,dev_arm-551a9c392e,hd95,-0.008377866530801928
 urdf_primitive,dev_arm-551a9c392e,voxel_iou,0.019408555842664377
 urdf_primitive,dev_arm-cb42051aad,graph_f1,-0.13333333333333341
 urdf_primitive,dev_arm-cb42051aad,joint_type,0.0
@@ -264,6 +301,7 @@ urdf_primitive,dev_arm-cb42051aad,axis,0.0
 urdf_primitive,dev_arm-cb42051aad,origin,-0.18877495400090138
 urdf_primitive,dev_arm-cb42051aad,motion,-0.24103753446750922
 urdf_primitive,dev_arm-cb42051aad,chamfer,0.003936325395197723
+urdf_primitive,dev_arm-cb42051aad,hd95,0.03929137027350532
 urdf_primitive,dev_arm-cb42051aad,voxel_iou,-0.2726050420168067
 urdf_primitive,dev_arm-d55f01b988,graph_f1,0.46428571428571425
 urdf_primitive,dev_arm-d55f01b988,joint_type,0.5
@@ -271,6 +309,7 @@ urdf_primitive,dev_arm-d55f01b988,axis,0.0
 urdf_primitive,dev_arm-d55f01b988,origin,-0.11913353798580459
 urdf_primitive,dev_arm-d55f01b988,motion,-0.2456329952605342
 urdf_primitive,dev_arm-d55f01b988,chamfer,-0.006157399300642312
+urdf_primitive,dev_arm-d55f01b988,hd95,-0.12478525730327614
 urdf_primitive,dev_arm-d55f01b988,voxel_iou,0.4001613089065561
 urdf_primitive,dev_arm-f7b0b901d3,graph_f1,-0.1071428571428571
 urdf_primitive,dev_arm-f7b0b901d3,joint_type,0.0
@@ -278,6 +317,7 @@ urdf_primitive,dev_arm-f7b0b901d3,axis,-45.0
 urdf_primitive,dev_arm-f7b0b901d3,origin,-0.1127142938896328
 urdf_primitive,dev_arm-f7b0b901d3,motion,-0.18501152530992188
 urdf_primitive,dev_arm-f7b0b901d3,chamfer,-0.005918142274708242
+urdf_primitive,dev_arm-f7b0b901d3,hd95,-0.1180228864206723
 urdf_primitive,dev_arm-f7b0b901d3,voxel_iou,0.13269121491078534
 urdf_primitive,dev_arm-fdadfa8bdd,graph_f1,-0.13333333333333341
 urdf_primitive,dev_arm-fdadfa8bdd,joint_type,0.0
@@ -285,6 +325,7 @@ urdf_primitive,dev_arm-fdadfa8bdd,axis,0.0
 urdf_primitive,dev_arm-fdadfa8bdd,origin,-0.2621270410141988
 urdf_primitive,dev_arm-fdadfa8bdd,motion,-0.6480898985503468
 urdf_primitive,dev_arm-fdadfa8bdd,chamfer,-0.002416702725117975
+urdf_primitive,dev_arm-fdadfa8bdd,hd95,-0.05307474152035263
 urdf_primitive,dev_arm-fdadfa8bdd,voxel_iou,0.20974321674783375
 urdf_fusion,dev_arm-0573e1e127,graph_f1,-0.13333333333333341
 urdf_fusion,dev_arm-0573e1e127,joint_type,0.0
@@ -292,6 +333,7 @@ urdf_fusion,dev_arm-0573e1e127,axis,0.0
 urdf_fusion,dev_arm-0573e1e127,origin,-0.14458520373293182
 urdf_fusion,dev_arm-0573e1e127,motion,-0.1630274945851723
 urdf_fusion,dev_arm-0573e1e127,chamfer,0.00012157791239066984
+urdf_fusion,dev_arm-0573e1e127,hd95,-0.004336313082581519
 urdf_fusion,dev_arm-0573e1e127,voxel_iou,-0.10098390727924622
 urdf_fusion,dev_arm-07307859e2,graph_f1,0.11229946524064183
 urdf_fusion,dev_arm-07307859e2,joint_type,0.2727272727272728
@@ -299,6 +341,7 @@ urdf_fusion,dev_arm-07307859e2,axis,-90.0
 urdf_fusion,dev_arm-07307859e2,origin,-0.183339914320643
 urdf_fusion,dev_arm-07307859e2,motion,-0.133316658254322
 urdf_fusion,dev_arm-07307859e2,chamfer,5.4137699617536755e-05
+urdf_fusion,dev_arm-07307859e2,hd95,0.0010441821406897214
 urdf_fusion,dev_arm-07307859e2,voxel_iou,-0.1168226708955416
 urdf_fusion,dev_arm-10f5f05385,graph_f1,0.20000000000000018
 urdf_fusion,dev_arm-10f5f05385,joint_type,0.20000000000000007
@@ -306,6 +349,7 @@ urdf_fusion,dev_arm-10f5f05385,axis,-90.0
 urdf_fusion,dev_arm-10f5f05385,origin,-0.3641750980680947
 urdf_fusion,dev_arm-10f5f05385,motion,-0.208174136278761
 urdf_fusion,dev_arm-10f5f05385,chamfer,0.020310289502058623
+urdf_fusion,dev_arm-10f5f05385,hd95,0.19986270504677012
 urdf_fusion,dev_arm-10f5f05385,voxel_iou,-0.36971615841804145
 urdf_fusion,dev_arm-21b8992ec4,graph_f1,0.475
 urdf_fusion,dev_arm-21b8992ec4,joint_type,0.5
@@ -313,6 +357,7 @@ urdf_fusion,dev_arm-21b8992ec4,axis,-90.0
 urdf_fusion,dev_arm-21b8992ec4,origin,-0.23413706689437783
 urdf_fusion,dev_arm-21b8992ec4,motion,-0.17529656992566706
 urdf_fusion,dev_arm-21b8992ec4,chamfer,-0.0006309435295463216
+urdf_fusion,dev_arm-21b8992ec4,hd95,-0.03419158023485834
 urdf_fusion,dev_arm-21b8992ec4,voxel_iou,0.19575418994413407
 urdf_fusion,dev_arm-3ce41d3c31,graph_f1,-0.13333333333333341
 urdf_fusion,dev_arm-3ce41d3c31,joint_type,0.11111111111111105
@@ -320,6 +365,7 @@ urdf_fusion,dev_arm-3ce41d3c31,axis,0.0
 urdf_fusion,dev_arm-3ce41d3c31,origin,-0.11899427803712767
 urdf_fusion,dev_arm-3ce41d3c31,motion,-0.324598406477606
 urdf_fusion,dev_arm-3ce41d3c31,chamfer,0.0004955181841159466
+urdf_fusion,dev_arm-3ce41d3c31,hd95,0.028800992967329908
 urdf_fusion,dev_arm-3ce41d3c31,voxel_iou,-0.07444475334383588
 urdf_fusion,dev_arm-42e898b1a2,graph_f1,0.09090909090909094
 urdf_fusion,dev_arm-42e898b1a2,joint_type,0.16666666666666663
@@ -327,6 +373,7 @@ urdf_fusion,dev_arm-42e898b1a2,axis,0.0
 urdf_fusion,dev_arm-42e898b1a2,origin,-0.05872570502517459
 urdf_fusion,dev_arm-42e898b1a2,motion,-0.07068293508781304
 urdf_fusion,dev_arm-42e898b1a2,chamfer,-0.006035175935080458
+urdf_fusion,dev_arm-42e898b1a2,hd95,-0.12049905049274791
 urdf_fusion,dev_arm-42e898b1a2,voxel_iou,0.4035880176350181
 urdf_fusion,dev_arm-43fa322555,graph_f1,-0.10795454545454541
 urdf_fusion,dev_arm-43fa322555,joint_type,0.0625
@@ -334,6 +381,7 @@ urdf_fusion,dev_arm-43fa322555,axis,-45.0
 urdf_fusion,dev_arm-43fa322555,origin,-0.1920476123448246
 urdf_fusion,dev_arm-43fa322555,motion,-0.2417640135002744
 urdf_fusion,dev_arm-43fa322555,chamfer,0.001424693609416123
+urdf_fusion,dev_arm-43fa322555,hd95,0.04804903255331946
 urdf_fusion,dev_arm-43fa322555,voxel_iou,-0.17816780821917805
 urdf_fusion,dev_arm-4c7b408826,graph_f1,-0.13333333333333341
 urdf_fusion,dev_arm-4c7b408826,joint_type,0.0
@@ -341,6 +389,7 @@ urdf_fusion,dev_arm-4c7b408826,axis,0.0
 urdf_fusion,dev_arm-4c7b408826,origin,-0.24447991834787183
 urdf_fusion,dev_arm-4c7b408826,motion,-0.2629467354680606
 urdf_fusion,dev_arm-4c7b408826,chamfer,-0.0012485098121616668
+urdf_fusion,dev_arm-4c7b408826,hd95,-0.032904480880912926
 urdf_fusion,dev_arm-4c7b408826,voxel_iou,0.07022302591922847
 urdf_fusion,dev_arm-551a9c392e,graph_f1,0.042307692307692324
 urdf_fusion,dev_arm-551a9c392e,joint_type,0.14999999999999997
@@ -348,6 +397,7 @@ urdf_fusion,dev_arm-551a9c392e,axis,-90.0
 urdf_fusion,dev_arm-551a9c392e,origin,-0.1618192369785822
 urdf_fusion,dev_arm-551a9c392e,motion,-0.1150476969423137
 urdf_fusion,dev_arm-551a9c392e,chamfer,9.2026142343674e-05
+urdf_fusion,dev_arm-551a9c392e,hd95,0.005109661779454017
 urdf_fusion,dev_arm-551a9c392e,voxel_iou,0.03532086029026049
 urdf_fusion,dev_arm-cb42051aad,graph_f1,-0.13333333333333341
 urdf_fusion,dev_arm-cb42051aad,joint_type,0.0
@@ -355,6 +405,7 @@ urdf_fusion,dev_arm-cb42051aad,axis,0.0
 urdf_fusion,dev_arm-cb42051aad,origin,-0.18877495400090138
 urdf_fusion,dev_arm-cb42051aad,motion,-0.24560403407351855
 urdf_fusion,dev_arm-cb42051aad,chamfer,0.003773801061919932
+urdf_fusion,dev_arm-cb42051aad,hd95,0.04616007374933713
 urdf_fusion,dev_arm-cb42051aad,voxel_iou,-0.26368333373572517
 urdf_fusion,dev_arm-d55f01b988,graph_f1,0.46428571428571425
 urdf_fusion,dev_arm-d55f01b988,joint_type,0.5
@@ -362,6 +413,7 @@ urdf_fusion,dev_arm-d55f01b988,axis,0.0
 urdf_fusion,dev_arm-d55f01b988,origin,-0.11913353798580459
 urdf_fusion,dev_arm-d55f01b988,motion,-0.27150487235393134
 urdf_fusion,dev_arm-d55f01b988,chamfer,-0.005942683170663365
+urdf_fusion,dev_arm-d55f01b988,hd95,-0.12965379790514045
 urdf_fusion,dev_arm-d55f01b988,voxel_iou,0.3369386397843817
 urdf_fusion,dev_arm-f7b0b901d3,graph_f1,-0.1071428571428571
 urdf_fusion,dev_arm-f7b0b901d3,joint_type,0.0
@@ -369,6 +421,7 @@ urdf_fusion,dev_arm-f7b0b901d3,axis,-45.0
 urdf_fusion,dev_arm-f7b0b901d3,origin,-0.1127142938896328
 urdf_fusion,dev_arm-f7b0b901d3,motion,-0.19592007106855522
 urdf_fusion,dev_arm-f7b0b901d3,chamfer,-0.005763365274929835
+urdf_fusion,dev_arm-f7b0b901d3,hd95,-0.0965163464414895
 urdf_fusion,dev_arm-f7b0b901d3,voxel_iou,0.13699534490055015
 urdf_fusion,dev_arm-fdadfa8bdd,graph_f1,-0.13333333333333341
 urdf_fusion,dev_arm-fdadfa8bdd,joint_type,0.0
@@ -376,4 +429,5 @@ urdf_fusion,dev_arm-fdadfa8bdd,axis,0.0
 urdf_fusion,dev_arm-fdadfa8bdd,origin,-0.2621270410141988
 urdf_fusion,dev_arm-fdadfa8bdd,motion,-0.6618330573977594
 urdf_fusion,dev_arm-fdadfa8bdd,chamfer,-0.0014930034646901237
+urdf_fusion,dev_arm-fdadfa8bdd,hd95,-0.03226133391877395
 urdf_fusion,dev_arm-fdadfa8bdd,voxel_iou,0.1835412014596155

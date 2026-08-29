@@ -1,3 +1,5 @@
 case_id,condition,error
 dev_arm-ab15a75247,A,BlueprintError: invalid unique link/joint cardinality
 dev_arm-dcc2b0ce1e,A,BlueprintError: response is not JSON: Expecting value: line 1 column 1 (char 0)
+dev_arm-ab15a75247,B,['A planning status: FAILURE']
+dev_arm-dcc2b0ce1e,B,['A planning status: FAILURE']
