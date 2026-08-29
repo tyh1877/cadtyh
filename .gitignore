@@ -44,6 +44,7 @@ try1/runs/
 try1/hidden_gt_rmdg/
 try2/runs/
 try2/fusion_smoke/
+try2/ground_truth_assembled/
 
 # Local/temporary outputs
 *.tmp
