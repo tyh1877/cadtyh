@@ -23,6 +23,9 @@ def run(context):
         app = adsk.core.Application.get()
         doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
         design = adsk.fusion.Design.cast(app.activeProduct)
+        # A new Fusion document can default to Direct Design. Both parametric
+        # construction points and AsBuiltJoint require Parametric Design.
+        design.designType = adsk.fusion.DesignTypes.ParametricDesignType
         root = design.rootComponent
         parent_occ = root.occurrences.addNewComponent(adsk.core.Matrix3D.create())
         child_transform = adsk.core.Matrix3D.create(); child_transform.translation = adsk.core.Vector3D.create(0, 0, 3)
