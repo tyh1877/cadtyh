@@ -1,0 +1,20 @@
+{
+  "experiment": "RobotCAD Try-3",
+  "tryset": "tryset5_v1.csv",
+  "image_text_packets": "../try1/inputs/image_text_v1",
+  "sanitized_urdf": "../try2/inputs/sanitized_urdf",
+  "v0_source": "../try2/runs/D",
+  "model": "glm-5.3-flash",
+  "reasoning_effort": "low",
+  "limits": {
+    "max_model_calls_per_case": 12,
+    "max_total_output_tokens_per_case": 65536,
+    "max_total_model_tokens_per_case": 160000,
+    "max_fusion_operations_per_case": 256
+  },
+  "versions": {
+    "V0": "try2_fusion_D_frozen",
+    "V1": "global_local_per_link_v1",
+    "V2": "mep_interface_skills_v1"
+  }
+}

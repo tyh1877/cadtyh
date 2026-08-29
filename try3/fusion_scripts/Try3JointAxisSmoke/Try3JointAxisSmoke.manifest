@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "RobotCAD Try-3",
+  "description": "Try-3 custom-axis as-built joint smoke",
+  "supportedOS": "windows",
+  "editEnabled": true
+}

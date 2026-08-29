@@ -1,0 +1,6 @@
+case_id,tier,role,selection_basis
+dev_arm-ab15a75247,easy,compact_serial_arm,Five links and four revolute joints; baseline pipeline and Fusion stability check.
+dev_arm-4c7b408826,medium,industrial_serial_arm,Fanuc-style industrial serial arm with multiple elbow/wrist transitions.
+dev_arm-dcc2b0ce1e,medium,industrial_serial_arm,KUKA-style arm with distinct long-link and wrist geometry.
+dev_arm-43fa322555,hard,curved_housing_arm,Seventeen-link arm with multiple compact joint housings and curved geometry.
+dev_arm-551a9c392e,hard,high_link_count_arm,Twenty-one-link arm with a difficult articulated chain and varied housing detail.
