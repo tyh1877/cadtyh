@@ -50,11 +50,17 @@ def add_joint(root,occs,j,world,record):
  try:
   limits=motion.slideLimits if j['type']=='prismatic' else motion.rotationLimits;limits.isMinimumValueEnabled=True;limits.isMaximumValueEnabled=True;limits.minimumValue=j['lower']/10 if j['type']=='prismatic' else j['lower'];limits.maximumValue=j['upper']/10 if j['type']=='prismatic' else j['upper']
  except:record['skill_failures'].append('SetJointLimits:'+j['name'])
- t=joint.transform;record['joint_frames'][j['name']]={'origin_cm':[t.getCell(0,3),t.getCell(1,3),t.getCell(2,3)],'axis_world':axis,'joint_type':j['type'],'limits':[j['lower'],j['upper']]}
+ t=joint.transform
+ try:
+  entity=motion.customSlideDirectionEntity if j['type']=='prismatic' else motion.customRotationAxisEntity
+  native_axis=[entity.geometry.direction.x,entity.geometry.direction.y,entity.geometry.direction.z] if entity else None
+  mode=int(motion.slideDirection if j['type']=='prismatic' else motion.rotationAxis)
+ except:native_axis=None;mode=None
+ record['joint_frames'][j['name']]={'origin_cm':[t.getCell(0,3),t.getCell(1,3),t.getCell(2,3)],'axis_world_requested':axis,'axis_flip_requested':flip,'native_custom_axis_entity_direction':native_axis,'native_axis_mode':mode,'joint_type':j['type'],'limits':[j['lower'],j['upper']]}
 def run(context):
  app=adsk.core.Application.get();results=[]
  for job in json.load(open(JOBS))['jobs']:
-  record={'case_id':job['case_id'],'version':job['version'],'status':'FAILURE','skills':[],'skill_failures':[],'joint_frames':[],'errors':[]};started=time.perf_counter()
+  record={'case_id':job['case_id'],'version':job['version'],'status':'FAILURE','skills':[],'skill_failures':[],'joint_frames':{},'errors':[]};started=time.perf_counter()
   if job['status']!='READY':record['errors'].append(job.get('error','UPSTREAM_FAILURE'));results.append(record);continue
   try:
    doc=app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType);design=adsk.fusion.Design.cast(app.activeProduct);design.designType=adsk.fusion.DesignTypes.ParametricDesignType;root=design.rootComponent;world=world_frames(job);occs={}
