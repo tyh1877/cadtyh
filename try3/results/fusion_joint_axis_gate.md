@@ -1,4 +1,4 @@
-# Try-3 Fusion native joint-axis gate — NO-GO
+# Try-3 native Fusion joint-axis capability record — environment limitation
 
 Date: 2026-08-30. Environment: the installed local Fusion 360 API, parametric
 design, `AsBuiltJoint` executor. The source smoke script is
@@ -30,13 +30,13 @@ Z-axis mode and no custom axis entity. Earlier input-object and construction-
 axis attempts produced the same persisted Z mode. This rules out a mere
 comparison, cache, or input-signature error in this environment.
 
-## Consequence
+## Scope under the 2026-08-30 amendment
 
-The formal Try-3 executor must **not** run the 9 otherwise-ready V1/V2 jobs:
-their claim requires preserved native URDF axis/origin/limits. It can currently
-prove only native origin and limits, not the arbitrary axis. Therefore Try-3 is
-an executor-level **NO-GO**, not evidence about V1/V2 geometry quality or the
-mechanical-embodiment hypothesis.
+This record is not a Try-3 NO-GO. The frozen sanitized URDF is the external
+authoritative kinematic representation, while Fusion is evaluated for editable
+geometry, embodiment, interfaces, placement, export and rebuild. Native
+Fusion joint semantics are desirable but non-blocking; see
+`AMENDMENT_EXTERNAL_KINEMATIC_AUTHORITY.md`.
 
 ## Planning matrix retained
 
