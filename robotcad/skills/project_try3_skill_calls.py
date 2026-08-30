@@ -20,8 +20,8 @@ def world_frames(bp):
   pending=rest
  return world
 def envelope(primitives):
- # Whole-link envelope from all planner-authored primitives. This must never
- # fall back to a universal placeholder: enforce() has already rejected it.
+ # Retained for feature-only secondary skills. The primary geometry call below
+ # carries every explicit primitive into the backend.
  lo=[float('inf')]*3;hi=[float('-inf')]*3
  for p in primitives:
   c=p.get('center',[0,0,0]);kind=p['type']
@@ -38,6 +38,9 @@ def skills_for(primitives,feature_skills):
  if 'cone' in kinds:return ['CreateLoftedLinkHousing']
  if kinds.count('cylinder')>=2:return ['CreateRotaryJointHousing']
  return ['CreateRoundedLinkHousing']
+
+def composite_params(primitives):
+ return {'primitives':primitives,'source_primitive_count':len(primitives)}
 def main():
  a=argparse.ArgumentParser();a.add_argument('--version',choices=('V1','V2'),required=True);a.add_argument('--case',required=True);x=a.parse_args();run=ROOT/'try3/runs'/x.version/x.case
  bp=json.loads((run/'blueprint.json').read_text());features={}
@@ -47,7 +50,10 @@ def main():
  calls=[];i=0;world=world_frames(bp)
  for link in bp['links']:
   target=link['name'];e=envelope(link['primitives']);agent='V1PerLinkPlanner' if x.version=='V1' else 'V2MechanicalArchitect';skills=skills_for(link['primitives'],features.get(target,[]));i+=1;calls.append(call(f'{x.case}-{i:03d}','PlaceComponentFromURDF',target,{'transform_cm':world[target]},'SkillCallProjection'))
+  i+=1;calls.append(call(f'{x.case}-{i:03d}','CreateCompositeLinkGeometry',target,composite_params(link['primitives']),agent))
   for skill in skills:
+   if skill in {'CreateRoundedLinkHousing','CreateRotaryJointHousing','CreateLoftedLinkHousing'}:
+    continue
    i+=1;calls.append(call(f'{x.case}-{i:03d}',skill,target,e,agent))
  for j in bp['joints']:
   i+=1;calls.append(call(f'{x.case}-{i:03d}','CreateSharedJointReference',j['child'],{'joint_id':j['name'],'parent_link':j['parent'],'origin_xyz_mm':j['origin_xyz'],'axis':j['axis']},'SkillCallProjection'))

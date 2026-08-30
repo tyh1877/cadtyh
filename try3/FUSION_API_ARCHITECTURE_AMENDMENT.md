@@ -15,3 +15,10 @@ The historical `Try3FusionBatch.py` is retained as an audit artifact and is
 deprecated for formal execution. Formal execution begins only after the six
 generic composite-skill smoke tests have produced editable F3D, STEP and STL
 artifacts with a successful rebuild.
+
+Repair note, 2026-08-30: the first formal Fusion API batch is invalidated for
+geometry evaluation because the projection layer collapsed each planner link
+to a single envelope skill and let missing primitives become a universal
+20 mm rounded placeholder. The formal batch gate now requires
+`CreateCompositeLinkGeometry` with explicit planner-authored primitives for
+each link before a case can enter `READY`.

@@ -4,7 +4,7 @@ Atomic skills: `CreateSketch`, `CreateReferencePlane`, `CreateReferenceAxis`,
 `Extrude`, `Revolve`, `Loft`, `Sweep`, `Shell`, `Fillet`, `Chamfer`, `Hole`,
 `Pattern`, `BooleanUnion`, `BooleanCut`.
 
-Composite skills: `CreateRotaryJointHousing`, `CreateRoundedLinkHousing`,
+Composite skills: `CreateCompositeLinkGeometry`, `CreateRotaryJointHousing`, `CreateRoundedLinkHousing`,
 `CreateLoftedLinkHousing`, `CreateJointTransition`, `CreateFlangeInterface`,
 `CreateShellHousing`, `CreateRecess`, `CreateBoss`, `ApplyFilletGroup`,
 `CreateInterfacePort`.
