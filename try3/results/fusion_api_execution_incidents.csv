@@ -1,2 +1,3 @@
 attempt_id,scope,classification,action,reason
 attempt_01,9_READY_jobs,implementation_cache_failure,archive_and_rerun_once,"Fusion reused a stale in-memory FusionAPIBackend module predating PlaceComponentFromURDF. All nine READY jobs stopped before any SkillCall was logged or feature was created; the one V1 upstream JSON failure remains separately recorded."
+attempt_02,9_READY_jobs,evaluation_export_gap,archive_and_rerun_once,"The successful first formal execution exported only assembled STL. Per-link and joint-local metrics require component STL, so the identical frozen SkillCall jobs must rerun once after adding deterministic per-occurrence exports; no planning or parameters change."

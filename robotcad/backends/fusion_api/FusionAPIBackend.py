@@ -44,8 +44,11 @@ class FusionAPIBackend:
   elif skill=='ApplyFilletGroup':feature=self.fillet(c,self.box(c,p['length_mm'],p['radius_mm']),p)
   else: raise RuntimeError('unsupported in v1 backend: '+skill)
   self.log(call,feature)
- def export(self,path):
+ def export(self,path,components=None):
   self.design.computeAll();em=self.design.exportManager;em.execute(em.createFusionArchiveExportOptions(path+'.f3d',self.root));em.execute(em.createSTEPExportOptions(path+'.step',self.root));em.execute(em.createSTLExportOptions(self.root,path+'.stl'))
+  if components:
+   mesh_dir=os.path.join(os.path.dirname(path),'meshes');os.makedirs(mesh_dir,exist_ok=True)
+   for name,entry in components.items():em.execute(em.createSTLExportOptions(entry['occurrence'],os.path.join(mesh_dir,name+'.stl')))
 
 def make_design():
  app=adsk.core.Application.get();doc=app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType);design=adsk.fusion.Design.cast(app.activeProduct);design.designType=adsk.fusion.DesignTypes.ParametricDesignType;return app,design,design.rootComponent

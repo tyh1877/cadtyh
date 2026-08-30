@@ -15,7 +15,7 @@ def run(context):
   try:
    app,design,root=make_design();backend=FusionAPIBackend(design,root,record);components={}
    for call in job['calls']:backend.execute(call,components)
-   base=os.path.join(ROOT,'try3','runs',job['version'],job['case_id'],'fusion_api_model');os.makedirs(os.path.dirname(base),exist_ok=True);backend.export(base);record.update({'status':'SUCCESS','rebuild_success':True,'component_count':len(components),'f3d':base+'.f3d','step':base+'.step','stl':base+'.stl'})
+   base=os.path.join(ROOT,'try3','runs',job['version'],job['case_id'],'fusion_api_model');os.makedirs(os.path.dirname(base),exist_ok=True);backend.export(base,components);record.update({'status':'SUCCESS','rebuild_success':True,'component_count':len(components),'component_mesh_dir':os.path.join(os.path.dirname(base),'meshes'),'f3d':base+'.f3d','step':base+'.step','stl':base+'.stl'})
   except:record['errors'].append(traceback.format_exc())
   record['elapsed_seconds']=time.time()-start
  json.dump(results,open(OUT,'w'),indent=2)
