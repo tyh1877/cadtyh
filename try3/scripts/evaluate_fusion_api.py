@@ -29,7 +29,7 @@ def main():
     # use this pre-registered bijection rather than original GT display names.
     for i,name in enumerate(gt.links):
      pred_name='L'+str(i)
-     if pred_name not in pred_by:continue
+     if pred_name not in pred_by or name not in gt.world_meshes:continue
      a=norm(gt.world_meshes[name],gt.center,gt.diagonal);b=norm(pred_by[pred_name],combined.bounds.mean(axis=0),float(np.linalg.norm(np.ptp(combined.vertices,axis=0))));b.apply_transform(matrix);aa=deterministic_surface_points(a,600,20260900+i);bb=deterministic_surface_points(b,600,20261000+i);m=point_metrics(aa,bb);links.append({'version':version,'case_id':case,'link_id':pred_name,**m,'voxel_iou':voxel_iou(a,b)})
     tf=forward_kinematics(gt.links,gt.joints,{})
     for i,j in enumerate(gt.joints):
