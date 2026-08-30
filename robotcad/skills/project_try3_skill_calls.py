@@ -20,12 +20,24 @@ def world_frames(bp):
   pending=rest
  return world
 def envelope(primitives):
- # Deterministic plan-to-skill projection; never examines GT. Conservative
- # dimensions are read only from the planner's primitive parameters.
- p=primitives[0] if primitives else {'type':'sphere','radius':10,'center':[0,0,0]}
- if p['type']=='box':return {'length_mm':max(p['size']),'radius_mm':max(2,min(p['size'])/2),'fillet_radius_mm':1.5}
- if p['type'] in ('cylinder','sphere'):return {'length_mm':p.get('height',2*p.get('radius',10)),'radius_mm':p.get('radius',10),'fillet_radius_mm':1.5}
- return {'length_mm':p.get('height',20),'radius_mm':max(p.get('bottom_radius',10),p.get('top_radius',10)),'fillet_radius_mm':1.5}
+ # Whole-link envelope from all planner-authored primitives. This must never
+ # fall back to a universal placeholder: enforce() has already rejected it.
+ lo=[float('inf')]*3;hi=[float('-inf')]*3
+ for p in primitives:
+  c=p.get('center',[0,0,0]);kind=p['type']
+  if kind=='box':e=[x/2 for x in p['size']]
+  elif kind=='sphere':e=[p['radius']]*3
+  elif kind=='cylinder':e=[max(p['radius'],p['height']/2)]*3
+  else:e=[max(p['bottom_radius'],p['top_radius'],p['height']/2)]*3
+  for i in range(3):lo[i]=min(lo[i],c[i]-e[i]);hi[i]=max(hi[i],c[i]+e[i])
+ size=[max(2,hi[i]-lo[i]) for i in range(3)]
+ return {'length_mm':max(size),'radius_mm':max(2,min(size)/2),'fillet_radius_mm':max(1,min(size)/20),'source_primitive_count':len(primitives)}
+def skills_for(primitives,feature_skills):
+ if feature_skills:return feature_skills
+ kinds=[p['type'] for p in primitives]
+ if 'cone' in kinds:return ['CreateLoftedLinkHousing']
+ if kinds.count('cylinder')>=2:return ['CreateRotaryJointHousing']
+ return ['CreateRoundedLinkHousing']
 def main():
  a=argparse.ArgumentParser();a.add_argument('--version',choices=('V1','V2'),required=True);a.add_argument('--case',required=True);x=a.parse_args();run=ROOT/'try3/runs'/x.version/x.case
  bp=json.loads((run/'blueprint.json').read_text());features={}
@@ -34,7 +46,7 @@ def main():
   for f in json.loads(fp.read_text()).get('features',[]):features.setdefault(f['link_id'],[]).append(f['skill'])
  calls=[];i=0;world=world_frames(bp)
  for link in bp['links']:
-  target=link['name'];e=envelope(link['primitives']);agent='V1PerLinkPlanner' if x.version=='V1' else 'V2MechanicalArchitect';skills=features.get(target,[]) or ['CreateRoundedLinkHousing'];i+=1;calls.append(call(f'{x.case}-{i:03d}','PlaceComponentFromURDF',target,{'transform_cm':world[target]},'SkillCallProjection'))
+  target=link['name'];e=envelope(link['primitives']);agent='V1PerLinkPlanner' if x.version=='V1' else 'V2MechanicalArchitect';skills=skills_for(link['primitives'],features.get(target,[]));i+=1;calls.append(call(f'{x.case}-{i:03d}','PlaceComponentFromURDF',target,{'transform_cm':world[target]},'SkillCallProjection'))
   for skill in skills:
    i+=1;calls.append(call(f'{x.case}-{i:03d}',skill,target,e,agent))
  for j in bp['joints']:
