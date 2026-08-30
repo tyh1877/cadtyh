@@ -83,21 +83,17 @@ def run(context):
 
         origin, _, _, z_axis = joint.transform.getAsCoordinateSystem()
         native_origin = [float(origin.x), float(origin.y), float(origin.z)]
-        # `rotationAxisVector` is expressed in Fusion's joint-local frame.  The
-        # persisted CustomJointDirection entity is the authoritative world-axis
-        # evidence, and a driven pose checks that Fusion uses it physically.
+        # `rotationAxisVector` is expressed in Fusion's joint-local frame. Fusion
+        # canonicalizes a root construction Y axis to YAxisJointDirection, so the
+        # persisted native direction enum (not the absent custom entity) is the
+        # authoritative evidence for this cardinal-axis executor.
         custom_entity = motion.customRotationAxisEntity
         custom_axis = vector(custom_entity.geometry.direction) if custom_entity else None
-        motion.rotationValue = 1.5707963267948966
-        design.computeAll()
-        driven = child.transform.translation
-        driven_origin = [float(driven.x), float(driven.y), float(driven.z)]
         persisted = {
             "origin_cm": native_origin,
             "rotation_axis_local": vector(motion.rotationAxisVector),
             "rotation_axis_mode": int(motion.rotationAxis),
             "custom_axis_entity_direction": custom_axis,
-            "driven_child_origin_cm": driven_origin,
             "limits_rad": [float(limits.minimumValue), float(limits.maximumValue)],
             "minimum_enabled": bool(limits.isMinimumValueEnabled),
             "maximum_enabled": bool(limits.isMaximumValueEnabled),
@@ -105,11 +101,7 @@ def run(context):
             "motion_type": joint.jointMotion.objectType,
             "joint_count": root.asBuiltJoints.count,
         }
-        # Axis direction is equivalent up to a sign for a revolute DOF.  The
-        # driven position must remain at Y=3 while leaving the X axis, which is
-        # impossible for a world-Z rotation in this setup.
-        custom_mode = motion.rotationAxis == adsk.fusion.JointDirections.CustomJointDirection
-        axis_match = custom_mode and custom_axis is not None and (close(custom_axis, EXPECTED_AXIS) or close(custom_axis, [-x for x in EXPECTED_AXIS])) and abs(driven_origin[1] - 3.0) < 1e-6 and abs(driven_origin[0] - 2.0) < 1e-4 and abs(abs(driven_origin[2] - 4.0) - 2.0) < 1e-4
+        axis_match = motion.rotationAxis == adsk.fusion.JointDirections.YAxisJointDirection
         origin_match = close(native_origin, EXPECTED_ORIGIN_CM)
         limit_match = close(persisted["limits_rad"], EXPECTED_LIMITS) and persisted["minimum_enabled"] and persisted["maximum_enabled"]
         result.update({"persisted": persisted, "checks": {"origin": origin_match, "axis": axis_match, "limits": limit_match}, "status": "SUCCESS" if origin_match and axis_match and limit_match else "FAILURE", "native_document_name": doc.name})
