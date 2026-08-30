@@ -57,22 +57,25 @@ def crops(packet,evidence,output):
  output.parent.mkdir(parents=True,exist_ok=True);sheet.save(output);return output
 
 def enforce(raw,links,joints):
- value=extract_json(raw);geom={x.get('name'):normalize_primitives(x.get('primitives',[])) for x in value.get('links',[]) if isinstance(x,dict)};fallback=[{'type':'sphere','center':[0,0,0],'radius':10}]
- return generic_validate({'schema_version':'1.0','units':'mm','links':[{'name':n,'primitives':geom.get(n,fallback)} for n in links],'joints':joints})
+ value=extract_json(raw);geom={x.get('name',x.get('link_id')):normalize_primitives(x.get('primitives',[])) for x in value.get('links',[]) if isinstance(x,dict)}
+ missing=[n for n in links if n not in geom]
+ if missing:raise ValueError('missing explicit geometry for '+','.join(missing))
+ return generic_validate({'schema_version':'1.0','units':'mm','links':[{'name':n,'primitives':geom[n]} for n in links],'joints':joints})
 
 def normalize_primitives(items):
  """Canonicalize model-authored base geometry; detail remains in Feature Graph."""
  axis_map={'x':[1,0,0],'-x':[-1,0,0],'y':[0,1,0],'-y':[0,-1,0],'z':[0,0,1],'-z':[0,0,-1]}
  clean=[]
  for item in items:
-  if not isinstance(item,dict) or item.get('type') not in {'box','cylinder','sphere','cone'}:continue
-  kind=item['type'];out={'type':kind,'center':item.get('center',[0,0,0])}
+  if not isinstance(item,dict) or item.get('type',item.get('primitive_type')) not in {'box','cylinder','sphere','cone'}:continue
+  kind=item.get('type',item.get('primitive_type'));out={'type':kind,'center':item.get('center',[0,0,0])}
   if kind=='box':out['size']=item.get('size',[10,10,10])
   elif kind=='sphere':out['radius']=item.get('radius',10)
   elif kind=='cylinder':out.update(radius=item.get('radius',10),height=item.get('height',10),axis=axis_map.get(str(item.get('axis','z')).lower(),item.get('axis',[0,0,1])))
-  else:out.update(bottom_radius=item.get('bottom_radius',10),top_radius=item.get('top_radius',0),height=item.get('height',10),axis=axis_map.get(str(item.get('axis','z')).lower(),item.get('axis',[0,0,1])))
+  else:out.update(bottom_radius=item.get('bottom_radius',item.get('radius_bottom',10)),top_radius=item.get('top_radius',item.get('radius_top',0)),height=item.get('height',10),axis=axis_map.get(str(item.get('axis','z')).lower(),item.get('axis',[0,0,1])))
   clean.append(out)
- return clean[:8] or [{'type':'sphere','center':[0,0,0],'radius':10}]
+ if not clean:raise ValueError('no supported explicit primitives')
+ return clean[:8]
 
 def canonicalize_plan(value,joints=None):
  mep=value.get('mep',{});links=[]
