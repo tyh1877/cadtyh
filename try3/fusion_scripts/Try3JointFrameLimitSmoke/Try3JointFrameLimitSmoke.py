@@ -64,11 +64,16 @@ def run(context):
         primitive_body(child.component)
 
         geometry = point_geometry(root, EXPECTED_ORIGIN_CM)
+        # Built-in construction axes are reinterpreted in the joint's local
+        # frame by this Fusion version. A root sketch line is a persistent,
+        # explicit world-space direction entity accepted by CustomJointDirection.
+        axis_sketch = root.sketches.add(root.xYConstructionPlane)
+        custom_axis_line = axis_sketch.sketchCurves.sketchLines.addByTwoPoints(
+            adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(0, 1, 0)
+        )
         joint_input = root.asBuiltJoints.createInput(parent, child, geometry)
-        # The root Y construction axis is an explicit persisted custom entity,
-        # not an inferred cardinal direction from a body vertex.
         joint_input.setAsRevoluteJointMotion(
-            adsk.fusion.JointDirections.CustomJointDirection, root.yConstructionAxis
+            adsk.fusion.JointDirections.CustomJointDirection, custom_axis_line
         )
         joint = root.asBuiltJoints.add(joint_input)
         design.computeAll()
@@ -83,10 +88,8 @@ def run(context):
 
         origin, _, _, z_axis = joint.transform.getAsCoordinateSystem()
         native_origin = [float(origin.x), float(origin.y), float(origin.z)]
-        # `rotationAxisVector` is expressed in Fusion's joint-local frame. Fusion
-        # canonicalizes a root construction Y axis to YAxisJointDirection, so the
-        # persisted native direction enum (not the absent custom entity) is the
-        # authoritative evidence for this cardinal-axis executor.
+        # `rotationAxisVector` is expressed in Fusion's joint-local frame. The
+        # persistent root sketch line is the authoritative world-axis evidence.
         custom_entity = motion.customRotationAxisEntity
         custom_axis = vector(custom_entity.geometry.direction) if custom_entity else None
         persisted = {
@@ -107,7 +110,7 @@ def run(context):
                 "custom": int(adsk.fusion.JointDirections.CustomJointDirection),
             },
         }
-        axis_match = int(motion.rotationAxis) == int(adsk.fusion.JointDirections.YAxisJointDirection)
+        axis_match = int(motion.rotationAxis) == int(adsk.fusion.JointDirections.CustomJointDirection) and custom_axis is not None and (close(custom_axis, EXPECTED_AXIS) or close(custom_axis, [-x for x in EXPECTED_AXIS]))
         origin_match = close(native_origin, EXPECTED_ORIGIN_CM)
         limit_match = close(persisted["limits_rad"], EXPECTED_LIMITS) and persisted["minimum_enabled"] and persisted["maximum_enabled"]
         result.update({"persisted": persisted, "checks": {"origin": origin_match, "axis": axis_match, "limits": limit_match}, "status": "SUCCESS" if origin_match and axis_match and limit_match else "FAILURE", "native_document_name": doc.name})
