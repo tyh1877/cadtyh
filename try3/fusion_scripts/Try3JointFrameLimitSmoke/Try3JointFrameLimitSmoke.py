@@ -100,8 +100,14 @@ def run(context):
             "joint_frame_z_axis": vector(z_axis),
             "motion_type": joint.jointMotion.objectType,
             "joint_count": root.asBuiltJoints.count,
+            "direction_codes": {
+                "x": int(adsk.fusion.JointDirections.XAxisJointDirection),
+                "y": int(adsk.fusion.JointDirections.YAxisJointDirection),
+                "z": int(adsk.fusion.JointDirections.ZAxisJointDirection),
+                "custom": int(adsk.fusion.JointDirections.CustomJointDirection),
+            },
         }
-        axis_match = motion.rotationAxis == adsk.fusion.JointDirections.YAxisJointDirection
+        axis_match = int(motion.rotationAxis) == int(adsk.fusion.JointDirections.YAxisJointDirection)
         origin_match = close(native_origin, EXPECTED_ORIGIN_CM)
         limit_match = close(persisted["limits_rad"], EXPECTED_LIMITS) and persisted["minimum_enabled"] and persisted["maximum_enabled"]
         result.update({"persisted": persisted, "checks": {"origin": origin_match, "axis": axis_match, "limits": limit_match}, "status": "SUCCESS" if origin_match and axis_match and limit_match else "FAILURE", "native_document_name": doc.name})
