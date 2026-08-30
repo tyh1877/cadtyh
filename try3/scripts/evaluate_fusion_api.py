@@ -25,9 +25,12 @@ def main():
     gp=deterministic_surface_points(gm,3000,20260830);pp=deterministic_surface_points(pm,3000,20260831)
     matrix,_,_=trimesh.registration.icp(pp,gp,max_iterations=50,reflection=False,scale=False);pm.apply_transform(matrix);pp=deterministic_surface_points(pm,3000,20260831)
     row.update(point_metrics(gp,pp));row['voxel_iou']=voxel_iou(gm,pm);row['component_meshes']=len(pred_by);row['expected_links']=len(gt.links);row['canonical_component_correspondence']=len(pred_by)==len(gt.links)
+    # Sanitization preserves link order while deliberately renaming links L0…;
+    # use this pre-registered bijection rather than original GT display names.
     for i,name in enumerate(gt.links):
-     if name not in pred_by:continue
-     a=norm(gt.world_meshes[name],gt.center,gt.diagonal);b=norm(pred_by[name],combined.bounds.mean(axis=0),float(np.linalg.norm(np.ptp(combined.vertices,axis=0))));b.apply_transform(matrix);aa=deterministic_surface_points(a,600,20260900+i);bb=deterministic_surface_points(b,600,20261000+i);m=point_metrics(aa,bb);links.append({'version':version,'case_id':case,'link_id':name,**m,'voxel_iou':voxel_iou(a,b)})
+     pred_name='L'+str(i)
+     if pred_name not in pred_by:continue
+     a=norm(gt.world_meshes[name],gt.center,gt.diagonal);b=norm(pred_by[pred_name],combined.bounds.mean(axis=0),float(np.linalg.norm(np.ptp(combined.vertices,axis=0))));b.apply_transform(matrix);aa=deterministic_surface_points(a,600,20260900+i);bb=deterministic_surface_points(b,600,20261000+i);m=point_metrics(aa,bb);links.append({'version':version,'case_id':case,'link_id':pred_name,**m,'voxel_iou':voxel_iou(a,b)})
     tf=forward_kinematics(gt.links,gt.joints,{})
     for i,j in enumerate(gt.joints):
      origin=(tf[j['parent']]@j['origin'])[:3,3];origin=(origin-gt.center)/gt.diagonal;r=.10
