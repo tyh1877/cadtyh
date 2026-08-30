@@ -1,9 +1,13 @@
 """Generic formal executor: consumes frozen RobotCAD SkillCalls only."""
-import adsk.core,json,os,time,traceback,sys
+import adsk.core,json,os,time,traceback,sys,importlib
 ROOT=r"D:\CADtest\papertest";JOBS=os.path.join(ROOT,'try3','fusion_api_jobs.json');OUT=os.path.join(ROOT,'try3','fusion_api_batch_results.json')
 def run(context):
  here=os.path.dirname(os.path.abspath(__file__));sys.path.insert(0,here) if here not in sys.path else None
- from FusionAPIBackend import FusionAPIBackend,make_design
+ # Fusion keeps imported modules alive between script invocations. Reload the
+ # generic adapter so a user-run batch cannot silently use a pre-refactor class.
+ import FusionAPIBackend as backend_module
+ importlib.reload(backend_module)
+ FusionAPIBackend,make_design=backend_module.FusionAPIBackend,backend_module.make_design
  results=[];app=None
  for job in json.load(open(JOBS))['jobs']:
   record={'case_id':job['case_id'],'version':job['version'],'status':'FAILURE','calls':[],'errors':[]};start=time.time();results.append(record)

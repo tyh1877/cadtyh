@@ -1,6 +1,8 @@
 """Fusion-packaged entry point for the generic RobotCAD formal batch."""
-import os, sys
+import os, sys, importlib
 PARENT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if PARENT not in sys.path:
     sys.path.insert(0, PARENT)
-from FusionAPIBackendBatch import run
+import FusionAPIBackendBatch as batch_module
+importlib.reload(batch_module)
+run = batch_module.run

@@ -1,0 +1,2 @@
+attempt_id,scope,classification,action,reason
+attempt_01,9_READY_jobs,implementation_cache_failure,archive_and_rerun_once,"Fusion reused a stale in-memory FusionAPIBackend module predating PlaceComponentFromURDF. All nine READY jobs stopped before any SkillCall was logged or feature was created; the one V1 upstream JSON failure remains separately recorded."

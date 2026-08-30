@@ -41,6 +41,7 @@ try3/fusion_jobs.json
 try3/fusion_batch_results.json
 try3/fusion_api_jobs.json
 try3/fusion_api_batch_results.json
+try3/fusion_api_batch_results_attempt_*.json
 try3/smoke/
 
 # Local LLM credential file. Copy/edit the tracked example; never commit this file.
