@@ -36,17 +36,27 @@ def world_frames(job):
   if len(rest)==len(pending):raise RuntimeError('disconnected skeleton')
   pending=rest
  return world
-def cardinal_axis(root,axis):
- i=max(range(3),key=lambda k:abs(axis[k]));return (root.xConstructionAxis,root.yConstructionAxis,root.zConstructionAxis)[i],axis[i]<0
+def custom_axis_line(root,axis):
+ # Root sketch lines remain world-space custom direction entities after joint
+ # creation; built-in construction axes are reinterpreted in joint-local space.
+ i=max(range(3),key=lambda k:abs(axis[k]));flip=axis[i]<0
+ if i<2:
+  sk=root.sketches.add(root.xYConstructionPlane);end=adsk.core.Point3D.create(1 if i==0 else 0,1 if i==1 else 0,0)
+ else:
+  sk=root.sketches.add(root.xZConstructionPlane);end=adsk.core.Point3D.create(0,1,0)
+ return sk.sketchCurves.sketchLines.addByTwoPoints(adsk.core.Point3D.create(0,0,0),end),flip
 def root_joint_point(root,xyz):
  # Parametric offset plane and sketch point establish the recorded joint origin.
  pi=root.constructionPlanes.createInput();pi.setByOffset(root.xYConstructionPlane,adsk.core.ValueInput.createByReal(xyz[2]/10));plane=root.constructionPlanes.add(pi);sk=root.sketches.add(plane);return sk.sketchPoints.add(adsk.core.Point3D.create(xyz[0]/10,xyz[1]/10,0))
 def add_joint(root,occs,j,world,record):
  if j['type']=='fixed':return
- origin=mul(world[j['parent']],mat(j['origin_rpy'],j['origin_xyz']));axis=[sum(origin[i][k]*j['axis'][k] for k in range(3)) for i in range(3)];point=root_joint_point(root,[origin[0][3]*10,origin[1][3]*10,origin[2][3]*10]);geo=adsk.fusion.JointGeometry.createByPoint(point);inp=root.asBuiltJoints.createInput(occs[j['parent']],occs[j['child']],geo);entity,flip=cardinal_axis(root,axis)
- if j['type']=='prismatic':inp.setAsSliderJointMotion(adsk.fusion.JointDirections.CustomJointDirection,entity)
- else:inp.setAsRevoluteJointMotion(adsk.fusion.JointDirections.CustomJointDirection,entity)
- inp.isFlipped=flip;joint=root.asBuiltJoints.add(inp);joint.name=j['name'];motion=joint.jointMotion
+ origin=mul(world[j['parent']],mat(j['origin_rpy'],j['origin_xyz']));axis=[sum(origin[i][k]*j['axis'][k] for k in range(3)) for i in range(3)];point=root_joint_point(root,[origin[0][3]*10,origin[1][3]*10,origin[2][3]*10]);geo=adsk.fusion.JointGeometry.createByPoint(point);inp=root.asBuiltJoints.createInput(occs[j['parent']],occs[j['child']],geo);entity,flip=custom_axis_line(root,axis)
+ if j['type']=='prismatic':inp.setAsSliderJointMotion(adsk.fusion.JointDirections.ZAxisJointDirection)
+ else:inp.setAsRevoluteJointMotion(adsk.fusion.JointDirections.ZAxisJointDirection)
+ inp.isFlipped=flip;joint=root.asBuiltJoints.add(inp);joint.name=j['name'];joint.timelineObject.rollTo(True)
+ if j['type']=='prismatic':redefined=joint.setAsSliderJointMotion(adsk.fusion.JointDirections.CustomJointDirection,geo,entity)
+ else:redefined=joint.setAsRevoluteJointMotion(adsk.fusion.JointDirections.CustomJointDirection,geo,entity)
+ root.parentDesign.timeline.moveToEnd();motion=joint.jointMotion
  try:
   limits=motion.slideLimits if j['type']=='prismatic' else motion.rotationLimits;limits.isMinimumValueEnabled=True;limits.isMaximumValueEnabled=True;limits.minimumValue=j['lower']/10 if j['type']=='prismatic' else j['lower'];limits.maximumValue=j['upper']/10 if j['type']=='prismatic' else j['upper']
  except:record['skill_failures'].append('SetJointLimits:'+j['name'])
@@ -56,7 +66,7 @@ def add_joint(root,occs,j,world,record):
   native_axis=[entity.geometry.direction.x,entity.geometry.direction.y,entity.geometry.direction.z] if entity else None
   mode=int(motion.slideDirection if j['type']=='prismatic' else motion.rotationAxis)
  except:native_axis=None;mode=None
- record['joint_frames'][j['name']]={'origin_cm':[t.getCell(0,3),t.getCell(1,3),t.getCell(2,3)],'axis_world_requested':axis,'axis_flip_requested':flip,'native_custom_axis_entity_direction':native_axis,'native_axis_mode':mode,'joint_type':j['type'],'limits':[j['lower'],j['upper']]}
+ record['joint_frames'][j['name']]={'origin_cm':[t.getCell(0,3),t.getCell(1,3),t.getCell(2,3)],'axis_world_requested':axis,'axis_flip_requested':flip,'native_custom_axis_entity_direction':native_axis,'native_axis_mode':mode,'native_redefine_success':bool(redefined),'joint_type':j['type'],'limits':[j['lower'],j['upper']]}
 def run(context):
  app=adsk.core.Application.get();results=[]
  for job in json.load(open(JOBS))['jobs']:

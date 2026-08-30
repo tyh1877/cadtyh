@@ -72,10 +72,16 @@ def run(context):
             adsk.core.Point3D.create(0, 0, 0), adsk.core.Point3D.create(0, 1, 0)
         )
         joint_input = root.asBuiltJoints.createInput(parent, child, geometry)
-        joint_input.setAsRevoluteJointMotion(
-            adsk.fusion.JointDirections.CustomJointDirection, custom_axis_line
-        )
+        joint_input.setAsRevoluteJointMotion(adsk.fusion.JointDirections.ZAxisJointDirection)
         joint = root.asBuiltJoints.add(joint_input)
+        # AsBuiltJointInput silently drops the custom entity on this Fusion
+        # release.  The documented AsBuiltJoint mutation takes the geometry as
+        # its second argument and must run immediately before its timeline item.
+        joint.timelineObject.rollTo(True)
+        redefine_success = joint.setAsRevoluteJointMotion(
+            adsk.fusion.JointDirections.CustomJointDirection, geometry, custom_axis_line
+        )
+        design.timeline.moveToEnd()
         design.computeAll()
 
         motion = adsk.fusion.RevoluteJointMotion.cast(joint.jointMotion)
@@ -103,6 +109,7 @@ def run(context):
             "joint_frame_z_axis": vector(z_axis),
             "motion_type": joint.jointMotion.objectType,
             "joint_count": root.asBuiltJoints.count,
+            "redefine_success": bool(redefine_success),
             "direction_codes": {
                 "x": int(adsk.fusion.JointDirections.XAxisJointDirection),
                 "y": int(adsk.fusion.JointDirections.YAxisJointDirection),
@@ -110,7 +117,7 @@ def run(context):
                 "custom": int(adsk.fusion.JointDirections.CustomJointDirection),
             },
         }
-        axis_match = int(motion.rotationAxis) == int(adsk.fusion.JointDirections.CustomJointDirection) and custom_axis is not None and (close(custom_axis, EXPECTED_AXIS) or close(custom_axis, [-x for x in EXPECTED_AXIS]))
+        axis_match = bool(redefine_success) and int(motion.rotationAxis) == int(adsk.fusion.JointDirections.CustomJointDirection) and custom_axis is not None and (close(custom_axis, EXPECTED_AXIS) or close(custom_axis, [-x for x in EXPECTED_AXIS]))
         origin_match = close(native_origin, EXPECTED_ORIGIN_CM)
         limit_match = close(persisted["limits_rad"], EXPECTED_LIMITS) and persisted["minimum_enabled"] and persisted["maximum_enabled"]
         result.update({"persisted": persisted, "checks": {"origin": origin_match, "axis": axis_match, "limits": limit_match}, "status": "SUCCESS" if origin_match and axis_match and limit_match else "FAILURE", "native_document_name": doc.name})
