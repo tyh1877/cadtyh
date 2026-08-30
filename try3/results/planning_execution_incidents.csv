@@ -1,2 +1,3 @@
 attempt_id,versions,cases,classification,action,reason
 attempt_01,V1;V2,dev_arm-551a9c392e,implementation_interruption,archive_partial_then_rerun_once,"A duplicated non-.venv planner process was terminated to restore the frozen environment requirement; the paired .venv processes stopped before writing manifests. No model result was accepted from the interrupted partial directories."
+attempt_02,V2,dev_arm-4c7b408826;dev_arm-551a9c392e,implementation_parser_failure,resume_unissued_blueprint_stage_once,"The two recorded requests (visual evidence and MEP/interface/feature planning) are preserved. The V2 canonicalizer originally rejected non-topology text; after the parser fix, each case issues only its previously unissued final blueprint request."
