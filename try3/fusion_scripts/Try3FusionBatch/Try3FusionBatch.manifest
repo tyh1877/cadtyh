@@ -1,0 +1,8 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "RobotCAD Try-3",
+  "description": "Try-3 V1/V2 parametric Fusion batch",
+  "supportedOS": "windows",
+  "editEnabled": true
+}

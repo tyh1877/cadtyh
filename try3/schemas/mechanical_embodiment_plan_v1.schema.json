@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "links"],
+  "properties": {
+    "version": {"const": "1"},
+    "links": {"type": "array", "items": {"type": "object", "required": ["link_id", "functional_role", "geometry_family", "surface_strategy"], "properties": {"link_id": {"type": "string", "pattern": "^L[0-9]+$"}, "functional_role": {"type": "string"}, "geometry_family": {"type": "string"}, "surface_strategy": {"enum": ["extrude", "revolve", "loft", "shell", "rounded_housing"]}, "protected_interface_regions": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": true}}
+  },
+  "additionalProperties": true
+}

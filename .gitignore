@@ -35,6 +35,11 @@ go_nogo5/runs/
 mesh_oracle_diagnostic/data/
 mesh_oracle_diagnostic/runs/
 
+# Try-3 raw model plans, generated crops, and Fusion exports
+try3/runs/
+try3/fusion_jobs.json
+try3/fusion_batch_results.json
+
 # Local LLM credential file. Copy/edit the tracked example; never commit this file.
 go_nogo2/config/llm.local.toml
 go_nogo2/config/glm.local.toml

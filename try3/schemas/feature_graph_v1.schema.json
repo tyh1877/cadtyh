@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "features"],
+  "properties": {
+    "version": {"const": "1"},
+    "features": {"type": "array", "items": {"type": "object", "required": ["link_id", "feature_type", "skill"], "properties": {"link_id": {"type": "string", "pattern": "^L[0-9]+$"}, "feature_type": {"type": "string"}, "skill": {"enum": ["CreateRotaryJointHousing", "CreateLoftedLinkHousing", "CreateRoundedLinkHousing", "CreateFlangeInterface", "CreateShellHousing", "CreateJointTransition", "ApplyFilletGroup"]}}, "additionalProperties": true}}
+  },
+  "additionalProperties": true
+}

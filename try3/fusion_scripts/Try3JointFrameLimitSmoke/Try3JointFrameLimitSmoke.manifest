@@ -1,0 +1,7 @@
+{
+  "autodeskProduct": "Fusion360",
+  "type": "script",
+  "author": "RobotCAD Try-3",
+  "description": "Try-3 joint origin, custom axis, and limit preservation gate",
+  "supportedOS": "windows"
+}

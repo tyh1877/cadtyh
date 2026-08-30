@@ -1,0 +1,2 @@
+attempt_id,versions,cases,classification,action,reason
+attempt_01,V1;V2,dev_arm-551a9c392e,implementation_interruption,archive_partial_then_rerun_once,"A duplicated non-.venv planner process was terminated to restore the frozen environment requirement; the paired .venv processes stopped before writing manifests. No model result was accepted from the interrupted partial directories."

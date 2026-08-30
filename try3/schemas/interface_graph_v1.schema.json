@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "interfaces"],
+  "properties": {
+    "version": {"const": "1"},
+    "interfaces": {"type": "array", "items": {"type": "object", "required": ["joint_id", "parent_link", "child_link", "interface_family", "coaxial"], "properties": {"joint_id": {"type": "string", "pattern": "^J[0-9]+$"}, "parent_link": {"type": "string", "pattern": "^L[0-9]+$"}, "child_link": {"type": "string", "pattern": "^L[0-9]+$"}, "interface_family": {"enum": ["rotary_housing", "fixed_mount", "prismatic_guide"]}, "coaxial": {"type": "boolean"}, "clearance_mm": {"type": ["number", "null"]}}, "additionalProperties": true}}
+  },
+  "additionalProperties": true
+}
