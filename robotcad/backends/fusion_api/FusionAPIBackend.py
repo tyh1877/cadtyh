@@ -5,8 +5,8 @@ ROOT=r"D:\CADtest\papertest"
 
 class FusionAPIBackend:
  def __init__(self,design,root,record):self.design,self.root,self.record=design,root,record
- def component(self,name):
-  occ=self.root.occurrences.addNewComponent(adsk.core.Matrix3D.create());occ.component.name=name;return occ.component
+ def component(self,name,matrix=None):
+  occ=self.root.occurrences.addNewComponent(matrix or adsk.core.Matrix3D.create());occ.component.name=name;return {'component':occ.component,'occurrence':occ}
  def log(self,call,feature):
   self.record['calls'].append({'call_id':call['call_id'],'skill':call['skill'],'target_component':call['target_component'],'feature_id':feature.entityToken if feature else None,'feature_type':feature.objectType if feature else None,'status':'SUCCESS'})
  def box(self,c,l,r):
@@ -24,7 +24,17 @@ class FusionAPIBackend:
  def shell(self,c,feature,p):
   faces=adsk.core.ObjectCollection.create();faces.add(feature.bodies.item(0).faces.item(0));x=c.features.shellFeatures.createInput(faces,False);x.insideThickness=adsk.core.ValueInput.createByReal(max(.1,p.get('shell_thickness_mm',1))/10);return c.features.shellFeatures.add(x)
  def execute(self,call,components):
-  p=call['parameters'];name=call['target_component'];c=components.setdefault(name,self.component(name));skill=call['skill'];feature=None
+  p=call['parameters'];name=call['target_component'];skill=call['skill']
+  if skill=='PlaceComponentFromURDF':
+   m=adsk.core.Matrix3D.create()
+   for i,row in enumerate(p['transform_cm']):
+    for j,value in enumerate(row):m.setCell(i,j,value)
+   components[name]=self.component(name,m);self.log(call,None);return
+  if skill=='CreateSharedJointReference':
+   # The external URDF is authoritative for this reference. The backend records
+   # the shared interface intent without inventing native joint semantics.
+   self.log(call,None);return
+  entry=components.setdefault(name,self.component(name));c=entry['component'];feature=None
   if skill=='CreateRotaryJointHousing':feature=self.rotary(c,p)
   elif skill=='CreateLoftedLinkHousing':feature=self.loft(c,p)
   elif skill=='CreateRoundedLinkHousing':feature=self.fillet(c,self.box(c,p['length_mm'],p['radius_mm']),p)

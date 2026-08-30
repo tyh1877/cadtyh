@@ -1,9 +1,24 @@
 """Project frozen Try-3 plans into backend-agnostic RobotCAD SkillCalls."""
 from __future__ import annotations
 import argparse,json
+import math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 def call(n,skill,target,parameters,agent):return {'call_id':n,'skill':skill,'version':'v1','target_component':target,'parameters':parameters,'calling_agent':agent}
+def mat(rpy,xyz):
+ r,p,y=rpy;cr,sr=math.cos(r),math.sin(r);cp,sp=math.cos(p),math.sin(p);cy,sy=math.cos(y),math.sin(y)
+ return [[cy*cp,cy*sp*sr-sy*cr,cy*sp*cr+sy*sr,xyz[0]/10],[sy*cp,sy*sp*sr+cy*cr,sy*sp*cr-cy*sr,xyz[1]/10],[-sp,cp*sr,cp*cr,xyz[2]/10],[0,0,0,1]]
+def mul(a,b):return [[sum(a[i][k]*b[k][j] for k in range(4)) for j in range(4)] for i in range(4)]
+def world_frames(bp):
+ links=bp['links'];world={links[0]['name']:[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]};pending=list(bp['joints'])
+ while pending:
+  rest=[]
+  for j in pending:
+   if j['parent'] in world:world[j['child']]=mul(world[j['parent']],mat(j['origin_rpy'],j['origin_xyz']))
+   else:rest.append(j)
+  if len(rest)==len(pending):raise RuntimeError('disconnected URDF skeleton')
+  pending=rest
+ return world
 def envelope(primitives):
  # Deterministic plan-to-skill projection; never examines GT. Conservative
  # dimensions are read only from the planner's primitive parameters.
@@ -17,9 +32,9 @@ def main():
  fp=run/'feature_graph.json'
  if fp.exists():
   for f in json.loads(fp.read_text()).get('features',[]):features.setdefault(f['link_id'],[]).append(f['skill'])
- calls=[];i=0
+ calls=[];i=0;world=world_frames(bp)
  for link in bp['links']:
-  target=link['name'];e=envelope(link['primitives']);agent='V1PerLinkPlanner' if x.version=='V1' else 'V2MechanicalArchitect';skills=features.get(target,[]) or ['CreateRoundedLinkHousing']
+  target=link['name'];e=envelope(link['primitives']);agent='V1PerLinkPlanner' if x.version=='V1' else 'V2MechanicalArchitect';skills=features.get(target,[]) or ['CreateRoundedLinkHousing'];i+=1;calls.append(call(f'{x.case}-{i:03d}','PlaceComponentFromURDF',target,{'transform_cm':world[target]},'SkillCallProjection'))
   for skill in skills:
    i+=1;calls.append(call(f'{x.case}-{i:03d}',skill,target,e,agent))
  for j in bp['joints']:
