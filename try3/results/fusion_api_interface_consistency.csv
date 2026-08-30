@@ -1,0 +1,11 @@
+actual_components,axis_angular_error_authoritative_urdf_deg,axis_offset_authoritative_urdf,bbox_overlap_pairs,canonical_placement_consistency,case_id,component_correspondence,execution_status,expected_components,interfaces_evaluated,joint_center_surface_gap_normalized_median,joint_center_surface_gap_normalized_p95,version
+17,0.0,0.0,136,True,dev_arm-43fa322555,True,SUCCESS,17,16,0.22701681458771863,0.4261357462854434,V1
+,,,,,dev_arm-4c7b408826,,FAILURE,,,,,V1
+21,0.0,0.0,210,True,dev_arm-551a9c392e,True,SUCCESS,21,20,0.16596001980937836,0.36019397245789986,V1
+5,0.0,0.0,10,True,dev_arm-ab15a75247,True,SUCCESS,5,4,0.10240954781178342,0.13610826621491828,V1
+10,0.0,0.0,45,True,dev_arm-dcc2b0ce1e,True,SUCCESS,10,9,0.3457826718616432,0.37962831029046173,V1
+17,0.0,0.0,136,True,dev_arm-43fa322555,True,SUCCESS,17,16,0.22701681458771863,0.4261357462854434,V2
+10,0.0,0.0,45,True,dev_arm-4c7b408826,True,SUCCESS,10,9,0.1751421348095426,0.3326137113786437,V2
+21,0.0,0.0,210,True,dev_arm-551a9c392e,True,SUCCESS,21,20,0.16596001980937836,0.36019397245789986,V2
+5,0.0,0.0,10,True,dev_arm-ab15a75247,True,SUCCESS,5,4,0.10240954781178342,0.13610826621491828,V2
+10,0.0,0.0,45,True,dev_arm-dcc2b0ce1e,True,SUCCESS,10,9,0.3457826718616432,0.37962831029046173,V2
