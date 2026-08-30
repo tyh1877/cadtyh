@@ -10,7 +10,7 @@
 | V0 is Try-2 D baseline | source run manifest checksums | V0 provenance table | pass — five source manifests successful |
 | V1 has non-GT global-to-local evidence | crop-generation source + crop manifest | image hashes; no GT mesh access assertion | partial — 4/5 plans generated; 1 model-JSON failure retained |
 | V2 uses MEP, interface graph, feature graph and generic skills | schemas + validators + skill logs | per-case generated plans and Fusion feature logs | partial — 5/5 plans generated; no Fusion skill execution |
-| Fusion is real and editable | in-app Fusion script and saved artifacts | F3D/STEP/STL, feature/component/rebuild logs | pending — proceeds independently of optional native-joint semantics |
+| Fusion is real and editable | `results/fusion_api_skill_smoke.md` | six generic skills created real features; rebuild + F3D/STEP/STL pass | pass — formal batch is separately pending |
 | Full 5x3 matrix is accounted | run manifests | every case status, including failures | partial — V0 5/5; V1 4 success + 1 planning failure; V2 5/5; formal Fusion jobs pending |
 | Gap metrics are deterministic | evaluator + interface metric scripts | global/per-link/joint-local/interface/interference tables | pending — formal V1/V2 outputs required |
 | Visual diagnostics exist but are not AI judgement | deterministic render script | 5 x V0/V1/V2 contact sheets | pending — formal V1/V2 outputs required |
