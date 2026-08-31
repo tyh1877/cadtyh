@@ -1,0 +1,1943 @@
+{
+  "backend": "FusionAPIBackend.v1.execution_compiler",
+  "jobs": [
+    {
+      "case_id": "dev_arm-dcc2b0ce1e",
+      "link_id": "L2",
+      "target_component": "dev_arm_dcc2b0ce1e_L2",
+      "status": "READY",
+      "calls": [
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-001",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "base_profile",
+            "shape": "rectangle",
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": -9.0,
+            "size_mm": [
+              110,
+              22
+            ],
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-002",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "base_profile",
+            "distance_mm": 18,
+            "operation": "new_body",
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-003",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "p01",
+            "shape": "rectangle",
+            "center": [
+              -18.7,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 9.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              19.8,
+              7.699999999999999
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-004",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "shape": "rectangle",
+            "center": [
+              1.1000000000000014,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 9.0,
+            "size_mm": [
+              22,
+              7.699999999999999
+            ],
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-005",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "distance_mm": 6.3,
+            "operation": "new_body",
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-006",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "p03",
+            "shape": "rectangle",
+            "center": [
+              20.9,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 9.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              19.8,
+              7.699999999999999
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-007",
+          "skill": "Loft",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "loft_04",
+            "center": [
+              40.7,
+              0,
+              11.700000000000001
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "height_mm": 14.4,
+            "bottom_radius_mm": 7.15,
+            "top_radius_mm": 3.9,
+            "operation": "new_body",
+            "source_op": "Loft"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-008",
+          "skill": "Loft",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "loft_05",
+            "center": [
+              -38.5,
+              0,
+              11.700000000000001
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "height_mm": 14.4,
+            "bottom_radius_mm": 7.15,
+            "top_radius_mm": 3.9,
+            "operation": "new_body",
+            "source_op": "Revolve"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-009",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "union_06",
+            "shape": "circle",
+            "center": [
+              -18.7,
+              0,
+              9.0
+            ],
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "plane_offset_mm": -29.7,
+            "radius_mm": 5.5,
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-010",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "union_06",
+            "distance_mm": 22,
+            "operation": "new_body",
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-011",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "profile_id": "p07",
+            "shape": "rectangle",
+            "center": [
+              1.1000000000000014,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 9.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              19.8,
+              7.699999999999999
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-012",
+          "skill": "BooleanCut",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "center": [
+              20.9,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "shape": "rectangle",
+            "size_mm": [
+              19.8,
+              5.5,
+              25.2
+            ],
+            "source_op": "BooleanCut"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-013",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "center": [
+              40.7,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 2.6399999999999997,
+            "depth_mm": 25.2,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-014",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "center": [
+              -38.5,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 2.6399999999999997,
+            "depth_mm": 25.2,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-015",
+          "skill": "CircularPattern",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "center": [
+              0,
+              0,
+              9.0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 11.700000000000001,
+            "boss_radius_mm": 1.8200000000000003,
+            "boss_height_mm": 3.6,
+            "count": 4,
+            "source_op": "CircularPattern"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-016",
+          "skill": "ApplyFillet",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "radius_mm": 1.0,
+            "source_op": "ApplyFillet"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L2-017",
+          "skill": "ApplyChamfer",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L2",
+          "parameters": {
+            "distance_mm": 0.8,
+            "source_op": "ApplyChamfer"
+          },
+          "calling_agent": "SkillCallProjection"
+        }
+      ]
+    },
+    {
+      "case_id": "dev_arm-dcc2b0ce1e",
+      "link_id": "L3",
+      "target_component": "dev_arm_dcc2b0ce1e_L3",
+      "status": "READY",
+      "calls": [
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-001",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "base_profile",
+            "shape": "rectangle",
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": -14.0,
+            "size_mm": [
+              55,
+              38
+            ],
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-002",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "base_profile",
+            "distance_mm": 28,
+            "operation": "new_body",
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-003",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "p01",
+            "shape": "rectangle",
+            "center": [
+              -9.35,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 14.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              34.2,
+              13.299999999999999
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-004",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "shape": "rectangle",
+            "center": [
+              0.5500000000000007,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 14.0,
+            "size_mm": [
+              38,
+              13.299999999999999
+            ],
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-005",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "distance_mm": 9.799999999999999,
+            "operation": "new_body",
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-006",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "p03",
+            "shape": "rectangle",
+            "center": [
+              10.45,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 14.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              34.2,
+              13.299999999999999
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-007",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "auto_ext_04",
+            "shape": "rectangle",
+            "center": [
+              20.35,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 14.0,
+            "size_mm": [
+              38,
+              13.299999999999999
+            ],
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-008",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "auto_ext_04",
+            "distance_mm": 9.799999999999999,
+            "operation": "new_body",
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-009",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "union_05",
+            "shape": "circle",
+            "center": [
+              -19.25,
+              0,
+              14.0
+            ],
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "plane_offset_mm": -38.25,
+            "radius_mm": 9.5,
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-010",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "union_05",
+            "distance_mm": 38,
+            "operation": "new_body",
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-011",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "center": [
+              -9.35,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 4.56,
+            "depth_mm": 39.199999999999996,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-012",
+          "skill": "Loft",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "loft_07",
+            "center": [
+              0.5500000000000007,
+              0,
+              18.2
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "height_mm": 22.400000000000002,
+            "bottom_radius_mm": 9.9,
+            "top_radius_mm": 5.3999999999999995,
+            "operation": "new_body",
+            "source_op": "Revolve"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-013",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "union_08",
+            "shape": "circle",
+            "center": [
+              10.45,
+              0,
+              14.0
+            ],
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "plane_offset_mm": -8.55,
+            "radius_mm": 9.5,
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-014",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "union_08",
+            "distance_mm": 38,
+            "operation": "new_body",
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-015",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "p09",
+            "shape": "circle",
+            "center": [
+              20.35,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 14.0,
+            "source_op": "CreateSketchProfile",
+            "radius_mm": 6.3
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-016",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "auto_ext_10",
+            "shape": "rectangle",
+            "center": [
+              -19.25,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 14.0,
+            "size_mm": [
+              38,
+              13.299999999999999
+            ],
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-017",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "profile_id": "auto_ext_10",
+            "distance_mm": 9.799999999999999,
+            "operation": "new_body",
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-018",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "center": [
+              -9.35,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 4.56,
+            "depth_mm": 39.199999999999996,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-019",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "center": [
+              0.5500000000000007,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 4.56,
+            "depth_mm": 39.199999999999996,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-020",
+          "skill": "BooleanCut",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "center": [
+              10.45,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "shape": "rectangle",
+            "size_mm": [
+              34.2,
+              9.5,
+              39.199999999999996
+            ],
+            "source_op": "Shell"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-021",
+          "skill": "ApplyFillet",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "radius_mm": 1.0,
+            "source_op": "ApplyFillet"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L3-022",
+          "skill": "ApplyChamfer",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L3",
+          "parameters": {
+            "distance_mm": 0.8,
+            "source_op": "ApplyChamfer"
+          },
+          "calling_agent": "SkillCallProjection"
+        }
+      ]
+    },
+    {
+      "case_id": "dev_arm-dcc2b0ce1e",
+      "link_id": "L4",
+      "target_component": "dev_arm_dcc2b0ce1e_L4",
+      "status": "READY",
+      "calls": [
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-001",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "base_profile",
+            "shape": "rectangle",
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": -8.0,
+            "size_mm": [
+              85,
+              18
+            ],
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-002",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "base_profile",
+            "distance_mm": 16,
+            "operation": "new_body",
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-003",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "p01",
+            "shape": "rectangle",
+            "center": [
+              -14.449999999999998,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 8.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              16.2,
+              6.3
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-004",
+          "skill": "Loft",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "loft_02",
+            "center": [
+              0.8500000000000014,
+              0,
+              10.4
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "height_mm": 12.8,
+            "bottom_radius_mm": 5.5,
+            "top_radius_mm": 3.0,
+            "operation": "new_body",
+            "source_op": "Revolve"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-005",
+          "skill": "Loft",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "loft_03",
+            "center": [
+              16.150000000000002,
+              0,
+              10.4
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "height_mm": 12.8,
+            "bottom_radius_mm": 5.5,
+            "top_radius_mm": 3.0,
+            "operation": "new_body",
+            "source_op": "Loft"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-006",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "union_04",
+            "shape": "circle",
+            "center": [
+              31.45,
+              0,
+              8.0
+            ],
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "plane_offset_mm": 22.45,
+            "radius_mm": 4.5,
+            "source_op": "Sweep"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-007",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "union_04",
+            "distance_mm": 18,
+            "operation": "new_body",
+            "source_op": "Sweep"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-008",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "union_05",
+            "shape": "circle",
+            "center": [
+              -29.749999999999996,
+              0,
+              8.0
+            ],
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "plane_offset_mm": -38.75,
+            "radius_mm": 4.5,
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-009",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "profile_id": "union_05",
+            "distance_mm": 18,
+            "operation": "new_body",
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-010",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "center": [
+              -14.449999999999998,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 2.16,
+            "depth_mm": 22.4,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-011",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "center": [
+              0.8500000000000014,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 2.16,
+            "depth_mm": 22.4,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-012",
+          "skill": "CircularPattern",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "center": [
+              0,
+              0,
+              8.0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 9.0,
+            "boss_radius_mm": 1.5,
+            "boss_height_mm": 3.2,
+            "count": 4,
+            "source_op": "CircularPattern"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-013",
+          "skill": "ApplyFillet",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "radius_mm": 1.0,
+            "source_op": "ApplyFillet"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_dcc2b0ce1e_L4-014",
+          "skill": "ApplyChamfer",
+          "version": "v1",
+          "target_component": "dev_arm_dcc2b0ce1e_L4",
+          "parameters": {
+            "distance_mm": 0.8,
+            "source_op": "ApplyChamfer"
+          },
+          "calling_agent": "SkillCallProjection"
+        }
+      ]
+    },
+    {
+      "case_id": "dev_arm-ab15a75247",
+      "link_id": "L0",
+      "target_component": "dev_arm_ab15a75247_L0",
+      "status": "READY",
+      "calls": [
+        {
+          "call_id": "dev_arm_ab15a75247_L0-001",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "profile_id": "base_profile",
+            "shape": "rectangle",
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": -14.0,
+            "size_mm": [
+              55,
+              38
+            ],
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-002",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "profile_id": "base_profile",
+            "distance_mm": 28,
+            "operation": "new_body",
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-003",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "profile_id": "p01",
+            "shape": "circle",
+            "center": [
+              -9.35,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 14.0,
+            "source_op": "CreateSketchProfile",
+            "radius_mm": 6.3
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-004",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "shape": "rectangle",
+            "center": [
+              0.5500000000000007,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 14.0,
+            "size_mm": [
+              38,
+              13.299999999999999
+            ],
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-005",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "distance_mm": 9.799999999999999,
+            "operation": "new_body",
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-006",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "center": [
+              10.45,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 4.56,
+            "depth_mm": 39.199999999999996,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-007",
+          "skill": "Loft",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "profile_id": "loft_04",
+            "center": [
+              20.35,
+              0,
+              18.2
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "height_mm": 22.400000000000002,
+            "bottom_radius_mm": 9.9,
+            "top_radius_mm": 5.3999999999999995,
+            "operation": "new_body",
+            "source_op": "Revolve"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-008",
+          "skill": "BooleanCut",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "center": [
+              -19.25,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "shape": "rectangle",
+            "size_mm": [
+              34.2,
+              9.5,
+              39.199999999999996
+            ],
+            "source_op": "BooleanCut"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-009",
+          "skill": "BooleanCut",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "center": [
+              -9.35,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "shape": "rectangle",
+            "size_mm": [
+              34.2,
+              9.5,
+              39.199999999999996
+            ],
+            "source_op": "BooleanCut"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-010",
+          "skill": "ApplyFillet",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "radius_mm": 1.0,
+            "source_op": "ApplyFillet"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L0-011",
+          "skill": "ApplyChamfer",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L0",
+          "parameters": {
+            "distance_mm": 0.8,
+            "source_op": "ApplyChamfer"
+          },
+          "calling_agent": "SkillCallProjection"
+        }
+      ]
+    },
+    {
+      "case_id": "dev_arm-ab15a75247",
+      "link_id": "L2",
+      "target_component": "dev_arm_ab15a75247_L2",
+      "status": "READY",
+      "calls": [
+        {
+          "call_id": "dev_arm_ab15a75247_L2-001",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "base_profile",
+            "shape": "rectangle",
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": -9.0,
+            "size_mm": [
+              110,
+              22
+            ],
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-002",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "base_profile",
+            "distance_mm": 18,
+            "operation": "new_body",
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-003",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "p01",
+            "shape": "rectangle",
+            "center": [
+              -18.7,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 9.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              19.8,
+              7.699999999999999
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-004",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "shape": "rectangle",
+            "center": [
+              1.1000000000000014,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 9.0,
+            "size_mm": [
+              22,
+              7.699999999999999
+            ],
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-005",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "distance_mm": 6.3,
+            "operation": "new_body",
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-006",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "p03",
+            "shape": "rectangle",
+            "center": [
+              20.9,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 9.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              19.8,
+              7.699999999999999
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-007",
+          "skill": "Loft",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "loft_04",
+            "center": [
+              40.7,
+              0,
+              11.700000000000001
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "height_mm": 14.4,
+            "bottom_radius_mm": 7.15,
+            "top_radius_mm": 3.9,
+            "operation": "new_body",
+            "source_op": "Loft"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-008",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "union_05",
+            "shape": "circle",
+            "center": [
+              -38.5,
+              0,
+              9.0
+            ],
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "plane_offset_mm": -49.5,
+            "radius_mm": 5.5,
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-009",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "union_05",
+            "distance_mm": 22,
+            "operation": "new_body",
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-010",
+          "skill": "Loft",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "profile_id": "loft_06",
+            "center": [
+              -18.7,
+              0,
+              11.700000000000001
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "height_mm": 14.4,
+            "bottom_radius_mm": 7.15,
+            "top_radius_mm": 3.9,
+            "operation": "new_body",
+            "source_op": "Revolve"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-011",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "center": [
+              1.1000000000000014,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 2.6399999999999997,
+            "depth_mm": 25.2,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-012",
+          "skill": "BooleanCut",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "center": [
+              20.9,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "shape": "rectangle",
+            "size_mm": [
+              19.8,
+              5.5,
+              25.2
+            ],
+            "source_op": "Shell"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-013",
+          "skill": "ApplyFillet",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "radius_mm": 1.0,
+            "source_op": "ApplyFillet"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L2-014",
+          "skill": "ApplyChamfer",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L2",
+          "parameters": {
+            "distance_mm": 0.8,
+            "source_op": "ApplyChamfer"
+          },
+          "calling_agent": "SkillCallProjection"
+        }
+      ]
+    },
+    {
+      "case_id": "dev_arm-ab15a75247",
+      "link_id": "L4",
+      "target_component": "dev_arm_ab15a75247_L4",
+      "status": "READY",
+      "calls": [
+        {
+          "call_id": "dev_arm_ab15a75247_L4-001",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "base_profile",
+            "shape": "rectangle",
+            "center": [
+              0,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": -8.0,
+            "size_mm": [
+              85,
+              18
+            ],
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-002",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "base_profile",
+            "distance_mm": 16,
+            "operation": "new_body",
+            "source_op": "compiler_base"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-003",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "p01",
+            "shape": "circle",
+            "center": [
+              -14.449999999999998,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 8.0,
+            "source_op": "CreateSketchProfile",
+            "radius_mm": 3.5
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-004",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "shape": "rectangle",
+            "center": [
+              0.8500000000000014,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 8.0,
+            "size_mm": [
+              18,
+              6.3
+            ],
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-005",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "auto_ext_02",
+            "distance_mm": 5.6,
+            "operation": "new_body",
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-006",
+          "skill": "CreateHole",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "center": [
+              16.150000000000002,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "radius_mm": 2.16,
+            "depth_mm": 22.4,
+            "source_op": "CreateHole"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-007",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "p04",
+            "shape": "rectangle",
+            "center": [
+              31.45,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 8.0,
+            "source_op": "CreateSketchProfile",
+            "size_mm": [
+              16.2,
+              6.3
+            ]
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-008",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "auto_ext_05",
+            "shape": "rectangle",
+            "center": [
+              -29.749999999999996,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "plane_offset_mm": 8.0,
+            "size_mm": [
+              18,
+              6.3
+            ],
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-009",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "auto_ext_05",
+            "distance_mm": 5.6,
+            "operation": "new_body",
+            "source_op": "Extrude"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-010",
+          "skill": "CreateSketchProfile",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "union_06",
+            "shape": "circle",
+            "center": [
+              -14.449999999999998,
+              0,
+              8.0
+            ],
+            "axis": [
+              1,
+              0,
+              0
+            ],
+            "plane_offset_mm": -23.449999999999996,
+            "radius_mm": 4.5,
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-011",
+          "skill": "Extrude",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "profile_id": "union_06",
+            "distance_mm": 18,
+            "operation": "new_body",
+            "source_op": "BooleanUnion"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-012",
+          "skill": "ApplyFillet",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "radius_mm": 1.0,
+            "source_op": "ApplyFillet"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-013",
+          "skill": "ApplyChamfer",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "distance_mm": 0.8,
+            "source_op": "ApplyChamfer"
+          },
+          "calling_agent": "SkillCallProjection"
+        },
+        {
+          "call_id": "dev_arm_ab15a75247_L4-014",
+          "skill": "BooleanCut",
+          "version": "v1",
+          "target_component": "dev_arm_ab15a75247_L4",
+          "parameters": {
+            "center": [
+              31.45,
+              0,
+              0
+            ],
+            "axis": [
+              0,
+              0,
+              1
+            ],
+            "shape": "rectangle",
+            "size_mm": [
+              16.2,
+              4.5,
+              22.4
+            ],
+            "source_op": "Shell"
+          },
+          "calling_agent": "SkillCallProjection"
+        }
+      ]
+    }
+  ]
+}
