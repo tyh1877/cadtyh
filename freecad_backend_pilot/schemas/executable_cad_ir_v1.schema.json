@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Executable CAD IR v1",
+  "type": "object",
+  "required": ["ir_version", "case_id", "link_id", "bodies", "operations"],
+  "properties": {
+    "ir_version": { "const": "executable_cad_ir_v1" },
+    "case_id": { "type": "string" },
+    "link_id": { "type": "string" },
+    "bodies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["body_id"],
+        "properties": {
+          "body_id": { "type": "string" },
+          "role": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "operations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/operation" }
+    }
+  },
+  "$defs": {
+    "vec3": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "frame": {
+      "type": "object",
+      "required": ["origin", "x_axis", "y_axis", "z_axis"],
+      "properties": {
+        "origin": { "$ref": "#/$defs/vec3" },
+        "x_axis": { "$ref": "#/$defs/vec3" },
+        "y_axis": { "$ref": "#/$defs/vec3" },
+        "z_axis": { "$ref": "#/$defs/vec3" }
+      },
+      "additionalProperties": false
+    },
+    "profile": {
+      "type": "object",
+      "required": ["profile_type", "closed"],
+      "properties": {
+        "profile_type": {
+          "enum": ["circle", "rectangle", "polyline", "slot", "annulus", "custom"]
+        },
+        "closed": { "type": "boolean" },
+        "parameters": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "operation": {
+      "type": "object",
+      "required": ["op_id", "op_type", "target_body", "dependencies", "reference_frame"],
+      "properties": {
+        "op_id": { "type": "string" },
+        "op_type": {
+          "enum": [
+            "extrude",
+            "pad",
+            "pocket",
+            "cut",
+            "revolve",
+            "loft",
+            "sweep",
+            "pipe",
+            "shell",
+            "thickness",
+            "boolean_union",
+            "boolean_cut",
+            "fillet",
+            "chamfer",
+            "pattern",
+            "mirror"
+          ]
+        },
+        "target_body": { "type": "string" },
+        "dependencies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "reference_frame": { "$ref": "#/$defs/frame" },
+        "sketch_plane": { "$ref": "#/$defs/frame" },
+        "profile": { "$ref": "#/$defs/profile" },
+        "profiles": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/profile" }
+        },
+        "axis": {
+          "type": "object",
+          "required": ["point", "direction"],
+          "properties": {
+            "point": { "$ref": "#/$defs/vec3" },
+            "direction": { "$ref": "#/$defs/vec3" }
+          },
+          "additionalProperties": false
+        },
+        "angle_deg": { "type": "number" },
+        "distance_mm": { "type": "number" },
+        "operation_mode": { "enum": ["new_body", "add", "cut"] },
+        "path": { "type": "object" },
+        "profile_frame": { "$ref": "#/$defs/frame" },
+        "orientation_mode": { "type": "string" },
+        "transition_mode": { "type": "string" },
+        "solid": { "type": "boolean" },
+        "faces_to_remove": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "thickness_mm": { "type": "number" },
+        "direction": { "enum": ["inward", "outward", "symmetric"] },
+        "join_mode": { "type": "string" },
+        "tool_bodies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "edge_selectors": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "radius_mm": { "type": "number" },
+        "pattern_type": { "enum": ["circular", "linear"] },
+        "target_features": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "axis_or_direction": { "type": "object" },
+        "count": { "type": "integer", "minimum": 1 },
+        "spacing_or_angle": { "type": "number" },
+        "mirror_plane": { "$ref": "#/$defs/frame" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
+

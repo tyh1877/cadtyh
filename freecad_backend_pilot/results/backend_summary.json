@@ -1,0 +1,19 @@
+{
+  "experiment": "freecad_backend_pilot",
+  "date": "2026-08-31",
+  "status": "BLOCKED",
+  "blocker": "FreeCAD runtime is not available in the current Agent CLI environment. No FreeCADCmd executable, FreeCAD Python modules, or FreeCAD MCP typed tools are currently callable.",
+  "freecad_version": null,
+  "python_version": "3.12.13",
+  "freecad_mcp": {
+    "available": false,
+    "classification": "NO_FREECAD_MCP_AVAILABLE",
+    "typed_cad_tools": []
+  },
+  "silent_fallback_rate": null,
+  "native_operation_execution_rate": null,
+  "semantic_execution_fidelity": null,
+  "batch_execution_success_rate": null,
+  "recommendation": "Do not migrate Try-3 yet. Install/connect a real FreeCAD runtime first, then run operation-level native smoke tests before executing the six link plans."
+}
+

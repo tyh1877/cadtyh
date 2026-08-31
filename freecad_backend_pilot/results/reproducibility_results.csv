@@ -1,0 +1,4 @@
+case_id,link_id,trial_count,status,operation_success_consistent,feature_tree_consistent,bbox_consistent,volume_consistent,export_consistent,failure_stage,failure_reason
+smoke_revolve,smoke,0,BLOCKED_ENVIRONMENT,false,false,false,false,false,environment_audit,"FreeCAD runtime unavailable"
+dev_arm-dcc2b0ce1e,L2,0,BLOCKED_ENVIRONMENT,false,false,false,false,false,environment_audit,"FreeCAD runtime unavailable"
+

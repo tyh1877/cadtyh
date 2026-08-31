@@ -1,0 +1,12 @@
+operation,requested_type,executed_type,semantic_match,recompute_success,save_success,reopen_success,step_success,stl_success,failure_stage,failure_reason
+Revolve,revolve,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Loft,loft,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Sweep / Pipe,sweep,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Shell / Thickness,shell,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Boolean Union,boolean_union,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Boolean Cut,boolean_cut,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Fillet,fillet,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Chamfer,chamfer,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Pattern,pattern,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+Mirror,mirror,,false,false,false,false,false,false,BLOCKED_ENVIRONMENT,"FreeCAD runtime unavailable: no FreeCADCmd, FreeCAD Python modules, or FreeCAD MCP tools callable"
+
