@@ -4,7 +4,7 @@ import adsk.core, adsk.fusion, json, math, os, time, traceback
 ROOT=r"D:\CADtest\papertest"
 
 class FusionAPIBackend:
- def __init__(self,design,root,record):self.design,self.root,self.record=design,root,record
+ def __init__(self,design,root,record):self.design,self.root,self.record,self.profiles=design,root,record,{}
  def component(self,name,matrix=None):
   occ=self.root.occurrences.addNewComponent(matrix or adsk.core.Matrix3D.create());occ.component.name=name;return {'component':occ.component,'occurrence':occ}
  def log(self,call,feature):
@@ -35,9 +35,52 @@ class FusionAPIBackend:
   for body in c.bRepBodies:
    for edge in body.edges:edges.add(edge)
   return edges
+ def edge_groups(self,c,max_edges=24):
+  groups=[];all_edges=adsk.core.ObjectCollection.create()
+  for body in c.bRepBodies:
+   body_edges=[]
+   for edge in body.edges:
+    if len(body_edges)<max_edges:body_edges.append(edge);all_edges.add(edge)
+   if body_edges:
+    g=adsk.core.ObjectCollection.create()
+    for edge in body_edges:g.add(edge)
+    groups.append(g)
+  if all_edges.count:groups.insert(0,all_edges)
+  return groups
  def cut_feature(self,c,profile,distance_cm):
   if c.bRepBodies.count==0:raise RuntimeError('cut requested before target body exists')
   x=c.features.extrudeFeatures.createInput(profile,adsk.fusion.FeatureOperations.CutFeatureOperation);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(distance_cm));return c.features.extrudeFeatures.add(x)
+ def profile_key(self,c,p):return (c.name,str(p.get('profile_id','default')))
+ def create_profile(self,c,p):
+  center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);shape=p.get('shape','rectangle')
+  offset=p.get('plane_offset_mm')
+  if offset is None:offset=center[max(range(3),key=lambda i:abs(float(axis[i])))]
+  plane=self.plane_axis(c,axis,float(offset)/10);u,v=self.plane_coords(center,axis)
+  s=c.sketches.add(plane)
+  if shape=='circle':
+   s.sketchCurves.sketchCircles.addByCenterRadius(adsk.core.Point3D.create(u,v,0),max(.1,p.get('radius_mm',2)/10))
+  else:
+   size=p.get('size_mm',[10,10])
+   s.sketchCurves.sketchLines.addTwoPointRectangle(adsk.core.Point3D.create(u-size[0]/20,v-size[1]/20,0),adsk.core.Point3D.create(u+size[0]/20,v+size[1]/20,0))
+  self.profiles[self.profile_key(c,p)]=s.profiles.item(0)
+  return s
+ def op_extrude(self,c,p):
+  profile=self.profiles.get(self.profile_key(c,p))
+  if profile is None:
+   self.create_profile(c,p);profile=self.profiles[self.profile_key(c,p)]
+  op_name=p.get('operation','new_body')
+  op=adsk.fusion.FeatureOperations.NewBodyFeatureOperation
+  if op_name=='join':op=adsk.fusion.FeatureOperations.JoinFeatureOperation
+  elif op_name=='cut':op=adsk.fusion.FeatureOperations.CutFeatureOperation
+  x=c.features.extrudeFeatures.createInput(profile,op);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(float(p.get('distance_mm',10))/10));return c.features.extrudeFeatures.add(x)
+ def op_loft(self,c,p):
+  center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);height=float(p.get('height_mm',p.get('height',10)))
+  r0=float(p.get('bottom_radius_mm',p.get('bottom_radius',10)));r1=float(p.get('top_radius_mm',p.get('top_radius',1)))
+  p0={'profile_id':str(p.get('profile_id','loft'))+'_0','shape':'circle','center':center,'axis':axis,'radius_mm':max(.1,r0),'plane_offset_mm':self.axis_offset(center,axis,-height/2)*10}
+  p1={'profile_id':str(p.get('profile_id','loft'))+'_1','shape':'circle','center':center,'axis':axis,'radius_mm':max(.1,r1),'plane_offset_mm':self.axis_offset(center,axis,height/2)*10}
+  s0=self.create_profile(c,p0);s1=self.create_profile(c,p1)
+  op=adsk.fusion.FeatureOperations.NewBodyFeatureOperation if p.get('operation','new_body')!='join' else adsk.fusion.FeatureOperations.JoinFeatureOperation
+  x=c.features.loftFeatures.createInput(op);x.loftSections.add(s0.profiles.item(0));x.loftSections.add(s1.profiles.item(0));return c.features.loftFeatures.add(x)
  def primitive_box(self,c,p):
   center=p.get('center',[0,0,0]);size=p.get('size',[10,10,10])
   plane=self.plane_axis(c,[0,0,1],(center[2]-size[2]/2)/10)
@@ -70,14 +113,21 @@ class FusionAPIBackend:
   if not features:raise RuntimeError('composite has no primitives')
   return features[-1]
  def op_fillet(self,c,p):
-  edges=self.all_edges(c)
-  if edges.count==0:return None
-  x=c.features.filletFeatures.createInput();x.addConstantRadiusEdgeSet(edges,adsk.core.ValueInput.createByReal(max(.02,p.get('radius_mm',1)/10)),True);return c.features.filletFeatures.add(x)
+  radius=adsk.core.ValueInput.createByReal(max(.02,p.get('radius_mm',1)/10))
+  last=None
+  for edges in self.edge_groups(c):
+   try:
+    x=c.features.filletFeatures.createInput();x.addConstantRadiusEdgeSet(edges,radius,True);return c.features.filletFeatures.add(x)
+   except Exception as exc:last=exc
+  raise last or RuntimeError('no fillet edges')
  def op_chamfer(self,c,p):
-  edges=self.all_edges(c)
-  if edges.count==0:return None
   distance=adsk.core.ValueInput.createByReal(max(.02,p.get('distance_mm',1)/10))
-  x=c.features.chamferFeatures.createInput2();x.chamferEdgeSets.addEqualDistanceChamferEdgeSet(edges,distance,True);return c.features.chamferFeatures.add(x)
+  last=None
+  for edges in self.edge_groups(c):
+   try:
+    x=c.features.chamferFeatures.createInput2();x.chamferEdgeSets.addEqualDistanceChamferEdgeSet(edges,distance,True);return c.features.chamferFeatures.add(x)
+   except Exception as exc:last=exc
+  raise last or RuntimeError('no chamfer edges')
  def op_hole(self,c,p):
   center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);radius=p.get('radius_mm',2);depth=p.get('depth_mm',10)
   plane=self.plane_axis(c,axis,self.axis_offset(center,axis,-depth/2));u,v=self.plane_coords(center,axis)
@@ -111,7 +161,10 @@ class FusionAPIBackend:
    self.log(call,None);return
   if name not in components:components[name]=self.component(name)
   entry=components[name];c=entry['component'];feature=None
-  if skill=='CreateCompositeLinkGeometry':feature=self.composite(c,p)
+  if skill=='CreateSketchProfile':feature=self.create_profile(c,p)
+  elif skill=='Extrude':feature=self.op_extrude(c,p)
+  elif skill=='Loft':feature=self.op_loft(c,p)
+  elif skill=='CreateCompositeLinkGeometry':feature=self.composite(c,p)
   elif skill=='ApplyFillet':feature=self.op_fillet(c,p)
   elif skill=='ApplyChamfer':feature=self.op_chamfer(c,p)
   elif skill=='CreateHole':feature=self.op_hole(c,p)

@@ -9,11 +9,11 @@ The caller has already resolved those into SkillCall parameters.
 a generated per-case program. `FusionAPIBackendSmoke.py` invokes the formal
 basic CAD operation set with fixed non-benchmark inputs.
 
-Formal Try-3 jobs use `CreateCompositeLinkGeometry` as the primary link body
-skill. Its parameters contain normalized `box`, `cylinder`, `cone`, and
-`sphere` primitives produced by the frozen planner output. V2 then applies
-verified basic CAD operation skills: `ApplyFillet`, `ApplyChamfer`,
-`CreateHole`, `BooleanCut`, and `CircularPattern`. The backend creates these
-features generically inside the target component and does not apply any
-case-specific robot template. Middle-layer feature names such as slot, groove,
-rib, and pocket are not valid formal SkillCalls.
+Formal Try-3 jobs now expand base link bodies into explicit
+`CreateSketchProfile`, `Extrude`, and `Loft` calls. `CreateCompositeLinkGeometry`
+is retained only for legacy compatibility. V2 then applies verified basic CAD
+operation skills: `ApplyFillet`, `ApplyChamfer`, `CreateHole`, `BooleanCut`,
+and `CircularPattern`. The backend creates these features generically inside
+the target component and does not apply any case-specific robot template.
+Middle-layer feature names such as slot, groove, rib, and pocket are not valid
+formal SkillCalls.

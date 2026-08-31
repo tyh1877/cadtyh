@@ -2,8 +2,9 @@
 
 Date: 2026-08-31
 
-Status: basic-operation implementation prepared and SkillCall/Fusion-job
-projection validated; Fusion smoke and formal batch rerun required.
+Status: explicit basic-operation implementation prepared and SkillCall/Fusion
+job projection validated; Fusion formal batch rerun required after the latest
+projection change.
 
 ## Rationale
 
@@ -16,9 +17,11 @@ that a SkillCall name matched the native Fusion operation actually executed.
 
 The Try-3 Skill layer now treats robot-specific template names and middle-layer
 feature names as projection aliases only. Formal `robotcad.skill_call.v1` jobs
-use only executable basic CAD operation skills:
+use explicit executable basic CAD operation skills:
 
-- `CreateCompositeLinkGeometry`
+- `CreateSketchProfile`
+- `Extrude`
+- `Loft`
 - `ApplyFillet`
 - `ApplyChamfer`
 - `CreateHole`
@@ -40,16 +43,20 @@ After reprojection, `try3/fusion_api_jobs.json` still contains 10 jobs:
 - READY: 8
 - UPSTREAM_FAILURE: 2
 
-V1 READY jobs remain base-composite controls:
+V1 READY jobs now use explicit base modeling operations:
 
 - `PlaceComponentFromURDF`: 53
-- `CreateCompositeLinkGeometry`: 53
+- `CreateSketchProfile`: 258
+- `Extrude`: 258
+- `Loft`: 2
 - `CreateSharedJointReference`: 49
 
 V2 READY jobs include only basic-operation CAD calls:
 
 - `PlaceComponentFromURDF`: 42
-- `CreateCompositeLinkGeometry`: 42
+- `CreateSketchProfile`: 205
+- `Extrude`: 205
+- `Loft`: 6
 - `ApplyFillet`: 42
 - `ApplyChamfer`: 6
 - `CreateHole`: 20

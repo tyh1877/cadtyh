@@ -3,8 +3,23 @@
   "formal_allowed_skills": {
     "CreateCompositeLinkGeometry": {
       "implemented": true,
-      "operation_level": "primitive_construction",
+      "operation_level": "legacy_primitive_construction",
       "expected_fusion_features": ["ExtrudeFeature", "LoftFeature"]
+    },
+    "CreateSketchProfile": {
+      "implemented": true,
+      "operation_level": "basic_cad_operation",
+      "expected_fusion_features": ["Sketch"]
+    },
+    "Extrude": {
+      "implemented": true,
+      "operation_level": "basic_cad_operation",
+      "expected_fusion_features": ["ExtrudeFeature"]
+    },
+    "Loft": {
+      "implemented": true,
+      "operation_level": "basic_cad_operation",
+      "expected_fusion_features": ["LoftFeature"]
     },
     "ApplyFillet": {
       "implemented": true,

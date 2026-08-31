@@ -6,8 +6,9 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
 from robotcad.validators.validate_skill_calls import validate
 def assert_real_skill_calls(value):
- calls=value['calls'];composites=[x for x in calls if x['skill']=='CreateCompositeLinkGeometry']
- if not composites:raise ValueError('missing CreateCompositeLinkGeometry; stale envelope-only skill calls')
+ calls=value['calls'];modeling=[x for x in calls if x['skill'] in {'Extrude','Loft','CreateCompositeLinkGeometry'}]
+ if not modeling:raise ValueError('missing explicit modeling operations')
+ composites=[x for x in calls if x['skill']=='CreateCompositeLinkGeometry']
  for item in composites:
   primitives=item['parameters'].get('primitives',[])
   if not primitives:raise ValueError(item['target_component']+' has no explicit primitives')

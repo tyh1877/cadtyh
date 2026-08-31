@@ -10,7 +10,9 @@ artifacts remain deliberately outside Git.
 
 | Skill | Persisted Fusion feature type | Status |
 |---|---|---|
-| CreateCompositeLinkGeometry | ExtrudeFeature / LoftFeature | pending |
+| CreateSketchProfile | Sketch | pending |
+| Extrude | ExtrudeFeature | pending |
+| Loft | LoftFeature | pending |
 | ApplyFillet | FilletFeature | pending |
 | ApplyChamfer | ChamferFeature | pending |
 | CreateHole | ExtrudeFeature with CutFeatureOperation | pending |
@@ -18,5 +20,8 @@ artifacts remain deliberately outside Git.
 | CircularPattern | CircularPatternFeature | pending |
 
 The smoke passes only if every listed SkillCall produces the corresponding
-native Fusion feature without fallback to another formal Skill. This smoke gate
-does not constitute a Try-3 result.
+native Fusion feature without fallback to another formal Skill. The user
+reported a passing smoke run after the explicit-operation repair, but the
+tracked smoke report remains pending until the raw smoke JSON is regenerated
+and reviewed after the next Fusion run. This smoke gate does not constitute a
+Try-3 result.

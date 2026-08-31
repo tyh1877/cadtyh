@@ -4,6 +4,6 @@
   "required":["schema_version","calls"],
   "properties":{
     "schema_version":{"const":"robotcad.skill_call.v1"},
-    "calls":{"type":"array","items":{"type":"object","required":["call_id","skill","version","target_component","parameters","calling_agent"],"properties":{"call_id":{"type":"string"},"skill":{"enum":["CreateCompositeLinkGeometry","ApplyFillet","ApplyChamfer","CreateHole","BooleanCut","CircularPattern","PlaceComponentFromURDF","CreateSharedJointReference"]},"version":{"const":"v1"},"target_component":{"type":"string","pattern":"^L[0-9]+$|^SMOKE_"},"parameters":{"type":"object"},"calling_agent":{"enum":["V1PerLinkPlanner","V2MechanicalArchitect","SkillCallProjection","SmokeTest"]}},"additionalProperties":false}}
+    "calls":{"type":"array","items":{"type":"object","required":["call_id","skill","version","target_component","parameters","calling_agent"],"properties":{"call_id":{"type":"string"},"skill":{"enum":["CreateSketchProfile","Extrude","Loft","CreateCompositeLinkGeometry","ApplyFillet","ApplyChamfer","CreateHole","BooleanCut","CircularPattern","PlaceComponentFromURDF","CreateSharedJointReference"]},"version":{"const":"v1"},"target_component":{"type":"string","pattern":"^L[0-9]+$|^SMOKE_"},"parameters":{"type":"object"},"calling_agent":{"enum":["V1PerLinkPlanner","V2MechanicalArchitect","SkillCallProjection","SmokeTest"]}},"additionalProperties":false}}
   },"additionalProperties":false
 }

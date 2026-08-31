@@ -116,6 +116,10 @@ def canonicalize_plan(value,joints=None):
   'hole':'CreateHole',
   'holes':'CreateHole',
   'bolt_pattern':'CircularPattern',
+  'sketch':'CreateSketchProfile',
+  'profile':'CreateSketchProfile',
+  'extrude':'Extrude',
+  'loft':'Loft',
   'groove':'BooleanCut',
   'rib':'CreateCompositeLinkGeometry',
   'slot':'BooleanCut',
@@ -153,7 +157,7 @@ def main():
    raw,u=invoke(client,cfg.model,sys1,content(packet,'\nKnown anonymous kinematic skeleton:\n'+urdf));history.append({'stage':'visual_evidence','response':raw,'usage':u});[total.__setitem__(k,total[k]+u[k]) for k in total];ev=evidence(raw,links);(run/'visual_evidence.json').write_text(json.dumps(ev,indent=2));sheet=crops(packet,ev,run/'crops'/'contact_sheet.png')
    plan_context='\nSanitized URDF:\n'+urdf+'\nVisual evidence:\n'+json.dumps(ev,separators=(',',':'))
    if a.version=='V2':
-    sys2='Return JSON only with keys mep, interfaces, features. MEP must use version="1" and anonymous L IDs; interfaces must use J/L IDs from URDF; features must use only formal executable CAD skills: ApplyFillet, ApplyChamfer, CreateHole, BooleanCut, CircularPattern, or CreateCompositeLinkGeometry. Do not invent topology.'
+    sys2='Return JSON only with keys mep, interfaces, features. MEP must use version="1" and anonymous L IDs; interfaces must use J/L IDs from URDF; features must use only formal executable CAD skills: CreateSketchProfile, Extrude, Loft, ApplyFillet, ApplyChamfer, CreateHole, BooleanCut, CircularPattern, or CreateCompositeLinkGeometry. Do not invent topology.'
     raw,u=invoke(client,cfg.model,sys2,[{'type':'text','text':plan_context}]);history.append({'stage':'mep_interface_feature_plan','response':raw,'usage':u});[total.__setitem__(k,total[k]+u[k]) for k in total];plan=validate_plan(extract_json(raw),joints);(run/'mechanical_embodiment_plan.json').write_text(json.dumps(plan['mep'],indent=2));(run/'interface_graph.json').write_text(json.dumps(plan['interfaces'],indent=2));(run/'feature_graph.json').write_text(json.dumps(plan['features'],indent=2));plan_context+='\nMEP/Interface/Feature plan:\n'+json.dumps(plan,separators=(',',':'))
    sys3='Return JSON only Robot CAD blueprint. Instantiate every anonymous URDF link exactly once. URDF joints are binding and will be overwritten deterministically, so focus on detailed exterior link primitives: housings, tapered bodies, flanges, recesses and rounded transitions visible in the evidence. Each link may emit at most 8 base primitives and each primitive must contain only its required geometry fields (no primitive_id, notes, geometry wrapper, or extra metadata). Put extra detail into the Feature Graph plan, not the primitive list.'
    raw,u=invoke(client,cfg.model,sys3,content(packet,plan_context,sheet));history.append({'stage':'cad_blueprint','response':raw,'usage':u});[total.__setitem__(k,total[k]+u[k]) for k in total];bp=enforce(raw,links,joints);(run/'blueprint.json').write_text(json.dumps(bp,indent=2));status='SUCCESS'

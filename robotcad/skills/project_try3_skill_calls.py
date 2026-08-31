@@ -49,11 +49,45 @@ def normalize_skill(skill):
   'rectangular_housing':'ApplyFillet',
   'rectangular_tube':'BooleanCut',
   'parallel_gripper':'BooleanCut',
+  'sketch':'CreateSketchProfile',
+  'profile':'CreateSketchProfile',
+  'extrude':'Extrude',
+  'loft':'Loft',
  }
- return aliases.get(skill,skill if skill in {'ApplyFillet','ApplyChamfer','CreateHole','CircularPattern','BooleanCut'} else None)
+ return aliases.get(skill,skill if skill in {'CreateSketchProfile','Extrude','Loft','ApplyFillet','ApplyChamfer','CreateHole','CircularPattern','BooleanCut'} else None)
 
 def composite_params(primitives):
  return {'primitives':primitives,'source_primitive_count':len(primitives)}
+
+def axis_index(axis):
+ axis=[float(x) for x in axis]
+ return max(range(3),key=lambda i:abs(axis[i]))
+
+def axis_plane_offset(center,axis,delta_mm=0):
+ idx=axis_index(axis);sign=1 if float(axis[idx])>=0 else -1
+ return center[idx]+sign*delta_mm
+
+def primitive_operations(case,target,primitives,agent,start_index):
+ calls=[];i=start_index
+ for n,prim in enumerate(primitives,1):
+  kind=prim.get('type');pid=f'{target}_p{n:02d}'
+  if kind=='box':
+   center=prim.get('center',[0,0,0]);size=prim.get('size',[10,10,10]);z0=center[2]-size[2]/2
+   i+=1;calls.append(call(f'{case}-{i:03d}','CreateSketchProfile',target,{'profile_id':pid,'shape':'rectangle','center':center,'axis':[0,0,1],'plane_offset_mm':z0,'size_mm':[size[0],size[1]]},agent))
+   i+=1;calls.append(call(f'{case}-{i:03d}','Extrude',target,{'profile_id':pid,'distance_mm':size[2],'operation':'new_body'},agent))
+  elif kind=='cylinder':
+   center=prim.get('center',[0,0,0]);axis=prim.get('axis',[0,0,1]);height=prim.get('height',10)
+   i+=1;calls.append(call(f'{case}-{i:03d}','CreateSketchProfile',target,{'profile_id':pid,'shape':'circle','center':center,'axis':axis,'plane_offset_mm':axis_plane_offset(center,axis,-height/2),'radius_mm':prim.get('radius',10)},agent))
+   i+=1;calls.append(call(f'{case}-{i:03d}','Extrude',target,{'profile_id':pid,'distance_mm':height,'operation':'new_body'},agent))
+  elif kind=='cone':
+   i+=1;calls.append(call(f'{case}-{i:03d}','Loft',target,{'profile_id':pid,'center':prim.get('center',[0,0,0]),'axis':prim.get('axis',[0,0,1]),'height_mm':prim.get('height',10),'bottom_radius_mm':prim.get('bottom_radius',prim.get('radius_bottom',10)),'top_radius_mm':prim.get('top_radius',prim.get('radius_top',1)),'operation':'new_body'},agent))
+  elif kind=='sphere':
+   center=prim.get('center',[0,0,0]);r=prim.get('radius',10);z0=center[2]-r
+   i+=1;calls.append(call(f'{case}-{i:03d}','CreateSketchProfile',target,{'profile_id':pid,'shape':'circle','center':center,'axis':[0,0,1],'plane_offset_mm':z0,'radius_mm':r},agent))
+   i+=1;calls.append(call(f'{case}-{i:03d}','Extrude',target,{'profile_id':pid,'distance_mm':2*r,'operation':'new_body','approximation':'sphere_as_extruded_circle'},agent))
+  else:
+   raise RuntimeError('unsupported primitive in projection: '+str(kind))
+ return calls,i
 
 def largest(primitives,kind):
  items=[p for p in primitives if p['type']==kind]
@@ -88,7 +122,7 @@ def main():
  calls=[];i=0;world=world_frames(bp)
  for link in bp['links']:
   target=link['name'];agent='V1PerLinkPlanner' if x.version=='V1' else 'V2MechanicalArchitect';i+=1;calls.append(call(f'{x.case}-{i:03d}','PlaceComponentFromURDF',target,{'transform_cm':world[target]},'SkillCallProjection'))
-  i+=1;calls.append(call(f'{x.case}-{i:03d}','CreateCompositeLinkGeometry',target,composite_params(link['primitives']),agent))
+  new_calls,i=primitive_operations(x.case,target,link['primitives'],agent,i);calls.extend(new_calls)
   for skill,params in derived_operations(link['primitives'],features.get(target,[]),x.version):
    i+=1;calls.append(call(f'{x.case}-{i:03d}',skill,target,params,agent))
  for j in bp['joints']:

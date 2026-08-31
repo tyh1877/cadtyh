@@ -15,7 +15,11 @@ def run(context):
   FusionAPIBackend,make_design=backend_module.FusionAPIBackend,backend_module.make_design
   app,design,root=make_design();backend=FusionAPIBackend(design,root,result)
   calls=[
-   ('CreateCompositeLinkGeometry',{'primitives':[{'type':'box','center':[0,0,0],'size':[60,24,18]},{'type':'cylinder','center':[0,0,12],'axis':[1,0,0],'radius':10,'height':70}]}),
+   ('CreateSketchProfile',{'profile_id':'base_box','shape':'rectangle','center':[0,0,0],'axis':[0,0,1],'plane_offset_mm':-9,'size_mm':[60,24]}),
+   ('Extrude',{'profile_id':'base_box','distance_mm':18,'operation':'new_body'}),
+   ('CreateSketchProfile',{'profile_id':'cross_cylinder','shape':'circle','center':[0,0,12],'axis':[1,0,0],'plane_offset_mm':-35,'radius_mm':10}),
+   ('Extrude',{'profile_id':'cross_cylinder','distance_mm':70,'operation':'new_body'}),
+   ('Loft',{'profile_id':'taper','center':[0,18,0],'axis':[0,0,1],'height_mm':18,'bottom_radius_mm':7,'top_radius_mm':3,'operation':'new_body'}),
    ('ApplyFillet',{'radius_mm':1}),
    ('ApplyChamfer',{'distance_mm':1}),
    ('CreateHole',{'center':[0,0,0],'axis':[0,0,1],'radius_mm':3,'depth_mm':30}),
