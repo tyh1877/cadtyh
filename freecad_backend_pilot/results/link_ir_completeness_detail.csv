@@ -1,0 +1,66 @@
+case_id,link_id,op_id,requested_operation,mapped_ir_operation,status,missing_required_fields
+dev_arm-dcc2b0ce1e,L2,OP1,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-dcc2b0ce1e,L2,OP2,Extrude,extrude,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L2,OP3,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-dcc2b0ce1e,L2,OP4,Loft,loft,IR_INCOMPLETE,operation_mode;profiles;reference_frame;solid
+dev_arm-dcc2b0ce1e,L2,OP5,Revolve,revolve,IR_INCOMPLETE,angle_deg;axis;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L2,OP6,BooleanUnion,boolean_union,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-dcc2b0ce1e,L2,OP7,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-dcc2b0ce1e,L2,OP8,BooleanCut,boolean_cut,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-dcc2b0ce1e,L2,OP9,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L2,OP10,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L2,OP11,CircularPattern,pattern,IR_INCOMPLETE,axis_or_direction;count;pattern_type;reference_frame;spacing_or_angle;target_features
+dev_arm-dcc2b0ce1e,L2,OP12,ApplyFillet,fillet,IR_INCOMPLETE,edge_selectors;radius_mm;reference_frame;target_body
+dev_arm-dcc2b0ce1e,L2,OP13,ApplyChamfer,chamfer,IR_INCOMPLETE,distance_mm;edge_selectors;reference_frame;target_body
+dev_arm-dcc2b0ce1e,L3,OP1,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-dcc2b0ce1e,L3,OP2,Extrude,extrude,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L3,OP3,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-dcc2b0ce1e,L3,OP4,Extrude,extrude,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L3,OP5,BooleanUnion,boolean_union,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-dcc2b0ce1e,L3,OP6,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L3,OP7,Revolve,revolve,IR_INCOMPLETE,angle_deg;axis;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L3,OP8,BooleanUnion,boolean_union,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-dcc2b0ce1e,L3,OP9,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-dcc2b0ce1e,L3,OP10,Extrude,extrude,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L3,OP11,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L3,OP12,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L3,OP13,Shell,shell,IR_INCOMPLETE,direction;faces_to_remove;join_mode;reference_frame;target_body;thickness_mm
+dev_arm-dcc2b0ce1e,L3,OP14,ApplyFillet,fillet,IR_INCOMPLETE,edge_selectors;radius_mm;reference_frame;target_body
+dev_arm-dcc2b0ce1e,L3,OP15,ApplyChamfer,chamfer,IR_INCOMPLETE,distance_mm;edge_selectors;reference_frame;target_body
+dev_arm-dcc2b0ce1e,L4,OP1,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-dcc2b0ce1e,L4,OP2,Revolve,revolve,IR_INCOMPLETE,angle_deg;axis;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L4,OP3,Loft,loft,IR_INCOMPLETE,operation_mode;profiles;reference_frame;solid
+dev_arm-dcc2b0ce1e,L4,OP4,Sweep,sweep,IR_INCOMPLETE,operation_mode;orientation_mode;path;profile;profile_frame;reference_frame;solid;transition_mode
+dev_arm-dcc2b0ce1e,L4,OP5,BooleanUnion,boolean_union,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-dcc2b0ce1e,L4,OP6,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L4,OP7,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-dcc2b0ce1e,L4,OP8,CircularPattern,pattern,IR_INCOMPLETE,axis_or_direction;count;pattern_type;reference_frame;spacing_or_angle;target_features
+dev_arm-dcc2b0ce1e,L4,OP9,ApplyFillet,fillet,IR_INCOMPLETE,edge_selectors;radius_mm;reference_frame;target_body
+dev_arm-dcc2b0ce1e,L4,OP10,ApplyChamfer,chamfer,IR_INCOMPLETE,distance_mm;edge_selectors;reference_frame;target_body
+dev_arm-ab15a75247,L0,OP1,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-ab15a75247,L0,OP2,Extrude,extrude,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L0,OP3,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L0,OP4,Revolve,revolve,IR_INCOMPLETE,angle_deg;axis;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L0,OP5,BooleanCut,boolean_cut,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-ab15a75247,L0,OP6,BooleanCut,boolean_cut,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-ab15a75247,L0,OP7,ApplyFillet,fillet,IR_INCOMPLETE,edge_selectors;radius_mm;reference_frame;target_body
+dev_arm-ab15a75247,L0,OP8,ApplyChamfer,chamfer,IR_INCOMPLETE,distance_mm;edge_selectors;reference_frame;target_body
+dev_arm-ab15a75247,L2,OP1,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-ab15a75247,L2,OP2,Extrude,extrude,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L2,OP3,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-ab15a75247,L2,OP4,Loft,loft,IR_INCOMPLETE,operation_mode;profiles;reference_frame;solid
+dev_arm-ab15a75247,L2,OP5,BooleanUnion,boolean_union,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-ab15a75247,L2,OP6,Revolve,revolve,IR_INCOMPLETE,angle_deg;axis;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L2,OP7,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L2,OP8,Shell,shell,IR_INCOMPLETE,direction;faces_to_remove;join_mode;reference_frame;target_body;thickness_mm
+dev_arm-ab15a75247,L2,OP9,ApplyFillet,fillet,IR_INCOMPLETE,edge_selectors;radius_mm;reference_frame;target_body
+dev_arm-ab15a75247,L2,OP10,ApplyChamfer,chamfer,IR_INCOMPLETE,distance_mm;edge_selectors;reference_frame;target_body
+dev_arm-ab15a75247,L4,OP1,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-ab15a75247,L4,OP2,Extrude,extrude,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L4,OP3,CreateHole,cut,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L4,OP4,CreateSketchProfile,sketch_profile_not_executable_body_feature,IR_INCOMPLETE,executable profile schema not supplied
+dev_arm-ab15a75247,L4,OP5,Extrude,extrude,IR_INCOMPLETE,distance_mm;operation_mode;profile;reference_frame;sketch_plane
+dev_arm-ab15a75247,L4,OP6,BooleanUnion,boolean_union,IR_INCOMPLETE,reference_frame;target_body;tool_bodies
+dev_arm-ab15a75247,L4,OP7,ApplyFillet,fillet,IR_INCOMPLETE,edge_selectors;radius_mm;reference_frame;target_body
+dev_arm-ab15a75247,L4,OP8,ApplyChamfer,chamfer,IR_INCOMPLETE,distance_mm;edge_selectors;reference_frame;target_body
+dev_arm-ab15a75247,L4,OP9,Shell,shell,IR_INCOMPLETE,direction;faces_to_remove;join_mode;reference_frame;target_body;thickness_mm

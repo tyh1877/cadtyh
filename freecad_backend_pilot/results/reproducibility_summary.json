@@ -1,0 +1,51 @@
+{
+  "smoke_revolve_trials": [
+    {
+      "success": true,
+      "stats": {
+        "valid": true,
+        "volume": 6107.256119,
+        "bbox": [
+          24.0,
+          18.0,
+          24.0
+        ],
+        "solids": 1,
+        "faces": 4,
+        "edges": 6
+      }
+    },
+    {
+      "success": true,
+      "stats": {
+        "valid": true,
+        "volume": 6107.256119,
+        "bbox": [
+          24.0,
+          18.0,
+          24.0
+        ],
+        "solids": 1,
+        "faces": 4,
+        "edges": 6
+      }
+    },
+    {
+      "success": true,
+      "stats": {
+        "valid": true,
+        "volume": 6107.256119,
+        "bbox": [
+          24.0,
+          18.0,
+          24.0
+        ],
+        "solids": 1,
+        "faces": 4,
+        "edges": 6
+      }
+    }
+  ],
+  "smoke_revolve_reproducible": true,
+  "complex_link_trial_status": "IR_INCOMPLETE"
+}

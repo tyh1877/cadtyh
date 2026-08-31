@@ -1,0 +1,35 @@
+{
+  "operation": "Shell / Thickness",
+  "requested_type": "shell",
+  "expected_native_type": "Part::Thickness",
+  "fallback_used": false,
+  "events": [],
+  "native_object_name": "native_shell",
+  "native_object_type": "Part::Thickness",
+  "shape_stats": {
+    "valid": true,
+    "volume": 3439.811922368894,
+    "bbox": [
+      33.0,
+      23.000000000000004,
+      16.5
+    ],
+    "solids": 1,
+    "faces": 23,
+    "edges": 48
+  },
+  "reopened_shape_stats": {
+    "valid": true,
+    "volume": 3439.811922368894,
+    "bbox": [
+      33.0,
+      23.000000000000004,
+      16.5
+    ],
+    "solids": 1,
+    "faces": 23,
+    "edges": 48
+  },
+  "elapsed_seconds": 0.0480341911315918,
+  "success": true
+}

@@ -1,0 +1,35 @@
+{
+  "operation": "Boolean Cut",
+  "requested_type": "boolean_cut",
+  "expected_native_type": "Part::Cut",
+  "fallback_used": false,
+  "events": [],
+  "native_object_name": "native_boolean_cut",
+  "native_object_type": "Part::Cut",
+  "shape_stats": {
+    "valid": true,
+    "volume": 4796.814210510761,
+    "bbox": [
+      25.0,
+      18.0,
+      12.0
+    ],
+    "solids": 1,
+    "faces": 7,
+    "edges": 15
+  },
+  "reopened_shape_stats": {
+    "valid": true,
+    "volume": 4796.814210510761,
+    "bbox": [
+      25.0,
+      18.0,
+      12.0
+    ],
+    "solids": 1,
+    "faces": 7,
+    "edges": 15
+  },
+  "elapsed_seconds": 0.02871227264404297,
+  "success": true
+}

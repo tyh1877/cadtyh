@@ -1,0 +1,35 @@
+{
+  "operation": "Sweep / Pipe",
+  "requested_type": "sweep",
+  "expected_native_type": "Part::Sweep",
+  "fallback_used": false,
+  "events": [],
+  "native_object_name": "native_sweep",
+  "native_object_type": "Part::Sweep",
+  "shape_stats": {
+    "valid": true,
+    "volume": 429.0427298062157,
+    "bbox": [
+      31.41421356237309,
+      13.414213562373105,
+      4.0
+    ],
+    "solids": 1,
+    "faces": 4,
+    "edges": 8
+  },
+  "reopened_shape_stats": {
+    "valid": true,
+    "volume": 429.0427298062157,
+    "bbox": [
+      31.41421356237309,
+      13.414213562373105,
+      4.0
+    ],
+    "solids": 1,
+    "faces": 4,
+    "edges": 8
+  },
+  "elapsed_seconds": 0.025816917419433594,
+  "success": true
+}

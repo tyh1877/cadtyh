@@ -60,3 +60,6 @@ try2/ground_truth_assembled/
 *.tmp
 *.log
 .codex_docx_render/
+
+# FreeCAD backend pilot generated geometry artifacts
+freecad_backend_pilot/artifacts/

@@ -1,8 +1,7 @@
 case_id,link_id,source_plan,status,operation_count,native_success_count,semantic_match_count,fallback_count,recompute_success,fcstd_success,reopen_success,step_success,stl_success,failure_stage,failure_reason
-dev_arm-dcc2b0ce1e,L2,operation_plan_pilot/runs/dev_arm-dcc2b0ce1e/L2/operation_plan.json,BLOCKED_ENVIRONMENT,13,0,0,0,false,false,false,false,false,environment_audit,"FreeCAD runtime unavailable"
-dev_arm-dcc2b0ce1e,L3,operation_plan_pilot/runs/dev_arm-dcc2b0ce1e/L3/operation_plan.json,BLOCKED_ENVIRONMENT,15,0,0,0,false,false,false,false,false,environment_audit,"FreeCAD runtime unavailable"
-dev_arm-dcc2b0ce1e,L4,operation_plan_pilot/runs/dev_arm-dcc2b0ce1e/L4/operation_plan.json,BLOCKED_ENVIRONMENT,10,0,0,0,false,false,false,false,false,environment_audit,"FreeCAD runtime unavailable"
-dev_arm-ab15a75247,L0,operation_plan_pilot/runs/dev_arm-ab15a75247/L0/operation_plan.json,BLOCKED_ENVIRONMENT,8,0,0,0,false,false,false,false,false,environment_audit,"FreeCAD runtime unavailable"
-dev_arm-ab15a75247,L2,operation_plan_pilot/runs/dev_arm-ab15a75247/L2/operation_plan.json,BLOCKED_ENVIRONMENT,10,0,0,0,false,false,false,false,false,environment_audit,"FreeCAD runtime unavailable"
-dev_arm-ab15a75247,L4,operation_plan_pilot/runs/dev_arm-ab15a75247/L4/operation_plan.json,BLOCKED_ENVIRONMENT,9,0,0,0,false,false,false,false,false,environment_audit,"FreeCAD runtime unavailable"
-
+dev_arm-dcc2b0ce1e,L2,operation_plan_pilot/runs/dev_arm-dcc2b0ce1e/L2/operation_plan.json,IR_INCOMPLETE,13,0,0,0,False,False,False,False,False,IR_VALIDATION,13/13 operations missing required executable CAD IR fields; backend execution intentionally skipped
+dev_arm-dcc2b0ce1e,L3,operation_plan_pilot/runs/dev_arm-dcc2b0ce1e/L3/operation_plan.json,IR_INCOMPLETE,15,0,0,0,False,False,False,False,False,IR_VALIDATION,15/15 operations missing required executable CAD IR fields; backend execution intentionally skipped
+dev_arm-dcc2b0ce1e,L4,operation_plan_pilot/runs/dev_arm-dcc2b0ce1e/L4/operation_plan.json,IR_INCOMPLETE,10,0,0,0,False,False,False,False,False,IR_VALIDATION,10/10 operations missing required executable CAD IR fields; backend execution intentionally skipped
+dev_arm-ab15a75247,L0,operation_plan_pilot/runs/dev_arm-ab15a75247/L0/operation_plan.json,IR_INCOMPLETE,8,0,0,0,False,False,False,False,False,IR_VALIDATION,8/8 operations missing required executable CAD IR fields; backend execution intentionally skipped
+dev_arm-ab15a75247,L2,operation_plan_pilot/runs/dev_arm-ab15a75247/L2/operation_plan.json,IR_INCOMPLETE,10,0,0,0,False,False,False,False,False,IR_VALIDATION,10/10 operations missing required executable CAD IR fields; backend execution intentionally skipped
+dev_arm-ab15a75247,L4,operation_plan_pilot/runs/dev_arm-ab15a75247/L4/operation_plan.json,IR_INCOMPLETE,9,0,0,0,False,False,False,False,False,IR_VALIDATION,9/9 operations missing required executable CAD IR fields; backend execution intentionally skipped

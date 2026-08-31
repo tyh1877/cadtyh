@@ -1,0 +1,35 @@
+{
+  "operation": "Loft",
+  "requested_type": "loft",
+  "expected_native_type": "Part::Loft",
+  "fallback_used": false,
+  "events": [],
+  "native_object_name": "native_loft",
+  "native_object_type": "Part::Loft",
+  "shape_stats": {
+    "valid": true,
+    "volume": 6549.960664872837,
+    "bbox": [
+      34.137650606610634,
+      36.858496265192855,
+      35.000000000233385
+    ],
+    "solids": 1,
+    "faces": 3,
+    "edges": 3
+  },
+  "reopened_shape_stats": {
+    "valid": true,
+    "volume": 6549.960664872836,
+    "bbox": [
+      34.137650606610634,
+      36.858496265192855,
+      35.000000000233385
+    ],
+    "solids": 1,
+    "faces": 3,
+    "edges": 3
+  },
+  "elapsed_seconds": 0.07195734977722168,
+  "success": true
+}
