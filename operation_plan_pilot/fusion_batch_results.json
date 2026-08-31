@@ -1,0 +1,809 @@
+[
+  {
+    "case_id": "dev_arm-dcc2b0ce1e",
+    "link_id": "L2",
+    "target_component": "dev_arm_dcc2b0ce1e_L2",
+    "status": "SUCCESS",
+    "calls": [
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-001",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHojCzMACYCVYogAAAA=",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-002",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpjY2MAesfJ8IgAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-003",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHoTAwMAhtOiR4gAAAA=",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-004",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHoTMwsAMvwjH4gAAAA=",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-005",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpTQxMA6UwWWIgAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-006",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpTc0sA0pf9cIgAAAA=",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-007",
+        "skill": "Loft",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpzY0MAig7OGYgAAAA=",
+        "feature_type": "adsk::fusion::LoftFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-008",
+        "skill": "Loft",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHoLCyMAxsFvaIgAAAA=",
+        "feature_type": "adsk::fusion::LoftFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-009",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpLE0sAdT3KUogAAAA=",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-010",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpLCzMA6G/AbogAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-011",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpDAxNTAF6an9OJAAAA",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-012",
+        "skill": "BooleanCut",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpDQ1NjAB1kJSKJAAAA",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-013",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWydBdhKU1MAcX8AyYkAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-014",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpDY1NDAF/Rr8+JAAAA",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-015",
+        "skill": "CircularPattern",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpDE3MLAPwdCoGJAAAA",
+        "feature_type": "adsk::fusion::CircularPatternFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-016",
+        "skill": "ApplyFillet",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHpDC0tzAIfULIaJAAAA",
+        "feature_type": "adsk::fusion::FilletFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L2-017",
+        "skill": "ApplyChamfer",
+        "target_component": "dev_arm_dcc2b0ce1e_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAruhsKaaoPe/JjWGrxoffeYAVRgpGJsppJkmWZgnJibpGqUmGeqapCSn6CYZm6XpJhunpFqaphgBUTJYLdAMBjQAts9AAWwdyHojY3MjAIlNJXaJAAAA",
+        "feature_type": "adsk::fusion::ChamferFeature",
+        "status": "SUCCESS"
+      }
+    ],
+    "errors": [],
+    "rebuild_success": true,
+    "component_count": 1,
+    "f3d": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-dcc2b0ce1e\\L2\\fusion_model.f3d",
+    "step": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-dcc2b0ce1e\\L2\\fusion_model.step",
+    "stl": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-dcc2b0ce1e\\L2\\fusion_model.stl",
+    "elapsed_seconds": 2.02023983001709
+  },
+  {
+    "case_id": "dev_arm-dcc2b0ce1e",
+    "link_id": "L3",
+    "target_component": "dev_arm_dcc2b0ce1e_L3",
+    "status": "FAILURE",
+    "calls": [
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-001",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2RhBgBVWhZziAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-002",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2xsDAAmHUrhiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-003",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2JgAADaCSFWiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-004",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2JmAQBuJqAOiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-005",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2poAgC1lpVJiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-006",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2puCQCOTX5hiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-007",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2ZiDgATja2viAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-008",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2ZpDABHN24diAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-009",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb25qAQD0y8sniAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-010",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb25pCgBF+M/1iAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-011",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2FhCgA5jojniAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-012",
+        "skill": "Loft",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2hgbAEAIe6jgIkAAAA=",
+        "feature_type": "adsk::fusion::LoftFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-013",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2hoYAoAaKv91IkAAAA=",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-014",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2hoYgQAz/v1LokAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-015",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArbMAW2lgCAAo0dbRiQAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-016",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArbMAW2lmAAA4RovwiQAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-017",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2hsYAYAvC5wTokAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-018",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2hiYAQAIPxSTIkAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-019",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2hiaQEAd65FfYkAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L3-020",
+        "skill": "BooleanCut",
+        "target_component": "dev_arm_dcc2b0ce1e_L3",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZAlvun+P8Cv55y0S/3JDlrWoDqjBSMDZTMDZNTDJPMTDVTTJIttQ1MTK21LVITjbRTUpJTEwxsUxOMbA0A6sFmsGABsD2GSiArQNZb2hmaAkAh8AfwYkAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      }
+    ],
+    "errors": [
+      "Traceback (most recent call last):\n  File \"D:\\CADtest\\papertest\\robotcad\\backends\\fusion_api\\OperationPlanPilotBatch.py\", line 45, in run\n    backend.execute(call, components)\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"D:\\CADtest\\papertest\\robotcad\\backends\\fusion_api\\FusionAPIBackend.py\", line 168, in execute\n    elif skill=='ApplyFillet':feature=self.op_fillet(c,p)\n                                      ~~~~~~~~~~~~~~^^^^^\n  File \"D:\\CADtest\\papertest\\robotcad\\backends\\fusion_api\\FusionAPIBackend.py\", line 122, in op_fillet\n    raise last or RuntimeError('no fillet edges')\n  File \"D:\\CADtest\\papertest\\robotcad\\backends\\fusion_api\\FusionAPIBackend.py\", line 120, in op_fillet\n    x=c.features.filletFeatures.createInput();x.addConstantRadiusEdgeSet(edges,radius,True);return c.features.filletFeatures.add(x)\n                                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"C:\\Users/Administrator/AppData/Local/Autodesk/webdeploy/production/9c5312dfff2e4569cd1d269973ddf11cb999f782/Api/Python/packages\\adsk\\fusion.py\", line 36446, in add\n    return _fusion.FilletFeatures_add(self, input)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nRuntimeError: 3 : \u5706\u89d21 / \u8ba1\u7b97\u5931\u8d25 // ASM_BL_NO_VTX_GEOM -   \u65e0\u6cd5\u5728\u8fb9\u6c47\u5408\u4e8e\u62d0\u89d2\u7684\u4f4d\u7f6e\u5904\u521b\u5efa\u5706\u89d2/\u5012\u89d2\u3002\n    \u8bf7\u5728\u60a8\u7684\u8fb9\u94fe\u4e2d\u56f4\u7ed5\u5c16\u89d2\u7684\u533a\u57df\u68c0\u67e5\u6709\u65e0\u51e0\u4f55\u56fe\u5143\u95ee\u9898\u3002\u8bf7\u5c1d\u8bd5\u8c03\u6574\u5927\u5c0f\uff0c\u53d6\u6d88\u9009\u62e9\u8fd9\u4e9b\u533a\u57df\u4e2d\u7684\u67d0\u4e9b\u8fb9\uff0c\u6216\u8005\u4f7f\u7528\u591a\u9879\u5355\u72ec\u7684\u64cd\u4f5c\u3002\n"
+    ],
+    "elapsed_seconds": 1.9025559425354004
+  },
+  {
+    "case_id": "dev_arm-dcc2b0ce1e",
+    "link_id": "L4",
+    "target_component": "dev_arm_dcc2b0ce1e_L4",
+    "status": "SUCCESS",
+    "calls": [
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-001",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3sjCDADTjtUiiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-002",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3tjYGACgyYmwiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-003",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3sTAAABc3eIHiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-004",
+        "skill": "Loft",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3tTUCAACIlmViAAAAA==",
+        "feature_type": "adsk::fusion::LoftFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-005",
+        "skill": "Loft",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3tzAGAC/Mq2ciAAAAA==",
+        "feature_type": "adsk::fusion::LoftFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-006",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3tzcAADC9eVKiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-007",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3sLAHACbsZyQiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-008",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3sLMDACLJsGxiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-009",
+        "skill": "Extrude",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3tLAGAC1HzOWiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-010",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3tLSGAD8pPFHiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-011",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3tDAwhQAlq5sGYkAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-012",
+        "skill": "CircularPattern",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAW2cBttLQCAASVE5ViQAAAA==",
+        "feature_type": "adsk::fusion::CircularPatternFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-013",
+        "skill": "ApplyFillet",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAW2cBsdIUAPh66BqJAAAA",
+        "feature_type": "adsk::fusion::FilletFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_dcc2b0ce1e_L4-014",
+        "skill": "ApplyChamfer",
+        "target_component": "dev_arm_dcc2b0ce1e_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgn/9m5W7GNx9tj73t6q5WRsFVGGkYGymYJiSapRmaZCsa5KUaKFrkmporGthYpSsa5qanJyWmJycaGmZClYLNIMBDYDtM1AAWwey3tDUzAAAfLVO8YkAAAA=",
+        "feature_type": "adsk::fusion::ChamferFeature",
+        "status": "SUCCESS"
+      }
+    ],
+    "errors": [],
+    "rebuild_success": true,
+    "component_count": 1,
+    "f3d": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-dcc2b0ce1e\\L4\\fusion_model.f3d",
+    "step": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-dcc2b0ce1e\\L4\\fusion_model.step",
+    "stl": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-dcc2b0ce1e\\L4\\fusion_model.stl",
+    "elapsed_seconds": 1.4148163795471191
+  },
+  {
+    "case_id": "dev_arm-ab15a75247",
+    "link_id": "L0",
+    "target_component": "dev_arm_ab15a75247_L0",
+    "status": "SUCCESS",
+    "calls": [
+      {
+        "call_id": "dev_arm_ab15a75247_L0-001",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2RhBgAekuYOiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-002",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2xsDABt1bqciAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-003",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2JgAACRwdEriAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-004",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2JqCQBwjXoviAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-005",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2pgCgApX3laiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-006",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2ZgCABpJVJfiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-007",
+        "skill": "Loft",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb25qAACNi+BUiAAAAA==",
+        "feature_type": "adsk::fusion::LoftFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-008",
+        "skill": "BooleanCut",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2FqDgATWdjBiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-009",
+        "skill": "BooleanCut",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2lmAQB2fYh7iAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-010",
+        "skill": "ApplyFillet",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2hqagoAIZ/wT4kAAAA=",
+        "feature_type": "adsk::fusion::FilletFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L0-011",
+        "skill": "ApplyChamfer",
+        "target_component": "dev_arm_ab15a75247_L0",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwvfKCRsbZBzlekLdqs1mCZ0BqjBSMDZTsDBISzFLSrbUTTQ2TtQ1sTQz0E1MTTHWTU42TzMyTEtJTjVMBqsFmsGABsD2GSiArQNZb2RoaAQAtMhEoIkAAAA=",
+        "feature_type": "adsk::fusion::ChamferFeature",
+        "status": "SUCCESS"
+      }
+    ],
+    "errors": [],
+    "rebuild_success": true,
+    "component_count": 1,
+    "f3d": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L0\\fusion_model.f3d",
+    "step": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L0\\fusion_model.step",
+    "stl": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L0\\fusion_model.stl",
+    "elapsed_seconds": 1.259411096572876
+  },
+  {
+    "case_id": "dev_arm-ab15a75247",
+    "link_id": "L2",
+    "target_component": "dev_arm_ab15a75247_L2",
+    "status": "SUCCESS",
+    "calls": [
+      {
+        "call_id": "dev_arm_ab15a75247_L2-001",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvZGFGQAXZqRRiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-002",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvbGxMQBkIfjDiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-003",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvYmBAQCYNZN0iAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-004",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvYmZBQAsGhIsiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-005",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvamhCQD3qidriAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-006",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvam5JQDMccxDiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-007",
+        "skill": "Loft",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvbmxIQCU6P8qiAAAAA==",
+        "feature_type": "adsk::fusion::LoftFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-008",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvbmlBQC6uMypiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-009",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvYWxKQCwa84miAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-010",
+        "skill": "Loft",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvaW5BQA+uNE9iAAAAA==",
+        "feature_type": "adsk::fusion::LoftFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-011",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvaGBuRkAopSHm4kAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-012",
+        "skill": "BooleanCut",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvaGhhSEA+Xe5g4kAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-013",
+        "skill": "ApplyFillet",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvaGpoRkAz/EWy4kAAAA=",
+        "feature_type": "adsk::fusion::FilletFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L2-014",
+        "skill": "ApplyChamfer",
+        "target_component": "dev_arm_ab15a75247_L2",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwq3P1h1iy50l9vszSe1MefsMqMJIwdhMwcg0zdA0NdlS18gyxVLXxNzMRNci0dBc1zLJ3DzRwMIg1dDAEqwWaAYDGgDbZ6AAtg5kvaGlkTEA569LmYkAAAA=",
+        "feature_type": "adsk::fusion::ChamferFeature",
+        "status": "SUCCESS"
+      }
+    ],
+    "errors": [],
+    "rebuild_success": true,
+    "component_count": 1,
+    "f3d": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L2\\fusion_model.f3d",
+    "step": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L2\\fusion_model.step",
+    "stl": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L2\\fusion_model.stl",
+    "elapsed_seconds": 1.6662614345550537
+  },
+  {
+    "case_id": "dev_arm-ab15a75247",
+    "link_id": "L4",
+    "target_component": "dev_arm_ab15a75247_L4",
+    "status": "SUCCESS",
+    "calls": [
+      {
+        "call_id": "dev_arm_ab15a75247_L4-001",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IeiMLMwCiHRNPiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-002",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IemNjYwDRWk/diAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-003",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IehMDAwAtTiRqiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-004",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IehNTSwDMAo9uiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-005",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IelMDUwCV0IwbiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-006",
+        "skill": "CreateHole",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IejMDQwDVqqceiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-007",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IejMzIwDpXPTRiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-008",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IenNjAwC3o09DiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-009",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IenNzMwCGw0DOiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-010",
+        "skill": "CreateSketchProfile",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IegsTQwDbQlVwiAAAAA==",
+        "feature_type": "adsk::fusion::Sketch",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-011",
+        "skill": "Extrude",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IegtzCwC8qaQiiAAAAA==",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-012",
+        "skill": "ApplyFillet",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IektDUwCwGI0LiAAAAA==",
+        "feature_type": "adsk::fusion::FilletFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-013",
+        "skill": "ApplyChamfer",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbJ0F2EozEwDZ4APUiQAAAA==",
+        "feature_type": "adsk::fusion::ChamferFeature",
+        "status": "SUCCESS"
+      },
+      {
+        "call_id": "dev_arm_ab15a75247_L4-014",
+        "skill": "BooleanCut",
+        "target_component": "dev_arm_ab15a75247_L4",
+        "feature_id": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZgs0ebf+Zvx3u7Lti9clU7bE9UIWRgrGZglGihYV5apqhbpqFcZquSVpqsm5ispGxblpKorGxZaJRanJiGlgt0AwGNAC2z0ABbB3IekNjYzMAhx+4RokAAAA=",
+        "feature_type": "adsk::fusion::ExtrudeFeature",
+        "status": "SUCCESS"
+      }
+    ],
+    "errors": [],
+    "rebuild_success": true,
+    "component_count": 1,
+    "f3d": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L4\\fusion_model.f3d",
+    "step": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L4\\fusion_model.step",
+    "stl": "D:\\CADtest\\papertest\\operation_plan_pilot\\runs\\dev_arm-ab15a75247\\L4\\fusion_model.stl",
+    "elapsed_seconds": 1.125549077987671
+  }
+]

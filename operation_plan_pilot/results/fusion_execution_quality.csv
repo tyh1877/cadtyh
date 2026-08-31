@@ -1,0 +1,24 @@
+case_id,link_id,status,executed_calls,component_count,has_f3d,has_step,has_stl,source_op_types,error
+dev_arm-dcc2b0ce1e,L2,SUCCESS,17,1,True,True,True,"ApplyChamfer,ApplyFillet,BooleanCut,BooleanUnion,CircularPattern,CreateHole,CreateSketchProfile,Extrude,Loft,Revolve,compiler_base",
+dev_arm-dcc2b0ce1e,L3,FAILURE,20,0,False,False,False,"ApplyChamfer,ApplyFillet,BooleanUnion,CreateHole,CreateSketchProfile,Extrude,Revolve,Shell,compiler_base","Traceback (most recent call last):
+  File ""D:\CADtest\papertest\robotcad\backends\fusion_api\OperationPlanPilotBatch.py"", line 45, in run
+    backend.execute(call, components)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File ""D:\CADtest\papertest\robotcad\backends\fusion_api\FusionAPIBackend.py"", line 168, in execute
+    elif skill=='ApplyFillet':feature=self.op_fillet(c,p)
+                                      ~~~~~~~~~~~~~~^^^^^
+  File ""D:\CADtest\papertest\robotcad\backends\fusion_api\FusionAPIBackend.py"", line 122, in op_fillet
+    raise last or RuntimeError('no fillet edges')
+  File ""D:\CADtest\papertest\robotcad\backends\fusion_api\FusionAPIBackend.py"", line 120, in op_fillet
+    x=c.features.filletFeatures.createInput();x.addConstantRadiusEdgeSet(edges,radius,True);return c.features.filletFeatures.add(x)
+                                                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File ""C:\Users/Administrator/AppData/Local/Autodesk/webdeploy/production/9c5312dfff2e4569cd1d269973ddf11cb999f782/Api/Python/packages\adsk\fusion.py"", line 36446, in add
+    return _fusion.FilletFeatures_add(self, input)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+RuntimeError: 3 : 圆角1 / 计算失败 // ASM_BL_NO_VTX_GEOM -   无法在边汇合于拐角的位置处创建圆角/倒角。
+    请在您的边链中围绕尖角的区域检查有无几何图元问题。请尝试调整大小，取消选择这些区域中的某些边，或者使用多项单独的操作。
+"
+dev_arm-dcc2b0ce1e,L4,SUCCESS,14,1,True,True,True,"ApplyChamfer,ApplyFillet,BooleanUnion,CircularPattern,CreateHole,CreateSketchProfile,Loft,Revolve,Sweep,compiler_base",
+dev_arm-ab15a75247,L0,SUCCESS,11,1,True,True,True,"ApplyChamfer,ApplyFillet,BooleanCut,CreateHole,CreateSketchProfile,Extrude,Revolve,compiler_base",
+dev_arm-ab15a75247,L2,SUCCESS,14,1,True,True,True,"ApplyChamfer,ApplyFillet,BooleanUnion,CreateHole,CreateSketchProfile,Extrude,Loft,Revolve,Shell,compiler_base",
+dev_arm-ab15a75247,L4,SUCCESS,14,1,True,True,True,"ApplyChamfer,ApplyFillet,BooleanUnion,CreateHole,CreateSketchProfile,Extrude,Shell,compiler_base",

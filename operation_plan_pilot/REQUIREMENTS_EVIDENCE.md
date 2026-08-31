@@ -9,4 +9,4 @@
 | Interface constraints preserve URDF identifiers | `results/plan_quality.csv` | pass — 6/6 include interface constraints |
 | Final pass/fail decision is recorded | `results/report.md` | pass — pilot PASS |
 | Fusion execution pilot jobs are prepared | `execution_protocol.md`, `fusion_jobs.json`, `scripts/build_fusion_execution_jobs.py` | pass — 6/6 links READY |
-| Fusion execution pilot creates viewable artifacts | `fusion_batch_results.json`, `results/fusion_execution_report.md` | pending — user must run `OperationPlanPilotBatch` in Fusion |
+| Fusion execution pilot creates viewable artifacts | `fusion_batch_results.json`, `results/fusion_execution_report.md` | pass — 5/6 links exported F3D/STEP/STL; 1/6 preserved as Fusion fillet-kernel failure |

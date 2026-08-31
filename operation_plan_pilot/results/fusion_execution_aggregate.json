@@ -1,0 +1,15 @@
+{
+  "links_total": 6,
+  "fusion_success": 5,
+  "links_with_5plus_calls": 5,
+  "links_with_exports": 5,
+  "feature_counts": {
+    "adsk::fusion::ChamferFeature": 5,
+    "adsk::fusion::CircularPatternFeature": 2,
+    "adsk::fusion::ExtrudeFeature": 37,
+    "adsk::fusion::FilletFeature": 5,
+    "adsk::fusion::LoftFeature": 8,
+    "adsk::fusion::Sketch": 33
+  },
+  "pass": true
+}
