@@ -1,0 +1,9 @@
+{
+  "links_total": 6,
+  "schema_valid_links": 6,
+  "links_with_5plus_ops": 6,
+  "links_with_2plus_nonprimitive_ops": 5,
+  "links_with_interface_constraints": 6,
+  "links_with_gt_ack": 6,
+  "pass": true
+}

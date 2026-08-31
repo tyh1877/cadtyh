@@ -1,0 +1,94 @@
+{
+  "schema_version": "robotcad.operation_plan_pilot.v1",
+  "case_id": "dev_arm-ab15a75247",
+  "link_id": "L0",
+  "mechanical_intent": {
+    "role": "fixed base flange of an articulated industrial robot arm; anchors the arm and carries the J0 revolute output toward L1",
+    "geometry_intent": "circular flange plate with four corner mounting ears, central raised cylindrical hub, and a top interface boss aligned with the J0 axis",
+    "surface_features": [
+      "bolt holes on mounting ears",
+      "side port cutouts on hub",
+      "filleted ear-to-plate transitions",
+      "chamfered hub rim"
+    ]
+  },
+  "interface_constraints": [
+    {
+      "joint_id": "J0",
+      "type": "revolute",
+      "axis": "0 0 1",
+      "origin_xyz": "0 0 0.06858",
+      "origin_rpy": "0 3.141592653 0",
+      "constraint": "Top hub face must be planar and normal to Z at height 0.06858 m; coaxial with Z axis; bearing seat / boss concentric within 0.05 mm; bolt circle provided for L1 attachment; flipped orientation (rpy pi about X) accounted for so the joint frame points downward from the hub face.",
+      "parent_link": "L0",
+      "child_link": "L1"
+    }
+  ],
+  "operations": [
+    {
+      "op_id": "OP1",
+      "operation": "CreateSketchProfile",
+      "purpose": "flange",
+      "description": "Sketch base flange profile on XY plane: circle of diameter ~110 mm centered at origin, unioned with four rectangular ear tabs extending to corners at 45 deg offsets.",
+      "op": "CreateSketchProfile",
+      "operation_id": "OP1"
+    },
+    {
+      "op_id": "OP2",
+      "operation": "Extrude",
+      "purpose": "base housing",
+      "description": "Extrude flange profile symmetric ~12 mm to form the base plate with ears.",
+      "op": "Extrude",
+      "operation_id": "OP2"
+    },
+    {
+      "op_id": "OP3",
+      "operation": "CreateHole",
+      "purpose": "bolt pattern",
+      "description": "Add one through-hole (~5 mm) on each ear tab, then CircularPattern 4x about Z at 90 deg spacing for base mounting bolts.",
+      "op": "CreateHole",
+      "operation_id": "OP3"
+    },
+    {
+      "op_id": "OP4",
+      "operation": "Revolve",
+      "purpose": "boss",
+      "description": "Revolve a profile about Z from the flange top to create the central raised cylindrical hub, outer diameter ~70 mm, rising to the J0 interface height 0.06858 m; BooleanUnion with flange.",
+      "op": "Revolve",
+      "operation_id": "OP4"
+    },
+    {
+      "op_id": "OP5",
+      "operation": "BooleanCut",
+      "purpose": "bearing seat",
+      "description": "Cut a concentric counterbore/recess in the hub top face to seat the J0 bearing/output interface, depth ~8 mm, diameter per joint bolt circle bore.",
+      "op": "BooleanCut",
+      "operation_id": "OP5"
+    },
+    {
+      "op_id": "OP6",
+      "operation": "BooleanCut",
+      "purpose": "lightening cutout",
+      "description": "Cut rectangular side port cutouts through the hub walls (two opposing ports) for cable routing and weight reduction, per visual observation.",
+      "op": "BooleanCut",
+      "operation_id": "OP6"
+    },
+    {
+      "op_id": "OP7",
+      "operation": "ApplyFillet",
+      "purpose": "rounded transition",
+      "description": "Fillet (~4 mm) the junctions between ear tabs and flange rim, and fillet hub-to-plate transition to reduce stress concentration.",
+      "op": "ApplyFillet",
+      "operation_id": "OP7"
+    },
+    {
+      "op_id": "OP8",
+      "operation": "ApplyChamfer",
+      "purpose": "taper",
+      "description": "Chamfer (~1.5 mm) the hub top rim and flange outer edge for deburring and assembly clearance.",
+      "op": "ApplyChamfer",
+      "operation_id": "OP8"
+    }
+  ],
+  "prohibited_input_ack": "No GT mesh, original CAD, product identity, or hidden labels were used."
+}

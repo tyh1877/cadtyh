@@ -1,0 +1,80 @@
+```json
+{
+  "schema_version": "robotcad.operation_plan_pilot.v1",
+  "case_id": "dev_arm-ab15a75247",
+  "link_id": "L4",
+  "mechanical_intent": {
+    "role": "end-effector gripper assembly link driven by revolute joint J3 about Z",
+    "geometry_intent": "rectangular palm plate with two parallel protruding finger prongs forming a central U-gap, backed by a mounting flange plate that interfaces the wrist",
+    "surface_features": ["U-gap between fingers", "bolt pattern on flange", "chamfered finger tips", "filleted palm-to-finger roots"]
+  },
+  "interface_constraints": [
+    {
+      "joint_id": "J3",
+      "type": "revolute",
+      "parent_link": "L3",
+      "axis": "0 0 1",
+      "origin_xyz": "0.17751 0 0",
+      "origin_rpy": "3.141592653 0 1.570796325",
+      "constraint": "flange mounting face of L4 must be planar and normal to the joint Z axis at the joint origin; bolt pattern concentric with joint axis; clearance for full 360-degree rotation"
+    }
+  ],
+  "operations": [
+    {
+      "op_id": "OP1",
+      "operation": "CreateSketchProfile",
+      "purpose": "flange",
+      "description": "Sketch rectangular mounting flange plate profile on the plane defined by joint J3 origin, normal to joint Z axis, sized to palm plate footprint."
+    },
+    {
+      "op_id": "OP2",
+      "operation": "Extrude",
+      "purpose": "base housing",
+      "description": "Extrude flange profile symmetrically a short thickness to form the rigid palm/back plate of the gripper."
+    },
+    {
+      "op_id": "OP3",
+      "operation": "CreateHole",
+      "purpose": "bolt pattern",
+      "description": "Add corner bolt holes through the flange plate on a rectangular pattern concentric with the J3 axis for wrist attachment."
+    },
+    {
+      "op_id": "OP4",
+      "operation": "CreateSketchProfile",
+      "purpose": "finger prongs",
+      "description": "Sketch two finger prong cross-sections on the palm face, separated by a central U-gap, aligned with the open direction observed front/rear."
+    },
+    {
+      "op_id": "OP5",
+      "operation": "Extrude",
+      "purpose": "fingers",
+      "description": "Extrude both finger prongs forward from the palm plate to full finger length, forming the open U-gap jaw."
+    },
+    {
+      "op_id": "OP6",
+      "operation": "BooleanUnion",
+      "purpose": "merge fingers with palm",
+      "description": "Union finger prongs with the palm/flange body into a single solid."
+    },
+    {
+      "op_id": "OP7",
+      "operation": "ApplyFillet",
+      "purpose": "rounded transition",
+      "description": "Fillet the root edges where fingers meet the palm plate to reduce stress concentration."
+    },
+    {
+      "op_id": "OP8",
+      "operation": "ApplyChamfer",
+      "purpose": "finger tip lead-in",
+      "description": "Chamfer the outer finger tip edges to create tapered gripping lead-ins."
+    },
+    {
+      "op_id": "OP9",
+      "operation": "Shell",
+      "purpose": "lightening cutout",
+      "description": "Shell/pocket the rear face of the palm plate to reduce mass while preserving the flange mounting wall."
+    }
+  ],
+  "prohibited_input_ack": "No GT mesh, original CAD, product identity, or hidden labels were used."
+}
+```

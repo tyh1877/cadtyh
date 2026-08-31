@@ -1,0 +1,7 @@
+case_id,link_id,role,status,operation_count,unique_operation_count,nonprimitive_operation_count,executable_now_count,interface_constraint_count,has_ack,error
+dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,13,10,4,11,2,True,
+dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,15,8,2,11,2,True,
+dev_arm-dcc2b0ce1e,L4,forearm,SUCCESS,10,9,4,7,2,True,
+dev_arm-ab15a75247,L0,base_or_shoulder,SUCCESS,8,7,3,7,1,True,
+dev_arm-ab15a75247,L2,main_link,SUCCESS,10,9,3,7,2,True,
+dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,9,7,1,7,1,True,

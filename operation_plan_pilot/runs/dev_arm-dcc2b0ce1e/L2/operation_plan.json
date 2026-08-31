@@ -1,0 +1,143 @@
+{
+  "schema_version": "robotcad.operation_plan_pilot.v1",
+  "case_id": "dev_arm-dcc2b0ce1e",
+  "link_id": "L2",
+  "mechanical_intent": {
+    "role": "upper arm / shoulder-to-elbow link of an articulated industrial robot arm",
+    "geometry_intent": "Long ~560 mm tapered arm body lofted from a large rounded shoulder housing at the J1 end to a narrower elbow end at J2, with a large oval lightening cutout near the elbow and a cylindrical elbow boss about the +Y joint axis.",
+    "surface_features": [
+      "rounded shoulder housing with bolt pattern",
+      "tapered twin-rib arm body",
+      "oval lightening cutout near elbow",
+      "cylindrical elbow boss with bearing seat",
+      "rounded fillet transitions between housing and arm"
+    ]
+  },
+  "interface_constraints": [
+    {
+      "joint_id": "J1",
+      "type": "revolute",
+      "parent_link": "L1",
+      "axis": "0 1 0",
+      "origin_xyz": "0.025 0 0",
+      "constraint": "Shoulder housing centered at J1 origin; coaxial bore about +Y with bearing seat and bolt pattern on the L1 mating flange face.",
+      "child_link": "L2"
+    },
+    {
+      "joint_id": "J2",
+      "type": "revolute",
+      "child_link": "L3",
+      "axis": "0 1 0",
+      "origin_xyz": "0.560 0 0",
+      "constraint": "Elbow boss centered at x=560 mm; coaxial bore about +Y sized for the J2 bearing/cross-shaft, with flat mating faces for L3 clevis/boss contact.",
+      "parent_link": "L2"
+    }
+  ],
+  "operations": [
+    {
+      "op_id": "OP1",
+      "operation": "CreateSketchProfile",
+      "purpose": "shoulder housing profile",
+      "description": "Sketch the rounded shoulder housing cross-section on the YZ plane at the J1 origin: large rounded rectangular outline (~110 mm wide) with generous corner radii.",
+      "op": "CreateSketchProfile",
+      "operation_id": "OP1"
+    },
+    {
+      "op_id": "OP2",
+      "operation": "Extrude",
+      "purpose": "base housing",
+      "description": "Extrude the shoulder profile symmetrically about the +Y joint axis (~90 mm thick) to form the main shoulder housing body.",
+      "op": "Extrude",
+      "operation_id": "OP2"
+    },
+    {
+      "op_id": "OP3",
+      "operation": "CreateSketchProfile",
+      "purpose": "tapered arm body path",
+      "description": "Sketch two guide profiles: shoulder-end section (wide, rounded) and elbow-end section (narrower, ~60% width) on planes at x=0 and x=560 mm respectively.",
+      "op": "CreateSketchProfile",
+      "operation_id": "OP3"
+    },
+    {
+      "op_id": "OP4",
+      "operation": "Loft",
+      "purpose": "taper",
+      "description": "Loft from the shoulder-end section to the elbow-end section to create the long tapered arm body narrowing toward the elbow, fused to the shoulder housing.",
+      "op": "Loft",
+      "operation_id": "OP4"
+    },
+    {
+      "op_id": "OP5",
+      "operation": "Revolve",
+      "purpose": "elbow boss",
+      "description": "Revolve a circular profile about the +Y axis at x=560 mm to create the cylindrical elbow boss protruding on both sides of the arm body.",
+      "op": "Revolve",
+      "operation_id": "OP5"
+    },
+    {
+      "op_id": "OP6",
+      "operation": "BooleanUnion",
+      "purpose": "single solid body",
+      "description": "Union shoulder housing, lofted arm body, and elbow boss into one solid.",
+      "op": "BooleanUnion",
+      "operation_id": "OP6"
+    },
+    {
+      "op_id": "OP7",
+      "operation": "CreateSketchProfile",
+      "purpose": "lightening cutout",
+      "description": "Sketch the large oval slot on the arm side face near the elbow end, oriented along the arm axis.",
+      "op": "CreateSketchProfile",
+      "operation_id": "OP7"
+    },
+    {
+      "op_id": "OP8",
+      "operation": "BooleanCut",
+      "purpose": "lightening cutout",
+      "description": "Cut the oval profile through the arm body to reduce mass near the elbow.",
+      "op": "BooleanCut",
+      "operation_id": "OP8"
+    },
+    {
+      "op_id": "OP9",
+      "operation": "CreateHole",
+      "purpose": "bearing seat",
+      "description": "Create the coaxial J2 bore through the elbow boss about +Y with a counterbore/shoulder for the bearing seat.",
+      "op": "CreateHole",
+      "operation_id": "OP9"
+    },
+    {
+      "op_id": "OP10",
+      "operation": "CreateHole",
+      "purpose": "J1 bearing seat",
+      "description": "Create the coaxial J1 bore through the shoulder housing about +Y with bearing seat counterbore.",
+      "op": "CreateHole",
+      "operation_id": "OP10"
+    },
+    {
+      "op_id": "OP11",
+      "operation": "CircularPattern",
+      "purpose": "bolt pattern",
+      "description": "Pattern bolt holes on the shoulder housing flange face for the L1/J1 interface fasteners.",
+      "op": "CircularPattern",
+      "operation_id": "OP11"
+    },
+    {
+      "op_id": "OP12",
+      "operation": "ApplyFillet",
+      "purpose": "rounded transition",
+      "description": "Apply generous fillets at the shoulder-to-arm and arm-to-elbow-boss junctions and round all outer housing edges.",
+      "op": "ApplyFillet",
+      "operation_id": "OP12"
+    },
+    {
+      "op_id": "OP13",
+      "operation": "ApplyChamfer",
+      "purpose": "bore lead-in",
+      "description": "Chamfer the J1 and J2 bore edges and mating flange faces for assembly lead-in.",
+      "op": "ApplyChamfer",
+      "operation_id": "OP13"
+    }
+  ],
+  "prohibited_input_ack": "No GT mesh, original CAD, product identity, or hidden labels were used."
+}

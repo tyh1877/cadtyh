@@ -1,0 +1,120 @@
+{
+  "schema_version": "robotcad.operation_plan_pilot.v1",
+  "case_id": "dev_arm-ab15a75247",
+  "link_id": "L2",
+  "mechanical_intent": {
+    "role": "upper-arm structural link connecting shoulder joint J1 (parent L1) to elbow joint J2 (child L3)",
+    "geometry_intent": "long slender beam with a slightly tapered, narrow rectangular cross-section spanning the J1-to-J2 joint offset (~146.8 mm along the link axis); enlarged housing bosses at both ends to carry the revolute joint bearings",
+    "surface_features": [
+      "slight linear taper along beam length",
+      "rounded filleted transitions from beam into end housings",
+      "shallow lightening pockets on beam side faces",
+      "bolt pattern flanges at both joint interfaces"
+    ]
+  },
+  "interface_constraints": [
+    {
+      "joint_id": "J1",
+      "type": "revolute",
+      "parent_link": "L1",
+      "child_link": "L2",
+      "axis": "0 0 1",
+      "origin_xyz": "0.002 0 0",
+      "origin_rpy": "0 1.570796325 -1.570796325",
+      "constraint": "shoulder-end housing must be coaxial with J1 axis at origin (0.002, 0, 0); provide bearing seat and bolt flange on the L1 side"
+    },
+    {
+      "joint_id": "J2",
+      "type": "revolute",
+      "parent_link": "L3",
+      "child_link": "L3",
+      "axis": "0 0 1",
+      "origin_xyz": "0.14679 0 0",
+      "origin_rpy": "0 3.141592653 1.570796325",
+      "constraint": "elbow-end housing must be coaxial with J2 axis at (0.14679, 0, 0) in L2 frame; provide bearing seat and bolt flange for L3 attachment"
+    }
+  ],
+  "operations": [
+    {
+      "op_id": "OP1",
+      "operation": "CreateSketchProfile",
+      "purpose": "base housing profile",
+      "description": "Sketch the shoulder-end housing cross-section on the plane normal to the J1 axis: rounded rectangular outline with corner radii, centered on the J1 axis at (0.002, 0, 0).",
+      "op": "CreateSketchProfile",
+      "operation_id": "OP1"
+    },
+    {
+      "op_id": "OP2",
+      "operation": "Extrude",
+      "purpose": "base housing",
+      "description": "Extrude OP1 profile symmetrically about the J1 axis to form the shoulder bearing housing block.",
+      "op": "Extrude",
+      "operation_id": "OP2"
+    },
+    {
+      "op_id": "OP3",
+      "operation": "CreateSketchProfile",
+      "purpose": "beam root profile",
+      "description": "Sketch the narrow beam cross-section (small rectangle with rounded corners) on a plane at the shoulder housing face, oriented along the J1-to-J2 axis.",
+      "op": "CreateSketchProfile",
+      "operation_id": "OP3"
+    },
+    {
+      "op_id": "OP4",
+      "operation": "Loft",
+      "purpose": "taper",
+      "description": "Loft the beam cross-section from the shoulder housing face to a slightly smaller cross-section at the elbow end (0.14679, 0, 0), producing the slender tapered beam body.",
+      "op": "Loft",
+      "operation_id": "OP4"
+    },
+    {
+      "op_id": "OP5",
+      "operation": "BooleanUnion",
+      "purpose": "merge beam and housings",
+      "description": "Union the tapered beam with the shoulder housing; repeat sketch+extrude for the elbow-end housing block centered on the J2 axis and union it as well.",
+      "op": "BooleanUnion",
+      "operation_id": "OP5"
+    },
+    {
+      "op_id": "OP6",
+      "operation": "Revolve",
+      "purpose": "bearing seat",
+      "description": "Revolve-cut cylindrical bearing bores into both end housings, coaxial with J1 and J2 axes respectively, sized for the revolute joint bearings.",
+      "op": "Revolve",
+      "operation_id": "OP6"
+    },
+    {
+      "op_id": "OP7",
+      "operation": "CreateHole",
+      "purpose": "bolt pattern",
+      "description": "Add a circular bolt pattern of fastener holes on each housing flange face for attachment to L1 (J1 side) and L3 (J2 side).",
+      "op": "CreateHole",
+      "operation_id": "OP7"
+    },
+    {
+      "op_id": "OP8",
+      "operation": "Shell",
+      "purpose": "lightening cutout",
+      "description": "Create shallow pocket sketches on the beam side faces and pocket-cut to remove material, lightening the slender beam while retaining outer walls.",
+      "op": "Shell",
+      "operation_id": "OP8"
+    },
+    {
+      "op_id": "OP9",
+      "operation": "ApplyFillet",
+      "purpose": "rounded transition",
+      "description": "Apply fillets at the beam-to-housing junctions and along the beam longitudinal edges to reduce stress concentration and match the observed rounded transitions.",
+      "op": "ApplyFillet",
+      "operation_id": "OP9"
+    },
+    {
+      "op_id": "OP10",
+      "operation": "ApplyChamfer",
+      "purpose": "flange edge break",
+      "description": "Chamfer the outer flange edges and bore mouths for assembly clearance and edge finish.",
+      "op": "ApplyChamfer",
+      "operation_id": "OP10"
+    }
+  ],
+  "prohibited_input_ack": "No GT mesh, original CAD, product identity, or hidden labels were used."
+}

@@ -1,0 +1,15 @@
+{
+  "case_id": "dev_arm-dcc2b0ce1e",
+  "link_id": "L2",
+  "status": "SUCCESS",
+  "model": "glm-5.3-flash",
+  "usage": {
+    "input_tokens": 1813,
+    "output_tokens": 1226,
+    "total_tokens": 3039,
+    "finish_reason": "stop",
+    "request_id": "20260831190521b5a222c39be74dc9"
+  },
+  "error": null,
+  "elapsed_seconds": 0.013089656829833984
+}
