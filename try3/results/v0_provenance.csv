@@ -1,0 +1,6 @@
+case_id,source,status,blueprint_sha256,fusion_f3d
+dev_arm-ab15a75247,D:\CADtest\papertest\try2\runs\D\dev_arm-ab15a75247,SUCCESS,,D:\CADtest\papertest\try2\runs\D\dev_arm-ab15a75247\model.f3d
+dev_arm-4c7b408826,D:\CADtest\papertest\try2\runs\D\dev_arm-4c7b408826,SUCCESS,,D:\CADtest\papertest\try2\runs\D\dev_arm-4c7b408826\model.f3d
+dev_arm-dcc2b0ce1e,D:\CADtest\papertest\try2\runs\D\dev_arm-dcc2b0ce1e,SUCCESS,,D:\CADtest\papertest\try2\runs\D\dev_arm-dcc2b0ce1e\model.f3d
+dev_arm-43fa322555,D:\CADtest\papertest\try2\runs\D\dev_arm-43fa322555,SUCCESS,,D:\CADtest\papertest\try2\runs\D\dev_arm-43fa322555\model.f3d
+dev_arm-551a9c392e,D:\CADtest\papertest\try2\runs\D\dev_arm-551a9c392e,SUCCESS,,D:\CADtest\papertest\try2\runs\D\dev_arm-551a9c392e\model.f3d

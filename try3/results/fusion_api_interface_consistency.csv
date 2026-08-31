@@ -1,0 +1,11 @@
+actual_components,axis_angular_error_authoritative_urdf_deg,axis_offset_authoritative_urdf,bbox_overlap_pairs,canonical_placement_consistency,case_id,component_correspondence,execution_status,expected_components,interfaces_evaluated,joint_center_surface_gap_normalized_median,joint_center_surface_gap_normalized_p95,version
+17,0.0,0.0,136,True,dev_arm-43fa322555,True,SUCCESS,17,16,0.32784428297754664,0.7082356603277338,V1
+,,,,,dev_arm-4c7b408826,,FAILURE,,,,,V1
+21,0.0,0.0,112,True,dev_arm-551a9c392e,True,SUCCESS,21,20,0.3091850435944197,0.8698771743951266,V1
+5,0.0,0.0,10,True,dev_arm-ab15a75247,True,SUCCESS,5,4,0.26380416283349406,0.4565074953275969,V1
+10,0.0,0.0,45,True,dev_arm-dcc2b0ce1e,True,SUCCESS,10,9,0.48902126181178734,1.3796140126579348,V1
+17,0.0,0.0,136,True,dev_arm-43fa322555,True,SUCCESS,17,16,0.1828716805111828,0.4444183665551874,V2
+10,0.0,0.0,45,True,dev_arm-4c7b408826,True,SUCCESS,10,9,0.38154617686611547,1.2144653073854503,V2
+,,,,,dev_arm-551a9c392e,,FAILURE,,,,,V2
+5,0.0,0.0,10,True,dev_arm-ab15a75247,True,SUCCESS,5,4,0.27779560696921923,0.5566849179165079,V2
+10,0.0,0.0,45,True,dev_arm-dcc2b0ce1e,True,SUCCESS,10,9,0.2972217660212429,0.8727592096026803,V2

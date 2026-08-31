@@ -2,7 +2,7 @@
 
 Date: 2026-08-30
 
-Status: prepared for manual Fusion execution, not yet evaluated.
+Status: Fusion execution complete and deterministic evaluation complete.
 
 ## Invalidated failure
 
@@ -48,16 +48,19 @@ Primitive-preserving READY jobs:
 - V2 `dev_arm-43fa322555`: 17 links, 77 primitives
 - V1 `dev_arm-551a9c392e`: 21 links, 72 primitives
 
-## Next external action
+## Fusion execution result
 
-Run the packaged Fusion script:
+`try3/fusion_api_batch_results.json` contains 10 records:
 
-`D:\CADtest\papertest\robotcad\backends\fusion_api\FusionAPIBackendBatch`
+- SUCCESS: 8
+- FAILURE: 2
 
-Expected completion dialog:
+The 8 successful records exported editable F3D, STEP, assembled STL and
+per-link STL meshes. Deterministic geometry and interface diagnostics are in:
 
-`RobotCAD Fusion API formal batch complete`
-
-After Fusion execution, inspect `try3/fusion_api_batch_results.json` and the
-per-case `fusion_api_model.f3d`, `fusion_api_model.step`, `fusion_api_model.stl`,
-and `meshes/L*.stl` outputs before geometry evaluation.
+- `try3/results/fusion_api_case_geometry.csv`
+- `try3/results/fusion_api_per_link_geometry.csv`
+- `try3/results/fusion_api_joint_local_geometry.csv`
+- `try3/results/fusion_api_interface_consistency.csv`
+- `try3/results/fusion_api_aggregate_results.csv`
+- `try3/try3_report.md`
