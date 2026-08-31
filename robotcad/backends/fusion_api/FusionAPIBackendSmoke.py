@@ -1,5 +1,5 @@
 """Run non-benchmark RobotCAD operation-skill smoke tests in Fusion."""
-import adsk.core,json,os,time,traceback,sys
+import adsk.core,json,os,time,traceback,sys,importlib
 ROOT=r"D:\CADtest\papertest";OUT=os.path.join(ROOT,'try3','smoke','fusion_api_skill_smoke.json')
 def run(context):
  result={'status':'FAILURE','backend':'FusionAPIBackend.v1.basic_operations','calls':[],'errors':[],'started_at':time.time()}
@@ -10,7 +10,9 @@ def run(context):
   # entry point so an import error is recorded rather than disappearing.
   here=os.path.dirname(os.path.abspath(__file__))
   if here not in sys.path:sys.path.insert(0,here)
-  from FusionAPIBackend import FusionAPIBackend,make_design
+  import FusionAPIBackend as backend_module
+  importlib.reload(backend_module)
+  FusionAPIBackend,make_design=backend_module.FusionAPIBackend,backend_module.make_design
   app,design,root=make_design();backend=FusionAPIBackend(design,root,result)
   calls=[
    ('CreateCompositeLinkGeometry',{'primitives':[{'type':'box','center':[0,0,0],'size':[60,24,18]},{'type':'cylinder','center':[0,0,12],'axis':[1,0,0],'radius':10,'height':70}]}),

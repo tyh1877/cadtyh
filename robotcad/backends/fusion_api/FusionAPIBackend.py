@@ -99,7 +99,7 @@ class FusionAPIBackend:
   entities=adsk.core.ObjectCollection.create();entities.add(seed.bodies.item(0))
   x=c.features.circularPatternFeatures.createInput(entities,self.construction_axis(c,axis));x.quantity=adsk.core.ValueInput.createByReal(count);x.totalAngle=adsk.core.ValueInput.createByString('360 deg');return c.features.circularPatternFeatures.add(x)
  def execute(self,call,components):
-  p=call['parameters'];name=call['target_component'];skill=call['skill']
+  p=call['parameters'];name=call['target_component'];skill=str(call['skill']).strip()
   if skill=='PlaceComponentFromURDF':
    m=adsk.core.Matrix3D.create()
    for i,row in enumerate(p['transform_cm']):
@@ -109,14 +109,15 @@ class FusionAPIBackend:
    # The external URDF is authoritative for this reference. The backend records
    # the shared interface intent without inventing native joint semantics.
    self.log(call,None);return
-  entry=components.setdefault(name,self.component(name));c=entry['component'];feature=None
+  if name not in components:components[name]=self.component(name)
+  entry=components[name];c=entry['component'];feature=None
   if skill=='CreateCompositeLinkGeometry':feature=self.composite(c,p)
   elif skill=='ApplyFillet':feature=self.op_fillet(c,p)
   elif skill=='ApplyChamfer':feature=self.op_chamfer(c,p)
   elif skill=='CreateHole':feature=self.op_hole(c,p)
   elif skill=='BooleanCut':feature=self.op_boolean_cut(c,p)
   elif skill=='CircularPattern':feature=self.op_circular_pattern(c,p)
-  else: raise RuntimeError('unsupported in v1 backend: '+skill)
+  else: raise RuntimeError('unsupported in v1 backend: '+repr(skill))
   self.log(call,feature)
  def export(self,path,components=None):
   self.design.computeAll();em=self.design.exportManager;em.execute(em.createFusionArchiveExportOptions(path+'.f3d',self.root));em.execute(em.createSTEPExportOptions(path+'.step',self.root));em.execute(em.createSTLExportOptions(self.root,path+'.stl'))
