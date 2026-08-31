@@ -22,16 +22,16 @@ The main negative result is method effect: on the three paired V1/V2 successes, 
 
 | version | jobs | success | failed | median Chamfer | median HD95 | median IoU | median interface gap | median bbox overlaps |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| V1 | 5 | 4 | 1 | 0.007243 | 0.199470 | 0.235152 | 0.318515 | 78.500000 |
-| V2 | 5 | 4 | 1 | 0.009319 | 0.200210 | 0.175286 | 0.287509 | 45.000000 |
+| V1 | 5 | 4 | 1 | 0.007129 | 0.197765 | 0.240299 | 0.318515 | 78.500000 |
+| V2 | 5 | 4 | 1 | 0.012287 | 0.195317 | 0.247006 | 0.288225 | 45.000000 |
 
 ## Paired V1 vs V2 cases
 
 | case | Chamfer V1 | Chamfer V2 | interface gap V1 | interface gap V2 | bbox overlaps V1 | bbox overlaps V2 |
 |---|---:|---:|---:|---:|---:|---:|
-| `dev_arm-43fa322555` | 0.007364 | 0.020925 | 0.327844 | 0.182872 | 136.000000 | 136.000000 |
-| `dev_arm-ab15a75247` | 0.017607 | 0.013157 | 0.263804 | 0.277796 | 10.000000 | 10.000000 |
-| `dev_arm-dcc2b0ce1e` | 0.002681 | 0.005481 | 0.489021 | 0.297222 | 45.000000 | 45.000000 |
+| `dev_arm-43fa322555` | 0.007364 | 0.019390 | 0.327844 | 0.191554 | 136.000000 | 136.000000 |
+| `dev_arm-ab15a75247` | 0.017607 | 0.022185 | 0.263804 | 0.294976 | 10.000000 | 10.000000 |
+| `dev_arm-dcc2b0ce1e` | 0.002681 | 0.004923 | 0.489021 | 0.281474 | 45.000000 | 45.000000 |
 
 ## Recorded failures
 
@@ -40,11 +40,14 @@ The main negative result is method effect: on the three paired V1/V2 successes, 
 
 ## Skill execution evidence
 
-`CreateCompositeLinkGeometry` is now the primary geometry SkillCall. Fusion feature types recorded in the successful batch:
+`CreateSketchProfile`, `Extrude`, and `Loft` are now the primary base-geometry SkillCalls. Fusion feature types recorded in the successful batch:
 
-- `adsk::fusion::ExtrudeFeature`: 94
-- `adsk::fusion::FilletFeature`: 5
-- `adsk::fusion::LoftFeature`: 1
+- `adsk::fusion::ChamferFeature`: 6
+- `adsk::fusion::CircularPatternFeature`: 41
+- `adsk::fusion::ExtrudeFeature`: 490
+- `adsk::fusion::FilletFeature`: 42
+- `adsk::fusion::LoftFeature`: 8
+- `adsk::fusion::Sketch`: 463
 
 ## Required protocol answers
 
@@ -54,10 +57,10 @@ No GT geometry was sent to the model. GT meshes and original URDF geometry are l
 
 The Mechanical Embodiment Plan, Interface Graph, and Feature Graph schemas are frozen under `try3/schemas/`. V2 uses them before blueprint projection; V1 does not use the explicit MEP/interface/feature planning stage.
 
-Implemented RobotCAD Skills include `CreateCompositeLinkGeometry`, `CreateRotaryJointHousing`, `CreateRoundedLinkHousing`, `CreateLoftedLinkHousing`, `CreateFlangeInterface`, `CreateShellHousing`, `CreateJointTransition`, `ApplyFilletGroup`, placement, and shared joint references. The repaired formal jobs primarily exercise extrude and loft through composite primitives; fillet appears in V2 feature calls for the small arm.
+Implemented RobotCAD Skills include `CreateSketchProfile`, `Extrude`, `Loft`, `CreateCompositeLinkGeometry` for legacy compatibility, `ApplyFillet`, `ApplyChamfer`, `CreateHole`, `BooleanCut`, `CircularPattern`, placement, and shared joint references. Legacy robot-template names are projection aliases only, not formal execution skills.
 
 Visible feature recall is not yet computed by an objective detector, so it is not claimed. The screenshot and Fusion outputs show the prior cube collapse is fixed, but that is qualitative evidence only.
 
-Primary bottleneck: CAD planning and Fusion Skill capability. Visual grounding supplies varied primitives, and external URDF preserves topology, but the current primitive composition still lacks robust interface-aware booleaning, collision control, and high-fidelity surface detail.
+Primary bottleneck: operation planning and Fusion Skill capability. Visual grounding supplies varied primitives, and external URDF preserves topology, but the current operation library still lacks robust interface-aware booleaning, collision control, and high-fidelity surface detail.
 
 Recommended next step: Try-3.x refinement focused on interface-aware composite skills and collision/overlap control, then rerun the same TrySet-5. Do not expand the benchmark yet.

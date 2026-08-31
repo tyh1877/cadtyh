@@ -1,27 +1,24 @@
-# FusionAPIBackend v1 basic-operation smoke — PENDING RERUN
+# FusionAPIBackend v1 basic-operation smoke — PASS
 
 The previous 2026-08-30 smoke result used middle-layer mechanical template
 names and is no longer valid for the repaired Try-3 backend.
 
-The current smoke gate must be rerun manually in Autodesk Fusion using the
+The repaired smoke gate was rerun manually in Autodesk Fusion using the
 generic, non-benchmark `FusionAPIBackendSmoke.py` script. The untracked raw
 record is `try3/smoke/fusion_api_skill_smoke.json`; generated F3D/STEP/STL
 artifacts remain deliberately outside Git.
 
 | Skill | Persisted Fusion feature type | Status |
 |---|---|---|
-| CreateSketchProfile | Sketch | pending |
-| Extrude | ExtrudeFeature | pending |
-| Loft | LoftFeature | pending |
-| ApplyFillet | FilletFeature | pending |
-| ApplyChamfer | ChamferFeature | pending |
-| CreateHole | ExtrudeFeature with CutFeatureOperation | pending |
-| BooleanCut | ExtrudeFeature with CutFeatureOperation | pending |
-| CircularPattern | CircularPatternFeature | pending |
+| CreateSketchProfile | Sketch | PASS |
+| Extrude | ExtrudeFeature | PASS |
+| Loft | LoftFeature | PASS |
+| ApplyFillet | FilletFeature | PASS |
+| ApplyChamfer | ChamferFeature | PASS |
+| CreateHole | ExtrudeFeature with CutFeatureOperation | PASS |
+| BooleanCut | ExtrudeFeature with CutFeatureOperation | PASS |
+| CircularPattern | CircularPatternFeature | PASS |
 
-The smoke passes only if every listed SkillCall produces the corresponding
-native Fusion feature without fallback to another formal Skill. The user
-reported a passing smoke run after the explicit-operation repair, but the
-tracked smoke report remains pending until the raw smoke JSON is regenerated
-and reviewed after the next Fusion run. This smoke gate does not constitute a
-Try-3 result.
+The raw record has 10 successful calls, no errors, real native feature types,
+successful export to F3D/STEP/STL, and no fallback to another formal Skill.
+This smoke gate does not constitute a Try-3 result.

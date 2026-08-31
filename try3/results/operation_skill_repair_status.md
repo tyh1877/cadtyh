@@ -2,9 +2,9 @@
 
 Date: 2026-08-31
 
-Status: explicit basic-operation implementation prepared and SkillCall/Fusion
-job projection validated; Fusion formal batch rerun required after the latest
-projection change.
+Status: explicit basic-operation implementation validated. Fusion smoke passed
+and formal Fusion batch rebuilt 8/10 jobs; the remaining two failures are
+upstream generation failures retained in the denominator.
 
 ## Rationale
 
@@ -38,10 +38,11 @@ The deprecated `try3/fusion_scripts/Try3FusionBatch` executor and old
 
 ## Current job gate
 
-After reprojection, `try3/fusion_api_jobs.json` still contains 10 jobs:
+After reprojection and Fusion execution, `try3/fusion_api_jobs.json` and
+`try3/fusion_api_batch_results.json` still contain 10 jobs:
 
-- READY: 8
-- UPSTREAM_FAILURE: 2
+- Fusion SUCCESS: 8
+- UPSTREAM_FAILURE retained: 2
 
 V1 READY jobs now use explicit base modeling operations:
 
@@ -66,23 +67,15 @@ V2 READY jobs include only basic-operation CAD calls:
 
 Validation confirms zero formal calls to removed middle-layer skills.
 
-## Next Fusion actions
+## Formal batch evidence
 
-First run the smoke script:
+The latest Fusion batch created explicit native feature types:
 
-`D:\CADtest\papertest\robotcad\backends\fusion_api\FusionAPIBackendSmoke`
+- `adsk::fusion::Sketch`: 463
+- `adsk::fusion::ExtrudeFeature`: 490
+- `adsk::fusion::LoftFeature`: 8
+- `adsk::fusion::FilletFeature`: 42
+- `adsk::fusion::ChamferFeature`: 6
+- `adsk::fusion::CircularPatternFeature`: 41
 
-Expected dialog:
-
-`RobotCAD Fusion API skill smoke: SUCCESS`
-
-Then run the formal batch:
-
-`D:\CADtest\papertest\robotcad\backends\fusion_api\FusionAPIBackendBatch`
-
-Expected dialog:
-
-`RobotCAD Fusion API formal batch complete`
-
-After the formal batch rerun, regenerate deterministic geometry/interface
-tables and update `try3/try3_report.md`.
+Deterministic geometry and interface metrics were regenerated after this batch.
