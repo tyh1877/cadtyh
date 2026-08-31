@@ -35,12 +35,9 @@ class FusionAPIBackend:
   for body in c.bRepBodies:
    for edge in body.edges:edges.add(edge)
   return edges
- def cut_or_add(self,c,profile,distance_cm):
-  op=adsk.fusion.FeatureOperations.CutFeatureOperation if c.bRepBodies.count else adsk.fusion.FeatureOperations.NewBodyFeatureOperation
-  x=c.features.extrudeFeatures.createInput(profile,op);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(distance_cm))
-  try:return c.features.extrudeFeatures.add(x)
-  except:
-   x=c.features.extrudeFeatures.createInput(profile,adsk.fusion.FeatureOperations.NewBodyFeatureOperation);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(distance_cm));return c.features.extrudeFeatures.add(x)
+ def cut_feature(self,c,profile,distance_cm):
+  if c.bRepBodies.count==0:raise RuntimeError('cut requested before target body exists')
+  x=c.features.extrudeFeatures.createInput(profile,adsk.fusion.FeatureOperations.CutFeatureOperation);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(distance_cm));return c.features.extrudeFeatures.add(x)
  def primitive_box(self,c,p):
   center=p.get('center',[0,0,0]);size=p.get('size',[10,10,10])
   plane=self.plane_axis(c,[0,0,1],(center[2]-size[2]/2)/10)
@@ -80,38 +77,27 @@ class FusionAPIBackend:
   edges=self.all_edges(c)
   if edges.count==0:return None
   distance=adsk.core.ValueInput.createByReal(max(.02,p.get('distance_mm',1)/10))
-  try:
-   x=c.features.chamferFeatures.createInput2();x.chamferEdgeSets.addEqualDistanceChamferEdgeSet(edges,distance,True);return c.features.chamferFeatures.add(x)
-  except:
-   return self.op_fillet(c,{'radius_mm':p.get('distance_mm',1)*.5})
+  x=c.features.chamferFeatures.createInput2();x.chamferEdgeSets.addEqualDistanceChamferEdgeSet(edges,distance,True);return c.features.chamferFeatures.add(x)
  def op_hole(self,c,p):
   center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);radius=p.get('radius_mm',2);depth=p.get('depth_mm',10)
   plane=self.plane_axis(c,axis,self.axis_offset(center,axis,-depth/2));u,v=self.plane_coords(center,axis)
   s=c.sketches.add(plane);s.sketchCurves.sketchCircles.addByCenterRadius(adsk.core.Point3D.create(u,v,0),radius/10)
-  return self.cut_or_add(c,s.profiles.item(0),depth/10)
- def op_slot(self,c,p):
+  return self.cut_feature(c,s.profiles.item(0),depth/10)
+ def op_boolean_cut(self,c,p):
   center=p.get('center',[0,0,0]);size=p.get('size_mm',[10,3,10]);axis=p.get('axis',[0,0,1])
-  plane=self.plane_axis(c,axis,self.axis_offset(center,axis,-size[2]/2));u,v=self.plane_coords(center,axis)
-  s=c.sketches.add(plane);s.sketchCurves.sketchLines.addTwoPointRectangle(adsk.core.Point3D.create(u-size[0]/20,v-size[1]/20,0),adsk.core.Point3D.create(u+size[0]/20,v+size[1]/20,0))
-  return self.cut_or_add(c,s.profiles.item(0),size[2]/10)
- def op_rib(self,c,p):
-  center=p.get('center',[0,0,0]);size=p.get('size_mm',[20,2,5])
-  return self.primitive_box(c,{'center':[center[0],center[1],center[2]+size[2]/2],'size':size})
- def op_groove(self,c,p):
-  center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);r=p.get('radius_mm',8);width=p.get('width_mm',2)
-  return self.primitive_cylinder(c,{'center':center,'axis':axis,'radius':r,'height':width})
+  depth=max(1,float(p.get('depth_mm',size[2] if len(size)>2 else 10)))
+  plane=self.plane_axis(c,axis,self.axis_offset(center,axis,-depth/2));u,v=self.plane_coords(center,axis)
+  s=c.sketches.add(plane)
+  if p.get('shape')=='circle':
+   s.sketchCurves.sketchCircles.addByCenterRadius(adsk.core.Point3D.create(u,v,0),max(.1,p.get('radius_mm',2)/10))
+  else:
+   s.sketchCurves.sketchLines.addTwoPointRectangle(adsk.core.Point3D.create(u-size[0]/20,v-size[1]/20,0),adsk.core.Point3D.create(u+size[0]/20,v+size[1]/20,0))
+  return self.cut_feature(c,s.profiles.item(0),depth/10)
  def op_circular_pattern(self,c,p):
   center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);r=p.get('radius_mm',8);br=p.get('boss_radius_mm',1.5);h=p.get('boss_height_mm',2);count=int(p.get('count',4))
   count=max(2,min(count,12));seed=self.primitive_cylinder(c,{'center':[center[0]+r,center[1],center[2]],'axis':axis,'radius':br,'height':h})
-  try:
-   entities=adsk.core.ObjectCollection.create();entities.add(seed.bodies.item(0))
-   x=c.features.circularPatternFeatures.createInput(entities,self.construction_axis(c,axis));x.quantity=adsk.core.ValueInput.createByReal(count);x.totalAngle=adsk.core.ValueInput.createByString('360 deg');return c.features.circularPatternFeatures.add(x)
-  except:
-   bosses=[seed]
-   for idx in range(1,count):
-    ang=2*math.pi*idx/count;pos=[center[0]+r*math.cos(ang),center[1]+r*math.sin(ang),center[2]]
-    bosses.append(self.primitive_cylinder(c,{'center':pos,'axis':axis,'radius':br,'height':h}))
-   return bosses[-1]
+  entities=adsk.core.ObjectCollection.create();entities.add(seed.bodies.item(0))
+  x=c.features.circularPatternFeatures.createInput(entities,self.construction_axis(c,axis));x.quantity=adsk.core.ValueInput.createByReal(count);x.totalAngle=adsk.core.ValueInput.createByString('360 deg');return c.features.circularPatternFeatures.add(x)
  def execute(self,call,components):
   p=call['parameters'];name=call['target_component'];skill=call['skill']
   if skill=='PlaceComponentFromURDF':
@@ -128,12 +114,8 @@ class FusionAPIBackend:
   elif skill=='ApplyFillet':feature=self.op_fillet(c,p)
   elif skill=='ApplyChamfer':feature=self.op_chamfer(c,p)
   elif skill=='CreateHole':feature=self.op_hole(c,p)
-  elif skill=='CreatePocket':feature=self.op_slot(c,p)
-  elif skill=='CreateSlot':feature=self.op_slot(c,p)
-  elif skill=='CreateGroove':feature=self.op_groove(c,p)
-  elif skill=='CreateRib':feature=self.op_rib(c,p)
+  elif skill=='BooleanCut':feature=self.op_boolean_cut(c,p)
   elif skill=='CircularPattern':feature=self.op_circular_pattern(c,p)
-  elif skill in ('LinearPattern','MirrorFeature','BooleanCut'):feature=self.op_slot(c,p)
   else: raise RuntimeError('unsupported in v1 backend: '+skill)
   self.log(call,feature)
  def export(self,path,components=None):

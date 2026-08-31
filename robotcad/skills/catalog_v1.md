@@ -1,13 +1,14 @@
 # RobotCAD Skill Catalog v1
 
-Atomic operation skills: `CreateSketch`, `CreateReferencePlane`,
-`CreateReferenceAxis`, `Extrude`, `Revolve`, `Loft`, `Sweep`, `Shell`,
-`Fillet`, `Chamfer`, `Hole`, `Pattern`, `BooleanUnion`, `BooleanCut`.
+Formal executable CAD operation skills: `CreateCompositeLinkGeometry`,
+`ApplyFillet`, `ApplyChamfer`, `CreateHole`, `BooleanCut`,
+`CircularPattern`.
 
-Operation-grounded modeling skills: `CreateCompositeLinkGeometry`,
-`ApplyFillet`, `ApplyChamfer`, `CreateHole`, `CreatePocket`, `CreateSlot`,
-`CreateGroove`, `CreateRib`, `CircularPattern`, `LinearPattern`,
-`MirrorFeature`.
+`CreateCompositeLinkGeometry` is the primitive construction operation. It
+creates base editable bodies from normalized `box`, `cylinder`, `cone`, and
+`sphere` primitives. The remaining CAD operations must map to the named Fusion
+operation in the backend and smoke logs; no operation may silently degrade to a
+different formal Skill name.
 
 Historical mechanical-template names are accepted only by the Try-3 Feature
 Graph projection as aliases into operation skills. They are not valid formal

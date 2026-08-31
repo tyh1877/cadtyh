@@ -22,5 +22,5 @@ def main():
    if m['status']!='SUCCESS':jobs.append({'case_id':row['case_id'],'version':version,'status':'UPSTREAM_FAILURE','error':m['error']});continue
    try:jobs.append({'case_id':row['case_id'],'version':version,'status':'READY','calls':assert_real_skill_calls(validate(run/'skill_calls.json'))['calls']})
    except Exception as exc:jobs.append({'case_id':row['case_id'],'version':version,'status':'SKILL_PROJECTION_FAILURE','error':f'{type(exc).__name__}: {exc}'})
- out=ROOT/'try3/fusion_api_jobs.json';out.write_text(json.dumps({'backend':'FusionAPIBackend.v1','jobs':jobs},indent=2));print(json.dumps({'jobs':len(jobs),'ready':sum(x['status']=='READY' for x in jobs)},indent=2))
+ out=ROOT/'try3/fusion_api_jobs.json';out.write_text(json.dumps({'backend':'FusionAPIBackend.v1.basic_operations','jobs':jobs},indent=2));print(json.dumps({'jobs':len(jobs),'ready':sum(x['status']=='READY' for x in jobs)},indent=2))
 if __name__=='__main__':main()

@@ -38,19 +38,19 @@ def skills_for(primitives,feature_skills):
 def normalize_skill(skill):
  aliases={
   'CreateRoundedLinkHousing':'ApplyFillet',
-  'CreateRotaryJointHousing':'CreateGroove',
+  'CreateRotaryJointHousing':'ApplyFillet',
   'CreateLoftedLinkHousing':'ApplyChamfer',
   'CreateFlangeInterface':'CircularPattern',
-  'CreateShellHousing':'CreateSlot',
+  'CreateShellHousing':'BooleanCut',
   'CreateJointTransition':'ApplyChamfer',
   'ApplyFilletGroup':'ApplyFillet',
   'circular_flange':'CircularPattern',
   'mounting_tabs':'CircularPattern',
   'rectangular_housing':'ApplyFillet',
-  'rectangular_tube':'CreateSlot',
-  'parallel_gripper':'CreateSlot',
+  'rectangular_tube':'BooleanCut',
+  'parallel_gripper':'BooleanCut',
  }
- return aliases.get(skill,skill if skill in {'ApplyFillet','ApplyChamfer','CreateHole','CreatePocket','CreateSlot','CreateGroove','CreateRib','CircularPattern','LinearPattern','MirrorFeature','BooleanCut'} else None)
+ return aliases.get(skill,skill if skill in {'ApplyFillet','ApplyChamfer','CreateHole','CircularPattern','BooleanCut'} else None)
 
 def composite_params(primitives):
  return {'primitives':primitives,'source_primitive_count':len(primitives)}
@@ -69,12 +69,11 @@ def derived_operations(primitives,feature_skills,version):
  if 'ApplyFillet' in requested or env['radius_mm']>6:ops.append(('ApplyFillet',{'radius_mm':max(0.5,min(2.0,env['fillet_radius_mm']))}))
  if 'ApplyChamfer' in requested or any(p['type']=='cone' for p in primitives):ops.append(('ApplyChamfer',{'distance_mm':max(0.5,min(1.5,env['fillet_radius_mm']))}))
  if cyl:
-  ops.append(('CreateGroove',{'center':cyl.get('center',[0,0,0]),'axis':cyl.get('axis',[0,0,1]),'radius_mm':max(1,cyl['radius']*0.92),'width_mm':max(1,cyl['height']*0.08),'depth_mm':max(0.5,cyl['radius']*0.12)}))
   if 'CircularPattern' in requested or cyl['radius']>=10:ops.append(('CircularPattern',{'center':cyl.get('center',[0,0,0]),'axis':cyl.get('axis',[0,0,1]),'radius_mm':max(2,cyl['radius']*0.75),'boss_radius_mm':max(0.8,cyl['radius']*0.12),'boss_height_mm':max(1,cyl['height']*0.06),'count':4}))
  if box:
   ops.append(('CreateHole',{'center':box.get('center',[0,0,0]),'axis':[0,0,1],'radius_mm':max(1,min(box['size'])*0.12),'depth_mm':max(2,box['size'][2]*1.2)}))
-  if max(box['size'])/max(1,min(box['size']))>2.0:ops.append(('CreateSlot',{'center':box.get('center',[0,0,0]),'axis':[0,0,1],'size_mm':[max(2,box['size'][0]*0.45),max(1,box['size'][1]*0.18),max(2,box['size'][2]*1.2)]}))
-  if max(box['size'])>35:ops.append(('CreateRib',{'center':box.get('center',[0,0,0]),'size_mm':[max(2,box['size'][0]*0.65),max(1,box['size'][1]*0.08),max(2,box['size'][2]*0.25)]}))
+  if 'BooleanCut' in requested or max(box['size'])/max(1,min(box['size']))>2.0:
+   ops.append(('BooleanCut',{'center':box.get('center',[0,0,0]),'axis':[0,0,1],'shape':'rectangle','size_mm':[max(2,box['size'][0]*0.45),max(1,box['size'][1]*0.18),max(2,box['size'][2]*1.2)]}))
  seen=[];unique=[]
  for skill,params in ops:
   key=(skill,json.dumps(params,sort_keys=True))

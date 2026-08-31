@@ -4,7 +4,7 @@
   "required": ["version", "features"],
   "properties": {
     "version": {"const": "1"},
-    "features": {"type": "array", "items": {"type": "object", "required": ["link_id", "feature_type", "skill"], "properties": {"link_id": {"type": "string", "pattern": "^L[0-9]+$"}, "feature_type": {"type": "string"}, "skill": {"enum": ["CreateCompositeLinkGeometry", "ApplyFillet", "ApplyChamfer", "CreateHole", "CreatePocket", "CreateSlot", "CreateGroove", "CreateRib", "CircularPattern", "LinearPattern", "MirrorFeature", "BooleanCut", "CreateRotaryJointHousing", "CreateLoftedLinkHousing", "CreateRoundedLinkHousing", "CreateFlangeInterface", "CreateShellHousing", "CreateJointTransition", "ApplyFilletGroup"]}}, "additionalProperties": true}}
+    "features": {"type": "array", "items": {"type": "object", "required": ["link_id", "feature_type", "skill"], "properties": {"link_id": {"type": "string", "pattern": "^L[0-9]+$"}, "feature_type": {"type": "string"}, "skill": {"enum": ["CreateCompositeLinkGeometry", "ApplyFillet", "ApplyChamfer", "CreateHole", "BooleanCut", "CircularPattern", "CreateRotaryJointHousing", "CreateLoftedLinkHousing", "CreateRoundedLinkHousing", "CreateFlangeInterface", "CreateShellHousing", "CreateJointTransition", "ApplyFilletGroup"]}}, "additionalProperties": true}}
   },
   "additionalProperties": true
 }

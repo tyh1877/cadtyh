@@ -1,0 +1,55 @@
+{
+  "backend": "FusionAPIBackend.v1.basic_operations",
+  "formal_allowed_skills": {
+    "CreateCompositeLinkGeometry": {
+      "implemented": true,
+      "operation_level": "primitive_construction",
+      "expected_fusion_features": ["ExtrudeFeature", "LoftFeature"]
+    },
+    "ApplyFillet": {
+      "implemented": true,
+      "operation_level": "basic_cad_operation",
+      "expected_fusion_features": ["FilletFeature"]
+    },
+    "ApplyChamfer": {
+      "implemented": true,
+      "operation_level": "basic_cad_operation",
+      "expected_fusion_features": ["ChamferFeature"]
+    },
+    "CreateHole": {
+      "implemented": true,
+      "operation_level": "basic_cad_operation",
+      "expected_fusion_features": ["ExtrudeFeature"],
+      "feature_operation": "CutFeatureOperation"
+    },
+    "BooleanCut": {
+      "implemented": true,
+      "operation_level": "basic_cad_operation",
+      "expected_fusion_features": ["ExtrudeFeature"],
+      "feature_operation": "CutFeatureOperation"
+    },
+    "CircularPattern": {
+      "implemented": true,
+      "operation_level": "basic_cad_operation",
+      "expected_fusion_features": ["CircularPatternFeature"]
+    },
+    "PlaceComponentFromURDF": {
+      "implemented": true,
+      "operation_level": "assembly_placement",
+      "expected_fusion_features": []
+    },
+    "CreateSharedJointReference": {
+      "implemented": true,
+      "operation_level": "assembly_reference",
+      "expected_fusion_features": []
+    }
+  },
+  "not_formal_skills": {
+    "CreatePocket": "middle-layer feature; represent as BooleanCut when needed",
+    "CreateSlot": "middle-layer feature; represent as BooleanCut when needed",
+    "CreateGroove": "middle-layer feature; represent as BooleanCut or primitive construction when needed",
+    "CreateRib": "middle-layer feature; represent as primitive construction plus BooleanUnion in a future backend",
+    "LinearPattern": "not implemented as a verified Fusion PatternFeature",
+    "MirrorFeature": "not implemented as a verified Fusion MirrorFeature"
+  }
+}

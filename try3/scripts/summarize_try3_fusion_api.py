@@ -181,7 +181,7 @@ def main() -> None:
         "",
         "The Mechanical Embodiment Plan, Interface Graph, and Feature Graph schemas are frozen under `try3/schemas/`. V2 uses them before blueprint projection; V1 does not use the explicit MEP/interface/feature planning stage.",
         "",
-        "Implemented RobotCAD Skills include `CreateCompositeLinkGeometry`, `ApplyFillet`, `ApplyChamfer`, `CreateHole`, `CreatePocket`, `CreateSlot`, `CreateGroove`, `CreateRib`, `CircularPattern`, placement, and shared joint references. Legacy robot-template names are projection aliases only, not formal execution skills.",
+        "Implemented RobotCAD Skills include `CreateCompositeLinkGeometry`, `ApplyFillet`, `ApplyChamfer`, `CreateHole`, `BooleanCut`, `CircularPattern`, placement, and shared joint references. Legacy robot-template names are projection aliases only, not formal execution skills.",
         "",
         "Visible feature recall is not yet computed by an objective detector, so it is not claimed. The screenshot and Fusion outputs show the prior cube collapse is fixed, but that is qualitative evidence only.",
         "",

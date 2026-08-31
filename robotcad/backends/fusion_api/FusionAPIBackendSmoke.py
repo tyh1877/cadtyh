@@ -2,7 +2,7 @@
 import adsk.core,json,os,time,traceback,sys
 ROOT=r"D:\CADtest\papertest";OUT=os.path.join(ROOT,'try3','smoke','fusion_api_skill_smoke.json')
 def run(context):
- result={'status':'FAILURE','backend':'FusionAPIBackend.v1','calls':[],'errors':[],'started_at':time.time()}
+ result={'status':'FAILURE','backend':'FusionAPIBackend.v1.basic_operations','calls':[],'errors':[],'started_at':time.time()}
  app=None
  try:
   # A Fusion script can be launched with a working directory different from
@@ -16,10 +16,8 @@ def run(context):
    ('CreateCompositeLinkGeometry',{'primitives':[{'type':'box','center':[0,0,0],'size':[60,24,18]},{'type':'cylinder','center':[0,0,12],'axis':[1,0,0],'radius':10,'height':70}]}),
    ('ApplyFillet',{'radius_mm':1}),
    ('ApplyChamfer',{'distance_mm':1}),
-   ('CreateGroove',{'center':[0,0,12],'axis':[1,0,0],'radius_mm':8,'width_mm':3,'depth_mm':1}),
    ('CreateHole',{'center':[0,0,0],'axis':[0,0,1],'radius_mm':3,'depth_mm':30}),
-   ('CreateSlot',{'center':[0,0,0],'axis':[0,0,1],'size_mm':[20,4,30]}),
-   ('CreateRib',{'center':[0,0,10],'size_mm':[45,3,8]}),
+   ('BooleanCut',{'center':[0,0,0],'axis':[0,0,1],'shape':'rectangle','size_mm':[20,4,30]}),
    ('CircularPattern',{'center':[0,0,12],'axis':[0,0,1],'radius_mm':14,'boss_radius_mm':2,'boss_height_mm':3,'count':4}),
   ]
   components={}

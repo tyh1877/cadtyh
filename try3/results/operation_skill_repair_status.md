@@ -1,34 +1,34 @@
-# Try-3 Operation-Grounded Skill Repair Status
+# Try-3 Basic CAD Operation Skill Repair Status
 
 Date: 2026-08-31
 
-Status: implementation prepared; Fusion smoke and formal batch rerun required.
+Status: basic-operation implementation prepared and SkillCall/Fusion-job
+projection validated; Fusion smoke and formal batch rerun required.
 
 ## Rationale
 
 Visual inspection of the repaired V1/V2 Fusion outputs showed that the cube
-collapse was fixed, but the geometry was still dominated by boxes and
-cylinders. The remaining bottleneck is not Fusion MCP connectivity; it is that
-the Skill layer used coarse mechanical templates instead of a richer CAD
-operation vocabulary.
+collapse was fixed, but the Skill layer still mixed formal executable
+operations with middle-layer structure names. That made it impossible to prove
+that a SkillCall name matched the native Fusion operation actually executed.
 
 ## Repair
 
-The Try-3 Skill layer now treats robot-specific template names as historical
-Feature Graph aliases only. Formal `robotcad.skill_call.v1` jobs use
-operation-grounded CAD skills:
+The Try-3 Skill layer now treats robot-specific template names and middle-layer
+feature names as projection aliases only. Formal `robotcad.skill_call.v1` jobs
+use only executable basic CAD operation skills:
 
 - `CreateCompositeLinkGeometry`
 - `ApplyFillet`
 - `ApplyChamfer`
 - `CreateHole`
-- `CreatePocket`
-- `CreateSlot`
-- `CreateGroove`
-- `CreateRib`
+- `BooleanCut`
 - `CircularPattern`
-- `LinearPattern`
-- `MirrorFeature`
+- `PlaceComponentFromURDF`
+- `CreateSharedJointReference`
+
+The removed middle-layer names are `CreatePocket`, `CreateSlot`,
+`CreateGroove`, `CreateRib`, `LinearPattern`, and `MirrorFeature`.
 
 The deprecated `try3/fusion_scripts/Try3FusionBatch` executor and old
 `try3/scripts/build_fusion_jobs.py` builder were removed from tracked code.
@@ -46,17 +46,18 @@ V1 READY jobs remain base-composite controls:
 - `CreateCompositeLinkGeometry`: 53
 - `CreateSharedJointReference`: 49
 
-V2 READY jobs now include operation-level CAD calls:
+V2 READY jobs include only basic-operation CAD calls:
 
+- `PlaceComponentFromURDF`: 42
 - `CreateCompositeLinkGeometry`: 42
 - `ApplyFillet`: 42
 - `ApplyChamfer`: 6
-- `CreateGroove`: 42
-- `CircularPattern`: 41
 - `CreateHole`: 20
-- `CreateRib`: 5
-- `CreateSlot`: 5
+- `BooleanCut`: 7
+- `CircularPattern`: 41
 - `CreateSharedJointReference`: 38
+
+Validation confirms zero formal calls to removed middle-layer skills.
 
 ## Next Fusion actions
 
