@@ -11,10 +11,9 @@ does not inspect images, robot names, GT geometry, evaluator scores, or modify
 MEP/interface/URDF decisions. A future Fusion MCP adapter must consume the
 same SkillCall schema.
 
-The historical `Try3FusionBatch.py` is retained as an audit artifact and is
-deprecated for formal execution. Formal execution begins only after the six
-generic composite-skill smoke tests have produced editable F3D, STEP and STL
-artifacts with a successful rebuild.
+The historical `Try3FusionBatch.py` executor is removed from tracked code after
+its failure was recorded in tracked incident reports. Formal execution uses
+only `robotcad/backends/fusion_api/FusionAPIBackendBatch.py`.
 
 Repair note, 2026-08-30: the first formal Fusion API batch is invalidated for
 geometry evaluation because the projection layer collapsed each planner link

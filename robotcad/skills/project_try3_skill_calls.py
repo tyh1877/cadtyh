@@ -33,14 +33,53 @@ def envelope(primitives):
  size=[max(2,hi[i]-lo[i]) for i in range(3)]
  return {'length_mm':max(size),'radius_mm':max(2,min(size)/2),'fillet_radius_mm':max(1,min(size)/20),'source_primitive_count':len(primitives)}
 def skills_for(primitives,feature_skills):
- if feature_skills:return feature_skills
- kinds=[p['type'] for p in primitives]
- if 'cone' in kinds:return ['CreateLoftedLinkHousing']
- if kinds.count('cylinder')>=2:return ['CreateRotaryJointHousing']
- return ['CreateRoundedLinkHousing']
+ return [normalize_skill(x) for x in feature_skills if normalize_skill(x)]
+
+def normalize_skill(skill):
+ aliases={
+  'CreateRoundedLinkHousing':'ApplyFillet',
+  'CreateRotaryJointHousing':'CreateGroove',
+  'CreateLoftedLinkHousing':'ApplyChamfer',
+  'CreateFlangeInterface':'CircularPattern',
+  'CreateShellHousing':'CreateSlot',
+  'CreateJointTransition':'ApplyChamfer',
+  'ApplyFilletGroup':'ApplyFillet',
+  'circular_flange':'CircularPattern',
+  'mounting_tabs':'CircularPattern',
+  'rectangular_housing':'ApplyFillet',
+  'rectangular_tube':'CreateSlot',
+  'parallel_gripper':'CreateSlot',
+ }
+ return aliases.get(skill,skill if skill in {'ApplyFillet','ApplyChamfer','CreateHole','CreatePocket','CreateSlot','CreateGroove','CreateRib','CircularPattern','LinearPattern','MirrorFeature','BooleanCut'} else None)
 
 def composite_params(primitives):
  return {'primitives':primitives,'source_primitive_count':len(primitives)}
+
+def largest(primitives,kind):
+ items=[p for p in primitives if p['type']==kind]
+ if not items:return None
+ if kind=='box':return max(items,key=lambda p:p['size'][0]*p['size'][1]*p['size'][2])
+ if kind=='cylinder':return max(items,key=lambda p:p['radius']*p['radius']*p['height'])
+ return items[0]
+
+def derived_operations(primitives,feature_skills,version):
+ if version!='V2':return []
+ ops=[];box=largest(primitives,'box');cyl=largest(primitives,'cylinder');env=envelope(primitives)
+ requested=skills_for(primitives,feature_skills)
+ if 'ApplyFillet' in requested or env['radius_mm']>6:ops.append(('ApplyFillet',{'radius_mm':max(0.5,min(2.0,env['fillet_radius_mm']))}))
+ if 'ApplyChamfer' in requested or any(p['type']=='cone' for p in primitives):ops.append(('ApplyChamfer',{'distance_mm':max(0.5,min(1.5,env['fillet_radius_mm']))}))
+ if cyl:
+  ops.append(('CreateGroove',{'center':cyl.get('center',[0,0,0]),'axis':cyl.get('axis',[0,0,1]),'radius_mm':max(1,cyl['radius']*0.92),'width_mm':max(1,cyl['height']*0.08),'depth_mm':max(0.5,cyl['radius']*0.12)}))
+  if 'CircularPattern' in requested or cyl['radius']>=10:ops.append(('CircularPattern',{'center':cyl.get('center',[0,0,0]),'axis':cyl.get('axis',[0,0,1]),'radius_mm':max(2,cyl['radius']*0.75),'boss_radius_mm':max(0.8,cyl['radius']*0.12),'boss_height_mm':max(1,cyl['height']*0.06),'count':4}))
+ if box:
+  ops.append(('CreateHole',{'center':box.get('center',[0,0,0]),'axis':[0,0,1],'radius_mm':max(1,min(box['size'])*0.12),'depth_mm':max(2,box['size'][2]*1.2)}))
+  if max(box['size'])/max(1,min(box['size']))>2.0:ops.append(('CreateSlot',{'center':box.get('center',[0,0,0]),'axis':[0,0,1],'size_mm':[max(2,box['size'][0]*0.45),max(1,box['size'][1]*0.18),max(2,box['size'][2]*1.2)]}))
+  if max(box['size'])>35:ops.append(('CreateRib',{'center':box.get('center',[0,0,0]),'size_mm':[max(2,box['size'][0]*0.65),max(1,box['size'][1]*0.08),max(2,box['size'][2]*0.25)]}))
+ seen=[];unique=[]
+ for skill,params in ops:
+  key=(skill,json.dumps(params,sort_keys=True))
+  if key not in seen:seen.append(key);unique.append((skill,params))
+ return unique[:5]
 def main():
  a=argparse.ArgumentParser();a.add_argument('--version',choices=('V1','V2'),required=True);a.add_argument('--case',required=True);x=a.parse_args();run=ROOT/'try3/runs'/x.version/x.case
  bp=json.loads((run/'blueprint.json').read_text());features={}
@@ -49,12 +88,10 @@ def main():
   for f in json.loads(fp.read_text()).get('features',[]):features.setdefault(f['link_id'],[]).append(f['skill'])
  calls=[];i=0;world=world_frames(bp)
  for link in bp['links']:
-  target=link['name'];e=envelope(link['primitives']);agent='V1PerLinkPlanner' if x.version=='V1' else 'V2MechanicalArchitect';skills=skills_for(link['primitives'],features.get(target,[]));i+=1;calls.append(call(f'{x.case}-{i:03d}','PlaceComponentFromURDF',target,{'transform_cm':world[target]},'SkillCallProjection'))
+  target=link['name'];agent='V1PerLinkPlanner' if x.version=='V1' else 'V2MechanicalArchitect';i+=1;calls.append(call(f'{x.case}-{i:03d}','PlaceComponentFromURDF',target,{'transform_cm':world[target]},'SkillCallProjection'))
   i+=1;calls.append(call(f'{x.case}-{i:03d}','CreateCompositeLinkGeometry',target,composite_params(link['primitives']),agent))
-  for skill in skills:
-   if skill in {'CreateRoundedLinkHousing','CreateRotaryJointHousing','CreateLoftedLinkHousing'}:
-    continue
-   i+=1;calls.append(call(f'{x.case}-{i:03d}',skill,target,e,agent))
+  for skill,params in derived_operations(link['primitives'],features.get(target,[]),x.version):
+   i+=1;calls.append(call(f'{x.case}-{i:03d}',skill,target,params,agent))
  for j in bp['joints']:
   i+=1;calls.append(call(f'{x.case}-{i:03d}','CreateSharedJointReference',j['child'],{'joint_id':j['name'],'parent_link':j['parent'],'origin_xyz_mm':j['origin_xyz'],'axis':j['axis']},'SkillCallProjection'))
  out=run/'skill_calls.json';out.write_text(json.dumps({'schema_version':'robotcad.skill_call.v1','calls':calls},indent=2));print(out)

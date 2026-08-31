@@ -9,11 +9,11 @@
   "execution_architecture": {
     "skill_schema": "../robotcad/schemas/skill_call_v1.schema.json",
     "skill_projection": "../robotcad/skills/project_try3_skill_calls.py",
-    "backend": "FusionAPIBackend.v1",
+    "backend": "FusionAPIBackend.v1.operation_grounded",
     "backend_adapter": "../robotcad/backends/fusion_api/FusionAPIBackend.py",
     "fusion_mcp": "unavailable_at_freeze",
     "native_fusion_joint_semantics": "optional_environment_capability",
-    "deprecated_executor": "fusion_scripts/Try3FusionBatch/Try3FusionBatch.py"
+    "removed_deprecated_executor": "fusion_scripts/Try3FusionBatch/Try3FusionBatch.py"
   },
   "limits": {
     "max_model_calls_per_case": 12,

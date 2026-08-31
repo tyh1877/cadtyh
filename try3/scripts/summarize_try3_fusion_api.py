@@ -181,11 +181,11 @@ def main() -> None:
         "",
         "The Mechanical Embodiment Plan, Interface Graph, and Feature Graph schemas are frozen under `try3/schemas/`. V2 uses them before blueprint projection; V1 does not use the explicit MEP/interface/feature planning stage.",
         "",
-        "Implemented RobotCAD Skills include `CreateCompositeLinkGeometry`, `CreateRotaryJointHousing`, `CreateRoundedLinkHousing`, `CreateLoftedLinkHousing`, `CreateFlangeInterface`, `CreateShellHousing`, `CreateJointTransition`, `ApplyFilletGroup`, placement, and shared joint references. The repaired formal jobs primarily exercise extrude and loft through composite primitives; fillet appears in V2 feature calls for the small arm.",
+        "Implemented RobotCAD Skills include `CreateCompositeLinkGeometry`, `ApplyFillet`, `ApplyChamfer`, `CreateHole`, `CreatePocket`, `CreateSlot`, `CreateGroove`, `CreateRib`, `CircularPattern`, placement, and shared joint references. Legacy robot-template names are projection aliases only, not formal execution skills.",
         "",
         "Visible feature recall is not yet computed by an objective detector, so it is not claimed. The screenshot and Fusion outputs show the prior cube collapse is fixed, but that is qualitative evidence only.",
         "",
-        "Primary bottleneck: CAD planning and Fusion Skill capability. Visual grounding supplies varied primitives, and external URDF preserves topology, but the current primitive composition still lacks robust interface-aware booleaning, collision control, and high-fidelity surface detail.",
+        "Primary bottleneck: operation planning and Fusion Skill capability. Visual grounding supplies varied primitives, and external URDF preserves topology, but the current operation library still lacks robust interface-aware booleaning, collision control, and high-fidelity surface detail.",
         "",
         "Recommended next step: Try-3.x refinement focused on interface-aware composite skills and collision/overlap control, then rerun the same TrySet-5. Do not expand the benchmark yet.",
     ]

@@ -1,13 +1,17 @@
 # RobotCAD Skill Catalog v1
 
-Atomic skills: `CreateSketch`, `CreateReferencePlane`, `CreateReferenceAxis`,
-`Extrude`, `Revolve`, `Loft`, `Sweep`, `Shell`, `Fillet`, `Chamfer`, `Hole`,
-`Pattern`, `BooleanUnion`, `BooleanCut`.
+Atomic operation skills: `CreateSketch`, `CreateReferencePlane`,
+`CreateReferenceAxis`, `Extrude`, `Revolve`, `Loft`, `Sweep`, `Shell`,
+`Fillet`, `Chamfer`, `Hole`, `Pattern`, `BooleanUnion`, `BooleanCut`.
 
-Composite skills: `CreateCompositeLinkGeometry`, `CreateRotaryJointHousing`, `CreateRoundedLinkHousing`,
-`CreateLoftedLinkHousing`, `CreateJointTransition`, `CreateFlangeInterface`,
-`CreateShellHousing`, `CreateRecess`, `CreateBoss`, `ApplyFilletGroup`,
-`CreateInterfacePort`.
+Operation-grounded modeling skills: `CreateCompositeLinkGeometry`,
+`ApplyFillet`, `ApplyChamfer`, `CreateHole`, `CreatePocket`, `CreateSlot`,
+`CreateGroove`, `CreateRib`, `CircularPattern`, `LinearPattern`,
+`MirrorFeature`.
+
+Historical mechanical-template names are accepted only by the Try-3 Feature
+Graph projection as aliases into operation skills. They are not valid formal
+`SkillCall` execution skills.
 
 Assembly/verification skills: `PlaceComponentFromURDF`,
 `CreateSharedJointReference`, `CheckInterfaceGap`, `CheckAxisAlignment`,

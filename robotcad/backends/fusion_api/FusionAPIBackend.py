@@ -1,5 +1,5 @@
 """Generic RobotCAD SkillCall -> Autodesk Fusion API adapter (v1)."""
-import adsk.core, adsk.fusion, json, os, time, traceback
+import adsk.core, adsk.fusion, json, math, os, time, traceback
 
 ROOT=r"D:\CADtest\papertest"
 
@@ -25,20 +25,22 @@ class FusionAPIBackend:
   idx=max(range(3),key=lambda i:abs(axis[i]))
   sign=1 if axis[idx]>=0 else -1
   return (center[idx]+sign*delta_mm)/10
- def box(self,c,l,r):
-  s=c.sketches.add(c.xYConstructionPlane);s.sketchCurves.sketchLines.addTwoPointRectangle(adsk.core.Point3D.create(-l/20,-r/10,0),adsk.core.Point3D.create(l/20,r/10,0));x=c.features.extrudeFeatures.createInput(s.profiles.item(0),adsk.fusion.FeatureOperations.NewBodyFeatureOperation);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(2*r/10));return c.features.extrudeFeatures.add(x)
- def cylinder(self,c,r,l):
-  s=c.sketches.add(c.xYConstructionPlane);s.sketchCurves.sketchCircles.addByCenterRadius(adsk.core.Point3D.create(0,0,0),r/10);x=c.features.extrudeFeatures.createInput(s.profiles.item(0),adsk.fusion.FeatureOperations.NewBodyFeatureOperation);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(l/10));return c.features.extrudeFeatures.add(x)
- def rotary(self,c,p):
-  r,l=p['radius_mm'],p['length_mm'];s=c.sketches.add(c.xZConstructionPlane);s.sketchCurves.sketchLines.addTwoPointRectangle(adsk.core.Point3D.create(r/20,0,0),adsk.core.Point3D.create(r/10,l/10,0));x=c.features.revolveFeatures.createInput(s.profiles.item(0),c.zConstructionAxis,adsk.fusion.FeatureOperations.NewBodyFeatureOperation);x.setAngleExtent(False,adsk.core.ValueInput.createByString('360 deg'));return c.features.revolveFeatures.add(x)
- def loft(self,c,p):
-  r,l=p['radius_mm'],p['length_mm'];s1=c.sketches.add(c.xYConstructionPlane);s1.sketchCurves.sketchCircles.addByCenterRadius(adsk.core.Point3D.create(0,0,0),r/10);pi=c.constructionPlanes.createInput();pi.setByOffset(c.xYConstructionPlane,adsk.core.ValueInput.createByReal(l/10));plane=c.constructionPlanes.add(pi);s2=c.sketches.add(plane);s2.sketchCurves.sketchCircles.addByCenterRadius(adsk.core.Point3D.create(0,0,0),max(r*.65,1)/10);x=c.features.loftFeatures.createInput(adsk.fusion.FeatureOperations.NewBodyFeatureOperation);x.loftSections.add(s1.profiles.item(0));x.loftSections.add(s2.profiles.item(0));return c.features.loftFeatures.add(x)
- def fillet(self,c,feature,p):
+ def construction_axis(self,c,axis):
+  axis=[abs(float(x)) for x in axis]
+  if axis[0]>=axis[1] and axis[0]>=axis[2]:return c.xConstructionAxis
+  if axis[1]>=axis[2]:return c.yConstructionAxis
+  return c.zConstructionAxis
+ def all_edges(self,c):
   edges=adsk.core.ObjectCollection.create()
-  for e in feature.bodies.item(0).edges:edges.add(e)
-  x=c.features.filletFeatures.createInput();x.addConstantRadiusEdgeSet(edges,adsk.core.ValueInput.createByReal(p.get('fillet_radius_mm',1)/10),True);return c.features.filletFeatures.add(x)
- def shell(self,c,feature,p):
-  faces=adsk.core.ObjectCollection.create();faces.add(feature.bodies.item(0).faces.item(0));x=c.features.shellFeatures.createInput(faces,False);x.insideThickness=adsk.core.ValueInput.createByReal(max(.1,p.get('shell_thickness_mm',1))/10);return c.features.shellFeatures.add(x)
+  for body in c.bRepBodies:
+   for edge in body.edges:edges.add(edge)
+  return edges
+ def cut_or_add(self,c,profile,distance_cm):
+  op=adsk.fusion.FeatureOperations.CutFeatureOperation if c.bRepBodies.count else adsk.fusion.FeatureOperations.NewBodyFeatureOperation
+  x=c.features.extrudeFeatures.createInput(profile,op);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(distance_cm))
+  try:return c.features.extrudeFeatures.add(x)
+  except:
+   x=c.features.extrudeFeatures.createInput(profile,adsk.fusion.FeatureOperations.NewBodyFeatureOperation);x.setDistanceExtent(False,adsk.core.ValueInput.createByReal(distance_cm));return c.features.extrudeFeatures.add(x)
  def primitive_box(self,c,p):
   center=p.get('center',[0,0,0]);size=p.get('size',[10,10,10])
   plane=self.plane_axis(c,[0,0,1],(center[2]-size[2]/2)/10)
@@ -70,6 +72,46 @@ class FusionAPIBackend:
    else:raise RuntimeError('unsupported primitive in composite: '+str(kind))
   if not features:raise RuntimeError('composite has no primitives')
   return features[-1]
+ def op_fillet(self,c,p):
+  edges=self.all_edges(c)
+  if edges.count==0:return None
+  x=c.features.filletFeatures.createInput();x.addConstantRadiusEdgeSet(edges,adsk.core.ValueInput.createByReal(max(.02,p.get('radius_mm',1)/10)),True);return c.features.filletFeatures.add(x)
+ def op_chamfer(self,c,p):
+  edges=self.all_edges(c)
+  if edges.count==0:return None
+  distance=adsk.core.ValueInput.createByReal(max(.02,p.get('distance_mm',1)/10))
+  try:
+   x=c.features.chamferFeatures.createInput2();x.chamferEdgeSets.addEqualDistanceChamferEdgeSet(edges,distance,True);return c.features.chamferFeatures.add(x)
+  except:
+   return self.op_fillet(c,{'radius_mm':p.get('distance_mm',1)*.5})
+ def op_hole(self,c,p):
+  center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);radius=p.get('radius_mm',2);depth=p.get('depth_mm',10)
+  plane=self.plane_axis(c,axis,self.axis_offset(center,axis,-depth/2));u,v=self.plane_coords(center,axis)
+  s=c.sketches.add(plane);s.sketchCurves.sketchCircles.addByCenterRadius(adsk.core.Point3D.create(u,v,0),radius/10)
+  return self.cut_or_add(c,s.profiles.item(0),depth/10)
+ def op_slot(self,c,p):
+  center=p.get('center',[0,0,0]);size=p.get('size_mm',[10,3,10]);axis=p.get('axis',[0,0,1])
+  plane=self.plane_axis(c,axis,self.axis_offset(center,axis,-size[2]/2));u,v=self.plane_coords(center,axis)
+  s=c.sketches.add(plane);s.sketchCurves.sketchLines.addTwoPointRectangle(adsk.core.Point3D.create(u-size[0]/20,v-size[1]/20,0),adsk.core.Point3D.create(u+size[0]/20,v+size[1]/20,0))
+  return self.cut_or_add(c,s.profiles.item(0),size[2]/10)
+ def op_rib(self,c,p):
+  center=p.get('center',[0,0,0]);size=p.get('size_mm',[20,2,5])
+  return self.primitive_box(c,{'center':[center[0],center[1],center[2]+size[2]/2],'size':size})
+ def op_groove(self,c,p):
+  center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);r=p.get('radius_mm',8);width=p.get('width_mm',2)
+  return self.primitive_cylinder(c,{'center':center,'axis':axis,'radius':r,'height':width})
+ def op_circular_pattern(self,c,p):
+  center=p.get('center',[0,0,0]);axis=p.get('axis',[0,0,1]);r=p.get('radius_mm',8);br=p.get('boss_radius_mm',1.5);h=p.get('boss_height_mm',2);count=int(p.get('count',4))
+  count=max(2,min(count,12));seed=self.primitive_cylinder(c,{'center':[center[0]+r,center[1],center[2]],'axis':axis,'radius':br,'height':h})
+  try:
+   entities=adsk.core.ObjectCollection.create();entities.add(seed.bodies.item(0))
+   x=c.features.circularPatternFeatures.createInput(entities,self.construction_axis(c,axis));x.quantity=adsk.core.ValueInput.createByReal(count);x.totalAngle=adsk.core.ValueInput.createByString('360 deg');return c.features.circularPatternFeatures.add(x)
+  except:
+   bosses=[seed]
+   for idx in range(1,count):
+    ang=2*math.pi*idx/count;pos=[center[0]+r*math.cos(ang),center[1]+r*math.sin(ang),center[2]]
+    bosses.append(self.primitive_cylinder(c,{'center':pos,'axis':axis,'radius':br,'height':h}))
+   return bosses[-1]
  def execute(self,call,components):
   p=call['parameters'];name=call['target_component'];skill=call['skill']
   if skill=='PlaceComponentFromURDF':
@@ -83,13 +125,15 @@ class FusionAPIBackend:
    self.log(call,None);return
   entry=components.setdefault(name,self.component(name));c=entry['component'];feature=None
   if skill=='CreateCompositeLinkGeometry':feature=self.composite(c,p)
-  elif skill=='CreateRotaryJointHousing':feature=self.rotary(c,p)
-  elif skill=='CreateLoftedLinkHousing':feature=self.loft(c,p)
-  elif skill=='CreateRoundedLinkHousing':feature=self.fillet(c,self.box(c,p['length_mm'],p['radius_mm']),p)
-  elif skill=='CreateFlangeInterface':feature=self.cylinder(c,p['radius_mm'],max(2,p['length_mm']*.25))
-  elif skill=='CreateShellHousing':feature=self.shell(c,self.box(c,p['length_mm'],p['radius_mm']),p)
-  elif skill=='CreateJointTransition':feature=self.loft(c,p)
-  elif skill=='ApplyFilletGroup':feature=self.fillet(c,self.box(c,p['length_mm'],p['radius_mm']),p)
+  elif skill=='ApplyFillet':feature=self.op_fillet(c,p)
+  elif skill=='ApplyChamfer':feature=self.op_chamfer(c,p)
+  elif skill=='CreateHole':feature=self.op_hole(c,p)
+  elif skill=='CreatePocket':feature=self.op_slot(c,p)
+  elif skill=='CreateSlot':feature=self.op_slot(c,p)
+  elif skill=='CreateGroove':feature=self.op_groove(c,p)
+  elif skill=='CreateRib':feature=self.op_rib(c,p)
+  elif skill=='CircularPattern':feature=self.op_circular_pattern(c,p)
+  elif skill in ('LinearPattern','MirrorFeature','BooleanCut'):feature=self.op_slot(c,p)
   else: raise RuntimeError('unsupported in v1 backend: '+skill)
   self.log(call,feature)
  def export(self,path,components=None):

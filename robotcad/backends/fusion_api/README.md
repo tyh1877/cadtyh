@@ -11,6 +11,8 @@ skills with fixed non-benchmark inputs.
 
 Formal Try-3 jobs use `CreateCompositeLinkGeometry` as the primary link body
 skill. Its parameters contain normalized `box`, `cylinder`, `cone`, and
-`sphere` primitives produced by the frozen planner output. The backend creates
-those primitives generically inside the target component and does not apply any
-case-specific robot template.
+`sphere` primitives produced by the frozen planner output. V2 then applies
+operation-grounded CAD skills such as `ApplyFillet`, `ApplyChamfer`,
+`CreateHole`, `CreateGroove`, `CreateSlot`, `CreateRib`, and
+`CircularPattern`. The backend creates these features generically inside the
+target component and does not apply any case-specific robot template.

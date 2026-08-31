@@ -106,13 +106,30 @@ def canonicalize_plan(value,joints=None):
   for j in joints:
    item=by_id.get(j['name'],{})
    interfaces.append({'joint_id':j['name'],'parent_link':j['parent'],'child_link':j['child'],'interface_family':'prismatic_guide' if j['type']=='prismatic' else ('fixed_mount' if j['type']=='fixed' else 'rotary_housing'),'coaxial':j['type']!='fixed','clearance_mm':item.get('clearance_mm')})
- skill_map={'circular_flange':'CreateFlangeInterface','mounting_tabs':'CreateFlangeInterface','rectangular_housing':'CreateRoundedLinkHousing','rectangular_tube':'CreateLoftedLinkHousing','parallel_gripper':'CreateShellHousing'}
+ skill_map={
+  'circular_flange':'CircularPattern',
+  'mounting_tabs':'CircularPattern',
+  'rectangular_housing':'ApplyFillet',
+  'rectangular_tube':'CreateSlot',
+  'parallel_gripper':'CreateSlot',
+  'flange':'CircularPattern',
+  'hole':'CreateHole',
+  'holes':'CreateHole',
+  'bolt_pattern':'CircularPattern',
+  'groove':'CreateGroove',
+  'rib':'CreateRib',
+  'slot':'CreateSlot',
+  'chamfer':'ApplyChamfer',
+  'fillet':'ApplyFillet',
+  'pocket':'CreatePocket',
+  'recess':'CreatePocket',
+ }
  features=[]
  for item in value.get('features',[]):
   if not isinstance(item,dict):continue
   link_id=item.get('link_id',item.get('link'));skill=item.get('skill','')
   if not link_id:continue
-  features.append({'link_id':link_id,'feature_type':skill,'skill':skill_map.get(skill,skill if skill in skill_map.values() else 'ApplyFilletGroup')})
+  features.append({'link_id':link_id,'feature_type':skill,'skill':skill_map.get(skill,skill if skill in skill_map.values() else 'ApplyFillet')})
  return {'mep':{'version':'1','links':links},'interfaces':{'version':'1','interfaces':interfaces},'features':{'version':'1','features':features}}
 
 def validate_plan(value,joints=None):
@@ -136,7 +153,7 @@ def main():
    raw,u=invoke(client,cfg.model,sys1,content(packet,'\nKnown anonymous kinematic skeleton:\n'+urdf));history.append({'stage':'visual_evidence','response':raw,'usage':u});[total.__setitem__(k,total[k]+u[k]) for k in total];ev=evidence(raw,links);(run/'visual_evidence.json').write_text(json.dumps(ev,indent=2));sheet=crops(packet,ev,run/'crops'/'contact_sheet.png')
    plan_context='\nSanitized URDF:\n'+urdf+'\nVisual evidence:\n'+json.dumps(ev,separators=(',',':'))
    if a.version=='V2':
-    sys2='Return JSON only with keys mep, interfaces, features. MEP must use version="1" and anonymous L IDs; interfaces must use J/L IDs from URDF; features must use the listed Try-3 generic skills. Do not invent topology.'
+    sys2='Return JSON only with keys mep, interfaces, features. MEP must use version="1" and anonymous L IDs; interfaces must use J/L IDs from URDF; features must use operation-grounded CAD skills such as ApplyFillet, ApplyChamfer, CreateHole, CreatePocket, CreateSlot, CreateGroove, CreateRib, CircularPattern, LinearPattern, MirrorFeature, or BooleanCut. Do not invent topology.'
     raw,u=invoke(client,cfg.model,sys2,[{'type':'text','text':plan_context}]);history.append({'stage':'mep_interface_feature_plan','response':raw,'usage':u});[total.__setitem__(k,total[k]+u[k]) for k in total];plan=validate_plan(extract_json(raw),joints);(run/'mechanical_embodiment_plan.json').write_text(json.dumps(plan['mep'],indent=2));(run/'interface_graph.json').write_text(json.dumps(plan['interfaces'],indent=2));(run/'feature_graph.json').write_text(json.dumps(plan['features'],indent=2));plan_context+='\nMEP/Interface/Feature plan:\n'+json.dumps(plan,separators=(',',':'))
    sys3='Return JSON only Robot CAD blueprint. Instantiate every anonymous URDF link exactly once. URDF joints are binding and will be overwritten deterministically, so focus on detailed exterior link primitives: housings, tapered bodies, flanges, recesses and rounded transitions visible in the evidence. Each link may emit at most 8 base primitives and each primitive must contain only its required geometry fields (no primitive_id, notes, geometry wrapper, or extra metadata). Put extra detail into the Feature Graph plan, not the primitive list.'
    raw,u=invoke(client,cfg.model,sys3,content(packet,plan_context,sheet));history.append({'stage':'cad_blueprint','response':raw,'usage':u});[total.__setitem__(k,total[k]+u[k]) for k in total];bp=enforce(raw,links,joints);(run/'blueprint.json').write_text(json.dumps(bp,indent=2));status='SUCCESS'
