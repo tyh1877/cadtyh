@@ -1,0 +1,63 @@
+{
+  "v2": {
+    "R1": {
+      "mfg_success": 4,
+      "ir_success": 2,
+      "exec_success": 0
+    },
+    "R2": {
+      "mfg_success": 4,
+      "ir_success": 2,
+      "exec_success": 1
+    }
+  },
+  "repaired": {
+    "R1": {
+      "mfg_success": 6,
+      "ir_success": 5,
+      "exec_success": 1,
+      "mfg_total": 6,
+      "ir_total": 6,
+      "exec_total": 6
+    },
+    "R2": {
+      "mfg_success": 6,
+      "ir_success": 4,
+      "exec_success": 0,
+      "mfg_total": 6,
+      "ir_total": 6,
+      "exec_total": 6
+    }
+  },
+  "silent_fallback_total": 0,
+  "operation_usage": {
+    "R1": {
+      "loft": 5,
+      "revolve": 16,
+      "extrude": 10,
+      "boolean_union": 5,
+      "boolean_cut": 7,
+      "fillet": 5,
+      "chamfer": 2
+    },
+    "R2": {
+      "loft": 6,
+      "revolve": 17,
+      "extrude": 8,
+      "boolean_union": 4,
+      "boolean_cut": 5,
+      "fillet": 3,
+      "chamfer": 1
+    }
+  },
+  "bottlenecks": {
+    "MFG-to-IR translation / CAD parameter estimation": 3,
+    "selector/backend execution": 8
+  },
+  "acceptance": {
+    "r2_mfg_valid_min_5": true,
+    "r2_ir_complete_min_4": true,
+    "r2_batch_success_min_3": false,
+    "silent_fallback_zero": true
+  }
+}

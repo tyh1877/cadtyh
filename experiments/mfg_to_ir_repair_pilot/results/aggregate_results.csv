@@ -1,0 +1,3 @@
+version,v2_mfg_success,repaired_mfg_success,v2_ir_success,repaired_ir_success,v2_exec_success,repaired_exec_success
+R1,4,6,2,5,0,1
+R2,4,6,2,4,1,0

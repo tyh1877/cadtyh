@@ -1,0 +1,30 @@
+{
+  "experiment": "mfg_to_ir_repair_pilot",
+  "source_experiment": "experiments/freecad_robot_link_reconstruction_pilot_v2",
+  "frozen_links": "experiments/freecad_robot_link_reconstruction_pilot_v2/inputs/frozen_links.csv",
+  "versions": ["R1", "R2"],
+  "llm_calls": false,
+  "repair_policy": {
+    "allowed": [
+      "extract JSON from existing raw_response.txt",
+      "remove non-contract top-level fields",
+      "canonicalize deterministic field aliases",
+      "normalize vectors and attachment objects",
+      "derive radius from explicit diameter only",
+      "copy existing v2 valid MFG when raw reparse is not better"
+    ],
+    "forbidden": [
+      "GT mesh/STEP/CAD access",
+      "product identity lookup",
+      "adding unobserved mechanical features",
+      "silent fallback in backend execution",
+      "default dimensions that make an incomplete feature pass"
+    ]
+  },
+  "acceptance_targets": {
+    "r2_mfg_valid_min": 5,
+    "r2_ir_complete_min": 4,
+    "r2_batch_success_min": 3,
+    "silent_fallback_total": 0
+  }
+}

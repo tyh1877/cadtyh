@@ -70,3 +70,5 @@ experiments/freecad_robot_link_reconstruction_pilot/runs/
 experiments/freecad_robot_link_reconstruction_pilot/artifacts/
 experiments/freecad_robot_link_reconstruction_pilot_v2/runs/
 experiments/freecad_robot_link_reconstruction_pilot_v2/artifacts/
+experiments/mfg_to_ir_repair_pilot/runs/
+experiments/mfg_to_ir_repair_pilot/artifacts/

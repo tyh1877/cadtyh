@@ -1,0 +1,25 @@
+{
+  "versions": {
+    "R1": {
+      "links_total": 6,
+      "success_links": 1,
+      "operation_count": 50,
+      "native_success_count": 45,
+      "fallback_count": 0,
+      "fcstd_success": 1,
+      "step_success": 1,
+      "stl_success": 1
+    },
+    "R2": {
+      "links_total": 6,
+      "success_links": 0,
+      "operation_count": 44,
+      "native_success_count": 34,
+      "fallback_count": 0,
+      "fcstd_success": 0,
+      "step_success": 0,
+      "stl_success": 0
+    }
+  },
+  "silent_fallback_total": 0
+}

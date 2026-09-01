@@ -1,0 +1,13 @@
+version,case_id,link_id,role,status,source,repair_action_count,errors
+R1,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,raw_response.txt,54,
+R1,dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,raw_response.txt,63,
+R1,dev_arm-dcc2b0ce1e,L4,forearm,SUCCESS,raw_response.txt,61,
+R1,dev_arm-ab15a75247,L0,base_or_shoulder,SUCCESS,raw_response.txt,47,
+R1,dev_arm-ab15a75247,L2,main_link,SUCCESS,raw_response.txt,72,
+R1,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,raw_response.txt,71,
+R2,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,raw_response.txt,71,
+R2,dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,raw_response.txt,59,
+R2,dev_arm-dcc2b0ce1e,L4,forearm,SUCCESS,raw_response.txt,41,
+R2,dev_arm-ab15a75247,L0,base_or_shoulder,SUCCESS,raw_response.txt,61,
+R2,dev_arm-ab15a75247,L2,main_link,SUCCESS,raw_response.txt,42,
+R2,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,raw_response.txt,38,
