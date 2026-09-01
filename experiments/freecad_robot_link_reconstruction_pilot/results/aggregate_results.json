@@ -1,0 +1,26 @@
+[
+  {
+    "version": "R0",
+    "link_count": 6,
+    "mean_mfr": 0.5277777777777778,
+    "mean_voxel_iou": 0.29380827370895696,
+    "mean_chamfer": 0.05493749550896039,
+    "mean_hd95": 0.14230367044787487
+  },
+  {
+    "version": "R1",
+    "link_count": 6,
+    "mean_mfr": 0.7777777777777778,
+    "mean_voxel_iou": 0.1982217026416947,
+    "mean_chamfer": 0.04440598266165802,
+    "mean_hd95": 0.10718133371874271
+  },
+  {
+    "version": "R2",
+    "link_count": 6,
+    "mean_mfr": 0.75,
+    "mean_voxel_iou": 0.2036943028111047,
+    "mean_chamfer": 0.04257260770034552,
+    "mean_hd95": 0.10396348865813347
+  }
+]

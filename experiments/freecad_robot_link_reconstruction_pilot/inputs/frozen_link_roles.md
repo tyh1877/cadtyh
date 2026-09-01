@@ -1,0 +1,26 @@
+# Frozen link roles
+
+- `dev_arm-dcc2b0ce1e/L2`: `upper_arm`
+  - proximal_joint: `J1`
+  - distal_joint: `J2`
+  - expected visible features: `elongated_main_body;proximal_joint_housing;distal_joint_housing;tapered_transition;lightening_cut;fillet_group`
+- `dev_arm-dcc2b0ce1e/L3`: `elbow_housing`
+  - proximal_joint: `J2`
+  - distal_joint: `J3`
+  - expected visible features: `main_housing;proximal_joint_housing;distal_joint_housing;web;recess;fillet_group`
+- `dev_arm-dcc2b0ce1e/L4`: `forearm`
+  - proximal_joint: `J3`
+  - distal_joint: `J4`
+  - expected visible features: `elongated_main_body;proximal_joint_housing;distal_joint_housing;tapered_transition;lightening_cut;fillet_group`
+- `dev_arm-ab15a75247/L0`: `base_or_shoulder`
+  - proximal_joint: `none`
+  - distal_joint: `J0`
+  - expected visible features: `main_housing;flange;proximal_joint_housing;mounting_boss;fillet_group;chamfer_group`
+- `dev_arm-ab15a75247/L2`: `main_link`
+  - proximal_joint: `J1`
+  - distal_joint: `J2`
+  - expected visible features: `elongated_main_body;proximal_joint_housing;distal_joint_housing;tapered_transition;recess;fillet_group`
+- `dev_arm-ab15a75247/L4`: `wrist_or_tool_side_link`
+  - proximal_joint: `J3`
+  - distal_joint: `none`
+  - expected visible features: `palm_plate;tool_flange;mounting_face;gap;mounting_boss;fillet_group`

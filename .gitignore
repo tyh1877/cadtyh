@@ -64,3 +64,7 @@ try2/ground_truth_assembled/
 # FreeCAD backend pilot generated geometry artifacts
 freecad_backend_pilot/artifacts/
 freecad_backend_pilot/runs/
+
+# FreeCAD robot-link reconstruction pilot raw generations and geometry
+experiments/freecad_robot_link_reconstruction_pilot/runs/
+experiments/freecad_robot_link_reconstruction_pilot/artifacts/

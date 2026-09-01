@@ -1,0 +1,13 @@
+version,case_id,link_id,status,model,errors,input_tokens,output_tokens,total_tokens,elapsed_seconds,request_id
+R1,dev_arm-dcc2b0ce1e,L2,SUCCESS,qwen3.7-plus,,1475,5331,6806,91.77534890174866,chatcmpl-55f41016-8abd-9b42-9779-e2ba781dd6d7
+R1,dev_arm-dcc2b0ce1e,L3,SUCCESS,qwen3.7-plus,,1472,5442,6914,92.88832259178162,chatcmpl-23136177-59f3-9e39-8580-5b9de9eff5df
+R1,dev_arm-dcc2b0ce1e,L4,SUCCESS,qwen3.7-plus,,1478,5944,7422,101.45687007904053,chatcmpl-0c6831e0-cd35-9a3e-ba77-d6817772a6d2
+R1,dev_arm-ab15a75247,L0,SUCCESS,qwen3.7-plus,,1038,4938,5976,84.37971830368042,chatcmpl-6cfe468c-cb7d-94f6-8c65-5898ce5bb8e9
+R1,dev_arm-ab15a75247,L2,SUCCESS,qwen3.7-plus,,1143,5711,6854,97.47914719581604,chatcmpl-f3c72272-2083-9fd0-8b3d-5e951ba8d77f
+R1,dev_arm-ab15a75247,L4,SUCCESS,qwen3.7-plus,,1034,4756,5790,81.24198317527771,chatcmpl-ed482c19-9151-970d-bfa2-cc28f90e7d50
+R2,dev_arm-dcc2b0ce1e,L2,SUCCESS,qwen3.7-plus,,1683,5670,7353,97.09343600273132,chatcmpl-0fe596f2-3d68-971c-a261-8c8e9e24f3e9
+R2,dev_arm-dcc2b0ce1e,L3,SUCCESS,qwen3.7-plus,,1680,4493,6173,76.8055489063263,chatcmpl-67aa0b5d-5e84-9113-a209-554d17da9747
+R2,dev_arm-dcc2b0ce1e,L4,SUCCESS,qwen3.7-plus,,1686,5669,7355,96.77012085914612,chatcmpl-d3070e08-64c4-99ba-8d3b-ae87ff87de57
+R2,dev_arm-ab15a75247,L0,SUCCESS,qwen3.7-plus,,1249,6075,7324,103.93322920799255,chatcmpl-837c12ab-75d9-9d74-92f4-5425928ed104
+R2,dev_arm-ab15a75247,L2,SUCCESS,qwen3.7-plus,,1354,4360,5714,74.75130534172058,chatcmpl-447553cc-0445-9b3c-a1a7-888f31534d1c
+R2,dev_arm-ab15a75247,L4,SUCCESS,qwen3.7-plus,,1245,4826,6071,82.50955295562744,chatcmpl-f623e9e5-9c12-92be-bbbf-b2fa45ec544a

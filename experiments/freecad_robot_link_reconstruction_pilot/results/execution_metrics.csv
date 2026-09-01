@@ -1,0 +1,19 @@
+version,case_id,link_id,role,status,operation_count,native_success_count,semantic_match_count,fallback_count,fcstd_success,step_success,stl_success,execution_time_seconds,failure_stage,failure_reason
+R0,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,5,5,5,0,True,True,True,0.43874621391296387,,
+R0,dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,5,5,5,0,True,True,True,0.0735936164855957,,
+R0,dev_arm-dcc2b0ce1e,L4,forearm,SUCCESS,5,5,5,0,True,True,True,0.07428407669067383,,
+R0,dev_arm-ab15a75247,L0,base_or_shoulder,SUCCESS,5,5,5,0,True,True,True,0.07040810585021973,,
+R0,dev_arm-ab15a75247,L2,main_link,SUCCESS,5,5,5,0,True,True,True,0.09348726272583008,,
+R0,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,5,5,5,0,True,True,True,0.08902263641357422,,
+R1,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,10,10,10,0,True,True,True,0.4200313091278076,,
+R1,dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,10,10,10,0,True,True,True,0.33044934272766113,,
+R1,dev_arm-dcc2b0ce1e,L4,forearm,FAILURE,10,9,9,0,False,False,False,0.32383179664611816,FREECAD_EXECUTION,FreeCADBackendError: native shape is null or invalid
+R1,dev_arm-ab15a75247,L0,base_or_shoulder,FAILURE,8,7,7,0,False,False,False,0.038495540618896484,FREECAD_EXECUTION,FreeCADBackendError: native shape is null or invalid
+R1,dev_arm-ab15a75247,L2,main_link,FAILURE,9,8,8,0,False,False,False,0.3144559860229492,FREECAD_EXECUTION,FreeCADBackendError: native shape is null or invalid
+R1,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,8,8,8,0,True,True,True,0.1691441535949707,,
+R2,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,10,10,10,0,True,True,True,0.45938801765441895,,
+R2,dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,9,9,9,0,True,True,True,0.2235267162322998,,
+R2,dev_arm-dcc2b0ce1e,L4,forearm,FAILURE,10,9,9,0,False,False,False,0.3332493305206299,FREECAD_EXECUTION,FreeCADBackendError: native shape is null or invalid
+R2,dev_arm-ab15a75247,L0,base_or_shoulder,FAILURE,13,12,12,0,False,False,False,0.06931447982788086,FREECAD_EXECUTION,FreeCADBackendError: native shape is null or invalid
+R2,dev_arm-ab15a75247,L2,main_link,FAILURE,9,8,8,0,False,False,False,0.31825947761535645,FREECAD_EXECUTION,FreeCADBackendError: native shape is null or invalid
+R2,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,9,9,9,0,True,True,True,0.19066715240478516,,
