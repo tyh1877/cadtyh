@@ -1,15 +1,16 @@
 # FreeCAD Backend Pilot — Capability Audit
 
-Date: 2026-08-31
+Date: 2026-09-01
 
 ## Audit question
 
-Can the current Codex/CLI environment directly run FreeCAD or a FreeCAD MCP/API
-backend for the `freecad_backend_pilot` experiment?
+Can the current environment run a strict FreeCAD backend for the
+`freecad_backend_pilot` experiment, and should MCP block the pilot?
 
 ## Current result
 
-Status: **PASS for local FreeCADCmd/API runtime; FreeCAD MCP still unavailable**
+Status: **PASS for local FreeCADCmd/API runtime; MCP audited separately and not
+used for acceptance**.
 
 The current repository Python environment is:
 
@@ -17,20 +18,9 @@ The current repository Python environment is:
 - Python version observed: `3.12.13`
 - Platform observed: `Windows-11-10.0.26200-SP0`
 
-After the user installed FreeCAD, the following executable was found:
+The usable FreeCAD executable is:
 
 - `D:\software\freeCAD\install\bin\freecadcmd.exe`
-
-The following checks were run from `D:\CADtest\papertest`:
-
-```powershell
-where.exe FreeCADCmd
-where.exe freecadcmd
-where.exe FreeCAD
-```
-
-Result: no executable was found on `PATH`, but recursive local search found
-`D:\software\freeCAD\install\bin\freecadcmd.exe`.
 
 FreeCADCmd audit command:
 
@@ -47,80 +37,53 @@ Observed FreeCAD runtime:
 - `FreeCAD`, `Part`, `Mesh`, and `Import` imported successfully inside
   FreeCADCmd.
 
-The following Python module import availability check was run with the project
-virtual environment:
-
-```python
-import importlib.util
-for module in ["FreeCAD", "Part", "PartDesign", "Sketcher", "Draft", "Mesh", "Import", "ImportGui"]:
-    print(module, importlib.util.find_spec(module))
-```
-
-Observed result from the repository `.venv`:
-
-| Module | Availability |
-|---|---:|
-| `FreeCAD` | missing |
-| `Part` | missing |
-| `PartDesign` | missing |
-| `Sketcher` | missing |
-| `Draft` | missing |
-| `Mesh` | missing |
-| `Import` | missing |
-| `ImportGui` | missing |
+The repository `.venv` does not directly import FreeCAD modules. This is
+expected; FreeCAD execution is performed through FreeCADCmd.
 
 ## MCP audit
 
-Tool discovery was queried for FreeCAD MCP / CAD typed tools.
+Tool discovery found no callable FreeCAD MCP tools in the current Codex agent.
+Public candidate repositories were recorded separately in
+`freecad_mcp_audit.md`.
 
-Observed result: no FreeCAD MCP tools are exposed to the current agent. No
-typed tools such as `create_sketch`, `pad`, `revolve`, `loft`, `fillet`, or
-`inspect_object` are currently callable.
+Current MCP classification: **MCP_AUDITED_NOT_USED_FOR_ACCEPTANCE**.
 
-Current MCP classification: **NO_FREECAD_MCP_AVAILABLE**
+The pilot therefore uses this formal execution stack:
 
-Because no FreeCAD MCP is available, the pilot cannot yet determine from local
-execution whether a third-party FreeCAD MCP would be a typed CAD tool server or
-merely an `execute_python` transport. This must be re-audited after a specific
-MCP repository is installed/connected.
+`Executable CAD IR v1 -> RobotCAD FreeCADBackend -> FreeCADCmd -> FreeCAD Python API`
 
 ## Operation capability matrix
 
-The prompt requires all capabilities below to be checked by current-environment
-execution, not assumed from documentation. FreeCADCmd is callable, so native
-capability checks can be performed through the FreeCAD Python API helper path.
-MCP-specific checks remain blocked.
-
 | Capability | Current evidence | Status |
 |---|---|---:|
-| create document | `FreeCAD.newDocument()` used in smoke runner | pass |
-| create Part / Body | `Part::Box`, `Part::Cylinder`, `Part::Feature` used | pass |
-| create Sketch | not exercised as Sketcher-native constrained sketch | not tested |
-| constraints | not exercised as Sketcher constraints | not tested |
-| Pad / Extrude | native type exists; not in the 10-operation smoke matrix | available |
+| create document | `FreeCAD.newDocument()` used in smoke and link execution | pass |
+| create Part object | `Part::Feature`, `Part::Extrusion`, `Part::Revolution`, `Part::Loft`, etc. | pass |
+| create Sketch / Sketcher constraints | not part of this scoped pilot | not tested |
+| Pad / Extrude | `Part::Extrusion` in smoke and link batch | pass |
 | Pocket / Cut | `Part::Cut` smoke test | pass |
-| Revolve | `Part::Revolution` smoke test | pass |
-| Loft | `Part::Loft` smoke test | pass |
+| Revolve | `Part::Revolution` smoke and link batch | pass |
+| Loft | `Part::Loft` smoke and link batch | pass |
 | Sweep / Pipe | `Part::Sweep` smoke test | pass |
 | Shell / Thickness | `Part::Thickness` smoke test | pass |
-| Boolean Union | `Part::Fuse` smoke test | pass |
+| Boolean Union | `Part::Fuse` and `Part::MultiFuse` tested | pass |
 | Boolean Cut | `Part::Cut` smoke test | pass |
-| Fillet | `Part::Fillet` smoke test | pass |
+| Fillet | `Part::Fillet` smoke and link batch | pass |
 | Chamfer | `Part::Chamfer` smoke test | pass |
-| Pattern | Draft array smoke test, stored as `Part::FeaturePython` with Array proxy | pass |
+| Pattern | Draft array smoke test | pass |
 | Mirror | `Part::Mirroring` smoke test | pass |
 | placement / transform | placement used in smoke setup | pass |
-| recompute | 10/10 smoke tests recomputed | pass |
-| inspect object tree | object type/name and shape stats logged | pass |
-| inspect feature type | 10/10 executed native types recorded | pass |
-| read parameters/properties | basic object properties and shape stats recorded | partial |
-| export FCStd | 10/10 smoke tests saved FCStd | pass |
-| export STEP | 10/10 smoke tests exported STEP | pass |
-| export STL | 10/10 smoke tests exported STL | pass |
+| recompute | 10/10 smoke and 6/6 link batch recomputed | pass |
+| inspect object tree | object name/type and shape stats logged | pass |
+| inspect feature type | native feature type recorded for each operation | pass |
+| read parameters/properties | object properties and shape stats recorded | pass for scoped pilot |
+| export FCStd | 10/10 smoke and 6/6 link batch saved/reopened | pass |
+| export STEP | 10/10 smoke and 6/6 link batch exported | pass |
+| export STL | 10/10 smoke and 6/6 link batch exported | pass |
 
 ## Experimental implication
 
-The FreeCAD native operation smoke test is successful through FreeCADCmd/API.
-The six existing link plans are not executed because they are vague semantic
-plans and fail Executable CAD IR completeness checks. This is an upstream IR
-blocker, not a FreeCAD native-operation blocker.
+FreeCAD is no longer just a smoke-test candidate. Under the scoped pilot, it can
+strictly execute generated Executable CAD IR for the six frozen links with no
+silent fallback. The remaining research risk shifts upward: the planner must
+produce semantically meaningful and sufficiently detailed CAD IR, rather than
+vague operation descriptions or visually generic solids.

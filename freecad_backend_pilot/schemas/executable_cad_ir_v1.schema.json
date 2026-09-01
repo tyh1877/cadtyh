@@ -22,7 +22,8 @@
     "operations": {
       "type": "array",
       "items": { "$ref": "#/$defs/operation" }
-    }
+    },
+    "final_object": { "type": "string" }
   },
   "$defs": {
     "vec3": {
@@ -139,4 +140,3 @@
   },
   "additionalProperties": false
 }
-

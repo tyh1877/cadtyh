@@ -63,3 +63,4 @@ try2/ground_truth_assembled/
 
 # FreeCAD backend pilot generated geometry artifacts
 freecad_backend_pilot/artifacts/
+freecad_backend_pilot/runs/

@@ -1,3 +1,3 @@
 case_id,link_id,trial_count,status,operation_success_consistent,feature_tree_consistent,bbox_consistent,volume_consistent,export_consistent,failure_stage,failure_reason
 smoke_revolve,smoke,3,SUCCESS,True,True,True,True,True,,
-dev_arm-dcc2b0ce1e,L2,0,IR_INCOMPLETE,False,False,False,False,False,IR_VALIDATION,Existing operation_plan_pilot link plan is not Executable CAD IR; repeated FreeCAD execution intentionally skipped
+dev_arm-dcc2b0ce1e,L2,3,SUCCESS,True,True,True,True,True,,

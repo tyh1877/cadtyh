@@ -1,19 +1,18 @@
 # FreeCAD Backend Pilot Report
 
-Date: 2026-08-31
+Date: 2026-09-01
 
 ## Decision
 
-Current state: **partial pass**.
+Current state: **pass for the scoped backend pilot**.
 
-FreeCAD itself is a strong backend candidate: the local `FreeCADCmd` runtime
-successfully executed the required operation-level native smoke tests without
-silent fallback.
+FreeCADCmd + FreeCAD Python API is a viable strict RobotCAD backend candidate.
+It executed the required native operation smoke tests and the six frozen-link
+Executable CAD IR batch without silent fallback.
 
-However, the existing six `operation_plan_pilot` link plans cannot be executed
-under the strict pilot rules because they are vague semantic plans, not
-Executable CAD IR v1. Link execution is therefore blocked at `IR_VALIDATION`,
-not at FreeCAD native operation execution.
+Important boundary: this pilot validates backend executability and
+reproducibility, not visual resemblance to a full industrial robot arm. The
+current generated links are deliberately simple operation-bearing solids.
 
 ## Environment
 
@@ -21,13 +20,50 @@ not at FreeCAD native operation execution.
 - FreeCAD version: `1.1.1`
 - Revision: `20260414 (Git shallow)`
 - Embedded Python: `3.11.14`
-- Current FreeCAD MCP: none exposed to the current agent
-- MCP classification: `NO_FREECAD_MCP_AVAILABLE_IN_CURRENT_AGENT`
+- Repository Python: `.venv\Scripts\python.exe`
+- Current local FreeCAD MCP: none exposed to this agent
+- Formal acceptance path: `FreeCADCmd + FreeCAD Python API`
+- MCP status: capability audit only; not used for pass/fail
+
+## Original six-link plan check
+
+The frozen six `operation_plan_pilot` link plans were first checked directly.
+They remain non-executable vague plans:
+
+- Links total: `6`
+- Directly ready links: `0`
+- IR-incomplete links: `6`
+- Operations total in old plans: `65`
+- IR-complete operations in old plans: `0`
+
+This result is retained because it explains why the upstream LLM must emit
+Executable CAD IR rather than natural-language operation plans.
+
+## Executable CAD IR generation
+
+A new Qwen-based generation script regenerated Executable CAD IR v1 for the
+same six frozen links. It uses the existing Alibaba/Qwen configuration and does
+not use GT mesh, STEP, CAD, or product identity.
+
+Result:
+
+- Provider/model: `qwen3.7-plus`
+- Links total: `6`
+- Output links: `6`
+- Schema-valid links: `6`
+- IR-complete links: `6`
+- Operations total: `30`
+
+The generator performs deterministic alias canonicalization only and adds a
+geometry sanity gate for FreeCAD-native revolve: with the current XY profile
+construction, the revolution axis must lie in the profile plane. This prevented
+the earlier invalid Z-axis revolve failure from being counted as backend
+success.
 
 ## Operation-level smoke results
 
 All required operation-level smoke tests passed through FreeCADCmd + FreeCAD
-Python API helper:
+Python API:
 
 | Operation | Native type | Result |
 |---|---|---:|
@@ -52,79 +88,66 @@ Aggregate:
 - STEP Export Success Rate: `10/10`
 - STL Export Success Rate: `10/10`
 
-## Six-link plan execution
+## Six-link FreeCAD execution
 
-The frozen six existing link plans were checked for Executable CAD IR v1
-completeness.
-
-Result:
+Only schema-valid and IR-complete generated IRs were executed. All six completed
+under strict native operation mapping.
 
 - Links total: `6`
-- Ready executable links: `0`
-- IR-incomplete links: `6`
-- Operations total: `65`
-- IR-complete operations: `0`
-- IR-incomplete operations: `65`
+- Successful links: `6`
+- Failed/incomplete links: `0`
+- Operations total: `30`
+- Native-successful operations: `30`
+- Semantic-match operations: `30`
+- Silent fallbacks: `0`
+- Batch Execution Success Rate: `6/6`
+- FCStd Save/Reopen Rate: `6/6`
+- STEP Export Rate: `6/6`
+- STL Export Rate: `6/6`
+- Feature Introspection Coverage: `6/6`
 
-This is the correct strict outcome. The old plans contain statements such as
-`"operation": "Revolve"` and natural-language descriptions, but do not provide
-required executable fields such as sketch plane, closed profile, axis, angle,
-operation mode, dependencies, edge selectors, or face selectors.
+The initial 5/6 result exposed two real issues:
 
-The backend did not guess missing geometry and did not replace complex
-operations with primitive approximations.
+1. `Part::Fuse` was incorrectly used with a `Tools` property. This was a backend
+   bug and was fixed by using `Part::Fuse.Tool` for one tool and
+   `Part::MultiFuse.Shapes` for multiple tools.
+2. One regenerated IR used a Z-axis revolve with an XY profile, producing an
+   invalid FreeCAD shape. This was fixed by making the generator reject that
+   invalid geometry pattern before backend execution.
+
+Neither fix introduced a silent fallback.
 
 ## Reproducibility
 
-Native revolve smoke was repeated 3 times:
+Two reproducibility checks were run:
 
-- success consistency: pass
-- bbox consistency: pass
-- volume consistency: pass
-- topology count consistency: pass
+- Native revolve smoke: 3 trials, reproducible.
+- Complex generated link `dev_arm-dcc2b0ce1e/L2`: 3 trials, reproducible.
 
-Complex link reproducibility was not run because the selected link plan is
-`IR_INCOMPLETE`.
+For the complex link, all three trials produced the same feature type sequence:
 
-## Required questions
+`Part::Extrusion -> Part::Revolution -> Part::Loft -> Part::MultiFuse -> Part::Fillet`
 
-1. Current FreeCAD version: `1.1.1`.
-2. Current FreeCAD MCP: none exposed to this agent.
-3. Is the MCP a typed CAD tool MCP: not currently testable; no MCP is connected.
-4. Operations possible purely through MCP: none in the current environment.
-5. Operations needing FreeCAD API helper: all tested operations currently use
-   the FreeCAD API helper path.
-6. Revolve native execution: yes, `Part::Revolution`.
-7. Loft native execution: yes, `Part::Loft`.
-8. Sweep/Pipe native execution: yes, `Part::Sweep`.
-9. Shell/Thickness native execution: yes, `Part::Thickness`.
-10. Boolean/Fillet/Chamfer/Pattern stability: passed in deterministic smoke.
-11. Silent fallback: no; observed fallback rate is `0`.
-12. Six links complete execution: `0/6`, because all six plans are
-    `IR_INCOMPLETE`.
-13. FCStd batch save/reopen: yes for `10/10` smoke tests.
-14. STEP/STL export: yes for `10/10` smoke tests.
-15. Feature tree/object properties inspection: basic feature type/name and
-    shape stats are inspectable; deeper dependency/constraint introspection is
-    still partial.
-16. Per-operation failure localization: yes for smoke execution and link IR
-    validation.
-17. Repeated-run stability: native revolve smoke is stable across 3 runs.
-18. Is FreeCAD better than the current Fusion-script pipeline for research
-    experiments: yes as a backend candidate, because it is batch-callable from
-    CLI and supports native strict operations without manual GUI execution.
-19. Recommend migrating Try-3 now: migrate the backend direction to FreeCAD,
-    but do not rerun full Try-3 until the upstream planner emits Executable CAD
-    IR v1.
-20. Missing backend capabilities: executable IR generation, Sketcher constraint
-    smoke tests, deeper feature dependency introspection, full link execution,
-    and optional evaluation of a third-party FreeCAD MCP.
+The bbox, volume, face count, edge count, and export status were also stable.
+
+## MCP audit
+
+FreeCAD MCP was not available locally, so it was not part of formal acceptance.
+Candidate repositories were recorded in `freecad_mcp_audit.md`. The current
+recommendation is to keep MCP as a future adapter only:
+
+`Executable CAD IR v1 -> FreeCADMCPAdapter`
+
+It must not alter the upper RobotCAD IR / Skills / Agent interface.
 
 ## Recommendation
 
-Use FreeCADCmd + FreeCAD Python API helper as the next primary backend path.
-Treat third-party FreeCAD MCP as optional infrastructure to evaluate later. The
-immediate blocker is not FreeCAD; it is the upstream output format. The next
-RobotCAD revision should make the LLM emit Executable CAD IR v1 with complete
-operation parameters.
+Move the next Try-3 backend direction from Fusion-script execution to
+FreeCADCmd/API. The engineering reason is concrete: FreeCAD is batch-callable
+from CLI, supports the required native operations, preserves feature/object
+introspection, exports FCStd/STEP/STL, and is reproducible under the scoped
+pilot.
 
+Do not claim that this proves high-quality robot-arm reconstruction yet. It
+proves that the backend can strictly execute richer CAD operations if the
+upstream planner emits complete Executable CAD IR.

@@ -1,0 +1,9 @@
+{
+  "links_total": 6,
+  "success_links": 6,
+  "failed_or_incomplete_links": 0,
+  "operations_total": 30,
+  "native_success_count": 30,
+  "semantic_match_count": 30,
+  "fallback_count": 0
+}

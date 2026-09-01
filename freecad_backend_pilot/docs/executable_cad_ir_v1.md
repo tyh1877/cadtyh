@@ -25,9 +25,9 @@ Each operation must contain:
 
 | Operation | Required fields | Native FreeCAD mapping expected |
 |---|---|---|
-| `extrude` / `pad` | `sketch_plane`, `profile`, `distance_mm`, `operation_mode` | Pad or Part Extrude |
-| `pocket` / `cut` | `sketch_plane`, `profile`, `distance_mm`, `operation_mode` | Pocket or Boolean Cut |
-| `revolve` | `sketch_plane`, `profile`, `axis`, `angle_deg`, `operation_mode` | native revolve/revolution feature |
+| `extrude` / `pad` | `profile`, `distance_mm`, `operation_mode`, `reference_frame` | Pad or Part Extrude |
+| `pocket` / `cut` | `tool_bodies`, `reference_frame` | Pocket or Boolean Cut |
+| `revolve` | `profile`, `axis`, `angle_deg`, `operation_mode`, `reference_frame` | native revolve/revolution feature |
 | `loft` | `profiles`, `solid`, `operation_mode` | native loft |
 | `sweep` / `pipe` | `profile`, `profile_frame`, `path`, `orientation_mode`, `transition_mode`, `solid`, `operation_mode` | native sweep/pipe |
 | `shell` / `thickness` | `target_body`, `faces_to_remove`, `thickness_mm`, `direction`, `join_mode` | native thickness/shell |
@@ -37,6 +37,12 @@ Each operation must contain:
 | `chamfer` | `target_body`, `edge_selectors`, `distance_mm` | native chamfer |
 | `pattern` | `target_features`, `pattern_type`, `axis_or_direction`, `count`, `spacing_or_angle` | native array/pattern |
 | `mirror` | `target_features`, `mirror_plane` | native mirror |
+
+Pilot v1 profile convention: profile coordinates are interpreted directly in
+world coordinates. Rectangle/circle/annulus helper profiles are currently
+constructed in the XY plane. Therefore a `revolve` axis must lie in the profile
+plane; an axis parallel to the XY normal is rejected as `IR_INCOMPLETE` by the
+generation validator.
 
 ## Failure classifications
 
@@ -49,4 +55,3 @@ Each operation must contain:
 - `FALLBACK_USED`: backend substituted a different operation.
 - `SEMANTIC_EXECUTION_FAILURE`: executed operation type does not match requested
   operation type.
-

@@ -1,7 +1,7 @@
 {
   "experiment": "freecad_backend_pilot",
-  "date": "2026-08-31",
-  "status": "PARTIAL_PASS_BACKEND_SMOKE__BLOCKED_LINK_IR",
+  "date": "2026-09-01",
+  "status": "PASS_FREECADCMD_API_EXECUTABLE_IR_PILOT",
   "freecad_runtime": {
     "available": true,
     "freecadcmd": "D:\\software\\freeCAD\\install\\bin\\freecadcmd.exe",
@@ -11,8 +11,9 @@
   },
   "freecad_mcp": {
     "available": false,
-    "classification": "NO_FREECAD_MCP_AVAILABLE_IN_CURRENT_AGENT",
-    "typed_cad_tools": []
+    "classification": "MCP_AUDITED_NOT_USED_FOR_ACCEPTANCE",
+    "typed_cad_tools": [],
+    "candidate_repositories": 5
   },
   "operation_smoke": {
     "operation_total": 10,
@@ -25,20 +26,45 @@
     "stl_export_success_rate": 1.0,
     "feature_introspection_coverage": 1.0
   },
-  "six_link_execution": {
+  "original_plan_completeness": {
     "links_total": 6,
-    "executed_links": 0,
+    "ready_links": 0,
     "ir_incomplete_links": 6,
     "operations_total": 65,
     "ir_complete_operations": 0,
     "ir_incomplete_operations": 65,
-    "batch_execution_success_rate": 0.0,
-    "blocker": "Existing operation_plan_pilot plans are vague semantic plans, not Executable CAD IR v1. Backend execution was intentionally skipped to avoid guessing CAD parameters."
+    "interpretation": "The frozen vague operation_plan_pilot files are not directly executable and require upstream Executable CAD IR generation."
+  },
+  "executable_ir_generation": {
+    "links_total": 6,
+    "schema_valid_links": 6,
+    "ir_complete_links": 6,
+    "ir_incomplete_links": 0,
+    "operations_total": 30,
+    "provider_model": ["qwen3.7-plus"]
+  },
+  "six_link_execution": {
+    "links_total": 6,
+    "success_links": 6,
+    "failed_or_incomplete_links": 0,
+    "operations_total": 30,
+    "native_success_count": 30,
+    "semantic_match_count": 30,
+    "fallback_count": 0,
+    "native_operation_execution_rate": 1.0,
+    "semantic_execution_fidelity": 1.0,
+    "silent_fallback_rate": 0.0,
+    "batch_execution_success_rate": 1.0,
+    "fcstd_save_reopen_success_rate": 1.0,
+    "step_export_success_rate": 1.0,
+    "stl_export_success_rate": 1.0,
+    "feature_introspection_coverage": 1.0
   },
   "reproducibility": {
     "smoke_revolve_trials": 3,
     "smoke_revolve_reproducible": true,
-    "complex_link_reproducibility": "not_run_ir_incomplete"
+    "complex_link_trials": 3,
+    "complex_link_reproducible": true
   },
-  "recommendation": "Use FreeCAD as the preferred backend candidate for the next strict RobotCAD backend, but do not migrate full Try-3 until the upstream planner emits Executable CAD IR v1 rather than vague operation descriptions. MCP is optional; current evidence supports FreeCADCmd + FreeCAD Python API helper as a controllable batch backend."
+  "recommendation": "Proceed with FreeCADCmd + FreeCAD Python API as the formal RobotCAD backend for the next Try-3 iteration. Keep FreeCAD MCP as an optional adapter candidate only; do not let MCP availability change the upstream Executable CAD IR contract."
 }

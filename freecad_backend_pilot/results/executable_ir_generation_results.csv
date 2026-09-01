@@ -1,0 +1,7 @@
+case_id,link_id,status,model,schema_valid,ir_complete,operation_count,errors
+dev_arm-ab15a75247,L0,SUCCESS,qwen3.7-plus,True,True,5,
+dev_arm-ab15a75247,L2,SUCCESS,qwen3.7-plus,True,True,5,
+dev_arm-ab15a75247,L4,SUCCESS,qwen3.7-plus,True,True,5,
+dev_arm-dcc2b0ce1e,L2,SUCCESS,qwen3.7-plus,True,True,5,
+dev_arm-dcc2b0ce1e,L3,SUCCESS,qwen3.7-plus,True,True,5,
+dev_arm-dcc2b0ce1e,L4,SUCCESS,qwen3.7-plus,True,True,5,

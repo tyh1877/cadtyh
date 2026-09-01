@@ -1,51 +1,134 @@
 {
   "smoke_revolve_trials": [
     {
-      "success": true,
-      "stats": {
-        "valid": true,
-        "volume": 6107.256119,
-        "bbox": [
-          24.0,
-          18.0,
-          24.0
-        ],
-        "solids": 1,
-        "faces": 4,
-        "edges": 6
+      "status": "SUCCESS",
+      "feature_types": [
+        "Part::Revolution"
+      ],
+      "bbox": [
+        24.0,
+        18.0,
+        24.0
+      ],
+      "volume": 6107.256119,
+      "faces": 4,
+      "edges": 6,
+      "exports": {
+        "fcstd": true,
+        "step": true,
+        "stl": true
       }
     },
     {
-      "success": true,
-      "stats": {
-        "valid": true,
-        "volume": 6107.256119,
-        "bbox": [
-          24.0,
-          18.0,
-          24.0
-        ],
-        "solids": 1,
-        "faces": 4,
-        "edges": 6
+      "status": "SUCCESS",
+      "feature_types": [
+        "Part::Revolution"
+      ],
+      "bbox": [
+        24.0,
+        18.0,
+        24.0
+      ],
+      "volume": 6107.256119,
+      "faces": 4,
+      "edges": 6,
+      "exports": {
+        "fcstd": true,
+        "step": true,
+        "stl": true
       }
     },
     {
-      "success": true,
-      "stats": {
-        "valid": true,
-        "volume": 6107.256119,
-        "bbox": [
-          24.0,
-          18.0,
-          24.0
-        ],
-        "solids": 1,
-        "faces": 4,
-        "edges": 6
+      "status": "SUCCESS",
+      "feature_types": [
+        "Part::Revolution"
+      ],
+      "bbox": [
+        24.0,
+        18.0,
+        24.0
+      ],
+      "volume": 6107.256119,
+      "faces": 4,
+      "edges": 6,
+      "exports": {
+        "fcstd": true,
+        "step": true,
+        "stl": true
       }
     }
   ],
   "smoke_revolve_reproducible": true,
-  "complex_link_trial_status": "IR_INCOMPLETE"
+  "complex_link_trials": [
+    {
+      "status": "SUCCESS",
+      "feature_types": [
+        "Part::Extrusion",
+        "Part::Revolution",
+        "Part::Loft",
+        "Part::MultiFuse",
+        "Part::Fillet"
+      ],
+      "bbox": [
+        145.0,
+        30.0,
+        33.995649
+      ],
+      "volume": 55532.924879,
+      "faces": 14,
+      "edges": 40,
+      "exports": {
+        "fcstd": true,
+        "step": true,
+        "stl": true
+      }
+    },
+    {
+      "status": "SUCCESS",
+      "feature_types": [
+        "Part::Extrusion",
+        "Part::Revolution",
+        "Part::Loft",
+        "Part::MultiFuse",
+        "Part::Fillet"
+      ],
+      "bbox": [
+        145.0,
+        30.0,
+        33.995649
+      ],
+      "volume": 55532.924879,
+      "faces": 14,
+      "edges": 40,
+      "exports": {
+        "fcstd": true,
+        "step": true,
+        "stl": true
+      }
+    },
+    {
+      "status": "SUCCESS",
+      "feature_types": [
+        "Part::Extrusion",
+        "Part::Revolution",
+        "Part::Loft",
+        "Part::MultiFuse",
+        "Part::Fillet"
+      ],
+      "bbox": [
+        145.0,
+        30.0,
+        33.995649
+      ],
+      "volume": 55532.924879,
+      "faces": 14,
+      "edges": 40,
+      "exports": {
+        "fcstd": true,
+        "step": true,
+        "stl": true
+      }
+    }
+  ],
+  "complex_link_reproducible": true
 }
