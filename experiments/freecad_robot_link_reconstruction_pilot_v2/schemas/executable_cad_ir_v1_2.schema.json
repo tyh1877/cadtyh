@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RobotCAD Executable CAD IR v1.2",
+  "type": "object",
+  "required": ["ir_version", "case_id", "link_id", "bodies", "operations"],
+  "additionalProperties": true,
+  "properties": {
+    "ir_version": {"type": "string", "enum": ["executable_cad_ir_v1_2"]},
+    "case_id": {"type": "string"},
+    "link_id": {"type": "string"},
+    "bodies": {"type": "array", "items": {"type": "object"}},
+    "operations": {"type": "array", "items": {"$ref": "#/$defs/operation"}},
+    "final_object": {"type": "string"},
+    "metadata": {"type": "object"}
+  },
+  "$defs": {
+    "operation": {
+      "type": "object",
+      "required": ["op_id", "op_type", "target_body", "dependencies", "reference_frame"],
+      "additionalProperties": true,
+      "properties": {
+        "op_id": {"type": "string"},
+        "op_type": {
+          "type": "string",
+          "enum": ["extrude", "pad", "pocket", "cut", "revolve", "loft", "sweep", "pipe", "shell", "thickness", "boolean_union", "boolean_cut", "fillet", "chamfer", "pattern", "mirror"]
+        },
+        "target_body": {"type": "string"},
+        "dependencies": {"type": "array", "items": {"type": "string"}},
+        "reference_frame": {"type": "object"},
+        "edge_selectors": {"type": "array", "items": {"$ref": "#/$defs/edge_selector"}}
+      }
+    },
+    "edge_selector": {
+      "type": "object",
+      "required": ["selector_type"],
+      "additionalProperties": true,
+      "properties": {
+        "selector_type": {
+          "type": "string",
+          "enum": ["outer_long_edges", "outer_short_edges", "circular_edges", "feature_edges", "all_safe_edges", "edge_index"]
+        },
+        "target_feature": {"type": "string"},
+        "location_hint": {"type": "string"},
+        "edge_index": {"type": "integer", "minimum": 1},
+        "max_edges": {"type": "integer", "minimum": 1},
+        "radius_mm": {"type": "number"},
+        "distance_mm": {"type": "number"}
+      }
+    }
+  }
+}

@@ -249,11 +249,66 @@ class FreeCADBackend:
     op_cut = op_boolean_cut
     op_pocket = op_boolean_cut
 
+    def _edge_length(self, edge) -> float:
+        try:
+            return float(edge.Length)
+        except Exception:
+            return 0.0
+
+    def _is_circular_edge(self, edge) -> bool:
+        curve = getattr(edge, "Curve", None)
+        type_id = str(getattr(curve, "TypeId", "") or type(curve).__name__)
+        return "Circle" in type_id or "Ellipse" in type_id
+
+    def _is_linear_edge(self, edge) -> bool:
+        curve = getattr(edge, "Curve", None)
+        type_id = str(getattr(curve, "TypeId", "") or type(curve).__name__)
+        return "Line" in type_id
+
+    def select_edges(self, base, selectors: list[dict[str, Any]], clearance: float) -> list[int]:
+        """Resolve typed edge selectors against the current native shape.
+
+        IR v1.2 intentionally avoids raw edge indices in planner output because
+        FreeCAD topology numbering is unstable after boolean/modifier features.
+        This resolver derives indices from simple native topology properties and
+        fails explicitly when no edge satisfies the selector.
+        """
+        candidates = [(idx, edge, self._edge_length(edge)) for idx, edge in enumerate(base.Shape.Edges, start=1)]
+        if not candidates:
+            raise IRIncomplete("target body has no selectable edges")
+        selected: list[int] = []
+        min_length = max(float(clearance) * 4.0, 1e-6)
+        for selector in selectors:
+            selector_type = selector.get("selector_type")
+            if selector_type == "edge_index":
+                selected.append(int(selector.get("edge_index", 1)))
+                continue
+            max_edges = int(selector.get("max_edges", 8) or 8)
+            pool = candidates
+            if selector_type == "circular_edges":
+                pool = [item for item in candidates if self._is_circular_edge(item[1])]
+            elif selector_type == "outer_short_edges":
+                pool = [item for item in candidates if item[2] > min_length and self._is_linear_edge(item[1])]
+                pool = sorted(pool, key=lambda item: item[2])
+            elif selector_type in {"outer_long_edges", "feature_edges", "all_safe_edges"}:
+                pool = [item for item in candidates if item[2] > min_length and self._is_linear_edge(item[1])]
+                pool = sorted(pool, key=lambda item: item[2], reverse=True)
+            else:
+                raise IRIncomplete(f"unsupported edge selector_type: {selector_type!r}")
+            selected.extend(idx for idx, _edge, _length in pool[:max_edges])
+        ordered: list[int] = []
+        for idx in selected:
+            if 1 <= idx <= len(base.Shape.Edges) and idx not in ordered:
+                ordered.append(idx)
+        if not ordered:
+            raise IRIncomplete(f"no suitable edges found for selectors: {selectors!r}")
+        return ordered
+
     def op_fillet(self, op):
         op_required(op, ["op_id", "target_body", "edge_selectors", "radius_mm", "reference_frame"])
         base = self.resolve(op["target_body"])
         radius = float(op["radius_mm"])
-        edges = [(int(item.get("edge_index", 1)), radius, radius) for item in op["edge_selectors"]]
+        edges = [(idx, radius, radius) for idx in self.select_edges(base, op["edge_selectors"], radius)]
         if not edges:
             raise IRIncomplete("fillet requires edge_selectors")
         obj = self.doc.addObject("Part::Fillet", op["op_id"])
@@ -265,7 +320,7 @@ class FreeCADBackend:
         op_required(op, ["op_id", "target_body", "edge_selectors", "distance_mm", "reference_frame"])
         base = self.resolve(op["target_body"])
         distance = float(op["distance_mm"])
-        edges = [(int(item.get("edge_index", 1)), distance, distance) for item in op["edge_selectors"]]
+        edges = [(idx, distance, distance) for idx in self.select_edges(base, op["edge_selectors"], distance)]
         if not edges:
             raise IRIncomplete("chamfer requires edge_selectors")
         obj = self.doc.addObject("Part::Chamfer", op["op_id"])

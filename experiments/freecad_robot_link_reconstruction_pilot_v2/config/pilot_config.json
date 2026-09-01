@@ -1,0 +1,34 @@
+{
+  "experiment": "freecad_robot_link_reconstruction_pilot_v2",
+  "date": "2026-09-01",
+  "versions": ["R0", "R1", "R2"],
+  "frozen_manifest_source": "freecad_backend_pilot/input_manifest.csv",
+  "freecad_backend": "robotcad.backends.freecad_api.FreeCADBackend",
+  "freecadcmd": "D:\\software\\freeCAD\\install\\bin\\freecadcmd.exe",
+  "llm_provider_config": "go_nogo2/config/glm.local.toml",
+  "llm_backbone": "glm-5.3-flash",
+  "resource_caps": {
+    "max_links": 6,
+    "max_versions": 3,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_output_tokens": 8192
+  },
+  "generation_inputs_allowed": [
+    "frozen global multi-view render references when available",
+    "engineering text from frozen operation_plan_pilot",
+    "sanitized URDF",
+    "proximal/distal joint context derived from sanitized URDF",
+    "local crops generated from non-GT render evidence and sent as actual image_url inputs for R2"
+  ],
+  "generation_inputs_forbidden": [
+    "GT mesh",
+    "GT STEP",
+    "GT CAD",
+    "GT part segmentation",
+    "GT feature tree",
+    "GT link dimensions except frozen scale anchors"
+  ],
+  "schema_versions": ["mechanical_feature_graph_v2", "executable_cad_ir_v1_2"],
+  "acceptance_boundary": "Backend execution success is necessary but not sufficient; method success requires mechanical semantic improvement over R0 and clear R2 visual-grounding value over R1."
+}

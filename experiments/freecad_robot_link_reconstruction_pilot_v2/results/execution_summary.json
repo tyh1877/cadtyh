@@ -1,0 +1,26 @@
+{
+  "versions": {
+    "R0": {
+      "links_total": 6,
+      "success_links": 6,
+      "operation_count": 18,
+      "native_success_count": 18,
+      "fallback_count": 0
+    },
+    "R1": {
+      "links_total": 6,
+      "success_links": 0,
+      "operation_count": 18,
+      "native_success_count": 16,
+      "fallback_count": 0
+    },
+    "R2": {
+      "links_total": 6,
+      "success_links": 1,
+      "operation_count": 22,
+      "native_success_count": 21,
+      "fallback_count": 0
+    }
+  },
+  "silent_fallback_total": 0
+}
