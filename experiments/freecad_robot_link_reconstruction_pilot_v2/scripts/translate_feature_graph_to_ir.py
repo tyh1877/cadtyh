@@ -94,6 +94,100 @@ def radius_dim(feature: dict[str, Any]) -> float:
         raise
 
 
+def positive_number(value: Any) -> float | None:
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, (int, float)) and value > 0:
+        return float(value)
+    if isinstance(value, str):
+        stripped = value.strip().replace("mm", "").strip()
+        try:
+            parsed = float(stripped)
+        except ValueError:
+            return None
+        return parsed if parsed > 0 else None
+    return None
+
+
+def dimension_values(feature: dict[str, Any]) -> list[float]:
+    dims = feature.get("dimensions")
+    if not isinstance(dims, dict):
+        return []
+    values: list[float] = []
+    for key, value in dims.items():
+        if key in {"radius_mm", "fillet_radius_mm", "chamfer_distance_mm", "distance_mm"}:
+            continue
+        parsed = positive_number(value)
+        if parsed is not None:
+            values.append(parsed)
+    return values
+
+
+def requested_modifier_value(feature: dict[str, Any], op_type: str) -> float | None:
+    intent = feature.get("modifier_intent") if isinstance(feature.get("modifier_intent"), dict) else {}
+    keys = ["requested_radius_mm", "radius_mm", "fillet_radius_mm"] if op_type == "fillet" else ["requested_distance_mm", "distance_mm", "chamfer_distance_mm", "radius_mm", "depth_mm"]
+    for key in keys:
+        value = positive_number(intent.get(key))
+        if value is not None:
+            return value
+    dims = feature.get("dimensions") if isinstance(feature.get("dimensions"), dict) else {}
+    for key in keys:
+        value = positive_number(dims.get(key))
+        if value is not None:
+            return value
+    return None
+
+
+def resolve_modifier_value(feature: dict[str, Any], role_scale_values: tuple[float, float, float], op_type: str) -> tuple[float, dict[str, Any]]:
+    intent = feature.get("modifier_intent") if isinstance(feature.get("modifier_intent"), dict) else {}
+    requested = requested_modifier_value(feature, op_type)
+    strength = intent.get("strength") or "small_finishing"
+    default_ratio = 0.05 if strength == "small_finishing" else 0.09 if strength == "medium_structural" else 0.04
+    ratio = positive_number(intent.get("safe_ratio_to_local_thickness")) or default_ratio
+    ratio = max(0.02, min(float(ratio), 0.14))
+    role_cap = min(role_scale_values) * ratio
+    local_dims = dimension_values(feature)
+    if local_dims:
+        dim_cap = min(local_dims) * (0.18 if op_type == "fillet" else 0.12)
+        cap = min(role_cap, dim_cap)
+        cap_reason = "modifier_intent_and_feature_dimension_cap"
+    else:
+        cap = role_cap
+        cap_reason = "modifier_intent_and_role_scale_cap"
+    cap = max(0.5, round(cap, 3))
+    if requested is None:
+        requested = cap
+        request_source = "translator_resolved_from_modifier_intent"
+    else:
+        request_source = "llm_requested_non_authoritative"
+    resolved = round(max(0.5, min(requested, cap)), 3)
+    return resolved, {
+        "requested_value_mm": requested,
+        "resolved_value_mm": resolved,
+        "safe_cap_mm": cap,
+        "repair_status": "PARAMETER_REPAIRED" if resolved < requested else "NO_REPAIR_NEEDED",
+        "cap_reason": cap_reason,
+        "request_source": request_source,
+        "modifier_intent": intent,
+    }
+
+
+def selector_priority(target_body: str, value: float, op_type: str) -> list[dict[str, Any]]:
+    key = "radius_mm" if op_type == "fillet" else "distance_mm"
+    common = {
+        "target_feature": target_body,
+        "location_hint": "safe_visible_outer_edges",
+        key: value,
+        "min_edge_length_ratio": 6.0,
+        "safe_radius_ratio": 0.14 if op_type == "fillet" else 0.1,
+    }
+    return [
+        {"selector_type": "outer_long_edges", "max_edges": 4, **common},
+        {"selector_type": "outer_short_edges", "max_edges": 4, **common},
+        {"selector_type": "all_safe_edges", "max_edges": 6, **common},
+    ]
+
+
 def anchor(feature: dict[str, Any], scale: tuple[float, float, float]) -> list[float]:
     data = feature.get("anchor")
     if not isinstance(data, dict) or "position" not in data:
@@ -167,10 +261,10 @@ def cutter_ops(feature: dict[str, Any], scale: tuple[float, float, float], oid: 
     return [cutter, cut], cut_id
 
 
-def modifier_ops(feature: dict[str, Any], oid: str, final_body: str) -> tuple[list[dict[str, Any]], str]:
+def modifier_ops(feature: dict[str, Any], oid: str, final_body: str, scale: tuple[float, float, float]) -> tuple[list[dict[str, Any]], str]:
     ftype = feature.get("feature_type")
     if ftype == "fillet_group" or feature.get("intended_cad_operation") == "fillet":
-        radius = dim(feature, "radius_mm", "fillet_radius_mm")
+        radius, policy = resolve_modifier_value(feature, scale, "fillet")
         return [
             op(
                 oid,
@@ -179,11 +273,16 @@ def modifier_ops(feature: dict[str, Any], oid: str, final_body: str) -> tuple[li
                 [final_body],
                 feature,
                 radius_mm=radius,
-                edge_selectors=[{"selector_type": "outer_long_edges", "target_feature": final_body, "location_hint": "side_edges", "radius_mm": radius, "max_edges": 1}],
+                requested_radius_mm=policy["requested_value_mm"],
+                resolved_radius_mm=radius,
+                parameter_repair_used=policy["repair_status"] == "PARAMETER_REPAIRED",
+                semantic_match="partial" if policy["repair_status"] == "PARAMETER_REPAIRED" else "true",
+                modifier_parameter_policy=policy,
+                edge_selectors=selector_priority(final_body, radius, "fillet"),
             )
         ], oid
     if ftype == "chamfer_group" or feature.get("intended_cad_operation") == "chamfer":
-        distance = dim(feature, "distance_mm", "chamfer_distance_mm", "radius_mm", "depth_mm")
+        distance, policy = resolve_modifier_value(feature, scale, "chamfer")
         return [
             op(
                 oid,
@@ -192,7 +291,12 @@ def modifier_ops(feature: dict[str, Any], oid: str, final_body: str) -> tuple[li
                 [final_body],
                 feature,
                 distance_mm=distance,
-                edge_selectors=[{"selector_type": "outer_long_edges", "target_feature": final_body, "location_hint": "side_edges", "distance_mm": distance, "max_edges": 1}],
+                requested_distance_mm=policy["requested_value_mm"],
+                resolved_distance_mm=distance,
+                parameter_repair_used=policy["repair_status"] == "PARAMETER_REPAIRED",
+                semantic_match="partial" if policy["repair_status"] == "PARAMETER_REPAIRED" else "true",
+                modifier_parameter_policy=policy,
+                edge_selectors=selector_priority(final_body, distance, "chamfer"),
             )
         ], oid
     return [], final_body
@@ -248,7 +352,7 @@ def graph_to_ir(graph: dict[str, Any], role: str) -> dict[str, Any]:
         idx += 1
         ops.extend(new_ops)
     for feature in [f for f in features if f.get("feature_type") in modifier_types]:
-        new_ops, final_body = modifier_ops(feature, f"op_{idx:03d}", final_body)
+        new_ops, final_body = modifier_ops(feature, f"op_{idx:03d}", final_body, scale)
         idx += 1
         ops.extend(new_ops)
     return {
@@ -258,7 +362,7 @@ def graph_to_ir(graph: dict[str, Any], role: str) -> dict[str, Any]:
         "bodies": [{"body_id": "body", "role": role}],
         "operations": ops,
         "final_object": final_body,
-        "metadata": {"source_schema": "mechanical_feature_graph_v2", "translator": "mfg_v2_to_executable_cad_ir_v1_2", "strict_missing_geometry_policy": "IR_INCOMPLETE"},
+        "metadata": {"source_schema": "mechanical_feature_graph_v2", "translator": "mfg_v2_to_executable_cad_ir_v1_2", "strict_missing_geometry_policy": "IR_INCOMPLETE", "modifier_contract": "relative_intent_resolved_by_translator_no_backend_fallback"},
     }
 
 

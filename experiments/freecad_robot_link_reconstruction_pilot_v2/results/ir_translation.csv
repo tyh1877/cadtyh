@@ -13,7 +13,7 @@ R1,dev_arm-ab15a75247,L2,main_link,IR_INCOMPLETE,IRIncomplete: mechanical_featur
 R1,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,
 R2,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,
 R2,dev_arm-dcc2b0ce1e,L3,elbow_housing,IR_INCOMPLETE,"IRIncomplete: F010: missing dimension among ('length_mm', 'diameter_mm', 'width_mm')"
-R2,dev_arm-dcc2b0ce1e,L4,forearm,IR_INCOMPLETE,"IRIncomplete: F010: missing dimension among ('distance_mm', 'chamfer_distance_mm', 'radius_mm', 'depth_mm')"
+R2,dev_arm-dcc2b0ce1e,L4,forearm,SUCCESS,
 R2,dev_arm-ab15a75247,L0,base_or_shoulder,IR_INCOMPLETE,IRIncomplete: mechanical_feature_graph_v2.json missing
 R2,dev_arm-ab15a75247,L2,main_link,IR_INCOMPLETE,IRIncomplete: mechanical_feature_graph_v2.json missing
 R2,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,

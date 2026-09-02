@@ -3,24 +3,24 @@
     "version": "R0",
     "link_count": 6,
     "mean_mfr": 0.13888888888888887,
-    "mean_voxel_iou": 0.39213448613986934,
-    "mean_chamfer": 0.03339269433640749,
-    "mean_hd95": 0.07454937718041214
+    "mean_voxel_iou": 0.3811509976631512,
+    "mean_chamfer": 0.0335807433512015,
+    "mean_hd95": 0.07489474953290651
   },
   {
     "version": "R1",
     "link_count": 6,
-    "mean_mfr": 0.2777777777777778,
-    "mean_voxel_iou": "",
-    "mean_chamfer": "",
-    "mean_hd95": ""
+    "mean_mfr": 0.3055555555555556,
+    "mean_voxel_iou": 0.268407108439335,
+    "mean_chamfer": 0.05380439423794996,
+    "mean_hd95": 0.11336549131852347
   },
   {
     "version": "R2",
     "link_count": 6,
-    "mean_mfr": 0.3055555555555556,
-    "mean_voxel_iou": 0.26184538653366585,
-    "mean_chamfer": 0.03656075715249085,
-    "mean_hd95": 0.09252209790251804
+    "mean_mfr": 0.47222222222222227,
+    "mean_voxel_iou": 0.3003562142152656,
+    "mean_chamfer": 0.03948193339327777,
+    "mean_hd95": 0.09487467486838747
   }
 ]

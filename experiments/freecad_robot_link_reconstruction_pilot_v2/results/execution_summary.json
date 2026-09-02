@@ -9,16 +9,16 @@
     },
     "R1": {
       "links_total": 6,
-      "success_links": 0,
-      "operation_count": 18,
-      "native_success_count": 16,
+      "success_links": 2,
+      "operation_count": 22,
+      "native_success_count": 22,
       "fallback_count": 0
     },
     "R2": {
       "links_total": 6,
-      "success_links": 1,
-      "operation_count": 22,
-      "native_success_count": 21,
+      "success_links": 3,
+      "operation_count": 33,
+      "native_success_count": 33,
       "fallback_count": 0
     }
   },

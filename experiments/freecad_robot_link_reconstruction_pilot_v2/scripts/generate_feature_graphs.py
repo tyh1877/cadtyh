@@ -234,6 +234,21 @@ def graph_prompt(row: dict[str, str], version: str, observations: dict[str, Any]
         ],
         "anchor_contract": "Use link_local_normalized coordinates in [-1,1] unless visible/URDF text justifies millimeters.",
         "dimension_contract": "Use explicit numeric length_mm/width_mm/height_mm/radius_mm/thickness_mm/depth_mm as applicable. Do not write unknown.",
+        "modifier_contract": {
+            "hard_rule": "For fillet_group and chamfer_group, do not invent absolute radius_mm/distance_mm unless a dimension is explicitly visible or stated. Prefer modifier_intent.",
+            "required_when_feature_type_is_fillet_or_chamfer": {
+                "modifier_intent": {
+                    "modifier_type": "fillet or chamfer",
+                    "parameter_mode": "relative unless explicit measured size is available",
+                    "strength": "small_finishing, medium_structural, or unknown",
+                    "safe_ratio_to_local_thickness": "0.03-0.08 for small_finishing; 0.08-0.14 only when structural blend is clearly visible",
+                    "max_ratio_to_edge_length": "0.08-0.12",
+                    "requires_translator_resolution": True,
+                    "evidence_notes": "why this is a small finishing edge or structural blend",
+                }
+            },
+            "dimensions_rule": "If unsure, put only a small qualitative modifier_intent and omit radius_mm/distance_mm. The translator will resolve executable CAD parameters.",
+        },
         "allowed_feature_types": sorted(ALLOWED_FEATURE_TYPES),
         "allowed_cad_operations": sorted(CAD_OPS),
         "operation_mapping_expectations": {
@@ -272,6 +287,46 @@ def canonicalize_feature(feature: dict[str, Any], priority: str) -> dict[str, An
         feature["intended_cad_operation"] = feature.pop("cad_strategy")
     if "visible_evidence_refs" not in feature and isinstance(feature.get("evidence"), list):
         feature["visible_evidence_refs"] = [str(x) for x in feature["evidence"] if str(x).startswith(("global_view:", "crop:", "obs_"))]
+    if feature.get("feature_type") in {"fillet_group", "chamfer_group"} or feature.get("intended_cad_operation") in {"fillet", "chamfer"}:
+        intent = feature.get("modifier_intent")
+        if not isinstance(intent, dict):
+            dims = feature.get("dimensions") if isinstance(feature.get("dimensions"), dict) else {}
+            modifier_type = "chamfer" if feature.get("feature_type") == "chamfer_group" or feature.get("intended_cad_operation") == "chamfer" else "fillet"
+            intent = {
+                "modifier_type": modifier_type,
+                "parameter_mode": "relative",
+                "strength": str(feature.get("radius_intent") or feature.get("strength") or "small_finishing"),
+                "safe_ratio_to_local_thickness": 0.05,
+                "max_ratio_to_edge_length": 0.1,
+                "requires_translator_resolution": True,
+                "evidence_notes": "canonicalized missing modifier_intent; absolute dimensions are treated as requested but non-authoritative",
+            }
+            if modifier_type == "fillet" and dims.get("radius_mm") is not None:
+                intent["requested_radius_mm"] = dims.get("radius_mm")
+            if modifier_type == "chamfer":
+                value = dims.get("distance_mm", dims.get("chamfer_distance_mm", dims.get("radius_mm", dims.get("depth_mm"))))
+                if value is not None:
+                    intent["requested_distance_mm"] = value
+        strength = intent.get("strength")
+        if strength not in {"small_finishing", "medium_structural", "unknown"}:
+            intent["strength"] = "small_finishing"
+        if intent.get("parameter_mode") not in {"relative", "absolute", "unknown"}:
+            intent["parameter_mode"] = "relative"
+        intent.setdefault("requires_translator_resolution", True)
+        for ratio_key, default_ratio in {"safe_ratio_to_local_thickness": 0.05, "max_ratio_to_edge_length": 0.1}.items():
+            value = intent.get(ratio_key, default_ratio)
+            if isinstance(value, str) and "-" in value:
+                try:
+                    parts = [float(x.strip()) for x in value.split("-", 1)]
+                    value = sum(parts) / len(parts)
+                except Exception:
+                    value = default_ratio
+            try:
+                value = float(value)
+            except Exception:
+                value = default_ratio
+            intent[ratio_key] = max(0.0, min(value, 0.25))
+        feature["modifier_intent"] = intent
     anchor = feature.get("anchor")
     if isinstance(anchor, dict) and "position" not in anchor:
         if "type" not in anchor and "frame" in anchor:
@@ -289,6 +344,9 @@ def canonicalize_feature(feature: dict[str, Any], priority: str) -> dict[str, An
         elif isinstance(anchor.get("centers"), list) and anchor["centers"]:
             centers = anchor.pop("centers")
             anchor["position"] = [sum(float(c[i]) for c in centers) / len(centers) for i in range(3)]
+        elif isinstance(anchor.get("points"), list) and anchor["points"]:
+            points = anchor.pop("points")
+            anchor["position"] = [sum(float(c[i]) for c in points) / len(points) for i in range(3)]
         elif isinstance(anchor.get("start"), list) and isinstance(anchor.get("end"), list):
             start, end = anchor.pop("start"), anchor.pop("end")
             anchor["position"] = [(float(start[i]) + float(end[i])) / 2.0 for i in range(3)]
@@ -315,7 +373,7 @@ def canonicalize_feature(feature: dict[str, Any], priority: str) -> dict[str, An
         attachment = {"attached_to": str(attachment), "attachment_face": None, "relation": "attached"}
         feature["attachment"] = attachment
     if isinstance(attachment, dict) and ("attached_to" not in attachment or "attachment_face" not in attachment):
-        attached_to = attachment.get("attached_to") or attachment.get("parent_feature") or attachment.get("parent_features") or attachment.get("joint") or attachment.get("proximal") or attachment.get("distal")
+        attached_to = attachment.get("attached_to") or attachment.get("to") or attachment.get("from") or attachment.get("through") or attachment.get("around") or attachment.get("parent_feature") or attachment.get("parent_features") or attachment.get("joint") or attachment.get("proximal") or attachment.get("distal")
         if isinstance(attached_to, list):
             attached_to = ",".join(str(x) for x in attached_to)
         attachment_face = attachment.get("attachment_face") or attachment.get("face") or attachment.get("location") or None

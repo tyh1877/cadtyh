@@ -1,16 +1,1 @@
-version,case_id,link_id,op_id,op_type,semantic_feature_type,failure_reason
-R1,dev_arm-dcc2b0ce1e,L2,op_009,fillet,fillet_group,"Traceback (most recent call last):
-  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 135, in execute
-    raise FreeCADBackendError(""native shape is null or invalid"")
-robotcad.backends.freecad_api.FreeCADBackend.FreeCADBackendError: native shape is null or invalid
-"
-R1,dev_arm-ab15a75247,L4,op_010,chamfer,chamfer_group,"Traceback (most recent call last):
-  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 135, in execute
-    raise FreeCADBackendError(""native shape is null or invalid"")
-robotcad.backends.freecad_api.FreeCADBackend.FreeCADBackendError: native shape is null or invalid
-"
-R2,dev_arm-ab15a75247,L4,op_010,chamfer,chamfer_group,"Traceback (most recent call last):
-  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 135, in execute
-    raise FreeCADBackendError(""native shape is null or invalid"")
-robotcad.backends.freecad_api.FreeCADBackend.FreeCADBackendError: native shape is null or invalid
-"
+

@@ -82,6 +82,22 @@
         "relation": {"type": "string"}
       }
     },
+    "modifier_intent": {
+      "type": "object",
+      "required": ["parameter_mode", "strength", "requires_translator_resolution"],
+      "additionalProperties": false,
+      "properties": {
+        "modifier_type": {"type": "string", "enum": ["fillet", "chamfer"]},
+        "parameter_mode": {"type": "string", "enum": ["relative", "absolute", "unknown"]},
+        "strength": {"type": "string", "enum": ["small_finishing", "medium_structural", "unknown"]},
+        "safe_ratio_to_local_thickness": {"type": "number", "minimum": 0, "maximum": 0.25},
+        "max_ratio_to_edge_length": {"type": "number", "minimum": 0, "maximum": 0.25},
+        "requested_radius_mm": {"type": "number"},
+        "requested_distance_mm": {"type": "number"},
+        "requires_translator_resolution": {"type": "boolean"},
+        "evidence_notes": {"type": "string"}
+      }
+    },
     "feature": {
       "type": "object",
       "required": [
@@ -115,6 +131,7 @@
           "enum": ["extrude", "pad", "pocket", "cut", "revolve", "loft", "sweep", "pipe", "shell", "thickness", "boolean_union", "boolean_cut", "fillet", "chamfer", "pattern", "mirror", "none"]
         },
         "shape_family": {"type": "string"},
+        "modifier_intent": {"$ref": "#/$defs/modifier_intent"},
         "dependencies": {"type": "array", "items": {"type": "string"}},
         "confidence": {"type": "number", "minimum": 0, "maximum": 1}
       }
