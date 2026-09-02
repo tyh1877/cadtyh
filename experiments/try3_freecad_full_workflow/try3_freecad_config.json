@@ -1,0 +1,24 @@
+{
+  "experiment": "try3_freecad_full_workflow",
+  "protocol": "TRY3_FREECAD_PROTOCOL.md",
+  "tryset": "tryset5_v1.csv",
+  "backend": {
+    "name": "FreeCADCmd + FreeCAD Python API",
+    "freecadcmd_path": "D:/software/freeCAD/install/bin/freecadcmd.exe",
+    "formal_acceptance_uses_mcp": false
+  },
+  "versions": ["V0", "V1", "V2"],
+  "input_contract": {
+    "images": ["front", "rear", "left", "right", "top", "isometric"],
+    "engineering_text": true,
+    "sanitized_kinematic_urdf": true,
+    "forbidden_inputs": ["gt_mesh", "step", "cad", "unsanitized_urdf", "product_identity", "gt_segmentation"]
+  },
+  "artifact_policy": {
+    "heavy_outputs_dir": "runs",
+    "tracked_results_dir": "results",
+    "stale_downstream_artifacts_are_invalid": true,
+    "silent_fallback_allowed": false
+  }
+}
+

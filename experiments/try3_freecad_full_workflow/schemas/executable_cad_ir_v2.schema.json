@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "executable_cad_ir_v2.schema.json",
+  "title": "Executable CAD IR v2",
+  "type": "object",
+  "required": ["schema_version", "case_id", "version", "links", "assembly", "artifact_guard"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "executable_cad_ir_v2"},
+    "case_id": {"type": "string"},
+    "version": {"type": "string", "enum": ["V0", "V1", "V2"]},
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["link_id", "operations", "skill_call_refs", "interface_refs"],
+        "properties": {
+          "link_id": {"type": "string"},
+          "operations": {"type": "array", "items": {"type": "object"}},
+          "skill_call_refs": {"type": "array", "items": {"type": "string"}},
+          "interface_refs": {"type": "array", "items": {"type": "string"}},
+          "protected_regions": {"type": "array", "items": {"type": "object"}}
+        }
+      }
+    },
+    "assembly": {
+      "type": "object",
+      "required": ["placement_source", "component_mapping"],
+      "properties": {
+        "placement_source": {"const": "sanitized_urdf"},
+        "component_mapping": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "artifact_guard": {
+      "type": "object",
+      "required": ["input_hashes", "stale_downstream_artifacts_allowed", "silent_fallback_allowed"],
+      "properties": {
+        "input_hashes": {"type": "object"},
+        "stale_downstream_artifacts_allowed": {"const": false},
+        "silent_fallback_allowed": {"const": false}
+      }
+    }
+  }
+}
+

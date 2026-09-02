@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mechanical_feature_graph_v1.schema.json",
+  "title": "Mechanical Feature Graph v1",
+  "type": "object",
+  "required": ["schema_version", "case_id", "link_id", "features"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "mechanical_feature_graph_v1"},
+    "case_id": {"type": "string"},
+    "link_id": {"type": "string"},
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["feature_id", "feature_type", "priority", "evidence_refs", "dependencies", "intended_cad_strategy", "interface_dependency", "protected_status"],
+        "properties": {
+          "feature_id": {"type": "string"},
+          "feature_type": {"type": "string"},
+          "priority": {"type": "string", "enum": ["primary_geometry", "functional_geometry", "structural_detail", "secondary_detail", "surface_detail"]},
+          "evidence_refs": {"type": "array", "items": {"type": "string"}},
+          "dependencies": {"type": "array", "items": {"type": "string"}},
+          "intended_cad_strategy": {"type": "string"},
+          "interface_dependency": {"type": ["string", "null"]},
+          "protected_status": {"type": "string", "enum": ["protected_interface", "non_protected", "derived_from_interface"]},
+          "parameters": {"type": "object"}
+        }
+      }
+    }
+  }
+}
+

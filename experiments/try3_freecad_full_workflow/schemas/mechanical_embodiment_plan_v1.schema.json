@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mechanical_embodiment_plan_v1.schema.json",
+  "title": "Mechanical Embodiment Plan v1",
+  "type": "object",
+  "required": ["schema_version", "case_id", "links"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "mechanical_embodiment_plan_v1"},
+    "case_id": {"type": "string"},
+    "global_scale": {"type": "object"},
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["link_id", "functional_role", "kinematic_context", "main_envelope", "proximal_joint_region", "distal_joint_region", "protected_interface_regions"],
+        "additionalProperties": false,
+        "properties": {
+          "link_id": {"type": "string"},
+          "functional_role": {"type": "string"},
+          "kinematic_context": {"type": "object"},
+          "main_envelope": {"type": "object"},
+          "proximal_joint_region": {"type": "object"},
+          "distal_joint_region": {"type": "object"},
+          "body_transition": {"type": "object"},
+          "visible_structural_features": {"type": "array", "items": {"type": "object"}},
+          "surface_detail_plan": {"type": "array", "items": {"type": "object"}},
+          "protected_interface_regions": {"type": "array", "items": {"type": "object"}}
+        }
+      }
+    }
+  }
+}
+

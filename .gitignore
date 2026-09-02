@@ -76,3 +76,5 @@ experiments/freecad_operation_robustness_pilot/runs/
 experiments/freecad_operation_robustness_pilot/artifacts/
 experiments/modifier_parameter_repair_pilot/runs/
 experiments/modifier_parameter_repair_pilot/artifacts/
+experiments/try3_freecad_full_workflow/runs/
+experiments/try3_freecad_full_workflow/artifacts/

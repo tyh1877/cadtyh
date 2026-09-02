@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "skill_call_v1.schema.json",
+  "title": "RobotCAD Skill Call v1",
+  "type": "object",
+  "required": ["schema_version", "case_id", "link_id", "skill_calls"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "skill_call_v1"},
+    "case_id": {"type": "string"},
+    "link_id": {"type": "string"},
+    "skill_calls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["call_id", "skill", "version", "inputs", "source_feature_ids", "no_fallback"],
+        "additionalProperties": false,
+        "properties": {
+          "call_id": {"type": "string"},
+          "skill": {"type": "string"},
+          "version": {"type": "string"},
+          "inputs": {"type": "object"},
+          "source_feature_ids": {"type": "array", "items": {"type": "string"}},
+          "no_fallback": {"const": true}
+        }
+      }
+    }
+  }
+}
+

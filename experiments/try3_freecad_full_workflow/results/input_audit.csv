@@ -1,0 +1,6 @@
+case_id,image_text_json_exists,sanitized_urdf_exists,all_required_views_exist,engineering_text_exists,leakage_flags
+dev_arm-ab15a75247,True,True,True,True,
+dev_arm-4c7b408826,True,True,True,True,
+dev_arm-dcc2b0ce1e,True,True,True,True,
+dev_arm-43fa322555,True,True,True,True,
+dev_arm-551a9c392e,True,True,True,True,

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "interface_graph_v1.schema.json",
+  "title": "Interface Graph v1",
+  "type": "object",
+  "required": ["schema_version", "case_id", "joints"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "interface_graph_v1"},
+    "case_id": {"type": "string"},
+    "joints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["joint_id", "kinematic_reference", "parent_port", "child_port", "mate_constraints", "protected_region"],
+        "additionalProperties": false,
+        "properties": {
+          "joint_id": {"type": "string"},
+          "kinematic_reference": {
+            "type": "object",
+            "required": ["origin", "axis", "joint_type"],
+            "properties": {
+              "origin": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+              "axis": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+              "joint_type": {"type": "string"}
+            }
+          },
+          "parent_port": {"type": "object"},
+          "child_port": {"type": "object"},
+          "mate_constraints": {"type": "object"},
+          "protected_region": {"type": "object"}
+        }
+      }
+    }
+  }
+}
+

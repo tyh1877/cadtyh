@@ -1,0 +1,7 @@
+case_id,tier,role,links,joints,image_text_json,sanitized_urdf,selection_basis
+dev_arm-ab15a75247,easy,compact_serial_arm,5,4,try1/inputs/image_text_v1/dev_arm-ab15a75247.json,try2/inputs/sanitized_urdf/dev_arm-ab15a75247.urdf,Compact four-DOF serial arm; pipeline and FreeCAD assembly stability check.
+dev_arm-4c7b408826,medium,industrial_serial_arm,10,9,try1/inputs/image_text_v1/dev_arm-4c7b408826.json,try2/inputs/sanitized_urdf/dev_arm-4c7b408826.urdf,Industrial serial arm with long links and visible elbow/wrist transitions.
+dev_arm-dcc2b0ce1e,medium,industrial_serial_arm,10,9,try1/inputs/image_text_v1/dev_arm-dcc2b0ce1e.json,try2/inputs/sanitized_urdf/dev_arm-dcc2b0ce1e.urdf,Distinct industrial geometry style; tests generalization beyond the other medium case.
+dev_arm-43fa322555,hard,curved_housing_arm,17,16,try1/inputs/image_text_v1/dev_arm-43fa322555.json,try2/inputs/sanitized_urdf/dev_arm-43fa322555.urdf,High link count with compact curved housings and fixed-link detail.
+dev_arm-551a9c392e,hard,high_link_count_arm,21,20,try1/inputs/image_text_v1/dev_arm-551a9c392e.json,try2/inputs/sanitized_urdf/dev_arm-551a9c392e.urdf,Hard articulated chain stressing integration and high-detail embodiment.
+

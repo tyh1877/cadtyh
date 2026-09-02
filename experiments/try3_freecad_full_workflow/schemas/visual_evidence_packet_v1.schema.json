@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "visual_evidence_packet_v1.schema.json",
+  "title": "Visual Evidence Packet v1",
+  "type": "object",
+  "required": ["schema_version", "case_id", "links", "leakage_guard"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "visual_evidence_packet_v1"},
+    "case_id": {"type": "string"},
+    "source_images": {"type": "object", "additionalProperties": {"type": "string"}},
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["link_id", "global_views", "visual_observations", "confidence"],
+        "additionalProperties": false,
+        "properties": {
+          "link_id": {"type": "string"},
+          "global_views": {"type": "array", "items": {"type": "string"}},
+          "link_crops": {"type": "array", "items": {"type": "string"}},
+          "proximal_joint_crops": {"type": "array", "items": {"type": "string"}},
+          "distal_joint_crops": {"type": "array", "items": {"type": "string"}},
+          "visual_observations": {"type": "object"},
+          "confidence": {"type": "object"},
+          "crop_method": {"type": "string"}
+        }
+      }
+    },
+    "leakage_guard": {
+      "type": "object",
+      "required": ["uses_gt_mesh", "uses_gt_segmentation", "uses_product_identity"],
+      "properties": {
+        "uses_gt_mesh": {"const": false},
+        "uses_gt_segmentation": {"const": false},
+        "uses_product_identity": {"const": false}
+      }
+    }
+  }
+}
+
