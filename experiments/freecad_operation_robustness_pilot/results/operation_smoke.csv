@@ -1,0 +1,9 @@
+case_name,expected,status,passed,failure_code,fallback_count,elapsed_seconds
+boolean_union_success,SUCCESS,SUCCESS,True,,0,0.14461374282836914
+boolean_union_expected_failure,FAILURE,FAILURE,True,IR_INCOMPLETE,0,0.009773015975952148
+boolean_cut_success,SUCCESS,SUCCESS,True,,0,0.040155649185180664
+boolean_cut_expected_failure,FAILURE,FAILURE,True,CUTTER_NO_INTERSECTION,0,0.009557008743286133
+fillet_success,SUCCESS,SUCCESS,True,,0,0.035105228424072266
+fillet_expected_failure,FAILURE,FAILURE,True,NO_SAFE_EDGE,0,0.009573221206665039
+chamfer_success,SUCCESS,SUCCESS,True,,0,0.036539554595947266
+chamfer_expected_failure,FAILURE,FAILURE,True,NO_SAFE_EDGE,0,0.008515357971191406

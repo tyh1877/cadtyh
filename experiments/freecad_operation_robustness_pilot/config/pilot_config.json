@@ -1,0 +1,15 @@
+{
+  "experiment": "freecad_operation_robustness_pilot",
+  "input_experiment": "experiments/mfg_to_ir_repair_pilot",
+  "input_ir_pattern": "experiments/mfg_to_ir_repair_pilot/runs/{version}/{case_id}/{link_id}/executable_cad_ir_v1_2.json",
+  "versions": ["R1", "R2"],
+  "llm_calls": false,
+  "frozen_links_source": "experiments/freecad_robot_link_reconstruction_pilot_v2/inputs/frozen_links.csv",
+  "targeted_operations": ["boolean_union", "boolean_cut", "fillet", "chamfer"],
+  "acceptance": {
+    "r1_batch_success_min": 3,
+    "r2_batch_success_min": 3,
+    "silent_fallback_total": 0,
+    "explicit_failure_codes": true
+  }
+}

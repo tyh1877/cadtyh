@@ -1,0 +1,13 @@
+version,case_id,link_id,role,status,operation_count,native_success_count,semantic_match_count,fallback_count,fcstd_success,step_success,stl_success,failure_code,failure_stage,failure_reason,execution_time_seconds
+R1,dev_arm-dcc2b0ce1e,L2,upper_arm,FAILURE,9,8,8,0,False,False,False,NO_SAFE_EDGE,FREECAD_EXECUTION,FreeCADBackendError: no safe edge accepted by fillet trial,1.42984938621521
+R1,dev_arm-dcc2b0ce1e,L3,elbow_housing,FAILURE,11,10,10,0,False,False,False,NO_SAFE_EDGE,FREECAD_EXECUTION,FreeCADBackendError: no safe edge accepted by fillet trial,0.640366792678833
+R1,dev_arm-dcc2b0ce1e,L4,forearm,SUCCESS,10,10,10,0,True,True,True,,,,1.8630950450897217
+R1,dev_arm-ab15a75247,L0,base_or_shoulder,FAILURE,11,9,9,0,False,False,False,NO_SAFE_EDGE,FREECAD_EXECUTION,FreeCADBackendError: no safe edge accepted by fillet trial,0.44754552841186523
+R1,dev_arm-ab15a75247,L2,main_link,IR_INCOMPLETE,0,0,0,0,False,False,False,IR_INCOMPLETE,IR_VALIDATION,input executable_cad_ir_v1_2.json missing,0.0
+R1,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,9,9,9,0,True,True,True,,,,0.3772892951965332
+R2,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,12,12,12,0,True,True,True,,,,4.12065315246582
+R2,dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,13,13,13,0,True,True,True,,,,2.3078107833862305
+R2,dev_arm-dcc2b0ce1e,L4,forearm,IR_INCOMPLETE,0,0,0,0,False,False,False,IR_INCOMPLETE,IR_VALIDATION,input executable_cad_ir_v1_2.json missing,0.0
+R2,dev_arm-ab15a75247,L0,base_or_shoulder,IR_INCOMPLETE,0,0,0,0,False,False,False,IR_INCOMPLETE,IR_VALIDATION,input executable_cad_ir_v1_2.json missing,0.0
+R2,dev_arm-ab15a75247,L2,main_link,SUCCESS,9,9,9,0,True,True,True,,,,2.7370636463165283
+R2,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,10,10,10,0,True,True,True,,,,0.9585814476013184

@@ -1,0 +1,53 @@
+{
+  "baseline_mfg_to_ir_repair": {
+    "R1": {
+      "success_links": 1,
+      "links_total": 6
+    },
+    "R2": {
+      "success_links": 0,
+      "links_total": 6
+    }
+  },
+  "operation_smoke": {
+    "total": 8,
+    "passed": 8,
+    "fallback_count": 0
+  },
+  "replay": {
+    "R1": {
+      "links_total": 6,
+      "success_links": 2,
+      "ir_incomplete_links": 1,
+      "failure_links": 3,
+      "native_success_count": 46,
+      "operation_count": 50,
+      "fcstd_success": 2,
+      "step_success": 2,
+      "stl_success": 2
+    },
+    "R2": {
+      "links_total": 6,
+      "success_links": 4,
+      "ir_incomplete_links": 2,
+      "failure_links": 0,
+      "native_success_count": 44,
+      "operation_count": 44,
+      "fcstd_success": 4,
+      "step_success": 4,
+      "stl_success": 4
+    }
+  },
+  "silent_fallback_total": 0,
+  "failure_code_counts": {
+    "NO_SAFE_EDGE": 3
+  },
+  "explicit_failure_codes": true,
+  "acceptance": {
+    "r1_batch_success_min_3": false,
+    "r2_batch_success_min_3": true,
+    "silent_fallback_zero": true,
+    "explicit_failure_codes": true,
+    "operation_smoke_all_passed": true
+  }
+}

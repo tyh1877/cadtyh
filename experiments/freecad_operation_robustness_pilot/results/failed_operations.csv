@@ -1,0 +1,34 @@
+version,case_id,link_id,op_id,op_type,semantic_feature_type,failure_code,has_preflight,has_failure_context,failure_reason
+R1,dev_arm-dcc2b0ce1e,L2,op_009,fillet,fillet_group,NO_SAFE_EDGE,True,True,"Traceback (most recent call last):
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 185, in execute
+    obj, native_type = handler(op)
+                       ^^^^^^^^^^^
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 482, in op_fillet
+    edges = [(idx, radius, radius) for idx in self._trial_modifier_edges(base, op[""edge_selectors""], radius, ""fillet"")]
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 471, in _trial_modifier_edges
+    raise FreeCADBackendError(
+robotcad.backends.freecad_api.FreeCADBackend.FreeCADBackendError: no safe edge accepted by fillet trial
+"
+R1,dev_arm-dcc2b0ce1e,L3,op_009,fillet,fillet_group,NO_SAFE_EDGE,True,True,"Traceback (most recent call last):
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 185, in execute
+    obj, native_type = handler(op)
+                       ^^^^^^^^^^^
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 482, in op_fillet
+    edges = [(idx, radius, radius) for idx in self._trial_modifier_edges(base, op[""edge_selectors""], radius, ""fillet"")]
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 471, in _trial_modifier_edges
+    raise FreeCADBackendError(
+robotcad.backends.freecad_api.FreeCADBackend.FreeCADBackendError: no safe edge accepted by fillet trial
+"
+R1,dev_arm-ab15a75247,L0,op_008,fillet,fillet_group,NO_SAFE_EDGE,True,True,"Traceback (most recent call last):
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 185, in execute
+    obj, native_type = handler(op)
+                       ^^^^^^^^^^^
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 482, in op_fillet
+    edges = [(idx, radius, radius) for idx in self._trial_modifier_edges(base, op[""edge_selectors""], radius, ""fillet"")]
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""D:\CADtest\papertest\robotcad\backends\freecad_api\FreeCADBackend.py"", line 471, in _trial_modifier_edges
+    raise FreeCADBackendError(
+robotcad.backends.freecad_api.FreeCADBackend.FreeCADBackendError: no safe edge accepted by fillet trial
+"

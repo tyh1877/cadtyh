@@ -24,11 +24,15 @@ except Exception:
 
 
 class FreeCADBackendError(RuntimeError):
-    pass
+    def __init__(self, message: str, code: str = "FREECAD_BACKEND_ERROR", context: dict[str, Any] | None = None):
+        super().__init__(message)
+        self.code = code
+        self.context = context or {}
 
 
 class IRIncomplete(FreeCADBackendError):
-    pass
+    def __init__(self, message: str, context: dict[str, Any] | None = None):
+        super().__init__(message, code="IR_INCOMPLETE", context=context)
 
 
 def vec(values: list[float] | tuple[float, float, float]):
@@ -95,6 +99,51 @@ class FreeCADBackend:
         self.doc = FreeCAD.newDocument(document_name)
         self.objects: dict[str, Any] = {}
         self.execution_log: list[dict[str, Any]] = []
+        self.current_preflight: dict[str, Any] | None = None
+
+    def _shape_stats(self, obj) -> dict[str, Any]:
+        shape = getattr(obj, "Shape", None)
+        if shape is None or shape.isNull():
+            return {"shape_null": True}
+        bbox = shape.BoundBox
+        return {
+            "shape_null": False,
+            "shape_valid": bool(shape.isValid()),
+            "volume": float(shape.Volume),
+            "bbox": {
+                "xmin": float(bbox.XMin),
+                "xmax": float(bbox.XMax),
+                "ymin": float(bbox.YMin),
+                "ymax": float(bbox.YMax),
+                "zmin": float(bbox.ZMin),
+                "zmax": float(bbox.ZMax),
+                "xlength": float(bbox.XLength),
+                "ylength": float(bbox.YLength),
+                "zlength": float(bbox.ZLength),
+            },
+            "faces": len(shape.Faces),
+            "edges": len(shape.Edges),
+            "solids": len(shape.Solids),
+        }
+
+    def _bbox_intersects(self, a, b, tolerance: float = 1e-6) -> bool:
+        abox = a.Shape.BoundBox
+        bbox = b.Shape.BoundBox
+        return not (
+            abox.XMax < bbox.XMin - tolerance
+            or bbox.XMax < abox.XMin - tolerance
+            or abox.YMax < bbox.YMin - tolerance
+            or bbox.YMax < abox.YMin - tolerance
+            or abox.ZMax < bbox.ZMin - tolerance
+            or bbox.ZMax < abox.ZMin - tolerance
+        )
+
+    def _check_native_shape(self, obj, code: str, context: dict[str, Any]) -> None:
+        shape = getattr(obj, "Shape", None)
+        if shape is None or shape.isNull():
+            raise FreeCADBackendError("native shape is null", code=code, context=context)
+        if not shape.isValid():
+            raise FreeCADBackendError("native shape is invalid", code=code, context=context)
 
     def resolve(self, name: str):
         if name in self.objects:
@@ -111,6 +160,7 @@ class FreeCADBackend:
 
     def execute(self, op: dict[str, Any]) -> None:
         started = time.time()
+        self.current_preflight = None
         record = {
             "op_id": op.get("op_id"),
             "requested_operation": op.get("op_type"),
@@ -123,7 +173,10 @@ class FreeCADBackend:
             "success": False,
             "semantic_match": False,
             "fallback_used": False,
+            "failure_code": None,
             "failure_reason": None,
+            "failure_context": None,
+            "preflight": None,
         }
         try:
             handler = getattr(self, f"op_{op.get('op_type')}", None)
@@ -131,8 +184,7 @@ class FreeCADBackend:
                 raise IRIncomplete(f"unsupported op_type: {op.get('op_type')}")
             obj, native_type = handler(op)
             self.doc.recompute()
-            if obj.Shape.isNull() or not obj.Shape.isValid():
-                raise FreeCADBackendError("native shape is null or invalid")
+            self._check_native_shape(obj, "NATIVE_INVALID_SHAPE", {"op_id": op.get("op_id"), "op_type": op.get("op_type"), "object": getattr(obj, "Name", None)})
             record.update(
                 {
                     "executed_native_operation": native_type,
@@ -140,9 +192,13 @@ class FreeCADBackend:
                     "native_object_type": obj.TypeId,
                     "success": True,
                     "semantic_match": True,
+                    "preflight": self.current_preflight,
                 }
             )
-        except Exception:
+        except Exception as exc:
+            record["preflight"] = self.current_preflight
+            record["failure_code"] = getattr(exc, "code", type(exc).__name__)
+            record["failure_context"] = getattr(exc, "context", None)
             record["failure_reason"] = traceback.format_exc()
             raise
         finally:
@@ -222,28 +278,58 @@ class FreeCADBackend:
 
     def op_boolean_union(self, op):
         op_required(op, ["op_id", "target_body", "tool_bodies", "reference_frame"])
+        base = self.resolve(op["target_body"])
         tools = [self.resolve(name) for name in op["tool_bodies"]]
         if not tools:
             raise IRIncomplete("boolean_union requires tool_bodies")
-        if len(tools) == 1:
-            obj = self.doc.addObject("Part::Fuse", op["op_id"])
-            obj.Base = self.resolve(op["target_body"])
-            obj.Tool = tools[0]
-            native_type = "Part::Fuse"
-        else:
-            obj = self.doc.addObject("Part::MultiFuse", op["op_id"])
-            obj.Shapes = [self.resolve(op["target_body"]), *tools]
-            native_type = "Part::MultiFuse"
-        return self.register(op, obj), native_type
+        steps = []
+        current = base
+        for idx, tool in enumerate(tools, start=1):
+            step_name = op["op_id"] if idx == len(tools) else f"{op['op_id']}_seq_{idx:02d}"
+            obj = self.doc.addObject("Part::Fuse", step_name)
+            obj.Base = current
+            obj.Tool = tool
+            self.doc.recompute()
+            context = {
+                "step": idx,
+                "tool_body": op["tool_bodies"][idx - 1],
+                "base": self._shape_stats(current),
+                "tool": self._shape_stats(tool),
+                "result": self._shape_stats(obj),
+            }
+            steps.append(context)
+            try:
+                self._check_native_shape(obj, "BOOLEAN_UNION_STEP_INVALID", context)
+            except FreeCADBackendError:
+                self.current_preflight = {"operation": "boolean_union", "strategy": "sequential_fuse", "steps": steps}
+                raise
+            current = obj
+        self.current_preflight = {"operation": "boolean_union", "strategy": "sequential_fuse", "steps": steps}
+        return self.register(op, current), "Part::FuseSequential"
 
     def op_boolean_cut(self, op):
         op_required(op, ["op_id", "target_body", "tool_bodies", "reference_frame"])
+        base = self.resolve(op["target_body"])
         tools = [self.resolve(name) for name in op["tool_bodies"]]
         if not tools:
             raise IRIncomplete("boolean_cut requires tool_bodies")
+        tool = tools[0]
+        intersects = self._bbox_intersects(base, tool, tolerance=float(op.get("intersection_tolerance_mm", 1e-4)))
+        self.current_preflight = {
+            "operation": "boolean_cut",
+            "target": self._shape_stats(base),
+            "tool": self._shape_stats(tool),
+            "bbox_intersects": intersects,
+        }
+        if not intersects:
+            raise FreeCADBackendError("boolean_cut cutter bbox does not intersect target bbox", code="CUTTER_NO_INTERSECTION", context=self.current_preflight)
         obj = self.doc.addObject("Part::Cut", op["op_id"])
-        obj.Base = self.resolve(op["target_body"])
-        obj.Tool = tools[0]
+        obj.Base = base
+        obj.Tool = tool
+        self.doc.recompute()
+        result_stats = self._shape_stats(obj)
+        self.current_preflight["result"] = result_stats
+        self._check_native_shape(obj, "BOOLEAN_CUT_RESULT_INVALID", self.current_preflight)
         return self.register(op, obj), "Part::Cut"
 
     op_cut = op_boolean_cut
@@ -265,6 +351,41 @@ class FreeCADBackend:
         type_id = str(getattr(curve, "TypeId", "") or type(curve).__name__)
         return "Line" in type_id
 
+    def _edge_midpoint(self, edge) -> list[float]:
+        try:
+            p = edge.valueAt((edge.FirstParameter + edge.LastParameter) / 2.0)
+            return [float(p.x), float(p.y), float(p.z)]
+        except Exception:
+            return [0.0, 0.0, 0.0]
+
+    def _edge_candidate_rows(self, base, clearance: float) -> list[dict[str, Any]]:
+        bbox = base.Shape.BoundBox
+        diag = max((bbox.XLength**2 + bbox.YLength**2 + bbox.ZLength**2) ** 0.5, 1e-6)
+        rows = []
+        for idx, edge in enumerate(base.Shape.Edges, start=1):
+            length = self._edge_length(edge)
+            midpoint = self._edge_midpoint(edge)
+            on_outer = (
+                abs(midpoint[0] - bbox.XMin) <= diag * 0.02
+                or abs(midpoint[0] - bbox.XMax) <= diag * 0.02
+                or abs(midpoint[1] - bbox.YMin) <= diag * 0.02
+                or abs(midpoint[1] - bbox.YMax) <= diag * 0.02
+                or abs(midpoint[2] - bbox.ZMin) <= diag * 0.02
+                or abs(midpoint[2] - bbox.ZMax) <= diag * 0.02
+            )
+            rows.append(
+                {
+                    "index": idx,
+                    "length": length,
+                    "is_linear": self._is_linear_edge(edge),
+                    "is_circular": self._is_circular_edge(edge),
+                    "midpoint": midpoint,
+                    "on_outer_bbox": on_outer,
+                    "safe_by_length": length > max(float(clearance) * 6.0, 1e-6),
+                }
+            )
+        return rows
+
     def select_edges(self, base, selectors: list[dict[str, Any]], clearance: float) -> list[int]:
         """Resolve typed edge selectors against the current native shape.
 
@@ -277,7 +398,7 @@ class FreeCADBackend:
         if not candidates:
             raise IRIncomplete("target body has no selectable edges")
         selected: list[int] = []
-        min_length = max(float(clearance) * 4.0, 1e-6)
+        min_length = max(float(clearance) * 6.0, 1e-6)
         for selector in selectors:
             selector_type = selector.get("selector_type")
             if selector_type == "edge_index":
@@ -301,14 +422,64 @@ class FreeCADBackend:
             if 1 <= idx <= len(base.Shape.Edges) and idx not in ordered:
                 ordered.append(idx)
         if not ordered:
-            raise IRIncomplete(f"no suitable edges found for selectors: {selectors!r}")
+            raise FreeCADBackendError(
+                "no suitable edges found for chamfer/fillet selectors",
+                code="NO_SAFE_EDGE",
+                context={"selectors": selectors, "clearance": clearance, "edge_candidates": self._edge_candidate_rows(base, clearance)},
+            )
         return ordered
+
+    def _trial_modifier_edges(self, base, selectors: list[dict[str, Any]], clearance: float, mode: str) -> list[int]:
+        rows = self._edge_candidate_rows(base, clearance)
+        broad_selectors = []
+        for selector in selectors:
+            item = dict(selector)
+            item["max_edges"] = max(int(item.get("max_edges", 8) or 8), 64)
+            broad_selectors.append(item)
+        candidate_indices = self.select_edges(base, broad_selectors, clearance)
+        accepted: list[int] = []
+        rejected: list[dict[str, Any]] = []
+        for idx in candidate_indices:
+            trial = self.doc.addObject("Part::Fillet" if mode == "fillet" else "Part::Chamfer", f"trial_{mode}_{idx}")
+            trial_name = trial.Name
+            trial.Base = base
+            trial.Edges = [(idx, clearance, clearance)]
+            try:
+                self.doc.recompute()
+                shape = getattr(trial, "Shape", None)
+                if shape is not None and not shape.isNull() and shape.isValid():
+                    accepted.append(idx)
+                    rejected.append({"edge": idx, "trial": "accepted"})
+                    self.doc.removeObject(trial.Name)
+                    break
+                rejected.append({"edge": idx, "trial": "invalid_shape"})
+            except Exception as exc:
+                rejected.append({"edge": idx, "trial": f"{type(exc).__name__}: {exc}"})
+            finally:
+                if self.doc.getObject(trial_name):
+                    self.doc.removeObject(trial_name)
+                self.doc.recompute()
+        self.current_preflight = {
+            "operation": mode,
+            "clearance": clearance,
+            "selectors": selectors,
+            "edge_candidates": rows,
+            "trial_results": rejected,
+            "selected_edges": accepted,
+        }
+        if not accepted:
+            raise FreeCADBackendError(
+                f"no safe edge accepted by {mode} trial",
+                code="NO_SAFE_EDGE",
+                context=self.current_preflight,
+            )
+        return accepted
 
     def op_fillet(self, op):
         op_required(op, ["op_id", "target_body", "edge_selectors", "radius_mm", "reference_frame"])
         base = self.resolve(op["target_body"])
         radius = float(op["radius_mm"])
-        edges = [(idx, radius, radius) for idx in self.select_edges(base, op["edge_selectors"], radius)]
+        edges = [(idx, radius, radius) for idx in self._trial_modifier_edges(base, op["edge_selectors"], radius, "fillet")]
         if not edges:
             raise IRIncomplete("fillet requires edge_selectors")
         obj = self.doc.addObject("Part::Fillet", op["op_id"])
@@ -320,7 +491,7 @@ class FreeCADBackend:
         op_required(op, ["op_id", "target_body", "edge_selectors", "distance_mm", "reference_frame"])
         base = self.resolve(op["target_body"])
         distance = float(op["distance_mm"])
-        edges = [(idx, distance, distance) for idx in self.select_edges(base, op["edge_selectors"], distance)]
+        edges = [(idx, distance, distance) for idx in self._trial_modifier_edges(base, op["edge_selectors"], distance, "chamfer")]
         if not edges:
             raise IRIncomplete("chamfer requires edge_selectors")
         obj = self.doc.addObject("Part::Chamfer", op["op_id"])
