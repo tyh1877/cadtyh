@@ -26,6 +26,7 @@ REQUIRED = [
     "prompts/assembly_integrator.md",
     "prompts/verification_agent.md",
     "scripts/audit_inputs.py",
+    "scripts/run_visual_agent.py",
     "scripts/stale_artifact_guard.py",
     "scripts/run_stage.py",
 ]
@@ -46,4 +47,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

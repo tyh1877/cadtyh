@@ -27,7 +27,12 @@
 
 - [x] Stage runner skeleton exists and encodes V0/V1/V2 dependencies.
 - [x] Stale artifact guard skeleton exists.
-- [ ] Visual Evidence Agent implemented and produces one packet per robot/link.
+- [x] Visual Evidence Agent deterministic infrastructure implemented and
+  produces one packet per robot/link for all 5 robots.
+- [ ] Visual Evidence Agent VLM-backed focus/evidence generation passes. Current
+  `glm-5.3-flash` smoke failed with `APITimeoutError`.
+- [ ] Manual spot check passes for crop/evidence quality. Current deterministic
+  crops are useful inspection material but not sufficient to release to MEP.
 - [ ] Mechanical Embodiment Architect implemented.
 - [ ] Interface Engineer implemented.
 - [ ] Per-link CAD Engineer implemented.
