@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "visual_scan_plan_v1.schema.json",
+  "title": "Visual Scan Plan v1",
+  "type": "object",
+  "required": ["schema_version", "case_id", "links", "leakage_guard"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "visual_scan_plan_v1"},
+    "case_id": {"type": "string"},
+    "scan_mode": {"type": "string"},
+    "source_views": {"type": "array", "items": {"type": "string"}},
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["link_id", "visibility", "link_bbox_by_view", "candidate_detail_regions"],
+        "additionalProperties": false,
+        "properties": {
+          "link_id": {"type": "string"},
+          "visibility": {"type": "string", "enum": ["clear", "partial", "occluded", "unknown"]},
+          "link_bbox_by_view": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/$defs/bbox"
+            }
+          },
+          "proximal_joint_region": {
+            "anyOf": [
+              {"type": "null"},
+              {"$ref": "#/$defs/joint_region"}
+            ]
+          },
+          "distal_joint_region": {
+            "anyOf": [
+              {"type": "null"},
+              {"$ref": "#/$defs/joint_region"}
+            ]
+          },
+          "candidate_detail_regions": {
+            "type": "array",
+            "maxItems": 5,
+            "items": {"$ref": "#/$defs/detail_region"}
+          }
+        }
+      }
+    },
+    "leakage_guard": {
+      "type": "object",
+      "required": ["uses_gt_mesh", "uses_gt_segmentation", "uses_product_identity"],
+      "properties": {
+        "uses_gt_mesh": {"const": false},
+        "uses_gt_segmentation": {"const": false},
+        "uses_product_identity": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "bbox": {
+      "type": "array",
+      "prefixItems": [
+        {"type": "number", "minimum": 0, "maximum": 1},
+        {"type": "number", "minimum": 0, "maximum": 1},
+        {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      ],
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "joint_region": {
+      "type": "object",
+      "required": ["source_view", "bbox", "joint_id"],
+      "additionalProperties": false,
+      "properties": {
+        "source_view": {"type": "string"},
+        "bbox": {"$ref": "#/$defs/bbox"},
+        "joint_id": {"type": ["string", "null"]},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "detail_region": {
+      "type": "object",
+      "required": ["region_id", "source_view", "bbox", "feature_hint", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "region_id": {"type": "string"},
+        "source_view": {"type": "string"},
+        "bbox": {"$ref": "#/$defs/bbox"},
+        "feature_hint": {
+          "type": "string",
+          "enum": [
+            "joint_housing",
+            "flange",
+            "boss",
+            "recess",
+            "rib",
+            "yoke",
+            "hole_pattern",
+            "curved_transition",
+            "cover_boundary",
+            "shell_opening",
+            "other_visible_detail",
+            "unknown"
+          ]
+        },
+        "reason": {"type": "string"},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    }
+  }
+}

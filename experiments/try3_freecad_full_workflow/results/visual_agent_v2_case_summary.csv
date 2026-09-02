@@ -1,0 +1,6 @@
+case_id,status,links,scan_views,crop_records,feature_crops,empty_crop_rate,input_tokens,output_tokens,total_tokens,elapsed_seconds,error_type,error
+dev_arm-ab15a75247,SUCCESS,5,front;isometric,29,9,0.0,1287,1646,2933,34.544,,
+dev_arm-4c7b408826,SUCCESS,10,front;isometric,47,7,0.0,1637,2325,3962,45.092,,
+dev_arm-dcc2b0ce1e,SUCCESS,10,front;isometric,51,11,0.0196,1638,2776,4414,47.538,,
+dev_arm-43fa322555,SUCCESS,17,front;isometric,77,9,0.0,2121,3675,5796,20.542,,
+dev_arm-551a9c392e,SUCCESS,21,front;isometric,97,13,0.0412,2418,4698,7116,88.786,,

@@ -14,6 +14,8 @@ REQUIRED = [
     "tryset5_selection.md",
     "try3_freecad_config.json",
     "schemas/visual_evidence_packet_v1.schema.json",
+    "schemas/visual_scan_plan_v1.schema.json",
+    "schemas/visual_evidence_packet_v2.schema.json",
     "schemas/mechanical_embodiment_plan_v1.schema.json",
     "schemas/interface_graph_v1.schema.json",
     "schemas/mechanical_feature_graph_v1.schema.json",
@@ -27,6 +29,7 @@ REQUIRED = [
     "prompts/verification_agent.md",
     "scripts/audit_inputs.py",
     "scripts/run_visual_agent.py",
+    "scripts/run_visual_agent_v2.py",
     "scripts/stale_artifact_guard.py",
     "scripts/run_stage.py",
 ]

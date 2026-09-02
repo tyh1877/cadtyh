@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "visual_evidence_packet_v2.schema.json",
+  "title": "Visual Evidence Packet v2",
+  "type": "object",
+  "required": ["schema_version", "case_id", "scan_plan_ref", "links", "crop_records", "leakage_guard"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "visual_evidence_packet_v2"},
+    "case_id": {"type": "string"},
+    "scan_plan_ref": {"type": "string"},
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["link_id", "visibility", "visual_observations", "uncertainty"],
+        "additionalProperties": false,
+        "properties": {
+          "link_id": {"type": "string"},
+          "visibility": {"type": "string"},
+          "visual_observations": {
+            "type": "object",
+            "required": ["main_body", "proximal_region", "distal_region", "visible_features", "surface_hints"],
+            "additionalProperties": false,
+            "properties": {
+              "main_body": {"$ref": "#/$defs/observation"},
+              "proximal_region": {"$ref": "#/$defs/observation"},
+              "distal_region": {"$ref": "#/$defs/observation"},
+              "visible_features": {"type": "array", "items": {"$ref": "#/$defs/feature_observation"}},
+              "surface_hints": {"type": "array", "items": {"$ref": "#/$defs/feature_observation"}}
+            }
+          },
+          "uncertainty": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "crop_records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["crop_id", "case_id", "link_id", "crop_type", "source_view", "bbox_normalized", "bbox_px", "crop_path", "localization_source", "gt_geometry_used"],
+        "additionalProperties": false,
+        "properties": {
+          "crop_id": {"type": "string"},
+          "case_id": {"type": "string"},
+          "link_id": {"type": "string"},
+          "crop_type": {"type": "string", "enum": ["link", "proximal_joint", "distal_joint", "feature"]},
+          "source_view": {"type": "string"},
+          "bbox_normalized": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+          "bbox_px": {"type": "array", "items": {"type": "integer"}, "minItems": 4, "maxItems": 4},
+          "feature_hint": {"type": ["string", "null"]},
+          "crop_path": {"type": "string"},
+          "localization_source": {"type": "string"},
+          "gt_geometry_used": {"const": false}
+        }
+      }
+    },
+    "leakage_guard": {
+      "type": "object",
+      "required": ["uses_gt_mesh", "uses_gt_segmentation", "uses_product_identity"],
+      "properties": {
+        "uses_gt_mesh": {"const": false},
+        "uses_gt_segmentation": {"const": false},
+        "uses_product_identity": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "observation": {
+      "type": "object",
+      "required": ["description", "evidence_refs", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "description": {"type": "string"},
+        "evidence_refs": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "feature_observation": {
+      "type": "object",
+      "required": ["feature_type", "description", "evidence_refs", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "feature_type": {"type": "string"},
+        "description": {"type": "string"},
+        "evidence_refs": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    }
+  }
+}
