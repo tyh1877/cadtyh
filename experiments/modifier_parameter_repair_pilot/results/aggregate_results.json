@@ -1,0 +1,70 @@
+{
+  "baseline_freecad_operation_robustness": {
+    "R1": {
+      "links_total": 6,
+      "success_links": 2,
+      "ir_incomplete_links": 1,
+      "failure_links": 3,
+      "native_success_count": 46,
+      "operation_count": 50,
+      "fcstd_success": 2,
+      "step_success": 2,
+      "stl_success": 2
+    },
+    "R2": {
+      "links_total": 6,
+      "success_links": 4,
+      "ir_incomplete_links": 2,
+      "failure_links": 0,
+      "native_success_count": 44,
+      "operation_count": 44,
+      "fcstd_success": 4,
+      "step_success": 4,
+      "stl_success": 4
+    }
+  },
+  "ir_repair": {
+    "total": 12,
+    "success": 9,
+    "ir_incomplete": 3
+  },
+  "modifier_repair_status_counts": {
+    "PARAMETER_REPAIRED": 11
+  },
+  "execution": {
+    "R1": {
+      "links_total": 6,
+      "success_links": 5,
+      "ir_incomplete_links": 1,
+      "failure_links": 0,
+      "operation_count": 50,
+      "native_success_count": 50,
+      "fallback_count": 0,
+      "fcstd_success": 5,
+      "step_success": 5,
+      "stl_success": 5
+    },
+    "R2": {
+      "links_total": 6,
+      "success_links": 4,
+      "ir_incomplete_links": 2,
+      "failure_links": 0,
+      "operation_count": 44,
+      "native_success_count": 44,
+      "fallback_count": 0,
+      "fcstd_success": 4,
+      "step_success": 4,
+      "stl_success": 4
+    }
+  },
+  "silent_fallback_total": 0,
+  "failure_code_counts": {
+    "IR_INCOMPLETE": 3
+  },
+  "acceptance": {
+    "r1_batch_success_min_3": true,
+    "r2_batch_success_not_below_4": true,
+    "silent_fallback_zero": true,
+    "all_modifier_failures_have_codes": true
+  }
+}

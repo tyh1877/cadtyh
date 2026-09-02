@@ -1,0 +1,15 @@
+{
+  "experiment": "modifier_parameter_repair_pilot",
+  "source_experiment": "mfg_to_ir_repair_pilot",
+  "backend_experiment_baseline": "freecad_operation_robustness_pilot",
+  "versions": ["R1", "R2"],
+  "frozen_links_manifest": "experiments/freecad_robot_link_reconstruction_pilot_v2/inputs/frozen_links.csv",
+  "no_llm_calls": true,
+  "no_gt_mesh_step_cad": true,
+  "modifier_policy": {
+    "requested_parameters_preserved": true,
+    "resolved_parameters_written_to_ir": true,
+    "safe_cap_source": "role_scale_and_modifier_feature_dimensions",
+    "silent_fallback_allowed": false
+  }
+}

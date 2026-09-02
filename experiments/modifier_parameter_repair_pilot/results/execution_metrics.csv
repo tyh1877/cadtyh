@@ -1,0 +1,13 @@
+version,case_id,link_id,role,status,operation_count,native_success_count,semantic_match_count,fallback_count,fcstd_success,step_success,stl_success,failure_code,failure_stage,failure_reason,execution_time_seconds
+R1,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,9,9,9,0,True,True,True,,,,2.6443676948547363
+R1,dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,11,11,11,0,True,True,True,,,,1.1788432598114014
+R1,dev_arm-dcc2b0ce1e,L4,forearm,SUCCESS,10,10,10,0,True,True,True,,,,2.2553870677948
+R1,dev_arm-ab15a75247,L0,base_or_shoulder,SUCCESS,11,11,11,0,True,True,True,,,,0.9213383197784424
+R1,dev_arm-ab15a75247,L2,main_link,IR_INCOMPLETE,0,0,0,0,False,False,False,IR_INCOMPLETE,IR_VALIDATION,modifier repaired executable_cad_ir_v1_2.json missing,0.0
+R1,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,9,9,9,0,True,True,True,,,,0.449108362197876
+R2,dev_arm-dcc2b0ce1e,L2,upper_arm,SUCCESS,12,12,12,0,True,True,True,,,,4.865476131439209
+R2,dev_arm-dcc2b0ce1e,L3,elbow_housing,SUCCESS,13,13,13,0,True,True,True,,,,2.5208089351654053
+R2,dev_arm-dcc2b0ce1e,L4,forearm,IR_INCOMPLETE,0,0,0,0,False,False,False,IR_INCOMPLETE,IR_VALIDATION,modifier repaired executable_cad_ir_v1_2.json missing,0.0
+R2,dev_arm-ab15a75247,L0,base_or_shoulder,IR_INCOMPLETE,0,0,0,0,False,False,False,IR_INCOMPLETE,IR_VALIDATION,modifier repaired executable_cad_ir_v1_2.json missing,0.0
+R2,dev_arm-ab15a75247,L2,main_link,SUCCESS,9,9,9,0,True,True,True,,,,2.7956459522247314
+R2,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,SUCCESS,10,10,10,0,True,True,True,,,,1.4295313358306885

@@ -1,0 +1,12 @@
+version,case_id,link_id,role,op_id,op_type,feature_ref,target_body,requested_value_mm,resolved_value_mm,safe_cap_mm,repair_status,reason
+R1,dev_arm-dcc2b0ce1e,L2,upper_arm,op_009,fillet,F7,op_008_cut,15.0,0.7,0.7,PARAMETER_REPAIRED,role_scale_cap_no_local_dimension
+R1,dev_arm-dcc2b0ce1e,L3,elbow_housing,op_009,fillet,F7,op_008_cut,15.0,1.25,1.25,PARAMETER_REPAIRED,role_scale_cap_no_local_dimension
+R1,dev_arm-dcc2b0ce1e,L4,forearm,op_009,fillet,F8,op_008_cut,8.0,0.7,0.7,PARAMETER_REPAIRED,role_scale_cap_no_local_dimension
+R1,dev_arm-ab15a75247,L0,base_or_shoulder,op_008,fillet,F005,op_007_cut,4.0,1.05,1.05,PARAMETER_REPAIRED,role_scale_cap_no_local_dimension
+R1,dev_arm-ab15a75247,L0,base_or_shoulder,op_009,chamfer,F007,op_008,1.5,0.5,0.5,PARAMETER_REPAIRED,role_scale_and_feature_dimension_cap
+R1,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,op_009,fillet,L4-SF-01,op_008_cut,1.5,0.6,0.6,PARAMETER_REPAIRED,role_scale_cap_no_local_dimension
+R1,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,op_010,chamfer,L4-SF-02,op_009,2.0,0.5,0.5,PARAMETER_REPAIRED,role_scale_and_feature_dimension_cap
+R2,dev_arm-dcc2b0ce1e,L2,upper_arm,op_011,fillet,F009,op_010_cut,12.0,0.7,0.7,PARAMETER_REPAIRED,role_scale_and_feature_dimension_cap
+R2,dev_arm-dcc2b0ce1e,L3,elbow_housing,op_011,fillet,F009,op_010_cut,8.0,1.25,1.25,PARAMETER_REPAIRED,role_scale_and_feature_dimension_cap
+R2,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,op_009,fillet,F008,op_008_cut,3.0,0.6,0.6,PARAMETER_REPAIRED,role_scale_cap_no_local_dimension
+R2,dev_arm-ab15a75247,L4,wrist_or_tool_side_link,op_010,chamfer,F009,op_009,2.0,0.5,0.5,PARAMETER_REPAIRED,role_scale_and_feature_dimension_cap

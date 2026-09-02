@@ -74,3 +74,5 @@ experiments/mfg_to_ir_repair_pilot/runs/
 experiments/mfg_to_ir_repair_pilot/artifacts/
 experiments/freecad_operation_robustness_pilot/runs/
 experiments/freecad_operation_robustness_pilot/artifacts/
+experiments/modifier_parameter_repair_pilot/runs/
+experiments/modifier_parameter_repair_pilot/artifacts/
