@@ -78,3 +78,7 @@ experiments/modifier_parameter_repair_pilot/runs/
 experiments/modifier_parameter_repair_pilot/artifacts/
 experiments/try3_freecad_full_workflow/runs/
 experiments/try3_freecad_full_workflow/artifacts/
+
+# Visual evidence input ablation: GT-derived oracle renders and raw VLM outputs
+experiments/visual_evidence_input_ablation/runs/
+experiments/visual_evidence_input_ablation/artifacts/
