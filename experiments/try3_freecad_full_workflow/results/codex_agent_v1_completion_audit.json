@@ -1,16 +1,21 @@
 {
-  "status": "PASS",
-  "formal_case_version_cells": 15,
-  "successful_case_version_cells": 15,
-  "formal_link_version_cells": 189,
-  "validated_link_version_cells": 189,
-  "stage_manifests": 219,
-  "valid_stage_manifests": 219,
-  "artifact_reopen_passes": 15,
-  "interface_graph_passes": 5,
-  "planner_input_audit_passes": 15,
-  "method_hash_mismatches": [],
-  "formal_failures": 0,
-  "preflight_incidents": 1,
-  "scientific_decision": "TRY3_X_REFINEMENT; no full Try-3 method-success claim"
+  "run_id": "codex_agent_v1",
+  "classification": "URDF_DRIVEN_COARSE_GEOMETRY_TEMPLATE_PILOT",
+  "archive_status": "ARCHIVED_IN_PLACE",
+  "try3_completion": "INCOMPLETE",
+  "causal_claims": "WITHDRAWN",
+  "rq1": "NOT_VALIDATED",
+  "rq2": "NOT_VALIDATED",
+  "rq3": "BASIC_FREECAD_OPERATION_EXECUTION_ONLY",
+  "all_five_cases": "PREVIOUSLY_OBSERVED_DEVELOPMENT_CASES",
+  "historical_holdout_label": "PRESERVED_FOR_PROVENANCE_ONLY_NOT_UNTOUCHED_CONFIRMATORY_HOLDOUT",
+  "historical_execution": {
+    "case_version_exports": "15/15",
+    "link_version_exports": "189/189",
+    "operations": 693
+  },
+  "historical_checks": "Archived PASS checks concern artifact/schema execution; they do not certify scientific validity, semantic input isolation, or full editability.",
+  "supersedes": "results/codex_agent_v1_completion_audit.json at commit 8ae7fa0",
+  "reclassified_at": "2026-09-05T08:04:00.264360+00:00",
+  "scope": "Step 1 only: archive and correct interpretation; no generation/evaluator changes."
 }

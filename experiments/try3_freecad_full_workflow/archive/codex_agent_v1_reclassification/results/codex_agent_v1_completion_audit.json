@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "formal_case_version_cells": 15,
+  "successful_case_version_cells": 15,
+  "formal_link_version_cells": 189,
+  "validated_link_version_cells": 189,
+  "stage_manifests": 219,
+  "valid_stage_manifests": 219,
+  "artifact_reopen_passes": 15,
+  "interface_graph_passes": 5,
+  "planner_input_audit_passes": 15,
+  "method_hash_mismatches": [],
+  "formal_failures": 0,
+  "preflight_incidents": 1,
+  "scientific_decision": "TRY3_X_REFINEMENT; no full Try-3 method-success claim"
+}

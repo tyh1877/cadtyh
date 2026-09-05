@@ -183,6 +183,18 @@ def make_report(aggregate: list[dict[str, str]], execution: list[dict[str, str]]
 
 
 def main() -> int:
+    # A historical replay must not restore withdrawn conclusions or overwrite
+    # the archived evidence inventory. This guard performs no writes or CAD calls.
+    reclassification = EXP / "archive/codex_agent_v1_reclassification/manifest.json"
+    if reclassification.is_file():
+        print(json.dumps({
+            "status": "ARCHIVED_RECLASSIFIED_NO_WRITE",
+            "classification": "URDF_DRIVEN_COARSE_GEOMETRY_TEMPLATE_PILOT",
+            "try3_completion": "INCOMPLETE",
+            "report": str(RESULTS / "codex_agent_v1_try3_report.md"),
+            "note": "Historical finalization disabled to preserve corrected conclusions and evidence."
+        }, indent=2))
+        return 0
     execution = read_csv(RESULTS / "codex_agent_v1_freecad_execution.csv")
     if len(execution) != 15:
         raise RuntimeError(f"expected 15 execution rows, got {len(execution)}")

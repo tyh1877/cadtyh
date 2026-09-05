@@ -1,24 +1,15 @@
-# Try-3 FreeCAD Full Workflow
+# Try-3 FreeCAD full-workflow workspace
 
-This is the clean formal Try-3 experiment workspace.
+**完整 Try-3 尚未完成。** `codex_agent_v1` 已重新界定并就地归档为
+“URDF 驱动的粗几何模板试验”。此前完整完成及架构因果有效性结论已撤回。
 
-The experiment restores the full Try-3 workflow from `try3/try3.md` and replaces
-only the execution backend:
+当前权威说明：`results/codex_agent_v1_try3_report.md`。
+机器可读状态：`results/codex_agent_v1_completion_audit.json`。
+原报告/清单/审计：`archive/codex_agent_v1_reclassification/`，均为历史材料。
 
-```text
-Fusion MCP/API -> FreeCADCmd + FreeCAD Python API
-```
+模型仍在 `runs/codex_agent_v1/<V0|V1|V2>/<case>/`；指标表和图像路径不变。
+五台案例均已查看，后续均作为开发案例。历史 config、freeze 和表格中的
+holdout 标签只用于追溯，不代表未触碰的确认性测试集。
 
-It is not a continuation of the simplified link-level FreeCAD pilots. Those
-pilots showed that FreeCAD can execute CAD IR, but they did not preserve the
-full Try-3 architecture required for robot-like mechanical embodiment.
-
-Current implementation status (2026-09-05): the GLM-backed run stopped after
-visual scan/crop generation. The user-approved Codex continuation has now
-completed a separate `codex_agent_v1` V0/V1/V2 FreeCAD matrix. All 15
-case/version cells and 189 link/version cells executed and exported with zero
-silent fallback. The architectural result is mixed: V1 improves coarse geometry
-and connectivity over V0; V2 provides only a modest further gain and worsens the
-non-adjacent overlap proxy. See
-`results/codex_agent_v1_try3_report.md` and
-`AMENDMENT_CODEX_AGENT_SUBSTITUTION.md`.
+原目标仍由 `TRY3_FREECAD_PROTOCOL.md` 与 `try3/try3.md` 定义；本次归档
+没有降低原实验要求。GLM 视觉历史记录、Fusion 结果与其他试验仍独立保存。

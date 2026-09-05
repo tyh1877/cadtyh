@@ -1,52 +1,57 @@
-# Codex-agent Try-3 FreeCAD report
+# 本次结果重新界定：URDF 驱动的粗几何模板试验
 
-## Executive result
+当前分类：`URDF_DRIVEN_COARSE_GEOMETRY_TEMPLATE_PILOT`。
+历史运行 `codex_agent_v1` 已就地归档；完整 Try-3 尚未完成。
+本文件取代原报告中的方法有效性解释。原报告与原 PASS 审计完整保存在
+`../archive/codex_agent_v1_reclassification/`，仅供历史追溯。
 
-The formal Codex-agent matrix executed completely: 15/15 robot/version cells and 189/189 link/version cells exported editable FCStd plus STEP/STL with zero silent fallbacks. The architectural result is mixed: V1 clearly improves coarse geometry and connectivity over V0 on the three-case holdout, while V2 adds only a modest envelope/interface gain over V1 and increases the non-adjacent AABB-overlap interference proxy.
+## 保留的事实
 
-This is not a GLM continuation result. The producer change and interactive reproducibility limits are defined in `AMENDMENT_CODEX_AGENT_SUBSTITUTION.md`.
+- 已记录 15/15 整机版本、189/189 link/version 的 FCStd/STEP/STL 导出，
+  693 条 FreeCAD 操作和 15 个装配重开检查。它们说明当前操作子集可执行。
+- 所有历史数值表、模型、图像、原始运行输出与冻结哈希保持不变。
+- V0/V1/V2 名称保留为历史目录标识；应解释为 Box、Loft+两端圆柱、
+  调整尺寸并增加法兰三种模板条件，不是已经实现的完整 agent 消融。
+- 零件 FCStd 含原生特征；整机通过 STEP 重导入建立 Part::Feature。
+  导出/打开成功不能证明关联式参数修改、重算或运动验证通过。
 
-## Holdout results
+## 撤回的结论
 
-| Metric | V0 | V1 | V2 |
-| --- | ---: | ---: | ---: |
-| Mean Chamfer | 0.004384 | 0.003120 | 0.002896 |
-| Mean HD95 | 0.138036 | 0.108911 | 0.104910 |
-| Mean voxel IoU | 0.231861 | 0.354844 | 0.373325 |
-| Mean interface gap | 0.307947 | 0.222755 | 0.209830 |
-| Mean disconnected-joint rate | 0.787500 | 0.233333 | 0.233333 |
-| Mean non-adjacent AABB overlaps | 10.000000 | 17.000000 | 19.000000 |
+- 撤回“完整 Codex-agent Try3 实验已完成”。
+- 撤回“V1 指标改善验证了 Global-to-Local visual grounding 有效”。
+- 撤回“V2 指标改善验证了 MEP 或 Interface-first 有效”。
+- 撤回“当前三案例 holdout 提供未触碰的确认性验证”。五台案例均已查看，
+  后续全部作为方法开发案例；CSV 中 development/holdout/all 标签仅保留历史分组。
+- 不以原 completion_audit 的 PASS 或全勾选清单证明上述科学结论。
 
-V0→V1 reduces holdout Chamfer by 28.8% and HD95 by 21.1%, while voxel IoU rises by 53.0%. V1→V2 reduces Chamfer by 7.2% and interface gap by 5.8%; disconnected-joint rate is unchanged and non-adjacent overlap count worsens.
+## 直接代码证据
 
-## Research questions
+`scripts/codex_agent_common.py::link_geometry` 使用 URDF 偏移、工程尺度和
+版本常数决定尺寸；未从视觉证据推断逐 link 截面和形状。
+`scripts/generate_codex_agent_plans.py::build_link_artifacts` 接收 mep/interface
+参数却不消费其决策，直接按版本选择 Box、Loft、Cylinder 和 Fuse。
+逐 link 视觉特征通过 `visible[index % len(visible)]` 循环分配；这不是
+逐 link 图像判断。SkillCall 与 IR 并行生成，后端直接执行 IR。
+去掉 MEP/interface 或改变视觉描述，不能据此保证生成几何改变。
 
-### RQ1: global-to-local visual grounding
+## 指标解释限制
 
-Partially supported. V1 improves envelope-level geometry and joint-neighborhood connectivity over V0, including on holdout. It does not demonstrate fine visible-detail recovery: the pre-output visual labels reach the feature plans, but none are translated into an executed visible-detail operation.
+原数值仅描述这些模板在旧评价器下的输出，不承担 agent 架构因果解释。
+V2 轴线误差在评价代码中直接填写 0，不能作为 B-Rep 实测证据。
+primitive_proxy 仅以是否有 Loft 判断，不能证明摆脱粗几何。
+接口 gap 是关节中心到采样表面距离之和，不是配合面间隙；AABB 重叠
+不是实体干涉体积；尚未完成真实 ICS、clearance/penetration/motion 检查。
+可见特征的计划计数和预设执行零值不是独立视觉正确性评估。
+路径字符串扫描也不能证明交互会话未接触历史 GT 或结果信息。
 
-### RQ2: MEP and interface-first planning
+## 按 try3.md 重新判断
 
-Not clearly supported as a distinct V2 effect. V2 modestly improves mean Chamfer, HD95, voxel IoU, and interface gap over V1, but it does not lower the disconnected-joint rate and increases the AABB interference proxy. The improvement is too small and mechanically incomplete to claim that full MEP/interface planning solved the assembly/detail gap.
+| 研究问题 | 当前可支持结论 |
+| --- | --- |
+| RQ1：局部视觉是否改善细粒度几何 | 未有效验证 |
+| RQ2：MEP/接口规划是否改善简化与断连 | 未有效验证 |
+| RQ3：机械技能是否可靠落到可编辑 CAD | 仅基础 FreeCAD 操作执行得到有限验证 |
 
-### RQ3: RobotCAD skills and editable FreeCAD
-
-Supported for the frozen basic skill subset, not for high-fidelity embodiment. Native Part::Box, Part::Loft, Part::Cylinder, and Part::Fuse features execute reliably, all assemblies reopen, and fallback count is zero. Shell, sweep, fillet, holes/recesses, feet, fingers, and other visible details are absent from the formal skill projection. V1/V2 avoid the V0 box-only proxy but remain coarse loft-and-cylinder assemblies.
-
-## Coverage and failure accounting
-
-- Formal execution: 15/15 cases and 189/189 links successful; 693 FreeCAD operations; zero fallback.
-- Pre-holdout incident count: 1. The optional-URDF-origin parser failure occurred before any holdout agent output, was recorded, fixed generically, and the method was re-frozen before formal generation.
-- No formal case was dropped or repaired after generation.
-- Agent token counts, exact serving snapshot, sampling controls, and per-call latency are unavailable in the interactive Codex environment and are not represented as zero.
-
-## Interpretation limits
-
-- The five-case set is a method-development TrySet, not a large benchmark. The three-case holdout protects evaluator tuning within this continuation but is too small for a broad generalization claim.
-- Visible-feature labels were authored by the same Codex agent from allowed images before formal outputs; they are not independent expert ground truth. Executed visible-feature recall is conservatively zero because those planned details have no mapped CAD operations.
-- Interference is an AABB overlap proxy, not exact solid intersection volume. Axis equality is validated structurally against sanitized URDF/interface artifacts; native moving-joint behavior is outside the amended FreeCAD acceptance boundary.
-- Global and per-link geometry use normalized deterministic surface sampling and rigid ICP; they measure shape similarity, not manufacturing correctness.
-
-## Decision
-
-The experiment supports continuing to a Try-3.x skill refinement, not claiming full Try-3 success. The next work should translate already planned visible details into robust FreeCAD hole/recess/shell/fillet/sweep operations and reduce non-adjacent interference without a case-specific repair loop. The same frozen five cases can be used for development; a new untouched set is required for a later confirmatory claim.
+完整 Try-3 仍需要真实逐 link 观察、消费 MEP/共享接口的建模决策、
+Feature Graph→SkillCall→IR 编译链、结构细节、真实机械评价和参数化装配。
+本次只完成重新界定与归档，没有实施这些后续步骤。
