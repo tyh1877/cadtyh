@@ -1,0 +1,175 @@
+case_id,condition,component_id,matched_region_id,matched_iou,plan_available,functional_role,geometry_family,joint_region_count,visible_feature_count
+step_px100,A0_controlled,C00,R00,0.5175485875527097,True,base,faceted truncated-cone pedestal on hexagonal flat platter,1,3
+step_px100,A0_controlled,C01,R01,0.6228724992535088,True,housing/cover adjacent to base (external cover panel),rounded rectangular box,1,1
+step_px100,A0_controlled,C02,R02,0.356206630686199,True,shoulder block,compact rectangular block with rounded transitions,1,1
+step_px100,A0_controlled,C03,R04,0.31416549789621334,True,forearm link,elongated flat link with rounded pivot ends,2,2
+step_px100,A0_controlled,C04,R06,0.21283783783783763,True,gripper,two-finger parallel gripper with mounting flange and lateral finger rails,2,3
+step_px100,A0_controlled,C05,R05,0.23761375126390327,True,wrist yoke,curved yoke/clevis with downward-swept arms,1,2
+step_px100,A0_controlled,C06,R03,0.43421434795236735,True,upper arm link (vertical column),tall flat plate/column with rounded ends,2,2
+step_px100,A1_color_only,C00,R00,0.8565228098257709,True,base,revolved pedestal with polygonal flange,1,2
+step_px100,A1_color_only,C01,R02,0.9728155339805817,True,shoulder,prismatic joint housing block,1,1
+step_px100,A1_color_only,C02,R04,0.7074866310160424,True,forearm,elongated horizontal prismatic link,2,2
+step_px100,A1_color_only,C03,R05,0.6978582355940846,True,wrist,curved yoke/clevis bracket,1,2
+step_px100,A1_color_only,C04,R06,0.5716642606723039,True,finger,slender finger/gripper jaw with angled tip,1,1
+step_px100,A1_color_only,C05,R01,0.0,True,other,rectangular box enclosure,0,1
+step_px100,A1_color_only,C06,R03,0.7636363636363639,True,upper_arm,upright prismatic link with angled top,2,2
+step_px100,A2_color_legend,C00,R00,0.8806486880466474,True,base,stepped pedestal: flat rectangular plinth plus fluted drum cap,1,2
+step_px100,A2_color_legend,C01,R01,0.6466019417475737,True,shoulder joint housing,compact dark rectangular block with stepped lower flange,1,1
+step_px100,A2_color_legend,C02,R02,0.7843803056027162,True,forearm link,elongated flat link with curved transition into wrist yoke,2,2
+step_px100,A2_color_legend,C03,R03,0.8393094289508625,True,wrist / end-effector yoke,curved yoke housing with wide lateral fins,2,2
+step_px100,A2_color_legend,C04,R04,0.7449324324324322,True,gripper finger (right-side jaw),small angular finger block riding on rail,1,1
+step_px100,A2_color_legend,C05,R06,0.6634304207119736,True,gripper finger (left-side jaw),small angular finger block riding on rail,1,1
+step_px100,A2_color_legend,C06,R05,0.6943701547107219,True,upper arm link,tall slender arm column with rounded pivot bosses,2,2
+step_rx150,A0_controlled,C00,R02,0.7850010713520463,True,base pedestal column,vertical rectangular prism with flared foot,1,1
+step_rx150,A0_controlled,C01,R01,0.2601697836766352,True,other (cover/box beside base),low rectangular box with flat top,0,1
+step_rx150,A0_controlled,C02,R03,0.3214347600069307,True,upper arm link,elongated arm link with curved transition at elbow end,1,1
+step_rx150,A0_controlled,C03,R04,0.2683289914402678,True,shoulder/elbow joint housing,blocky joint housing between column and upper arm,1,1
+step_rx150,A0_controlled,C04,R06,0.49405833633417473,True,wrist,yoke-shaped wrist cluster,1,1
+step_rx150,A0_controlled,C05,R07,0.7509167533249412,True,gripper (end-effector body),wide flat gripper body with flange,1,1
+step_rx150,A0_controlled,C06,R00,0.4587338152355235,True,base,short cylindrical drum with wider flat base plate,1,2
+step_rx150,A0_controlled,C07,R08,0.5731681713205965,True,finger,parallel elongated finger prongs,1,1
+step_rx150,A0_controlled,C08,R05,0.0,True,forearm link,elongated forearm with bulged mid-section,1,1
+step_rx150,A1_color_only,C00,R00,0.303586113196754,True,base,revolved pedestal with faceted lower skirt,1,2
+step_rx150,A1_color_only,C01,R02,0.2241012860798319,True,base column / pedestal riser,vertical prismatic column with cylindrical top disc,1,2
+step_rx150,A1_color_only,C02,R03,0.1860213747097912,True,shoulder housing,curved transition block from column to link,1,1
+step_rx150,A1_color_only,C03,R04,0.18884001555202679,True,upper_arm,joint housing / link segment,1,1
+step_rx150,A1_color_only,C04,R06,0.27087487537387844,True,upper_arm link segment,prismatic link with ribbed transition,0,1
+step_rx150,A1_color_only,C05,R07,0.4292540483143088,True,forearm,link with curved transition casting,1,1
+step_rx150,A1_color_only,C06,R08,0.7431212537011621,True,wrist,yoke/clevis-shaped wrist body with side plates,2,1
+step_rx150,A1_color_only,C07,R10,0.4633747547416616,True,finger,elongated prismatic finger blade,1,1
+step_rx150,A1_color_only,C08,R09,0.3203883495145632,True,finger,elongated prismatic finger blade,1,1
+step_rx150,A2_color_legend,C00,,0,False,,,0,0
+step_rx150,A2_color_legend,C01,,0,False,,,0,0
+step_rx150,A2_color_legend,C02,,0,False,,,0,0
+step_rx150,A2_color_legend,C03,,0,False,,,0,0
+step_rx150,A2_color_legend,C04,,0,False,,,0,0
+step_rx150,A2_color_legend,C05,,0,False,,,0,0
+step_rx150,A2_color_legend,C06,,0,False,,,0,0
+step_rx150,A2_color_legend,C07,,0,False,,,0,0
+step_rx150,A2_color_legend,C08,,0,False,,,0,0
+step_vx300s,A0_controlled,C00,R00,0.7521144408478648,True,base column,tall slender vertical column rising from a pedestal,2,2
+step_vx300s,A0_controlled,C01,R03,0.36125048243921315,True,shoulder yoke,tapered housing widening laterally at top of column,1,1
+step_vx300s,A0_controlled,C02,R04,0.3243916618221079,True,upper arm,"long slender prismatic link, vertical in front/rear views, angled in side views",1,1
+step_vx300s,A0_controlled,C03,R07,0.37786774628879927,True,forearm main spine,long slender horizontal prismatic link,0,1
+step_vx300s,A0_controlled,C04,R08,0.2105663468289259,True,forearm distal cover segment,tubular/cover sleeve around forearm distal end,1,1
+step_vx300s,A0_controlled,C05,R09,0.5794314381270905,True,wrist pitch joint housing,angular bracket/housing with angled face,1,1
+step_vx300s,A0_controlled,C06,R02,0.0,True,base plate,flat octagonal plate,0,1
+step_vx300s,A0_controlled,C07,R06,0.0,True,forearm proximal boss,short cylindrical/boss segment at forearm root,1,1
+step_vx300s,A0_controlled,C08,R11,0.7843830570902399,True,gripper drive body,wide flat housing between yoke cheeks and finger mounts,1,2
+step_vx300s,A0_controlled,C09,R01,0.0,True,side housing/cover block on base plate,low rectangular box adjacent to pedestal,0,1
+step_vx300s,A0_controlled,C10,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C11,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C12,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C13,R05,0.42696629213483117,True,elbow joint housing,compact blocky housing at arm-to-forearm junction,1,1
+step_vx300s,A0_controlled,C14,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C15,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C16,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C17,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C18,R10,0.743128114451052,True,wrist yoke,open U-shaped yoke below wrist housing,1,1
+step_vx300s,A0_controlled,C19,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C20,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C21,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C22,,0.0,False,,,0,0
+step_vx300s,A0_controlled,C23,R12,0.7667207327545078,True,gripper finger,curved tapered finger blade with tip bend,1,2
+step_vx300s,A1_color_only,C00,R01,0.8025334380455169,True,base,pedestal_drum,1,1
+step_vx300s,A1_color_only,C01,R03,0.5972299168975075,True,base,cylinder,1,1
+step_vx300s,A1_color_only,C02,R04,0.2711267605633804,True,shoulder,column,1,1
+step_vx300s,A1_color_only,C03,R13,0.638505553685629,True,wrist,yoke,1,1
+step_vx300s,A1_color_only,C04,R09,0.6667179400409181,True,forearm,tube,0,1
+step_vx300s,A1_color_only,C05,R10,0.5501478892175323,True,forearm,housing_block,1,1
+step_vx300s,A1_color_only,C06,R11,0.46645146414572336,True,wrist,bracket,1,1
+step_vx300s,A1_color_only,C07,R00,0.0,True,base,flat_plate,0,1
+step_vx300s,A1_color_only,C08,R19,0.481572481572482,True,finger,finger_blade,1,1
+step_vx300s,A1_color_only,C09,R22,0.24571428571428547,True,other,recess,0,1
+step_vx300s,A1_color_only,C10,R07,0.0,True,upper_arm,flange_disc,1,1
+step_vx300s,A1_color_only,C11,R02,0.0,True,base,block,0,1
+step_vx300s,A1_color_only,C12,R12,0.08057888154368432,True,wrist,boss,1,1
+step_vx300s,A1_color_only,C13,R05,0.35928809788654026,True,shoulder,yoke,1,1
+step_vx300s,A1_color_only,C14,R08,0.43771051382327025,True,upper_arm,boom_segment,0,1
+step_vx300s,A1_color_only,C15,R16,0.3334693877551013,True,gripper,housing_block,0,1
+step_vx300s,A1_color_only,C16,R15,0.4407407407407411,True,wrist,housing_block,1,1
+step_vx300s,A1_color_only,C17,R06,0.4829162132752995,True,shoulder,housing_block,1,1
+step_vx300s,A1_color_only,C18,R21,0.554089709762534,True,other,block,0,1
+step_vx300s,A1_color_only,C19,R17,0.4994775339602932,True,gripper,housing_block,0,1
+step_vx300s,A1_color_only,C20,R23,0.37212296797038535,True,other,panel,0,1
+step_vx300s,A1_color_only,C21,R20,0.30012150668286725,True,other,boss,0,1
+step_vx300s,A1_color_only,C22,R14,0.5186462953836054,True,wrist,housing_block,1,1
+step_vx300s,A1_color_only,C23,R18,0.49515789473684263,True,finger,finger_blade,1,1
+step_vx300s,A2_color_legend,C00,R00,0.6839102741622819,True,base,octagonal_flat_base_plate,0,2
+step_vx300s,A2_color_legend,C01,R13,0.5623678646934467,True,base,dome_pedestal_housing,1,2
+step_vx300s,A2_color_legend,C02,R02,0.33977637167374597,True,shoulder,tall_column,1,1
+step_vx300s,A2_color_legend,C03,R10,0.4216519966184293,True,forearm,long_straight_tube,1,1
+step_vx300s,A2_color_legend,C04,R04,0.642808912896693,True,forearm,cylindrical_boss_transition,1,1
+step_vx300s,A2_color_legend,C05,R21,0.4927099044746113,True,wrist,wrist_link_plate,1,0
+step_vx300s,A2_color_legend,C06,R07,0.6703717899578394,True,wrist,compact_wrist_block,1,0
+step_vx300s,A2_color_legend,C07,R12,0.0,True,forearm,small_coupling_block,1,0
+step_vx300s,A2_color_legend,C08,R23,0.46917666528754765,True,finger,gripper_finger,1,1
+step_vx300s,A2_color_legend,C09,R11,0.0,True,forearm,flange_ring,1,1
+step_vx300s,A2_color_legend,C10,R01,0.0,True,base,vertical_column_housing,1,1
+step_vx300s,A2_color_legend,C11,R05,0.05857142857142847,True,wrist,curved_transition_bracket,1,1
+step_vx300s,A2_color_legend,C12,R03,0.0,True,shoulder,yoke_bracket,1,1
+step_vx300s,A2_color_legend,C13,R19,0.241423125794155,True,gripper,mount_plate_with_hole_pattern,0,1
+step_vx300s,A2_color_legend,C14,R08,0.612167300380228,True,finger,gripper_finger,1,1
+step_vx300s,A2_color_legend,C15,R20,0.0,True,shoulder,shoulder_joint_housing_cap,1,0
+step_vx300s,A2_color_legend,C16,R09,0.4690332326283983,True,wrist,small_cover_shell,0,1
+step_vx300s,A2_color_legend,C17,R17,0.4901960784313728,True,finger,finger_mount_plate,1,0
+step_vx300s,A2_color_legend,C18,R18,0.8351627906976765,True,wrist,wrist_yoke_plate,1,1
+step_vx300s,A2_color_legend,C19,R15,0.0,True,forearm,elbow_drive_block,1,1
+step_vx300s,A2_color_legend,C20,R16,0.19631901840490834,True,wrist,small_boss,1,1
+step_vx300s,A2_color_legend,C21,R14,0.277541772868876,True,gripper,gripper_carriage,1,1
+step_vx300s,A2_color_legend,C22,R06,0.47871939736346475,True,wrist,short_flange_ring,1,1
+step_vx300s,A2_color_legend,C23,R22,0.3482587064676627,True,wrist,wrist_side_cover,0,0
+step_wx200,A0_controlled,C00,R00,0.1456608314471535,True,base,octagonal flat base plate with scalloped cylindrical housing on top,1,2
+step_wx200,A0_controlled,C01,R05,0.2637681159420289,True,forearm_elbow_housing,bulged joint housing between upper arm and forearm,1,1
+step_wx200,A0_controlled,C02,R04,0.18956649522410043,True,upper_arm,horizontal arm link with rounded joint boss at shoulder end,1,2
+step_wx200,A0_controlled,C03,R06,0.22781495490253137,True,wrist,wrist yoke with clevis and curved link arm,1,2
+step_wx200,A0_controlled,C04,R02,0.21955151692803732,True,lower_arm_vertical_column,slender vertical rectangular column,1,1
+step_wx200,A0_controlled,C05,R03,0.0,True,shoulder_joint_housing,curved rounded housing block capping column,1,1
+step_wx200,A0_controlled,C06,R07,0.2221153846153845,True,gripper,parallel-jaw gripper body with two protruding fingers on rails,1,2
+step_wx200,A0_controlled,C07,R01,0.3000546746856208,True,shoulder yoke,twin rectangular upright brackets forming a yoke,1,1
+step_wx200,A1_color_only,C00,R00,0.8892717665977485,True,base,revolved drum with flanged base plate,1,3
+step_wx200,A1_color_only,C01,R01,0.8245192307692304,True,shoulder housing,rectangular block housing,1,2
+step_wx200,A1_color_only,C02,R04,0.378467778931357,True,upper_arm (distal horizontal link segment),slender prismatic link,1,1
+step_wx200,A1_color_only,C03,R05,0.7047413793103449,True,wrist yoke,yoke/clevis bracket,1,2
+step_wx200,A1_color_only,C04,R06,0.684459965078573,True,gripper housing,block with cover-like housing,1,2
+step_wx200,A1_color_only,C05,R07,0.671789906813506,True,fingers,two parallel elongated finger prongs,1,2
+step_wx200,A1_color_only,C06,R03,0.005814603600581526,True,wrist elbow housing,compact block/yoke housing,1,1
+step_wx200,A1_color_only,C07,R02,0.6185133239831702,True,forearm,slender prismatic link with uniform cross-section,1,2
+step_wx200,A2_color_legend,C00,R00,0.9349277266754269,True,base,octagonal flat pedestal with raised central drum and side extension pad,1,3
+step_wx200,A2_color_legend,C01,R01,0.6910256410256422,True,shoulder,low vertical drum segment atop base with square shoulder block above,1,2
+step_wx200,A2_color_legend,C02,R03,0.7297748123436198,True,forearm,long horizontal slender prismatic link with enlarged end housings,2,2
+step_wx200,A2_color_legend,C03,R04,0.7189244038559086,True,wrist,compact curved-link yoke cluster between forearm end and gripper,1,2
+step_wx200,A2_color_legend,C04,R05,0.5578400936434434,True,gripper,boxy gripper housing with flange mount,1,2
+step_wx200,A2_color_legend,C05,R06,0.6645914396887164,True,finger,pair of slender curved finger blades extending from gripper front,1,2
+step_wx200,A2_color_legend,C06,R07,0.23517765968531812,True,wrist,small cylindrical flange disc between wrist link and gripper,1,1
+step_wx200,A2_color_legend,C07,R02,0.7469264671769883,True,lower_arm,long vertical prismatic column with intermediate stepped sleeve,2,2
+step_wx250s,A0_controlled,C00,R00,0.4882601434325581,True,base mounting plate,flat plate,0,2
+step_wx250s,A0_controlled,C01,R01,0.8300675675675678,True,base housing (yaw pedestal),short cylindrical drum with curved skirt transition,1,2
+step_wx250s,A0_controlled,C02,R03,0.3714908345083967,True,shoulder joint housing (opposite side),prismatic block,1,1
+step_wx250s,A0_controlled,C03,R07,0.5208929593589019,True,forearm main link (long slender tube),long slender prismatic link,1,1
+step_wx250s,A0_controlled,C04,R08,0.6480044345898012,True,wrist flange / distal forearm cluster,cylindrical flange plus stepped housing cluster,1,2
+step_wx250s,A0_controlled,C05,R04,0.0,True,upper arm link (vertical column),slender prismatic column,2,1
+step_wx250s,A0_controlled,C06,R06,0.4556663168940191,True,elbow joint housing / motor-side boss on forearm,bulky housing block,1,1
+step_wx250s,A0_controlled,C07,R10,0.5443548387096787,True,gripper finger / fingertip,small finger paddle,1,1
+step_wx250s,A0_controlled,C08,R09,0.5670867309117875,True,gripper body / wrist-end effector base,compact rectangular housing with protruding drive block,1,1
+step_wx250s,A0_controlled,C09,R02,0.0,True,shoulder joint housing (one side),prismatic block,1,1
+step_wx250s,A1_color_only,C00,R00,0.8488471391972676,True,base,cylindrical drum with octagonal foot plate,1,4
+step_wx250s,A1_color_only,C01,R01,0.8432207902865054,True,shoulder joint housing,compact blocky housing pair flanking column,1,1
+step_wx250s,A1_color_only,C02,R02,0.32826794454552466,True,upper arm link,long slender prismatic link,0,1
+step_wx250s,A1_color_only,C03,R03,0.7933470709449522,True,upper arm distal plate,flat elongated plate,0,1
+step_wx250s,A1_color_only,C04,R05,0.7621928166351603,True,forearm link with flange,elongated link with cylindrical flange section,0,1
+step_wx250s,A1_color_only,C05,R06,0.7048119692680955,True,wrist assembly,compact multi-part wrist cluster,1,1
+step_wx250s,A1_color_only,C06,R04,0.6417098332825488,True,elbow joint housing,compact block housing,1,0
+step_wx250s,A1_color_only,C07,R08,0.6720000000000005,True,gripper finger (left),small elongated finger prong,1,0
+step_wx250s,A1_color_only,C08,R09,0.5443548387096787,True,gripper finger (right),small elongated finger prong,1,0
+step_wx250s,A1_color_only,C09,R07,0.4557950875084501,True,gripper body / drive cover,rectangular housing block,1,1
+step_wx250s,A2_color_legend,C00,R00,0.8691170949796938,True,base,low cylindrical drum with octagonal mounting flange plate and side extension boss,1,4
+step_wx250s,A2_color_legend,C01,R01,0.7559999999999988,True,shoulder joint housing,compact prismatic housing block at column top with angled facets,1,2
+step_wx250s,A2_color_legend,C02,R02,0.4711538461538467,True,upper_arm link,long slender prismatic bar,1,2
+step_wx250s,A2_color_legend,C03,R03,0.6765519133756862,True,forearm / elbow bracket assembly,stepped block-and-plate assembly with flanged coupler,1,3
+step_wx250s,A2_color_legend,C04,R04,0.830165054069437,True,wrist yoke / mid-wrist link,curved yoke-shaped link with flange disc,1,2
+step_wx250s,A2_color_legend,C05,R05,0.5097404690380722,True,wrist roll housing,short cylindrical hub with angular top cap,1,1
+step_wx250s,A2_color_legend,C06,R06,0.7592969080897927,True,gripper base / drive housing,wide flat housing block wider than wrist,1,2
+step_wx250s,A2_color_legend,C07,R07,0.7322014051522254,True,gripper finger (left),elongated finger with L-shaped cross-section tip,1,1
+step_wx250s,A2_color_legend,C08,R08,0.7601139601139606,True,gripper finger (right),elongated finger with L-shaped cross-section tip,1,1
+step_wx250s,A2_color_legend,C09,R09,0.0,True,upper shoulder/elbow joint housing at top of arm (second housing mass),blocky joint housing with chamfered faces atop column,1,1

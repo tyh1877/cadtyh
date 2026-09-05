@@ -1,0 +1,17 @@
+{
+  "integrity_status": "PASS",
+  "scientific_completion": "INCOMPLETE_PROTOCOL_GATES",
+  "native_cases": 5,
+  "leaf_components_per_condition": 58,
+  "e1_cells": 45,
+  "e1_successes": 43,
+  "e2_cells": 15,
+  "e2_successes": 14,
+  "full_denominator_component_rows": 522,
+  "replicate_01_case_macro_delta_iou": 0.1423939822597004,
+  "replicate_01_relative_contamination_proxy_reduction": 0.16356928766143386,
+  "replicate_01_e2_failure_inclusive_unsupported_reference_delta": 0.2,
+  "decision": "NO_GO for promotion; preserve repeats as exploratory, not confirmatory",
+  "recorded_e1_tokens_lower_bound": 477739,
+  "recorded_e2_tokens": 216854
+}

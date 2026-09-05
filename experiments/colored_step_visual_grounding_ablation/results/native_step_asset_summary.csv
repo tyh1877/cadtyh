@@ -1,0 +1,6 @@
+case_id,dataset_name,status,leaf_components,source_solids,expected_solids,reopened_leaf_components,reopened_solids,step_color_entities,views_per_condition,returncode,error_type,error
+step_px100,PincherX-100,SUCCESS,7,9,9,7,9,10,6,0,,
+step_rx150,ReactorX-150,SUCCESS,9,17,17,9,17,12,6,0,,
+step_vx300s,ViperX-300s,SUCCESS,24,24,24,24,24,27,6,0,,
+step_wx200,WidowX-200,SUCCESS,8,8,8,8,8,11,6,0,,
+step_wx250s,WidowX-250s,SUCCESS,10,8,8,10,8,13,6,0,,

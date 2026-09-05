@@ -1,0 +1,5 @@
+# Local, regenerable evidence; hashes are tracked in results/closeout_evidence_inventory.csv.
+artifacts/
+runs/
+results/e1_contact_sheets/
+__pycache__/

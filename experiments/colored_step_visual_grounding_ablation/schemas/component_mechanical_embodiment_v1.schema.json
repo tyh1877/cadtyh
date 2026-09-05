@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "component_mechanical_embodiment_v1.schema.json",
+  "type": "object",
+  "required": ["schema_version", "case_id", "condition", "components"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "component_mechanical_embodiment_v1"},
+    "case_id": {"type": "string"},
+    "condition": {"enum": ["A0_controlled", "A1_color_only", "A2_color_legend"]},
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["evidence_region_id", "functional_role", "main_envelope", "joint_regions", "visible_structural_features", "body_transition", "uncertainty"],
+        "additionalProperties": false,
+        "properties": {
+          "evidence_region_id": {"type": "string"},
+          "functional_role": {"type": "string"},
+          "main_envelope": {
+            "type": "object",
+            "required": ["geometry_family", "section_family", "taper", "confidence", "evidence_refs"],
+            "additionalProperties": false,
+            "properties": {
+              "geometry_family": {"type": "string"},
+              "section_family": {"type": "string"},
+              "taper": {"type": "string"},
+              "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+              "evidence_refs": {"$ref": "#/$defs/evidence_refs"}
+            }
+          },
+          "joint_regions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["family", "location", "confidence", "evidence_refs"],
+              "additionalProperties": false,
+              "properties": {
+                "family": {"type": "string"},
+                "location": {"type": "string"},
+                "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+                "evidence_refs": {"$ref": "#/$defs/evidence_refs"}
+              }
+            }
+          },
+          "visible_structural_features": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["feature_type", "location", "confidence", "evidence_refs"],
+              "additionalProperties": false,
+              "properties": {
+                "feature_type": {"type": "string"},
+                "location": {"type": "string"},
+                "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+                "evidence_refs": {"$ref": "#/$defs/evidence_refs"}
+              }
+            }
+          },
+          "body_transition": {
+            "type": "object",
+            "required": ["strategy_hint", "confidence", "evidence_refs"],
+            "additionalProperties": false,
+            "properties": {
+              "strategy_hint": {"type": "string"},
+              "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+              "evidence_refs": {"$ref": "#/$defs/evidence_refs"}
+            }
+          },
+          "uncertainty": {"type": "string"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["region_id", "view"],
+        "additionalProperties": false,
+        "properties": {
+          "region_id": {"type": "string"},
+          "view": {"enum": ["front", "rear", "left", "right", "top", "isometric"]}
+        }
+      }
+    }
+  }
+}

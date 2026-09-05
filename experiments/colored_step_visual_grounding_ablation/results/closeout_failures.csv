@@ -1,0 +1,4 @@
+stage,replicate,case_id,condition,status,error_type,usage_status
+E1,replicate_01,step_rx150,A2_color_legend,FAILURE,APITimeoutError,unknown; historical zero is not proof of no billing
+E1,replicate_03,step_wx250s,A2_color_legend,FAILURE,RateLimitError,unknown; historical zero is not proof of no billing
+E2,replicate_01,step_rx150,A2_color_legend,UPSTREAM_FAILURE,E1_FAILURE,not called (upstream failure)

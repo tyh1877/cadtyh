@@ -1,0 +1,6 @@
+case_id,status,leaf_components,source_solids,reopened_solids,step_color_entities,minimum_a0_a1_silhouette_iou,a1_a2_byte_equal
+step_px100,PASS,7,9,9,10,1.0,True
+step_rx150,PASS,9,17,17,12,1.0,True
+step_vx300s,PASS,24,24,24,27,1.0,True
+step_wx200,PASS,8,8,8,11,1.0,True
+step_wx250s,PASS,10,8,8,13,1.0,True
