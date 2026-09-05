@@ -1,0 +1,2 @@
+attempt_id,stage,scope,classification,observed_result,action,holdout_outputs_observed
+preflight_01,holdout_input_parse,dev_arm-4c7b408826,implementation_preflight_failure,"URDF origin element omitted xyz; parser called split on None",repair_optional-attribute default and refreeze before generation,false

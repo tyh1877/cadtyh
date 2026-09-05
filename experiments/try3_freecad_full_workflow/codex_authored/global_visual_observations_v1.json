@@ -1,0 +1,64 @@
+{
+  "schema_version": "codex_global_visual_observations_v1",
+  "producer": "interactive_codex_gpt5_family",
+  "created_at": "2026-09-05T02:30:00Z",
+  "method": "Direct inspection of the six frozen global renders and deterministic non-GT crop contact sheets; no GT geometry or evaluator output used.",
+  "cases": {
+    "dev_arm-ab15a75247": {
+      "overall_form": "compact articulated arm with a broad circular base, box-like shoulder and wrist housings, a long slender arm member, and a two-finger terminal tool",
+      "envelope_family": "slender_rectangular_link",
+      "section_family": "rounded_rectangle",
+      "joint_housing_family": "compact_cylindrical_boss",
+      "transition_strategy": "straight_prismatic_with_rounded_joint_ends",
+      "visible_features": ["circular base flange", "cover boundaries", "slender parallel-sided arm", "two-finger terminal geometry"],
+      "surface_hints": ["flat machined panels", "rounded joint covers", "small edge blends"],
+      "evidence_views": ["front", "isometric", "top"],
+      "uncertainty": "Several short URDF links occupy one visually shared shoulder or wrist shell; per-link boundaries are uncertain without segmentation."
+    },
+    "dev_arm-4c7b408826": {
+      "overall_form": "folded industrial serial arm with faceted tapered link shells, large shoulder and elbow masses, and a compact wrist",
+      "envelope_family": "tapered_faceted_housing",
+      "section_family": "rounded_polygon",
+      "joint_housing_family": "large_cylindrical_drum",
+      "transition_strategy": "tapered_loft_between_joint_housings",
+      "visible_features": ["faceted side panels", "tapered long link", "large elbow transition", "compact terminal wrist"],
+      "surface_hints": ["broad planar facets", "rounded joint caps", "moderate edge blends"],
+      "evidence_views": ["front", "isometric", "left"],
+      "uncertainty": "The folded pose causes multiple kinematic links to overlap in the same external housing."
+    },
+    "dev_arm-dcc2b0ce1e": {
+      "overall_form": "long industrial arm with curved tapered beams, rounded shoulder and elbow housings, an open relief near the elbow, and a narrow cylindrical wrist",
+      "envelope_family": "curved_tapered_beam",
+      "section_family": "rounded_rectangle",
+      "joint_housing_family": "rounded_cylindrical_housing",
+      "transition_strategy": "smooth_tapered_loft",
+      "visible_features": ["curved long link", "elbow relief opening", "rounded joint covers", "narrow wrist barrel"],
+      "surface_hints": ["smooth lofted transitions", "rounded shell", "localized recess"],
+      "evidence_views": ["front", "isometric", "top"],
+      "uncertainty": "Small distal and fixed links are visually contained within a shared wrist envelope."
+    },
+    "dev_arm-43fa322555": {
+      "overall_form": "vertically folded articulated arm dominated by stacked bulbous joint housings, rounded shells, circular side covers, and a mounting plate",
+      "envelope_family": "bulbous_joint_shell",
+      "section_family": "oval",
+      "joint_housing_family": "domed_rotary_housing",
+      "transition_strategy": "short_lofted_shell_between_large_joint_drums",
+      "visible_features": ["mounting plate holes", "domed covers", "circular side plates", "smooth blended transitions"],
+      "surface_hints": ["continuous rounded shell", "large filleted blends", "circular cover recesses"],
+      "evidence_views": ["front", "isometric", "rear"],
+      "uncertainty": "Many of the 17 URDF links are not separately visible because the exterior is a continuous shell."
+    },
+    "dev_arm-551a9c392e": {
+      "overall_form": "large pedestal-mounted arm with a rectangular base, four support feet, a long slender bent chain, circular joint covers, and a small terminal wrist",
+      "envelope_family": "slender_curved_tubular_link",
+      "section_family": "rounded_rectangle",
+      "joint_housing_family": "compact_round_joint_cover",
+      "transition_strategy": "segmented_lofted_chain_with_local_joint_collars",
+      "visible_features": ["four-foot base", "rectangular pedestal", "circular joint covers", "bent slender links", "small terminal flange"],
+      "surface_hints": ["rounded tubular members", "thin local collars", "mixed planar and curved base panels"],
+      "evidence_views": ["front", "isometric", "top"],
+      "uncertainty": "The isometric pose overlaps branches near the base and many fixed links have no distinct visible boundary."
+    }
+  }
+}
+

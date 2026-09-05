@@ -39,40 +39,43 @@
   sheets show real feature-level zoom crops; overlapping crops remain for links
   visually contained in a shared shell and must be carried forward as
   uncertainty.
-- [ ] Mechanical Embodiment Architect implemented.
-- [ ] Interface Engineer implemented.
-- [ ] Per-link CAD Engineer implemented.
-- [ ] RobotCAD FreeCAD skill layer implemented.
-- [ ] FreeCAD backend executor implemented for formal Try-3 skill calls.
-- [ ] Assembly Integrator implemented.
-- [ ] Verification Agent implemented.
+- [x] Mechanical Embodiment Architect implemented for the Codex continuation.
+- [x] Interface Engineer implemented with exact sanitized-URDF joint coverage.
+- [x] Per-link CAD Engineer implemented for all 63 links and three versions.
+- [x] RobotCAD FreeCAD skill projection implemented for the frozen basic subset.
+- [x] FreeCAD backend executor implemented for formal Try-3 skill calls.
+- [x] Assembly Integrator implemented with canonical URDF placements.
+- [x] Deterministic Verification Agent implemented; it performs no repair.
 
 ## Formal execution
 
-- [ ] V0 FreeCAD baseline run covers all 5 robots.
-- [ ] V1 run covers all 5 robots.
-- [ ] V2 run covers all 5 robots.
-- [ ] All failures are preserved in the denominator.
-- [ ] No silent fallback is recorded.
-- [ ] FCStd/STEP/STL outputs are generated for successful cases.
-- [ ] Full robot assembly outputs are generated for successful cases.
+- [x] V0 FreeCAD baseline run covers all 5 robots.
+- [x] V1 run covers all 5 robots.
+- [x] V2 run covers all 5 robots.
+- [x] All 15 cells and the preflight parser incident are preserved.
+- [x] No silent fallback is recorded (0 across 693 operations).
+- [x] Per-link FCStd/STEP/STL outputs are generated for 189/189 link cells.
+- [x] Full robot assembly outputs are generated and reopened for 15/15 cells.
 
 ## Evaluation
 
-- [ ] Interface gap metrics computed.
-- [ ] Joint axis angular/offset metrics computed.
-- [ ] Interface constraint satisfaction computed.
-- [ ] Disconnected part and floating feature rates computed.
-- [ ] Interference metrics computed.
-- [ ] Global/per-link/joint-local geometry metrics computed.
-- [ ] Visible mechanical feature recall computed.
-- [ ] Primitive proxy degeneration rate computed.
-- [ ] FreeCAD native feature and skill execution statistics computed.
-- [ ] Contact sheets generated as diagnostic artifacts.
+- [x] Interface gap metrics computed.
+- [x] Joint axis/origin equality audited structurally against sanitized URDF;
+  native moving-joint semantics remain outside the amended acceptance boundary.
+- [x] Interface constraint satisfaction computed.
+- [x] Disconnected-joint rate computed.
+- [x] Non-adjacent AABB overlap is reported as an interference proxy.
+- [x] Global/per-link/joint-local geometry metrics computed with full coverage.
+- [x] Visible-feature planned/executed recall computed against pre-output Codex
+  labels; executed recall is 0 and labels are not independent expert GT.
+- [x] Primitive proxy degeneration rate computed as an operation-tree proxy.
+- [x] FreeCAD native feature and skill execution statistics computed.
+- [x] Five GT/V0/V1/V2 contact sheets generated as diagnostic artifacts.
 
 ## Reporting and repository discipline
 
-- [ ] `results/try3_report.md` answers all Try-3 final reporting questions.
+- [x] `results/codex_agent_v1_try3_report.md` answers RQ1/RQ2/RQ3 and records
+  the Codex substitution limits.
 - [x] Heavy geometry remains outside Git or under ignored paths. Verified
   `experiments/try3_freecad_full_workflow/runs/` with `git check-ignore`.
 - [x] Relevant skeleton-layer validation commands have been run:

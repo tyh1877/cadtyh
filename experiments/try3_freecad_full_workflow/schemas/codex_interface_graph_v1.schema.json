@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "codex_interface_graph_v1.schema.json",
+  "type": "object",
+  "required": ["schema_version", "case_id", "joints"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "codex_interface_graph_v1"},
+    "case_id": {"type": "string"},
+    "joints": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["joint_id", "joint_type", "parent_link", "child_link", "origin_xyz_mm", "axis", "parent_port", "child_port", "mate_constraints", "protected_region"],
+      "properties": {
+        "joint_id": {"type": "string"}, "joint_type": {"type": "string"},
+        "parent_link": {"type": "string"}, "child_link": {"type": "string"},
+        "origin_xyz_mm": {"$ref": "#/$defs/vec3"}, "axis": {"$ref": "#/$defs/vec3"},
+        "parent_port": {"type": "object"}, "child_port": {"type": "object"},
+        "mate_constraints": {"type": "object"}, "protected_region": {"type": "object"}
+      }
+    }}
+  },
+  "$defs": {"vec3": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3}}
+}
+

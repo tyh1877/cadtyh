@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "codex_visual_evidence_v1.schema.json",
+  "type": "object",
+  "required": ["schema_version", "case_id", "global_observation", "links", "leakage_guard"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "codex_visual_evidence_v1"},
+    "case_id": {"type": "string"},
+    "global_observation": {"type": "object"},
+    "links": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["link_id", "functional_role_hint", "main_body", "proximal_region", "distal_region", "visible_features", "surface_hints", "uncertainty"],
+        "properties": {
+          "link_id": {"type": "string", "pattern": "^L[0-9]+$"},
+          "functional_role_hint": {"type": "string"},
+          "main_body": {"$ref": "#/$defs/observation"},
+          "proximal_region": {"$ref": "#/$defs/observation"},
+          "distal_region": {"$ref": "#/$defs/observation"},
+          "visible_features": {"type": "array", "items": {"$ref": "#/$defs/observation"}},
+          "surface_hints": {"type": "array", "items": {"type": "string"}},
+          "uncertainty": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+        }
+      }
+    },
+    "leakage_guard": {
+      "type": "object", "additionalProperties": false,
+      "required": ["uses_gt_mesh", "uses_gt_segmentation", "uses_product_identity", "localization_source"],
+      "properties": {
+        "uses_gt_mesh": {"const": false},
+        "uses_gt_segmentation": {"const": false},
+        "uses_product_identity": {"const": false},
+        "localization_source": {"const": "deterministic_non_gt_silhouette_link_order"}
+      }
+    }
+  },
+  "$defs": {
+    "observation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["description", "evidence_refs", "confidence"],
+      "properties": {
+        "description": {"type": "string", "minLength": 3},
+        "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "confidence": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      }
+    }
+  }
+}
+

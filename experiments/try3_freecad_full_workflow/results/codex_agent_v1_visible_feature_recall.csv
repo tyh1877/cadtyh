@@ -1,0 +1,16 @@
+case_id,version,frozen_visible_labels,planned_label_matches,executed_label_matches,planned_recall,executed_recall,label_source
+dev_arm-ab15a75247,V0,4,0,0,0.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-ab15a75247,V1,4,4,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-ab15a75247,V2,4,4,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-4c7b408826,V0,4,0,0,0.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-4c7b408826,V1,4,4,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-4c7b408826,V2,4,4,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-dcc2b0ce1e,V0,4,0,0,0.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-dcc2b0ce1e,V1,4,4,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-dcc2b0ce1e,V2,4,4,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-43fa322555,V0,4,0,0,0.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-43fa322555,V1,4,4,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-43fa322555,V2,4,4,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-551a9c392e,V0,5,0,0,0.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-551a9c392e,V1,5,5,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT
+dev_arm-551a9c392e,V2,5,5,0,1.0,0.0,pre-output Codex visual annotation; not independent expert GT

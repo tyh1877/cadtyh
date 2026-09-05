@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "codex_mechanical_embodiment_v1.schema.json",
+  "type": "object",
+  "required": ["schema_version", "case_id", "links"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "codex_mechanical_embodiment_v1"},
+    "case_id": {"type": "string"},
+    "links": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["link_id", "functional_role", "kinematic_context", "main_envelope", "proximal_joint_region", "distal_joint_region", "body_transition", "visible_structural_features", "protected_interface_regions", "uncertainty"],
+      "properties": {
+        "link_id": {"type": "string"}, "functional_role": {"type": "string"},
+        "kinematic_context": {"type": "object"}, "main_envelope": {"type": "object"},
+        "proximal_joint_region": {"type": "object"}, "distal_joint_region": {"type": "object"},
+        "body_transition": {"type": "object"},
+        "visible_structural_features": {"type": "array", "items": {"type": "object"}},
+        "protected_interface_regions": {"type": "array", "items": {"type": "object"}},
+        "uncertainty": {"type": "array", "items": {"type": "string"}}
+      }
+    }}
+  }
+}
+

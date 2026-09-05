@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN",
+  "created_at": "2026-09-05T02:32:57.569362+00:00",
+  "run_id": "codex_agent_v1",
+  "input_records": 40,
+  "method_records": 22,
+  "planner_audit_rows": 9,
+  "development_cases": [
+    "dev_arm-ab15a75247",
+    "dev_arm-dcc2b0ce1e"
+  ],
+  "holdout_cases": [
+    "dev_arm-4c7b408826",
+    "dev_arm-43fa322555",
+    "dev_arm-551a9c392e"
+  ],
+  "method_snapshot_sha256": "2bdcd90717bf3e1556e85a091772a716474a8ef57a63213a515e6b50c1875766",
+  "evaluator_sha256": "db880bac2ef30bb1fb334c1828411fcd604e005365910e1cbe87f4dd18e35364",
+  "formal_holdout_started": false
+}

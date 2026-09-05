@@ -41,6 +41,33 @@ def vec(values: list[float] | tuple[float, float, float]):
     return FreeCAD.Vector(float(values[0]), float(values[1]), float(values[2]))
 
 
+def unit_vec(values: list[float] | tuple[float, float, float]):
+    value = vec(values)
+    if value.Length <= 1e-9:
+        raise IRIncomplete(f"direction must be non-zero, got {values!r}")
+    value.normalize()
+    return value
+
+
+def rotation_from_z(direction):
+    return FreeCAD.Rotation(FreeCAD.Vector(0, 0, 1), direction)
+
+
+def rectangle_wire(center, normal, width: float, depth: float):
+    """Create a closed rectangular wire centered in a plane normal to normal."""
+    z_axis = unit_vec((normal.x, normal.y, normal.z))
+    reference = FreeCAD.Vector(1, 0, 0) if abs(z_axis.x) < 0.8 else FreeCAD.Vector(0, 1, 0)
+    x_axis = reference.cross(z_axis)
+    x_axis.normalize()
+    y_axis = z_axis.cross(x_axis)
+    y_axis.normalize()
+    points = [
+        center + x_axis * sx * width / 2.0 + y_axis * sy * depth / 2.0
+        for sx, sy in [(-1, -1), (1, -1), (1, 1), (-1, 1), (-1, -1)]
+    ]
+    return Part.makePolygon(points)
+
+
 def op_required(op: dict[str, Any], fields: list[str]) -> None:
     missing = [field for field in fields if field not in op]
     if missing:
@@ -215,6 +242,65 @@ class FreeCADBackend:
         obj.Dir = direction.multiply(float(op["distance_mm"]))
         obj.Solid = True
         return self.register(op, obj), "Part::Extrusion"
+
+    def op_oriented_box(self, op):
+        op_required(op, ["op_id", "target_body", "start", "end", "width_mm", "depth_mm", "reference_frame"])
+        start = vec(op["start"])
+        end = vec(op["end"])
+        direction = end - start
+        length = float(direction.Length)
+        if length <= 1e-6:
+            raise IRIncomplete("oriented_box start and end must differ")
+        direction.normalize()
+        width = float(op["width_mm"])
+        depth = float(op["depth_mm"])
+        if min(width, depth) <= 0:
+            raise IRIncomplete("oriented_box dimensions must be positive")
+        rotation = rotation_from_z(direction)
+        obj = self.doc.addObject("Part::Box", op["op_id"])
+        obj.Length = width
+        obj.Width = depth
+        obj.Height = length
+        offset = rotation.multVec(FreeCAD.Vector(-width / 2.0, -depth / 2.0, 0))
+        obj.Placement = FreeCAD.Placement(start + offset, rotation)
+        return self.register(op, obj), "Part::Box"
+
+    def op_cylinder_primitive(self, op):
+        op_required(op, ["op_id", "target_body", "center", "axis", "radius_mm", "height_mm", "reference_frame"])
+        center = vec(op["center"])
+        axis = unit_vec(op["axis"])
+        radius = float(op["radius_mm"])
+        height = float(op["height_mm"])
+        if min(radius, height) <= 0:
+            raise IRIncomplete("cylinder dimensions must be positive")
+        obj = self.doc.addObject("Part::Cylinder", op["op_id"])
+        obj.Radius = radius
+        obj.Height = height
+        obj.Angle = 360.0
+        obj.Placement = FreeCAD.Placement(center - axis * (height / 2.0), rotation_from_z(axis))
+        return self.register(op, obj), "Part::Cylinder"
+
+    def op_lofted_prism(self, op):
+        op_required(op, ["op_id", "target_body", "start", "end", "start_size_mm", "end_size_mm", "reference_frame"])
+        start = vec(op["start"])
+        end = vec(op["end"])
+        direction = end - start
+        if direction.Length <= 1e-6:
+            raise IRIncomplete("lofted_prism start and end must differ")
+        start_size = [float(value) for value in op["start_size_mm"]]
+        end_size = [float(value) for value in op["end_size_mm"]]
+        if len(start_size) != 2 or len(end_size) != 2 or min([*start_size, *end_size]) <= 0:
+            raise IRIncomplete("lofted_prism requires two positive 2D sizes")
+        sections = []
+        for index, (center, size) in enumerate(((start, start_size), (end, end_size))):
+            item = self.doc.addObject("Part::Feature", f"{op['op_id']}_section_{index}")
+            item.Shape = rectangle_wire(center, direction, float(size[0]), float(size[1]))
+            sections.append(item)
+        obj = self.doc.addObject("Part::Loft", op["op_id"])
+        obj.Sections = sections
+        obj.Solid = True
+        obj.Ruled = False
+        return self.register(op, obj), "Part::Loft"
 
     op_pad = op_extrude
 

@@ -1,0 +1,18 @@
+{
+  "run_id": "codex_agent_v1",
+  "approved_date": "2026-09-05",
+  "producer": "interactive_codex_gpt5_family",
+  "exact_model_snapshot": "UNAVAILABLE",
+  "sampling_controls": "UNAVAILABLE",
+  "per_call_token_accounting": "UNAVAILABLE",
+  "versions": ["V0", "V1", "V2"],
+  "development_cases": ["dev_arm-ab15a75247", "dev_arm-dcc2b0ce1e"],
+  "holdout_cases": ["dev_arm-4c7b408826", "dev_arm-43fa322555", "dev_arm-551a9c392e"],
+  "formal_inputs": ["six frozen images", "engineering text", "sanitized kinematic-only URDF"],
+  "codex_visual_localization": "deterministic_non_gt_silhouette_link_order_crops",
+  "formal_backend": "FreeCADCmd + robotcad.backends.freecad_api.FreeCADBackend",
+  "gt_access": "deterministic_evaluation_only_after_all_formal_outputs_are_frozen",
+  "automatic_targeted_repair": false,
+  "silent_fallback": false
+}
+

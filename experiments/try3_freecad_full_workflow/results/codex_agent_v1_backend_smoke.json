@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "helper_returncode": 0,
+  "backend_sha256": "41151c6ffac452d64c86e6b55e18f82e7d00cdce3fe2f11d92034989f06937c4",
+  "operations": [
+    "Part::Box",
+    "Part::Loft",
+    "Part::Cylinder",
+    "Part::FuseSequential"
+  ],
+  "fallbacks": 0,
+  "heavy_artifact_root": "experiments/try3_freecad_full_workflow/runs/codex_agent_v1/backend_smoke"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "codex_link_ir_v1.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["ir_version", "case_id", "version", "link_id", "bodies", "operations", "final_object", "metadata"],
+  "properties": {
+    "ir_version": {"const": "codex_link_ir_v1"}, "case_id": {"type": "string"},
+    "version": {"enum": ["V0", "V1", "V2"]}, "link_id": {"type": "string"},
+    "bodies": {"type": "array", "items": {"type": "object"}},
+    "operations": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "required": ["op_id", "op_type", "target_body", "dependencies", "reference_frame"],
+      "properties": {"op_type": {"enum": ["oriented_box", "lofted_prism", "cylinder_primitive", "boolean_union"]}},
+      "additionalProperties": true
+    }},
+    "final_object": {"type": "string"}, "metadata": {"type": "object"}
+  }
+}
+
