@@ -1,0 +1,336 @@
+{
+  "robot_id": "R02",
+  "links": [
+    "L00",
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L12",
+    "L13"
+  ],
+  "joints": [
+    {
+      "joint_id": "J00",
+      "joint_type": "revolute",
+      "parent": "L00",
+      "child": "L01",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0787
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793
+      }
+    },
+    {
+      "joint_id": "J01",
+      "joint_type": "revolute",
+      "parent": "L01",
+      "child": "L02",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.04805
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -1.8500490071139892,
+        "upper": 1.7627825445142729
+      }
+    },
+    {
+      "joint_id": "J02",
+      "joint_type": "revolute",
+      "parent": "L02",
+      "child": "L03",
+      "origin_xyz_m": [
+        0.05955,
+        0.0,
+        0.3
+      ],
+      "origin_rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -1.6057029118347832,
+        "upper": 1.7627825445142729
+      }
+    },
+    {
+      "joint_id": "J03",
+      "joint_type": "revolute",
+      "parent": "L03",
+      "child": "L04",
+      "origin_xyz_m": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793
+      }
+    },
+    {
+      "joint_id": "J04",
+      "joint_type": "revolute",
+      "parent": "L04",
+      "child": "L05",
+      "origin_xyz_m": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -2.2689280275926285,
+        "upper": 1.8675022996339325
+      }
+    },
+    {
+      "joint_id": "J05",
+      "joint_type": "revolute",
+      "parent": "L05",
+      "child": "L06",
+      "origin_xyz_m": [
+        0.069744,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        -3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793
+      }
+    },
+    {
+      "joint_id": "J06",
+      "joint_type": "fixed",
+      "parent": "L06",
+      "child": "L07",
+      "origin_xyz_m": [
+        0.042825,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {}
+    },
+    {
+      "joint_id": "J07",
+      "joint_type": "continuous",
+      "parent": "L07",
+      "child": "L08",
+      "origin_xyz_m": [
+        0.005675,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {}
+    },
+    {
+      "joint_id": "J08",
+      "joint_type": "fixed",
+      "parent": "L07",
+      "child": "L09",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {}
+    },
+    {
+      "joint_id": "J09",
+      "joint_type": "fixed",
+      "parent": "L09",
+      "child": "L10",
+      "origin_xyz_m": [
+        0.025875,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {}
+    },
+    {
+      "joint_id": "J10",
+      "joint_type": "prismatic",
+      "parent": "L10",
+      "child": "L11",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": 0.021,
+        "upper": 0.057
+      }
+    },
+    {
+      "joint_id": "J11",
+      "joint_type": "prismatic",
+      "parent": "L10",
+      "child": "L12",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -0.057,
+        "upper": -0.021
+      }
+    },
+    {
+      "joint_id": "J12",
+      "joint_type": "fixed",
+      "parent": "L10",
+      "child": "L13",
+      "origin_xyz_m": [
+        0.0385,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {}
+    }
+  ],
+  "authority": "sanitized_urdf",
+  "units": {
+    "translation": "m",
+    "rotation": "rad"
+  }
+}

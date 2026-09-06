@@ -1,0 +1,42 @@
+[
+  {
+    "feature_id": "R03_P01_E00",
+    "region": "base",
+    "requirement": "circular mounting disk",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R03_P01_E01",
+    "region": "body",
+    "requirement": "two upright supports with a clear central gap",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_front.png",
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R03_P01_E02",
+    "region": "pivot",
+    "requirement": "opposed circular pivot faces",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_side.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  }
+]

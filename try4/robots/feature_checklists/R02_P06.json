@@ -1,0 +1,42 @@
+[
+  {
+    "feature_id": "R02_P06_E00",
+    "region": "jaws",
+    "requirement": "two opposed plate fingers with open grip gap",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R02_P06_E01",
+    "region": "carriage",
+    "requirement": "dual rail and sliding carriage assembly",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_front.png",
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R02_P06_E02",
+    "region": "plates",
+    "requirement": "triangular rib/web bracing",
+    "critical": false,
+    "evidence_views": [
+      "images/isolated_side.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "visible_candidate_apply_dev_calibrated_relative_scale_rule",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  }
+]

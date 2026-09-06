@@ -1,0 +1,41 @@
+[
+  {
+    "feature_id": "R01_P01_E00",
+    "region": "body",
+    "requirement": "stepped box housing and projecting lower support",
+    "critical": false,
+    "evidence_views": [
+      "images/isolated_front.png",
+      "images/isolated_side.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "visible_candidate_apply_dev_calibrated_relative_scale_rule",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R01_P01_E01",
+    "region": "side",
+    "requirement": "circular pivot cover outline",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_side.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R01_P01_E02",
+    "region": "top",
+    "requirement": "rectangular inset cover boundary",
+    "critical": false,
+    "evidence_views": [
+      "images/isolated_top.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "visible_candidate_apply_dev_calibrated_relative_scale_rule",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "feature_id": "R01_P04_E00",
+    "region": "jaws",
+    "requirement": "two opposed tapered fingers with an open gap",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R01_P04_E01",
+    "region": "carriage",
+    "requirement": "crosswise sliding carriage blocks",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_front.png",
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R01_P04_E02",
+    "region": "attachment",
+    "requirement": "forked pitch bracket with side slot",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_side.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  }
+]

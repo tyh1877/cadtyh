@@ -1,0 +1,41 @@
+[
+  {
+    "feature_id": "R02_P05_E00",
+    "region": "body",
+    "requirement": "two curved bracket arms separated by open space",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R02_P05_E01",
+    "region": "fork",
+    "requirement": "rounded terminal notches and rectangular slots",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_side.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R02_P05_E02",
+    "region": "roll",
+    "requirement": "large circular roll flange",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_front.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  }
+]

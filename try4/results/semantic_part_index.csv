@@ -1,0 +1,19 @@
+part_id,semantic_label,role_class,color_hex,source_components
+R01_P00,base mounting pedestal,base_module,#E63946,C00
+R01_P01,shoulder pivot housing,joint_module,#5F7DB4,C01
+R01_P02,upper-arm carrier assembly,link_module,#457B9D,C06
+R01_P03,forearm side frame,link_module,#2A9D8F,C02
+R01_P04,parallel gripper assembly,end_interface,#E9C46A,C03;C04;C05
+R02_P00,base mounting pedestal,base_module,#F4A261,C00
+R02_P01,dual shoulder support,joint_module,#8338EC,C01
+R02_P02,upper-arm side frame,link_module,#FF006E,C02
+R02_P03,elbow and forearm-roll housing,joint_module,#3A86FF,C03
+R02_P04,lower forearm housing,link_module,#06AE82,C04
+R02_P05,wrist pitch and roll carrier,wrist_module,#CD9F34,C05
+R02_P06,dual-rail gripper assembly,end_interface,#118AB2,C06;C07;C08;C09;C10;C11;C12;C13;C14;C15;C16;C17;C18;C19;C20;C21;C22;C23
+R03_P00,base skirt and mounting assembly,base_module,#54919B,C00;C01
+R03_P01,shoulder support assembly,joint_module,#EF476F,C02
+R03_P02,upper-arm side frame,link_module,#4EA06B,C03
+R03_P03,forearm side frame,link_module,#CD8503,C04
+R03_P04,wrist pitch and roll carrier,wrist_module,#219EBC,C05
+R03_P05,parallel gripper assembly,end_interface,#9B5A14,C06;C07;C08

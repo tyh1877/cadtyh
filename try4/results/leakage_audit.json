@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "scope": "allowlisted packet dependency closure; not a filesystem sandbox or proof of context isolation",
+  "future_context_rule": "Stage a packet-only workspace for each Codex CLI part. Do not start from this offline annotation conversation or give generator repository-wide GT access.",
+  "reviewer_rule": "Grounded reviewer may access GT; generator repair receives contracts/images only, never source profiles or exact CAD extraction.",
+  "packets": [
+    {
+      "part_id": "R01_P00",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R01_P01",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R01_P02",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R01_P03",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R01_P04",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R02_P00",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R02_P01",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R02_P02",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R02_P03",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R02_P04",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R02_P05",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R02_P06",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R03_P00",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R03_P01",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R03_P02",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R03_P03",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R03_P04",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    },
+    {
+      "part_id": "R03_P05",
+      "status": "PASS",
+      "forbidden_hits": [],
+      "image_hashes_verified": true,
+      "dependency_files": 12
+    }
+  ]
+}

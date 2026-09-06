@@ -1,0 +1,41 @@
+[
+  {
+    "feature_id": "R03_P05_E00",
+    "region": "jaws",
+    "requirement": "two opposed tapered fingers separated by open gap",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R03_P05_E01",
+    "region": "carriage",
+    "requirement": "cross rail and sliding blocks",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_front.png",
+      "images/isolated_top.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R03_P05_E02",
+    "region": "attachment",
+    "requirement": "rectangular wrist attachment housing",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_side.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  }
+]

@@ -1,0 +1,494 @@
+{
+  "schema_version": "try4_semantic_parts_v1",
+  "robot_id": "R02",
+  "offline_annotation_only": true,
+  "source_step_sha256": "5116332ce69dc98018b37600ee7b476f3f32c90458af1c4c6105fdd3512166e0",
+  "parts": [
+    {
+      "part_id": "R02_P00",
+      "role_class": "base_module",
+      "semantic_label": "base mounting pedestal",
+      "color_rgb": [
+        244,
+        162,
+        97
+      ],
+      "description": "Exterior mechanical region comprising the base mounting pedestal; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": null,
+      "distal_joint": "J00",
+      "related_joints": [
+        "J00"
+      ],
+      "source_components": [
+        "C00"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C00",
+          "object_name": "Part__Feature",
+          "source_label": "540 Base v2",
+          "solids": 1,
+          "faces": 120
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": null,
+          "semantic_type": "ground mounting face",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J00",
+          "semantic_type": "waist rotating support",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "ground mounting face",
+        "waist rotating support"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R02_P01",
+      "role_class": "joint_module",
+      "semantic_label": "dual shoulder support",
+      "color_rgb": [
+        131,
+        56,
+        236
+      ],
+      "description": "Exterior mechanical region comprising the dual shoulder support; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J00",
+      "distal_joint": "J01",
+      "related_joints": [
+        "J00",
+        "J01"
+      ],
+      "source_components": [
+        "C01"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C01",
+          "object_name": "Part__Feature001",
+          "source_label": "540 Dual Shoulder v2",
+          "solids": 1,
+          "faces": 40
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J00",
+          "semantic_type": "waist support",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J01",
+          "semantic_type": "upper-arm pivot",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "waist support",
+        "upper-arm pivot"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R02_P02",
+      "role_class": "link_module",
+      "semantic_label": "upper-arm side frame",
+      "color_rgb": [
+        255,
+        0,
+        110
+      ],
+      "description": "Exterior mechanical region comprising the upper-arm side frame; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J01",
+      "distal_joint": "J02",
+      "related_joints": [
+        "J01",
+        "J02"
+      ],
+      "source_components": [
+        "C02"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C02",
+          "object_name": "Part__Feature002",
+          "source_label": "UA - 8 - VX-300 v2",
+          "solids": 1,
+          "faces": 253
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J01",
+          "semantic_type": "shoulder pivot",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J02",
+          "semantic_type": "elbow pivot",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "shoulder pivot",
+        "elbow pivot"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R02_P03",
+      "role_class": "joint_module",
+      "semantic_label": "elbow and forearm-roll housing",
+      "color_rgb": [
+        58,
+        134,
+        255
+      ],
+      "description": "Exterior mechanical region comprising the elbow and forearm-roll housing; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J02",
+      "distal_joint": "J03",
+      "related_joints": [
+        "J02",
+        "J03"
+      ],
+      "source_components": [
+        "C03"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C03",
+          "object_name": "Part__Feature003",
+          "source_label": "SIMPLIFIED - VX300-6DOF Upper Forearm v4",
+          "solids": 1,
+          "faces": 120
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J02",
+          "semantic_type": "elbow pivot",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J03",
+          "semantic_type": "roll interface",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "elbow pivot",
+        "roll interface"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R02_P04",
+      "role_class": "link_module",
+      "semantic_label": "lower forearm housing",
+      "color_rgb": [
+        6,
+        174,
+        130
+      ],
+      "description": "Exterior mechanical region comprising the lower forearm housing; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J03",
+      "distal_joint": "J04",
+      "related_joints": [
+        "J03",
+        "J04"
+      ],
+      "source_components": [
+        "C04"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C04",
+          "object_name": "Part__Feature004",
+          "source_label": "SIMPLIFIED - VX300-6DOF Lower Forearm v10",
+          "solids": 1,
+          "faces": 129
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J03",
+          "semantic_type": "roll interface",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J04",
+          "semantic_type": "wrist pitch pivot",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "roll interface",
+        "wrist pitch pivot"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R02_P05",
+      "role_class": "wrist_module",
+      "semantic_label": "wrist pitch and roll carrier",
+      "color_rgb": [
+        205,
+        159,
+        52
+      ],
+      "description": "Exterior mechanical region comprising the wrist pitch and roll carrier; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J04",
+      "distal_joint": "J05",
+      "related_joints": [
+        "J04",
+        "J05"
+      ],
+      "source_components": [
+        "C05"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C05",
+          "object_name": "Part__Feature005",
+          "source_label": "VX-300 - Wrist v3",
+          "solids": 1,
+          "faces": 117
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J04",
+          "semantic_type": "pitch pivot",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J05",
+          "semantic_type": "tool roll interface",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "pitch pivot",
+        "tool roll interface"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R02_P06",
+      "role_class": "end_interface",
+      "semantic_label": "dual-rail gripper assembly",
+      "color_rgb": [
+        17,
+        138,
+        178
+      ],
+      "description": "Exterior mechanical region comprising the dual-rail gripper assembly; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J05",
+      "distal_joint": null,
+      "related_joints": [
+        "J05",
+        "J10",
+        "J11"
+      ],
+      "source_components": [
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C06",
+          "object_name": "Part__Feature006",
+          "source_label": "DRG v1 (14)",
+          "solids": 1,
+          "faces": 56
+        },
+        {
+          "component_id": "C07",
+          "object_name": "Part__Feature007",
+          "source_label": "DRG v1 (15)",
+          "solids": 1,
+          "faces": 5
+        },
+        {
+          "component_id": "C08",
+          "object_name": "Part__Feature008",
+          "source_label": "Carriage-DualRail-VX-ABS v2",
+          "solids": 1,
+          "faces": 74
+        },
+        {
+          "component_id": "C09",
+          "object_name": "Part__Feature009",
+          "source_label": "DRG v1 (12)",
+          "solids": 1,
+          "faces": 6
+        },
+        {
+          "component_id": "C10",
+          "object_name": "Part__Feature010",
+          "source_label": "DRG v1 (11)",
+          "solids": 1,
+          "faces": 7
+        },
+        {
+          "component_id": "C11",
+          "object_name": "Part__Feature011",
+          "source_label": "DRG v1 (10)",
+          "solids": 1,
+          "faces": 5
+        },
+        {
+          "component_id": "C12",
+          "object_name": "Part__Feature012",
+          "source_label": "DRG v1 (13)",
+          "solids": 1,
+          "faces": 4
+        },
+        {
+          "component_id": "C13",
+          "object_name": "Part__Feature013",
+          "source_label": "DRG v1 (8)",
+          "solids": 1,
+          "faces": 8
+        },
+        {
+          "component_id": "C14",
+          "object_name": "Part__Feature014",
+          "source_label": "DRG v1 (9)",
+          "solids": 1,
+          "faces": 90
+        },
+        {
+          "component_id": "C15",
+          "object_name": "Part__Feature015",
+          "source_label": "DRG v1 (7)",
+          "solids": 1,
+          "faces": 6
+        },
+        {
+          "component_id": "C16",
+          "object_name": "Part__Feature016",
+          "source_label": "DRG v1 (6)",
+          "solids": 1,
+          "faces": 8
+        },
+        {
+          "component_id": "C17",
+          "object_name": "Part__Feature017",
+          "source_label": "DRG v1 (5)",
+          "solids": 1,
+          "faces": 53
+        },
+        {
+          "component_id": "C18",
+          "object_name": "Part__Feature018",
+          "source_label": "DRG v1 (4)",
+          "solids": 1,
+          "faces": 120
+        },
+        {
+          "component_id": "C19",
+          "object_name": "Part__Feature019",
+          "source_label": "DRG v1 (3)",
+          "solids": 1,
+          "faces": 36
+        },
+        {
+          "component_id": "C20",
+          "object_name": "Part__Feature020",
+          "source_label": "DRG v1 (2)",
+          "solids": 1,
+          "faces": 16
+        },
+        {
+          "component_id": "C21",
+          "object_name": "Part__Feature021",
+          "source_label": "DRG v1 (1)",
+          "solids": 1,
+          "faces": 107
+        },
+        {
+          "component_id": "C22",
+          "object_name": "Part__Feature022",
+          "source_label": "DRG v1",
+          "solids": 1,
+          "faces": 90
+        },
+        {
+          "component_id": "C23",
+          "object_name": "Part__Feature023",
+          "source_label": "Carriage-DualRail-VX-ABS v001",
+          "solids": 1,
+          "faces": 74
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J05",
+          "semantic_type": "tool roll attachment",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": null,
+          "semantic_type": "opposed sliding jaws",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "tool roll attachment",
+        "opposed sliding jaws"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain constituent bodies and visible separations; do not fuse moving jaws"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+part_id,region,feature,critical,views
+R01_P00,body,scalloped tapered pedestal,False,front;side;isometric
+R01_P00,base,polygonal mounting plate and rear extension,True,top;isometric
+R01_P00,top,annular recessed seating region,True,top;isometric
+R01_P01,body,stepped box housing and projecting lower support,False,front;side;isometric
+R01_P01,side,circular pivot cover outline,True,side;isometric
+R01_P01,top,rectangular inset cover boundary,False,top
+R01_P02,body,two separated long side plates and cross carrier,True,front;top;isometric
+R01_P02,side_plates,paired rectangular slots,False,side;isometric
+R01_P02,distal,open rounded fork ends,True,side;isometric
+R01_P02,proximal,circular pivot interface,True,side;isometric
+R01_P03,body,open-sided forearm with wide proximal box,True,top;isometric
+R01_P03,distal,fork opening with round terminal notches,True,side;isometric
+R01_P03,side,rectangular side slot,False,side;isometric
+R01_P03,proximal,circular pivot boundary,True,side
+R01_P04,jaws,two opposed tapered fingers with an open gap,True,top;isometric
+R01_P04,carriage,crosswise sliding carriage blocks,True,front;top;isometric
+R01_P04,attachment,forked pitch bracket with side slot,True,side;isometric
+R02_P00,body,scalloped tapered pedestal,False,front;side;isometric
+R02_P00,base,polygonal mounting plate and rear extension,True,top;isometric
+R02_P00,top,circular seating boundary,True,top;isometric
+R02_P01,base,wide circular support disk,True,top;isometric
+R02_P01,body,upright narrow support block,True,front;side
+R02_P01,pivot,coaxial circular side interfaces,True,side;isometric
+R02_P02,body,long narrow web and widened end carriers,True,front;side;isometric
+R02_P02,distal,forked open end,True,side;isometric
+R02_P02,proximal,circular pivot with raised cover boundary,True,side;top
+R02_P03,body,long narrow beam between roll housing and fork,True,top;isometric
+R02_P03,fork,triangular lightening openings and web structure,False,top;isometric
+R02_P03,roll,circular end housing,True,front;side;isometric
+R02_P04,body,offset widened plate outline with narrowed transition,True,top;isometric
+R02_P04,side,open channel between side members,True,side
+R02_P04,plate,visible distributed small hole pattern,False,top;isometric
+R02_P04,joint,round side housing boundaries,True,front;side
+R02_P05,body,two curved bracket arms separated by open space,True,top;isometric
+R02_P05,fork,rounded terminal notches and rectangular slots,True,side;isometric
+R02_P05,roll,large circular roll flange,True,front;isometric
+R02_P06,jaws,two opposed plate fingers with open grip gap,True,top;isometric
+R02_P06,carriage,dual rail and sliding carriage assembly,True,front;top;isometric
+R02_P06,plates,triangular rib/web bracing,False,side;isometric
+R03_P00,body,scalloped skirt and round upper seating disk,False,front;isometric
+R03_P00,base,polygonal base and rectangular rear extension,True,top;isometric
+R03_P01,base,circular mounting disk,True,top;isometric
+R03_P01,body,two upright supports with a clear central gap,True,front;top;isometric
+R03_P01,pivot,opposed circular pivot faces,True,side;isometric
+R03_P02,body,slender beam joining wider unequal end carriers,True,front;side;isometric
+R03_P02,distal,round terminal through opening,True,side;isometric
+R03_P02,proximal,circular pivot boss and stepped cover edge,True,side;isometric
+R03_P03,body,tapered widened section and slender central beam,True,side;isometric
+R03_P03,distal,forked attachment with round open notch,True,side;top
+R03_P03,proximal,circular pivot boundary and cover perimeter,True,side;isometric
+R03_P04,body,two curved side plates and transverse carrier,True,top;isometric
+R03_P04,fork,open terminal notches and side slots,True,side;isometric
+R03_P04,roll,round end interface,True,front;isometric
+R03_P05,jaws,two opposed tapered fingers separated by open gap,True,top;isometric
+R03_P05,carriage,cross rail and sliding blocks,True,front;top
+R03_P05,attachment,rectangular wrist attachment housing,True,side;isometric

@@ -1,0 +1,110 @@
+[
+  {
+    "part_id": "R01_P00",
+    "packet_path": "packets\\R01_P00\\part_input.json",
+    "sha256": "6da571851aba6b7b77d491823c00dda678d0fc5f361cb2d513b82b25a67430bf",
+    "file_count": 12
+  },
+  {
+    "part_id": "R01_P01",
+    "packet_path": "packets\\R01_P01\\part_input.json",
+    "sha256": "20063760d01b6059809e51d9b1f00676455d04eace640687d6750e79e7170e0f",
+    "file_count": 12
+  },
+  {
+    "part_id": "R01_P02",
+    "packet_path": "packets\\R01_P02\\part_input.json",
+    "sha256": "cc3f54c6d20e2781643df3048cefa3535032d9a74364d66daf8225137f45327a",
+    "file_count": 12
+  },
+  {
+    "part_id": "R01_P03",
+    "packet_path": "packets\\R01_P03\\part_input.json",
+    "sha256": "3cc46252e53080828e8d15132c7d8834ba4b66e429d45dc4e6549357e34cae48",
+    "file_count": 12
+  },
+  {
+    "part_id": "R01_P04",
+    "packet_path": "packets\\R01_P04\\part_input.json",
+    "sha256": "cb8f2611430a8f043bf985f99b4a7f60aed559d3835eacae95554fd633642993",
+    "file_count": 12
+  },
+  {
+    "part_id": "R02_P00",
+    "packet_path": "packets\\R02_P00\\part_input.json",
+    "sha256": "e6a90a8eacbfccfd3a585517d1d4fac8c9a2009f587891a4f8c0c84aa5a67243",
+    "file_count": 12
+  },
+  {
+    "part_id": "R02_P01",
+    "packet_path": "packets\\R02_P01\\part_input.json",
+    "sha256": "c2ad3fd5bba9b97827f66165ccc9c30bda6d84e50a7e4c3a963372b8a474defe",
+    "file_count": 12
+  },
+  {
+    "part_id": "R02_P02",
+    "packet_path": "packets\\R02_P02\\part_input.json",
+    "sha256": "82ac6671cec93ab3e86315676e08e51a89557fffc568498f4512801e9aefea78",
+    "file_count": 12
+  },
+  {
+    "part_id": "R02_P03",
+    "packet_path": "packets\\R02_P03\\part_input.json",
+    "sha256": "205359348f0d5434eea772863970a8cd33ded41c4432f8f716cc72977c18343f",
+    "file_count": 12
+  },
+  {
+    "part_id": "R02_P04",
+    "packet_path": "packets\\R02_P04\\part_input.json",
+    "sha256": "097fa624d0abfefd1e446dabadfdb9af685a6445f5690d03ee59be5f2c8622ac",
+    "file_count": 12
+  },
+  {
+    "part_id": "R02_P05",
+    "packet_path": "packets\\R02_P05\\part_input.json",
+    "sha256": "15e2c020d3232a3894f2b582f99b03a2a10d85b875ad5c833c67440aeeb9eadc",
+    "file_count": 12
+  },
+  {
+    "part_id": "R02_P06",
+    "packet_path": "packets\\R02_P06\\part_input.json",
+    "sha256": "6e3a43c7421d52ecb98d6e25d53ffd6568782e74fe7affd0c146942a650a4b02",
+    "file_count": 12
+  },
+  {
+    "part_id": "R03_P00",
+    "packet_path": "packets\\R03_P00\\part_input.json",
+    "sha256": "02d017579b0d0a4a3ad3d2867d331ca18d442280fbf7280fe85af84b7318c8b8",
+    "file_count": 12
+  },
+  {
+    "part_id": "R03_P01",
+    "packet_path": "packets\\R03_P01\\part_input.json",
+    "sha256": "e9894285ccb1c647a479e8624e8f4502904653dba006760e1cc2e830ba4dcb94",
+    "file_count": 12
+  },
+  {
+    "part_id": "R03_P02",
+    "packet_path": "packets\\R03_P02\\part_input.json",
+    "sha256": "3ab20ffbdbd9644a4fda04ac021d0f2d9e7038e8308dce0eee996fa3154415d5",
+    "file_count": 12
+  },
+  {
+    "part_id": "R03_P03",
+    "packet_path": "packets\\R03_P03\\part_input.json",
+    "sha256": "f62b6b400c79a37af959b83fabcdfda1d43ed1a5011449d0508eeeabb484787d",
+    "file_count": 12
+  },
+  {
+    "part_id": "R03_P04",
+    "packet_path": "packets\\R03_P04\\part_input.json",
+    "sha256": "3753c132a05fb77c82016cb2199a765c46490b513e2a9cc61c38677ad8e2f206",
+    "file_count": 12
+  },
+  {
+    "part_id": "R03_P05",
+    "packet_path": "packets\\R03_P05\\part_input.json",
+    "sha256": "f2a9ce91f0479d4f2b71fc276a30dcbb9e7faeb7297664492126e0f198570e33",
+    "file_count": 12
+  }
+]

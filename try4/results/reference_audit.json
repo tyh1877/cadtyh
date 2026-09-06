@@ -1,0 +1,1269 @@
+{
+  "status": "PASS",
+  "robots": 3,
+  "parts": 18,
+  "images": 90,
+  "failures": [],
+  "checks": [
+    {
+      "robot_id": "R01",
+      "image": "global\\front.png",
+      "sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+      "occupancy": 0.04963622448979592,
+      "touches_border": false,
+      "bbox_px": [
+        521,
+        360,
+        878,
+        1039
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "global\\rear.png",
+      "sha256": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428",
+      "occupancy": 0.04963622448979592,
+      "touches_border": false,
+      "bbox_px": [
+        521,
+        360,
+        878,
+        1039
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "global\\left.png",
+      "sha256": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca",
+      "occupancy": 0.08816683673469387,
+      "touches_border": false,
+      "bbox_px": [
+        113,
+        360,
+        1286,
+        1039
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "global\\right.png",
+      "sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+      "occupancy": 0.08816683673469387,
+      "touches_border": false,
+      "bbox_px": [
+        113,
+        360,
+        1286,
+        1039
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "global\\top.png",
+      "sha256": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22",
+      "occupancy": 0.11339795918367347,
+      "touches_border": false,
+      "bbox_px": [
+        521,
+        113,
+        878,
+        1286
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "global\\isometric.png",
+      "sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+      "occupancy": 0.13386173469387755,
+      "touches_border": false,
+      "bbox_px": [
+        222,
+        366,
+        1166,
+        998
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P00\\front.png",
+      "sha256": "e5444f1c60ab5fcc99142a354179159f363e9770c622e8527bf24afec9cd218b",
+      "occupancy": 0.0905,
+      "touches_border": false,
+      "bbox_px": [
+        335,
+        539,
+        1064,
+        860
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P00\\side.png",
+      "sha256": "67b207cf6f870d559e9e66ca90b68c62a606996079723c2bbc41e8e87fe3d5f2",
+      "occupancy": 0.14563214285714285,
+      "touches_border": false,
+      "bbox_px": [
+        123,
+        539,
+        1276,
+        860
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P00\\top.png",
+      "sha256": "12fd5ce0933b3a31c2bda1876f5aef2bb81cd93cc6c6200855884d601ea8e0b1",
+      "occupancy": 0.3254352040816327,
+      "touches_border": false,
+      "bbox_px": [
+        335,
+        123,
+        1064,
+        1276
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P00\\isometric.png",
+      "sha256": "5ab9822c5aa74269b6b51e5c2aa6fc023b13a8f7b78c3a6bff79f9ac22417571",
+      "occupancy": 0.26826275510204084,
+      "touches_border": false,
+      "bbox_px": [
+        185,
+        356,
+        1214,
+        1127
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P01\\front.png",
+      "sha256": "6ed62940d3a0199c8abe2cc433852685e1f4d45dd1eb9ac52212d600eeaebe43",
+      "occupancy": 0.3097892857142857,
+      "touches_border": false,
+      "bbox_px": [
+        336,
+        222,
+        1063,
+        1177
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P01\\side.png",
+      "sha256": "d1d644f1a233ed0a43719e80c08cf46d239b42051a4f4b1ff32fa68a40f1e49d",
+      "occupancy": 0.25948571428571426,
+      "touches_border": false,
+      "bbox_px": [
+        337,
+        222,
+        1062,
+        1177
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P01\\top.png",
+      "sha256": "af0575fe104cfade0cdf1daae14f4ea0073f7477156e2f37ea2f22241a69c2d9",
+      "occupancy": 0.24410816326530613,
+      "touches_border": false,
+      "bbox_px": [
+        336,
+        337,
+        1063,
+        1062
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P01\\isometric.png",
+      "sha256": "4f29fdb7827fe5190c9938ae617845d97b093c4307d3b2f876d07ec14cb1bb3b",
+      "occupancy": 0.3989867346938776,
+      "touches_border": false,
+      "bbox_px": [
+        256,
+        108,
+        1143,
+        1289
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P02\\front.png",
+      "sha256": "225753f727c835800c2b54b000cd139fd6b4e20e1034a92b63e8b55e0e12df6e",
+      "occupancy": 0.09356632653061224,
+      "touches_border": false,
+      "bbox_px": [
+        477,
+        108,
+        922,
+        1290
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P02\\side.png",
+      "sha256": "5603400b02e6c12143ba502df64f7cf20e2411eec9ca83440fb7b12f63c509ab",
+      "occupancy": 0.20171632653061225,
+      "touches_border": false,
+      "bbox_px": [
+        396,
+        108,
+        1003,
+        1291
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P02\\top.png",
+      "sha256": "e1167048ba58f281963dafdbec0a4956481a34f516b60449aef879f8c2e37f1a",
+      "occupancy": 0.10105408163265306,
+      "touches_border": false,
+      "bbox_px": [
+        477,
+        396,
+        922,
+        1003
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P02\\isometric.png",
+      "sha256": "95e32c84c976d7b3f58a960d626a355d5191ead7c9331e4963f849669d8dcb57",
+      "occupancy": 0.256055612244898,
+      "touches_border": false,
+      "bbox_px": [
+        354,
+        65,
+        1071,
+        1244
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P03\\front.png",
+      "sha256": "e5af431e23cd38117748b9816e86289f0265140329894f99b87e33fb001e8869",
+      "occupancy": 0.0803265306122449,
+      "touches_border": false,
+      "bbox_px": [
+        454,
+        540,
+        945,
+        859
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P03\\side.png",
+      "sha256": "9f2f692195dbd9ea6e61d3d75fcd769e4ab3e438efc788ba5af85d2d8bed8171",
+      "occupancy": 0.17073367346938775,
+      "touches_border": false,
+      "bbox_px": [
+        63,
+        540,
+        1336,
+        859
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P03\\top.png",
+      "sha256": "3e2ddc7f0229bb5b2ab864b6fabf12845fd5ddbcbeba8eb215b7e65d1c57459b",
+      "occupancy": 0.2234377551020408,
+      "touches_border": false,
+      "bbox_px": [
+        454,
+        64,
+        945,
+        1336
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P03\\isometric.png",
+      "sha256": "16f7d548643417033cdcf1b6603598199a10df98062db70b52b732c4bc2ab4d4",
+      "occupancy": 0.271630612244898,
+      "touches_border": false,
+      "bbox_px": [
+        108,
+        250,
+        1323,
+        1156
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P04\\front.png",
+      "sha256": "505955915425e16a7758bcfbd7df00624aff40160ce7df570dd76eacf4196082",
+      "occupancy": 0.10883979591836734,
+      "touches_border": false,
+      "bbox_px": [
+        289,
+        487,
+        1110,
+        912
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P04\\side.png",
+      "sha256": "c89636c8ce9f10930567e48f4cec8f2c2f65655afb0c12a8fe77befbf97b3d0c",
+      "occupancy": 0.13017857142857142,
+      "touches_border": false,
+      "bbox_px": [
+        173,
+        487,
+        1226,
+        911
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P04\\top.png",
+      "sha256": "01defce921444e23432bedfbc0f5eff5f820061a0bbd223c510d37a7f44af172",
+      "occupancy": 0.13455714285714285,
+      "touches_border": false,
+      "bbox_px": [
+        290,
+        173,
+        1109,
+        1226
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R01",
+      "image": "isolated\\R01_P04\\isometric.png",
+      "sha256": "693bfcf85f966b378ddc2ef247c7856a0ec8db78daf61f86771fb04a384442ff",
+      "occupancy": 0.20948826530612244,
+      "touches_border": false,
+      "bbox_px": [
+        159,
+        378,
+        1195,
+        1140
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "global\\front.png",
+      "sha256": "4d26978ccfe2586bb60cb693d4a644fd18e053e607e87bc79f39ebbf1d76c22b",
+      "occupancy": 0.04528979591836735,
+      "touches_border": false,
+      "bbox_px": [
+        543,
+        346,
+        856,
+        1053
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "global\\rear.png",
+      "sha256": "02181e30de625009d7460dc060008a8a8f41f1f2437f208f7021797f25302efb",
+      "occupancy": 0.04528979591836735,
+      "touches_border": false,
+      "bbox_px": [
+        543,
+        346,
+        856,
+        1053
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "global\\left.png",
+      "sha256": "da80341f83c91cec281347f32cc7bee93b7be96aa6a37adbcce48e38216832e5",
+      "occupancy": 0.05746785714285714,
+      "touches_border": false,
+      "bbox_px": [
+        115,
+        346,
+        1284,
+        1053
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "global\\right.png",
+      "sha256": "ac0cb999697fa078015b2285b659226a3102db3b29f1598b17aca47199698c53",
+      "occupancy": 0.057468367346938776,
+      "touches_border": false,
+      "bbox_px": [
+        115,
+        346,
+        1284,
+        1053
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "global\\top.png",
+      "sha256": "4f6c90ee752fedbf1b3edc5ad3f2b4b421464684160ed287247945a27af7bc4d",
+      "occupancy": 0.08109081632653062,
+      "touches_border": false,
+      "bbox_px": [
+        543,
+        115,
+        856,
+        1284
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "global\\isometric.png",
+      "sha256": "3114475d67682c5c1216201d2e3c1c3027052dd5093614a365dfdbf03a2103a3",
+      "occupancy": 0.0966954081632653,
+      "touches_border": false,
+      "bbox_px": [
+        240,
+        292,
+        1148,
+        963
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P00\\front.png",
+      "sha256": "3d444906e8bc81775aa897be394be61f6f95d0f404e4ef3fae7f4ef07aa3a274",
+      "occupancy": 0.07819336734693877,
+      "touches_border": false,
+      "bbox_px": [
+        314,
+        550,
+        1085,
+        849
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P00\\side.png",
+      "sha256": "94c149dc24dad3c9e08e4389a1715c4efecfe6b2ad74bbc09f38ad8ceade6754",
+      "occupancy": 0.12226530612244899,
+      "touches_border": false,
+      "bbox_px": [
+        134,
+        550,
+        1265,
+        849
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P00\\top.png",
+      "sha256": "df649b2dd26227d5346bf52ffb7cadafbcba60f7293fc2e264f3a9fb1ef2f377",
+      "occupancy": 0.3258469387755102,
+      "touches_border": false,
+      "bbox_px": [
+        314,
+        134,
+        1085,
+        1265
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P00\\isometric.png",
+      "sha256": "81ba1d46419f7a7ef115f62f58b651c5cf0b61b840044328e4343fd080accb2e",
+      "occupancy": 0.247775,
+      "touches_border": false,
+      "bbox_px": [
+        186,
+        389,
+        1185,
+        1117
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P01\\front.png",
+      "sha256": "a59bd0b9e7bd6c96ec04bdec5ec983f3523f20daf6d3a8906dd9c2b69e4ab8f2",
+      "occupancy": 0.17598010204081632,
+      "touches_border": false,
+      "bbox_px": [
+        236,
+        455,
+        1164,
+        944
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P01\\side.png",
+      "sha256": "448838fc7a21977ed73d6ad83f9d3011814f90d961bdfde4863e575ec6a22823",
+      "occupancy": 0.07677551020408163,
+      "touches_border": false,
+      "bbox_px": [
+        236,
+        455,
+        1163,
+        944
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P01\\top.png",
+      "sha256": "c6d54a4d7013dae4d372d1df4220056d51ce184ad4e1688f6cd33591457ff5f4",
+      "occupancy": 0.3456469387755102,
+      "touches_border": false,
+      "bbox_px": [
+        235,
+        235,
+        1164,
+        1164
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P01\\isometric.png",
+      "sha256": "d2222994ad94390e2ac1e602266fd916200f151086be6fb857b10dbbf7c219ad",
+      "occupancy": 0.2692994897959184,
+      "touches_border": false,
+      "bbox_px": [
+        234,
+        319,
+        1163,
+        1148
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P02\\front.png",
+      "sha256": "57677161406652e5a628e5ba0f2c3b1b7d7d8409ea18330235a228209d654d31",
+      "occupancy": 0.1344142857142857,
+      "touches_border": false,
+      "bbox_px": [
+        493,
+        54,
+        906,
+        1344
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P02\\side.png",
+      "sha256": "967f4467015ddf38f6de3b43c0afe64f7410aae2bf6d8ec67b10f3e770531018",
+      "occupancy": 0.07777704081632653,
+      "touches_border": false,
+      "bbox_px": [
+        521,
+        54,
+        878,
+        1345
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P02\\top.png",
+      "sha256": "be9e9a78bae645261ad26664099816ff65989b17a2deb52d7955cfe12fe9d4dc",
+      "occupancy": 0.07012448979591837,
+      "touches_border": false,
+      "bbox_px": [
+        493,
+        521,
+        906,
+        878
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P02\\isometric.png",
+      "sha256": "e62337927447c96f8270666476f7f89834821f0a81d0686e2727dd2970e6d982",
+      "occupancy": 0.13625663265306123,
+      "touches_border": false,
+      "bbox_px": [
+        445,
+        69,
+        961,
+        1279
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P03\\front.png",
+      "sha256": "3d6de6da0cf2412dafbd0a358a2d1b6112d8f567a40da49b38cad092b4d56163",
+      "occupancy": 0.06458775510204082,
+      "touches_border": false,
+      "bbox_px": [
+        388,
+        579,
+        1011,
+        820
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P03\\side.png",
+      "sha256": "37f29a8492e34c596cdc7497b1cd94cb475799a4a79c3f35b11bbb399334d97a",
+      "occupancy": 0.09798571428571429,
+      "touches_border": false,
+      "bbox_px": [
+        83,
+        580,
+        1316,
+        820
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P03\\top.png",
+      "sha256": "bfbbbad958e9c95197ea83666f3088a7c694afe524b0e527988bff9a32acf0b3",
+      "occupancy": 0.16408163265306122,
+      "touches_border": false,
+      "bbox_px": [
+        388,
+        84,
+        1011,
+        1316
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P03\\isometric.png",
+      "sha256": "a3bd9c3a4baba4e918620221a3210e0fa3f1ae44860024934dbfcb9d5be883f6",
+      "occupancy": 0.17795510204081633,
+      "touches_border": false,
+      "bbox_px": [
+        176,
+        259,
+        1355,
+        1061
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P04\\front.png",
+      "sha256": "67cad8deea19ee9006f2c57f5336d19b6cd1f0aa611494e7d2b74645139386ea",
+      "occupancy": 0.13268010204081632,
+      "touches_border": false,
+      "bbox_px": [
+        343,
+        479,
+        1056,
+        920
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P04\\side.png",
+      "sha256": "b8e94ec30d8a73efbe7ddd959837e4650c011eb8697603152bd4eab6a6fc973a",
+      "occupancy": 0.20231530612244897,
+      "touches_border": false,
+      "bbox_px": [
+        138,
+        480,
+        1261,
+        920
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P04\\top.png",
+      "sha256": "329be8c6669685d44fc12b5e14d6766cf53954ae28cf8c8cb9ee2390d94d30d0",
+      "occupancy": 0.2937127551020408,
+      "touches_border": false,
+      "bbox_px": [
+        343,
+        138,
+        1056,
+        1261
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P04\\isometric.png",
+      "sha256": "024f60957f75c56c64cc0e2b1fa08c8f0da8f598067b5aa2146e83d2d01ce5b4",
+      "occupancy": 0.3379632653061225,
+      "touches_border": false,
+      "bbox_px": [
+        92,
+        240,
+        1306,
+        1109
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P05\\front.png",
+      "sha256": "69602193dd9b9fc09253e473b14e79d08d21de224be8ebcc0127d86a70f44a29",
+      "occupancy": 0.21639642857142857,
+      "touches_border": false,
+      "bbox_px": [
+        344,
+        342,
+        1055,
+        1057
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P05\\side.png",
+      "sha256": "d357e7980bfd43869eaf1f091fdf9aa46afbc23616a276c75e4eb4ba34c68b5a",
+      "occupancy": 0.22009285714285715,
+      "touches_border": false,
+      "bbox_px": [
+        213,
+        342,
+        1186,
+        1056
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P05\\top.png",
+      "sha256": "f2723ecbd76fd9d6abd141a3ae3ea204b3ce3bb53482704d44108eb3c6a45ca0",
+      "occupancy": 0.1561295918367347,
+      "touches_border": false,
+      "bbox_px": [
+        344,
+        214,
+        1055,
+        1186
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P05\\isometric.png",
+      "sha256": "f2509ed1e11f4fb244ac8bb6dec78d2a63cb1e7e0e6d8964971051412ffa6674",
+      "occupancy": 0.3081908163265306,
+      "touches_border": false,
+      "bbox_px": [
+        172,
+        304,
+        1295,
+        1214
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P06\\front.png",
+      "sha256": "f3ac0342836f37320270a18ee584000f5a7399fb1451c31ec540f9f82ff92d4b",
+      "occupancy": 0.19785510204081633,
+      "touches_border": false,
+      "bbox_px": [
+        210,
+        470,
+        1189,
+        929
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P06\\side.png",
+      "sha256": "7d5b769d9aff643185ecafb014f6eeb9480e0f3a38e680b9ba187d23319432cb",
+      "occupancy": 0.1641484693877551,
+      "touches_border": false,
+      "bbox_px": [
+        253,
+        470,
+        1146,
+        929
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P06\\top.png",
+      "sha256": "f539fc81608c0d255830e46cb1e2b418fd39fc07d82209e43258d64f7ea23f79",
+      "occupancy": 0.15076836734693877,
+      "touches_border": false,
+      "bbox_px": [
+        210,
+        253,
+        1189,
+        1146
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R02",
+      "image": "isolated\\R02_P06\\isometric.png",
+      "sha256": "9209096f3153100edd1ebad640b3cce924a25aa5a530b889b731375527b22067",
+      "occupancy": 0.27164234693877554,
+      "touches_border": false,
+      "bbox_px": [
+        188,
+        305,
+        1169,
+        1104
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "global\\front.png",
+      "sha256": "917260db108704e8b4d0a170c6ec4cff7800e0b80329e306aad3f1eecf2cd167",
+      "occupancy": 0.042475510204081635,
+      "touches_border": false,
+      "bbox_px": [
+        548,
+        365,
+        851,
+        1034
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "global\\rear.png",
+      "sha256": "c4b24522d2cbc5bd180819d42d1130fd463852e223c50d5757ad3c5743706058",
+      "occupancy": 0.042475510204081635,
+      "touches_border": false,
+      "bbox_px": [
+        548,
+        365,
+        851,
+        1034
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "global\\left.png",
+      "sha256": "e08ca9726fd5439f8fa91d2b94a3d3da52659535cbd191b36b0ba2a967a1013a",
+      "occupancy": 0.06454132653061224,
+      "touches_border": false,
+      "bbox_px": [
+        111,
+        365,
+        1288,
+        1034
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "global\\right.png",
+      "sha256": "e4b31d55c12e4505db66efa9c5573587ac56c1150eae2124154b1b03118427b1",
+      "occupancy": 0.06454132653061224,
+      "touches_border": false,
+      "bbox_px": [
+        111,
+        365,
+        1288,
+        1034
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "global\\top.png",
+      "sha256": "afcb56f3f5fa02d0cb02260ce2a6f8e9070b1e03ff126ad7a48396a9dc921ec1",
+      "occupancy": 0.08300051020408163,
+      "touches_border": false,
+      "bbox_px": [
+        548,
+        111,
+        851,
+        1288
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "global\\isometric.png",
+      "sha256": "f7097d62e1bfd504f204f23bbd81a13d6a6d92f84b470af07c1297b0eec609f2",
+      "occupancy": 0.09367908163265307,
+      "touches_border": false,
+      "bbox_px": [
+        241,
+        346,
+        1161,
+        958
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P00\\front.png",
+      "sha256": "7c1cccc6cd46337fb89adb8ccda63ead5c1a7aadae0e0ad2fdfc5bc32619928d",
+      "occupancy": 0.08072806122448979,
+      "touches_border": false,
+      "bbox_px": [
+        372,
+        560,
+        1027,
+        839
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P00\\side.png",
+      "sha256": "a135ef297f89fc4039b5013c8cc752a4be91e017a951f4f737a8cbe7e259e9b8",
+      "occupancy": 0.11432448979591837,
+      "touches_border": false,
+      "bbox_px": [
+        199,
+        560,
+        1264,
+        839
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P00\\top.png",
+      "sha256": "75d93c572363bfe276293820d01064143208592d45e2ca5e368134b466960b59",
+      "occupancy": 0.27448979591836736,
+      "touches_border": false,
+      "bbox_px": [
+        372,
+        135,
+        1027,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P00\\isometric.png",
+      "sha256": "60d6558888d6111bfb56fb37093ad71ddf1609491d5d0235c76a561dc34c6106",
+      "occupancy": 0.2215234693877551,
+      "touches_border": false,
+      "bbox_px": [
+        250,
+        408,
+        1196,
+        1073
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P01\\front.png",
+      "sha256": "e92693f2c953792b5dadb2b96c72fd9065fb8f421b617be762606e552bf58308",
+      "occupancy": 0.11343316326530613,
+      "touches_border": false,
+      "bbox_px": [
+        225,
+        502,
+        1174,
+        897
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P01\\side.png",
+      "sha256": "bfeaa4ba8d4a54b78fd736fdfc95bb6ee8caba4a9effec517837d9805af89f33",
+      "occupancy": 0.057725510204081634,
+      "touches_border": false,
+      "bbox_px": [
+        224,
+        502,
+        1175,
+        897
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P01\\top.png",
+      "sha256": "ad496a91e6004c37abb327f3ac2996731617d828ddfb2aef15f926f8e6a58a44",
+      "occupancy": 0.3612938775510204,
+      "touches_border": false,
+      "bbox_px": [
+        224,
+        224,
+        1175,
+        1175
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P01\\isometric.png",
+      "sha256": "d0fe29af3e941a0f9d28bf286591fc923dbbd71425ab0c0c4ad3dc053a970aa2",
+      "occupancy": 0.24835357142857142,
+      "touches_border": false,
+      "bbox_px": [
+        226,
+        348,
+        1173,
+        1115
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P02\\front.png",
+      "sha256": "80b7d270b2397ef15250f2b6777902fb7195f44d0d583bbbe1b1eaf85fad06dc",
+      "occupancy": 0.1058954081632653,
+      "touches_border": false,
+      "bbox_px": [
+        574,
+        44,
+        825,
+        1354
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P02\\side.png",
+      "sha256": "3d91dd78c0a8d399904f2b0b28081a4c98c5e2881090f64ea236d76d132aedb2",
+      "occupancy": 0.11307959183673469,
+      "touches_border": false,
+      "bbox_px": [
+        486,
+        44,
+        913,
+        1355
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P02\\top.png",
+      "sha256": "6fa0390e2f9c6520e20f53ad9ca855d7826114248ec0e8fdf70f5d8a607b07b2",
+      "occupancy": 0.048842857142857146,
+      "touches_border": false,
+      "bbox_px": [
+        574,
+        486,
+        825,
+        913
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P02\\isometric.png",
+      "sha256": "65058de14211d12ebd4c90ffd620c785a996758ed47340ad9fdc162710d63727",
+      "occupancy": 0.1293265306122449,
+      "touches_border": false,
+      "bbox_px": [
+        484,
+        97,
+        926,
+        1217
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P03\\front.png",
+      "sha256": "a2869cba7c9456f5a946daa864c6f0c5dd4153066de51dcbb8839522436d1916",
+      "occupancy": 0.033324489795918365,
+      "touches_border": false,
+      "bbox_px": [
+        555,
+        583,
+        844,
+        816
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P03\\side.png",
+      "sha256": "7d51d6a56300c8edf78441a7d785b54c483eda3ceaf0ea2adc0d0edab7007996",
+      "occupancy": 0.11658265306122449,
+      "touches_border": false,
+      "bbox_px": [
+        24,
+        583,
+        1375,
+        816
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P03\\top.png",
+      "sha256": "d81413df6fc5933d49fccd160e4946f1b7f86e1f002e1f301535680d1c9f31cd",
+      "occupancy": 0.13684489795918367,
+      "touches_border": false,
+      "bbox_px": [
+        555,
+        24,
+        844,
+        1375
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P03\\isometric.png",
+      "sha256": "1c3a97cf4b248029c2bc0dc8d73060ccb8d178ad2d4243817b6b4433a727782b",
+      "occupancy": 0.15221122448979593,
+      "touches_border": false,
+      "bbox_px": [
+        142,
+        308,
+        1278,
+        1086
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P04\\front.png",
+      "sha256": "91805edb438793acb279c4c924dfb4dcda85bf30d810e37ff2d708e51a40f19f",
+      "occupancy": 0.22528775510204083,
+      "touches_border": false,
+      "bbox_px": [
+        386,
+        306,
+        1013,
+        1093
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P04\\side.png",
+      "sha256": "6f87b23c5e4f7681872f4950c315f0862e6d0b22a5abf22563d926499853ddc6",
+      "occupancy": 0.23949744897959183,
+      "touches_border": false,
+      "bbox_px": [
+        212,
+        306,
+        1187,
+        1092
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P04\\top.png",
+      "sha256": "96a5b9c5c54a9c72f667e6df5f00adb823e2bfe9e3ba832ed4973a01d42a97e5",
+      "occupancy": 0.16483367346938776,
+      "touches_border": false,
+      "bbox_px": [
+        386,
+        212,
+        1013,
+        1187
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P04\\isometric.png",
+      "sha256": "cbbeb7845aa161b8640c0b7dd980605d9c33f071a1f1a3c5f4d4b62d4ead1780",
+      "occupancy": 0.31907142857142856,
+      "touches_border": false,
+      "bbox_px": [
+        153,
+        299,
+        1266,
+        1247
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P05\\front.png",
+      "sha256": "4bb601926e8a6a81270f99e17ae432c3352eeefc34bf6f6552e6c4e3cf8649c3",
+      "occupancy": 0.13283724489795917,
+      "touches_border": false,
+      "bbox_px": [
+        247,
+        458,
+        1152,
+        941
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P05\\side.png",
+      "sha256": "cd1f03265159397831e29f6c24909b6ca943dcb16180f5ed0051b2a29c872666",
+      "occupancy": 0.15048214285714287,
+      "touches_border": false,
+      "bbox_px": [
+        222,
+        458,
+        1177,
+        940
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P05\\top.png",
+      "sha256": "c49078dece648e3a02c73f0574bbbc686eb7bced4458b02357a07bc95625541f",
+      "occupancy": 0.15387142857142858,
+      "touches_border": false,
+      "bbox_px": [
+        248,
+        222,
+        1151,
+        1177
+      ],
+      "status": "PASS"
+    },
+    {
+      "robot_id": "R03",
+      "image": "isolated\\R03_P05\\isometric.png",
+      "sha256": "7750fd88795865e332ef613be6476553e6b4c654a85015c6cb9b770a8f5e73d6",
+      "occupancy": 0.2449265306122449,
+      "touches_border": false,
+      "bbox_px": [
+        177,
+        275,
+        1161,
+        1137
+      ],
+      "status": "PASS"
+    }
+  ]
+}

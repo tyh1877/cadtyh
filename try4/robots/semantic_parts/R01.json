@@ -1,0 +1,274 @@
+{
+  "schema_version": "try4_semantic_parts_v1",
+  "robot_id": "R01",
+  "offline_annotation_only": true,
+  "source_step_sha256": "aa581e4bf6e940166e3c6f9a6effe4844af798055461d31640a202087ebe9fa7",
+  "parts": [
+    {
+      "part_id": "R01_P00",
+      "role_class": "base_module",
+      "semantic_label": "base mounting pedestal",
+      "color_rgb": [
+        230,
+        57,
+        70
+      ],
+      "description": "Exterior mechanical region comprising the base mounting pedestal; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": null,
+      "distal_joint": "J00",
+      "related_joints": [
+        "J00"
+      ],
+      "source_components": [
+        "C00"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C00",
+          "object_name": "Part__Feature",
+          "source_label": "PX-100 Base v2",
+          "solids": 1,
+          "faces": 64
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": null,
+          "semantic_type": "ground mounting face",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J00",
+          "semantic_type": "waist rotating support",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "ground mounting face",
+        "waist rotating support"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R01_P01",
+      "role_class": "joint_module",
+      "semantic_label": "shoulder pivot housing",
+      "color_rgb": [
+        95,
+        125,
+        180
+      ],
+      "description": "Exterior mechanical region comprising the shoulder pivot housing; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J00",
+      "distal_joint": "J01",
+      "related_joints": [
+        "J00",
+        "J01"
+      ],
+      "source_components": [
+        "C01"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C01",
+          "object_name": "Part__Feature001",
+          "source_label": "PX-100 Shoulder v3",
+          "solids": 1,
+          "faces": 51
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J00",
+          "semantic_type": "waist support",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J01",
+          "semantic_type": "upper-arm pivot",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "waist support",
+        "upper-arm pivot"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R01_P02",
+      "role_class": "link_module",
+      "semantic_label": "upper-arm carrier assembly",
+      "color_rgb": [
+        69,
+        123,
+        157
+      ],
+      "description": "Exterior mechanical region comprising the upper-arm carrier assembly; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J01",
+      "distal_joint": "J02",
+      "related_joints": [
+        "J01",
+        "J02"
+      ],
+      "source_components": [
+        "C06"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C06",
+          "object_name": "Part__Feature006",
+          "source_label": "SIMPLIFIED - PXA-100-UA v4",
+          "solids": 3,
+          "faces": 85
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J01",
+          "semantic_type": "shoulder pivot",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J02",
+          "semantic_type": "elbow pivot",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "shoulder pivot",
+        "elbow pivot"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R01_P03",
+      "role_class": "link_module",
+      "semantic_label": "forearm side frame",
+      "color_rgb": [
+        42,
+        157,
+        143
+      ],
+      "description": "Exterior mechanical region comprising the forearm side frame; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J02",
+      "distal_joint": "J03",
+      "related_joints": [
+        "J02",
+        "J03"
+      ],
+      "source_components": [
+        "C02"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C02",
+          "object_name": "Part__Feature002",
+          "source_label": "Fore - 1 - PX-100 v2",
+          "solids": 1,
+          "faces": 58
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J02",
+          "semantic_type": "elbow pivot",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": "J03",
+          "semantic_type": "gripper pitch attachment",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "elbow pivot",
+        "gripper pitch attachment"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain visible exterior and source constituent membership; not asserted to be a manufacturing part"
+    },
+    {
+      "part_id": "R01_P04",
+      "role_class": "end_interface",
+      "semantic_label": "parallel gripper assembly",
+      "color_rgb": [
+        233,
+        196,
+        106
+      ],
+      "description": "Exterior mechanical region comprising the parallel gripper assembly; retain its visible silhouette and both boundary interface regions.",
+      "proximal_joint": "J03",
+      "distal_joint": null,
+      "related_joints": [
+        "J03",
+        "J08",
+        "J09"
+      ],
+      "source_components": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "source_mapping": [
+        {
+          "component_id": "C03",
+          "object_name": "Part__Feature003",
+          "source_label": "PX100 SRG v3",
+          "solids": 1,
+          "faces": 106
+        },
+        {
+          "component_id": "C04",
+          "object_name": "Part__Feature004",
+          "source_label": "SRG Carriage With Finger v3",
+          "solids": 1,
+          "faces": 57
+        },
+        {
+          "component_id": "C05",
+          "object_name": "Part__Feature005",
+          "source_label": "SRG Carriage With Finger v001",
+          "solids": 1,
+          "faces": 57
+        }
+      ],
+      "interfaces": [
+        {
+          "side": "proximal",
+          "joint_id": "J03",
+          "semantic_type": "wrist pitch attachment",
+          "region": "proximal attachment boundary"
+        },
+        {
+          "side": "distal",
+          "joint_id": null,
+          "semantic_type": "two opposed contact fingers",
+          "region": "distal attachment/contact boundary"
+        }
+      ],
+      "critical_regions": [
+        "primary exterior envelope",
+        "wrist pitch attachment",
+        "two opposed contact fingers"
+      ],
+      "mapping_status": "semantic association from source labels and supplied URDF; STEP-to-URDF rigid registration not established",
+      "multi_body_policy": "retain constituent bodies and visible separations; do not fuse moving jaws"
+    }
+  ]
+}

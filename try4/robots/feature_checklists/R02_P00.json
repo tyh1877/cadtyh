@@ -1,0 +1,42 @@
+[
+  {
+    "feature_id": "R02_P00_E00",
+    "region": "body",
+    "requirement": "scalloped tapered pedestal",
+    "critical": false,
+    "evidence_views": [
+      "images/isolated_front.png",
+      "images/isolated_side.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "visible_candidate_apply_dev_calibrated_relative_scale_rule",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R02_P00_E01",
+    "region": "base",
+    "requirement": "polygonal mounting plate and rear extension",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  },
+  {
+    "feature_id": "R02_P00_E02",
+    "region": "top",
+    "requirement": "circular seating boundary",
+    "critical": true,
+    "evidence_views": [
+      "images/isolated_top.png",
+      "images/isolated_isometric.png"
+    ],
+    "annotation_source": "Codex offline visual inspection; not independent expert scoring",
+    "inclusion": "required_functional",
+    "geometry_parameters": "must be estimated from images; no GT dimensions supplied"
+  }
+]

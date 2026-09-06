@@ -1,0 +1,4 @@
+artifacts/
+packets/
+__pycache__/
+*.pyc

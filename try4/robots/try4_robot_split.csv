@@ -1,0 +1,4 @@
+robot_id,source_robot,role,arm_dof,number_of_macro_parts,leaf_components,source_solids,geometry_difficulty,surface_complexity,why_selected
+R01,PincherX-100,DEV_A,4,5,7,9,easy_medium,plates_round_bosses_openings,available native STEP and local URDF; compact pilot
+R02,ViperX-300s,DEV_B,6,7,24,24,relative_hard,split_forearm_wrist_curved_contours_dense_gripper,"available native STEP and local URDF; 24 leaves, 6 arm axes, complex wrist and multi-body gripper"
+R03,ReactorX-200,TRANSFER,5,6,9,16,medium_transfer,plates_round_bosses_openings,available native STEP and local URDF; unused in prior colored-step five-case cohort; same-family transfer only
