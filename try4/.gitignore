@@ -1,5 +1,6 @@
 artifacts/
 packets/
 T0/
+/T1/
 __pycache__/
 *.pyc

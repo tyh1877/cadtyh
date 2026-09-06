@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "try4_t1_skill_output_v1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "part_id", "visual_evidence", "mechanical_interpretation", "feature_graph", "cad_ir", "skill_trace"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "try4_t1_skill_output_v1"},
+    "part_id": {"type": "string", "pattern": "^R0[12]_P[0-9]{2}$"},
+    "visual_evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["target_color_consumed", "observed_regions"],
+      "properties": {
+        "target_color_consumed": {"type": "boolean", "const": true},
+        "observed_regions": {"type": "array", "minItems": 1, "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["requirement_ref", "region", "shape", "views", "confidence", "uncertainty"],
+          "properties": {"requirement_ref": {"type": "string"}, "region": {"type": "string"}, "shape": {"type": "string"}, "views": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "uncertainty": {"type": "string"}}
+        }}
+      }
+    },
+    "mechanical_interpretation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["semantic_label_consumed", "part_function", "load_path", "proximal_region", "distal_region", "separate_body_requirements", "protected_open_spaces", "prohibited_inferences"],
+      "properties": {"semantic_label_consumed": {"type": "string"}, "part_function": {"type": "string"}, "load_path": {"type": "string"}, "proximal_region": {"type": "string"}, "distal_region": {"type": "string"}, "separate_body_requirements": {"type": "array", "items": {"type": "string"}}, "protected_open_spaces": {"type": "array", "items": {"type": "string"}}, "prohibited_inferences": {"type": "array", "items": {"type": "string"}}}
+    },
+    "feature_graph": {"type": "object"}, "cad_ir": {"type": "object"},
+    "skill_trace": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "string"}}
+  }
+}

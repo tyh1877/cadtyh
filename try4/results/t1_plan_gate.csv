@@ -1,0 +1,13 @@
+part_id,status,features,critical_features,unimplemented_features,critical_unimplemented,bodies,operations,errors
+R01_P00,PASS,3,2,0,0,1,7,[]
+R01_P01,PASS,3,1,0,0,1,7,[]
+R01_P02,PASS,4,3,0,0,3,13,[]
+R01_P03,PASS,4,3,0,0,3,13,[]
+R01_P04,PASS,3,3,0,0,4,11,[]
+R02_P00,PASS,3,2,0,0,1,7,[]
+R02_P01,PASS,3,3,0,0,3,7,[]
+R02_P02,PASS,3,3,0,0,3,9,[]
+R02_P03,PASS,3,2,0,0,1,5,[]
+R02_P04,PASS,4,3,0,0,1,9,[]
+R02_P05,PASS,3,3,0,0,3,5,[]
+R02_P06,PASS,3,2,0,0,4,9,[]

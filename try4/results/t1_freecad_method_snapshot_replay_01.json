@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-09-06T12:50:50.011428+00:00",
+  "replay_part": "R02_P04",
+  "files": {
+    "scripts\\freecad_t1_executor.py": "f9bf2909e7442c76fae27faee89ccced195a6094c5929a189ca858d8f0dbc680",
+    "scripts\\freecad_t0_executor.py": "333041a99edef42b6f9ec1e1c4b9277aeba4b308f8c705b9c115c5140788fe1d",
+    "scripts\\run_t1_freecad.py": "d9a1f7e22dd3299b2f9c96c8cf2e6937e7311bb0f9fd744a90ddc5f4ec6853be",
+    "scripts\\validate_t1.py": "8aab4a5c2a0120dc5af0ad1605f9ef799a966c207f685e9f31ea52747eadd06b",
+    "schemas\\t1_skill_output.schema.json": "0d33a16addd94f433815fee958f0ad0df9aedf81648693e06d124ac6d67f8956"
+  }
+}

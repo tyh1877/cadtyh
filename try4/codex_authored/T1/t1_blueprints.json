@@ -1,0 +1,142 @@
+{
+  "schema_version": "try4_t1_skill_blueprints_v1",
+  "producer": "current_interactive_codex",
+  "method": "Visual and semantic decisions authored from Phase-1 packets using the five shared Skills; recipe compiler receives explicit recipe and dimensions and cannot inspect part IDs.",
+  "parts": [
+    {
+      "part_id":"R01_P00","recipe":{"type":"base_pedestal"},
+      "parameters":{"plate_length":125,"plate_width":82,"plate_thickness":8,"pedestal_height":42,"pedestal_base_size":[72,64],"pedestal_top_size":[55,52],"top_radius":28,"top_height":10,"recess_radius":14},
+      "features":[
+        {"key":"pedestal","requirement_ref":"R01_P00_E00","observed_shape":"faceted tapered pedestal with repeated exterior scallops","uncertainty":"individual scallop depth is not metrically observable","role":"structural","shape_family":"tapered polygonal envelope","strategy":"LOFT","status":"PLANNED","confidence":0.76,"dimensions":{"length":42,"width":72,"depth":64,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"base","requirement_ref":"R01_P00_E01","observed_shape":"low polygonal mounting plate continuing into a rear rectangular extension","uncertainty":"corner bevel size uncertain","role":"primary","shape_family":"extended mounting plate","strategy":"ORIENTED_BOX","status":"PLANNED","confidence":0.82,"dimensions":{"length":125,"width":82,"depth":8,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"top","requirement_ref":"R01_P00_E02","observed_shape":"concentric raised annulus with central recess","uncertainty":"recess depth estimated","role":"interface","shape_family":"annular seating boss","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.88,"dimensions":{"length":null,"width":null,"depth":10,"radius":28,"wall_thickness":14,"uncertainty_note":"outer and inner radii estimated"}}
+      ],
+      "mechanical":{"part_function":"ground mounting and first-axis exterior support","load_path":"base plate through tapered pedestal to top rotary seat","proximal_region":"ground mounting footprint","distal_region":"annular waist seating interface","separate_body_requirements":[],"protected_open_spaces":["central top recess"],"prohibited_inferences":["internal bearing","motor","bolt thread"]},
+      "assumptions":["Global and isolated views establish the rear extension and annular seat.","Minor scallops are represented by the principal tapered envelope in T1."]
+    },
+    {
+      "part_id":"R01_P01","recipe":{"type":"joint_housing"},
+      "parameters":{"body_height":62,"body_width":52,"body_depth":44,"support_span":68,"support_width":58,"support_depth":16,"pivot_z":44,"pivot_radius":19,"pivot_height":48,"inset_size":[34,25],"inset_depth":4},
+      "features":[
+        {"key":"body","requirement_ref":"R01_P01_E00","observed_shape":"stepped rectangular shoulder housing with projecting lower transverse support","uncertainty":"small lower tabs simplified","role":"primary","shape_family":"stepped box housing","strategy":"BOOLEAN_UNION","status":"PLANNED","confidence":0.83,"dimensions":{"length":62,"width":52,"depth":44,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"pivot","requirement_ref":"R01_P01_E01","observed_shape":"round side pivot cover centered high on the housing","uncertainty":"cover is not assumed to be a through hole","role":"functional","shape_family":"transverse cylindrical cover","strategy":"CYLINDER","status":"PLANNED","confidence":0.88,"dimensions":{"length":null,"width":null,"depth":48,"radius":19,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"inset","requirement_ref":"R01_P01_E02","observed_shape":"rectangular shallow inset on the broad top-facing cover region","uncertainty":"depth not visually measurable","role":"surface","shape_family":"shallow rectangular recess","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.69,"dimensions":{"length":34,"width":25,"depth":4,"radius":null,"wall_thickness":null,"uncertainty_note":"shallow depth estimate"}}
+      ],
+      "mechanical":{"part_function":"supports the shoulder pivot and transfers load into the upper arm","load_path":"lower support through box housing to transverse pivot","proximal_region":"lower waist support","distal_region":"circular upper-arm pivot","separate_body_requirements":[],"protected_open_spaces":["shallow top inset"],"prohibited_inferences":["internal servo","bearing seat dimensions"]},
+      "assumptions":["Circular outline is modeled as an external cover boss."]
+    },
+    {
+      "part_id":"R01_P02","recipe":{"type":"open_frame"},
+      "parameters":{"length":150,"separation":48,"plate_width":30,"plate_thickness":10,"carrier_width":35,"carrier_thickness":12,"pivot_radius":22,"pivot_height":68,"slot_z":80,"slot_length":18,"slot_width":8,"notch_radius":8},
+      "features":[
+        {"key":"frame","requirement_ref":"R01_P02_E00","observed_shape":"two separated long side plates tied by a transverse carrier","uncertainty":"plate edge steps simplified","role":"primary","shape_family":"multi-body open plate frame","strategy":"ORIENTED_BOX","status":"PLANNED","confidence":0.88,"dimensions":{"length":150,"width":58,"depth":30,"radius":null,"wall_thickness":10,"uncertainty_note":"spacing estimate"}},
+        {"key":"slots","requirement_ref":"R01_P02_E01","observed_shape":"paired rectangular through slots in the side plates","uncertainty":"slot height estimated","role":"structural","shape_family":"rectangular cutouts","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.82,"dimensions":{"length":18,"width":8,"depth":12,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"fork","requirement_ref":"R01_P02_E02","observed_shape":"two open rounded notches at the free plate ends","uncertainty":"notch radius estimated","role":"functional","shape_family":"paired edge notches","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.80,"dimensions":{"length":null,"width":null,"depth":12,"radius":8,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"pivot","requirement_ref":"R01_P02_E03","observed_shape":"transverse circular proximal pivot interface","uncertainty":"cover depth estimated","role":"interface","shape_family":"transverse cylinder","strategy":"CYLINDER","status":"PLANNED","confidence":0.87,"dimensions":{"length":null,"width":null,"depth":68,"radius":22,"wall_thickness":null,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"open upper-arm carrier joining shoulder and elbow regions","load_path":"paired side plates from proximal cross carrier to distal fork","proximal_region":"transverse shoulder pivot","distal_region":"paired open fork ends","separate_body_requirements":["left and right side plates remain distinct"],"protected_open_spaces":["central frame opening","two side slots","fork notches"],"prohibited_inferences":["internal actuator"]},
+      "assumptions":["The frame remains three final bodies so the central opening is not filled."]
+    },
+    {
+      "part_id":"R01_P03","recipe":{"type":"open_frame"},
+      "parameters":{"length":145,"separation":40,"plate_width":28,"plate_thickness":10,"carrier_width":50,"carrier_thickness":20,"pivot_radius":23,"pivot_height":48,"slot_z":75,"slot_length":16,"slot_width":8,"notch_radius":8},
+      "features":[
+        {"key":"frame","requirement_ref":"R01_P03_E00","observed_shape":"open-sided forearm with wide proximal carrier and two narrow rails","uncertainty":"stepped shell transitions simplified","role":"primary","shape_family":"multi-body open frame","strategy":"ORIENTED_BOX","status":"PLANNED","confidence":0.85,"dimensions":{"length":145,"width":50,"depth":28,"radius":null,"wall_thickness":10,"uncertainty_note":"render estimate"}},
+        {"key":"fork","requirement_ref":"R01_P03_E01","observed_shape":"paired free-end notches with rounded inner ends","uncertainty":"tip curvature estimated","role":"functional","shape_family":"paired edge notches","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.83,"dimensions":{"length":null,"width":null,"depth":12,"radius":8,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"slots","requirement_ref":"R01_P03_E02","observed_shape":"rectangular through slot visible in one side rail","uncertainty":"opposite-side symmetry inferred from paired frame","role":"structural","shape_family":"rectangular cutout","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.70,"dimensions":{"length":16,"width":8,"depth":12,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"pivot","requirement_ref":"R01_P03_E03","observed_shape":"circular proximal pivot boundary","uncertainty":"external cover depth estimated","role":"interface","shape_family":"transverse cylinder","strategy":"CYLINDER","status":"PLANNED","confidence":0.88,"dimensions":{"length":null,"width":null,"depth":48,"radius":23,"wall_thickness":null,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"open forearm carrier from elbow pivot to wrist attachment","load_path":"proximal cross carrier into paired rails and terminal fork","proximal_region":"circular elbow pivot","distal_region":"open wrist fork","separate_body_requirements":["paired rails remain distinct"],"protected_open_spaces":["central opening","side slots","fork notches"],"prohibited_inferences":["hidden wrist bearing"]},
+      "assumptions":["Slot symmetry is lower confidence but retained as a paired-frame exterior feature."]
+    },
+    {
+      "part_id":"R01_P04","recipe":{"type":"gripper"},
+      "parameters":{"carriage_length":42,"carriage_width":36,"carriage_depth":25,"rail_span":100,"rail_width":10,"rail_depth":10,"jaw_separation":50,"jaw_length":92,"jaw_start_size":[22,14],"jaw_end_size":[9,6],"attachment_length":68,"attachment_width":52,"attachment_depth":22,"attachment_separation":46,"plate_thickness":10,"plate_depth":34,"attachment_slot":true,"slot_length":15,"slot_width":8},
+      "features":[
+        {"key":"jaws","requirement_ref":"R01_P04_E00","observed_shape":"two separate tapered fingers opposing across a clear working gap","uncertainty":"finger tip chamfers simplified","role":"functional","shape_family":"paired tapered jaws","strategy":"LOFT","status":"PLANNED","confidence":0.91,"dimensions":{"length":92,"width":22,"depth":14,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"carriage","requirement_ref":"R01_P04_E01","observed_shape":"crosswise rail with separate sliding carriage masses","uncertainty":"slider details simplified","role":"primary","shape_family":"crossed prismatic carriage","strategy":"BOOLEAN_UNION","status":"PLANNED","confidence":0.86,"dimensions":{"length":100,"width":36,"depth":25,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"attachment","requirement_ref":"R01_P04_E02","observed_shape":"forked proximal pitch bracket with visible side slot","uncertainty":"slot depth treated as through opening","role":"interface","shape_family":"three-member fork bracket with cutout","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.82,"dimensions":{"length":68,"width":52,"depth":22,"radius":null,"wall_thickness":10,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"parallel gripping subassembly and wrist attachment","load_path":"wrist bracket through cross carriage into two sliding jaws","proximal_region":"forked pitch attachment","distal_region":"opposed contact fingers","separate_body_requirements":["left jaw","right jaw","carriage","attachment bracket"],"protected_open_spaces":["grip gap","jaw travel space","bracket slot"],"prohibited_inferences":["internal lead screw","hidden gear train"]},
+      "assumptions":["Jaw motion members remain separate and are not fused."]
+    },
+    {
+      "part_id":"R02_P00","recipe":{"type":"base_pedestal"},
+      "parameters":{"plate_length":185,"plate_width":115,"plate_thickness":10,"pedestal_height":65,"pedestal_base_size":[105,92],"pedestal_top_size":[78,74],"top_radius":40,"top_height":14,"recess_radius":20},
+      "features":[
+        {"key":"pedestal","requirement_ref":"R02_P00_E00","observed_shape":"large faceted/scalloped tapered pedestal","uncertainty":"scallop depth is not metrically known","role":"structural","shape_family":"tapered polygonal pedestal","strategy":"LOFT","status":"PLANNED","confidence":0.79,"dimensions":{"length":65,"width":105,"depth":92,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"base","requirement_ref":"R02_P00_E01","observed_shape":"polygonal mounting plate with long rear extension","uncertainty":"corner bevels simplified","role":"primary","shape_family":"extended mounting plate","strategy":"ORIENTED_BOX","status":"PLANNED","confidence":0.85,"dimensions":{"length":185,"width":115,"depth":10,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"top","requirement_ref":"R02_P00_E02","observed_shape":"large circular top seating boundary","uncertainty":"center recess visibility limited","role":"interface","shape_family":"annular rotary seat","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.78,"dimensions":{"length":null,"width":null,"depth":14,"radius":40,"wall_thickness":20,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"ground base and waist support","load_path":"mounting plate through pedestal to waist seat","proximal_region":"ground footprint","distal_region":"top circular waist interface","separate_body_requirements":[],"protected_open_spaces":["top seat recess"],"prohibited_inferences":["internal drive"]},
+      "assumptions":["Exterior scallops are represented by the primary taper in initial T1."]
+    },
+    {
+      "part_id":"R02_P01","recipe":{"type":"dual_support"},
+      "parameters":{"disk_radius":60,"disk_thickness":10,"separation":55,"upright_height":72,"upright_width":36,"upright_depth":46,"pivot_radius":18},
+      "features":[
+        {"key":"base","requirement_ref":"R02_P01_E00","observed_shape":"wide circular support disk","uncertainty":"disk thickness estimated","role":"primary","shape_family":"circular mounting disk","strategy":"CYLINDER","status":"PLANNED","confidence":0.90,"dimensions":{"length":null,"width":null,"depth":10,"radius":60,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"body","requirement_ref":"R02_P01_E01","observed_shape":"two upright supports separated by a central opening","uncertainty":"front overlap makes separation clearer in top view","role":"structural","shape_family":"paired uprights","strategy":"ORIENTED_BOX","status":"PLANNED","confidence":0.84,"dimensions":{"length":72,"width":36,"depth":46,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"pivot","requirement_ref":"R02_P01_E02","observed_shape":"coaxial circular pivot interfaces on the upright sides","uncertainty":"boss depth estimated","role":"interface","shape_family":"paired transverse cylinders","strategy":"CYLINDER","status":"PLANNED","confidence":0.87,"dimensions":{"length":null,"width":null,"depth":53,"radius":18,"wall_thickness":null,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"dual shoulder support above the waist disk","load_path":"disk into two separated uprights and shoulder pivots","proximal_region":"waist disk","distal_region":"paired shoulder pivot faces","separate_body_requirements":["left upright","right upright","base disk"],"protected_open_spaces":["central support gap"],"prohibited_inferences":["internal bearings"]},
+      "assumptions":["Three final bodies preserve the visible central gap."]
+    },
+    {
+      "part_id":"R02_P02","recipe":{"type":"open_frame"},
+      "parameters":{"length":265,"separation":70,"plate_width":48,"plate_thickness":14,"carrier_width":68,"carrier_thickness":18,"pivot_radius":34,"pivot_height":92,"slot_z":140,"slot_length":1,"slot_width":1,"notch_radius":13},
+      "features":[
+        {"key":"frame","requirement_ref":"R02_P02_E00","observed_shape":"long narrow load web with widened end carriers","uncertainty":"surface panel steps simplified","role":"primary","shape_family":"open carrier frame","strategy":"ORIENTED_BOX","status":"PLANNED","confidence":0.84,"dimensions":{"length":265,"width":84,"depth":48,"radius":null,"wall_thickness":14,"uncertainty_note":"render estimate"}},
+        {"key":"fork","requirement_ref":"R02_P02_E01","observed_shape":"forked open terminal end","uncertainty":"fork notch radius estimated","role":"functional","shape_family":"paired open notches","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.79,"dimensions":{"length":null,"width":null,"depth":16,"radius":13,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"pivot","requirement_ref":"R02_P02_E02","observed_shape":"large proximal circular pivot with raised cover boundary","uncertainty":"cover relief omitted","role":"interface","shape_family":"transverse cylinder","strategy":"CYLINDER","status":"PLANNED","confidence":0.86,"dimensions":{"length":null,"width":null,"depth":92,"radius":34,"wall_thickness":null,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"upper-arm carrier between shoulder and elbow","load_path":"proximal pivot through long web to distal fork","proximal_region":"large shoulder pivot","distal_region":"open elbow fork","separate_body_requirements":["paired frame members"],"protected_open_spaces":["central frame opening","distal fork"],"prohibited_inferences":["hidden actuator"]},
+      "assumptions":["No slot feature is invoked because none is annotated for this Macro-Part."]
+    },
+    {
+      "part_id":"R02_P03","recipe":{"type":"offset_housing"},
+      "parameters":{"length":270,"offset":18,"start_size":[72,62],"end_size":[46,40],"joint_radius":35,"joint_height":86,"channel_depth":35,"channel_width":72,"channel_height":24,"hole_radius":1},
+      "features":[
+        {"key":"body","requirement_ref":"R02_P03_E00","observed_shape":"long narrow beam from a roll housing to a widened fork region","uncertainty":"local faceting simplified","role":"primary","shape_family":"offset tapered housing","strategy":"LOFT","status":"PLANNED","confidence":0.83,"dimensions":{"length":270,"width":72,"depth":62,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"channel","requirement_ref":"R02_P03_E01","observed_shape":"triangular lightening openings and supporting web near the fork","uncertainty":"rectangular cut approximates triangular openings in T1","role":"structural","shape_family":"lightening opening","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.67,"dimensions":{"length":72,"width":24,"depth":70,"radius":null,"wall_thickness":null,"uncertainty_note":"opening family approximated"}},
+        {"key":"joint","requirement_ref":"R02_P03_E02","observed_shape":"circular roll housing at the proximal end","uncertainty":"axial depth estimated","role":"interface","shape_family":"transverse cylinder","strategy":"CYLINDER","status":"PLANNED","confidence":0.89,"dimensions":{"length":null,"width":null,"depth":86,"radius":35,"wall_thickness":null,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"elbow-to-forearm-roll carrier","load_path":"proximal roll housing through tapered beam to distal fork/web","proximal_region":"roll cylinder","distal_region":"fork/web transition","separate_body_requirements":[],"protected_open_spaces":["lightening opening"],"prohibited_inferences":["internal roll mechanism"]},
+      "assumptions":["T1 uses an explicit but simplified opening instead of claiming exact triangular web recovery."]
+    },
+    {
+      "part_id":"R02_P04","recipe":{"type":"offset_housing"},
+      "parameters":{"length":240,"offset":42,"start_size":[78,62],"end_size":[50,42],"joint_radius":31,"joint_height":78,"channel_depth":36,"channel_width":95,"channel_height":28,"hole_radius":3.2},
+      "features":[
+        {"key":"body","requirement_ref":"R02_P04_E00","observed_shape":"offset widened plate body tapering toward the distal end","uncertainty":"curved outer contour approximated by loft","role":"primary","shape_family":"offset tapered housing","strategy":"LOFT","status":"PLANNED","confidence":0.86,"dimensions":{"length":240,"width":78,"depth":62,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"channel","requirement_ref":"R02_P04_E01","observed_shape":"open channel separating side members","uncertainty":"channel depth estimated","role":"functional","shape_family":"through channel","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.82,"dimensions":{"length":95,"width":28,"depth":72,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"holes","requirement_ref":"R02_P04_E02","observed_shape":"distributed small visible hole pattern on the broad plate","uncertainty":"T1 models two representative holes, not the full count","role":"structural","shape_family":"circular through holes","strategy":"BOOLEAN_CUT","status":"PLANNED","confidence":0.72,"dimensions":{"length":null,"width":null,"depth":70,"radius":3.2,"wall_thickness":null,"uncertainty_note":"representative count and placement"}},
+        {"key":"joint","requirement_ref":"R02_P04_E03","observed_shape":"round joint housing at the proximal side","uncertainty":"cover layering simplified","role":"interface","shape_family":"transverse cylinder","strategy":"CYLINDER","status":"PLANNED","confidence":0.88,"dimensions":{"length":null,"width":null,"depth":78,"radius":31,"wall_thickness":null,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"lower forearm housing carrying roll output to wrist pitch","load_path":"proximal round housing through offset plate to distal interface","proximal_region":"roll housing","distal_region":"wrist attachment face","separate_body_requirements":[],"protected_open_spaces":["side channel","visible holes"],"prohibited_inferences":["internal cabling"]},
+      "assumptions":["Two representative holes preserve pattern semantics without claiming exact manufacturing layout."]
+    },
+    {
+      "part_id":"R02_P05","recipe":{"type":"wrist_carrier"},
+      "parameters":{"body_length":90,"body_width":72,"body_depth":58,"separation":72,"arm_length":135,"arm_start_size":[42,18],"arm_end_size":[18,12],"roll_radius":39,"roll_height":88,"slot_length":1,"slot_width":1},
+      "features":[
+        {"key":"body","requirement_ref":"R02_P05_E00","observed_shape":"two curved bracket arms around a compact central carrier","uncertainty":"curvature approximated with tapered arms","role":"primary","shape_family":"forked wrist carrier","strategy":"LOFT","status":"PLANNED","confidence":0.84,"dimensions":{"length":135,"width":90,"depth":58,"radius":null,"wall_thickness":18,"uncertainty_note":"render estimate"}},
+        {"key":"fork","requirement_ref":"R02_P05_E01","observed_shape":"rounded terminal notches and a rectangular opening in the fork region","uncertainty":"notch/opening reduced to preserved space between arms","role":"functional","shape_family":"separated tapered fork arms","strategy":"LOFT","status":"PLANNED","confidence":0.79,"dimensions":{"length":135,"width":72,"depth":18,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"roll","requirement_ref":"R02_P05_E02","observed_shape":"large circular roll flange on the carrier side","uncertainty":"flange layering simplified","role":"interface","shape_family":"transverse roll cylinder","strategy":"CYLINDER","status":"PLANNED","confidence":0.91,"dimensions":{"length":null,"width":null,"depth":88,"radius":39,"wall_thickness":null,"uncertainty_note":"render estimate"}}
+      ],
+      "mechanical":{"part_function":"wrist pitch/roll carrier and tool-side fork","load_path":"roll flange through central carrier into separated fork arms","proximal_region":"large roll flange","distal_region":"two open fork tips","separate_body_requirements":["left fork arm","right fork arm","central carrier"],"protected_open_spaces":["space between fork arms"],"prohibited_inferences":["hidden wrist drive"]},
+      "assumptions":["Major bracket curvature is represented by taper, not a claimed exact sweep."]
+    },
+    {
+      "part_id":"R02_P06","recipe":{"type":"gripper"},
+      "parameters":{"carriage_length":70,"carriage_width":58,"carriage_depth":38,"rail_span":145,"rail_width":14,"rail_depth":14,"jaw_separation":82,"jaw_length":125,"jaw_start_size":[30,18],"jaw_end_size":[10,7],"attachment_length":95,"attachment_width":75,"attachment_depth":38,"attachment_separation":70,"plate_thickness":14,"plate_depth":52,"attachment_slot":false,"slot_length":1,"slot_width":1},
+      "features":[
+        {"key":"jaws","requirement_ref":"R02_P06_E00","observed_shape":"two opposed plate fingers separated by a wide working gap","uncertainty":"finger side details simplified","role":"functional","shape_family":"paired tapered jaws","strategy":"LOFT","status":"PLANNED","confidence":0.91,"dimensions":{"length":125,"width":30,"depth":18,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"carriage","requirement_ref":"R02_P06_E01","observed_shape":"wide dual rail and sliding carriage assembly","uncertainty":"individual sliders consolidated","role":"primary","shape_family":"crossed rail carriage","strategy":"BOOLEAN_UNION","status":"PLANNED","confidence":0.86,"dimensions":{"length":145,"width":58,"depth":38,"radius":null,"wall_thickness":null,"uncertainty_note":"render estimate"}},
+        {"key":"attachment","requirement_ref":"R02_P06_E02","observed_shape":"triangular plate/web bracing around the proximal attachment","uncertainty":"triangular webs approximated with prismatic side plates","role":"structural","shape_family":"multi-member attachment bracket","strategy":"ORIENTED_BOX","status":"PLANNED","confidence":0.74,"dimensions":{"length":95,"width":75,"depth":38,"radius":null,"wall_thickness":14,"uncertainty_note":"web profile simplified"}}
+      ],
+      "mechanical":{"part_function":"dual-rail parallel gripping subassembly","load_path":"proximal bracket through rail carriage into independent jaws","proximal_region":"tool roll attachment","distal_region":"opposed gripping fingers","separate_body_requirements":["left jaw","right jaw","carriage","attachment bracket"],"protected_open_spaces":["grip gap","jaw travel region"],"prohibited_inferences":["hidden screw","gear train","motor"]},
+      "assumptions":["Separate final bodies preserve jaw motion semantics and working space."]
+    }
+  ]
+}

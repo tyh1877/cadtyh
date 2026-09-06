@@ -1,0 +1,3 @@
+attempt_id,scope,classification,action,reason
+materialization_01,R01_P00;R01_P01;R01_P02;R01_P03;R01_P04;R02_P00,implementation_schema_reuse_failure,archive_partial_expand_local_requirement_ID_pattern_and_rematerialize_once,"T0 inner feature definition accepted only R01 requirement IDs; materialization stopped at first R02 feature before any T1 FreeCAD execution"
+freecad_execution_01,R02_P04,implementation_edit_restore_tolerance_failure,archive_failed_outputs_use_parameter_plus_validity_restore_check_and_replay_identical_ir_once,"All 9 native operations and exports succeeded; +5% edit stayed valid and baseline FCStd reopened, but exact post-boolean volume comparison exceeded 1e-8 relative tolerance after parameter restoration"

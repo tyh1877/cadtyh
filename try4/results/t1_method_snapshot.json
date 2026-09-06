@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-09-06T12:47:25.766253+00:00",
+  "condition": "T1_INTERACTIVE",
+  "context_isolation": false,
+  "recipe_dispatch_input": "agent-authored recipe and dimensions only; compiler has no part/case dispatch",
+  "files": {
+    "AMENDMENT_T1_INTERACTIVE.md": "e784aed769e774532a4fb2384ba134f85f860c98905e03ffe57082695c9d072e",
+    "codex_authored\\T1\\t1_blueprints.json": "ee897e4e363b83cf237e02ac2530ae7a05a113a3003d4692357b00094ba6631b",
+    "scripts\\materialize_t1.py": "c794dfc5c0be8546a9fb7836e859fa0252b6b96e556f69c36f85db11af03cd51",
+    "schemas\\t1_skill_output.schema.json": "0d33a16addd94f433815fee958f0ad0df9aedf81648693e06d124ac6d67f8956",
+    "schemas\\t0_direct_output.schema.json": "66b27c5319e4f7dbaba323ca79b304c06520367c69840d217ff3c68bfdbe85d3",
+    "scripts\\validate_t1.py": "8aab4a5c2a0120dc5af0ad1605f9ef799a966c207f685e9f31ea52747eadd06b",
+    "scripts\\freecad_t0_executor.py": "333041a99edef42b6f9ec1e1c4b9277aeba4b308f8c705b9c115c5140788fe1d",
+    "scripts\\freecad_t1_executor.py": "d9369786ac307a87dba7498f31dcf835362440ecab56e1b0d311629433e23273",
+    "scripts\\run_t1_freecad.py": "5fa8909b1c381f1f79c25dc40ca13b940f7bff7c8b36330a79d023d5d3b73807",
+    "skills\\visual_grounding\\SKILL.md": "84e71979276408900100d8145b71cd8b85d43e7388bacb4dcfc9d4876ddd522e",
+    "skills\\semantic_mechanical_reasoning\\SKILL.md": "73d5178df250f8142e13e00dca33920c705056e8acce8e841f356e1619e00e41",
+    "skills\\robot_part_modeling_standard\\SKILL.md": "97ceaabc17fdec6cc7281078bc6b68b15414a776d2afc8a383601f8bd96a0e8d",
+    "skills\\mechanical_detail_planning\\SKILL.md": "37a255778a0a7e386f78dca55d68acbd78c8f95a53eb671e973873b7f2bbfbac",
+    "skills\\freecad_part_modeling\\SKILL.md": "c66e7b9ef39dc8b9752c963df80eea38c6716a6e3b861e3de12522d0bf7b2434"
+  }
+}
