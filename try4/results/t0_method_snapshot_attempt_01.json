@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-09-06T07:06:04.577819+00:00",
+  "condition": "T0",
+  "policy": "single pass; independent ephemeral Codex CLI context; no retry/review/repair",
+  "files": {
+    "prompts\\t0_direct.md": "966d7ad91b2e624c55f27d95ecee0081e01a3a10493f3e70cc8e16f10b3da5e8",
+    "schemas\\t0_direct_output.schema.json": "6c92b1ccdc57ac398c5029c1e0d0310a7b9d23029b2507a1b21ea664870a6b55",
+    "scripts\\run_t0_codex.py": "f589b762e6a3faaf10e090c92aecb8972956627bb0ccb4aec5770121d05643cf",
+    "scripts\\freecad_t0_executor.py": "878750667120406da9000e6eabac9f4e8dfaa522311728fb74e5a655f753556a",
+    "scripts\\run_t0_freecad.py": "a69fa1a0d44ab5a3126f10bc1219d6dce3e9c93b1602830586558fbfa456f58b",
+    "scripts\\validate_t0.py": "49255bb2cf018bd994721f9f88228b973ac24966bd6d6d7821adf93a7bc1c489"
+  },
+  "cli_version": "codex-cli 0.153.1"
+}

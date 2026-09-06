@@ -1,0 +1,6 @@
+part_id,status,elapsed_seconds,disposition
+R01_P00,SUCCESS,1136.7204823493958,archived_not_used_in_T0_INTERACTIVE
+R01_P01,SUCCESS,192.2209734916687,archived_not_used_in_T0_INTERACTIVE
+R01_P02,SUCCESS,142.82231068611145,archived_not_used_in_T0_INTERACTIVE
+R01_P03,INTERRUPTED,,user_requested_switch_to_current_agent
+R01_P04,NOT_STARTED,,user_requested_switch_to_current_agent

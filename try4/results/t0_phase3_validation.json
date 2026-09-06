@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "condition": "T0_INTERACTIVE",
+  "context_isolation": false,
+  "scope": "Phase 3 CAD validity/artifact completeness only; no GT geometry or quality score",
+  "parts": [
+    {
+      "part_id": "R01_P00",
+      "agent_status": "SUCCESS",
+      "plan_status": "PASS",
+      "execution_status": "SUCCESS",
+      "missing_artifacts": [],
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit_valid": true,
+      "restore_valid": true,
+      "renders_nonblank": true
+    },
+    {
+      "part_id": "R01_P01",
+      "agent_status": "SUCCESS",
+      "plan_status": "PASS",
+      "execution_status": "SUCCESS",
+      "missing_artifacts": [],
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit_valid": true,
+      "restore_valid": true,
+      "renders_nonblank": true
+    },
+    {
+      "part_id": "R01_P02",
+      "agent_status": "SUCCESS",
+      "plan_status": "PASS",
+      "execution_status": "SUCCESS",
+      "missing_artifacts": [],
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit_valid": true,
+      "restore_valid": true,
+      "renders_nonblank": true
+    },
+    {
+      "part_id": "R01_P03",
+      "agent_status": "SUCCESS",
+      "plan_status": "PASS",
+      "execution_status": "SUCCESS",
+      "missing_artifacts": [],
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit_valid": true,
+      "restore_valid": true,
+      "renders_nonblank": true
+    },
+    {
+      "part_id": "R01_P04",
+      "agent_status": "SUCCESS",
+      "plan_status": "PASS",
+      "execution_status": "SUCCESS",
+      "missing_artifacts": [],
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit_valid": true,
+      "restore_valid": true,
+      "renders_nonblank": true
+    }
+  ],
+  "planned_features": 14,
+  "unimplemented_features": 4,
+  "critical_unimplemented": 1,
+  "bodies": 12,
+  "operations": 39,
+  "quality_gate_status": "NOT_RUN_UNTIL_PHASE5",
+  "transfer_outputs": 0,
+  "t1_t2_outputs": 0
+}

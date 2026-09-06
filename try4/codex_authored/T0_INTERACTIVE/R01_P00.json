@@ -1,0 +1,21 @@
+{
+  "part_id": "R01_P00",
+  "features": [
+    {"feature_id":"F00","requirement_refs":["R01_P00_E01"],"feature_type":"polygonal mounting plate with rear extension","role":"primary","evidence":["images/isolated_top.png","images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"lower mounting footprint","estimated_dimensions_mm":{"length":125,"width":82,"depth":8,"radius":null,"wall_thickness":null,"uncertainty_note":"image-proportion estimate"},"shape_family":"extended plate","intended_cad_strategy":"ORIENTED_BOX","dependencies":[],"critical":true,"confidence":0.72,"status":"PLANNED"},
+    {"feature_id":"F01","requirement_refs":["R01_P00_E00"],"feature_type":"scalloped tapered pedestal envelope","role":"structural","evidence":["images/isolated_front.png","images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"raised forward pedestal","estimated_dimensions_mm":{"length":42,"width":72,"depth":64,"radius":null,"wall_thickness":null,"uncertainty_note":"scallops simplified in T0"},"shape_family":"tapered prismatic pedestal","intended_cad_strategy":"LOFT","dependencies":["F00"],"critical":false,"confidence":0.65,"status":"PLANNED"},
+    {"feature_id":"F02","requirement_refs":["R01_P00_E02"],"feature_type":"annular recessed seating region","role":"interface","evidence":["images/isolated_top.png","images/isolated_isometric.png"],"reference_region":"pedestal top","estimated_dimensions_mm":{"length":null,"width":null,"depth":8,"radius":14,"wall_thickness":7,"uncertainty_note":"annulus estimated from top view"},"shape_family":"circular boss with concentric recess","intended_cad_strategy":"BOOLEAN_CUT","dependencies":["F01"],"critical":true,"confidence":0.77,"status":"PLANNED"}
+  ],
+  "bodies": [{"body_id":"B00","role":"mounting pedestal","feature_ids":["F00","F01","F02"],"final_object":"op_007"}],
+  "operations": [
+    {"op_id":"op_001","op_type":"oriented_box","target_body":"op_001","dependencies":[],"feature_ref":"F00","start":[-48,0,0],"end":[77,0,0],"width_mm":82,"depth_mm":8,"operation_mode":"new_body"},
+    {"op_id":"op_002","op_type":"lofted_prism","target_body":"op_002","dependencies":[],"feature_ref":"F01","start":[0,0,0],"end":[0,0,42],"start_size_mm":[72,64],"end_size_mm":[55,52],"operation_mode":"new_body"},
+    {"op_id":"op_003","op_type":"boolean_union","target_body":"op_001","dependencies":["op_001","op_002"],"feature_ref":"F01","tool_bodies":["op_002"]},
+    {"op_id":"op_004","op_type":"cylinder_primitive","target_body":"op_004","dependencies":[],"feature_ref":"F02","center":[0,0,42],"axis":[0,0,1],"radius_mm":28,"height_mm":10,"operation_mode":"new_body"},
+    {"op_id":"op_005","op_type":"boolean_union","target_body":"op_003","dependencies":["op_003","op_004"],"feature_ref":"F02","tool_bodies":["op_004"]},
+    {"op_id":"op_006","op_type":"cylinder_primitive","target_body":"op_006","dependencies":[],"feature_ref":"F02","center":[0,0,44],"axis":[0,0,1],"radius_mm":14,"height_mm":12,"operation_mode":"new_body"},
+    {"op_id":"op_007","op_type":"boolean_cut","target_body":"op_005","dependencies":["op_005","op_006"],"feature_ref":"F02","tool_bodies":["op_006"]}
+  ],
+  "final_objects": ["op_007"],
+  "editable_parameter": {"object_id":"op_001","property":"Length","baseline_value":82,"edit_fraction":0.05},
+  "assumptions": ["Dimensions are estimated from global and isolated renders.","T0 approximates scalloped cavities with a tapered exterior envelope."]
+}

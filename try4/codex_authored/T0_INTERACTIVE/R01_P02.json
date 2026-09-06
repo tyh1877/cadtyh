@@ -1,0 +1,28 @@
+{
+  "part_id": "R01_P02",
+  "features": [
+    {"feature_id":"F00","requirement_refs":["R01_P02_E00"],"feature_type":"paired upper-arm side plates and cross carrier","role":"primary","evidence":["images/isolated_front.png","images/isolated_top.png","images/isolated_isometric.png"],"reference_region":"two long plates joined at proximal carrier","estimated_dimensions_mm":{"length":150,"width":60,"depth":30,"radius":null,"wall_thickness":10,"uncertainty_note":"plate spacing and thickness estimated"},"shape_family":"three-body open frame","intended_cad_strategy":"ORIENTED_BOX","dependencies":[],"critical":true,"confidence":0.76,"status":"PLANNED"},
+    {"feature_id":"F01","requirement_refs":["R01_P02_E01"],"feature_type":"paired rectangular side slots","role":"structural","evidence":["images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"side plates","estimated_dimensions_mm":{"length":16,"width":7,"depth":10,"radius":null,"wall_thickness":null,"uncertainty_note":"slot placement ambiguous across plates"},"shape_family":"rectangular cutouts","intended_cad_strategy":"UNIMPLEMENTED","dependencies":["F00"],"critical":false,"confidence":0.58,"status":"UNIMPLEMENTED"},
+    {"feature_id":"F02","requirement_refs":["R01_P02_E02"],"feature_type":"open rounded fork ends","role":"functional","evidence":["images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"distal ends of both plates","estimated_dimensions_mm":{"length":null,"width":null,"depth":12,"radius":8,"wall_thickness":null,"uncertainty_note":"notch radius estimated"},"shape_family":"paired edge notches","intended_cad_strategy":"BOOLEAN_CUT","dependencies":["F00"],"critical":true,"confidence":0.70,"status":"PLANNED"},
+    {"feature_id":"F03","requirement_refs":["R01_P02_E03"],"feature_type":"circular proximal pivot interface","role":"interface","evidence":["images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"cross carrier side","estimated_dimensions_mm":{"length":null,"width":null,"depth":68,"radius":22,"wall_thickness":null,"uncertainty_note":"diameter estimated"},"shape_family":"transverse cylindrical interface","intended_cad_strategy":"CYLINDER","dependencies":["F00"],"critical":true,"confidence":0.78,"status":"PLANNED"}
+  ],
+  "bodies": [
+    {"body_id":"B00","role":"left side plate","feature_ids":["F00","F02"],"final_object":"op_007"},
+    {"body_id":"B01","role":"right side plate","feature_ids":["F00","F02"],"final_object":"op_009"},
+    {"body_id":"B02","role":"proximal cross carrier","feature_ids":["F00","F03"],"final_object":"op_005"}
+  ],
+  "operations": [
+    {"op_id":"op_001","op_type":"oriented_box","target_body":"op_001","dependencies":[],"feature_ref":"F00","start":[0,-24,0],"end":[0,-24,150],"width_mm":10,"depth_mm":30,"operation_mode":"new_body"},
+    {"op_id":"op_002","op_type":"oriented_box","target_body":"op_002","dependencies":[],"feature_ref":"F00","start":[0,24,0],"end":[0,24,150],"width_mm":10,"depth_mm":30,"operation_mode":"new_body"},
+    {"op_id":"op_003","op_type":"oriented_box","target_body":"op_003","dependencies":[],"feature_ref":"F00","start":[0,-30,145],"end":[0,30,145],"width_mm":35,"depth_mm":12,"operation_mode":"new_body"},
+    {"op_id":"op_004","op_type":"cylinder_primitive","target_body":"op_004","dependencies":[],"feature_ref":"F03","center":[0,0,150],"axis":[0,1,0],"radius_mm":22,"height_mm":68,"operation_mode":"new_body"},
+    {"op_id":"op_005","op_type":"boolean_union","target_body":"op_003","dependencies":["op_003","op_004"],"feature_ref":"F03","tool_bodies":["op_004"]},
+    {"op_id":"op_006","op_type":"cylinder_primitive","target_body":"op_006","dependencies":[],"feature_ref":"F02","center":[0,-24,0],"axis":[0,1,0],"radius_mm":8,"height_mm":18,"operation_mode":"new_body"},
+    {"op_id":"op_007","op_type":"boolean_cut","target_body":"op_001","dependencies":["op_001","op_006"],"feature_ref":"F02","tool_bodies":["op_006"]},
+    {"op_id":"op_008","op_type":"cylinder_primitive","target_body":"op_008","dependencies":[],"feature_ref":"F02","center":[0,24,0],"axis":[0,1,0],"radius_mm":8,"height_mm":18,"operation_mode":"new_body"},
+    {"op_id":"op_009","op_type":"boolean_cut","target_body":"op_002","dependencies":["op_002","op_008"],"feature_ref":"F02","tool_bodies":["op_008"]}
+  ],
+  "final_objects": ["op_007","op_009","op_005"],
+  "editable_parameter": {"object_id":"op_001","property":"Width","baseline_value":30,"edit_fraction":0.05},
+  "assumptions": ["The frame is intentionally multi-body to retain the visible open space.","Rectangular slots are documented but omitted from the direct baseline."]
+}

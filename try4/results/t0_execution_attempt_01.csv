@@ -1,0 +1,6 @@
+part_id,status,returncode,elapsed_seconds,error
+R01_P00,FAILURE,1,6.283076286315918,AttributeError: 'Part.Feature' object has no attribute 'Length'
+R01_P01,FAILURE,1,5.072023630142212,AttributeError: 'Part.Feature' object has no attribute 'Length'
+R01_P02,FAILURE,1,5.029082298278809,AttributeError: 'Part.Feature' object has no attribute 'Width'
+R01_P03,FAILURE,1,5.012120485305786,AttributeError: 'Part.Feature' object has no attribute 'Length'
+R01_P04,FAILURE,1,5.249410390853882,AttributeError: 'Part.Feature' object has no attribute 'Length'

@@ -1,0 +1,11 @@
+part_id,status,returncode,elapsed_seconds,packet_sha256,output_sha256,images_attached,context_policy,model_retry_count,cli_invocation_attempt,started_at,error
+R01_P00,FAILURE,1,0.09963154792785645,6da571851aba6b7b77d491823c00dda678d0fc5f361cb2d513b82b25a67430bf,,10,independent_ephemeral_packet_only,0,2,2026-09-06T07:07:35.254192+00:00,"Failed to read prompt from stdin: input is not valid UTF-8 (invalid byte at offset 2275). Convert it to UTF-8 and retry (e.g., `iconv -f <ENC> -t UTF-8 prompt.txt`).
+"
+R01_P01,FAILURE,1,0.06975698471069336,20063760d01b6059809e51d9b1f00676455d04eace640687d6750e79e7170e0f,,10,independent_ephemeral_packet_only,0,2,2026-09-06T07:07:35.328406+00:00,"Failed to read prompt from stdin: input is not valid UTF-8 (invalid byte at offset 2275). Convert it to UTF-8 and retry (e.g., `iconv -f <ENC> -t UTF-8 prompt.txt`).
+"
+R01_P02,FAILURE,1,0.06661653518676758,cc3f54c6d20e2781643df3048cefa3535032d9a74364d66daf8225137f45327a,,10,independent_ephemeral_packet_only,0,2,2026-09-06T07:07:35.397545+00:00,"Failed to read prompt from stdin: input is not valid UTF-8 (invalid byte at offset 2275). Convert it to UTF-8 and retry (e.g., `iconv -f <ENC> -t UTF-8 prompt.txt`).
+"
+R01_P03,FAILURE,1,0.0757741928100586,3cc46252e53080828e8d15132c7d8834ba4b66e429d45dc4e6549357e34cae48,,10,independent_ephemeral_packet_only,0,2,2026-09-06T07:07:35.476332+00:00,"Failed to read prompt from stdin: input is not valid UTF-8 (invalid byte at offset 2275). Convert it to UTF-8 and retry (e.g., `iconv -f <ENC> -t UTF-8 prompt.txt`).
+"
+R01_P04,FAILURE,1,0.07056474685668945,cb8f2611430a8f043bf985f99b4a7f60aed559d3835eacae95554fd633642993,,10,independent_ephemeral_packet_only,0,2,2026-09-06T07:07:35.550915+00:00,"Failed to read prompt from stdin: input is not valid UTF-8 (invalid byte at offset 2275). Convert it to UTF-8 and retry (e.g., `iconv -f <ENC> -t UTF-8 prompt.txt`).
+"

@@ -1,0 +1,28 @@
+{
+  "part_id": "R01_P03",
+  "features": [
+    {"feature_id":"F00","requirement_refs":["R01_P03_E00"],"feature_type":"open-sided forearm with proximal housing","role":"primary","evidence":["images/isolated_top.png","images/isolated_isometric.png"],"reference_region":"wide proximal box and two distal rails","estimated_dimensions_mm":{"length":150,"width":52,"depth":30,"radius":null,"wall_thickness":10,"uncertainty_note":"rail spacing estimated"},"shape_family":"three-body open frame","intended_cad_strategy":"ORIENTED_BOX","dependencies":[],"critical":true,"confidence":0.78,"status":"PLANNED"},
+    {"feature_id":"F01","requirement_refs":["R01_P03_E01"],"feature_type":"fork opening with rounded terminal notches","role":"functional","evidence":["images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"distal fork tips","estimated_dimensions_mm":{"length":null,"width":null,"depth":12,"radius":8,"wall_thickness":null,"uncertainty_note":"tip curvature estimated"},"shape_family":"paired edge notches","intended_cad_strategy":"BOOLEAN_CUT","dependencies":["F00"],"critical":true,"confidence":0.73,"status":"PLANNED"},
+    {"feature_id":"F02","requirement_refs":["R01_P03_E02"],"feature_type":"rectangular side slot","role":"structural","evidence":["images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"one side rail","estimated_dimensions_mm":{"length":15,"width":7,"depth":10,"radius":null,"wall_thickness":null,"uncertainty_note":"side ownership uncertain"},"shape_family":"rectangular cutout","intended_cad_strategy":"UNIMPLEMENTED","dependencies":["F00"],"critical":false,"confidence":0.56,"status":"UNIMPLEMENTED"},
+    {"feature_id":"F03","requirement_refs":["R01_P03_E03"],"feature_type":"circular proximal pivot boundary","role":"interface","evidence":["images/isolated_side.png"],"reference_region":"proximal housing side","estimated_dimensions_mm":{"length":null,"width":null,"depth":48,"radius":23,"wall_thickness":null,"uncertainty_note":"cover/housing depth estimated"},"shape_family":"transverse cylinder","intended_cad_strategy":"CYLINDER","dependencies":["F00"],"critical":true,"confidence":0.80,"status":"PLANNED"}
+  ],
+  "bodies": [
+    {"body_id":"B00","role":"proximal housing","feature_ids":["F00","F03"],"final_object":"op_003"},
+    {"body_id":"B01","role":"left fork rail","feature_ids":["F00","F01"],"final_object":"op_006"},
+    {"body_id":"B02","role":"right fork rail","feature_ids":["F00","F01"],"final_object":"op_009"}
+  ],
+  "operations": [
+    {"op_id":"op_001","op_type":"oriented_box","target_body":"op_001","dependencies":[],"feature_ref":"F00","start":[-55,0,0],"end":[30,0,0],"width_mm":52,"depth_mm":30,"operation_mode":"new_body"},
+    {"op_id":"op_002","op_type":"cylinder_primitive","target_body":"op_002","dependencies":[],"feature_ref":"F03","center":[-55,0,0],"axis":[0,1,0],"radius_mm":23,"height_mm":48,"operation_mode":"new_body"},
+    {"op_id":"op_003","op_type":"boolean_union","target_body":"op_001","dependencies":["op_001","op_002"],"feature_ref":"F03","tool_bodies":["op_002"]},
+    {"op_id":"op_004","op_type":"oriented_box","target_body":"op_004","dependencies":[],"feature_ref":"F00","start":[20,-20,0],"end":[100,-20,0],"width_mm":11,"depth_mm":20,"operation_mode":"new_body"},
+    {"op_id":"op_005","op_type":"cylinder_primitive","target_body":"op_005","dependencies":[],"feature_ref":"F01","center":[100,-20,0],"axis":[0,0,1],"radius_mm":8,"height_mm":24,"operation_mode":"new_body"},
+    {"op_id":"op_006","op_type":"boolean_cut","target_body":"op_004","dependencies":["op_004","op_005"],"feature_ref":"F01","tool_bodies":["op_005"]},
+    {"op_id":"op_007","op_type":"oriented_box","target_body":"op_007","dependencies":[],"feature_ref":"F00","start":[20,20,0],"end":[100,20,0],"width_mm":11,"depth_mm":20,"operation_mode":"new_body"},
+    {"op_id":"op_008","op_type":"cylinder_primitive","target_body":"op_008","dependencies":[],"feature_ref":"F01","center":[100,20,0],"axis":[0,0,1],"radius_mm":8,"height_mm":24,"operation_mode":"new_body"},
+    {"op_id":"op_009","op_type":"boolean_cut","target_body":"op_007","dependencies":["op_007","op_008"],"feature_ref":"F01","tool_bodies":["op_008"]}
+  ],
+  "final_objects": ["op_003","op_006","op_009"],
+  "editable_parameter": {"object_id":"op_001","property":"Length","baseline_value":52,"edit_fraction":0.05},
+  "assumptions": ["Three bodies preserve the open-sided frame in T0.","The visible slot is recorded as unimplemented rather than replaced by an unsupported detail."]
+}

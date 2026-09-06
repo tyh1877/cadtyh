@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-06T07:51:47.812036+00:00",
+  "condition": "T0_INTERACTIVE",
+  "producer": "current_interactive_codex",
+  "context_isolation": false,
+  "files": {
+    "AMENDMENT_T0_INTERACTIVE.md": "295bc98f1ef391b379d68f16fd9d93566a5502c4e2568f97535f17e3a7665028",
+    "schemas\\t0_direct_output.schema.json": "66b27c5319e4f7dbaba323ca79b304c06520367c69840d217ff3c68bfdbe85d3",
+    "scripts\\materialize_t0_interactive.py": "b11977e3b1f21383ff7b60810b9884d509a1d9ecc0dd4a26056b2f8a640d80ee",
+    "scripts\\validate_t0.py": "8d7fe65e0d6ca12f84b7b0f37fdbfa7a7b94d2ad771f395d1b84cb8085a21f8a",
+    "scripts\\freecad_t0_executor.py": "878750667120406da9000e6eabac9f4e8dfaa522311728fb74e5a655f753556a",
+    "scripts\\run_t0_freecad.py": "a69fa1a0d44ab5a3126f10bc1219d6dce3e9c93b1602830586558fbfa456f58b",
+    "codex_authored\\T0_INTERACTIVE\\R01_P00.json": "a6bbfe0d5b3c868d1a7e46c1377484b99ff5adddd181233fd8a796ab1e3864e5",
+    "codex_authored\\T0_INTERACTIVE\\R01_P01.json": "68b59ea455599f2e04ae6633ed2d31da7d945f863f156e5efd3346a850cc135c",
+    "codex_authored\\T0_INTERACTIVE\\R01_P02.json": "15f0d84f456a49886c97ffd247f58b8359e55e23083ff451de23077f5f3fdf0c",
+    "codex_authored\\T0_INTERACTIVE\\R01_P03.json": "d4b38ea64f32c6cfa1454762c41175f1fb22ccccf24a0685847f017af452a56e",
+    "codex_authored\\T0_INTERACTIVE\\R01_P04.json": "7a9212d6e7199898335f0755c999243c98e3fd13f736a3428021ef4a3cd32926"
+  }
+}

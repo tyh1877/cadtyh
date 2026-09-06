@@ -1,0 +1,29 @@
+{
+  "part_id": "R01_P04",
+  "features": [
+    {"feature_id":"F00","requirement_refs":["R01_P04_E00"],"feature_type":"two opposed tapered fingers with open gap","role":"functional","evidence":["images/isolated_top.png","images/isolated_isometric.png"],"reference_region":"distal jaw pair","estimated_dimensions_mm":{"length":85,"width":12,"depth":10,"radius":null,"wall_thickness":null,"uncertainty_note":"finger taper estimated"},"shape_family":"two independent tapered prisms","intended_cad_strategy":"LOFT","dependencies":[],"critical":true,"confidence":0.79,"status":"PLANNED"},
+    {"feature_id":"F01","requirement_refs":["R01_P04_E01"],"feature_type":"crosswise rail and sliding carriage","role":"primary","evidence":["images/isolated_front.png","images/isolated_top.png","images/isolated_isometric.png"],"reference_region":"central transverse carriage","estimated_dimensions_mm":{"length":100,"width":35,"depth":25,"radius":null,"wall_thickness":null,"uncertainty_note":"rail and carriage simplified"},"shape_family":"crossed prismatic carriage","intended_cad_strategy":"BOOLEAN_UNION","dependencies":[],"critical":true,"confidence":0.72,"status":"PLANNED"},
+    {"feature_id":"F02","requirement_refs":["R01_P04_E02"],"feature_type":"forked wrist pitch bracket","role":"interface","evidence":["images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"proximal attachment bracket","estimated_dimensions_mm":{"length":58,"width":52,"depth":22,"radius":null,"wall_thickness":10,"uncertainty_note":"side slot omitted in T0"},"shape_family":"three-body fork bracket","intended_cad_strategy":"ORIENTED_BOX","dependencies":["F01"],"critical":true,"confidence":0.68,"status":"PLANNED"},
+    {"feature_id":"F03","requirement_refs":["R01_P04_E02"],"feature_type":"pitch bracket side slot","role":"structural","evidence":["images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"fork side plate","estimated_dimensions_mm":{"length":14,"width":7,"depth":10,"radius":null,"wall_thickness":null,"uncertainty_note":"slot location not reliable in direct baseline"},"shape_family":"rectangular cutout","intended_cad_strategy":"UNIMPLEMENTED","dependencies":["F02"],"critical":true,"confidence":0.51,"status":"UNIMPLEMENTED"}
+  ],
+  "bodies": [
+    {"body_id":"B00","role":"cross carriage","feature_ids":["F01"],"final_object":"op_003"},
+    {"body_id":"B01","role":"left jaw","feature_ids":["F00"],"final_object":"op_004"},
+    {"body_id":"B02","role":"right jaw","feature_ids":["F00"],"final_object":"op_005"},
+    {"body_id":"B03","role":"proximal fork bracket","feature_ids":["F02"],"final_object":"op_009"}
+  ],
+  "operations": [
+    {"op_id":"op_001","op_type":"oriented_box","target_body":"op_001","dependencies":[],"feature_ref":"F01","start":[-20,0,0],"end":[20,0,0],"width_mm":35,"depth_mm":25,"operation_mode":"new_body"},
+    {"op_id":"op_002","op_type":"oriented_box","target_body":"op_002","dependencies":[],"feature_ref":"F01","start":[0,-50,0],"end":[0,50,0],"width_mm":10,"depth_mm":10,"operation_mode":"new_body"},
+    {"op_id":"op_003","op_type":"boolean_union","target_body":"op_001","dependencies":["op_001","op_002"],"feature_ref":"F01","tool_bodies":["op_002"]},
+    {"op_id":"op_004","op_type":"lofted_prism","target_body":"op_004","dependencies":[],"feature_ref":"F00","start":[10,-25,0],"end":[95,-25,0],"start_size_mm":[20,14],"end_size_mm":[8,6],"operation_mode":"new_body"},
+    {"op_id":"op_005","op_type":"lofted_prism","target_body":"op_005","dependencies":[],"feature_ref":"F00","start":[10,25,0],"end":[95,25,0],"start_size_mm":[20,14],"end_size_mm":[8,6],"operation_mode":"new_body"},
+    {"op_id":"op_006","op_type":"oriented_box","target_body":"op_006","dependencies":[],"feature_ref":"F02","start":[-65,0,0],"end":[-15,0,0],"width_mm":52,"depth_mm":22,"operation_mode":"new_body"},
+    {"op_id":"op_007","op_type":"oriented_box","target_body":"op_007","dependencies":[],"feature_ref":"F02","start":[-70,-23,0],"end":[-30,-23,0],"width_mm":10,"depth_mm":34,"operation_mode":"new_body"},
+    {"op_id":"op_008","op_type":"oriented_box","target_body":"op_008","dependencies":[],"feature_ref":"F02","start":[-70,23,0],"end":[-30,23,0],"width_mm":10,"depth_mm":34,"operation_mode":"new_body"},
+    {"op_id":"op_009","op_type":"boolean_union","target_body":"op_006","dependencies":["op_006","op_007","op_008"],"feature_ref":"F02","tool_bodies":["op_007","op_008"]}
+  ],
+  "final_objects": ["op_003","op_004","op_005","op_009"],
+  "editable_parameter": {"object_id":"op_001","property":"Length","baseline_value":35,"edit_fraction":0.05},
+  "assumptions": ["Moving jaws remain separate bodies and the central grip gap is preserved.","The pitch-bracket side slot is explicitly unimplemented in direct T0."]
+}

@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-09-06T07:53:37.596029+00:00",
+  "replay_reason": "generic native editable-object lookup repair; CAD IR unchanged",
+  "files": {
+    "scripts\\freecad_t0_executor.py": "333041a99edef42b6f9ec1e1c4b9277aeba4b308f8c705b9c115c5140788fe1d",
+    "scripts\\run_t0_freecad.py": "068aa79698d2f95bd2beb0ff689f5299054986c21f038f3e22d644ba13ab4d0e",
+    "scripts\\validate_t0.py": "8d7fe65e0d6ca12f84b7b0f37fdbfa7a7b94d2ad771f395d1b84cb8085a21f8a",
+    "schemas\\t0_direct_output.schema.json": "66b27c5319e4f7dbaba323ca79b304c06520367c69840d217ff3c68bfdbe85d3"
+  }
+}

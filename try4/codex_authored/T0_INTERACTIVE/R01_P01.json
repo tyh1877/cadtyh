@@ -1,0 +1,19 @@
+{
+  "part_id": "R01_P01",
+  "features": [
+    {"feature_id":"F00","requirement_refs":["R01_P01_E00"],"feature_type":"stepped shoulder housing and lower support","role":"primary","evidence":["images/isolated_front.png","images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"central housing","estimated_dimensions_mm":{"length":62,"width":52,"depth":44,"radius":null,"wall_thickness":null,"uncertainty_note":"step proportions estimated"},"shape_family":"stepped box housing","intended_cad_strategy":"BOOLEAN_UNION","dependencies":[],"critical":false,"confidence":0.72,"status":"PLANNED"},
+    {"feature_id":"F01","requirement_refs":["R01_P01_E01"],"feature_type":"circular shoulder pivot cover","role":"functional","evidence":["images/isolated_side.png","images/isolated_isometric.png"],"reference_region":"housing side face","estimated_dimensions_mm":{"length":null,"width":null,"depth":10,"radius":19,"wall_thickness":null,"uncertainty_note":"cover depth estimated"},"shape_family":"cylindrical cover boss","intended_cad_strategy":"CYLINDER","dependencies":["F00"],"critical":true,"confidence":0.80,"status":"PLANNED"},
+    {"feature_id":"F02","requirement_refs":["R01_P01_E02"],"feature_type":"rectangular inset cover boundary","role":"surface","evidence":["images/isolated_top.png"],"reference_region":"upper cover face","estimated_dimensions_mm":{"length":34,"width":25,"depth":1,"radius":null,"wall_thickness":null,"uncertainty_note":"shallow boundary lacks reliable T0 operation"},"shape_family":"shallow rectangular inset","intended_cad_strategy":"UNIMPLEMENTED","dependencies":["F00"],"critical":false,"confidence":0.51,"status":"UNIMPLEMENTED"}
+  ],
+  "bodies": [{"body_id":"B00","role":"shoulder pivot housing","feature_ids":["F00","F01"],"final_object":"op_005"}],
+  "operations": [
+    {"op_id":"op_001","op_type":"oriented_box","target_body":"op_001","dependencies":[],"feature_ref":"F00","start":[0,0,0],"end":[0,0,62],"width_mm":52,"depth_mm":44,"operation_mode":"new_body"},
+    {"op_id":"op_002","op_type":"oriented_box","target_body":"op_002","dependencies":[],"feature_ref":"F00","start":[-34,0,0],"end":[34,0,0],"width_mm":58,"depth_mm":16,"operation_mode":"new_body"},
+    {"op_id":"op_003","op_type":"boolean_union","target_body":"op_001","dependencies":["op_001","op_002"],"feature_ref":"F00","tool_bodies":["op_002"]},
+    {"op_id":"op_004","op_type":"cylinder_primitive","target_body":"op_004","dependencies":[],"feature_ref":"F01","center":[0,0,44],"axis":[0,1,0],"radius_mm":19,"height_mm":48,"operation_mode":"new_body"},
+    {"op_id":"op_005","op_type":"boolean_union","target_body":"op_003","dependencies":["op_003","op_004"],"feature_ref":"F01","tool_bodies":["op_004"]}
+  ],
+  "final_objects": ["op_005"],
+  "editable_parameter": {"object_id":"op_001","property":"Length","baseline_value":52,"edit_fraction":0.05},
+  "assumptions": ["The side circular outline is treated as an exterior cover boss, not a through hole.","The shallow top inset is recorded but omitted in direct T0."]
+}
