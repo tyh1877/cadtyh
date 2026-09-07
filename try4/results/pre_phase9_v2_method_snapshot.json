@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-09-07T02:46:11.857755+00:00",
+  "snapshot_type": "development pilot final method; no formal freeze",
+  "base_commit": "86cab8d",
+  "files": {
+    "protocol/pre_phase9_v2_protocol.json": "89bd15502732ca072d742c34009ba58102a3484b42b79bdff6dac80e59a6b84f",
+    "codex_authored/PRE_PHASE9_V2/pilot_blueprints.json": "ea5b047255e7b58956ecb3227078dceead928bff2ef47b69c6ffd93133c15613",
+    "skills/cad_operation_vocabulary_v2/SKILL.md": "571b4449b92ae2c16298ba312fe994dd06c3d8e3d1e271804fc240a0b4c84091",
+    "scripts/compile_pre_phase9_v2.py": "9a2992ea9710184d91b46f4f39914cfdb35e0a07c5eaf0b0aca0fc996d4bf5b3",
+    "scripts/run_pre_phase9_v2_pilot.py": "0d5dc3281cf325bc580169a8e4d76c2b7e26d3358a7a7338c2455bbe5ea3d30e",
+    "scripts/evaluate_pre_phase9_v2.py": "188230eeef7dc5d4e4dd110a119097eb1e93d52d35126cc7b9506b03854fe2c7",
+    "protocol/phase5_evaluator_v1.json": "3b9f7cb93ef695a3e0ca8eda6a90af5a8d8d6cd2a07e5afa7b1df722ed21ee1e"
+  }
+}

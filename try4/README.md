@@ -37,3 +37,8 @@ generation/transfer records. No transfer-method freeze is claimed at this stage.
 The next work should revise the generic modeling vocabulary and visible-feature
 gate on DEV_A/B under a new versioned protocol. Do not enter Phase 9 or run Robot C
 from the current Phase-8 result.
+
+The first pre-Phase-9 v2 development pilot is recorded in
+`results/pre_phase9_v2_pilot_report.md`. Profile/loft/fork vocabulary improves
+three of four representative parts, but the wrist and gripper pilot gate fails.
+The formal 12-part v2 matrix was therefore not started and Phase 9 remains closed.

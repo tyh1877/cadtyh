@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "experiment_outcome": "PILOT_GATE_FAIL_DO_NOT_ENTER_PHASE9",
+  "checks": {
+    "method_hashes_match": true,
+    "four_parts": true,
+    "all_artifacts_complete": true,
+    "all_native_cad_valid": true,
+    "metrics_deterministic": true,
+    "pilot_gate_failed_recorded": true,
+    "formal_v2_matrix_not_started": true,
+    "robot_c_absent": true
+  },
+  "method_files": {
+    "protocol/pre_phase9_v2_protocol.json": true,
+    "codex_authored/PRE_PHASE9_V2/pilot_blueprints.json": true,
+    "skills/cad_operation_vocabulary_v2/SKILL.md": true,
+    "scripts/compile_pre_phase9_v2.py": true,
+    "scripts/run_pre_phase9_v2_pilot.py": true,
+    "scripts/evaluate_pre_phase9_v2.py": true,
+    "protocol/phase5_evaluator_v1.json": true
+  },
+  "parts": [
+    {
+      "part_id": "R01_P00",
+      "missing": [],
+      "cad_success": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit": true
+    },
+    {
+      "part_id": "R02_P02",
+      "missing": [],
+      "cad_success": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit": true
+    },
+    {
+      "part_id": "R02_P05",
+      "missing": [],
+      "cad_success": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit": true
+    },
+    {
+      "part_id": "R02_P06",
+      "missing": [],
+      "cad_success": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "edit": true
+    }
+  ]
+}

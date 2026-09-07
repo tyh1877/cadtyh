@@ -1,0 +1,10 @@
+{
+  "condition":"PRE_PHASE9_V2_PILOT",
+  "context_isolation":false,
+  "parts":[
+    {"part_id":"R01_P00","recipe":"polygonal_pedestal","parameters":{"plate_length":165,"plate_width":105,"plate_depth":8,"rear_extension":55,"pedestal_radius":52,"pedestal_height":34,"waist_radius":31,"waist_height":14,"recess_radius":15}},
+    {"part_id":"R02_P02","recipe":"single_web_terminal_fork","parameters":{"length":305,"web_half_height":18,"depth":32,"proximal_radius":42,"proximal_length":55,"fork_length":58,"fork_outer_half_height":48,"fork_inner_half_height":17,"pivot_hole_radius":13}},
+    {"part_id":"R02_P05","recipe":"curved_wrist_fork","parameters":{"body_length":52,"fork_length":72,"outer_half_height":44,"inner_half_height":18,"depth":42,"roll_radius":31,"roll_depth":48,"slot_length":24,"slot_height":10}},
+    {"part_id":"R02_P06","recipe":"rail_carriage_linkage","parameters":{"carriage_length":62,"carriage_width":74,"depth":34,"rail_span":86,"rail_width":10,"jaw_length":92,"jaw_gap":48,"jaw_root_height":24,"jaw_tip_height":12,"link_length":48,"link_width":8,"pivot_radius":7}}
+  ]
+}

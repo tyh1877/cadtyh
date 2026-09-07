@@ -1,0 +1,10 @@
+{
+  "protocol_id":"try4_pre_phase9_repair_v2_dev",
+  "base_condition":"T1 round_0",
+  "pilot_parts":["R01_P00","R02_P02","R02_P05","R02_P06"],
+  "cad_vocabulary":["polygon_profile_extrude","multi_section_loft","single_web_terminal_fork","curved_fork_profile","revolved_or_cylindrical_housing","rail_carriage_linkage","boolean_opening"],
+  "generator_forbidden_inputs":["GT STEP","GT B-Rep","GT feature tree","exact GT sketches","copied GT dimensions"],
+  "pilot_gate":{"native_builds_required":4,"silent_fallbacks":0,"visible_topology_improved_required":true,"regional_metrics_present":true},
+  "formal_admission":{"combined_gate_pass_min":8,"both_robots_have_pass":true,"false_positive_rate_max":0.10,"regression_rate_max":0.15,"contract_execution_rate_min":0.95,"unresolved_rate_max":0.25,"requires_complex_link_or_wrist_pass":true,"requires_gripper_pass":true},
+  "transfer_robot_excluded":"R03"
+}
