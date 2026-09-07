@@ -1,0 +1,23 @@
+{
+  "part_id": "R02_P05",
+  "condition": "A2",
+  "selected_families": [
+    "u_channel",
+    "terminal_fork",
+    "open_slot",
+    "flange"
+  ],
+  "selection_evidence": "current-agent visual/topology reasoning before generation",
+  "recipe": "curved_wrist_fork",
+  "parameters": {
+    "body_length": 25,
+    "fork_length": 30,
+    "outer_half_height": 27,
+    "inner_half_height": 11,
+    "depth": 35,
+    "roll_radius": 23,
+    "roll_depth": 40,
+    "slot_length": 14,
+    "slot_height": 7
+  }
+}

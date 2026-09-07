@@ -1,0 +1,25 @@
+{
+  "part_id": "R02_P06",
+  "condition": "A2",
+  "selected_families": [
+    "rail_slider_pair",
+    "jaw_linkage",
+    "open_slot"
+  ],
+  "selection_evidence": "current-agent visual/topology reasoning before generation",
+  "recipe": "rail_carriage_linkage",
+  "parameters": {
+    "carriage_length": 55,
+    "carriage_width": 60,
+    "depth": 24,
+    "rail_span": 60,
+    "rail_width": 8,
+    "jaw_length": 65,
+    "jaw_gap": 60,
+    "jaw_root_height": 22,
+    "jaw_tip_height": 11,
+    "link_length": 40,
+    "link_width": 7,
+    "pivot_radius": 6
+  }
+}

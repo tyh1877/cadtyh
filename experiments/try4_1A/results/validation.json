@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "checks": {
+    "generation_method_hashes_match": true,
+    "evaluation_hashes_match": true,
+    "protocol_source_present": true,
+    "graphs_16_valid_including_4_targets": true,
+    "execution_8_success": true,
+    "new_artifacts_complete": true,
+    "native_valid_zero_fallback": true,
+    "geometry_rows_12": true,
+    "topology_rows_12": true,
+    "deterministic_rerun": true,
+    "contact_sheets_4": true,
+    "no_repair_rounds": true,
+    "no_r03": true,
+    "try4_1b_absent": true
+  },
+  "try4_1A_md_sha256": "9a796d162e50a8ee4848599300df980439e5346e51bd75319a1caf0c1a228916",
+  "generation_method_files": {
+    "protocol.json": true,
+    "shape_family_vocabulary.json": true,
+    "planning_inputs.json": true,
+    "input_manifest.json": true,
+    "schemas/mechanical_topology_graph.schema.json": true,
+    "scripts/materialize.py": true,
+    "scripts/run_freecad.py": true,
+    "../../try4/protocol/phase5_evaluator_v1.json": true,
+    "../../try4/scripts/freecad_t1_executor.py": true
+  },
+  "evaluation_files": {
+    "scripts/evaluate.py": true,
+    "scripts/evaluate_topology.py": true,
+    "scripts/make_contact_sheets.py": true,
+    "../../try4/scripts/evaluate_phase5.py": true,
+    "../../try4/protocol/phase5_evaluator_v1.json": true,
+    "planning_inputs.json": true
+  },
+  "new_parts": [
+    {
+      "condition": "A1",
+      "part_id": "R02_P02",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "A1",
+      "part_id": "R02_P04",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "A1",
+      "part_id": "R02_P05",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "A1",
+      "part_id": "R02_P06",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "A2",
+      "part_id": "R02_P02",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "A2",
+      "part_id": "R02_P04",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "A2",
+      "part_id": "R02_P05",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "A2",
+      "part_id": "R02_P06",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    }
+  ]
+}

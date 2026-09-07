@@ -1,0 +1,86 @@
+{
+  "part_id": "R02_P04",
+  "condition": "TARGET",
+  "nodes": [
+    {
+      "node_id": "n0",
+      "role": "main_offset_housing",
+      "node_type": "functional_body",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "n1",
+      "role": "top_cover_step",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "n2",
+      "role": "side_channel",
+      "node_type": "open_space",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    },
+    {
+      "node_id": "n3",
+      "role": "hole_pattern",
+      "node_type": "interface_region",
+      "cad_feature_refs": [
+        "F02"
+      ]
+    },
+    {
+      "node_id": "n4",
+      "role": "proximal_round_housing",
+      "node_type": "joint_region",
+      "cad_feature_refs": [
+        "F03"
+      ]
+    },
+    {
+      "node_id": "n5",
+      "role": "distal_interface",
+      "node_type": "interface_region",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source": "n4",
+      "relation": "attached_at_end",
+      "target": "n0"
+    },
+    {
+      "source": "n0",
+      "relation": "connected_to",
+      "target": "n1"
+    },
+    {
+      "source": "n1",
+      "relation": "attached_on_side",
+      "target": "n0"
+    },
+    {
+      "source": "n0",
+      "relation": "surrounds",
+      "target": "n2"
+    },
+    {
+      "source": "n3",
+      "relation": "attached_on_side",
+      "target": "n1"
+    },
+    {
+      "source": "n0",
+      "relation": "attached_at_end",
+      "target": "n5"
+    }
+  ]
+}

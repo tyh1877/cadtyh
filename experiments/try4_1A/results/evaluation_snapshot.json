@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-09-07T09:11:55.736381+00:00",
+  "before_metric_run": true,
+  "files": {
+    "scripts/evaluate.py": "833f0c8adadc349ddf486b4f17c4ccab9fbd3b39b76f1a448b791a876d60b76b",
+    "scripts/evaluate_topology.py": "4b588fb1517be6c68ab60d59680e14b9ed9b7eacbf12e3864890bde461b43503",
+    "scripts/make_contact_sheets.py": "d903e9bd4238514720fc4d176d2bb21bf9d47eec84da32864c837ed0bef8f46c",
+    "../../try4/scripts/evaluate_phase5.py": "41683406bceb45d2da14fb4027bfa33544fdf583d828717c4e0c09c84a545374",
+    "../../try4/protocol/phase5_evaluator_v1.json": "3b9f7cb93ef695a3e0ca8eda6a90af5a8d8d6cd2a07e5afa7b1df722ed21ee1e",
+    "planning_inputs.json": "7480748c3d88e26315c22992c406a5bb220896f2de27de43173cb02748018165"
+  }
+}

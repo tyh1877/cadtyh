@@ -1,0 +1,3437 @@
+{
+  "parts": [
+    {
+      "part_id": "R02_P02",
+      "target_graph": {
+        "part_id": "R02_P02",
+        "condition": "TARGET",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "proximal_pivot",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "main_web",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "fork_junction",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "left_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "right_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "fork_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n6",
+            "role": "distal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "attached_at_end",
+            "target": "n1"
+          },
+          {
+            "source": "n1",
+            "relation": "connected_to",
+            "target": "n2"
+          },
+          {
+            "source": "n2",
+            "relation": "branches_into",
+            "target": "n3"
+          },
+          {
+            "source": "n2",
+            "relation": "branches_into",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "symmetric_with",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n3"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "attached_at_end",
+            "target": "n6"
+          },
+          {
+            "source": "n4",
+            "relation": "attached_at_end",
+            "target": "n6"
+          }
+        ]
+      },
+      "A0_graph": {
+        "part_id": "R02_P02",
+        "condition": "A0",
+        "nodes": [
+          {
+            "node_id": "a0",
+            "role": "left_full_bar",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "a1",
+            "role": "right_full_bar",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "a2",
+            "role": "parallel_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "a3",
+            "role": "proximal_pivot",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "a0",
+            "relation": "parallel_to",
+            "target": "a1"
+          },
+          {
+            "source": "a0",
+            "relation": "separated_by_gap",
+            "target": "a1"
+          },
+          {
+            "source": "a3",
+            "relation": "attached_at_end",
+            "target": "a0"
+          },
+          {
+            "source": "a3",
+            "relation": "attached_at_end",
+            "target": "a1"
+          }
+        ]
+      },
+      "A1_graph": {
+        "part_id": "R02_P02",
+        "condition": "A1",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "proximal_pivot",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "main_web",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "fork_junction",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "left_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "right_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "fork_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n6",
+            "role": "distal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "attached_at_end",
+            "target": "n1"
+          },
+          {
+            "source": "n1",
+            "relation": "connected_to",
+            "target": "n2"
+          },
+          {
+            "source": "n2",
+            "relation": "branches_into",
+            "target": "n3"
+          },
+          {
+            "source": "n2",
+            "relation": "branches_into",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "symmetric_with",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n3"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "attached_at_end",
+            "target": "n6"
+          },
+          {
+            "source": "n4",
+            "relation": "attached_at_end",
+            "target": "n6"
+          }
+        ]
+      },
+      "A2_graph": {
+        "part_id": "R02_P02",
+        "condition": "A2",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "proximal_pivot",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "main_web",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "fork_junction",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "left_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "right_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "fork_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n6",
+            "role": "distal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "attached_at_end",
+            "target": "n1"
+          },
+          {
+            "source": "n1",
+            "relation": "connected_to",
+            "target": "n2"
+          },
+          {
+            "source": "n2",
+            "relation": "branches_into",
+            "target": "n3"
+          },
+          {
+            "source": "n2",
+            "relation": "branches_into",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "symmetric_with",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n3"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "attached_at_end",
+            "target": "n6"
+          },
+          {
+            "source": "n4",
+            "relation": "attached_at_end",
+            "target": "n6"
+          }
+        ]
+      },
+      "A1_operations": [
+        {
+          "op_id": "op_001",
+          "op_type": "oriented_box",
+          "target_body": "op_001",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -145,
+            0,
+            0
+          ],
+          "end": [
+            95,
+            0,
+            0
+          ],
+          "width_mm": 38,
+          "depth_mm": 30,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_002",
+          "op_type": "oriented_box",
+          "target_body": "op_002",
+          "dependencies": [],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            80,
+            -32,
+            0
+          ],
+          "end": [
+            150,
+            -32,
+            0
+          ],
+          "width_mm": 22,
+          "depth_mm": 30,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_003",
+          "op_type": "oriented_box",
+          "target_body": "op_003",
+          "dependencies": [],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            80,
+            32,
+            0
+          ],
+          "end": [
+            150,
+            32,
+            0
+          ],
+          "width_mm": 22,
+          "depth_mm": 30,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_004",
+          "op_type": "oriented_box",
+          "target_body": "op_004",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            75,
+            0,
+            0
+          ],
+          "end": [
+            105,
+            0,
+            0
+          ],
+          "width_mm": 92,
+          "depth_mm": 30,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_005",
+          "op_type": "cylinder_primitive",
+          "target_body": "op_005",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "center": [
+            -120,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius_mm": 40,
+          "height_mm": 42,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_006",
+          "op_type": "cylinder_primitive",
+          "target_body": "op_006",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "center": [
+            -120,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius_mm": 13,
+          "height_mm": 50,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_007",
+          "op_type": "boolean_union",
+          "target_body": "op_001",
+          "dependencies": [
+            "op_001",
+            "op_004"
+          ],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_004"
+          ]
+        },
+        {
+          "op_id": "op_008",
+          "op_type": "boolean_union",
+          "target_body": "op_007",
+          "dependencies": [
+            "op_007",
+            "op_002",
+            "op_003"
+          ],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_002",
+            "op_003"
+          ]
+        },
+        {
+          "op_id": "op_009",
+          "op_type": "boolean_union",
+          "target_body": "op_008",
+          "dependencies": [
+            "op_008",
+            "op_005"
+          ],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_005"
+          ]
+        },
+        {
+          "op_id": "op_010",
+          "op_type": "boolean_cut",
+          "target_body": "op_009",
+          "dependencies": [
+            "op_009",
+            "op_006"
+          ],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_006"
+          ]
+        }
+      ],
+      "A1_final": [
+        "op_010"
+      ],
+      "A1_edit": {
+        "object_id": "op_005",
+        "property": "Radius",
+        "baseline_value": 40,
+        "edit_fraction": 0.05
+      },
+      "A2_plan": {
+        "families": [
+          "single_web",
+          "terminal_fork",
+          "revolved_joint_housing"
+        ],
+        "recipe": "single_web_terminal_fork",
+        "parameters": {
+          "length": 305,
+          "web_half_height": 18,
+          "depth": 32,
+          "proximal_radius": 42,
+          "proximal_length": 55,
+          "fork_length": 58,
+          "fork_outer_half_height": 48,
+          "fork_inner_half_height": 17,
+          "pivot_hole_radius": 13
+        }
+      }
+    },
+    {
+      "part_id": "R02_P04",
+      "target_graph": {
+        "part_id": "R02_P04",
+        "condition": "TARGET",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "main_offset_housing",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "top_cover_step",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "side_channel",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "hole_pattern",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "proximal_round_housing",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F03"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "distal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n4",
+            "relation": "attached_at_end",
+            "target": "n0"
+          },
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n1"
+          },
+          {
+            "source": "n1",
+            "relation": "attached_on_side",
+            "target": "n0"
+          },
+          {
+            "source": "n0",
+            "relation": "surrounds",
+            "target": "n2"
+          },
+          {
+            "source": "n3",
+            "relation": "attached_on_side",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "attached_at_end",
+            "target": "n5"
+          }
+        ]
+      },
+      "A0_graph": {
+        "part_id": "R02_P04",
+        "condition": "A0",
+        "nodes": [
+          {
+            "node_id": "a0",
+            "role": "tapered_offset_block",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "a1",
+            "role": "channel",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "a2",
+            "role": "holes",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "a3",
+            "role": "round_end",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F03"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "a3",
+            "relation": "attached_at_end",
+            "target": "a0"
+          },
+          {
+            "source": "a0",
+            "relation": "surrounds",
+            "target": "a1"
+          },
+          {
+            "source": "a2",
+            "relation": "attached_on_side",
+            "target": "a0"
+          }
+        ]
+      },
+      "A1_graph": {
+        "part_id": "R02_P04",
+        "condition": "A1",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "main_offset_housing",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "top_cover_step",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "side_channel",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "hole_pattern",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "proximal_round_housing",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F03"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "distal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n4",
+            "relation": "attached_at_end",
+            "target": "n0"
+          },
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n1"
+          },
+          {
+            "source": "n1",
+            "relation": "attached_on_side",
+            "target": "n0"
+          },
+          {
+            "source": "n0",
+            "relation": "surrounds",
+            "target": "n2"
+          },
+          {
+            "source": "n3",
+            "relation": "attached_on_side",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "attached_at_end",
+            "target": "n5"
+          }
+        ]
+      },
+      "A2_graph": {
+        "part_id": "R02_P04",
+        "condition": "A2",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "main_offset_housing",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "top_cover_step",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "side_channel",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "hole_pattern",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "proximal_round_housing",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F03"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "distal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n4",
+            "relation": "attached_at_end",
+            "target": "n0"
+          },
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n1"
+          },
+          {
+            "source": "n1",
+            "relation": "attached_on_side",
+            "target": "n0"
+          },
+          {
+            "source": "n0",
+            "relation": "surrounds",
+            "target": "n2"
+          },
+          {
+            "source": "n3",
+            "relation": "attached_on_side",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "attached_at_end",
+            "target": "n5"
+          }
+        ]
+      },
+      "A1_operations": [
+        {
+          "op_id": "op_001",
+          "op_type": "lofted_prism",
+          "target_body": "op_001",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -70,
+            0,
+            0
+          ],
+          "end": [
+            70,
+            18,
+            0
+          ],
+          "start_size_mm": [
+            78,
+            58
+          ],
+          "end_size_mm": [
+            52,
+            42
+          ],
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_002",
+          "op_type": "oriented_box",
+          "target_body": "op_002",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -45,
+            0,
+            30
+          ],
+          "end": [
+            55,
+            12,
+            30
+          ],
+          "width_mm": 82,
+          "depth_mm": 12,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_003",
+          "op_type": "cylinder_primitive",
+          "target_body": "op_003",
+          "dependencies": [],
+          "feature_ref": "F03",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "center": [
+            -70,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "radius_mm": 31,
+          "height_mm": 58,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_004",
+          "op_type": "oriented_box",
+          "target_body": "op_004",
+          "dependencies": [],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -5,
+            -25,
+            0
+          ],
+          "end": [
+            35,
+            -15,
+            0
+          ],
+          "width_mm": 52,
+          "depth_mm": 18,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_005",
+          "op_type": "cylinder_primitive",
+          "target_body": "op_005",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "center": [
+            -10,
+            8,
+            20
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius_mm": 3,
+          "height_mm": 50,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_006",
+          "op_type": "cylinder_primitive",
+          "target_body": "op_006",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "center": [
+            15,
+            10,
+            20
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius_mm": 3,
+          "height_mm": 50,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_007",
+          "op_type": "boolean_union",
+          "target_body": "op_001",
+          "dependencies": [
+            "op_001",
+            "op_002"
+          ],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_002"
+          ]
+        },
+        {
+          "op_id": "op_008",
+          "op_type": "boolean_union",
+          "target_body": "op_007",
+          "dependencies": [
+            "op_007",
+            "op_003"
+          ],
+          "feature_ref": "F03",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_003"
+          ]
+        },
+        {
+          "op_id": "op_009",
+          "op_type": "boolean_cut",
+          "target_body": "op_008",
+          "dependencies": [
+            "op_008",
+            "op_004"
+          ],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_004"
+          ]
+        },
+        {
+          "op_id": "op_010",
+          "op_type": "boolean_cut",
+          "target_body": "op_009",
+          "dependencies": [
+            "op_009",
+            "op_005"
+          ],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_005"
+          ]
+        },
+        {
+          "op_id": "op_011",
+          "op_type": "boolean_cut",
+          "target_body": "op_010",
+          "dependencies": [
+            "op_010",
+            "op_006"
+          ],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_006"
+          ]
+        }
+      ],
+      "A1_final": [
+        "op_011"
+      ],
+      "A1_edit": {
+        "object_id": "op_003",
+        "property": "Radius",
+        "baseline_value": 31,
+        "edit_fraction": 0.05
+      },
+      "A2_plan": {
+        "families": [
+          "stepped_housing",
+          "open_slot",
+          "flange"
+        ],
+        "recipe": "stepped_housing",
+        "parameters": {
+          "length": 145,
+          "width": 92,
+          "depth": 48,
+          "offset": 20,
+          "step_length": 92,
+          "step_width": 72,
+          "step_height": 14,
+          "joint_radius": 32,
+          "joint_depth": 58,
+          "channel_length": 58,
+          "channel_width": 24,
+          "hole_radius": 3,
+          "hole_count": 4,
+          "hole_spacing": 22
+        }
+      }
+    },
+    {
+      "part_id": "R02_P05",
+      "target_graph": {
+        "part_id": "R02_P05",
+        "condition": "TARGET",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "central_wrist_carrier",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "left_curved_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "right_curved_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "fork_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "terminal_notch_slot",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "roll_flange",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "branches_into",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "branches_into",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "symmetric_with",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "separated_by_gap",
+            "target": "n2"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n1"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n2"
+          },
+          {
+            "source": "n4",
+            "relation": "encloses",
+            "target": "n1"
+          },
+          {
+            "source": "n5",
+            "relation": "attached_on_side",
+            "target": "n0"
+          }
+        ]
+      },
+      "A0_graph": {
+        "part_id": "R02_P05",
+        "condition": "A0",
+        "nodes": [
+          {
+            "node_id": "a0",
+            "role": "central_box",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "a1",
+            "role": "left_tapered_rod",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "a2",
+            "role": "right_tapered_rod",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "a3",
+            "role": "gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "a4",
+            "role": "roll_cylinder",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "a0",
+            "relation": "connected_to",
+            "target": "a1"
+          },
+          {
+            "source": "a0",
+            "relation": "connected_to",
+            "target": "a2"
+          },
+          {
+            "source": "a1",
+            "relation": "parallel_to",
+            "target": "a2"
+          },
+          {
+            "source": "a1",
+            "relation": "separated_by_gap",
+            "target": "a2"
+          },
+          {
+            "source": "a4",
+            "relation": "attached_on_side",
+            "target": "a0"
+          }
+        ]
+      },
+      "A1_graph": {
+        "part_id": "R02_P05",
+        "condition": "A1",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "central_wrist_carrier",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "left_curved_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "right_curved_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "fork_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "terminal_notch_slot",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "roll_flange",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "branches_into",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "branches_into",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "symmetric_with",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "separated_by_gap",
+            "target": "n2"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n1"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n2"
+          },
+          {
+            "source": "n4",
+            "relation": "encloses",
+            "target": "n1"
+          },
+          {
+            "source": "n5",
+            "relation": "attached_on_side",
+            "target": "n0"
+          }
+        ]
+      },
+      "A2_graph": {
+        "part_id": "R02_P05",
+        "condition": "A2",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "central_wrist_carrier",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "left_curved_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "right_curved_prong",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "fork_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "terminal_notch_slot",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "roll_flange",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "branches_into",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "branches_into",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "symmetric_with",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "separated_by_gap",
+            "target": "n2"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n1"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n2"
+          },
+          {
+            "source": "n4",
+            "relation": "encloses",
+            "target": "n1"
+          },
+          {
+            "source": "n5",
+            "relation": "attached_on_side",
+            "target": "n0"
+          }
+        ]
+      },
+      "A1_operations": [
+        {
+          "op_id": "op_001",
+          "op_type": "oriented_box",
+          "target_body": "op_001",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -35,
+            0,
+            0
+          ],
+          "end": [
+            20,
+            0,
+            0
+          ],
+          "width_mm": 68,
+          "depth_mm": 44,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_002",
+          "op_type": "lofted_prism",
+          "target_body": "op_002",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            10,
+            -32,
+            0
+          ],
+          "end": [
+            105,
+            -32,
+            0
+          ],
+          "start_size_mm": [
+            38,
+            16
+          ],
+          "end_size_mm": [
+            18,
+            10
+          ],
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_003",
+          "op_type": "lofted_prism",
+          "target_body": "op_003",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            10,
+            32,
+            0
+          ],
+          "end": [
+            105,
+            32,
+            0
+          ],
+          "start_size_mm": [
+            38,
+            16
+          ],
+          "end_size_mm": [
+            18,
+            10
+          ],
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_004",
+          "op_type": "cylinder_primitive",
+          "target_body": "op_004",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "center": [
+            -35,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "radius_mm": 32,
+          "height_mm": 58,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_005",
+          "op_type": "oriented_box",
+          "target_body": "op_005",
+          "dependencies": [],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            55,
+            -32,
+            0
+          ],
+          "end": [
+            78,
+            -32,
+            0
+          ],
+          "width_mm": 18,
+          "depth_mm": 7,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_006",
+          "op_type": "oriented_box",
+          "target_body": "op_006",
+          "dependencies": [],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            55,
+            32,
+            0
+          ],
+          "end": [
+            78,
+            32,
+            0
+          ],
+          "width_mm": 18,
+          "depth_mm": 7,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_007",
+          "op_type": "boolean_union",
+          "target_body": "op_001",
+          "dependencies": [
+            "op_001",
+            "op_002",
+            "op_003"
+          ],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_002",
+            "op_003"
+          ]
+        },
+        {
+          "op_id": "op_008",
+          "op_type": "boolean_union",
+          "target_body": "op_007",
+          "dependencies": [
+            "op_007",
+            "op_004"
+          ],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_004"
+          ]
+        },
+        {
+          "op_id": "op_009",
+          "op_type": "boolean_cut",
+          "target_body": "op_008",
+          "dependencies": [
+            "op_008",
+            "op_005"
+          ],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_005"
+          ]
+        },
+        {
+          "op_id": "op_010",
+          "op_type": "boolean_cut",
+          "target_body": "op_009",
+          "dependencies": [
+            "op_009",
+            "op_006"
+          ],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "tool_bodies": [
+            "op_006"
+          ]
+        }
+      ],
+      "A1_final": [
+        "op_010"
+      ],
+      "A1_edit": {
+        "object_id": "op_004",
+        "property": "Radius",
+        "baseline_value": 32,
+        "edit_fraction": 0.05
+      },
+      "A2_plan": {
+        "families": [
+          "u_channel",
+          "terminal_fork",
+          "open_slot",
+          "flange"
+        ],
+        "recipe": "curved_wrist_fork",
+        "parameters": {
+          "body_length": 25,
+          "fork_length": 30,
+          "outer_half_height": 27,
+          "inner_half_height": 11,
+          "depth": 35,
+          "roll_radius": 23,
+          "roll_depth": 40,
+          "slot_length": 14,
+          "slot_height": 7
+        }
+      }
+    },
+    {
+      "part_id": "R02_P06",
+      "target_graph": {
+        "part_id": "R02_P06",
+        "condition": "TARGET",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "central_carriage",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "left_rail_slider",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "right_rail_slider",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "left_jaw",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "right_jaw",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "grip_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n6",
+            "role": "left_link",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n7",
+            "role": "right_link",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n8",
+            "role": "pivot_pair",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n9",
+            "role": "proximal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "parallel_to",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "symmetric_with",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "connected_to",
+            "target": "n3"
+          },
+          {
+            "source": "n2",
+            "relation": "connected_to",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "symmetric_with",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n3"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n6",
+            "relation": "connected_to",
+            "target": "n3"
+          },
+          {
+            "source": "n7",
+            "relation": "connected_to",
+            "target": "n4"
+          },
+          {
+            "source": "n6",
+            "relation": "symmetric_with",
+            "target": "n7"
+          },
+          {
+            "source": "n8",
+            "relation": "connected_to",
+            "target": "n6"
+          },
+          {
+            "source": "n8",
+            "relation": "connected_to",
+            "target": "n7"
+          },
+          {
+            "source": "n9",
+            "relation": "attached_at_end",
+            "target": "n0"
+          }
+        ]
+      },
+      "A0_graph": {
+        "part_id": "R02_P06",
+        "condition": "A0",
+        "nodes": [
+          {
+            "node_id": "a0",
+            "role": "carriage_box",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "a1",
+            "role": "left_rail",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "a2",
+            "role": "right_rail",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "a3",
+            "role": "left_jaw_rod",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "a4",
+            "role": "right_jaw_rod",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "a5",
+            "role": "gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "a0",
+            "relation": "connected_to",
+            "target": "a1"
+          },
+          {
+            "source": "a0",
+            "relation": "connected_to",
+            "target": "a2"
+          },
+          {
+            "source": "a1",
+            "relation": "parallel_to",
+            "target": "a2"
+          },
+          {
+            "source": "a3",
+            "relation": "parallel_to",
+            "target": "a4"
+          },
+          {
+            "source": "a3",
+            "relation": "separated_by_gap",
+            "target": "a4"
+          }
+        ]
+      },
+      "A1_graph": {
+        "part_id": "R02_P06",
+        "condition": "A1",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "central_carriage",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "left_rail_slider",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "right_rail_slider",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "left_jaw",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "right_jaw",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "grip_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n6",
+            "role": "left_link",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n7",
+            "role": "right_link",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n8",
+            "role": "pivot_pair",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n9",
+            "role": "proximal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "parallel_to",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "symmetric_with",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "connected_to",
+            "target": "n3"
+          },
+          {
+            "source": "n2",
+            "relation": "connected_to",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "symmetric_with",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n3"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n6",
+            "relation": "connected_to",
+            "target": "n3"
+          },
+          {
+            "source": "n7",
+            "relation": "connected_to",
+            "target": "n4"
+          },
+          {
+            "source": "n6",
+            "relation": "symmetric_with",
+            "target": "n7"
+          },
+          {
+            "source": "n8",
+            "relation": "connected_to",
+            "target": "n6"
+          },
+          {
+            "source": "n8",
+            "relation": "connected_to",
+            "target": "n7"
+          },
+          {
+            "source": "n9",
+            "relation": "attached_at_end",
+            "target": "n0"
+          }
+        ]
+      },
+      "A2_graph": {
+        "part_id": "R02_P06",
+        "condition": "A2",
+        "nodes": [
+          {
+            "node_id": "n0",
+            "role": "central_carriage",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n1",
+            "role": "left_rail_slider",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n2",
+            "role": "right_rail_slider",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          },
+          {
+            "node_id": "n3",
+            "role": "left_jaw",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n4",
+            "role": "right_jaw",
+            "node_type": "functional_body",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n5",
+            "role": "grip_gap",
+            "node_type": "open_space",
+            "cad_feature_refs": [
+              "F00"
+            ]
+          },
+          {
+            "node_id": "n6",
+            "role": "left_link",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n7",
+            "role": "right_link",
+            "node_type": "structural_member",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n8",
+            "role": "pivot_pair",
+            "node_type": "joint_region",
+            "cad_feature_refs": [
+              "F02"
+            ]
+          },
+          {
+            "node_id": "n9",
+            "role": "proximal_interface",
+            "node_type": "interface_region",
+            "cad_feature_refs": [
+              "F01"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n1"
+          },
+          {
+            "source": "n0",
+            "relation": "connected_to",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "parallel_to",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "symmetric_with",
+            "target": "n2"
+          },
+          {
+            "source": "n1",
+            "relation": "connected_to",
+            "target": "n3"
+          },
+          {
+            "source": "n2",
+            "relation": "connected_to",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "symmetric_with",
+            "target": "n4"
+          },
+          {
+            "source": "n3",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n3"
+          },
+          {
+            "source": "n5",
+            "relation": "separated_by_gap",
+            "target": "n4"
+          },
+          {
+            "source": "n6",
+            "relation": "connected_to",
+            "target": "n3"
+          },
+          {
+            "source": "n7",
+            "relation": "connected_to",
+            "target": "n4"
+          },
+          {
+            "source": "n6",
+            "relation": "symmetric_with",
+            "target": "n7"
+          },
+          {
+            "source": "n8",
+            "relation": "connected_to",
+            "target": "n6"
+          },
+          {
+            "source": "n8",
+            "relation": "connected_to",
+            "target": "n7"
+          },
+          {
+            "source": "n9",
+            "relation": "attached_at_end",
+            "target": "n0"
+          }
+        ]
+      },
+      "A1_operations": [
+        {
+          "op_id": "op_001",
+          "op_type": "oriented_box",
+          "target_body": "op_001",
+          "dependencies": [],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -30,
+            0,
+            0
+          ],
+          "end": [
+            30,
+            0,
+            0
+          ],
+          "width_mm": 64,
+          "depth_mm": 34,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_002",
+          "op_type": "oriented_box",
+          "target_body": "op_002",
+          "dependencies": [],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -20,
+            -38,
+            0
+          ],
+          "end": [
+            65,
+            -38,
+            0
+          ],
+          "width_mm": 10,
+          "depth_mm": 10,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_003",
+          "op_type": "oriented_box",
+          "target_body": "op_003",
+          "dependencies": [],
+          "feature_ref": "F01",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -20,
+            38,
+            0
+          ],
+          "end": [
+            65,
+            38,
+            0
+          ],
+          "width_mm": 10,
+          "depth_mm": 10,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_004",
+          "op_type": "lofted_prism",
+          "target_body": "op_004",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            15,
+            -30,
+            0
+          ],
+          "end": [
+            100,
+            -30,
+            0
+          ],
+          "start_size_mm": [
+            26,
+            18
+          ],
+          "end_size_mm": [
+            12,
+            9
+          ],
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_005",
+          "op_type": "lofted_prism",
+          "target_body": "op_005",
+          "dependencies": [],
+          "feature_ref": "F00",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            15,
+            30,
+            0
+          ],
+          "end": [
+            100,
+            30,
+            0
+          ],
+          "start_size_mm": [
+            26,
+            18
+          ],
+          "end_size_mm": [
+            12,
+            9
+          ],
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_006",
+          "op_type": "oriented_box",
+          "target_body": "op_006",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -5,
+            0,
+            22
+          ],
+          "end": [
+            45,
+            -30,
+            22
+          ],
+          "width_mm": 8,
+          "depth_mm": 8,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_007",
+          "op_type": "oriented_box",
+          "target_body": "op_007",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "start": [
+            -5,
+            0,
+            22
+          ],
+          "end": [
+            45,
+            30,
+            22
+          ],
+          "width_mm": 8,
+          "depth_mm": 8,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_008",
+          "op_type": "cylinder_primitive",
+          "target_body": "op_008",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "center": [
+            45,
+            -30,
+            22
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius_mm": 7,
+          "height_mm": 10,
+          "operation_mode": "new_body"
+        },
+        {
+          "op_id": "op_009",
+          "op_type": "cylinder_primitive",
+          "target_body": "op_009",
+          "dependencies": [],
+          "feature_ref": "F02",
+          "reference_frame": {
+            "origin": [
+              0,
+              0,
+              0
+            ],
+            "x_axis": [
+              1,
+              0,
+              0
+            ],
+            "y_axis": [
+              0,
+              1,
+              0
+            ],
+            "z_axis": [
+              0,
+              0,
+              1
+            ]
+          },
+          "center": [
+            45,
+            30,
+            22
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "radius_mm": 7,
+          "height_mm": 10,
+          "operation_mode": "new_body"
+        }
+      ],
+      "A1_final": [
+        "op_001",
+        "op_002",
+        "op_003",
+        "op_004",
+        "op_005",
+        "op_006",
+        "op_007",
+        "op_008",
+        "op_009"
+      ],
+      "A1_edit": {
+        "object_id": "op_001",
+        "property": "Length",
+        "baseline_value": 64,
+        "edit_fraction": 0.05
+      },
+      "A2_plan": {
+        "families": [
+          "rail_slider_pair",
+          "jaw_linkage",
+          "open_slot"
+        ],
+        "recipe": "rail_carriage_linkage",
+        "parameters": {
+          "carriage_length": 55,
+          "carriage_width": 60,
+          "depth": 24,
+          "rail_span": 60,
+          "rail_width": 8,
+          "jaw_length": 65,
+          "jaw_gap": 60,
+          "jaw_root_height": 22,
+          "jaw_tip_height": 11,
+          "link_length": 40,
+          "link_width": 7,
+          "pivot_radius": 6
+        }
+      }
+    }
+  ]
+}

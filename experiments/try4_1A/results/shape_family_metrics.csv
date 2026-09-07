@@ -1,0 +1,5 @@
+part_id,selected_families,family_count,manual_shape_family_fit,assessment_scope
+R02_P02,single_web;terminal_fork;revolved_joint_housing,3,PASS,"development diagnostic, not independent judge"
+R02_P04,stepped_housing;open_slot;flange,3,PARTIAL,"development diagnostic, not independent judge"
+R02_P05,u_channel;terminal_fork;open_slot;flange,4,PASS,"development diagnostic, not independent judge"
+R02_P06,rail_slider_pair;jaw_linkage;open_slot,3,PARTIAL,"development diagnostic, not independent judge"

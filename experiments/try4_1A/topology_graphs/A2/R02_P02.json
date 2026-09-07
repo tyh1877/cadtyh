@@ -1,0 +1,114 @@
+{
+  "part_id": "R02_P02",
+  "condition": "A2",
+  "nodes": [
+    {
+      "node_id": "n0",
+      "role": "proximal_pivot",
+      "node_type": "joint_region",
+      "cad_feature_refs": [
+        "F02"
+      ]
+    },
+    {
+      "node_id": "n1",
+      "role": "main_web",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "n2",
+      "role": "fork_junction",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "n3",
+      "role": "left_prong",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    },
+    {
+      "node_id": "n4",
+      "role": "right_prong",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    },
+    {
+      "node_id": "n5",
+      "role": "fork_gap",
+      "node_type": "open_space",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    },
+    {
+      "node_id": "n6",
+      "role": "distal_interface",
+      "node_type": "interface_region",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source": "n0",
+      "relation": "attached_at_end",
+      "target": "n1"
+    },
+    {
+      "source": "n1",
+      "relation": "connected_to",
+      "target": "n2"
+    },
+    {
+      "source": "n2",
+      "relation": "branches_into",
+      "target": "n3"
+    },
+    {
+      "source": "n2",
+      "relation": "branches_into",
+      "target": "n4"
+    },
+    {
+      "source": "n3",
+      "relation": "symmetric_with",
+      "target": "n4"
+    },
+    {
+      "source": "n3",
+      "relation": "separated_by_gap",
+      "target": "n4"
+    },
+    {
+      "source": "n5",
+      "relation": "separated_by_gap",
+      "target": "n3"
+    },
+    {
+      "source": "n5",
+      "relation": "separated_by_gap",
+      "target": "n4"
+    },
+    {
+      "source": "n3",
+      "relation": "attached_at_end",
+      "target": "n6"
+    },
+    {
+      "source": "n4",
+      "relation": "attached_at_end",
+      "target": "n6"
+    }
+  ]
+}

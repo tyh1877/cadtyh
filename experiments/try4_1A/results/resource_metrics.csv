@@ -1,0 +1,4 @@
+condition,parts,new_agent_planning_outputs,new_freecad_builds,extra_method_stage
+A0,4,0,0,none (frozen T1)
+A1,4,4,4,Mechanical Topology Graph
+A2,4,4,4,Topology Graph + Shape-Family Selection

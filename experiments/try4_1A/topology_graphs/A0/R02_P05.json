@@ -1,0 +1,73 @@
+{
+  "part_id": "R02_P05",
+  "condition": "A0",
+  "nodes": [
+    {
+      "node_id": "a0",
+      "role": "central_box",
+      "node_type": "functional_body",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "a1",
+      "role": "left_tapered_rod",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "a2",
+      "role": "right_tapered_rod",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "a3",
+      "role": "gap",
+      "node_type": "open_space",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    },
+    {
+      "node_id": "a4",
+      "role": "roll_cylinder",
+      "node_type": "joint_region",
+      "cad_feature_refs": [
+        "F02"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source": "a0",
+      "relation": "connected_to",
+      "target": "a1"
+    },
+    {
+      "source": "a0",
+      "relation": "connected_to",
+      "target": "a2"
+    },
+    {
+      "source": "a1",
+      "relation": "parallel_to",
+      "target": "a2"
+    },
+    {
+      "source": "a1",
+      "relation": "separated_by_gap",
+      "target": "a2"
+    },
+    {
+      "source": "a4",
+      "relation": "attached_on_side",
+      "target": "a0"
+    }
+  ]
+}

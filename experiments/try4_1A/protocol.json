@@ -1,0 +1,15 @@
+{
+  "experiment":"RobotCAD Try-4.1A Representation Pilot",
+  "parts":["R02_P02","R02_P04","R02_P05","R02_P06"],
+  "conditions":{"A0":"frozen Try-4 T1 round_0","A1":"A0 operation vocabulary plus Mechanical Topology Graph","A2":"A1 plus frozen generic Shape-Family Vocabulary"},
+  "producer":"current_interactive_codex",
+  "context_isolation":false,
+  "same_inputs":true,
+  "same_freecad_backend":"try4/scripts/freecad_t1_executor.py",
+  "same_geometry_evaluator":"try4/protocol/phase5_evaluator_v1.json",
+  "new_generation_repair_rounds":0,
+  "post_generation_manual_correction":false,
+  "a1_forbidden":"shape-family vocabulary introduced only in A2",
+  "transfer_robot_excluded":"R03",
+  "stop_after":"Try-4.1A report"
+}

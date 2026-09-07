@@ -1,0 +1,27 @@
+{
+  "part_id": "R02_P04",
+  "condition": "A2",
+  "selected_families": [
+    "stepped_housing",
+    "open_slot",
+    "flange"
+  ],
+  "selection_evidence": "current-agent visual/topology reasoning before generation",
+  "recipe": "stepped_housing",
+  "parameters": {
+    "length": 145,
+    "width": 92,
+    "depth": 48,
+    "offset": 20,
+    "step_length": 92,
+    "step_width": 72,
+    "step_height": 14,
+    "joint_radius": 32,
+    "joint_depth": 58,
+    "channel_length": 58,
+    "channel_width": 24,
+    "hole_radius": 3,
+    "hole_count": 4,
+    "hole_spacing": 22
+  }
+}

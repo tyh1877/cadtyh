@@ -1,0 +1,15 @@
+{
+  "frozen_at": "2026-09-07T09:09:16.100027+00:00",
+  "before_new_execution": true,
+  "files": {
+    "protocol.json": "77aa8719d6a985b0325d76d4d72672385343c23a806524893b14cd11e2ae5718",
+    "shape_family_vocabulary.json": "5fc4ed0b56c8c7779323b63b10df39fbdd2317e19e51cf14926af058f66d06a4",
+    "planning_inputs.json": "7480748c3d88e26315c22992c406a5bb220896f2de27de43173cb02748018165",
+    "input_manifest.json": "cda23a79966063ebb9b50b8e27fe62bfa958035019b461d854bdcd2990bbfcf3",
+    "schemas/mechanical_topology_graph.schema.json": "8368b073df1bc68f735ac59d44f7b907a0b0cf11e5df04402b29ad77baf974f9",
+    "scripts/materialize.py": "9a15bec1c5103f1c312538d8ac6b5c14fc716cec79806a433f5948286d1a23ff",
+    "scripts/run_freecad.py": "7cbfdee71691cffba92142085d13cddcd3469d067147a5ad22d778f752b9f821",
+    "../../try4/protocol/phase5_evaluator_v1.json": "3b9f7cb93ef695a3e0ca8eda6a90af5a8d8d6cd2a07e5afa7b1df722ed21ee1e",
+    "../../try4/scripts/freecad_t1_executor.py": "f9bf2909e7442c76fae27faee89ccced195a6094c5929a189ca858d8f0dbc680"
+  }
+}

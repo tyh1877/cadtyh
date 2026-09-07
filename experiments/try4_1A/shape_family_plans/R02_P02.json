@@ -1,0 +1,22 @@
+{
+  "part_id": "R02_P02",
+  "condition": "A2",
+  "selected_families": [
+    "single_web",
+    "terminal_fork",
+    "revolved_joint_housing"
+  ],
+  "selection_evidence": "current-agent visual/topology reasoning before generation",
+  "recipe": "single_web_terminal_fork",
+  "parameters": {
+    "length": 305,
+    "web_half_height": 18,
+    "depth": 32,
+    "proximal_radius": 42,
+    "proximal_length": 55,
+    "fork_length": 58,
+    "fork_outer_half_height": 48,
+    "fork_inner_half_height": 17,
+    "pivot_hole_radius": 13
+  }
+}

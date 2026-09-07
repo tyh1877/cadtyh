@@ -1,0 +1,190 @@
+[
+  {
+    "part_id": "R02_P02",
+    "packet_sha256": "82ac6671cec93ab3e86315676e08e51a89557fffc568498f4512801e9aefea78",
+    "a0_agent_output_sha256": "8db0901036ccdcace7eaa5da3b8f368962fba9c3aaced5ec96061cae492ff124",
+    "reference_images": {
+      "target_color_consumed": true,
+      "observed_regions": [
+        {
+          "requirement_ref": "R02_P02_E00",
+          "region": "body",
+          "shape": "long narrow load web with widened end carriers",
+          "views": [
+            "images/isolated_front.png",
+            "images/isolated_side.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.84,
+          "uncertainty": "surface panel steps simplified"
+        },
+        {
+          "requirement_ref": "R02_P02_E01",
+          "region": "distal",
+          "shape": "forked open terminal end",
+          "views": [
+            "images/isolated_side.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.79,
+          "uncertainty": "fork notch radius estimated"
+        },
+        {
+          "requirement_ref": "R02_P02_E02",
+          "region": "proximal",
+          "shape": "large proximal circular pivot with raised cover boundary",
+          "views": [
+            "images/isolated_side.png",
+            "images/isolated_top.png"
+          ],
+          "confidence": 0.86,
+          "uncertainty": "cover relief omitted"
+        }
+      ]
+    },
+    "a0_path": "try4\\T1\\R02_P02\\round_0\\agent_output.json"
+  },
+  {
+    "part_id": "R02_P04",
+    "packet_sha256": "097fa624d0abfefd1e446dabadfdb9af685a6445f5690d03ee59be5f2c8622ac",
+    "a0_agent_output_sha256": "94aba40c467f9863d12f248b65a8f60051f5109db32f0c2bcacf75f429b6a8f2",
+    "reference_images": {
+      "target_color_consumed": true,
+      "observed_regions": [
+        {
+          "requirement_ref": "R02_P04_E00",
+          "region": "body",
+          "shape": "offset widened plate body tapering toward the distal end",
+          "views": [
+            "images/isolated_top.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.86,
+          "uncertainty": "curved outer contour approximated by loft"
+        },
+        {
+          "requirement_ref": "R02_P04_E01",
+          "region": "side",
+          "shape": "open channel separating side members",
+          "views": [
+            "images/isolated_side.png"
+          ],
+          "confidence": 0.82,
+          "uncertainty": "channel depth estimated"
+        },
+        {
+          "requirement_ref": "R02_P04_E02",
+          "region": "plate",
+          "shape": "distributed small visible hole pattern on the broad plate",
+          "views": [
+            "images/isolated_top.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.72,
+          "uncertainty": "T1 models two representative holes, not the full count"
+        },
+        {
+          "requirement_ref": "R02_P04_E03",
+          "region": "joint",
+          "shape": "round joint housing at the proximal side",
+          "views": [
+            "images/isolated_front.png",
+            "images/isolated_side.png"
+          ],
+          "confidence": 0.88,
+          "uncertainty": "cover layering simplified"
+        }
+      ]
+    },
+    "a0_path": "try4\\T1\\R02_P04\\round_0\\agent_output.json"
+  },
+  {
+    "part_id": "R02_P05",
+    "packet_sha256": "15e2c020d3232a3894f2b582f99b03a2a10d85b875ad5c833c67440aeeb9eadc",
+    "a0_agent_output_sha256": "cf393b785808a1ea4cd3221b1ae6659d57deb7c1ca32c1db0b77d3a08df223ea",
+    "reference_images": {
+      "target_color_consumed": true,
+      "observed_regions": [
+        {
+          "requirement_ref": "R02_P05_E00",
+          "region": "body",
+          "shape": "two curved bracket arms around a compact central carrier",
+          "views": [
+            "images/isolated_top.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.84,
+          "uncertainty": "curvature approximated with tapered arms"
+        },
+        {
+          "requirement_ref": "R02_P05_E01",
+          "region": "fork",
+          "shape": "rounded terminal notches and a rectangular opening in the fork region",
+          "views": [
+            "images/isolated_side.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.79,
+          "uncertainty": "notch/opening reduced to preserved space between arms"
+        },
+        {
+          "requirement_ref": "R02_P05_E02",
+          "region": "roll",
+          "shape": "large circular roll flange on the carrier side",
+          "views": [
+            "images/isolated_front.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.91,
+          "uncertainty": "flange layering simplified"
+        }
+      ]
+    },
+    "a0_path": "try4\\T1\\R02_P05\\round_0\\agent_output.json"
+  },
+  {
+    "part_id": "R02_P06",
+    "packet_sha256": "6e3a43c7421d52ecb98d6e25d53ffd6568782e74fe7affd0c146942a650a4b02",
+    "a0_agent_output_sha256": "9881c445dff266ab997ebb345a0b8b8030c8c912990b8aa5acfd33594cba10a4",
+    "reference_images": {
+      "target_color_consumed": true,
+      "observed_regions": [
+        {
+          "requirement_ref": "R02_P06_E00",
+          "region": "jaws",
+          "shape": "two opposed plate fingers separated by a wide working gap",
+          "views": [
+            "images/isolated_top.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.91,
+          "uncertainty": "finger side details simplified"
+        },
+        {
+          "requirement_ref": "R02_P06_E01",
+          "region": "carriage",
+          "shape": "wide dual rail and sliding carriage assembly",
+          "views": [
+            "images/isolated_front.png",
+            "images/isolated_top.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.86,
+          "uncertainty": "individual sliders consolidated"
+        },
+        {
+          "requirement_ref": "R02_P06_E02",
+          "region": "plates",
+          "shape": "triangular plate/web bracing around the proximal attachment",
+          "views": [
+            "images/isolated_side.png",
+            "images/isolated_isometric.png"
+          ],
+          "confidence": 0.74,
+          "uncertainty": "triangular webs approximated with prismatic side plates"
+        }
+      ]
+    },
+    "a0_path": "try4\\T1\\R02_P06\\round_0\\agent_output.json"
+  }
+]
