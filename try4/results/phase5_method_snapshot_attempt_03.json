@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-09-06T13:08:13.079742+00:00",
+  "before_first_metric_table": true,
+  "supersedes": "phase5_method_snapshot_attempt_02.json",
+  "change": "ICP return unpack correction only; protocol, thresholds and algorithms unchanged",
+  "files": {
+    "protocol/phase5_evaluator_v1.json": "3b9f7cb93ef695a3e0ca8eda6a90af5a8d8d6cd2a07e5afa7b1df722ed21ee1e",
+    "scripts/freecad_export_gt_parts.py": "7c8d5c9afc5e0063986705648891f00a30920de86594b1f0ef40a64552add57b",
+    "scripts/prepare_phase5_gt.py": "2489a40df5fec75779b9b1e18b5f5104e5d859747eccb5d396e79667baa7b5ad",
+    "scripts/evaluate_phase5.py": "9096b41cbb095aacc1b621882d7e8dc4be41d3963b09ea701263a817889c9f68"
+  }
+}

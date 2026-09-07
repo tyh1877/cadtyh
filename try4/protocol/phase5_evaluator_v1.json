@@ -1,0 +1,38 @@
+{
+  "protocol_id": "try4_phase5_evaluator_v1",
+  "frozen_before_first_metric_run": true,
+  "scope": "DEV_A T0/T1 paired and DEV_B T1 absolute evaluation; no T2 or TRANSFER",
+  "units": "mm",
+  "alignment": {
+    "mode": "rigid_shape_only",
+    "scale_allowed": false,
+    "translation": "surface-sample centroid",
+    "rotation_initialization": "24 proper axis-aligned rotations after PCA canonicalization",
+    "selection": "minimum symmetric Chamfer on 4096 deterministic samples",
+    "refinement": "rigid ICP, maximum 40 iterations",
+    "caveat": "registration removes pose error because generated parts have no registered local frame"
+  },
+  "sampling": {
+    "seed": 40405,
+    "surface_points": 20000,
+    "alignment_points": 4096,
+    "voxel_resolution_per_gt_bbox_diagonal": 64,
+    "silhouette_grid": 256,
+    "silhouette_views": ["front_xy", "side_yz", "top_xz"]
+  },
+  "normalization": "GT axis-aligned bbox diagonal after rigid alignment",
+  "quality_gate": {
+    "tau_iou_min": 0.35,
+    "tau_normalized_chamfer_max": 0.08,
+    "tau_normalized_hd95_max": 0.18,
+    "tau_mfr_min": 0.80,
+    "critical_feature_recall_required": 1.0,
+    "cad_valid_required": true,
+    "editability_required": true,
+    "decision": "PASS only if every criterion passes; otherwise LOCAL_REPAIR, or REPLAN when IoU < 0.15 or critical feature recall < 0.5"
+  },
+  "mechanical_feature_metric": {
+    "definition": "deterministic requirement-to-feature-to-successful-native-operation trace recall",
+    "limitation": "measures executable trace coverage, not perceptual or geometric correctness; Phase 6 review must assess the latter"
+  }
+}

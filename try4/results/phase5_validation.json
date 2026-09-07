@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "Phase 5 only",
+  "checks": {
+    "method_hashes_match": true,
+    "metric_rows_17": true,
+    "conditions_correct": true,
+    "all_determinism_hashes_match": true,
+    "gt_step_hashes_match": true,
+    "no_pass": true,
+    "no_t2_directory": true,
+    "no_r03_evaluation": true
+  },
+  "method_files": {
+    "protocol/phase5_evaluator_v1.json": true,
+    "scripts/freecad_export_gt_parts.py": true,
+    "scripts/prepare_phase5_gt.py": true,
+    "scripts/evaluate_phase5.py": true
+  },
+  "evaluations": 17,
+  "gate_counts": {
+    "PASS": 0,
+    "LOCAL_REPAIR": 13,
+    "REPLAN": 4
+  }
+}

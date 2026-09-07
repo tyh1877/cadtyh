@@ -2,5 +2,6 @@ artifacts/
 packets/
 T0/
 /T1/
+/evaluation_cache/
 __pycache__/
 *.pyc

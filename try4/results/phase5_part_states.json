@@ -1,0 +1,199 @@
+{
+  "phase": 5,
+  "states": [
+    {
+      "part_id": "R01_P00",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P00",
+      "condition": "T0",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P01",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_chamfer",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P01",
+      "condition": "T0",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_chamfer",
+        "normalized_hd95",
+        "mfr"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P02",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P02",
+      "condition": "T0",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "mfr"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P03",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "REPLAN",
+      "failed_criteria": [
+        "iou",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P03",
+      "condition": "T0",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "normalized_hd95",
+        "mfr"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P04",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R01_P04",
+      "condition": "T0",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_hd95",
+        "mfr",
+        "critical_feature_recall"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R02_P00",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R02_P01",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R02_P02",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R02_P03",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "REPLAN",
+      "failed_criteria": [
+        "iou",
+        "normalized_chamfer",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R02_P04",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": [
+        "iou",
+        "normalized_chamfer",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R02_P05",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "REPLAN",
+      "failed_criteria": [
+        "iou",
+        "normalized_chamfer",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    },
+    {
+      "part_id": "R02_P06",
+      "condition": "T1",
+      "state": "EVALUATED",
+      "gate_status": "REPLAN",
+      "failed_criteria": [
+        "iou",
+        "normalized_hd95"
+      ],
+      "repair_executed": false
+    }
+  ],
+  "next_phase_not_started": true
+}
