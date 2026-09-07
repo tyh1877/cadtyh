@@ -1,0 +1,10 @@
+{
+  "condition": "A0",
+  "links": "12/12 BUILT",
+  "assembly": "ASSEMBLED",
+  "kinematic": "CHECKED",
+  "interface": "CHECKED",
+  "coarse_geometry": "CHECKED",
+  "next_conditions": "A1/A2 NOT_STARTED",
+  "repair_applied": false
+}

@@ -1,0 +1,17 @@
+{
+  "condition":"A0_INDEPENDENT_LINK","producer":"current_interactive_codex","context_isolation":false,
+  "parts":[
+    {"link_id":"L00","role":"base","body_family":"base_housing","envelope_mm":[120,105,55],"ports":{"J00":{"radius_mm":28,"depth_mm":18}}},
+    {"link_id":"L01","role":"shoulder","body_family":"rotary_housing","envelope_mm":[72,64,66],"ports":{"J00":{"radius_mm":24,"depth_mm":20},"J01":{"radius_mm":23,"depth_mm":20}}},
+    {"link_id":"L02","role":"upper_arm","body_family":"dual_side_plate","envelope_mm":[116,48,34],"ports":{"J01":{"radius_mm":18,"depth_mm":16},"J02":{"radius_mm":16,"depth_mm":18}}},
+    {"link_id":"L03","role":"forearm","body_family":"central_web","envelope_mm":[108,42,32],"ports":{"J02":{"radius_mm":20,"depth_mm":16},"J03":{"radius_mm":17,"depth_mm":15}}},
+    {"link_id":"L04","role":"wrist_gripper_body","body_family":"wrist_block","envelope_mm":[76,58,50],"ports":{"J03":{"radius_mm":22,"depth_mm":20},"J04":{"radius_mm":17,"depth_mm":14}}},
+    {"link_id":"L05","role":"ee_spacer","body_family":"straight_beam","envelope_mm":[16,26,24],"ports":{"J04":{"radius_mm":10,"depth_mm":10},"J05":{"radius_mm":8,"depth_mm":8},"J06":{"radius_mm":12,"depth_mm":8}}},
+    {"link_id":"L06","role":"gripper_prop","body_family":"rotary_housing","envelope_mm":[25,22,22],"ports":{"J05":{"radius_mm":11,"depth_mm":12}}},
+    {"link_id":"L07","role":"gripper_bar","body_family":"straight_beam","envelope_mm":[30,82,18],"ports":{"J06":{"radius_mm":9,"depth_mm":8},"J07":{"radius_mm":11,"depth_mm":9}}},
+    {"link_id":"L08","role":"finger_carriage","body_family":"fork_body","envelope_mm":[38,76,26],"ports":{"J07":{"radius_mm":14,"depth_mm":10},"J08":{"radius_mm":7,"depth_mm":12},"J09":{"radius_mm":6,"depth_mm":10},"J10":{"radius_mm":8,"depth_mm":8}}},
+    {"link_id":"L09","role":"left_finger","body_family":"tapered_beam","envelope_mm":[58,12,18],"ports":{"J08":{"radius_mm":5,"depth_mm":9}}},
+    {"link_id":"L10","role":"right_finger","body_family":"tapered_beam","envelope_mm":[54,14,18],"ports":{"J09":{"radius_mm":7,"depth_mm":11}}},
+    {"link_id":"L11","role":"tool_marker","body_family":"interface_marker","envelope_mm":[7,7,7],"ports":{"J10":{"radius_mm":4,"depth_mm":6}}}
+  ]
+}

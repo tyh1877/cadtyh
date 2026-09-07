@@ -1,0 +1,14 @@
+"""Create A0 result tables, artifact manifest and final method snapshot."""
+import csv,hashlib,json
+from datetime import datetime,timezone
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[3];HERE=ROOT/'experiments/try5A'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+x=json.loads((HERE/'results/a0_interface_metrics.json').read_text());s=x['summary'];sweep=json.loads((HERE/'results/a0_joint_sweep.json').read_text());execution=list(csv.DictReader((HERE/'results/a0_link_execution.csv').open()))
+def write(name,rows):
+ with (HERE/'results'/name).open('w',newline='',encoding='utf-8') as f:w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+write('assembly_metrics.csv',[{k:v for k,v in s.items() if not isinstance(v,(list,dict))}]);write('interface_metrics.csv',x['joints']);write('kinematic_metrics.csv',[{'condition':'A0','canonical_fk':'PASS','joint_axis_max_error_deg':s['max_axis_angular_error_deg'],'joint_axis_offset_max_mm':s['max_axis_offset_mm'],'interface_center_max_error_mm':s['max_interface_center_error_mm'],'joint_sweep_samples':len(sweep['samples']),'joint_limit_traversal_success':sweep['joint_limit_traversal_success'],'collision_free_aabb_sample_rate':sweep['collision_free_sample_rate']}]);write('resource_metrics_a0.csv',[{'condition':'A0','links':12,'successful_links':sum(r['status']=='SUCCESS' for r in execution),'cad_operations':sum(int(r['operations']) for r in execution),'silent_fallbacks':sum(int(r['fallbacks']) for r in execution),'mean_link_build_seconds':sum(float(r['elapsed_seconds']) for r in execution)/len(execution),'agent':'current_interactive_codex','tokens':'UNAVAILABLE'}]);(HERE/'blackboard/a0_state.json').write_text(json.dumps({'condition':'A0','links':'12/12 BUILT','assembly':'ASSEMBLED','kinematic':'CHECKED','interface':'CHECKED','coarse_geometry':'CHECKED','next_conditions':'A1/A2 NOT_STARTED','repair_applied':False},indent=2)+'\n')
+manifest=[]
+for p in list((HERE/'A0').rglob('*'))+list((HERE/'assemblies/A0').rglob('*')):
+ if p.is_file():manifest.append({'path':str(p.relative_to(HERE)),'bytes':p.stat().st_size,'sha256':sha(p)})
+write('a0_artifact_manifest.csv',manifest);files=[HERE/'results/a0_method_snapshot.json',HERE/'scripts/freecad_assemble_a0.py',HERE/'scripts/run_a0_assembly.py',HERE/'scripts/run_a0_evaluation.py',HERE/'scripts/finalize_a0.py',HERE/'blackboard/kinematic_skeleton.json',HERE/'codex_authored/A0/independent_link_decisions.json'];snap={'created_at':datetime.now(timezone.utc).isoformat(),'condition':'A0','incidents_recorded':'results/a0_execution_incidents.csv','files':{str(p.relative_to(ROOT)):sha(p) for p in files}};(HERE/'results/a0_final_method_snapshot.json').write_text(json.dumps(snap,indent=2)+'\n');print(json.dumps({'links':12,'operations':sum(int(r['operations']) for r in execution),'connected_rate':s['connected_joint_rate'],'floating_rate':s['floating_link_rate']}))

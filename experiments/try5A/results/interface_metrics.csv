@@ -1,0 +1,12 @@
+joint_id,type,parent,child,connected_from_ports,adjacent_aabb_distance_mm,adjacent_aabb_overlap_mm3,parent_interface_center_error_mm,child_interface_center_error_mm,parent_axis_angular_error_deg,child_axis_angular_error_deg,coaxiality_axis_offset_mm,interface_center_separation_mm,expected_prismatic_travel_mm,interface_radius_mismatch_mm,interface_gap_mm,interface_axial_penetration_mm,adjacent_contact_in_expected_region
+J00,revolute,L00,L01,True,0.0,98465.38429078,0.0,0.0,0.0,0.0,0.0,0.0,0,4,0,19.0,True
+J01,revolute,L01,L02,True,0.0,83246.21146735942,0.0,0.0,0.0,0.0,0.0,0.0,0,5,0,18.0,True
+J02,revolute,L02,L03,True,0.0,50493.88818487153,0.0,0.0,0.0,0.0,0.0,0.0,0,4,0,17.0,True
+J03,revolute,L03,L04,True,0.0,52416.00000000001,0.0,0.0,0.0,0.0,0.0,0.0,0,5,0,17.5,True
+J04,fixed,L04,L05,True,0.0,7488.0,0.0,0.0,0.0,0.0,0.0,0.0,0,7,0,12.0,True
+J05,continuous,L05,L06,True,0.0,8352.0,0.0,0.0,0.0,0.0,0.0,0.0,0,3,0,10.0,True
+J06,fixed,L05,L07,True,0.0,7722.0,0.0,0.0,0.0,0.0,0.0,0.0,0,3,0,8.0,True
+J07,fixed,L07,L08,True,0.0,19175.00375366211,0.0,0.0,0.0,0.0,0.0,0.0,0,3,0,9.5,True
+J08,prismatic,L08,L09,False,3.0,0.0,0.0,0.0,0.0,0.0,0.0,26.0,26.0,2,15.5,0,False
+J09,prismatic,L08,L10,False,3.0,0.0,0.0,0.0,0.0,0.0,0.0,26.0,26.0,1,15.5,0,False
+J10,fixed,L08,L11,True,0.0,615.3022770881653,0.0,0.0,0.0,0.0,0.0,0.0,0,4,0,7.0,True

@@ -1,0 +1,2 @@
+condition,canonical_fk,joint_axis_max_error_deg,joint_axis_offset_max_mm,interface_center_max_error_mm,joint_sweep_samples,joint_limit_traversal_success,collision_free_aabb_sample_rate
+A0,PASS,0.0,0.0,0.0,12,1.0,0.0

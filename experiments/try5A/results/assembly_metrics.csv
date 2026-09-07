@@ -1,0 +1,2 @@
+status,geometry_relation_method,links,joints,connected_joint_rate,floating_link_rate,assembly_connected_component_count,mean_interface_gap_mm,mean_radius_mismatch_mm,max_axis_angular_error_deg,max_axis_offset_mm,max_interface_center_error_mm,excessive_axial_penetrations,unexpected_contact_locations,nonadjacent_aabb_overlap_pairs,overall_reach_from_root_mm
+PASS,generated interface primitives + transformed STL AABB,12,11,0.8181818181818182,0.16666666666666666,3,2.8181818181818183,3.727272727272727,0.0,0.0,0.0,7,0,4,314.73454390168234

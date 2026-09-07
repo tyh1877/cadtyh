@@ -1,0 +1,8 @@
+incident_id,stage,type,geometry_saved,action
+assembly_01,A0 assembly,FreeCAD imported-object cleanup invalidated child references,false,retain and hide imported source objects then replay identical URDF placement
+interface_eval_01,A0 deterministic evaluation,compound intersection lacks CenterOfMass,false,use intersection bounding-box center for contact locality and replay evaluator
+interface_eval_02,A0 deterministic evaluation,null boolean intersection raised on Volume,false,treat null common shape as zero intersection volume and replay evaluator
+interface_eval_03,A0 deterministic evaluation,boolean common itself raised for null compound pair,false,wrap boolean intersection and record zero volume on null/failed intersection
+interface_eval_04,A0 deterministic evaluation,BRep distToShape failed on malformed imported surface pair,false,use explicitly counted bbox distance for affected joint only
+interface_eval_05,A0 deterministic evaluation,unit conversion and compound-volume audit invalidated first provisional table,false,use corrected millimetre port transform and AABB overlap diagnostics
+interface_eval_06,A0 deterministic evaluation,numpy boolean serialization failure,false,cast analytical gate booleans to native bool and replay

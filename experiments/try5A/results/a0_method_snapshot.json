@@ -1,0 +1,29 @@
+{
+  "frozen_at": "2026-09-07T13:35:51.231159+00:00",
+  "before_freecad": true,
+  "files": {
+    "experiments\\try5A\\codex_authored\\A0\\independent_link_decisions.json": "7ca9c8efcec46bb70ceeca83d1cea7c075b0a2814da85eec14723b89d44deebb",
+    "experiments\\try5A\\scripts\\materialize_a0.py": "fd2d2f2f98d1d5f0df2d55d3e2e757ca8a5bb168796a2cce0618e182dc139c36",
+    "try4\\scripts\\freecad_t1_executor.py": "f9bf2909e7442c76fae27faee89ccced195a6094c5929a189ca858d8f0dbc680",
+    "experiments\\try5A\\inputs\\sanitized_urdf\\px100_sanitized.urdf": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+    "experiments\\try5A\\inputs\\input_manifest.json": "ce655aa20beeac0bf137452f6b673eb77c9666a702f5c5455b9afd1f3ddbc1e3",
+    "experiments\\try5A\\A0\\L00\\cad_ir.json": "8f5b17d46b6034b3d1a2db2edd020881cd65f682e5c1cb51376d52c54d053a96",
+    "experiments\\try5A\\A0\\L01\\cad_ir.json": "ae206ec38fd7f05c6024bd6ac8eb46e881140d7f87e99b89120cb5b14e7948c7",
+    "experiments\\try5A\\A0\\L02\\cad_ir.json": "62709ba791734b5c3440a721996ec209361f4b41bc3f3cac27ed91f8bc97a695",
+    "experiments\\try5A\\A0\\L03\\cad_ir.json": "b1b8d6e7f732f738ca37cef2e17b9bb21f006f0b528ab9303d929b46ada71940",
+    "experiments\\try5A\\A0\\L04\\cad_ir.json": "2ccf2a53cca7b18974afc53f23810650d5b239a3efa1d8c718f2cb57e9f6dd83",
+    "experiments\\try5A\\A0\\L05\\cad_ir.json": "000089851d68119efb6e6db2dec0f5ec86b2add08f4e4ef0a9975cbf27991bf9",
+    "experiments\\try5A\\A0\\L06\\cad_ir.json": "88be306849392d2c753b4ad5e5037597c375845cd383cb4099459634dec24545",
+    "experiments\\try5A\\A0\\L07\\cad_ir.json": "d7b50476c566b23c7f71b575d8e7cf2376728820af3bbbcf5c994f7e730be342",
+    "experiments\\try5A\\A0\\L08\\cad_ir.json": "190a0aa76bb6101c1b7ee56dc5473365495ef57b8e7d961ad3f5c2fce313eece",
+    "experiments\\try5A\\A0\\L09\\cad_ir.json": "95a488ac4ad643d8de9f87de9e9907c7b1f0b41785c5eb5fa07b782663257404",
+    "experiments\\try5A\\A0\\L10\\cad_ir.json": "62d31448852984904b67e214678ec0e6ecb0f57ff26a17dc404bcb608a4d6ed7",
+    "experiments\\try5A\\A0\\L11\\cad_ir.json": "a9db1c5662842b954a4bc7c615a20a93b6250ccdaf10f734f231105187c4b684"
+  },
+  "forbidden_tokens": {
+    "robot_assembly_plan": false,
+    "joint_interface_graph": false,
+    "shared_port": false,
+    "shared_interface_envelope": false
+  }
+}

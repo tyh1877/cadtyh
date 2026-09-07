@@ -1,0 +1,170 @@
+{
+  "status": "PASS",
+  "checks": {
+    "frozen_link_plans_unchanged": true,
+    "final_method_hashes_match": true,
+    "links_12_success": true,
+    "link_artifacts_complete": true,
+    "link_cad_valid_zero_fallback": true,
+    "assembly_12_links_success": true,
+    "evaluator_deterministic": true,
+    "metrics_cover_11_joints": true,
+    "independent_generator_forbidden_tokens_absent": true,
+    "a1_a2_absent": true,
+    "no_a0_repair": true,
+    "contact_sheet_exists": true
+  },
+  "frozen_files": {
+    "experiments\\try5A\\codex_authored\\A0\\independent_link_decisions.json": true,
+    "experiments\\try5A\\scripts\\materialize_a0.py": true,
+    "try4\\scripts\\freecad_t1_executor.py": true,
+    "experiments\\try5A\\inputs\\sanitized_urdf\\px100_sanitized.urdf": true,
+    "experiments\\try5A\\inputs\\input_manifest.json": true,
+    "experiments\\try5A\\A0\\L00\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L01\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L02\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L03\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L04\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L05\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L06\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L07\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L08\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L09\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L10\\cad_ir.json": true,
+    "experiments\\try5A\\A0\\L11\\cad_ir.json": true
+  },
+  "final_method_files": {
+    "experiments\\try5A\\results\\a0_method_snapshot.json": true,
+    "experiments\\try5A\\scripts\\freecad_assemble_a0.py": true,
+    "experiments\\try5A\\scripts\\run_a0_assembly.py": true,
+    "experiments\\try5A\\scripts\\run_a0_evaluation.py": true,
+    "experiments\\try5A\\scripts\\finalize_a0.py": true,
+    "experiments\\try5A\\blackboard\\kinematic_skeleton.json": true,
+    "experiments\\try5A\\codex_authored\\A0\\independent_link_decisions.json": true
+  },
+  "links": [
+    {
+      "link_id": "L00",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L01",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L02",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L03",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L04",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L05",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L06",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L07",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L08",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L09",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L10",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    },
+    {
+      "link_id": "L11",
+      "missing": [],
+      "valid": true,
+      "reopen": "PASS",
+      "fallbacks": 0,
+      "editable": true
+    }
+  ],
+  "headline_metrics": {
+    "status": "PASS",
+    "geometry_relation_method": "generated interface primitives + transformed STL AABB",
+    "links": 12,
+    "joints": 11,
+    "connected_joint_rate": 0.8181818181818182,
+    "floating_links": [
+      "L09",
+      "L10"
+    ],
+    "floating_link_rate": 0.16666666666666666,
+    "assembly_connected_component_count": 3,
+    "mean_interface_gap_mm": 2.8181818181818183,
+    "mean_radius_mismatch_mm": 3.727272727272727,
+    "max_axis_angular_error_deg": 0.0,
+    "max_axis_offset_mm": 0.0,
+    "max_interface_center_error_mm": 0.0,
+    "excessive_axial_penetrations": 7,
+    "unexpected_contact_locations": 0,
+    "nonadjacent_aabb_overlap_pairs": 4,
+    "whole_robot_bbox_mm": [
+      339.0,
+      119.96269989013672,
+      234.05
+    ],
+    "overall_reach_from_root_mm": 314.73454390168234
+  }
+}
