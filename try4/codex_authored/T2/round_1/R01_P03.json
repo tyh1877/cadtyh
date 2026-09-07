@@ -1,0 +1,78 @@
+{
+  "schema_version": "try4_repair_contract_v1",
+  "part_id": "R01_P03",
+  "round": 1,
+  "status": "REPLAN",
+  "failed_gates": [
+    "iou",
+    "normalized_hd95"
+  ],
+  "violations": [
+    {
+      "region": "whole_part",
+      "feature_id": "F00",
+      "type": "wrong_shape_family",
+      "severity": "critical",
+      "requirement": "open-sided forearm with wide proximal box",
+      "evidence_views": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "measured_difference": {
+        "voxel_iou": 0.141110039157823,
+        "normalized_chamfer": 0.0650595027882903,
+        "normalized_hd95": 0.2000242185068042,
+        "bbox_delta_generated_minus_gt_mm": [
+          24.90427816748374,
+          54.1327235339115,
+          31.54762961441655
+        ],
+        "diagnosis": "T1 open-frame layout regressed from the T0 envelope and requires a compact replan"
+      }
+    }
+  ],
+  "repair_actions": [
+    {
+      "priority": 1,
+      "action": "FULL_PART_REPLAN",
+      "feature_id": "F00",
+      "target_region": "whole_part",
+      "cad_strategy": "structured parameterized replan",
+      "parameters": {
+        "parameter_updates": {
+          "length": 92,
+          "separation": 26,
+          "plate_width": 20,
+          "plate_thickness": 7,
+          "carrier_width": 34,
+          "carrier_thickness": 13,
+          "pivot_radius": 16,
+          "pivot_height": 34,
+          "slot_z": 48,
+          "slot_length": 12,
+          "slot_width": 6,
+          "notch_radius": 6
+        }
+      }
+    }
+  ],
+  "protected_features": [],
+  "do_not_change": [
+    "semantic_role",
+    "interface_semantics",
+    "declared_open_spaces"
+  ],
+  "review_inputs": {
+    "gt_renders": "artifacts/R01/isolated/R01_P03",
+    "generated_renders": "T1/R01_P03/round_0/renders",
+    "semantic_label": "forearm side frame",
+    "lod": "skills/robot_part_modeling_standard/SKILL.md",
+    "feature_graph": "T1/R01_P03/round_0/feature_graph.json",
+    "feature_tree": "T1/R01_P03/round_0/feature_tree.json",
+    "deterministic_metrics": "results/phase5_metrics.csv#R01_P03,T1",
+    "regional_discrepancies": "results/phase6_regional_discrepancies.csv#R01_P03",
+    "previous_history": []
+  }
+}

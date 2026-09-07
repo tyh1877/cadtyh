@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "checks": {
+    "phase78_method_hashes_match": true,
+    "phase5_protocol_hash_unchanged": true,
+    "contracts_36": true,
+    "post_reviews_32": true,
+    "complete_built_rounds_32": true,
+    "all_12_final_states": true,
+    "all_stop_by_round3": true,
+    "all_unresolved_after_combined_gate": true,
+    "no_r03": true,
+    "formal_denominator_12": true,
+    "freeform_cases_2": true
+  },
+  "method_files": {
+    "protocol/phase5_evaluator_v1.json": true,
+    "results/phase5_method_snapshot.json": true,
+    "protocol/phase78_repair_protocol_v1.json": true,
+    "schemas/repair_contract.schema.json": true,
+    "schemas/post_repair_review.schema.json": true,
+    "skills/structured_part_review/SKILL.md": true,
+    "skills/structured_part_repair/SKILL.md": true,
+    "scripts/materialize_t2_round.py": true,
+    "scripts/run_t2_round.py": true,
+    "scripts/update_t2_state.py": true,
+    "scripts/run_phase8_matrix.py": true,
+    "codex_authored/T2/round1_decisions.json": true,
+    "AMENDMENT_PHASE8_POST_REVIEW.md": true
+  },
+  "contracts": 36,
+  "built_rounds": 32,
+  "final_states": {
+    "FROZEN": 0,
+    "UNRESOLVED": 12
+  }
+}

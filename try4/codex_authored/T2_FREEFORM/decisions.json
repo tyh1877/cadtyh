@@ -1,0 +1,15 @@
+{
+  "condition": "FREE_FORM_REPAIR_ABLATION",
+  "cases": [
+    {
+      "part_id": "R02_P03",
+      "free_form_review": "The generated arm is too long and ends as a closed tapered block. Make it shorter and more compact, reduce the circular housing, and make the far end read more like the reference fork without changing the semantic interfaces.",
+      "agent_interpretation_for_execution": {"length": 220, "offset": 15, "start_size": [60, 48], "end_size": [40, 32], "joint_radius": 29, "joint_height": 70, "channel_depth": 29, "channel_width": 62, "channel_height": 21}
+    },
+    {
+      "part_id": "R02_P05",
+      "free_form_review": "The wrist carrier is much too large and the arms look like long rods. Make the whole assembly compact, shorten and broaden the fork plates, and reduce the roll cylinder while keeping the open fork gap.",
+      "agent_interpretation_for_execution": {"body_length": 60, "body_width": 50, "body_depth": 40, "separation": 50, "arm_length": 78, "arm_start_size": [38, 15], "arm_end_size": [24, 11], "roll_radius": 30, "roll_height": 58}
+    }
+  ]
+}

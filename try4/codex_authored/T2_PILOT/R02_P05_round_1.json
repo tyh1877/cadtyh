@@ -1,0 +1,37 @@
+{
+  "schema_version": "try4_repair_contract_v1",
+  "part_id": "R02_P05",
+  "round": 1,
+  "status": "REPLAN",
+  "failed_gates": ["voxel_iou", "normalized_chamfer", "normalized_hd95"],
+  "violations": [{
+    "region": "whole_part",
+    "feature_id": "F00",
+    "type": "wrong_shape_family",
+    "severity": "critical",
+    "requirement": "compact wrist carrier with curved fork plates and roll flange",
+    "evidence_views": ["isolated_front", "isolated_side", "isolated_top", "isolated_isometric"],
+    "measured_difference": {"voxel_iou": 0.092363, "normalized_chamfer": 0.192254, "normalized_hd95": 0.587372, "bbox_error_mm": [88.396760, 132.239955, 63.227565], "diagnosis": "long separated tapered rods replace the compact curved plate carrier"}
+  }],
+  "repair_actions": [{
+    "priority": 1,
+    "action": "FULL_PART_REPLAN",
+    "feature_id": "F00",
+    "target_region": "whole_part",
+    "cad_strategy": "compact wrist_carrier replan with shortened broad fork members",
+    "parameters": {"recipe": "wrist_carrier", "parameter_updates": {"body_length": 52, "body_width": 48, "body_depth": 38, "separation": 46, "arm_length": 64, "arm_start_size": [38, 14], "arm_end_size": [24, 10], "roll_radius": 28, "roll_height": 54}}
+  }],
+  "protected_features": [],
+  "do_not_change": ["three-body semantic decomposition", "open_space_between_fork_arms", "roll_axis_semantics"],
+  "review_inputs": {
+    "gt_renders": "artifacts/R02/isolated/R02_P05",
+    "generated_renders": "T1/R02_P05/round_0/renders",
+    "semantic_label": "wrist pitch and roll carrier",
+    "lod": "skills/robot_part_modeling_standard/SKILL.md",
+    "feature_graph": "T1/R02_P05/round_0/feature_graph.json",
+    "feature_tree": "T1/R02_P05/round_0/feature_tree.json",
+    "deterministic_metrics": "results/phase5_metrics.csv#R02_P05,T1",
+    "regional_discrepancies": {"whole_part": "gross extent and shape-family mismatch"},
+    "previous_history": []
+  }
+}

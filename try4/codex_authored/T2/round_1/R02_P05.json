@@ -1,0 +1,82 @@
+{
+  "schema_version": "try4_repair_contract_v1",
+  "part_id": "R02_P05",
+  "round": 1,
+  "status": "REPLAN",
+  "failed_gates": [
+    "iou",
+    "normalized_chamfer",
+    "normalized_hd95"
+  ],
+  "violations": [
+    {
+      "region": "whole_part",
+      "feature_id": "F00",
+      "type": "wrong_shape_family",
+      "severity": "critical",
+      "requirement": "two curved bracket arms separated by open space",
+      "evidence_views": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "measured_difference": {
+        "voxel_iou": 0.0923632318049201,
+        "normalized_chamfer": 0.1922535939627179,
+        "normalized_hd95": 0.5873722280035485,
+        "bbox_delta_generated_minus_gt_mm": [
+          86.64014621142954,
+          132.36328763930874,
+          59.69217499837941
+        ],
+        "diagnosis": "long separated tapered rods replace the compact curved wrist plate carrier"
+      }
+    }
+  ],
+  "repair_actions": [
+    {
+      "priority": 1,
+      "action": "FULL_PART_REPLAN",
+      "feature_id": "F00",
+      "target_region": "whole_part",
+      "cad_strategy": "structured parameterized replan",
+      "parameters": {
+        "parameter_updates": {
+          "body_length": 52,
+          "body_width": 48,
+          "body_depth": 38,
+          "separation": 46,
+          "arm_length": 64,
+          "arm_start_size": [
+            38,
+            14
+          ],
+          "arm_end_size": [
+            24,
+            10
+          ],
+          "roll_radius": 28,
+          "roll_height": 54
+        }
+      }
+    }
+  ],
+  "protected_features": [],
+  "do_not_change": [
+    "semantic_role",
+    "interface_semantics",
+    "declared_open_spaces"
+  ],
+  "review_inputs": {
+    "gt_renders": "artifacts/R02/isolated/R02_P05",
+    "generated_renders": "T1/R02_P05/round_0/renders",
+    "semantic_label": "wrist pitch and roll carrier",
+    "lod": "skills/robot_part_modeling_standard/SKILL.md",
+    "feature_graph": "T1/R02_P05/round_0/feature_graph.json",
+    "feature_tree": "T1/R02_P05/round_0/feature_tree.json",
+    "deterministic_metrics": "results/phase5_metrics.csv#R02_P05,T1",
+    "regional_discrepancies": "results/phase6_regional_discrepancies.csv#R02_P05",
+    "previous_history": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": "try4_repair_contract_v1",
+  "part_id": "R02_P00",
+  "round": 2,
+  "status": "LOCAL_REPAIR",
+  "failed_gates": [
+    "iou",
+    "normalized_hd95"
+  ],
+  "violations": [
+    {
+      "region": "base_footprint",
+      "feature_id": "F00",
+      "type": "dimension_error",
+      "severity": "high",
+      "requirement": "scalloped tapered pedestal",
+      "evidence_views": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "measured_difference": {
+        "previous_metrics": {
+          "voxel_iou": 0.3010744131,
+          "normalized_chamfer": 0.0440478346,
+          "normalized_hd95": 0.1824750894
+        },
+        "diagnosis": "Round 1 contract was rejected before build because the mounting-plate feature was incorrectly protected"
+      }
+    }
+  ],
+  "repair_actions": [
+    {
+      "priority": 1,
+      "action": "MODIFY_PARAMETER",
+      "feature_id": "F00",
+      "target_region": "base_footprint",
+      "cad_strategy": "structured round 2 local_repair",
+      "parameters": {
+        "parameter_updates": {
+          "plate_length": 250,
+          "plate_width": 155,
+          "plate_thickness": 8
+        }
+      }
+    }
+  ],
+  "protected_features": [
+    "F02"
+  ],
+  "do_not_change": [
+    "semantic_role",
+    "interface_semantics",
+    "declared_open_spaces"
+  ],
+  "review_inputs": {
+    "gt_renders": "artifacts/R02/isolated/R02_P00",
+    "generated_renders": "T1\\R02_P00\\round_0\\renders",
+    "semantic_label": "base mounting pedestal",
+    "lod": "skills/robot_part_modeling_standard/SKILL.md",
+    "feature_graph": "T1\\R02_P00\\round_0\\feature_graph.json",
+    "feature_tree": "T1\\R02_P00\\round_0\\feature_tree.json",
+    "deterministic_metrics": "results/phase5_metrics.csv#R02_P00,T1",
+    "regional_discrepancies": "results/phase6_regional_discrepancies.csv#R02_P00",
+    "previous_history": [
+      {
+        "round": 1,
+        "contract_status": "LOCAL_REPAIR",
+        "candidate_gate": "NOT_RUN",
+        "accepted": false,
+        "regression": false,
+        "implementation_failure": "protected feature contract conflict",
+        "resulting_state": "LOCAL_REPAIR"
+      }
+    ]
+  }
+}

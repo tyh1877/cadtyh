@@ -1,0 +1,93 @@
+{
+  "schema_version": "try4_repair_contract_v1",
+  "part_id": "R02_P01",
+  "round": 3,
+  "status": "REPLAN",
+  "failed_gates": [
+    "post_review_lod",
+    "post_review_visible_features"
+  ],
+  "violations": [
+    {
+      "region": "integrated_shoulder_housing",
+      "feature_id": "F00",
+      "type": "wrong_shape_family",
+      "severity": "critical",
+      "requirement": "wide circular support disk",
+      "evidence_views": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "measured_difference": {
+        "previous_metrics": {
+          "voxel_iou": 0.357168578630588,
+          "normalized_chamfer": 0.03424124732924568,
+          "normalized_hd95": 0.08761145921832707
+        },
+        "diagnosis": "Round 2 overlapping-support alternative regressed; final attempt collapses separation to approximate one integrated envelope"
+      }
+    }
+  ],
+  "repair_actions": [
+    {
+      "priority": 1,
+      "action": "FULL_PART_REPLAN",
+      "feature_id": "F00",
+      "target_region": "integrated_shoulder_housing",
+      "cad_strategy": "structured round 3 replan",
+      "parameters": {
+        "parameter_updates": {
+          "separation": 0,
+          "upright_height": 58,
+          "upright_width": 95,
+          "upright_depth": 48,
+          "pivot_radius": 18
+        }
+      }
+    }
+  ],
+  "protected_features": [
+    "F00"
+  ],
+  "do_not_change": [
+    "semantic_role",
+    "interface_semantics",
+    "declared_open_spaces"
+  ],
+  "review_inputs": {
+    "gt_renders": "artifacts/R02/isolated/R02_P01",
+    "generated_renders": "T2\\R02_P01\\round_1\\renders",
+    "semantic_label": "dual shoulder support",
+    "lod": "skills/robot_part_modeling_standard/SKILL.md",
+    "feature_graph": "T2\\R02_P01\\round_1\\feature_graph.json",
+    "feature_tree": "T2\\R02_P01\\round_1\\feature_tree.json",
+    "deterministic_metrics": "T2\\R02_P01\\round_1\\metrics.json",
+    "regional_discrepancies": "results/phase6_regional_discrepancies.csv#R02_P01",
+    "previous_history": [
+      {
+        "round": 1,
+        "contract_status": "LOCAL_REPAIR",
+        "candidate_gate": "PASS",
+        "post_review_pass": false,
+        "accepted": true,
+        "regression": false,
+        "new_failed_gates": [],
+        "improved": true,
+        "resulting_state": "REPLAN"
+      },
+      {
+        "round": 2,
+        "contract_status": "REPLAN",
+        "candidate_gate": "PASS",
+        "post_review_pass": false,
+        "accepted": false,
+        "regression": true,
+        "new_failed_gates": [],
+        "improved": true,
+        "resulting_state": "REPLAN"
+      }
+    ]
+  }
+}

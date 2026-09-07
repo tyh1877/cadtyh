@@ -1,0 +1,2 @@
+parts,repair_trigger_rate,scheduled_contracts,executed_candidates,repair_contract_execution_rate,average_scheduled_rounds,early_pass_rate,repair_success_rate,replan_part_rate,regression_rate_per_executed_candidate,frozen_feature_preservation_rate,unresolved_rate,codex_calls_saved_vs_three_round_all_parts
+12,1.0,36,32,0.8888888888888888,3.0,0.0,0.0,0.5833333333333334,0.46875,1.0,1.0,0

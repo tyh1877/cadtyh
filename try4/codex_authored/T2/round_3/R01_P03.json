@@ -1,0 +1,90 @@
+{
+  "schema_version": "try4_repair_contract_v1",
+  "part_id": "R01_P03",
+  "round": 3,
+  "status": "REPLAN",
+  "failed_gates": [
+    "iou"
+  ],
+  "violations": [
+    {
+      "region": "whole_part",
+      "feature_id": "F00",
+      "type": "wrong_shape_family",
+      "severity": "critical",
+      "requirement": "open-sided forearm with wide proximal box",
+      "evidence_views": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "measured_difference": {
+        "previous_metrics": {
+          "voxel_iou": 0.27457512280503643,
+          "normalized_chamfer": 0.04788253983280381,
+          "normalized_hd95": 0.17960957683341378
+        },
+        "diagnosis": "Round 2 local volume change regressed; existing open-frame family remains below IoU threshold"
+      }
+    }
+  ],
+  "repair_actions": [
+    {
+      "priority": 1,
+      "action": "FULL_PART_REPLAN",
+      "feature_id": "F00",
+      "target_region": "whole_part",
+      "cad_strategy": "structured round 3 replan",
+      "parameters": {
+        "parameter_updates": {
+          "separation": 26,
+          "plate_width": 22,
+          "carrier_width": 36
+        }
+      }
+    }
+  ],
+  "protected_features": [
+    "F03"
+  ],
+  "do_not_change": [
+    "semantic_role",
+    "interface_semantics",
+    "declared_open_spaces"
+  ],
+  "review_inputs": {
+    "gt_renders": "artifacts/R01/isolated/R01_P03",
+    "generated_renders": "T2\\R01_P03\\round_1\\renders",
+    "semantic_label": "forearm side frame",
+    "lod": "skills/robot_part_modeling_standard/SKILL.md",
+    "feature_graph": "T2\\R01_P03\\round_1\\feature_graph.json",
+    "feature_tree": "T2\\R01_P03\\round_1\\feature_tree.json",
+    "deterministic_metrics": "T2\\R01_P03\\round_1\\metrics.json",
+    "regional_discrepancies": "results/phase6_regional_discrepancies.csv#R01_P03",
+    "previous_history": [
+      {
+        "round": 1,
+        "contract_status": "REPLAN",
+        "candidate_gate": "LOCAL_REPAIR",
+        "accepted": true,
+        "regression": false,
+        "new_failed_gates": [],
+        "improved": true,
+        "resulting_state": "LOCAL_REPAIR"
+      },
+      {
+        "round": 2,
+        "contract_status": "LOCAL_REPAIR",
+        "candidate_gate": "LOCAL_REPAIR",
+        "accepted": false,
+        "regression": true,
+        "new_failed_gates": [
+          "normalized_hd95"
+        ],
+        "improved": false,
+        "resulting_state": "LOCAL_REPAIR"
+      }
+    ]
+  }
+}

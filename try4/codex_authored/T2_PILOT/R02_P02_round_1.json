@@ -1,0 +1,37 @@
+{
+  "schema_version": "try4_repair_contract_v1",
+  "part_id": "R02_P02",
+  "round": 1,
+  "status": "LOCAL_REPAIR",
+  "failed_gates": ["voxel_iou"],
+  "violations": [{
+    "region": "main_carrier",
+    "feature_id": "F00",
+    "type": "layout_error",
+    "severity": "medium",
+    "requirement": "narrow load web with widened end carriers",
+    "evidence_views": ["isolated_front", "isolated_side", "isolated_top", "isolated_isometric"],
+    "measured_difference": {"voxel_iou": 0.311394, "bbox_error_mm": [15.205085, 2.506331, 24.837383], "diagnosis": "paired members are spaced too broadly relative to the narrow reference web"}
+  }],
+  "repair_actions": [{
+    "priority": 1,
+    "action": "MODIFY_PARAMETER",
+    "feature_id": "F00",
+    "target_region": "main_carrier",
+    "cad_strategy": "retain open_frame and tighten member spacing/section",
+    "parameters": {"parameter_updates": {"separation": 38, "plate_width": 40, "carrier_width": 58}}
+  }],
+  "protected_features": ["F02"],
+  "do_not_change": ["overall_link_length", "distal_fork_opening", "feature_count"],
+  "review_inputs": {
+    "gt_renders": "artifacts/R02/isolated/R02_P02",
+    "generated_renders": "T1/R02_P02/round_0/renders",
+    "semantic_label": "upper-arm side frame",
+    "lod": "skills/robot_part_modeling_standard/SKILL.md",
+    "feature_graph": "T1/R02_P02/round_0/feature_graph.json",
+    "feature_tree": "T1/R02_P02/round_0/feature_tree.json",
+    "deterministic_metrics": "results/phase5_metrics.csv#R02_P02,T1",
+    "regional_discrepancies": {"main_carrier": "excess side-member separation and section envelope"},
+    "previous_history": []
+  }
+}

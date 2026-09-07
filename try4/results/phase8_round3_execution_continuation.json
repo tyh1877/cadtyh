@@ -1,0 +1,17 @@
+[
+  {
+    "part_id": "R02_P01",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R02_P02",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R02_P04",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  }
+]

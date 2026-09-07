@@ -2,6 +2,9 @@ artifacts/
 packets/
 T0/
 /T1/
+/T2/
+/T2_EVAL/
+/T2_FREEFORM/
 /evaluation_cache/
 __pycache__/
 *.pyc

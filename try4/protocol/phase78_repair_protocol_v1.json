@@ -1,0 +1,18 @@
+{
+  "protocol_id": "try4_phase78_repair_v1",
+  "development_scope": ["R01", "R02"],
+  "transfer_excluded": "R03",
+  "pilot_parts": ["R02_P02", "R02_P05"],
+  "max_repair_rounds": 3,
+  "phase5_evaluator": "protocol/phase5_evaluator_v1.json",
+  "quality_thresholds_unchanged": true,
+  "stagnation": {"iou_min_gain": 0.005, "normalized_chamfer_min_reduction": 0.002, "normalized_hd95_min_reduction": 0.005},
+  "regression": {"new_failed_gate": true, "iou_drop": 0.01, "normalized_chamfer_increase": 0.005, "normalized_hd95_increase": 0.01},
+  "regression_action": "rollback candidate round",
+  "stagnant_local_repair_action": "REPLAN",
+  "stagnant_replan_action": "UNRESOLVED",
+  "round3_failure_action": "UNRESOLVED",
+  "pass_action": "FROZEN and no further call",
+  "silent_fallback_allowed": false,
+  "formal_denominator": 12
+}

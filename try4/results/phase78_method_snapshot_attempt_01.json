@@ -1,0 +1,18 @@
+{
+  "frozen_at": "2026-09-07T02:11:05.099963+00:00",
+  "after_pilot": true,
+  "before_formal_matrix": true,
+  "files": {
+    "protocol/phase5_evaluator_v1.json": "3b9f7cb93ef695a3e0ca8eda6a90af5a8d8d6cd2a07e5afa7b1df722ed21ee1e",
+    "results/phase5_method_snapshot.json": "29e33ae141295b87ac648a16ebe8499daefdf2ff1882e0fdb245c87498704448",
+    "protocol/phase78_repair_protocol_v1.json": "5c419d3da16699b01dc7a604ef9d84a86d693aded018c97ae34d9f1d88367d89",
+    "schemas/repair_contract.schema.json": "17989bd7c7c08d900bea6403b1ffe83eadf9a5dda3c32c635b49bb57ee13060d",
+    "skills/structured_part_review/SKILL.md": "db113f4708dee1c10637767f4f29f03e53fa8a447842de054501fd7c1cbb41c8",
+    "skills/structured_part_repair/SKILL.md": "c4dfe60fca6c5f20f1f0be66d998ff79060409df63a95c933f886ed9f12b14e9",
+    "scripts/materialize_t2_round.py": "3a7a94caca6f1901557310c91f1eb9396560fb19c74009735f32c73993f25b1a",
+    "scripts/run_t2_round.py": "7659b1525ed171ab3667e85738b0dd7bf2396bc8fa072ee4477e83b7d14a81dd",
+    "scripts/update_t2_state.py": "5474616da8db8978dd67c2f5cd661ea3f15b132c90329f516885c8d682a825c4",
+    "scripts/run_phase8_matrix.py": "7504c1419d9f29c810ea71c34fa530e8a1aa0ab6087980db286daf654cf8ae15",
+    "codex_authored/T2/round1_decisions.json": "681bed2c34fcf13203625b8da608cad9b4e754ec92c20226b772b62e182f9a5c"
+  }
+}

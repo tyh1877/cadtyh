@@ -1,0 +1,30 @@
+{
+  "parts": 12,
+  "repair_trigger_rate": 1.0,
+  "scheduled_contracts": 36,
+  "executed_candidates": 32,
+  "repair_contract_execution_rate": 0.8888888888888888,
+  "average_scheduled_rounds": 3.0,
+  "early_pass_rate": 0.0,
+  "repair_success_rate": 0.0,
+  "replan_part_rate": 0.5833333333333334,
+  "regression_rate_per_executed_candidate": 0.46875,
+  "frozen_feature_preservation_rate": 1.0,
+  "unresolved_rate": 1.0,
+  "codex_calls_saved_vs_three_round_all_parts": 0,
+  "pass_parts": [],
+  "unresolved_parts": [
+    "R01_P00",
+    "R01_P01",
+    "R01_P02",
+    "R01_P03",
+    "R01_P04",
+    "R02_P00",
+    "R02_P01",
+    "R02_P02",
+    "R02_P03",
+    "R02_P04",
+    "R02_P05",
+    "R02_P06"
+  ]
+}

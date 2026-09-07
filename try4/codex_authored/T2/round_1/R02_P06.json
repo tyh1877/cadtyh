@@ -1,0 +1,78 @@
+{
+  "schema_version": "try4_repair_contract_v1",
+  "part_id": "R02_P06",
+  "round": 1,
+  "status": "REPLAN",
+  "failed_gates": [
+    "iou",
+    "normalized_hd95"
+  ],
+  "violations": [
+    {
+      "region": "whole_part",
+      "feature_id": "F00",
+      "type": "layout_error",
+      "severity": "critical",
+      "requirement": "two opposed plate fingers with open grip gap",
+      "evidence_views": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "measured_difference": {
+        "voxel_iou": 0.1358403048123913,
+        "normalized_chamfer": 0.0654695279684679,
+        "normalized_hd95": 0.1944003763901025,
+        "bbox_delta_generated_minus_gt_mm": [
+          84.04787758902194,
+          0.7376489514660989,
+          17.25555834408351
+        ],
+        "diagnosis": "gripper longitudinal envelope is oversized and linkage/rail layout is too abstract"
+      }
+    }
+  ],
+  "repair_actions": [
+    {
+      "priority": 1,
+      "action": "FULL_PART_REPLAN",
+      "feature_id": "F00",
+      "target_region": "whole_part",
+      "cad_strategy": "structured parameterized replan",
+      "parameters": {
+        "parameter_updates": {
+          "carriage_length": 52,
+          "carriage_width": 48,
+          "carriage_depth": 30,
+          "rail_span": 132,
+          "jaw_separation": 70,
+          "jaw_length": 78,
+          "attachment_length": 62,
+          "attachment_width": 58,
+          "attachment_depth": 30,
+          "attachment_separation": 58,
+          "plate_thickness": 11,
+          "plate_depth": 40
+        }
+      }
+    }
+  ],
+  "protected_features": [],
+  "do_not_change": [
+    "semantic_role",
+    "interface_semantics",
+    "declared_open_spaces"
+  ],
+  "review_inputs": {
+    "gt_renders": "artifacts/R02/isolated/R02_P06",
+    "generated_renders": "T1/R02_P06/round_0/renders",
+    "semantic_label": "dual-rail gripper assembly",
+    "lod": "skills/robot_part_modeling_standard/SKILL.md",
+    "feature_graph": "T1/R02_P06/round_0/feature_graph.json",
+    "feature_tree": "T1/R02_P06/round_0/feature_tree.json",
+    "deterministic_metrics": "results/phase5_metrics.csv#R02_P06,T1",
+    "regional_discrepancies": "results/phase6_regional_discrepancies.csv#R02_P06",
+    "previous_history": []
+  }
+}

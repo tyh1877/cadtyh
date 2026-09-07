@@ -1,0 +1,47 @@
+[
+  {
+    "part_id": "R01_P00",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R01_P01",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R01_P02",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R01_P03",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R01_P04",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R02_P00",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R02_P03",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R02_P05",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  },
+  {
+    "part_id": "R02_P06",
+    "status": "STATE_UPDATED",
+    "returncode": 0
+  }
+]

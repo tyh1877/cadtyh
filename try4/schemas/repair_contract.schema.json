@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Try4 Structured Repair Contract v1",
+  "type": "object",
+  "required": ["schema_version", "part_id", "round", "status", "failed_gates", "violations", "repair_actions", "protected_features", "do_not_change", "review_inputs"],
+  "properties": {
+    "schema_version": {"const": "try4_repair_contract_v1"},
+    "part_id": {"pattern": "^R0[12]_P[0-9]{2}$"},
+    "round": {"type": "integer", "minimum": 1, "maximum": 3},
+    "status": {"enum": ["LOCAL_REPAIR", "REPLAN"]},
+    "failed_gates": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "violations": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["region", "feature_id", "type", "severity", "requirement", "evidence_views", "measured_difference"], "properties": {"region": {"type": "string"}, "feature_id": {"type": ["string", "null"]}, "type": {"enum": ["missing_feature", "wrong_shape_family", "wrong_region_semantics", "missing_recess", "missing_flange", "wrong_taper", "wrong_transition", "surface_family_mismatch", "dimension_error", "layout_error"]}, "severity": {"enum": ["low", "medium", "high", "critical"]}, "requirement": {"type": "string"}, "evidence_views": {"type": "array", "items": {"type": "string"}}, "measured_difference": {"type": "object"}}, "additionalProperties": false}},
+    "repair_actions": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["priority", "action", "target_region", "cad_strategy", "parameters"], "properties": {"priority": {"type": "integer", "minimum": 1}, "action": {"enum": ["ADD_FEATURE", "REMOVE_FEATURE", "MODIFY_PARAMETER", "REPLACE_FEATURE", "CHANGE_SHAPE_FAMILY", "CHANGE_CAD_STRATEGY", "LOCAL_REPLAN", "FULL_PART_REPLAN"]}, "feature_id": {"type": ["string", "null"]}, "target_region": {"type": "string"}, "cad_strategy": {"type": "string"}, "parameters": {"type": "object"}}, "additionalProperties": false}},
+    "protected_features": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "do_not_change": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "review_inputs": {"type": "object", "required": ["gt_renders", "generated_renders", "semantic_label", "lod", "feature_graph", "feature_tree", "deterministic_metrics", "regional_discrepancies", "previous_history"]}
+  },
+  "additionalProperties": false
+}

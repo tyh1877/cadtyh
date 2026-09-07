@@ -1,0 +1,337 @@
+[
+  {
+    "part_id": "R02_P02",
+    "contract": {
+      "schema_version": "try4_repair_contract_v1",
+      "part_id": "R02_P02",
+      "round": 1,
+      "status": "LOCAL_REPAIR",
+      "failed_gates": [
+        "voxel_iou"
+      ],
+      "violations": [
+        {
+          "region": "main_carrier",
+          "feature_id": "F00",
+          "type": "layout_error",
+          "severity": "medium",
+          "requirement": "narrow load web with widened end carriers",
+          "evidence_views": [
+            "isolated_front",
+            "isolated_side",
+            "isolated_top",
+            "isolated_isometric"
+          ],
+          "measured_difference": {
+            "voxel_iou": 0.311394,
+            "bbox_error_mm": [
+              15.205085,
+              2.506331,
+              24.837383
+            ],
+            "diagnosis": "paired members are spaced too broadly relative to the narrow reference web"
+          }
+        }
+      ],
+      "repair_actions": [
+        {
+          "priority": 1,
+          "action": "MODIFY_PARAMETER",
+          "feature_id": "F00",
+          "target_region": "main_carrier",
+          "cad_strategy": "retain open_frame and tighten member spacing/section",
+          "parameters": {
+            "parameter_updates": {
+              "separation": 38,
+              "plate_width": 40,
+              "carrier_width": 58
+            }
+          }
+        }
+      ],
+      "protected_features": [
+        "F02"
+      ],
+      "do_not_change": [
+        "overall_link_length",
+        "distal_fork_opening",
+        "feature_count"
+      ],
+      "review_inputs": {
+        "gt_renders": "artifacts/R02/isolated/R02_P02",
+        "generated_renders": "T1/R02_P02/round_0/renders",
+        "semantic_label": "upper-arm side frame",
+        "lod": "skills/robot_part_modeling_standard/SKILL.md",
+        "feature_graph": "T1/R02_P02/round_0/feature_graph.json",
+        "feature_tree": "T1/R02_P02/round_0/feature_tree.json",
+        "deterministic_metrics": "results/phase5_metrics.csv#R02_P02,T1",
+        "regional_discrepancies": {
+          "main_carrier": "excess side-member separation and section envelope"
+        },
+        "previous_history": []
+      }
+    },
+    "repair_log": {
+      "part_id": "R02_P02",
+      "round": 1,
+      "status": "APPLIED",
+      "changes": [
+        {
+          "action": "MODIFY_PARAMETER",
+          "parameter": "separation",
+          "before": 70,
+          "after": 38
+        },
+        {
+          "action": "MODIFY_PARAMETER",
+          "parameter": "plate_width",
+          "before": 48,
+          "after": 40
+        },
+        {
+          "action": "MODIFY_PARAMETER",
+          "parameter": "carrier_width",
+          "before": 68,
+          "after": 58
+        }
+      ],
+      "protection": {
+        "feature_nodes_unchanged": true,
+        "protected_operation_ids_preserved": true,
+        "protected_operation_subgraphs_unchanged": true
+      },
+      "gt_geometry_consumed": false,
+      "silent_fallback_allowed": false
+    },
+    "metrics": {
+      "part_id": "R02_P02",
+      "robot_id": "R02",
+      "condition": "T2",
+      "alignment": "rigid_shape_only_no_scale",
+      "gt_bbox_diagonal_mm": 352.5552374481626,
+      "voxel_pitch_mm": 5.50867558512754,
+      "voxel_iou": 0.41758403052986937,
+      "chamfer_mm": 8.19271089689429,
+      "normalized_chamfer": 0.023238091585857927,
+      "hd95_mm": 25.567396986446013,
+      "normalized_hd95": 0.07252025858842978,
+      "bbox_error_x_mm": 0.9655656347864294,
+      "bbox_error_y_mm": 2.0742680844396375,
+      "bbox_error_z_mm": 24.84085013651645,
+      "centroid_error_mm": 11.302598510546119,
+      "silhouette_iou_front": 0.7343058773962503,
+      "silhouette_iou_side": 0.5946817350839289,
+      "silhouette_iou_top": 0.6356925662158918,
+      "silhouette_iou_mean": 0.6548933928986903,
+      "mfr_trace": 1.0,
+      "mechanical_feature_precision_trace": 1.0,
+      "critical_feature_recall_trace": 1.0,
+      "feature_requirements": 3,
+      "features_realized_trace": 3,
+      "cad_valid": true,
+      "editability_pass": true,
+      "gate_status": "PASS",
+      "failed_criteria": "",
+      "round": 1
+    }
+  },
+  {
+    "part_id": "R02_P05",
+    "contract": {
+      "schema_version": "try4_repair_contract_v1",
+      "part_id": "R02_P05",
+      "round": 1,
+      "status": "REPLAN",
+      "failed_gates": [
+        "voxel_iou",
+        "normalized_chamfer",
+        "normalized_hd95"
+      ],
+      "violations": [
+        {
+          "region": "whole_part",
+          "feature_id": "F00",
+          "type": "wrong_shape_family",
+          "severity": "critical",
+          "requirement": "compact wrist carrier with curved fork plates and roll flange",
+          "evidence_views": [
+            "isolated_front",
+            "isolated_side",
+            "isolated_top",
+            "isolated_isometric"
+          ],
+          "measured_difference": {
+            "voxel_iou": 0.092363,
+            "normalized_chamfer": 0.192254,
+            "normalized_hd95": 0.587372,
+            "bbox_error_mm": [
+              88.39676,
+              132.239955,
+              63.227565
+            ],
+            "diagnosis": "long separated tapered rods replace the compact curved plate carrier"
+          }
+        }
+      ],
+      "repair_actions": [
+        {
+          "priority": 1,
+          "action": "FULL_PART_REPLAN",
+          "feature_id": "F00",
+          "target_region": "whole_part",
+          "cad_strategy": "compact wrist_carrier replan with shortened broad fork members",
+          "parameters": {
+            "recipe": "wrist_carrier",
+            "parameter_updates": {
+              "body_length": 52,
+              "body_width": 48,
+              "body_depth": 38,
+              "separation": 46,
+              "arm_length": 64,
+              "arm_start_size": [
+                38,
+                14
+              ],
+              "arm_end_size": [
+                24,
+                10
+              ],
+              "roll_radius": 28,
+              "roll_height": 54
+            }
+          }
+        }
+      ],
+      "protected_features": [],
+      "do_not_change": [
+        "three-body semantic decomposition",
+        "open_space_between_fork_arms",
+        "roll_axis_semantics"
+      ],
+      "review_inputs": {
+        "gt_renders": "artifacts/R02/isolated/R02_P05",
+        "generated_renders": "T1/R02_P05/round_0/renders",
+        "semantic_label": "wrist pitch and roll carrier",
+        "lod": "skills/robot_part_modeling_standard/SKILL.md",
+        "feature_graph": "T1/R02_P05/round_0/feature_graph.json",
+        "feature_tree": "T1/R02_P05/round_0/feature_tree.json",
+        "deterministic_metrics": "results/phase5_metrics.csv#R02_P05,T1",
+        "regional_discrepancies": {
+          "whole_part": "gross extent and shape-family mismatch"
+        },
+        "previous_history": []
+      }
+    },
+    "repair_log": {
+      "part_id": "R02_P05",
+      "round": 1,
+      "status": "APPLIED",
+      "changes": [
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "body_length",
+          "before": 90,
+          "after": 52
+        },
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "body_width",
+          "before": 72,
+          "after": 48
+        },
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "body_depth",
+          "before": 58,
+          "after": 38
+        },
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "separation",
+          "before": 72,
+          "after": 46
+        },
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "arm_length",
+          "before": 135,
+          "after": 64
+        },
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "arm_start_size",
+          "before": [
+            42,
+            18
+          ],
+          "after": [
+            38,
+            14
+          ]
+        },
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "arm_end_size",
+          "before": [
+            18,
+            12
+          ],
+          "after": [
+            24,
+            10
+          ]
+        },
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "roll_radius",
+          "before": 39,
+          "after": 28
+        },
+        {
+          "action": "FULL_PART_REPLAN",
+          "parameter": "roll_height",
+          "before": 88,
+          "after": 54
+        }
+      ],
+      "protection": {
+        "feature_nodes_unchanged": true,
+        "protected_operation_ids_preserved": true,
+        "protected_operation_subgraphs_unchanged": true
+      },
+      "gt_geometry_consumed": false,
+      "silent_fallback_allowed": false
+    },
+    "metrics": {
+      "part_id": "R02_P05",
+      "robot_id": "R02",
+      "condition": "T2",
+      "alignment": "rigid_shape_only_no_scale",
+      "gt_bbox_diagonal_mm": 108.37005458009209,
+      "voxel_pitch_mm": 1.6932821028139389,
+      "voxel_iou": 0.2681218735788995,
+      "chamfer_mm": 8.802160838260711,
+      "normalized_chamfer": 0.08122318358486548,
+      "hd95_mm": 20.84645079424284,
+      "normalized_hd95": 0.1923635719758362,
+      "bbox_error_x_mm": 34.357736040618335,
+      "bbox_error_y_mm": 42.633855165999364,
+      "bbox_error_z_mm": 20.55754379521369,
+      "centroid_error_mm": 9.1208878033865,
+      "silhouette_iou_front": 0.30904543330676415,
+      "silhouette_iou_side": 0.4188451970497098,
+      "silhouette_iou_top": 0.5163657114906453,
+      "silhouette_iou_mean": 0.4147521139490397,
+      "mfr_trace": 1.0,
+      "mechanical_feature_precision_trace": 1.0,
+      "critical_feature_recall_trace": 1.0,
+      "feature_requirements": 3,
+      "features_realized_trace": 3,
+      "cad_valid": true,
+      "editability_pass": true,
+      "gate_status": "LOCAL_REPAIR",
+      "failed_criteria": "iou;normalized_chamfer;normalized_hd95",
+      "round": 1
+    }
+  }
+]
