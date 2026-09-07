@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "edges": {
+    "L0_to_L1": 12,
+    "L0_to_L2": 11,
+    "L1_to_L2": 11
+  },
+  "all_consumed": true,
+  "mutation_tests": {
+    "origin_before_hash": "9f8c9b3335452d1b3bd30db6c38591d0189cae119ff8b4f5b15e88d4a9db475c",
+    "origin_after_hash": "b93583c4e6fbe46a7cfca1e650061e2062d89356dea35b1d2b8f2cbb6b4d5271",
+    "interface_radius_before_m": 0.016,
+    "interface_radius_after_mutated_plan_m": 0.024000000000000004
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "joint_id": "J05",
+  "parent_link": "L05",
+  "child_link": "L06",
+  "joint_type": "continuous",
+  "origin_xyz_m": [
+    0.0055,
+    0.0,
+    0.0
+  ],
+  "origin_rpy_rad": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "axis": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "limits": {},
+  "interface_family": "coaxial_rotary_interface",
+  "shared_reference_frame": {
+    "parent_relative_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0055
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "world_transform_canonical": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.20350000000000001
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "world_axis_canonical": [
+      1.0,
+      0.0,
+      0.0
+    ]
+  },
+  "parent_port": {
+    "owner": "L05",
+    "center_in_shared_frame": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "radius_m": 0.0064,
+    "depth_m": 0.006999999999999999
+  },
+  "child_port": {
+    "owner": "L06",
+    "center_in_shared_frame": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "radius_m": 0.0064,
+    "depth_m": 0.006999999999999999
+  },
+  "required_relations": [
+    "connected",
+    "coaxial",
+    "rotation_clearance"
+  ],
+  "interface_envelope": {
+    "radius_m": 0.0064,
+    "axial_depth_m": 0.006999999999999999
+  },
+  "protected_region_parent": {
+    "link_id": "L05",
+    "radius_m": 0.00768
+  },
+  "protected_region_child": {
+    "link_id": "L06",
+    "radius_m": 0.00768
+  },
+  "target_gap_m": 0.0005,
+  "clearance_rule": "radial_clearance_0.5mm",
+  "consumption_trace": {
+    "skeleton_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+    "robot_plan_sha256": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "l0_joint_fields": {
+      "joint_id": "J05",
+      "joint_type": "continuous",
+      "parent": "L05",
+      "child": "L06",
+      "origin_xyz_m": [
+        0.0055,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {},
+      "origin_transform_parent": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0055
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_joint_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.20350000000000001
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.19305
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "l1_parent_fields": {
+      "link_id": "L05",
+      "role": "end_effector_spacer",
+      "coarse_envelope_m": [
+        0.012,
+        0.025,
+        0.025
+      ],
+      "body_family": "straight_beam",
+      "proximal_region": "wrist_fixed_mount",
+      "distal_region": "gripper_actuator_axis"
+    },
+    "l1_child_fields": {
+      "link_id": "L06",
+      "role": "gripper_actuator_prop",
+      "coarse_envelope_m": [
+        0.025,
+        0.02,
+        0.02
+      ],
+      "body_family": "rotary_housing",
+      "proximal_region": "actuator_axis",
+      "distal_region": "none"
+    }
+  }
+}

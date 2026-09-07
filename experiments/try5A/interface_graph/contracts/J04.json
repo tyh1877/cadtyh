@@ -1,0 +1,237 @@
+{
+  "joint_id": "J04",
+  "parent_link": "L04",
+  "child_link": "L05",
+  "joint_type": "fixed",
+  "origin_xyz_m": [
+    0.063,
+    0.0,
+    0.0
+  ],
+  "origin_rpy_rad": [
+    -3.141592653589793,
+    0.0,
+    0.0
+  ],
+  "axis": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "limits": {},
+  "interface_family": "planar_mount_interface",
+  "shared_reference_frame": {
+    "parent_relative_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.063
+      ],
+      [
+        0.0,
+        -1.0,
+        1.2246467991473532e-16,
+        0.0
+      ],
+      [
+        0.0,
+        -1.2246467991473532e-16,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "world_transform_canonical": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.198
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "world_axis_canonical": [
+      1.0,
+      0.0,
+      0.0
+    ]
+  },
+  "parent_port": {
+    "owner": "L04",
+    "center_in_shared_frame": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "radius_m": 0.008,
+    "depth_m": 0.008749999999999999
+  },
+  "child_port": {
+    "owner": "L05",
+    "center_in_shared_frame": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "radius_m": 0.008,
+    "depth_m": 0.008749999999999999
+  },
+  "required_relations": [
+    "connected",
+    "frame_coincident"
+  ],
+  "interface_envelope": {
+    "radius_m": 0.008,
+    "axial_depth_m": 0.008749999999999999
+  },
+  "protected_region_parent": {
+    "link_id": "L04",
+    "radius_m": 0.0096
+  },
+  "protected_region_child": {
+    "link_id": "L05",
+    "radius_m": 0.0096
+  },
+  "target_gap_m": 0.0,
+  "clearance_rule": "coincident_mount",
+  "consumption_trace": {
+    "skeleton_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+    "robot_plan_sha256": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "l0_joint_fields": {
+      "joint_id": "J04",
+      "joint_type": "fixed",
+      "parent": "L04",
+      "child": "L05",
+      "origin_xyz_m": [
+        0.063,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        -3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {},
+      "origin_transform_parent": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.063
+        ],
+        [
+          0.0,
+          -1.0,
+          1.2246467991473532e-16,
+          0.0
+        ],
+        [
+          0.0,
+          -1.2246467991473532e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_joint_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.198
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.19305
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "l1_parent_fields": {
+      "link_id": "L04",
+      "role": "wrist_gripper_body",
+      "coarse_envelope_m": [
+        0.075,
+        0.06,
+        0.052
+      ],
+      "body_family": "wrist_block",
+      "proximal_region": "wrist_pitch_port",
+      "distal_region": "end_side_mount"
+    },
+    "l1_child_fields": {
+      "link_id": "L05",
+      "role": "end_effector_spacer",
+      "coarse_envelope_m": [
+        0.012,
+        0.025,
+        0.025
+      ],
+      "body_family": "straight_beam",
+      "proximal_region": "wrist_fixed_mount",
+      "distal_region": "gripper_actuator_axis"
+    }
+  }
+}

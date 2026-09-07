@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-09-07T13:25:25.657526+00:00",
+  "scope": "Try-5A Phase 1-3 stop",
+  "files": {
+    "try5\\Try5-A.md": "3bd1fa8119898657b4741be50c45ce0203da9ce05a51bd06c69d1a3d425ae466",
+    "experiments\\try5A\\protocol\\phase13_protocol.json": "df16abec6acbc1b2bda3cb846d9a5872e5b3dfc9a49e60f6cebc600f9c2af6d9",
+    "experiments\\try5A\\inputs\\input_manifest.json": "ce655aa20beeac0bf137452f6b673eb77c9666a702f5c5455b9afd1f3ddbc1e3",
+    "experiments\\try5A\\inputs\\sanitized_urdf\\px100_sanitized.urdf": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+    "experiments\\try5A\\codex_authored\\robot_plan_decisions.json": "9e71944097b67b105eebc2fd371309b1e0f0000acaeca5016da7d22088cb0b2d",
+    "experiments\\try5A\\blackboard\\kinematic_skeleton.json": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "experiments\\try5A\\blackboard\\joint_interface_graph.json": "405e1100214bea5c5443f60d720b48e18751fde86a5086d67db283d0cec79b5f",
+    "experiments\\try5A\\scripts\\audit_phase13.py": "bac686abfcdf2631dd78a12b1d60f3592751c7ccf28a09f00df270bd78e46720",
+    "experiments\\try5A\\scripts\\build_interface_graph.py": "98123a3139e814cc8ee0558f179b3e609c3a04a29b43a80e8613008d8e5b26fc",
+    "experiments\\try5A\\scripts\\build_robot_plan.py": "9819fd8b54079e81489a3b15159c8f9e3cf9db3f630974d5e70cc351a1290940",
+    "experiments\\try5A\\scripts\\build_skeleton.py": "ba76c84af7d210a0ab33782623b5b567b8976fe48a709f81d0ae285634389b4b",
+    "experiments\\try5A\\scripts\\finalize_phase13.py": "3f8446e52faa52afdeb53e9fa0e96ac25c7ae28c509ff6d6b43d3659334fc998",
+    "experiments\\try5A\\scripts\\kinematics.py": "f39499662f0a16bc38a591a970c868343a19dc40a3c4afcd566c206594b3cf01",
+    "experiments\\try5A\\scripts\\prepare_inputs.py": "42d9fb53f3bdbf2a610957d7bc99809f06e5627791817c72008e775cc8cabce0",
+    "experiments\\try5A\\scripts\\validate_skeleton.py": "d8eb4a4fda87db463b37969f0bfab4011734da93c7cd84471338b310340b3ee0",
+    "experiments\\try5A\\skills\\joint_interface_design\\SKILL.md": "b7d777a78444f9f56b40d609ffa9e84314318a1c9f6a252edeeb0b74d9d9dbc4",
+    "experiments\\try5A\\skills\\robot_assembly_planning\\SKILL.md": "53eb446b64faead2d76d3ab553604dc833fc407728f06c67e242c7d9e4f3dc30",
+    "experiments\\try5A\\skills\\robot_kinematics\\SKILL.md": "8210d41cdf26a2e61cfe42a028eeb4c2da2303a8af60d330f707929912304a92"
+  }
+}

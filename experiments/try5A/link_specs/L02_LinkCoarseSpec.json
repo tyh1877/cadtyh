@@ -1,0 +1,229 @@
+{
+  "schema_version": "try5A_link_coarse_spec_plan_v1",
+  "link_id": "L02",
+  "role": "upper_arm_link",
+  "coarse_envelope_m": [
+    0.12,
+    0.05,
+    0.035
+  ],
+  "principal_direction": [
+    0.33,
+    0,
+    0.94
+  ],
+  "body_family": "dual_side_plate",
+  "proximal_region": "shoulder_pitch_port",
+  "distal_region": "elbow_fork_port",
+  "parent_joint": "J01",
+  "child_joints": [
+    "J02"
+  ],
+  "neighboring_links": [
+    "L01",
+    "L03"
+  ],
+  "structural_path": "shoulder_pitch_port -> dual_side_plate -> elbow_fork_port",
+  "critical_assembly_constraints": [
+    "preserve all L0 joint frames",
+    "body must connect declared proximal/distal regions"
+  ],
+  "skeleton_source_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+  "consumed_skeleton": {
+    "link_id": "L02",
+    "parent_joint_record": {
+      "joint_id": "J01",
+      "joint_type": "revolute",
+      "parent": "L01",
+      "child": "L02",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.04225
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -1.9373154697137058,
+        "upper": 1.8675022996339325
+      },
+      "mimic": null,
+      "origin_transform_parent": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.04225
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_joint_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.09305
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    "child_joint_records": [
+      {
+        "joint_id": "J02",
+        "joint_type": "revolute",
+        "parent": "L02",
+        "child": "L03",
+        "origin_xyz_m": [
+          0.035,
+          0.0,
+          0.1
+        ],
+        "origin_rpy_rad": [
+          3.141592653589793,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limits": {
+          "lower": -1.6057029118347832,
+          "upper": 2.111848394913139
+        },
+        "mimic": null,
+        "origin_transform_parent": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.035
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.2246467991473532e-16,
+            0.0
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            0.1
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world_joint_transform": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.035
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.2246467991473532e-16,
+            0.0
+          ],
+          [
+            0.0,
+            1.2246467991473532e-16,
+            -1.0,
+            0.19305
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world_axis": [
+          0.0,
+          -1.0,
+          1.2246467991473532e-16
+        ]
+      }
+    ],
+    "canonical_world_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.09305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}

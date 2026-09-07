@@ -1,0 +1,10 @@
+{
+  "experiment":"RobotCAD Try-5A",
+  "authorized_scope":"Phase 1-3 only",
+  "robot_A":"R01 PincherX-100",
+  "kinematic_authority":"inputs/sanitized_urdf/px100_sanitized.urdf",
+  "generator_inputs":["inputs/images","inputs/engineering_text/robot_A.md","inputs/sanitized_urdf/px100_sanitized.urdf"],
+  "forbidden_inputs":["URDF visual mesh","collision mesh","GT STEP","GT B-Rep","GT per-link mesh","GT feature tree","GT interface geometry","GT CAD dimensions"],
+  "layers":["L0 Kinematic Skeleton","L1 Robot Assembly Plan","L2 Joint Interface Graph"],
+  "stop_before":["A0","A1","A2","Link CAD","whole robot assembly"]
+}

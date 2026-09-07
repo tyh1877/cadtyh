@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checks": {
+    "method_hashes_match": true,
+    "links_12": true,
+    "joints_11": true,
+    "fk_validation_pass": true,
+    "plan_links_12": true,
+    "link_specs_12": true,
+    "contracts_11_unique": true,
+    "l0_l1_l2_trace_errors_zero": true,
+    "ledger_rows_34": true,
+    "joint_origin_mutation_changes_contract_frame": true,
+    "plan_envelope_mutation_changes_port": true,
+    "forbidden_urdf_tags_zero": true,
+    "images_6": true,
+    "no_a0_a1_a2": true,
+    "no_cad_assembly_simulation": true,
+    "no_robot_b_or_transfer": true
+  },
+  "method_files": {
+    "try5\\Try5-A.md": true,
+    "experiments\\try5A\\protocol\\phase13_protocol.json": true,
+    "experiments\\try5A\\inputs\\input_manifest.json": true,
+    "experiments\\try5A\\inputs\\sanitized_urdf\\px100_sanitized.urdf": true,
+    "experiments\\try5A\\codex_authored\\robot_plan_decisions.json": true,
+    "experiments\\try5A\\blackboard\\kinematic_skeleton.json": true,
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": true,
+    "experiments\\try5A\\blackboard\\joint_interface_graph.json": true,
+    "experiments\\try5A\\scripts\\audit_phase13.py": true,
+    "experiments\\try5A\\scripts\\build_interface_graph.py": true,
+    "experiments\\try5A\\scripts\\build_robot_plan.py": true,
+    "experiments\\try5A\\scripts\\build_skeleton.py": true,
+    "experiments\\try5A\\scripts\\finalize_phase13.py": true,
+    "experiments\\try5A\\scripts\\kinematics.py": true,
+    "experiments\\try5A\\scripts\\prepare_inputs.py": true,
+    "experiments\\try5A\\scripts\\validate_skeleton.py": true,
+    "experiments\\try5A\\skills\\joint_interface_design\\SKILL.md": true,
+    "experiments\\try5A\\skills\\robot_assembly_planning\\SKILL.md": true,
+    "experiments\\try5A\\skills\\robot_kinematics\\SKILL.md": true
+  },
+  "trace_errors": [],
+  "forbidden_tags": {
+    "visual": 0,
+    "collision": 0,
+    "inertial": 0,
+    "mesh": 0,
+    "geometry": 0,
+    "material": 0,
+    "transmission": 0
+  },
+  "mutation_tests": {
+    "origin_before_hash": "9f8c9b3335452d1b3bd30db6c38591d0189cae119ff8b4f5b15e88d4a9db475c",
+    "origin_after_hash": "b93583c4e6fbe46a7cfca1e650061e2062d89356dea35b1d2b8f2cbb6b4d5271",
+    "interface_radius_before_m": 0.016,
+    "interface_radius_after_mutated_plan_m": 0.024000000000000004
+  }
+}

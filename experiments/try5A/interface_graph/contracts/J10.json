@@ -1,0 +1,237 @@
+{
+  "joint_id": "J10",
+  "parent_link": "L08",
+  "child_link": "L11",
+  "joint_type": "fixed",
+  "origin_xyz_m": [
+    0.027575,
+    0.0,
+    0.0
+  ],
+  "origin_rpy_rad": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "axis": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "limits": {},
+  "interface_family": "planar_mount_interface",
+  "shared_reference_frame": {
+    "parent_relative_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.027575
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "world_transform_canonical": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.248575
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "world_axis_canonical": [
+      1.0,
+      0.0,
+      0.0
+    ]
+  },
+  "parent_port": {
+    "owner": "L08",
+    "center_in_shared_frame": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "radius_m": 0.003,
+    "depth_m": 0.004
+  },
+  "child_port": {
+    "owner": "L11",
+    "center_in_shared_frame": [
+      0,
+      0,
+      0
+    ],
+    "axis": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "radius_m": 0.003,
+    "depth_m": 0.004
+  },
+  "required_relations": [
+    "connected",
+    "frame_coincident"
+  ],
+  "interface_envelope": {
+    "radius_m": 0.003,
+    "axial_depth_m": 0.004
+  },
+  "protected_region_parent": {
+    "link_id": "L08",
+    "radius_m": 0.0036
+  },
+  "protected_region_child": {
+    "link_id": "L11",
+    "radius_m": 0.0036
+  },
+  "target_gap_m": 0.0,
+  "clearance_rule": "coincident_mount",
+  "consumption_trace": {
+    "skeleton_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+    "robot_plan_sha256": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "l0_joint_fields": {
+      "joint_id": "J10",
+      "joint_type": "fixed",
+      "parent": "L08",
+      "child": "L11",
+      "origin_xyz_m": [
+        0.027575,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {},
+      "origin_transform_parent": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.027575
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_joint_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.248575
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.19305
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "l1_parent_fields": {
+      "link_id": "L08",
+      "role": "finger_carriage",
+      "coarse_envelope_m": [
+        0.035,
+        0.075,
+        0.025
+      ],
+      "body_family": "fork_body",
+      "proximal_region": "bar_interface",
+      "distal_region": "opposed_slider_origins"
+    },
+    "l1_child_fields": {
+      "link_id": "L11",
+      "role": "tool_center_frame",
+      "coarse_envelope_m": [
+        0.006,
+        0.006,
+        0.006
+      ],
+      "body_family": "interface_marker",
+      "proximal_region": "tool_center_mount",
+      "distal_region": "none"
+    }
+  }
+}

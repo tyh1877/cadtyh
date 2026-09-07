@@ -1,0 +1,226 @@
+{
+  "schema_version": "try5A_link_coarse_spec_plan_v1",
+  "link_id": "L04",
+  "role": "wrist_gripper_body",
+  "coarse_envelope_m": [
+    0.075,
+    0.06,
+    0.052
+  ],
+  "principal_direction": [
+    1,
+    0,
+    0
+  ],
+  "body_family": "wrist_block",
+  "proximal_region": "wrist_pitch_port",
+  "distal_region": "end_side_mount",
+  "parent_joint": "J03",
+  "child_joints": [
+    "J04"
+  ],
+  "neighboring_links": [
+    "L03",
+    "L05"
+  ],
+  "structural_path": "wrist_pitch_port -> wrist_block -> end_side_mount",
+  "critical_assembly_constraints": [
+    "preserve all L0 joint frames",
+    "body must connect declared proximal/distal regions"
+  ],
+  "skeleton_source_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+  "consumed_skeleton": {
+    "link_id": "L04",
+    "parent_joint_record": {
+      "joint_id": "J03",
+      "joint_type": "revolute",
+      "parent": "L03",
+      "child": "L04",
+      "origin_xyz_m": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -2.1467549799530254,
+        "upper": 1.7453292519943295
+      },
+      "mimic": null,
+      "origin_transform_parent": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.1
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_joint_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.135
+        ],
+        [
+          0.0,
+          -1.0,
+          -1.2246467991473532e-16,
+          0.0
+        ],
+        [
+          0.0,
+          1.2246467991473532e-16,
+          -1.0,
+          0.19305
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_axis": [
+        0.0,
+        -1.0,
+        1.2246467991473532e-16
+      ]
+    },
+    "child_joint_records": [
+      {
+        "joint_id": "J04",
+        "joint_type": "fixed",
+        "parent": "L04",
+        "child": "L05",
+        "origin_xyz_m": [
+          0.063,
+          0.0,
+          0.0
+        ],
+        "origin_rpy_rad": [
+          -3.141592653589793,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limits": {},
+        "mimic": null,
+        "origin_transform_parent": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.063
+          ],
+          [
+            0.0,
+            -1.0,
+            1.2246467991473532e-16,
+            0.0
+          ],
+          [
+            0.0,
+            -1.2246467991473532e-16,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world_joint_transform": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.198
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.19305
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world_axis": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "canonical_world_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.135
+      ],
+      [
+        0.0,
+        -1.0,
+        -1.2246467991473532e-16,
+        0.0
+      ],
+      [
+        0.0,
+        1.2246467991473532e-16,
+        -1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}

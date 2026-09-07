@@ -1,0 +1,146 @@
+{
+  "schema_version": "try5A_link_coarse_spec_plan_v1",
+  "link_id": "L10",
+  "role": "right_finger",
+  "coarse_envelope_m": [
+    0.055,
+    0.012,
+    0.018
+  ],
+  "principal_direction": [
+    1,
+    0,
+    0
+  ],
+  "body_family": "tapered_beam",
+  "proximal_region": "right_slider_port",
+  "distal_region": "right_contact_tip",
+  "parent_joint": "J09",
+  "child_joints": [],
+  "neighboring_links": [
+    "L08"
+  ],
+  "structural_path": "right_slider_port -> tapered_beam -> right_contact_tip",
+  "critical_assembly_constraints": [
+    "preserve all L0 joint frames",
+    "body must connect declared proximal/distal regions"
+  ],
+  "skeleton_source_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+  "consumed_skeleton": {
+    "link_id": "L10",
+    "parent_joint_record": {
+      "joint_id": "J09",
+      "joint_type": "prismatic",
+      "parent": "L08",
+      "child": "L10",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -0.037,
+        "upper": -0.015
+      },
+      "mimic": {
+        "joint": "J08",
+        "multiplier": -1.0,
+        "offset": 0.0
+      },
+      "origin_transform_parent": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_joint_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.221
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.19305
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    "child_joint_records": [],
+    "canonical_world_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.221
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.026
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}

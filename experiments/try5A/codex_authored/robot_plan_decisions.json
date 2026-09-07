@@ -1,0 +1,17 @@
+{
+  "producer":"current_interactive_codex","condition":"TRY5A_PHASE2","context_isolation":false,
+  "links":[
+    {"link_id":"L00","role":"base_housing","coarse_envelope_m":[0.125,0.105,0.055],"principal_direction":[0,0,1],"body_family":"base_housing","proximal_region":"ground_mount","distal_region":"waist_rotary_housing"},
+    {"link_id":"L01","role":"shoulder_housing","coarse_envelope_m":[0.075,0.070,0.065],"principal_direction":[0,0,1],"body_family":"rotary_housing","proximal_region":"waist_port","distal_region":"shoulder_pitch_port"},
+    {"link_id":"L02","role":"upper_arm_link","coarse_envelope_m":[0.120,0.050,0.035],"principal_direction":[0.33,0,0.94],"body_family":"dual_side_plate","proximal_region":"shoulder_pitch_port","distal_region":"elbow_fork_port"},
+    {"link_id":"L03","role":"forearm_link","coarse_envelope_m":[0.110,0.045,0.032],"principal_direction":[1,0,0],"body_family":"central_web","proximal_region":"elbow_pin_port","distal_region":"wrist_pitch_port"},
+    {"link_id":"L04","role":"wrist_gripper_body","coarse_envelope_m":[0.075,0.060,0.052],"principal_direction":[1,0,0],"body_family":"wrist_block","proximal_region":"wrist_pitch_port","distal_region":"end_side_mount"},
+    {"link_id":"L05","role":"end_effector_spacer","coarse_envelope_m":[0.012,0.025,0.025],"principal_direction":[1,0,0],"body_family":"straight_beam","proximal_region":"wrist_fixed_mount","distal_region":"gripper_actuator_axis"},
+    {"link_id":"L06","role":"gripper_actuator_prop","coarse_envelope_m":[0.025,0.020,0.020],"principal_direction":[1,0,0],"body_family":"rotary_housing","proximal_region":"actuator_axis","distal_region":"none"},
+    {"link_id":"L07","role":"gripper_crossbar","coarse_envelope_m":[0.030,0.080,0.018],"principal_direction":[0,1,0],"body_family":"straight_beam","proximal_region":"bar_mount","distal_region":"finger_carriage_mount"},
+    {"link_id":"L08","role":"finger_carriage","coarse_envelope_m":[0.035,0.075,0.025],"principal_direction":[0,1,0],"body_family":"fork_body","proximal_region":"bar_interface","distal_region":"opposed_slider_origins"},
+    {"link_id":"L09","role":"left_finger","coarse_envelope_m":[0.055,0.012,0.018],"principal_direction":[1,0,0],"body_family":"tapered_beam","proximal_region":"left_slider_port","distal_region":"left_contact_tip"},
+    {"link_id":"L10","role":"right_finger","coarse_envelope_m":[0.055,0.012,0.018],"principal_direction":[1,0,0],"body_family":"tapered_beam","proximal_region":"right_slider_port","distal_region":"right_contact_tip"},
+    {"link_id":"L11","role":"tool_center_frame","coarse_envelope_m":[0.006,0.006,0.006],"principal_direction":[1,0,0],"body_family":"interface_marker","proximal_region":"tool_center_mount","distal_region":"none"}
+  ]
+}

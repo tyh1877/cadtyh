@@ -1,0 +1,29 @@
+{
+  "links": {
+    "/base_link": "L00",
+    "/shoulder_link": "L01",
+    "/upper_arm_link": "L02",
+    "/forearm_link": "L03",
+    "/gripper_link": "L04",
+    "/ee_arm_link": "L05",
+    "/gripper_prop_link": "L06",
+    "/gripper_bar_link": "L07",
+    "/fingers_link": "L08",
+    "/left_finger_link": "L09",
+    "/right_finger_link": "L10",
+    "/ee_gripper_link": "L11"
+  },
+  "joints": {
+    "waist": "J00",
+    "shoulder": "J01",
+    "elbow": "J02",
+    "wrist_angle": "J03",
+    "ee_arm": "J04",
+    "gripper": "J05",
+    "gripper_bar": "J06",
+    "ee_bar": "J07",
+    "left_finger": "J08",
+    "right_finger": "J09",
+    "ee_gripper": "J10"
+  }
+}

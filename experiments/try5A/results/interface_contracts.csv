@@ -1,0 +1,12 @@
+joint_id,type,parent,child,family,axis,radius_m,target_gap_m,required_relations
+J00,revolute,L00,L01,coaxial_rotary_interface,"[0.0, 0.0, 1.0]",0.022400000000000003,0.0005,"['connected', 'coaxial', 'rotation_clearance']"
+J01,revolute,L01,L02,fork_pin_interface,"[0.0, 1.0, 0.0]",0.016,0.0005,"['connected', 'coaxial', 'rotation_clearance']"
+J02,revolute,L02,L03,fork_pin_interface,"[0.0, 1.0, 0.0]",0.0144,0.0005,"['connected', 'coaxial', 'rotation_clearance']"
+J03,revolute,L03,L04,coaxial_rotary_interface,"[0.0, 1.0, 0.0]",0.0144,0.0005,"['connected', 'coaxial', 'rotation_clearance']"
+J04,fixed,L04,L05,planar_mount_interface,"[1.0, 0.0, 0.0]",0.008,0.0,"['connected', 'frame_coincident']"
+J05,continuous,L05,L06,coaxial_rotary_interface,"[1.0, 0.0, 0.0]",0.0064,0.0005,"['connected', 'coaxial', 'rotation_clearance']"
+J06,fixed,L05,L07,planar_mount_interface,"[1.0, 0.0, 0.0]",0.008,0.0,"['connected', 'frame_coincident']"
+J07,fixed,L07,L08,planar_mount_interface,"[1.0, 0.0, 0.0]",0.0096,0.0,"['connected', 'frame_coincident']"
+J08,prismatic,L08,L09,linear_slider_interface,"[0.0, 1.0, 0.0]",0.0057599999999999995,0.0005,"['connected', 'axis_aligned', 'translation_clearance']"
+J09,prismatic,L08,L10,linear_slider_interface,"[0.0, 1.0, 0.0]",0.0057599999999999995,0.0005,"['connected', 'axis_aligned', 'translation_clearance']"
+J10,fixed,L08,L11,planar_mount_interface,"[1.0, 0.0, 0.0]",0.003,0.0,"['connected', 'frame_coincident']"

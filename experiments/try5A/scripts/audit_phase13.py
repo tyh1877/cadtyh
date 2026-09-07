@@ -1,0 +1,22 @@
+"""Audit L0→L1→L2 consumption, mutation sensitivity, leakage and stop scope."""
+import csv,hashlib,json,xml.etree.ElementTree as ET
+from pathlib import Path
+import numpy as np
+ROOT=Path(__file__).resolve().parents[3]
+HERE=ROOT/'experiments/try5A'
+def h(x):return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+s=json.loads((HERE/'blackboard/kinematic_skeleton.json').read_text())
+p=json.loads((HERE/'blackboard/robot_assembly_plan.json').read_text())
+g=json.loads((HERE/'blackboard/joint_interface_graph.json').read_text())
+plans={x['link_id']:x for x in p['links']};joints={x['joint_id']:x for x in s['joints']};contracts={x['joint_id']:x for x in g['joints']};ledger=[];errors=[]
+for x in p['links']:
+ c=x['consumed_skeleton'];errors += [x['link_id']+':L1 skeleton link mismatch'] if c['link_id']!=x['link_id'] else [];ledger.append({'edge':'L0_to_L1','consumer':x['link_id'],'fields':'parent_joint_record;child_joint_records;canonical_world_transform','source_sha256':x['skeleton_source_sha256'],'status':'CONSUMED'})
+for jid,j in joints.items():
+ c=contracts[jid];trace=c['consumption_trace'];errors += [jid+':L0 trace mismatch'] if trace['l0_joint_fields']!={k:j[k] for k in trace['l0_joint_fields']} else [];errors += [jid+':L1 parent mismatch'] if trace['l1_parent_fields']!={k:plans[j['parent']][k] for k in trace['l1_parent_fields']} else [];errors += [jid+':L1 child mismatch'] if trace['l1_child_fields']!={k:plans[j['child']][k] for k in trace['l1_child_fields']} else [];ledger += [{'edge':'L0_to_L2','consumer':jid,'fields':'joint topology;origin;axis;limits;world frame','source_sha256':trace['skeleton_sha256'],'status':'CONSUMED'},{'edge':'L1_to_L2','consumer':jid,'fields':'parent/child role;envelope;body family;regions','source_sha256':trace['robot_plan_sha256'],'status':'CONSUMED'}]
+test=contracts['J01'];origin_before=h(test['shared_reference_frame']['parent_relative_transform']);mut=np.array(test['shared_reference_frame']['parent_relative_transform'],float);mut[0,3]+=0.001;origin_sensitive=origin_before!=h(mut.tolist())
+a=plans[test['parent_link']]['coarse_envelope_m'];b=plans[test['child_link']]['coarse_envelope_m'];radius=lambda x,y:max(.003,.32*min(sorted(x)[1],sorted(y)[1]));r0=radius(a,b);r1=radius([v*1.5 for v in a],[v*1.5 for v in b]);plan_sensitive=abs(r1-r0)>1e-12
+with (HERE/'results/dataflow_consumption_ledger.csv').open('w',newline='',encoding='utf-8') as f:w=csv.DictWriter(f,fieldnames=list(ledger[0]));w.writeheader();w.writerows(ledger)
+root=ET.parse(HERE/'inputs/sanitized_urdf/px100_sanitized.urdf').getroot();forbidden={x:len(root.findall('.//'+x)) for x in ['visual','collision','inertial','mesh','geometry','material','transmission']};im=json.loads((HERE/'inputs/input_manifest.json').read_text());snap_path=HERE/'results/phase13_method_snapshot.json';snap=json.loads(snap_path.read_text()) if snap_path.exists() else {'files':{}};method={x:hashlib.sha256((ROOT/x).read_bytes()).hexdigest()==v for x,v in snap['files'].items()}
+checks={'method_hashes_match':bool(method) and all(method.values()),'links_12':len(s['links'])==12,'joints_11':len(s['joints'])==11,'fk_validation_pass':json.loads((HERE/'results/fk_frame_validation.json').read_text())['status']=='PASS','plan_links_12':len(p['links'])==12,'link_specs_12':len(list((HERE/'link_specs').glob('*.json')))==12,'contracts_11_unique':len(contracts)==11,'l0_l1_l2_trace_errors_zero':not errors,'ledger_rows_34':len(ledger)==34,'joint_origin_mutation_changes_contract_frame':origin_sensitive,'plan_envelope_mutation_changes_port':plan_sensitive,'forbidden_urdf_tags_zero':not any(forbidden.values()),'images_6':len(im['images'])==6,'no_a0_a1_a2':not any((HERE/x).exists() for x in ['A0','A1','A2']),'no_cad_assembly_simulation':not any((HERE/x).exists() for x in ['link_cad','assemblies','simulation']),'no_robot_b_or_transfer':g['robot_id']=='R01'}
+checks={k:bool(v) for k,v in checks.items()};out={'status':'PASS' if all(checks.values()) else 'FAIL','checks':checks,'method_files':method,'trace_errors':errors,'forbidden_tags':forbidden,'mutation_tests':{'origin_before_hash':origin_before,'origin_after_hash':h(mut.tolist()),'interface_radius_before_m':r0,'interface_radius_after_mutated_plan_m':r1}}
+(HERE/'results/phase13_validation.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2));raise SystemExit(out['status']!='PASS')

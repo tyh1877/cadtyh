@@ -1,0 +1,47 @@
+{
+  "source_urdf": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\urdf\\px100.urdf",
+  "source_urdf_sha256": "2d56e0c10bd72d2e681cadbba5d4975b41d5e1140795da6b991231966d7defb9",
+  "sanitized_urdf_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+  "images": [
+    {
+      "path": "inputs\\images\\front.png",
+      "sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+      "bytes": 21973
+    },
+    {
+      "path": "inputs\\images\\isometric.png",
+      "sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+      "bytes": 44464
+    },
+    {
+      "path": "inputs\\images\\left.png",
+      "sha256": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca",
+      "bytes": 22000
+    },
+    {
+      "path": "inputs\\images\\rear.png",
+      "sha256": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428",
+      "bytes": 17993
+    },
+    {
+      "path": "inputs\\images\\right.png",
+      "sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+      "bytes": 22163
+    },
+    {
+      "path": "inputs\\images\\top.png",
+      "sha256": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22",
+      "bytes": 23779
+    }
+  ],
+  "engineering_text_sha256": "faeab10da52c3894b26301640a885f38081c482b7b0c92d766b415dff4583edb",
+  "forbidden_xml_tags_found": {
+    "visual": 0,
+    "collision": 0,
+    "inertial": 0,
+    "mesh": 0,
+    "geometry": 0,
+    "material": 0,
+    "transmission": 0
+  }
+}

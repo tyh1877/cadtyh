@@ -1,0 +1,229 @@
+{
+  "schema_version": "try5A_link_coarse_spec_plan_v1",
+  "link_id": "L01",
+  "role": "shoulder_housing",
+  "coarse_envelope_m": [
+    0.075,
+    0.07,
+    0.065
+  ],
+  "principal_direction": [
+    0,
+    0,
+    1
+  ],
+  "body_family": "rotary_housing",
+  "proximal_region": "waist_port",
+  "distal_region": "shoulder_pitch_port",
+  "parent_joint": "J00",
+  "child_joints": [
+    "J01"
+  ],
+  "neighboring_links": [
+    "L00",
+    "L02"
+  ],
+  "structural_path": "waist_port -> rotary_housing -> shoulder_pitch_port",
+  "critical_assembly_constraints": [
+    "preserve all L0 joint frames",
+    "body must connect declared proximal/distal regions"
+  ],
+  "skeleton_source_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+  "consumed_skeleton": {
+    "link_id": "L01",
+    "parent_joint_record": {
+      "joint_id": "J00",
+      "joint_type": "revolute",
+      "parent": "L00",
+      "child": "L01",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0508
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793
+      },
+      "mimic": null,
+      "origin_transform_parent": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0508
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_joint_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0508
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "child_joint_records": [
+      {
+        "joint_id": "J01",
+        "joint_type": "revolute",
+        "parent": "L01",
+        "child": "L02",
+        "origin_xyz_m": [
+          0.0,
+          0.0,
+          0.04225
+        ],
+        "origin_rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limits": {
+          "lower": -1.9373154697137058,
+          "upper": 1.8675022996339325
+        },
+        "mimic": null,
+        "origin_transform_parent": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.04225
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world_joint_transform": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.09305
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world_axis": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    ],
+    "canonical_world_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0508
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}

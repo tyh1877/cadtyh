@@ -1,0 +1,13 @@
+link_id,role,parent_joint,child_joints,coarse_envelope_m,principal_direction,body_family,proximal_region,distal_region
+L00,base_housing,,['J00'],"[0.125, 0.105, 0.055]","[0, 0, 1]",base_housing,ground_mount,waist_rotary_housing
+L01,shoulder_housing,J00,['J01'],"[0.075, 0.07, 0.065]","[0, 0, 1]",rotary_housing,waist_port,shoulder_pitch_port
+L02,upper_arm_link,J01,['J02'],"[0.12, 0.05, 0.035]","[0.33, 0, 0.94]",dual_side_plate,shoulder_pitch_port,elbow_fork_port
+L03,forearm_link,J02,['J03'],"[0.11, 0.045, 0.032]","[1, 0, 0]",central_web,elbow_pin_port,wrist_pitch_port
+L04,wrist_gripper_body,J03,['J04'],"[0.075, 0.06, 0.052]","[1, 0, 0]",wrist_block,wrist_pitch_port,end_side_mount
+L05,end_effector_spacer,J04,"['J05', 'J06']","[0.012, 0.025, 0.025]","[1, 0, 0]",straight_beam,wrist_fixed_mount,gripper_actuator_axis
+L06,gripper_actuator_prop,J05,[],"[0.025, 0.02, 0.02]","[1, 0, 0]",rotary_housing,actuator_axis,none
+L07,gripper_crossbar,J06,['J07'],"[0.03, 0.08, 0.018]","[0, 1, 0]",straight_beam,bar_mount,finger_carriage_mount
+L08,finger_carriage,J07,"['J08', 'J09', 'J10']","[0.035, 0.075, 0.025]","[0, 1, 0]",fork_body,bar_interface,opposed_slider_origins
+L09,left_finger,J08,[],"[0.055, 0.012, 0.018]","[1, 0, 0]",tapered_beam,left_slider_port,left_contact_tip
+L10,right_finger,J09,[],"[0.055, 0.012, 0.018]","[1, 0, 0]",tapered_beam,right_slider_port,right_contact_tip
+L11,tool_center_frame,J10,[],"[0.006, 0.006, 0.006]","[1, 0, 0]",interface_marker,tool_center_mount,none

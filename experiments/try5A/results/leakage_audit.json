@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "generator_inputs": [
+    "inputs/images",
+    "inputs/engineering_text/robot_A.md",
+    "inputs/sanitized_urdf/px100_sanitized.urdf"
+  ],
+  "forbidden_xml_tags": {
+    "visual": 0,
+    "collision": 0,
+    "inertial": 0,
+    "mesh": 0,
+    "geometry": 0,
+    "material": 0,
+    "transmission": 0
+  },
+  "gt_geometry_paths_in_generator_inputs": 0,
+  "source_step_used": false,
+  "urdf_visual_collision_removed": true
+}

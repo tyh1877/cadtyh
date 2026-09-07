@@ -1,0 +1,146 @@
+{
+  "schema_version": "try5A_link_coarse_spec_plan_v1",
+  "link_id": "L00",
+  "role": "base_housing",
+  "coarse_envelope_m": [
+    0.125,
+    0.105,
+    0.055
+  ],
+  "principal_direction": [
+    0,
+    0,
+    1
+  ],
+  "body_family": "base_housing",
+  "proximal_region": "ground_mount",
+  "distal_region": "waist_rotary_housing",
+  "parent_joint": null,
+  "child_joints": [
+    "J00"
+  ],
+  "neighboring_links": [
+    "L01"
+  ],
+  "structural_path": "ground_mount -> base_housing -> waist_rotary_housing",
+  "critical_assembly_constraints": [
+    "preserve all L0 joint frames",
+    "body must connect declared proximal/distal regions"
+  ],
+  "skeleton_source_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+  "consumed_skeleton": {
+    "link_id": "L00",
+    "parent_joint_record": null,
+    "child_joint_records": [
+      {
+        "joint_id": "J00",
+        "joint_type": "revolute",
+        "parent": "L00",
+        "child": "L01",
+        "origin_xyz_m": [
+          0.0,
+          0.0,
+          0.0508
+        ],
+        "origin_rpy_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limits": {
+          "lower": -3.141592653589793,
+          "upper": 3.141592653589793
+        },
+        "mimic": null,
+        "origin_transform_parent": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0508
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world_joint_transform": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0508
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world_axis": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "canonical_world_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "robot_id": "R01",
+  "L0": "KINEMATIC_CHECKED",
+  "L1": "ROBOT_PLANNED",
+  "L2": "INTERFACES_PLANNED",
+  "L3": "NOT_STARTED",
+  "L4": "NOT_STARTED",
+  "authorized_stop": "PHASE_3"
+}
