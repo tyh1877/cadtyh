@@ -1,0 +1,3 @@
+part_id,status,trigger_b2,failed_checks
+R02_P04,STRUCTURE_REALIZATION_FAIL,True,independent_topology;iou
+R02_P06,STRUCTURE_REALIZATION_FAIL,True,independent_topology;iou

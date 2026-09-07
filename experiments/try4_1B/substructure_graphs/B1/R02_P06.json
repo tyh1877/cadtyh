@@ -1,0 +1,351 @@
+{
+  "part_id": "R02_P06",
+  "condition": "B1",
+  "family": "explicit_gripper_substructure",
+  "substructures": [
+    {
+      "substructure_id": "S00",
+      "semantic_role": "central_carriage",
+      "parent": null,
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        62,
+        68,
+        32
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "central_carriage",
+      "symmetry_relation": null,
+      "connection_relation": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "POLYGON_EXTRUDE",
+      "parameters": {
+        "length": 62,
+        "width": 68,
+        "height": 32
+      },
+      "feature_ref": "S00"
+    },
+    {
+      "substructure_id": "S01",
+      "semantic_role": "left_rail",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        82,
+        9,
+        9
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "left_rail",
+      "symmetry_relation": "S02",
+      "connection_relation": [
+        "S03"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "ORIENTED_PRISM",
+      "parameters": {
+        "length": 82,
+        "section": [
+          9,
+          9
+        ]
+      },
+      "feature_ref": "S01"
+    },
+    {
+      "substructure_id": "S02",
+      "semantic_role": "right_rail",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        82,
+        9,
+        9
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "right_rail",
+      "symmetry_relation": "S01",
+      "connection_relation": [
+        "S04"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "ORIENTED_PRISM",
+      "parameters": {
+        "length": 82,
+        "section": [
+          9,
+          9
+        ]
+      },
+      "feature_ref": "S02"
+    },
+    {
+      "substructure_id": "S03",
+      "semantic_role": "left_slider",
+      "parent": "S01",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        25,
+        22,
+        20
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "left_slider",
+      "symmetry_relation": "S04",
+      "connection_relation": [
+        "S05"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "POLYGON_EXTRUDE",
+      "parameters": {
+        "length": 25,
+        "width": 22,
+        "height": 20
+      },
+      "feature_ref": "S03"
+    },
+    {
+      "substructure_id": "S04",
+      "semantic_role": "right_slider",
+      "parent": "S02",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        25,
+        22,
+        20
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "right_slider",
+      "symmetry_relation": "S03",
+      "connection_relation": [
+        "S06"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "POLYGON_EXTRUDE",
+      "parameters": {
+        "length": 25,
+        "width": 22,
+        "height": 20
+      },
+      "feature_ref": "S04"
+    },
+    {
+      "substructure_id": "S05",
+      "semantic_role": "left_jaw",
+      "parent": "S03",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        72,
+        24,
+        20
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "left_jaw",
+      "symmetry_relation": "S06",
+      "connection_relation": [
+        "S07"
+      ],
+      "gap_relation": "S10",
+      "pivot_relation": null,
+      "cad_strategy": "POLYGON_EXTRUDE",
+      "parameters": {
+        "length": 72,
+        "root_height": 24,
+        "tip_height": 12
+      },
+      "feature_ref": "S05"
+    },
+    {
+      "substructure_id": "S06",
+      "semantic_role": "right_jaw",
+      "parent": "S04",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        72,
+        24,
+        20
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "right_jaw",
+      "symmetry_relation": "S05",
+      "connection_relation": [
+        "S08"
+      ],
+      "gap_relation": "S10",
+      "pivot_relation": null,
+      "cad_strategy": "POLYGON_EXTRUDE",
+      "parameters": {
+        "length": 72,
+        "root_height": 24,
+        "tip_height": 12
+      },
+      "feature_ref": "S06"
+    },
+    {
+      "substructure_id": "S07",
+      "semantic_role": "left_linkage",
+      "parent": "S05",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        48,
+        8,
+        8
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "left_linkage",
+      "symmetry_relation": "S08",
+      "connection_relation": [
+        "S09"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "PROFILE_LINK",
+      "parameters": {
+        "length": 48,
+        "width": 8,
+        "endpoints": [
+          "S00",
+          "S05"
+        ]
+      },
+      "feature_ref": "S07"
+    },
+    {
+      "substructure_id": "S08",
+      "semantic_role": "right_linkage",
+      "parent": "S06",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        48,
+        8,
+        8
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "right_linkage",
+      "symmetry_relation": "S07",
+      "connection_relation": [
+        "S09"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "PROFILE_LINK",
+      "parameters": {
+        "length": 48,
+        "width": 8,
+        "endpoints": [
+          "S00",
+          "S06"
+        ]
+      },
+      "feature_ref": "S08"
+    },
+    {
+      "substructure_id": "S09",
+      "semantic_role": "pivot_group",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        14,
+        58,
+        14
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "pivot_group",
+      "symmetry_relation": null,
+      "connection_relation": [
+        "S07",
+        "S08"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "REVOLVED_OR_CYLINDRICAL_BOSS",
+      "parameters": {
+        "pivot_count": 4,
+        "radius": 7
+      },
+      "feature_ref": "S09"
+    },
+    {
+      "substructure_id": "S10",
+      "semantic_role": "working_gap",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        70,
+        34,
+        24
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "working_gap",
+      "symmetry_relation": null,
+      "connection_relation": [],
+      "gap_relation": "S05;S06",
+      "pivot_relation": null,
+      "cad_strategy": "BOOLEAN_CUT",
+      "parameters": {
+        "gap_width": 34,
+        "opening_direction": [
+          0,
+          1,
+          0
+        ]
+      },
+      "feature_ref": "S10"
+    }
+  ]
+}

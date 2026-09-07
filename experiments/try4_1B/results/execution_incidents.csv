@@ -1,0 +1,2 @@
+incident_id,stage,type,metric_values_changed,action
+structure_table_order_01,final determinism audit,substructure row order depended on invocation grouping,false,sort by part condition substructure and regenerate tables

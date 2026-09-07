@@ -1,0 +1,8 @@
+{
+  "part_id":"R02_P04","trigger":"STRUCTURE_REALIZATION_FAIL","true_structural_replan":true,
+  "old_family":"stepped_housing","new_family":"compound_profile_housing",
+  "topology_changes":["separate base side profile, cover profile and rear transition instead of one stepped block"],
+  "substructure_changes":["replace monolithic side-wall realization with compound base/cover/transition load path"],
+  "cad_strategy_changes":["stepped solid composition -> low compound polygon profiles plus transition loft"],
+  "protected_substructures":["S02 proximal_joint_boss"],"parameter_update_only":false
+}

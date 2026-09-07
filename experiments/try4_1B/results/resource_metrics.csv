@@ -1,0 +1,4 @@
+condition,parts,new_planning_outputs,new_freecad_builds,structural_replans,external_cli_calls,token_accounting
+B0,2,0,0,0,0,UNAVAILABLE
+B1,2,2,2,0,0,UNAVAILABLE
+B2,2,2,2,2,0,UNAVAILABLE

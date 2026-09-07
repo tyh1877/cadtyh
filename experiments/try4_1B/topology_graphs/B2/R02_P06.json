@@ -1,0 +1,203 @@
+{
+  "part_id": "R02_P06",
+  "condition": "B2",
+  "nodes": [
+    {
+      "node_id": "S00",
+      "role": "central_carriage",
+      "feature_ref": "S00"
+    },
+    {
+      "node_id": "S01",
+      "role": "left_rail",
+      "feature_ref": "S01"
+    },
+    {
+      "node_id": "S02",
+      "role": "right_rail",
+      "feature_ref": "S02"
+    },
+    {
+      "node_id": "S03",
+      "role": "left_slider",
+      "feature_ref": "S03"
+    },
+    {
+      "node_id": "S04",
+      "role": "right_slider",
+      "feature_ref": "S04"
+    },
+    {
+      "node_id": "S05",
+      "role": "left_jaw",
+      "feature_ref": "S05"
+    },
+    {
+      "node_id": "S06",
+      "role": "right_jaw",
+      "feature_ref": "S06"
+    },
+    {
+      "node_id": "S07",
+      "role": "left_linkage",
+      "feature_ref": "S07"
+    },
+    {
+      "node_id": "S08",
+      "role": "right_linkage",
+      "feature_ref": "S08"
+    },
+    {
+      "node_id": "S09",
+      "role": "pivot_group",
+      "feature_ref": "S09"
+    },
+    {
+      "node_id": "S10",
+      "role": "working_gap",
+      "feature_ref": "S10"
+    },
+    {
+      "node_id": "S11",
+      "role": "left_jaw_adapter",
+      "feature_ref": "S11"
+    },
+    {
+      "node_id": "S12",
+      "role": "right_jaw_adapter",
+      "feature_ref": "S12"
+    }
+  ],
+  "relations": [
+    {
+      "source": "S00",
+      "relation": "connected_to",
+      "target": "S01"
+    },
+    {
+      "source": "S00",
+      "relation": "connected_to",
+      "target": "S02"
+    },
+    {
+      "source": "S00",
+      "relation": "connected_to",
+      "target": "S03"
+    },
+    {
+      "source": "S00",
+      "relation": "connected_to",
+      "target": "S04"
+    },
+    {
+      "source": "S01",
+      "relation": "connected_to",
+      "target": "S03"
+    },
+    {
+      "source": "S01",
+      "relation": "symmetric_with",
+      "target": "S02"
+    },
+    {
+      "source": "S02",
+      "relation": "connected_to",
+      "target": "S04"
+    },
+    {
+      "source": "S02",
+      "relation": "symmetric_with",
+      "target": "S01"
+    },
+    {
+      "source": "S03",
+      "relation": "connected_to",
+      "target": "S05"
+    },
+    {
+      "source": "S03",
+      "relation": "symmetric_with",
+      "target": "S04"
+    },
+    {
+      "source": "S04",
+      "relation": "connected_to",
+      "target": "S06"
+    },
+    {
+      "source": "S04",
+      "relation": "symmetric_with",
+      "target": "S03"
+    },
+    {
+      "source": "S05",
+      "relation": "connected_to",
+      "target": "S07"
+    },
+    {
+      "source": "S05",
+      "relation": "symmetric_with",
+      "target": "S06"
+    },
+    {
+      "source": "S06",
+      "relation": "connected_to",
+      "target": "S08"
+    },
+    {
+      "source": "S06",
+      "relation": "symmetric_with",
+      "target": "S05"
+    },
+    {
+      "source": "S07",
+      "relation": "connected_to",
+      "target": "S09"
+    },
+    {
+      "source": "S07",
+      "relation": "symmetric_with",
+      "target": "S08"
+    },
+    {
+      "source": "S08",
+      "relation": "connected_to",
+      "target": "S09"
+    },
+    {
+      "source": "S08",
+      "relation": "symmetric_with",
+      "target": "S07"
+    },
+    {
+      "source": "S09",
+      "relation": "connected_to",
+      "target": "S07"
+    },
+    {
+      "source": "S09",
+      "relation": "connected_to",
+      "target": "S08"
+    },
+    {
+      "source": "S11",
+      "relation": "connected_to",
+      "target": "S05"
+    },
+    {
+      "source": "S11",
+      "relation": "symmetric_with",
+      "target": "S12"
+    },
+    {
+      "source": "S12",
+      "relation": "connected_to",
+      "target": "S06"
+    },
+    {
+      "source": "S12",
+      "relation": "symmetric_with",
+      "target": "S11"
+    }
+  ]
+}

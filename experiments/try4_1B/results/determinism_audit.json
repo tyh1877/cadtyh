@@ -1,0 +1,20 @@
+[
+  {
+    "file": "experiments/try4_1B/results/geometry_metrics.csv",
+    "before": "D84C334B80BD35853D07849F2113C56A0A9A18CB4D2EAC449C793B4B1B2BECB3",
+    "after": "D84C334B80BD35853D07849F2113C56A0A9A18CB4D2EAC449C793B4B1B2BECB3",
+    "match": true
+  },
+  {
+    "file": "experiments/try4_1B/results/topology_metrics.csv",
+    "before": "7C58F5212E8DE7F8DECCA37F18CF39C3FF61A145151147A72BD044C200A7CFE6",
+    "after": "7C58F5212E8DE7F8DECCA37F18CF39C3FF61A145151147A72BD044C200A7CFE6",
+    "match": true
+  },
+  {
+    "file": "experiments/try4_1B/results/substructure_metrics.csv",
+    "before": "D983E1E7C53E53CDFBEACE738C45F27186B49D15E140FE2E7075698EDB92A746",
+    "after": "D983E1E7C53E53CDFBEACE738C45F27186B49D15E140FE2E7075698EDB92A746",
+    "match": true
+  }
+]

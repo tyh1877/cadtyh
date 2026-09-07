@@ -1,0 +1,14 @@
+{
+  "experiment":"RobotCAD Try-4.1B Shape-Family Realization & Structural Replanning Pilot",
+  "parts":["R02_P04","R02_P06"],
+  "B0":"frozen experiments/try4_1A/A1",
+  "B1":"Executable Shape-Family Schema one-shot realization",
+  "B2":"one true structural replan only after B1 structure/shape failure",
+  "same_freecad_backend":"try4/scripts/freecad_t1_executor.py",
+  "same_geometry_evaluator":"try4/scripts/evaluate_phase5.py",
+  "shape_structure_gate":{"shape_family_schema_valid":true,"substructure_realization_recall_min":1.0,"required_feature_coverage_min":1.0,"independent_topology_relation_f1_min":0.8,"voxel_iou_min":0.35,"normalized_hd95_max":0.20},
+  "max_structural_replans":1,
+  "iterative_parameter_repair":false,
+  "generator_forbidden_inputs":["topology_gt","GT STEP","GT B-Rep","GT exact parameters","GT feature tree"],
+  "stop_after":"Try-4.1B report"
+}

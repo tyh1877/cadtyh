@@ -1,0 +1,7 @@
+part_id,condition,fcstd_valid,reopen,recompute,step_export,stl_export,editable,silent_fallbacks
+R02_P04,B0,True,PASS,PASS,True,True,True,0
+R02_P04,B1,True,PASS,PASS,True,True,True,0
+R02_P04,B2,True,PASS,PASS,True,True,True,0
+R02_P06,B0,True,PASS,PASS,True,True,True,0
+R02_P06,B1,True,PASS,PASS,True,True,True,0
+R02_P06,B2,True,PASS,PASS,True,True,True,0

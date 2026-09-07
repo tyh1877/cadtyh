@@ -1,0 +1,93 @@
+{
+  "part_id": "R02_P04",
+  "condition": "B1",
+  "nodes": [
+    {
+      "node_id": "S00",
+      "role": "base_housing_body",
+      "feature_ref": "S00"
+    },
+    {
+      "node_id": "S01",
+      "role": "upper_stepped_cover",
+      "feature_ref": "S01"
+    },
+    {
+      "node_id": "S02",
+      "role": "proximal_joint_boss",
+      "feature_ref": "S02"
+    },
+    {
+      "node_id": "S03",
+      "role": "rear_transition",
+      "feature_ref": "S03"
+    },
+    {
+      "node_id": "S04",
+      "role": "side_wall_pair",
+      "feature_ref": "S04"
+    },
+    {
+      "node_id": "S05",
+      "role": "local_recess",
+      "feature_ref": "S05"
+    },
+    {
+      "node_id": "S06",
+      "role": "mounting_interface",
+      "feature_ref": "S06"
+    }
+  ],
+  "relations": [
+    {
+      "source": "S00",
+      "relation": "connected_to",
+      "target": "S01"
+    },
+    {
+      "source": "S00",
+      "relation": "connected_to",
+      "target": "S02"
+    },
+    {
+      "source": "S00",
+      "relation": "connected_to",
+      "target": "S03"
+    },
+    {
+      "source": "S00",
+      "relation": "connected_to",
+      "target": "S04"
+    },
+    {
+      "source": "S01",
+      "relation": "connected_to",
+      "target": "S00"
+    },
+    {
+      "source": "S02",
+      "relation": "connected_to",
+      "target": "S00"
+    },
+    {
+      "source": "S03",
+      "relation": "connected_to",
+      "target": "S00"
+    },
+    {
+      "source": "S04",
+      "relation": "connected_to",
+      "target": "S00"
+    },
+    {
+      "source": "S04",
+      "relation": "symmetric_with",
+      "target": "S04"
+    },
+    {
+      "source": "S06",
+      "relation": "connected_to",
+      "target": "S01"
+    }
+  ]
+}

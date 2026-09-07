@@ -1,0 +1,6 @@
+{
+  "part_id":"R02_P04","annotation_mode":"offline rule/manual annotation from GT reference and source component membership; evaluator-only","generator_access":false,
+  "nodes":[{"role":"base_housing_body","type":"functional_body"},{"role":"upper_stepped_cover","type":"structural_member"},{"role":"proximal_joint_boss","type":"joint_region"},{"role":"rear_transition","type":"structural_member"},{"role":"side_wall_pair","type":"structural_member"},{"role":"local_recess","type":"open_space"},{"role":"mounting_interface","type":"interface_region"}],
+  "relations":[["proximal_joint_boss","attached_at_end","base_housing_body"],["upper_stepped_cover","attached_on_side","base_housing_body"],["rear_transition","connected_to","base_housing_body"],["side_wall_pair","surrounds","local_recess"],["side_wall_pair","symmetric_with","side_wall_pair"],["mounting_interface","attached_on_side","upper_stepped_cover"]],
+  "required_open_spaces":["local_recess"],"required_symmetry":[["side_wall_pair","symmetric_with","side_wall_pair"]],"source_component_ids":["C04"]
+}

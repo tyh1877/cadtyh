@@ -1,0 +1,21 @@
+{
+  "frozen_at": "2026-09-07T09:41:25.097011+00:00",
+  "before_b1_execution": true,
+  "evaluator_only_topology_gt": {
+    "topology_gt\\R02_P04_topology_gt.json": "7ac5ab98d245ff33ee6741cd5096bb8da29ebae1ee841d02b56b4f049fae899c",
+    "topology_gt\\R02_P06_topology_gt.json": "8459100425565c29a9eaf6da9a11700c47b3412a0b4aff916e1205a18145ed6f"
+  },
+  "generator_method_files": {
+    "protocol.json": "f266b0e8a6ae8a96364ae4dbd41782952e82c31e40203329f2f7076c44403f8d",
+    "schemas\\executable_shape_family_v1.schema.json": "51fa7af5eaaf0dc4e2f6950c90cdb62bc907237b19d153d8aec58f188d2ed6c9",
+    "docs\\executable_shape_family_v1.md": "658f96984beb71d60b115655e9465066386de1b9cb61b16b4a821175c82e97f1",
+    "scripts\\materialize_condition.py": "240c13e3a4f11cf11b633941a8ed32fd6e9d77a62281ccfe07db13074b2c8423",
+    "scripts\\shape_family_gate.py": "89f020bc1efdd6c6f7e253d6d51202ca59c0d22d3acc02dda6ac68daf79ae207",
+    "scripts\\run_condition.py": "131bb3184aa00646321fb4254969b364431252a53ec5cd17fc890cae4b335fa7",
+    "shape_family_schemas\\B1\\R02_P04.json": "a34d2093225d02f79a02a5cdad67ff7d30061a2ba21bd27dc1191a21c1ecb8ad",
+    "shape_family_schemas\\B1\\R02_P06.json": "fcaf30c35a3259f0773ecded0245631328b7e23fc882d248a9b359e86dae8a22",
+    "try4\\scripts\\freecad_t1_executor.py": "f9bf2909e7442c76fae27faee89ccced195a6094c5929a189ca858d8f0dbc680",
+    "try4\\protocol\\phase5_evaluator_v1.json": "3b9f7cb93ef695a3e0ca8eda6a90af5a8d8d6cd2a07e5afa7b1df722ed21ee1e"
+  },
+  "generator_forbidden_path_scan": "materialize_condition.py contains no topology_gt token"
+}

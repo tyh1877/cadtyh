@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "checks": {
+    "b1_generator_hashes_match": true,
+    "evaluation_hashes_match": true,
+    "b2_hashes_match": true,
+    "topology_gt_hashes_match": true,
+    "generator_does_not_open_topology_gt": true,
+    "four_schema_instances_valid": true,
+    "four_new_builds_complete": true,
+    "native_valid_zero_fallback": true,
+    "b0_not_regenerated": true,
+    "b1_both_trigger_b2": true,
+    "b2_true_replans": true,
+    "protected_operations_preserved": true,
+    "geometry_rows_6": true,
+    "topology_rows_6": true,
+    "substructure_rows_38": true,
+    "deterministic_tables": true,
+    "contact_sheets_2": true,
+    "b2_final_gate_recorded": true,
+    "no_iterative_rounds": true,
+    "no_r03": true,
+    "try4_1c_absent": true
+  },
+  "b1_method_files": {
+    "protocol.json": true,
+    "schemas\\executable_shape_family_v1.schema.json": true,
+    "docs\\executable_shape_family_v1.md": true,
+    "scripts\\materialize_condition.py": true,
+    "scripts\\shape_family_gate.py": true,
+    "scripts\\run_condition.py": true,
+    "shape_family_schemas\\B1\\R02_P04.json": true,
+    "shape_family_schemas\\B1\\R02_P06.json": true,
+    "try4\\scripts\\freecad_t1_executor.py": true,
+    "try4\\protocol\\phase5_evaluator_v1.json": true
+  },
+  "evaluation_files": {
+    "scripts/evaluate_conditions.py": true,
+    "scripts/evaluate_structure.py": true,
+    "scripts/structure_gate.py": true,
+    "protocol.json": true,
+    "topology_gt/R02_P04_topology_gt.json": true,
+    "topology_gt/R02_P06_topology_gt.json": true,
+    "../../try4/scripts/evaluate_phase5.py": true
+  },
+  "b2_method_files": {
+    "shape_family_schemas\\B2\\R02_P04.json": true,
+    "shape_family_schemas\\B2\\R02_P06.json": true,
+    "structural_replans\\R02_P04.json": true,
+    "structural_replans\\R02_P06.json": true,
+    "scripts\\materialize_condition.py": true,
+    "scripts\\run_condition.py": true,
+    "schemas\\executable_shape_family_v1.schema.json": true
+  },
+  "new_builds": [
+    {
+      "condition": "B1",
+      "part_id": "R02_P04",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "B1",
+      "part_id": "R02_P06",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "B2",
+      "part_id": "R02_P04",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "condition": "B2",
+      "part_id": "R02_P06",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    }
+  ]
+}

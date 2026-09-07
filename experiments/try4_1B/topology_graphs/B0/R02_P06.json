@@ -1,0 +1,168 @@
+{
+  "part_id": "R02_P06",
+  "condition": "A1",
+  "nodes": [
+    {
+      "node_id": "n0",
+      "role": "central_carriage",
+      "node_type": "functional_body",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    },
+    {
+      "node_id": "n1",
+      "role": "left_rail_slider",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    },
+    {
+      "node_id": "n2",
+      "role": "right_rail_slider",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    },
+    {
+      "node_id": "n3",
+      "role": "left_jaw",
+      "node_type": "functional_body",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "n4",
+      "role": "right_jaw",
+      "node_type": "functional_body",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "n5",
+      "role": "grip_gap",
+      "node_type": "open_space",
+      "cad_feature_refs": [
+        "F00"
+      ]
+    },
+    {
+      "node_id": "n6",
+      "role": "left_link",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F02"
+      ]
+    },
+    {
+      "node_id": "n7",
+      "role": "right_link",
+      "node_type": "structural_member",
+      "cad_feature_refs": [
+        "F02"
+      ]
+    },
+    {
+      "node_id": "n8",
+      "role": "pivot_pair",
+      "node_type": "joint_region",
+      "cad_feature_refs": [
+        "F02"
+      ]
+    },
+    {
+      "node_id": "n9",
+      "role": "proximal_interface",
+      "node_type": "interface_region",
+      "cad_feature_refs": [
+        "F01"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "source": "n0",
+      "relation": "connected_to",
+      "target": "n1"
+    },
+    {
+      "source": "n0",
+      "relation": "connected_to",
+      "target": "n2"
+    },
+    {
+      "source": "n1",
+      "relation": "parallel_to",
+      "target": "n2"
+    },
+    {
+      "source": "n1",
+      "relation": "symmetric_with",
+      "target": "n2"
+    },
+    {
+      "source": "n1",
+      "relation": "connected_to",
+      "target": "n3"
+    },
+    {
+      "source": "n2",
+      "relation": "connected_to",
+      "target": "n4"
+    },
+    {
+      "source": "n3",
+      "relation": "symmetric_with",
+      "target": "n4"
+    },
+    {
+      "source": "n3",
+      "relation": "separated_by_gap",
+      "target": "n4"
+    },
+    {
+      "source": "n5",
+      "relation": "separated_by_gap",
+      "target": "n3"
+    },
+    {
+      "source": "n5",
+      "relation": "separated_by_gap",
+      "target": "n4"
+    },
+    {
+      "source": "n6",
+      "relation": "connected_to",
+      "target": "n3"
+    },
+    {
+      "source": "n7",
+      "relation": "connected_to",
+      "target": "n4"
+    },
+    {
+      "source": "n6",
+      "relation": "symmetric_with",
+      "target": "n7"
+    },
+    {
+      "source": "n8",
+      "relation": "connected_to",
+      "target": "n6"
+    },
+    {
+      "source": "n8",
+      "relation": "connected_to",
+      "target": "n7"
+    },
+    {
+      "source": "n9",
+      "relation": "attached_at_end",
+      "target": "n0"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "part_id": "R02_P04",
+  "condition": "B2",
+  "family": "compound_profile_housing",
+  "substructures": [
+    {
+      "substructure_id": "S00",
+      "semantic_role": "base_housing_body",
+      "parent": null,
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        150,
+        90,
+        32
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "base_housing_body",
+      "symmetry_relation": null,
+      "connection_relation": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "POLYGON_EXTRUDE",
+      "parameters": {
+        "side_profile": "low compound polygon",
+        "height": 32
+      },
+      "feature_ref": "S00"
+    },
+    {
+      "substructure_id": "S01",
+      "semantic_role": "upper_stepped_cover",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        124,
+        76,
+        9
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "upper_stepped_cover",
+      "symmetry_relation": null,
+      "connection_relation": [
+        "S00"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "POLYGON_EXTRUDE",
+      "parameters": {
+        "step_count": 3,
+        "profile_stations": [
+          0,
+          28,
+          96,
+          124
+        ]
+      },
+      "feature_ref": "S01"
+    },
+    {
+      "substructure_id": "S02",
+      "semantic_role": "proximal_joint_boss",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        58,
+        58,
+        58
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "proximal_joint_boss",
+      "symmetry_relation": null,
+      "connection_relation": [
+        "S00"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "REVOLVED_OR_CYLINDRICAL_BOSS",
+      "parameters": {
+        "radius": 29,
+        "depth": 58
+      },
+      "feature_ref": "S02"
+    },
+    {
+      "substructure_id": "S03",
+      "semantic_role": "rear_transition",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        48,
+        62,
+        30
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "rear_transition",
+      "symmetry_relation": null,
+      "connection_relation": [
+        "S00"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "MULTI_PROFILE_LOFT",
+      "parameters": {
+        "construction": "separate transition loft",
+        "taper": 0.72
+      },
+      "feature_ref": "S03"
+    },
+    {
+      "substructure_id": "S04",
+      "semantic_role": "side_wall_pair",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        112,
+        76,
+        28
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "side_wall_pair",
+      "symmetry_relation": "S04",
+      "connection_relation": [
+        "S00"
+      ],
+      "gap_relation": "S05",
+      "pivot_relation": null,
+      "cad_strategy": "MIRRORED_PAIR",
+      "parameters": {
+        "wall_thickness": 8,
+        "spacing": 60
+      },
+      "feature_ref": "S04"
+    },
+    {
+      "substructure_id": "S05",
+      "semantic_role": "local_recess",
+      "parent": "S00",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        52,
+        24,
+        18
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "local_recess",
+      "symmetry_relation": null,
+      "connection_relation": [],
+      "gap_relation": "S04",
+      "pivot_relation": null,
+      "cad_strategy": "BOOLEAN_CUT",
+      "parameters": {
+        "length": 52,
+        "width": 24,
+        "depth": 18
+      },
+      "feature_ref": "S05"
+    },
+    {
+      "substructure_id": "S06",
+      "semantic_role": "mounting_interface",
+      "parent": "S01",
+      "reference_frame": "part_local",
+      "approximate_bbox": [
+        80,
+        46,
+        6
+      ],
+      "orientation": [
+        1,
+        0,
+        0
+      ],
+      "shape_family": "mounting_interface",
+      "symmetry_relation": null,
+      "connection_relation": [
+        "S01"
+      ],
+      "gap_relation": null,
+      "pivot_relation": null,
+      "cad_strategy": "BOOLEAN_CUT",
+      "parameters": {
+        "hole_count": 4,
+        "hole_radius": 3
+      },
+      "feature_ref": "S06"
+    }
+  ]
+}

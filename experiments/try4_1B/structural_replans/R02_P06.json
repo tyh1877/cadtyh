@@ -1,0 +1,8 @@
+{
+  "part_id":"R02_P06","trigger":"STRUCTURE_REALIZATION_FAIL","true_structural_replan":true,
+  "old_family":"explicit_gripper_substructure","new_family":"articulated_plate_gripper",
+  "topology_changes":["insert left/right jaw adapters between sliders and jaws","split pivot realization into proximal and distal pairs"],
+  "substructure_changes":["add jaw-adapter pair","replace generic link bars with profile link plates"],
+  "cad_strategy_changes":["oriented-box linkage -> polygon-profile linkage","box jaw -> hooked plate profile"],
+  "protected_substructures":["S01 left_rail","S02 right_rail"],"parameter_update_only":false
+}

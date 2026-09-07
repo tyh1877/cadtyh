@@ -1,0 +1,11 @@
+"""Validate and freeze the single true structural replan before B2 execution."""
+import hashlib,json
+from datetime import datetime,timezone
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[3];HERE=ROOT/'experiments/try4_1B'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+checks={};protected={}
+for pid in ('R02_P04','R02_P06'):
+ b1=json.loads((HERE/f'shape_family_schemas/B1/{pid}.json').read_text());b2=json.loads((HERE/f'shape_family_schemas/B2/{pid}.json').read_text());r=json.loads((HERE/f'structural_replans/{pid}.json').read_text());s1={x['substructure_id'] for x in b1['substructures']};s2={x['substructure_id'] for x in b2['substructures']};strat1={x['substructure_id']:x['cad_strategy'] for x in b1['substructures']};strat2={x['substructure_id']:x['cad_strategy'] for x in b2['substructures']};family=b1['family']!=b2['family'];sub_or_strategy=s1!=s2 or strat1!=strat2;checks[pid]={'family_changed':family,'substructure_or_strategy_changed':sub_or_strategy,'structural_change_present':family or sub_or_strategy,'contract_true_replan':r['true_structural_replan'] and not r['parameter_update_only']}
+ ids=['op_004'] if pid=='R02_P04' else ['op_002','op_003'];o1={x['op_id']:x for x in b1['construction_sequence']};o2={x['op_id']:x for x in b2['construction_sequence']};protected[pid]={i:hashlib.sha256(json.dumps(o1[i],sort_keys=True).encode()).hexdigest()==hashlib.sha256(json.dumps(o2[i],sort_keys=True).encode()).hexdigest() for i in ids}
+files=[*sorted((HERE/'shape_family_schemas/B2').glob('*.json')),*sorted((HERE/'structural_replans').glob('*.json')),HERE/'scripts/materialize_condition.py',HERE/'scripts/run_condition.py',HERE/'schemas/executable_shape_family_v1.schema.json'];out={'frozen_at':datetime.now(timezone.utc).isoformat(),'before_b2_execution':True,'true_replan_checks':checks,'protected_operation_checks':protected,'files':{str(p.relative_to(HERE)):sha(p) for p in files}};(HERE/'results/b2_method_snapshot.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out,indent=2));raise SystemExit(not all(v['structural_change_present'] and v['contract_true_replan'] for v in checks.values()) or not all(all(v.values()) for v in protected.values()))

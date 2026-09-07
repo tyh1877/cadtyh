@@ -1,0 +1,314 @@
+{
+  "features": [
+    {
+      "feature_id": "S00",
+      "requirement_refs": [],
+      "feature_type": "central_carriage",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "central_carriage",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          62,
+          68,
+          32
+        ]
+      },
+      "shape_family": "central_carriage",
+      "intended_cad_strategy": "POLYGON_EXTRUDE",
+      "dependencies": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S01",
+      "requirement_refs": [],
+      "feature_type": "left_rail",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "left_rail",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          82,
+          9,
+          9
+        ]
+      },
+      "shape_family": "left_rail",
+      "intended_cad_strategy": "ORIENTED_PRISM",
+      "dependencies": [
+        "S03"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S02",
+      "requirement_refs": [],
+      "feature_type": "right_rail",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "right_rail",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          82,
+          9,
+          9
+        ]
+      },
+      "shape_family": "right_rail",
+      "intended_cad_strategy": "ORIENTED_PRISM",
+      "dependencies": [
+        "S04"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S03",
+      "requirement_refs": [],
+      "feature_type": "left_slider",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "left_slider",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          25,
+          22,
+          20
+        ]
+      },
+      "shape_family": "left_slider",
+      "intended_cad_strategy": "POLYGON_EXTRUDE",
+      "dependencies": [
+        "S05"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S04",
+      "requirement_refs": [],
+      "feature_type": "right_slider",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "right_slider",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          25,
+          22,
+          20
+        ]
+      },
+      "shape_family": "right_slider",
+      "intended_cad_strategy": "POLYGON_EXTRUDE",
+      "dependencies": [
+        "S06"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S05",
+      "requirement_refs": [],
+      "feature_type": "left_jaw",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "left_jaw",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          72,
+          24,
+          20
+        ]
+      },
+      "shape_family": "left_jaw",
+      "intended_cad_strategy": "POLYGON_EXTRUDE",
+      "dependencies": [
+        "S07"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S06",
+      "requirement_refs": [],
+      "feature_type": "right_jaw",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "right_jaw",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          72,
+          24,
+          20
+        ]
+      },
+      "shape_family": "right_jaw",
+      "intended_cad_strategy": "POLYGON_EXTRUDE",
+      "dependencies": [
+        "S08"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S07",
+      "requirement_refs": [],
+      "feature_type": "left_linkage",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "left_linkage",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          48,
+          8,
+          8
+        ]
+      },
+      "shape_family": "left_linkage",
+      "intended_cad_strategy": "PROFILE_LINK",
+      "dependencies": [
+        "S09"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S08",
+      "requirement_refs": [],
+      "feature_type": "right_linkage",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "right_linkage",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          48,
+          8,
+          8
+        ]
+      },
+      "shape_family": "right_linkage",
+      "intended_cad_strategy": "PROFILE_LINK",
+      "dependencies": [
+        "S09"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S09",
+      "requirement_refs": [],
+      "feature_type": "pivot_group",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "pivot_group",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          14,
+          58,
+          14
+        ]
+      },
+      "shape_family": "pivot_group",
+      "intended_cad_strategy": "REVOLVED_OR_CYLINDRICAL_BOSS",
+      "dependencies": [
+        "S07",
+        "S08"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S10",
+      "requirement_refs": [],
+      "feature_type": "working_gap",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "working_gap",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          70,
+          34,
+          24
+        ]
+      },
+      "shape_family": "working_gap",
+      "intended_cad_strategy": "BOOLEAN_CUT",
+      "dependencies": [],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    }
+  ]
+}

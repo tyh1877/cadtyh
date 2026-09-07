@@ -1,0 +1,201 @@
+{
+  "features": [
+    {
+      "feature_id": "S00",
+      "requirement_refs": [],
+      "feature_type": "base_housing_body",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "base_housing_body",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          145,
+          88,
+          38
+        ]
+      },
+      "shape_family": "base_housing_body",
+      "intended_cad_strategy": "POLYGON_EXTRUDE",
+      "dependencies": [
+        "S01",
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S01",
+      "requirement_refs": [],
+      "feature_type": "upper_stepped_cover",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "upper_stepped_cover",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          105,
+          68,
+          15
+        ]
+      },
+      "shape_family": "upper_stepped_cover",
+      "intended_cad_strategy": "POLYGON_EXTRUDE",
+      "dependencies": [
+        "S00"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S02",
+      "requirement_refs": [],
+      "feature_type": "proximal_joint_boss",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "proximal_joint_boss",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          58,
+          58,
+          58
+        ]
+      },
+      "shape_family": "proximal_joint_boss",
+      "intended_cad_strategy": "REVOLVED_OR_CYLINDRICAL_BOSS",
+      "dependencies": [
+        "S00"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S03",
+      "requirement_refs": [],
+      "feature_type": "rear_transition",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "rear_transition",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          48,
+          62,
+          30
+        ]
+      },
+      "shape_family": "rear_transition",
+      "intended_cad_strategy": "MULTI_PROFILE_LOFT",
+      "dependencies": [
+        "S00"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S04",
+      "requirement_refs": [],
+      "feature_type": "side_wall_pair",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "side_wall_pair",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          112,
+          76,
+          28
+        ]
+      },
+      "shape_family": "side_wall_pair",
+      "intended_cad_strategy": "MIRRORED_PAIR",
+      "dependencies": [
+        "S00"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S05",
+      "requirement_refs": [],
+      "feature_type": "local_recess",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "local_recess",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          52,
+          24,
+          18
+        ]
+      },
+      "shape_family": "local_recess",
+      "intended_cad_strategy": "BOOLEAN_CUT",
+      "dependencies": [],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    },
+    {
+      "feature_id": "S06",
+      "requirement_refs": [],
+      "feature_type": "mounting_interface",
+      "role": "substructure",
+      "evidence": [
+        "isolated_front",
+        "isolated_side",
+        "isolated_top",
+        "isolated_isometric"
+      ],
+      "reference_region": "mounting_interface",
+      "estimated_dimensions_mm": {
+        "bbox": [
+          80,
+          46,
+          6
+        ]
+      },
+      "shape_family": "mounting_interface",
+      "intended_cad_strategy": "BOOLEAN_CUT",
+      "dependencies": [
+        "S01"
+      ],
+      "critical": true,
+      "confidence": 0.75,
+      "status": "PLANNED"
+    }
+  ]
+}

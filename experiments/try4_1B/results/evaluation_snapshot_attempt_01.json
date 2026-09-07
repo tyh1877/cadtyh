@@ -1,0 +1,13 @@
+{
+  "frozen_at": "2026-09-07T09:44:43.471480+00:00",
+  "before_b1_metrics": true,
+  "files": {
+    "scripts/evaluate_conditions.py": "1f313c4ccfd2966da4fbcd75b88fdee936bd294d6f36bd6f021052197e3a09e9",
+    "scripts/evaluate_structure.py": "8ff2db84a75a97591daf587ac2bb6b73125ab0180f26298b0e6408531d1899e5",
+    "scripts/structure_gate.py": "77484d6b88f794c3402ecfa8dc8c24e300f41c574703e19ba5cc3e4e21b04810",
+    "protocol.json": "f266b0e8a6ae8a96364ae4dbd41782952e82c31e40203329f2f7076c44403f8d",
+    "topology_gt/R02_P04_topology_gt.json": "7ac5ab98d245ff33ee6741cd5096bb8da29ebae1ee841d02b56b4f049fae899c",
+    "topology_gt/R02_P06_topology_gt.json": "8459100425565c29a9eaf6da9a11700c47b3412a0b4aff916e1205a18145ed6f",
+    "../../try4/scripts/evaluate_phase5.py": "41683406bceb45d2da14fb4027bfa33544fdf583d828717c4e0c09c84a545374"
+  }
+}

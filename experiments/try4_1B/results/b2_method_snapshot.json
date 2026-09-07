@@ -1,0 +1,36 @@
+{
+  "frozen_at": "2026-09-07T09:50:59.636830+00:00",
+  "before_b2_execution": true,
+  "true_replan_checks": {
+    "R02_P04": {
+      "family_changed": true,
+      "substructure_or_strategy_changed": false,
+      "structural_change_present": true,
+      "contract_true_replan": true
+    },
+    "R02_P06": {
+      "family_changed": true,
+      "substructure_or_strategy_changed": true,
+      "structural_change_present": true,
+      "contract_true_replan": true
+    }
+  },
+  "protected_operation_checks": {
+    "R02_P04": {
+      "op_004": true
+    },
+    "R02_P06": {
+      "op_002": true,
+      "op_003": true
+    }
+  },
+  "files": {
+    "shape_family_schemas\\B2\\R02_P04.json": "0df8d303360f7d8df11ead232f2f3099a11f6b020260abbaaca59e97fc7d01de",
+    "shape_family_schemas\\B2\\R02_P06.json": "cecb7b19ed6ab9d030f046bd1cd07cbdb6127fd2c5a3775f072e9e59b3c03c55",
+    "structural_replans\\R02_P04.json": "971eabf638d7e8baa876a0b612cee537bca12eca87edeeca4cd122b9dba694c0",
+    "structural_replans\\R02_P06.json": "7c20b2864ec6fad442b90271f76dc2fe0eba31e687bf6e833c4adc35b7f62bf7",
+    "scripts\\materialize_condition.py": "240c13e3a4f11cf11b633941a8ed32fd6e9d77a62281ccfe07db13074b2c8423",
+    "scripts\\run_condition.py": "131bb3184aa00646321fb4254969b364431252a53ec5cd17fc890cae4b335fa7",
+    "schemas\\executable_shape_family_v1.schema.json": "51fa7af5eaaf0dc4e2f6950c90cdb62bc907237b19d153d8aec58f188d2ed6c9"
+  }
+}
