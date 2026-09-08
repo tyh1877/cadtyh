@@ -1,0 +1,17 @@
+{
+  "source": "reference multi-view image + current assembly render",
+  "link_id": "L00",
+  "region": "upper_body_region",
+  "issue": "base should retain broad radial footprint while its upper housing must be shorter to clear shoulder",
+  "evidence_views": [
+    "front",
+    "isometric"
+  ],
+  "recommended_action": "LOCAL_SECTION_SHRINK",
+  "constraints": {
+    "preserve_radial_base_silhouette": true,
+    "max_radius_reduction_fraction": 0.0,
+    "reduce_only_vertical_upper_envelope": true
+  },
+  "unsupported_feature_hallucination": false
+}

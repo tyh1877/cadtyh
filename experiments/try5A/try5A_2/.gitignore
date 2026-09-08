@@ -21,3 +21,10 @@
 evaluator/*.txt
 __pycache__/
 *.pyc
+
+/mechanism_validation/*/*/model.FCStd
+/mechanism_validation/*/*/model.step
+/mechanism_validation/*/*/model.stl
+/mechanism_validation/*/*/renders/
+/mechanism_validation/*/collision_rows.json
+/mechanism_validation/*/*.txt

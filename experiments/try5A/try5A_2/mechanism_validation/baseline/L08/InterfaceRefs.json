@@ -1,0 +1,106 @@
+{
+  "link_id": "L08",
+  "shared_contract_consumed": true,
+  "interfaces": [
+    {
+      "joint_id": "J07",
+      "side": "child",
+      "center_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "geometry_center_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_local": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius_mm": 9.6,
+      "depth_mm": 8.399999999999999,
+      "interface_family": "planar_mount_interface",
+      "complementary_geometry": true,
+      "contract_sha256": "f65442b50e014a78e26f42e930a3e516c9ca2f26c9e6721a78df7730fc9159b0",
+      "target_gap_m": 0.0
+    },
+    {
+      "joint_id": "J08",
+      "side": "parent",
+      "center_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "geometry_center_local_m": [
+        0.0,
+        0.026,
+        0.0
+      ],
+      "axis_local": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius_mm": 5.76,
+      "depth_mm": 34.599999999999994,
+      "interface_family": "linear_slider_interface",
+      "complementary_geometry": true,
+      "contract_sha256": "37beffbdbc8bb1439d79a38f691a000e7d1f4434b030a727fe37941189976af9",
+      "target_gap_m": 0.0005
+    },
+    {
+      "joint_id": "J09",
+      "side": "parent",
+      "center_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "geometry_center_local_m": [
+        0.0,
+        -0.026,
+        0.0
+      ],
+      "axis_local": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius_mm": 5.76,
+      "depth_mm": 34.599999999999994,
+      "interface_family": "linear_slider_interface",
+      "complementary_geometry": true,
+      "contract_sha256": "b79e1d1ab81613cbf727c37af7adf14db90731eb0dcd15afc4072f75802c6a51",
+      "target_gap_m": 0.0005
+    },
+    {
+      "joint_id": "J10",
+      "side": "parent",
+      "center_local_m": [
+        0.027575,
+        0.0,
+        0.0
+      ],
+      "geometry_center_local_m": [
+        0.027575,
+        0.0,
+        0.0
+      ],
+      "axis_local": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius_mm": 3.0,
+      "depth_mm": 4.0,
+      "interface_family": "planar_mount_interface",
+      "complementary_geometry": true,
+      "contract_sha256": "1f21b353844eb49973e01fcc4a099575843c5e6634cf1c796011e24b721784d4",
+      "target_gap_m": 0.0
+    }
+  ]
+}

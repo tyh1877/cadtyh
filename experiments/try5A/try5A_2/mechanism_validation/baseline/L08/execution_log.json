@@ -1,0 +1,1156 @@
+[
+  {
+    "op_id": "op_001",
+    "requested_operation": "cylinder_primitive",
+    "executed_native_operation": "Part::Cylinder",
+    "input_parameters": {
+      "op_id": "op_001",
+      "op_type": "cylinder_primitive",
+      "target_body": "op_001",
+      "dependencies": [],
+      "feature_ref": "IF_J07",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "radius_mm": 9.6,
+      "height_mm": 8.399999999999999,
+      "operation_mode": "new_body"
+    },
+    "native_object_name": "op_001",
+    "native_object_type": "Part::Cylinder",
+    "start_time": 1788875185.806834,
+    "end_time": 1788875185.9012454,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": null
+  },
+  {
+    "op_id": "op_002",
+    "requested_operation": "cylinder_primitive",
+    "executed_native_operation": "Part::Cylinder",
+    "input_parameters": {
+      "op_id": "op_002",
+      "op_type": "cylinder_primitive",
+      "target_body": "op_002",
+      "dependencies": [],
+      "feature_ref": "IF_J08",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "center": [
+        0.0,
+        26.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius_mm": 6.51,
+      "height_mm": 34.599999999999994,
+      "operation_mode": "new_body"
+    },
+    "native_object_name": "op_002",
+    "native_object_type": "Part::Cylinder",
+    "start_time": 1788875185.9012454,
+    "end_time": 1788875185.905754,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": null
+  },
+  {
+    "op_id": "op_003",
+    "requested_operation": "cylinder_primitive",
+    "executed_native_operation": "Part::Cylinder",
+    "input_parameters": {
+      "op_id": "op_003",
+      "op_type": "cylinder_primitive",
+      "target_body": "op_003",
+      "dependencies": [],
+      "feature_ref": "IF_J08",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "center": [
+        0.0,
+        26.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius_mm": 6.06,
+      "height_mm": 41.51999999999999,
+      "operation_mode": "new_body"
+    },
+    "native_object_name": "op_003",
+    "native_object_type": "Part::Cylinder",
+    "start_time": 1788875185.905754,
+    "end_time": 1788875185.9097545,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": null
+  },
+  {
+    "op_id": "op_004",
+    "requested_operation": "boolean_cut",
+    "executed_native_operation": "Part::Cut",
+    "input_parameters": {
+      "op_id": "op_004",
+      "op_type": "boolean_cut",
+      "target_body": "op_002",
+      "dependencies": [
+        "op_002",
+        "op_003"
+      ],
+      "feature_ref": "IF_J08",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "tool_bodies": [
+        "op_003"
+      ]
+    },
+    "native_object_name": "op_004",
+    "native_object_type": "Part::Cut",
+    "start_time": 1788875185.9097545,
+    "end_time": 1788875185.9194098,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": {
+      "operation": "boolean_cut",
+      "target": {
+        "shape_null": false,
+        "shape_valid": true,
+        "volume": 4606.67897431667,
+        "bbox": {
+          "xmin": -6.510000000000002,
+          "xmax": 6.510000000000002,
+          "ymin": 8.700000000000001,
+          "ymax": 43.300000000000004,
+          "zmin": -6.462534770378341,
+          "zmax": 6.462534770378335,
+          "xlength": 13.020000000000003,
+          "ylength": 34.6,
+          "zlength": 12.925069540756677
+        },
+        "faces": 3,
+        "edges": 3,
+        "solids": 1
+      },
+      "tool": {
+        "shape_null": false,
+        "shape_valid": true,
+        "volume": 4790.186978734329,
+        "bbox": {
+          "xmin": -6.060000000000001,
+          "xmax": 6.060000000000001,
+          "ymin": 5.240000000000004,
+          "ymax": 46.760000000000005,
+          "zmin": -6.015815777034217,
+          "zmax": 6.01581577703421,
+          "xlength": 12.120000000000003,
+          "ylength": 41.52,
+          "zlength": 12.031631554068428
+        },
+        "faces": 3,
+        "edges": 3,
+        "solids": 1
+      },
+      "bbox_intersects": true,
+      "result": {
+        "shape_null": false,
+        "shape_valid": true,
+        "volume": 614.8564920380604,
+        "bbox": {
+          "xmin": -6.510000000000002,
+          "xmax": 6.510000000000002,
+          "ymin": 8.700000000000001,
+          "ymax": 43.30000000000001,
+          "zmin": -6.462534770378341,
+          "zmax": 6.462534770378335,
+          "xlength": 13.020000000000003,
+          "ylength": 34.60000000000001,
+          "zlength": 12.925069540756677
+        },
+        "faces": 4,
+        "edges": 6,
+        "solids": 1
+      }
+    }
+  },
+  {
+    "op_id": "op_005",
+    "requested_operation": "cylinder_primitive",
+    "executed_native_operation": "Part::Cylinder",
+    "input_parameters": {
+      "op_id": "op_005",
+      "op_type": "cylinder_primitive",
+      "target_body": "op_005",
+      "dependencies": [],
+      "feature_ref": "IF_J09",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "center": [
+        0.0,
+        -26.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius_mm": 6.51,
+      "height_mm": 34.599999999999994,
+      "operation_mode": "new_body"
+    },
+    "native_object_name": "op_005",
+    "native_object_type": "Part::Cylinder",
+    "start_time": 1788875185.9194098,
+    "end_time": 1788875185.923416,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": null
+  },
+  {
+    "op_id": "op_006",
+    "requested_operation": "cylinder_primitive",
+    "executed_native_operation": "Part::Cylinder",
+    "input_parameters": {
+      "op_id": "op_006",
+      "op_type": "cylinder_primitive",
+      "target_body": "op_006",
+      "dependencies": [],
+      "feature_ref": "IF_J09",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "center": [
+        0.0,
+        -26.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius_mm": 6.06,
+      "height_mm": 41.51999999999999,
+      "operation_mode": "new_body"
+    },
+    "native_object_name": "op_006",
+    "native_object_type": "Part::Cylinder",
+    "start_time": 1788875185.923416,
+    "end_time": 1788875185.926417,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": null
+  },
+  {
+    "op_id": "op_007",
+    "requested_operation": "boolean_cut",
+    "executed_native_operation": "Part::Cut",
+    "input_parameters": {
+      "op_id": "op_007",
+      "op_type": "boolean_cut",
+      "target_body": "op_005",
+      "dependencies": [
+        "op_005",
+        "op_006"
+      ],
+      "feature_ref": "IF_J09",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "tool_bodies": [
+        "op_006"
+      ]
+    },
+    "native_object_name": "op_007",
+    "native_object_type": "Part::Cut",
+    "start_time": 1788875185.926417,
+    "end_time": 1788875185.9354112,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": {
+      "operation": "boolean_cut",
+      "target": {
+        "shape_null": false,
+        "shape_valid": true,
+        "volume": 4606.67897431667,
+        "bbox": {
+          "xmin": -6.510000000000002,
+          "xmax": 6.510000000000002,
+          "ymin": -43.3,
+          "ymax": -8.699999999999994,
+          "zmin": -6.462534770378341,
+          "zmax": 6.462534770378335,
+          "xlength": 13.020000000000003,
+          "ylength": 34.6,
+          "zlength": 12.925069540756677
+        },
+        "faces": 3,
+        "edges": 3,
+        "solids": 1
+      },
+      "tool": {
+        "shape_null": false,
+        "shape_valid": true,
+        "volume": 4790.186978734329,
+        "bbox": {
+          "xmin": -6.060000000000001,
+          "xmax": 6.060000000000001,
+          "ymin": -46.75999999999999,
+          "ymax": -5.239999999999993,
+          "zmin": -6.015815777034217,
+          "zmax": 6.01581577703421,
+          "xlength": 12.120000000000003,
+          "ylength": 41.519999999999996,
+          "zlength": 12.031631554068428
+        },
+        "faces": 3,
+        "edges": 3,
+        "solids": 1
+      },
+      "bbox_intersects": true,
+      "result": {
+        "shape_null": false,
+        "shape_valid": true,
+        "volume": 614.8564920380609,
+        "bbox": {
+          "xmin": -6.510000000000002,
+          "xmax": 6.510000000000002,
+          "ymin": -43.3,
+          "ymax": -8.699999999999994,
+          "zmin": -6.462534770378341,
+          "zmax": 6.462534770378335,
+          "xlength": 13.020000000000003,
+          "ylength": 34.6,
+          "zlength": 12.925069540756677
+        },
+        "faces": 4,
+        "edges": 6,
+        "solids": 1
+      }
+    }
+  },
+  {
+    "op_id": "op_011",
+    "requested_operation": "oriented_box",
+    "executed_native_operation": "Part::Box",
+    "input_parameters": {
+      "op_id": "op_011",
+      "op_type": "oriented_box",
+      "target_body": "op_011",
+      "dependencies": [],
+      "feature_ref": "BODY",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "start": [
+        0,
+        -18.75,
+        0
+      ],
+      "end": [
+        35.0,
+        -18.75,
+        0
+      ],
+      "width_mm": 12.375000000000002,
+      "depth_mm": 13.750000000000002,
+      "operation_mode": "new_body"
+    },
+    "native_object_name": "op_011",
+    "native_object_type": "Part::Box",
+    "start_time": 1788875185.9354112,
+    "end_time": 1788875185.9404142,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": null
+  },
+  {
+    "op_id": "op_012",
+    "requested_operation": "oriented_box",
+    "executed_native_operation": "Part::Box",
+    "input_parameters": {
+      "op_id": "op_012",
+      "op_type": "oriented_box",
+      "target_body": "op_012",
+      "dependencies": [],
+      "feature_ref": "BODY",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "start": [
+        0,
+        18.75,
+        0
+      ],
+      "end": [
+        35.0,
+        18.75,
+        0
+      ],
+      "width_mm": 12.375000000000002,
+      "depth_mm": 13.750000000000002,
+      "operation_mode": "new_body"
+    },
+    "native_object_name": "op_012",
+    "native_object_type": "Part::Box",
+    "start_time": 1788875185.9404142,
+    "end_time": 1788875185.9454155,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": null
+  },
+  {
+    "op_id": "op_013",
+    "requested_operation": "oriented_box",
+    "executed_native_operation": "Part::Box",
+    "input_parameters": {
+      "op_id": "op_013",
+      "op_type": "oriented_box",
+      "target_body": "op_013",
+      "dependencies": [],
+      "feature_ref": "ATTACHMENT_CONNECTOR_IF_J07",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "start": [
+        0.0,
+        12.374999999999996,
+        1.2919350848147919e-16
+      ],
+      "end": [
+        0.0,
+        9.1,
+        -7.170239720722087e-16
+      ],
+      "width_mm": 8.0,
+      "depth_mm": 8.0,
+      "operation_mode": "new_body"
+    },
+    "native_object_name": "op_013",
+    "native_object_type": "Part::Box",
+    "start_time": 1788875185.9454155,
+    "end_time": 1788875185.9499168,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": null
+  },
+  {
+    "op_id": "op_014",
+    "requested_operation": "boolean_union",
+    "executed_native_operation": "Part::FuseSequential",
+    "input_parameters": {
+      "op_id": "op_014",
+      "op_type": "boolean_union",
+      "target_body": "op_012",
+      "dependencies": [
+        "op_012",
+        "op_013"
+      ],
+      "feature_ref": "ATTACHMENT_IF_J07",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "tool_bodies": [
+        "op_013"
+      ]
+    },
+    "native_object_name": "op_014",
+    "native_object_type": "Part::Fuse",
+    "start_time": 1788875185.9499168,
+    "end_time": 1788875185.9701052,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": {
+      "operation": "boolean_union",
+      "strategy": "sequential_fuse",
+      "steps": [
+        {
+          "step": 1,
+          "tool_body": "op_013",
+          "base": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 5955.468750000005,
+            "bbox": {
+              "xmin": -2.747801985947263e-15,
+              "xmax": 35.00000000000001,
+              "ymin": 11.874999999999996,
+              "ymax": 25.625,
+              "zmin": -6.187500000000008,
+              "zmax": 6.187500000000003,
+              "xlength": 35.00000000000001,
+              "ylength": 13.750000000000004,
+              "zlength": 12.37500000000001
+            },
+            "faces": 6,
+            "edges": 12,
+            "solids": 1
+          },
+          "tool": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 209.59999999999977,
+            "bbox": {
+              "xmin": -4.0,
+              "xmax": 4.0,
+              "ymin": 9.099999999999996,
+              "ymax": 12.374999999999996,
+              "zmin": -4.000000000000001,
+              "zmax": 4.0,
+              "xlength": 8.0,
+              "ylength": 3.2750000000000004,
+              "zlength": 8.0
+            },
+            "faces": 6,
+            "edges": 12,
+            "solids": 1
+          },
+          "result": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 6149.068750000005,
+            "bbox": {
+              "xmin": -4.0,
+              "xmax": 35.00000000000001,
+              "ymin": 9.099999999999996,
+              "ymax": 25.625,
+              "zmin": -6.18750000000001,
+              "zmax": 6.187500000000003,
+              "xlength": 39.00000000000001,
+              "ylength": 16.525000000000006,
+              "zlength": 12.375000000000012
+            },
+            "faces": 12,
+            "edges": 30,
+            "solids": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "op_id": "op_015",
+    "requested_operation": "boolean_union",
+    "executed_native_operation": "Part::FuseSequential",
+    "input_parameters": {
+      "op_id": "op_015",
+      "op_type": "boolean_union",
+      "target_body": "op_014",
+      "dependencies": [
+        "op_014",
+        "op_001"
+      ],
+      "feature_ref": "ATTACHMENT_IF_J07",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "tool_bodies": [
+        "op_001"
+      ]
+    },
+    "native_object_name": "op_015",
+    "native_object_type": "Part::Fuse",
+    "start_time": 1788875185.9701052,
+    "end_time": 1788875185.999517,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": {
+      "operation": "boolean_union",
+      "strategy": "sequential_fuse",
+      "steps": [
+        {
+          "step": 1,
+          "tool_body": "op_001",
+          "base": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 6149.068750000005,
+            "bbox": {
+              "xmin": -4.0,
+              "xmax": 35.00000000000001,
+              "ymin": 9.099999999999996,
+              "ymax": 25.625,
+              "zmin": -6.18750000000001,
+              "zmax": 6.187500000000003,
+              "xlength": 39.00000000000001,
+              "ylength": 16.525000000000006,
+              "zlength": 12.375000000000012
+            },
+            "faces": 12,
+            "edges": 30,
+            "solids": 1
+          },
+          "tool": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 2432.045103220618,
+            "bbox": {
+              "xmin": -4.200000000000001,
+              "xmax": 4.200000000000003,
+              "ymin": -9.590333438796621,
+              "ymax": 9.590333438796623,
+              "zmin": -9.600000000000003,
+              "zmax": 9.600000000000001,
+              "xlength": 8.400000000000004,
+              "ylength": 19.180666877593247,
+              "zlength": 19.200000000000003
+            },
+            "faces": 3,
+            "edges": 3,
+            "solids": 1
+          },
+          "result": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 8564.718830234697,
+            "bbox": {
+              "xmin": -4.200000000000001,
+              "xmax": 35.00000000000001,
+              "ymin": -9.530005191341322,
+              "ymax": 25.625,
+              "zmin": -9.600000000000003,
+              "zmax": 9.600000000000001,
+              "xlength": 39.20000000000001,
+              "ylength": 35.155005191341324,
+              "zlength": 19.200000000000003
+            },
+            "faces": 16,
+            "edges": 39,
+            "solids": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "op_id": "op_016",
+    "requested_operation": "boolean_union",
+    "executed_native_operation": "Part::FuseSequential",
+    "input_parameters": {
+      "op_id": "op_016",
+      "op_type": "boolean_union",
+      "target_body": "op_012",
+      "dependencies": [
+        "op_012",
+        "op_004"
+      ],
+      "feature_ref": "ATTACHMENT_IF_J08",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "tool_bodies": [
+        "op_004"
+      ]
+    },
+    "native_object_name": "op_016",
+    "native_object_type": "Part::Fuse",
+    "start_time": 1788875185.999517,
+    "end_time": 1788875186.0392807,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": {
+      "operation": "boolean_union",
+      "strategy": "sequential_fuse",
+      "steps": [
+        {
+          "step": 1,
+          "tool_body": "op_004",
+          "base": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 6149.068750000005,
+            "bbox": {
+              "xmin": -4.0,
+              "xmax": 35.00000000000001,
+              "ymin": 9.099999999999996,
+              "ymax": 25.625,
+              "zmin": -6.18750000000001,
+              "zmax": 6.187500000000003,
+              "xlength": 39.00000000000001,
+              "ylength": 16.525000000000006,
+              "zlength": 12.375000000000012
+            },
+            "faces": 12,
+            "edges": 30,
+            "solids": 1
+          },
+          "tool": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 614.8564920380604,
+            "bbox": {
+              "xmin": -6.510000000000002,
+              "xmax": 6.510000000000002,
+              "ymin": 8.700000000000001,
+              "ymax": 43.30000000000001,
+              "zmin": -6.462534770378341,
+              "zmax": 6.462534770378335,
+              "xlength": 13.020000000000003,
+              "ylength": 34.60000000000001,
+              "zlength": 12.925069540756677
+            },
+            "faces": 4,
+            "edges": 6,
+            "solids": 1
+          },
+          "result": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 6653.778686135073,
+            "bbox": {
+              "xmin": -6.510000000000002,
+              "xmax": 35.00000000000001,
+              "ymin": 8.700000000000001,
+              "ymax": 43.30000000000001,
+              "zmin": -6.462534770378341,
+              "zmax": 6.462534770378335,
+              "xlength": 41.510000000000005,
+              "ylength": 34.60000000000001,
+              "zlength": 12.925069540756677
+            },
+            "faces": 18,
+            "edges": 48,
+            "solids": 1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "op_id": "op_017",
+    "requested_operation": "boolean_union",
+    "executed_native_operation": "Part::FuseSequential",
+    "input_parameters": {
+      "op_id": "op_017",
+      "op_type": "boolean_union",
+      "target_body": "op_011",
+      "dependencies": [
+        "op_011",
+        "op_007"
+      ],
+      "feature_ref": "ATTACHMENT_IF_J09",
+      "reference_frame": {
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "x_axis": [
+          1,
+          0,
+          0
+        ],
+        "y_axis": [
+          0,
+          1,
+          0
+        ],
+        "z_axis": [
+          0,
+          0,
+          1
+        ]
+      },
+      "tool_bodies": [
+        "op_007"
+      ]
+    },
+    "native_object_name": "op_017",
+    "native_object_type": "Part::Fuse",
+    "start_time": 1788875186.0392807,
+    "end_time": 1788875186.0624132,
+    "success": true,
+    "semantic_match": true,
+    "fallback_used": false,
+    "failure_code": null,
+    "failure_reason": null,
+    "failure_context": null,
+    "preflight": {
+      "operation": "boolean_union",
+      "strategy": "sequential_fuse",
+      "steps": [
+        {
+          "step": 1,
+          "tool_body": "op_007",
+          "base": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 5955.4687500000055,
+            "bbox": {
+              "xmin": -2.747801985947263e-15,
+              "xmax": 35.00000000000001,
+              "ymin": -25.625000000000004,
+              "ymax": -11.875,
+              "zmin": -6.187500000000008,
+              "zmax": 6.187500000000003,
+              "xlength": 35.00000000000001,
+              "ylength": 13.750000000000004,
+              "zlength": 12.37500000000001
+            },
+            "faces": 6,
+            "edges": 12,
+            "solids": 1
+          },
+          "tool": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 614.8564920380609,
+            "bbox": {
+              "xmin": -6.510000000000002,
+              "xmax": 6.510000000000002,
+              "ymin": -43.3,
+              "ymax": -8.699999999999994,
+              "zmin": -6.462534770378341,
+              "zmax": 6.462534770378335,
+              "xlength": 13.020000000000003,
+              "ylength": 34.6,
+              "zlength": 12.925069540756677
+            },
+            "faces": 4,
+            "edges": 6,
+            "solids": 1
+          },
+          "result": {
+            "shape_null": false,
+            "shape_valid": true,
+            "volume": 6460.178686135074,
+            "bbox": {
+              "xmin": -6.510000000000002,
+              "xmax": 35.00000000000001,
+              "ymin": -43.3,
+              "ymax": -8.699999999999994,
+              "zmin": -6.462534770378341,
+              "zmax": 6.462534770378335,
+              "xlength": 41.510000000000005,
+              "ylength": 34.6,
+              "zlength": 12.925069540756677
+            },
+            "faces": 12,
+            "edges": 30,
+            "solids": 1
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "link_id": "L00",
+  "region": "upper_body_region",
+  "collision_with": "L01",
+  "critical_poses": [
+    {
+      "pose_id": "canonical",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J00_lower",
+      "intersection_volume_mm3": 23346.30120005994
+    },
+    {
+      "pose_id": "J00_zero",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J00_upper",
+      "intersection_volume_mm3": 23346.30120101447
+    },
+    {
+      "pose_id": "J01_lower",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J01_zero",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J01_upper",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J02_lower",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J02_zero",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J02_upper",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J03_lower",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J03_zero",
+      "intersection_volume_mm3": 23353.76472928714
+    },
+    {
+      "pose_id": "J03_upper",
+      "intersection_volume_mm3": 23353.76472928714
+    }
+  ],
+  "action": "LOCAL_SECTION_SHRINK",
+  "parameters": {
+    "height_mm": "*0.70",
+    "radius_mm": "*1.00"
+  },
+  "protected": [
+    "J00 carrier",
+    "all InterfaceRefs",
+    "attachment path"
+  ]
+}

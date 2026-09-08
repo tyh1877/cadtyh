@@ -1,0 +1,26 @@
+[
+  {
+    "connector_object": "op_013",
+    "attachment_result_object": "op_015",
+    "source_body": "op_012",
+    "target_carrier": "op_001",
+    "interface_id": "IF_J07",
+    "repair_action": "ADD_NECK_CONNECTOR"
+  },
+  {
+    "connector_object": null,
+    "attachment_result_object": "op_016",
+    "source_body": "op_012",
+    "target_carrier": "op_004",
+    "interface_id": "IF_J08",
+    "repair_action": "FUSE_OVERLAPPING_CARRIER"
+  },
+  {
+    "connector_object": null,
+    "attachment_result_object": "op_017",
+    "source_body": "op_011",
+    "target_carrier": "op_007",
+    "interface_id": "IF_J09",
+    "repair_action": "FUSE_OVERLAPPING_CARRIER"
+  }
+]

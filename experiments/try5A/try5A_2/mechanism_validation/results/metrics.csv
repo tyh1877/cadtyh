@@ -1,0 +1,3 @@
+condition,true_collision_events,intersection_volume_mm3,l00_l01_volume_mm3,sweep_free_pose_rate
+baseline,174,484327.7157986019,303584.01442323293,0.0
+candidate,172,358826.75967679033,180778.49960755,0.0

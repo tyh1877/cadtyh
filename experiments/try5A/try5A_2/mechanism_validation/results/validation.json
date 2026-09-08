@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "virtual_peer_carrier_removed": true,
+  "co_contract_consumed": true,
+  "l00_attachment_preserved": true,
+  "collision_events_reduced": true,
+  "collision_volume_reduced": true,
+  "sweep_free_still_zero": true
+}

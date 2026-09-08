@@ -1,0 +1,41 @@
+{
+  "part_id": "L08",
+  "status": "SUCCESS",
+  "error": "",
+  "fallback_count": 0,
+  "bodies": 3,
+  "operations": 14,
+  "native_operation_successes": 14,
+  "before": {
+    "valid_objects": 3,
+    "objects": 3,
+    "volume": 21678.676202504845,
+    "bbox": [
+      41.510000000000005,
+      86.60000000000001,
+      19.200000000000003
+    ]
+  },
+  "editability": {
+    "object_id": "op_001",
+    "property": "Radius",
+    "baseline_value": 9.6,
+    "requested_baseline_matches": true,
+    "edit_fraction": 0.05,
+    "edited_valid": true,
+    "restored_valid": true,
+    "parameter_restored": true,
+    "restored_volume_delta": 0.0,
+    "unrelated_frozen_regions": "NOT_APPLICABLE_T1_ROUND0"
+  },
+  "exports": {
+    "fcstd": true,
+    "step": true,
+    "stl": true
+  },
+  "reopen": {
+    "status": "PASS",
+    "native_shape_objects": 99
+  },
+  "elapsed_seconds": 2.2642955780029297
+}

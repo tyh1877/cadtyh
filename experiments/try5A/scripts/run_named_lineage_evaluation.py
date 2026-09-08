@@ -1,0 +1,3 @@
+import json,subprocess,sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[3];T=ROOT/'experiments/try5A/try5A_2';name=sys.argv[1];line=T/f'mechanism_validation/{name}/lineage.json';out=T/f'mechanism_validation/{name}/collision_rows.json';job=T/f'mechanism_validation/{name}/eval_job.json';job.write_text(json.dumps({'root':str(ROOT),'lineage':str(line),'output':str(out)},indent=2)+'\n');x=subprocess.run([r'D:\software\freeCAD\install\bin\python.exe',str(ROOT/'experiments/try5A/scripts/freecad_evaluate_named_lineage.py'),str(job)],cwd=ROOT,capture_output=True,text=True,timeout=600);print(x.stdout or x.stderr);raise SystemExit(x.returncode)
