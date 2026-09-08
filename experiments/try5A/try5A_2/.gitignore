@@ -28,3 +28,5 @@ __pycache__/
 /mechanism_validation/*/*/renders/
 /mechanism_validation/*/collision_rows.json
 /mechanism_validation/*/*.txt
+
+/mechanism_validation/*/assembly/
