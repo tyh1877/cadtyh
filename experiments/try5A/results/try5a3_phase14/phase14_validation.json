@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "phase": "Try-5A.3 Phase 1-4",
+  "knowledge_families": [
+    "coaxial_rotary_interface",
+    "end_tool_interface",
+    "flange_interface",
+    "fork_pin_interface",
+    "nested_rotary_housing",
+    "planar_mount_interface",
+    "rail_slider_interface"
+  ],
+  "selection_count": 11,
+  "family_change_count": 4,
+  "custom_interface_count": 0,
+  "frozen_metric_comparison": {
+    "BICR": "unchanged: no historical CAD regenerated",
+    "gap": "unchanged: no historical CAD regenerated",
+    "collision": "unchanged: no historical CAD regenerated"
+  },
+  "mechanical_meaningfulness": {
+    "meaningful_geometry_rate": 1.0,
+    "meaningless_patch_count": 1,
+    "legacy_patch_sentinel_rejected": true,
+    "historical_generated_geometry_available": false
+  },
+  "dataflow_audit": {
+    "knowledge_to_candidate": true,
+    "candidate_to_contract_projection": true,
+    "contract_to_cad_ir_projection": true
+  },
+  "leakage_audit": {
+    "knowledge_contains_forbidden_exact_assets": false,
+    "token_hits": {
+      "GT": false,
+      "STEP": false,
+      "B-Rep": false,
+      "dimension": false,
+      "Robot A": false
+    },
+    "knowledge_sha256": "08e3748f1ddcb990772c2e17931a08858ee8a573e5a4b00ca28607565dc41a49",
+    "inputs": {
+      "robot_plan_sha256": "56da382a47d07281c2d4d30b51668842c7c186ff78ef6ce228536fcbc13649d9",
+      "skeleton_sha256": "99177325db645b27168d9d50f0b30a59c5101b2729c92cfe1f3582b7a5ac1cc4"
+    }
+  }
+}

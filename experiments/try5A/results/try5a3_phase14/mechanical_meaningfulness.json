@@ -1,0 +1,85 @@
+{
+  "projected_features": [
+    {
+      "feature_id": "IF_J00",
+      "owning_link": "L00",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J01",
+      "owning_link": "L01",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J02",
+      "owning_link": "L02",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J03",
+      "owning_link": "L03",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J04",
+      "owning_link": "L04",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J05",
+      "owning_link": "L05",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J06",
+      "owning_link": "L05",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J07",
+      "owning_link": "L07",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J08",
+      "owning_link": "L08",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J09",
+      "owning_link": "L08",
+      "status": "PASS",
+      "missing": []
+    },
+    {
+      "feature_id": "IF_J10",
+      "owning_link": "L08",
+      "status": "PASS",
+      "missing": []
+    }
+  ],
+  "legacy_gap_fill_sentinel": [
+    {
+      "feature_id": "box_17",
+      "owning_link": "L01",
+      "status": "MECHANICAL_MEANINGFULNESS_FAIL",
+      "missing": [
+        "mechanical_role",
+        "source_evidence",
+        "source_design_node",
+        "related_interface_or_body",
+        "cad_strategy"
+      ]
+    }
+  ],
+  "note": "Historical generated CAD is ignored; regenerate it before running a corpus-wide audit."
+}

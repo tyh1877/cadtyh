@@ -1,0 +1,167 @@
+[
+  {
+    "joint_id": "J00",
+    "selected_family": "nested_rotary_housing",
+    "feature": {
+      "feature_id": "IF_J00",
+      "owning_link": "L00",
+      "mechanical_role": "shared nested_rotary_housing carrier",
+      "source_evidence": "revolute joint; concentric housing roles on both sides",
+      "source_design_node": "InterfaceCandidate/J00",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J00",
+      "cad_strategy": "concentric cylinders/shells with protected annular gap",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J01",
+    "selected_family": "fork_pin_interface",
+    "feature": {
+      "feature_id": "IF_J01",
+      "owning_link": "L01",
+      "mechanical_role": "shared fork_pin_interface carrier",
+      "source_evidence": "revolute/continuous joint; dual-side/fork body family in planned link",
+      "source_design_node": "InterfaceCandidate/J01",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J01",
+      "cad_strategy": "two side plates plus central pin or bore carrier",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J02",
+    "selected_family": "fork_pin_interface",
+    "feature": {
+      "feature_id": "IF_J02",
+      "owning_link": "L02",
+      "mechanical_role": "shared fork_pin_interface carrier",
+      "source_evidence": "revolute/continuous joint; dual-side/fork body family in planned link",
+      "source_design_node": "InterfaceCandidate/J02",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J02",
+      "cad_strategy": "two side plates plus central pin or bore carrier",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J03",
+    "selected_family": "coaxial_rotary_interface",
+    "feature": {
+      "feature_id": "IF_J03",
+      "owning_link": "L03",
+      "mechanical_role": "shared coaxial_rotary_interface carrier",
+      "source_evidence": "revolute/continuous joint; URDF axis supports coaxial carrier",
+      "source_design_node": "InterfaceCandidate/J03",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J03",
+      "cad_strategy": "cylindrical carrier with bore/pin clearance",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J04",
+    "selected_family": "planar_mount_interface",
+    "feature": {
+      "feature_id": "IF_J04",
+      "owning_link": "L04",
+      "mechanical_role": "shared planar_mount_interface carrier",
+      "source_evidence": "URDF joint is fixed; roles form a structural mount",
+      "source_design_node": "InterfaceCandidate/J04",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J04",
+      "cad_strategy": "mount pad integrated into adjacent body",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J05",
+    "selected_family": "coaxial_rotary_interface",
+    "feature": {
+      "feature_id": "IF_J05",
+      "owning_link": "L05",
+      "mechanical_role": "shared coaxial_rotary_interface carrier",
+      "source_evidence": "revolute/continuous joint; URDF axis supports coaxial carrier",
+      "source_design_node": "InterfaceCandidate/J05",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J05",
+      "cad_strategy": "cylindrical carrier with bore/pin clearance",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J06",
+    "selected_family": "planar_mount_interface",
+    "feature": {
+      "feature_id": "IF_J06",
+      "owning_link": "L05",
+      "mechanical_role": "shared planar_mount_interface carrier",
+      "source_evidence": "URDF joint is fixed; roles form a structural mount",
+      "source_design_node": "InterfaceCandidate/J06",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J06",
+      "cad_strategy": "mount pad integrated into adjacent body",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J07",
+    "selected_family": "planar_mount_interface",
+    "feature": {
+      "feature_id": "IF_J07",
+      "owning_link": "L07",
+      "mechanical_role": "shared planar_mount_interface carrier",
+      "source_evidence": "URDF joint is fixed; roles form a structural mount",
+      "source_design_node": "InterfaceCandidate/J07",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J07",
+      "cad_strategy": "mount pad integrated into adjacent body",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J08",
+    "selected_family": "rail_slider_interface",
+    "feature": {
+      "feature_id": "IF_J08",
+      "owning_link": "L08",
+      "mechanical_role": "shared rail_slider_interface carrier",
+      "source_evidence": "URDF joint is prismatic; translation axis and travel limits require guided clearance",
+      "source_design_node": "InterfaceCandidate/J08",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J08",
+      "cad_strategy": "rail and carriage envelopes with protected travel corridor",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J09",
+    "selected_family": "rail_slider_interface",
+    "feature": {
+      "feature_id": "IF_J09",
+      "owning_link": "L08",
+      "mechanical_role": "shared rail_slider_interface carrier",
+      "source_evidence": "URDF joint is prismatic; translation axis and travel limits require guided clearance",
+      "source_design_node": "InterfaceCandidate/J09",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J09",
+      "cad_strategy": "rail and carriage envelopes with protected travel corridor",
+      "cad_consumption": "CAD_IR_interface_feature"
+    }
+  },
+  {
+    "joint_id": "J10",
+    "selected_family": "end_tool_interface",
+    "feature": {
+      "feature_id": "IF_J10",
+      "owning_link": "L08",
+      "mechanical_role": "tool reference frame anchor",
+      "source_evidence": "child is a virtual/tool reference frame; knowledge forbids child solid generation",
+      "source_design_node": "InterfaceCandidate/J10",
+      "why_required": "realize the selected shared interface while preserving the URDF frame",
+      "related_interface_or_body": "J10",
+      "cad_strategy": "metadata/helper frame only",
+      "cad_consumption": "metadata_only"
+    }
+  }
+]
