@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-09-08T00:06:41.152092+00:00",
+  "before_freecad": true,
+  "files": {
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "experiments\\try5A\\scripts\\materialize_a1.py": "af3da968d7f9f2a83985269d73777c2a4e34f3eab763845fc44589f3e3654270",
+    "try4\\scripts\\freecad_t1_executor.py": "f9bf2909e7442c76fae27faee89ccced195a6094c5929a189ca858d8f0dbc680",
+    "experiments\\try5A\\A1\\L00\\cad_ir.json": "b9e34b99cab5f6121f02ac10eb915b4679de95446dee041c11afbe174b162c29",
+    "experiments\\try5A\\A1\\L01\\cad_ir.json": "46e94d31e78d4b69d365ed748a814417b0190034840fd0096bc1e5f6c42a17fa",
+    "experiments\\try5A\\A1\\L02\\cad_ir.json": "6e8048869c6249aa3758aeee25fbb1e6d106af32ed1a223edfd1398680d0ace0",
+    "experiments\\try5A\\A1\\L03\\cad_ir.json": "38724679d05fa96f310eed40cade71de2573b147a1f9415c7584dab5d4e1d899",
+    "experiments\\try5A\\A1\\L04\\cad_ir.json": "55eb8cc0285486969644fb28bcb0d350b5b9a3b4ec1621f3ad970b224d04e779",
+    "experiments\\try5A\\A1\\L05\\cad_ir.json": "3beba8991de9933a5145161f5e803afc48747ab1c9c0ac011c1c06128cc6c14a",
+    "experiments\\try5A\\A1\\L06\\cad_ir.json": "23ea0a652f9ee814af2100b6f87f4a90cefcf543e7c25d62c1353575894ded39",
+    "experiments\\try5A\\A1\\L07\\cad_ir.json": "26869338bff5b67ec7c5d1da5c37663eb34e6561db41a0b11bc4a39d334e21d2",
+    "experiments\\try5A\\A1\\L08\\cad_ir.json": "9898b69aebccb97d334fce4c61db9bd9ec8109dbf7ac34e771954944897aef4c",
+    "experiments\\try5A\\A1\\L09\\cad_ir.json": "d57f96bba044080fda5673345213f96e6d9d21fda9b40b83f7f9adbda5c470b3",
+    "experiments\\try5A\\A1\\L10\\cad_ir.json": "a361efca1a2414ba29580bc2ebc679a7d4d667b9d888242a4981bbff8cb28920",
+    "experiments\\try5A\\A1\\L11\\cad_ir.json": "6714c7977f33c8c4dd71e0afa1fd03ce47ba0ce7e0b35c128414a6f39d74b0d4"
+  },
+  "forbidden_tokens": {
+    "joint_interface_graph": false,
+    "shared_port": false,
+    "shared_interface_envelope": false
+  }
+}

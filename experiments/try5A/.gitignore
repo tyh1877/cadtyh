@@ -4,5 +4,6 @@
 /link_cad/
 /assemblies/
 /simulation/
+/artifacts/
 __pycache__/
 *.pyc

@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-08T00:20:32.042118+00:00",
+  "condition": "A1",
+  "files": {
+    "experiments\\try5A\\results\\a1_method_snapshot.json": "90cddab8ac3be0e1fbdf22fa2867a2e156e2faede429047ae4d358b2983476fe",
+    "experiments\\try5A\\scripts\\freecad_assemble_a0.py": "292cf723e1ce1b81b0538913ddd034135a13ce895be291b3c2ed23c899805ae1",
+    "experiments\\try5A\\scripts\\freecad_assemble_a1.py": "2de338e9db076d5b484691dd863399b4de1e936dff1aac8a1f702b4883533575",
+    "experiments\\try5A\\scripts\\run_a1_assembly.py": "cca2c787f9a2a3347527b9c3145b5bfd3d6a20af8157d44b884d50311448ab16",
+    "experiments\\try5A\\scripts\\run_a0_evaluation.py": "19fd824cf0f6b639ed699b9c12817d8f36c55de6720f0f91ab636341eb5d34ac",
+    "experiments\\try5A\\scripts\\run_a1_evaluation.py": "03f58b46c260f582fd874b7971be8bad02688ffc79a677b121005fa29e8157ba",
+    "experiments\\try5A\\scripts\\compare_a0_a1.py": "ad9eddecdc0489c9d40d53397d109ec96c6dc9b6865c46e52dfca0d294c8a9c5",
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9"
+  },
+  "a0_frozen_commit": "b90c1ea"
+}

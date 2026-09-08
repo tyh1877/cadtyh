@@ -1,0 +1,26 @@
+[
+  {
+    "file": "experiments/try5A/results/a1_interface_metrics.json",
+    "before": "D15199F45850AABA4E81BD8A3D036AF1D8EF40AF166DB169EDFDC28E1039A2DC",
+    "after": "D15199F45850AABA4E81BD8A3D036AF1D8EF40AF166DB169EDFDC28E1039A2DC",
+    "match": true
+  },
+  {
+    "file": "experiments/try5A/results/a1_joint_sweep.json",
+    "before": "C0A3EBFC5FA9E36BDAB129A09A61354A930F53034EC4F05A60A2B55AA9FA6C54",
+    "after": "C0A3EBFC5FA9E36BDAB129A09A61354A930F53034EC4F05A60A2B55AA9FA6C54",
+    "match": true
+  },
+  {
+    "file": "experiments/try5A/results/a0_a1_assembly_metrics.csv",
+    "before": "880A430C50F256841B9D894C8BA4FFA8F8DED3A16DC84558881F9495C964A82C",
+    "after": "880A430C50F256841B9D894C8BA4FFA8F8DED3A16DC84558881F9495C964A82C",
+    "match": true
+  },
+  {
+    "file": "experiments/try5A/results/a0_a1_silhouette.csv",
+    "before": "64C6A7F70B9FBC30198231C543E3F10CA40CB8AAE13E3D5CC347CDAD0947F08D",
+    "after": "64C6A7F70B9FBC30198231C543E3F10CA40CB8AAE13E3D5CC347CDAD0947F08D",
+    "match": true
+  }
+]

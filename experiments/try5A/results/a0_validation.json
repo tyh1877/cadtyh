@@ -10,7 +10,8 @@
     "evaluator_deterministic": true,
     "metrics_cover_11_joints": true,
     "independent_generator_forbidden_tokens_absent": true,
-    "a1_a2_absent": true,
+    "a2_absent": true,
+    "a0_frozen_before_a1_commit": true,
     "no_a0_repair": true,
     "contact_sheet_exists": true
   },

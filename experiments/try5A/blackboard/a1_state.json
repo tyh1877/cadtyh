@@ -1,0 +1,10 @@
+{
+  "condition": "A1",
+  "robot_plan": "CONSUMED",
+  "shared_interface_contract": "NOT_CONSUMED",
+  "links": "12/12 BUILT",
+  "assembly": "ASSEMBLED",
+  "evaluation": "COMPLETE",
+  "repair_applied": false,
+  "A2": "NOT_STARTED"
+}

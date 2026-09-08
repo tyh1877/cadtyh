@@ -6,3 +6,5 @@ interface_eval_03,A0 deterministic evaluation,boolean common itself raised for n
 interface_eval_04,A0 deterministic evaluation,BRep distToShape failed on malformed imported surface pair,false,use explicitly counted bbox distance for affected joint only
 interface_eval_05,A0 deterministic evaluation,unit conversion and compound-volume audit invalidated first provisional table,false,use corrected millimetre port transform and AABB overlap diagnostics
 interface_eval_06,A0 deterministic evaluation,numpy boolean serialization failure,false,cast analytical gate booleans to native bool and replay
+assembly_02,A0/A1 visual assembly,homogeneous placement matrix last row not explicitly initialized,true,archive old assemblies set A41-A43=0 A44=1 and replay identical URDF transforms
+assembly_03,A0/A1 visual assembly,STEP reimport collected hierarchy and duplicate shape objects,true,copy only cad_ir final_objects directly from each link FCStd and replay assembly

@@ -47,11 +47,12 @@ conservative diagnostic rather than exact B-Rep collision volume.
 ## Whole-robot morphology
 
 The generated assembly bbox is approximately 339 × 120 × 234 mm and root-to-tool
-reach is 314.7 mm. The contact sheet shows a recognizable serial direction but
-poor morphology: oversized rectangular bodies, inconsistent arm thickness,
-cluttered wrist/gripper branches and large overlapping interface plates. Several
-individual links are valid on their own while the assembled structure is not a
-clean mechanical skeleton.
+reach is 314.7 mm. The corrected contact sheet shows a recognizable serial arm,
+but its morphology remains coarse: oversized housings, inconsistent arm thickness
+and a cluttered wrist/gripper branch. The earlier plane-filled preview was an
+assembly-import hierarchy bug, not link geometry; the failed preview is archived
+and excluded. Several individual links are valid while their shared proportions
+and interfaces remain poorly coordinated.
 
 ## A0 diagnosis and stop decision
 

@@ -1,10 +1,10 @@
 {
-  "created_at": "2026-09-08T00:16:17.560499+00:00",
+  "created_at": "2026-09-07T13:57:39.343356+00:00",
   "condition": "A0",
   "incidents_recorded": "results/a0_execution_incidents.csv",
   "files": {
     "experiments\\try5A\\results\\a0_method_snapshot.json": "3b59152062010ea1f6ecb58b3ef6a797cc6d1441f6fe9257aa0798f73e3f8b2a",
-    "experiments\\try5A\\scripts\\freecad_assemble_a0.py": "292cf723e1ce1b81b0538913ddd034135a13ce895be291b3c2ed23c899805ae1",
+    "experiments\\try5A\\scripts\\freecad_assemble_a0.py": "ea0b2762a1a38236e1c60f5796bffd52692735b48d60f4c8cf4a36125f18e8c1",
     "experiments\\try5A\\scripts\\run_a0_assembly.py": "7a22eaf434951399f946a1c58bccd1679b7f7740de7094fedff21dcb4eab3c4f",
     "experiments\\try5A\\scripts\\run_a0_evaluation.py": "19fd824cf0f6b639ed699b9c12817d8f36c55de6720f0f91ab636341eb5d34ac",
     "experiments\\try5A\\scripts\\finalize_a0.py": "1ff12d7c2a01615a1c29f8c57cf8cbc6eae8b9a95a7a3ef8e7ba087c88f42878",

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "robot_plan_sha256": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+  "link_consumers": 12,
+  "trace_errors": [],
+  "envelope_mutation_changes_planning_fingerprint": true,
+  "forbidden_interface_graph_consumption": false
+}

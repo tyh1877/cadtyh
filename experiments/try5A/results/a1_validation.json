@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "checks": {
+    "frozen_a1_plans_unchanged": true,
+    "final_method_hashes_match": true,
+    "plan_dataflow_pass": true,
+    "no_l2_tokens": true,
+    "links_12_success": true,
+    "artifacts_complete": true,
+    "native_valid_zero_fallback": true,
+    "assembly_success_canonical": true,
+    "same_evaluator_algorithm": true,
+    "deterministic_outputs": true,
+    "a0_frozen_link_plans_unchanged": true,
+    "a2_absent": true,
+    "no_a1_repair": true,
+    "contact_sheet_exists": true
+  },
+  "frozen_files": {
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": true,
+    "experiments\\try5A\\scripts\\materialize_a1.py": true,
+    "try4\\scripts\\freecad_t1_executor.py": true,
+    "experiments\\try5A\\A1\\L00\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L01\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L02\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L03\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L04\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L05\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L06\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L07\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L08\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L09\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L10\\cad_ir.json": true,
+    "experiments\\try5A\\A1\\L11\\cad_ir.json": true
+  },
+  "final_method_files": {
+    "experiments\\try5A\\results\\a1_method_snapshot.json": true,
+    "experiments\\try5A\\scripts\\freecad_assemble_a0.py": true,
+    "experiments\\try5A\\scripts\\freecad_assemble_a1.py": true,
+    "experiments\\try5A\\scripts\\run_a1_assembly.py": true,
+    "experiments\\try5A\\scripts\\run_a0_evaluation.py": true,
+    "experiments\\try5A\\scripts\\run_a1_evaluation.py": true,
+    "experiments\\try5A\\scripts\\compare_a0_a1.py": true,
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": true
+  },
+  "links": [
+    {
+      "link_id": "L00",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L01",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L02",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L03",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L04",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L05",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L06",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L07",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L08",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L09",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L10",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L11",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    }
+  ]
+}
