@@ -1,0 +1,12 @@
+link_id,required_carriers,attached_carriers,physical_floating,reason
+L00,1,1,False,all required carriers have valid same-solid path
+L01,2,2,False,all required carriers have valid same-solid path
+L02,2,2,False,all required carriers have valid same-solid path
+L03,2,2,False,all required carriers have valid same-solid path
+L04,2,2,False,all required carriers have valid same-solid path
+L05,3,3,False,all required carriers have valid same-solid path
+L06,1,1,False,all required carriers have valid same-solid path
+L07,2,2,False,all required carriers have valid same-solid path
+L08,3,3,False,all required carriers have valid same-solid path
+L09,1,1,False,all required carriers have valid same-solid path
+L10,1,1,False,all required carriers have valid same-solid path

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "contract_change": "L01 IF_J01 connector width +2 mm",
+  "baseline_bbox": [
+    44.800000000000004,
+    44.800000000000004,
+    81.44592048478026
+  ],
+  "counterfactual_bbox": [
+    44.800000000000004,
+    44.800000000000004,
+    81.44419683970199
+  ],
+  "cad_changed": true,
+  "returncode": 0
+}

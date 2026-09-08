@@ -1,4 +1,7 @@
 /D0/physical_assembly/
+/D0_physicalized/links/
+/D0_physicalized/assembly/
+/D0_physicalized/counterfactual/
 /evaluator/raw/
 evaluator/*.txt
 __pycache__/

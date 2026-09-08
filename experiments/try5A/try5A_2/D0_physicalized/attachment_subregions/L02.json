@@ -1,0 +1,42 @@
+[
+  {
+    "carrier_bbox_source": "frozen D0 carrier B-Rep",
+    "body_nearest_region": "op_005",
+    "allowed_connector_corridor_mm": [
+      [
+        -3.633854672009168,
+        -4.3750000000000036,
+        1.271849135203208
+      ],
+      [
+        -3.633854672009168,
+        -4.3750000000000036,
+        1.271849135203208
+      ]
+    ],
+    "protected_mating_side": "carrier cylindrical/annular mating envelope unchanged",
+    "maximum_connector_extent_mm": 0.05,
+    "forbidden_external_direction": "outside nearest-point corridor",
+    "interface_id": "IF_J01"
+  },
+  {
+    "carrier_bbox_source": "frozen D0 carrier B-Rep",
+    "body_nearest_region": "op_006",
+    "allowed_connector_corridor_mm": [
+      [
+        26.525637890805857,
+        4.375000000000004,
+        87.44182788610328
+      ],
+      [
+        26.525637890805857,
+        4.375000000000004,
+        87.44182788610328
+      ]
+    ],
+    "protected_mating_side": "carrier cylindrical/annular mating envelope unchanged",
+    "maximum_connector_extent_mm": 0.05,
+    "forbidden_external_direction": "outside nearest-point corridor",
+    "interface_id": "IF_J02"
+  }
+]

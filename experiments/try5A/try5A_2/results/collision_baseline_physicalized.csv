@@ -1,0 +1,2 @@
+condition,pair_evaluations,true_collision_events,true_collision_pair_count,total_intersection_volume_mm3,canonical_true_collision_events,sweep_true_collision_events,sweep_free_pose_rate,narrow_errors
+D0_physicalized,715,174,22,484327.7157986019,13,161,0.0,0

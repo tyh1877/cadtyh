@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "hard_gate": {
+    "port_frame_consistency": true,
+    "BICR_100": true,
+    "physical_floating_rate_zero": true,
+    "spurious_virtual_geometry_zero": true,
+    "positive_gap_closed": true,
+    "freecad_valid": true,
+    "counterfactual_dataflow": true,
+    "no_phase4_to8": true
+  },
+  "attachment_regression_count": 0,
+  "rollback_count": 0,
+  "collision_note": "collision repair intentionally prohibited in Phase 3.5"
+}

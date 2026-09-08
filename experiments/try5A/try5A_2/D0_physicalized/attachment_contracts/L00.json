@@ -1,0 +1,43 @@
+[
+  {
+    "repair_id": "D0P_L00_IF_J00",
+    "link_id": "L00",
+    "interface_id": "IF_J00",
+    "source_body": "op_004",
+    "target_carrier": "op_003",
+    "attachment_classification": "OVERLAPPING_SEPARATE_SOLID",
+    "repair_action": "FUSE_OVERLAPPING_CARRIER",
+    "attachment_subregion": {
+      "carrier_bbox_source": "frozen D0 carrier B-Rep",
+      "body_nearest_region": "op_004",
+      "allowed_connector_corridor_mm": [
+        [
+          23.150000000000002,
+          -6e-15,
+          38.55
+        ],
+        [
+          23.150000000000002,
+          -6e-15,
+          38.55
+        ]
+      ],
+      "protected_mating_side": "carrier cylindrical/annular mating envelope unchanged",
+      "maximum_connector_extent_mm": 0.05,
+      "forbidden_external_direction": "outside nearest-point corridor"
+    },
+    "protected": [
+      "joint frame",
+      "port radius",
+      "port depth",
+      "target gap",
+      "mating geometry"
+    ],
+    "cad_consumption": {
+      "connector_object": null,
+      "attachment_result_object": "op_005",
+      "source_body": "op_004",
+      "target_carrier": "op_003"
+    }
+  }
+]

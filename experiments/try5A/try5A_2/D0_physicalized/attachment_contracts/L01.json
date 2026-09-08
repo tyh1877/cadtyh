@@ -1,0 +1,84 @@
+[
+  {
+    "repair_id": "D0P_L01_IF_J00",
+    "link_id": "L01",
+    "interface_id": "IF_J00",
+    "source_body": "op_005",
+    "target_carrier": "op_001",
+    "attachment_classification": "OVERLAPPING_SEPARATE_SOLID",
+    "repair_action": "FUSE_OVERLAPPING_CARRIER",
+    "attachment_subregion": {
+      "carrier_bbox_source": "frozen D0 carrier B-Rep",
+      "body_nearest_region": "op_005",
+      "allowed_connector_corridor_mm": [
+        [
+          18.2,
+          -4.46e-15,
+          -9.8
+        ],
+        [
+          18.2,
+          -4.46e-15,
+          -9.8
+        ]
+      ],
+      "protected_mating_side": "carrier cylindrical/annular mating envelope unchanged",
+      "maximum_connector_extent_mm": 0.05,
+      "forbidden_external_direction": "outside nearest-point corridor"
+    },
+    "protected": [
+      "joint frame",
+      "port radius",
+      "port depth",
+      "target gap",
+      "mating geometry"
+    ],
+    "cad_consumption": {
+      "connector_object": null,
+      "attachment_result_object": "op_006",
+      "source_body": "op_005",
+      "target_carrier": "op_001"
+    }
+  },
+  {
+    "repair_id": "D0P_L01_IF_J01",
+    "link_id": "L01",
+    "interface_id": "IF_J01",
+    "source_body": "op_005",
+    "target_carrier": "op_004",
+    "attachment_classification": "POSITIVE_GAP",
+    "repair_action": "ADD_NECK_CONNECTOR",
+    "attachment_subregion": {
+      "carrier_bbox_source": "frozen D0 carrier B-Rep",
+      "body_nearest_region": "op_005",
+      "allowed_connector_corridor_mm": [
+        [
+          1.0256416942859082e-15,
+          -8.749999999999998,
+          22.5
+        ],
+        [
+          1.0256416942859082e-15,
+          -8.749999999999998,
+          25.5
+        ]
+      ],
+      "protected_mating_side": "carrier cylindrical/annular mating envelope unchanged",
+      "maximum_connector_extent_mm": 3.05,
+      "forbidden_external_direction": "outside nearest-point corridor"
+    },
+    "protected": [
+      "joint frame",
+      "port radius",
+      "port depth",
+      "target gap",
+      "mating geometry"
+    ],
+    "cad_consumption": {
+      "connector_object": "op_007",
+      "attachment_result_object": "op_009",
+      "source_body": "op_005",
+      "target_carrier": "op_004"
+    }
+  }
+]
