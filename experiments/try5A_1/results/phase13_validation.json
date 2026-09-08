@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "phase": "Try5A.1 Phase1-3",
+  "checks": {
+    "frozen_c0_hashes_match": true,
+    "c0_reference_only": true,
+    "poses_13": true,
+    "pair_matrix_complete": true,
+    "broad_candidates_have_narrow_outcome": true,
+    "narrow_errors_zero": true,
+    "canonical_true_collisions_13": true,
+    "sweep_true_collisions_168": true,
+    "interface_preservation_c0": true,
+    "outputs_present": true,
+    "contact_sheet_present": true,
+    "no_c1_c2": true,
+    "no_try5b": true
+  },
+  "method_files": {
+    "experiments\\try5A_1\\results\\c0_frozen_manifest.json": true,
+    "experiments\\try5A_1\\collision_cache\\collision_poses.json": true,
+    "experiments\\try5A_1\\scripts\\build_collision_poses.py": true,
+    "experiments\\try5A_1\\scripts\\freecad_exact_collision.py": true,
+    "experiments\\try5A\\inputs\\sanitized_urdf\\px100_sanitized.urdf": true,
+    "experiments\\try5A\\A2\\L00\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L01\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L02\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L03\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L04\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L05\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L06\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L07\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L08\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L09\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L10\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L11\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L00\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L01\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L02\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L03\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L04\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L05\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L06\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L07\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L08\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L09\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L10\\model.FCStd": true,
+    "experiments\\try5A\\A2\\L11\\model.FCStd": true
+  },
+  "collision_summary": [
+    {
+      "scope": "canonical",
+      "pair_evaluations": "66",
+      "aabb_candidates": "19",
+      "true_collision_events": "13",
+      "narrow_errors": "0",
+      "aabb_noncollision_rate": "0.3157894736842105",
+      "aabb_false_positive_rate_excluding_expected": "0.5",
+      "collision_free_pose_rate": "0.0"
+    },
+    {
+      "scope": "sweep",
+      "pair_evaluations": "792",
+      "aabb_candidates": "273",
+      "true_collision_events": "168",
+      "narrow_errors": "0",
+      "aabb_noncollision_rate": "0.38461538461538464",
+      "aabb_false_positive_rate_excluding_expected": "0.574468085106383",
+      "collision_free_pose_rate": "0.0"
+    }
+  ]
+}

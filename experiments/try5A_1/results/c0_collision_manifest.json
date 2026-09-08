@@ -1,0 +1,6 @@
+{
+  "raw_pairs_sha256": "6cfff4c96250744c4ec673f7131dc8eadebd02c61a9a2c1d1b3a5efa098618b8",
+  "poses_sha256": "6cb89d6d9e506fdfd41192e13fca1df12fd9c804b10fa28af81a47014f68a8c9",
+  "raw_pairs_bytes": 306076,
+  "exact_evaluator": "FreeCAD B-Rep common volume"
+}

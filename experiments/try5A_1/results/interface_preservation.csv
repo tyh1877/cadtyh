@@ -1,0 +1,2 @@
+condition,connected_joint_rate,floating_link_rate,mean_interface_gap_mm,mean_radius_mismatch_mm,excessive_axial_penetrations
+C0,1.0,0.0,0.0,0.0,0
