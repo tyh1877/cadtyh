@@ -1,0 +1,2314 @@
+[
+  {
+    "link_id": "L00",
+    "region": "middle_body_region",
+    "collision_with": "L01",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23346.30120005994
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23346.30120101447
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L01",
+    "region": "middle_body_region",
+    "collision_with": "L00",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23346.30120005994
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23346.30120101447
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L03",
+    "region": "middle_body_region",
+    "collision_with": "L04",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 4117.010424354667
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 4117.014216236213
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 4117.010303875105
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 4117.006089099872
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 4117.010424362174
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 4117.009880984362
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 6639.4147099285765
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 5270.126652207486
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L04",
+    "region": "middle_body_region",
+    "collision_with": "L03",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 4117.010424354667
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 4117.014216236213
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 4117.010303875105
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 4117.006089099872
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 4117.010424362174
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 4117.009880984362
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 6639.4147099285765
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 4117.014216233408
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 5270.126652207486
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L06",
+    "region": "middle_body_region",
+    "collision_with": "L07",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1602.2174847727704
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1602.1878463872026
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1602.241506747442
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1602.2413886555892
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1602.244572518773
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1602.2420629059409
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1602.241544568049
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1602.2396164340312
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L07",
+    "region": "middle_body_region",
+    "collision_with": "L06",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1602.2174847727704
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1602.1878463872026
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1602.241506747442
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1602.2413886555892
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1602.244572518773
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1602.2420629059409
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1602.241544568049
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1602.2497815296076
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1602.2396164340312
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L08",
+    "region": "middle_body_region",
+    "collision_with": "L10",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1223.0240849780103
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1223.081005042336
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1223.0281180970283
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1223.053887588896
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1223.0478028485288
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1222.9928513307086
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1223.0478440551476
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1223.0478060136988
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L10",
+    "region": "middle_body_region",
+    "collision_with": "L08",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1223.0240849780103
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1223.081005042336
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1223.0281180970283
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1223.053887588896
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1223.0478028485288
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1222.9928513307086
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1223.0478440551476
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1223.027179844915
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1223.0478060136988
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L08",
+    "region": "middle_body_region",
+    "collision_with": "L09",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1201.1507161994832
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1201.150952457012
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1201.1509524356186
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1201.150732032358
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1201.1507161987793
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1201.1461901739044
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1201.1509524085386
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1201.1474358225264
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L09",
+    "region": "middle_body_region",
+    "collision_with": "L08",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1201.1507161994832
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1201.150952457012
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1201.1509524356186
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 1201.150732032358
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1201.1507161987793
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1201.1461901739044
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1201.1509524085386
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1201.1507161994869
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 1201.1474358225264
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L02",
+    "region": "middle_body_region",
+    "collision_with": "L03",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 747.0705894911753
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 747.0707899241472
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 747.0707899240881
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 747.0707899242914
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 3181.480948312466
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 681.9224768705349
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 747.0710078488783
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L03",
+    "region": "middle_body_region",
+    "collision_with": "L02",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 747.0705894911753
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 747.0707899241472
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 747.0707899240881
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 747.0707899242914
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 3181.480948312466
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 681.9224768705349
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 747.0710078488783
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 747.0710078488783
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L05",
+    "region": "middle_body_region",
+    "collision_with": "L06",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 887.0847772935659
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 887.0081006961107
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 887.0930973521107
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 885.8861011893019
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 886.9262641232832
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 887.0587046156231
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 887.770601251071
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 887.1874108373072
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L06",
+    "region": "middle_body_region",
+    "collision_with": "L05",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 887.0847772935659
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 887.0081006961107
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 887.0930973521107
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 885.8861011893019
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 886.9262641232832
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 887.0587046156231
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 887.770601251071
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 887.0820348490369
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 887.1874108373072
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L07",
+    "region": "middle_body_region",
+    "collision_with": "L08",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 732.214121949511
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 732.1768018745678
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 732.1998560830096
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 732.2170842321136
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 732.2166172237726
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 732.2317043434731
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 732.2165511777818
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 732.240168614912
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L08",
+    "region": "middle_body_region",
+    "collision_with": "L07",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 732.214121949511
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 732.1768018745678
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 732.1998560830096
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 732.2170842321136
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 732.2166172237726
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 732.2317043434731
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 732.2165511777818
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 732.2367356428618
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 732.240168614912
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L04",
+    "region": "middle_body_region",
+    "collision_with": "L07",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 709.3212185324883
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1418.642461666183
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 709.3212185324883
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 709.3212185380871
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.321219261664
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.3212185324883
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.3212499646665
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.3212185324883
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.4582157599966
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.3212734406152
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.3212185324883
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L07",
+    "region": "middle_body_region",
+    "collision_with": "L04",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 709.3212185324883
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 1418.642461666183
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 709.3212185324883
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 709.3212185380871
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.321219261664
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.3212185324883
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.3212499646665
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.3212185324883
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.4582157599966
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.3212734406152
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.3212185324883
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L04",
+    "region": "middle_body_region",
+    "collision_with": "L05",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.1449145892605
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.1449145981971
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.1449145898323
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.1099374796951
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.3651155802092
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.2213354554652
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L05",
+    "region": "middle_body_region",
+    "collision_with": "L04",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.1449145892605
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 709.1449145981971
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.1449145898323
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 709.1099374796951
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.3651155802092
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.1449166606529
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 709.2213354554652
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L00",
+    "region": "middle_body_region",
+    "collision_with": "L07",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 7385.276617835332
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L07",
+    "region": "middle_body_region",
+    "collision_with": "L00",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 7385.276617835332
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L00",
+    "region": "middle_body_region",
+    "collision_with": "L05",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 5527.170155122299
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L05",
+    "region": "middle_body_region",
+    "collision_with": "L00",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 5527.170155122299
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L04",
+    "region": "middle_body_region",
+    "collision_with": "L06",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 228.20419038907698
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 228.20419048001435
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 228.20433241110211
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 228.20433241087693
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 228.20419047783014
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 228.20419047944915
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 228.2043324094446
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 228.20419047636318
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L06",
+    "region": "middle_body_region",
+    "collision_with": "L04",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 228.20419038907698
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 228.20419048001435
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 228.20433241110211
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 228.20433241087693
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 228.20419047783014
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 228.20419047944915
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 228.2043324094446
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 228.20426879998877
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 228.20419047636318
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L01",
+    "region": "middle_body_region",
+    "collision_with": "L04",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 2093.3299627339807
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L04",
+    "region": "middle_body_region",
+    "collision_with": "L01",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 2093.3299627339807
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L00",
+    "region": "middle_body_region",
+    "collision_with": "L06",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1799.1179731176328
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L06",
+    "region": "middle_body_region",
+    "collision_with": "L00",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 1799.1179731176328
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L00",
+    "region": "middle_body_region",
+    "collision_with": "L08",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 521.8119776387252
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L08",
+    "region": "middle_body_region",
+    "collision_with": "L00",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 521.8119776387252
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L05",
+    "region": "middle_body_region",
+    "collision_with": "L07",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 37.3390483734392
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 37.35693129044783
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 37.342805920317716
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 37.335280561383456
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 37.33463795485092
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 37.36027373700331
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 37.33436727651282
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 37.33811460697335
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L07",
+    "region": "middle_body_region",
+    "collision_with": "L05",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 37.3390483734392
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 37.35693129044783
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 37.342805920317716
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 37.335280561383456
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 37.33463795485092
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 37.36027373700331
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 37.33436727651282
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 37.33635983406769
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 37.33811460697335
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L01",
+    "region": "middle_body_region",
+    "collision_with": "L02",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 30.59977615159862
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 30.599442769399808
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 30.59974628469561
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 30.599746284100206
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 30.599477040400505
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L02",
+    "region": "middle_body_region",
+    "collision_with": "L01",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 30.59977615159862
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 30.599442769399808
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 30.59974628469561
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 30.599746284100206
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 30.599477040400505
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 30.599477040400505
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L00",
+    "region": "middle_body_region",
+    "collision_with": "L09",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 231.55613342699377
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L09",
+    "region": "middle_body_region",
+    "collision_with": "L00",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 231.55613342699377
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L00",
+    "region": "middle_body_region",
+    "collision_with": "L10",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 231.55588923413106
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L10",
+    "region": "middle_body_region",
+    "collision_with": "L00",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 231.55588923413106
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L01",
+    "region": "middle_body_region",
+    "collision_with": "L07",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 99.1126320680968
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L07",
+    "region": "middle_body_region",
+    "collision_with": "L01",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 99.1126320680968
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L01",
+    "region": "middle_body_region",
+    "collision_with": "L03",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 20.35453455963049
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  },
+  {
+    "link_id": "L03",
+    "region": "middle_body_region",
+    "collision_with": "L01",
+    "critical_poses": [
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 20.35453455963049
+      }
+    ],
+    "avoid_volume_source": "exact generated B-Rep common at critical poses",
+    "preferred_escape_direction": "REDUCE_LOCAL_CROSS_SECTION",
+    "protected_regions": [
+      "proximal_interface_region",
+      "distal_interface_region"
+    ]
+  }
+]

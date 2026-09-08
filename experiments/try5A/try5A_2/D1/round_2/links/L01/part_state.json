@@ -1,0 +1,9 @@
+{
+  "part_id": "L01",
+  "state": "BUILT",
+  "repair_round": 0,
+  "condition": "T1",
+  "current_artifact": "model.FCStd",
+  "quality_gates": "NOT_RUN_UNTIL_PHASE5",
+  "repair_history": []
+}

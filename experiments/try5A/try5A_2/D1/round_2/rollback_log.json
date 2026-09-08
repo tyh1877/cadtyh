@@ -1,0 +1,5 @@
+{
+  "accepted": false,
+  "rollback": true,
+  "reason": "rollback: BICR 20/20 -> 19/20; IF_J01 attachment result became two solids"
+}

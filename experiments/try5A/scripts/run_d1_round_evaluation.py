@@ -1,0 +1,3 @@
+import json,subprocess,sys
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[3];HERE=ROOT/'experiments/try5A';T=HERE/'try5A_2';r=int(sys.argv[1]);p=T/f'D1/round_{r}/eval_job.json';p.write_text(json.dumps({'root':str(ROOT),'round':r},indent=2)+'\n');x=subprocess.run([r'D:\software\freeCAD\install\bin\python.exe',str(HERE/'scripts/freecad_evaluate_d1_round.py'),str(p)],cwd=ROOT,capture_output=True,text=True,timeout=600);(T/f'D1/round_{r}/eval_stdout.txt').write_text(x.stdout);(T/f'D1/round_{r}/eval_stderr.txt').write_text(x.stderr);print(x.stdout or x.stderr);raise SystemExit(x.returncode)

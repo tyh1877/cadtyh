@@ -1,0 +1,8 @@
+{
+  "round": 2,
+  "physical_links": 11,
+  "active_rebuild_links": "L01",
+  "virtual_links_excluded": [
+    "L11"
+  ]
+}

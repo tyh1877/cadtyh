@@ -1,0 +1,442 @@
+{
+  "part_id": "L03",
+  "link_id": "L03",
+  "condition": "D1_round_3",
+  "cad_ir": {
+    "ir_version": "try5A_2_d1_round_3_local_region_v1",
+    "units": "mm",
+    "bodies": [
+      {
+        "body_id": "B00",
+        "role": "interface-first link solid",
+        "feature_ids": [
+          "BODY",
+          "IF_J02",
+          "IF_J03"
+        ],
+        "final_object": "op_001"
+      },
+      {
+        "body_id": "B01",
+        "role": "interface-first link solid",
+        "feature_ids": [
+          "BODY",
+          "IF_J02",
+          "IF_J03"
+        ],
+        "final_object": "op_004"
+      },
+      {
+        "body_id": "B02",
+        "role": "interface-first link solid",
+        "feature_ids": [
+          "BODY",
+          "IF_J02",
+          "IF_J03"
+        ],
+        "final_object": "op_005"
+      }
+    ],
+    "operations": [
+      {
+        "op_id": "op_001",
+        "op_type": "cylinder_primitive",
+        "target_body": "op_001",
+        "dependencies": [],
+        "feature_ref": "IF_J02",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "radius_mm": 14.4,
+        "height_mm": 12.600000000000001,
+        "operation_mode": "new_body"
+      },
+      {
+        "op_id": "op_002",
+        "op_type": "cylinder_primitive",
+        "target_body": "op_002",
+        "dependencies": [],
+        "feature_ref": "IF_J03",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "center": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "radius_mm": 15.15,
+        "height_mm": 15.75,
+        "operation_mode": "new_body"
+      },
+      {
+        "op_id": "op_003",
+        "op_type": "cylinder_primitive",
+        "target_body": "op_003",
+        "dependencies": [],
+        "feature_ref": "IF_J03",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "center": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "radius_mm": 14.700000000000001,
+        "height_mm": 18.9,
+        "operation_mode": "new_body"
+      },
+      {
+        "op_id": "op_004",
+        "op_type": "boolean_cut",
+        "target_body": "op_002",
+        "dependencies": [
+          "op_002",
+          "op_003"
+        ],
+        "feature_ref": "IF_J03",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "tool_bodies": [
+          "op_003"
+        ]
+      },
+      {
+        "op_id": "op_005",
+        "op_type": "oriented_box",
+        "target_body": "op_005",
+        "dependencies": [],
+        "feature_ref": "BODY",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "start": [
+          0,
+          0,
+          0
+        ],
+        "end": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "width_mm": 16.380000000000003,
+        "depth_mm": 11.648000000000001,
+        "operation_mode": "new_body"
+      },
+      {
+        "op_id": "op_006",
+        "op_type": "boolean_union",
+        "target_body": "op_005",
+        "dependencies": [
+          "op_005",
+          "op_001"
+        ],
+        "feature_ref": "ATTACHMENT_IF_J02",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "tool_bodies": [
+          "op_001"
+        ]
+      },
+      {
+        "op_id": "op_007",
+        "op_type": "boolean_union",
+        "target_body": "op_005",
+        "dependencies": [
+          "op_005",
+          "op_004"
+        ],
+        "feature_ref": "ATTACHMENT_IF_J03",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "tool_bodies": [
+          "op_004"
+        ]
+      }
+    ],
+    "final_objects": [
+      "op_006",
+      "op_007"
+    ],
+    "editable_parameter": {
+      "object_id": "op_001",
+      "property": "Radius",
+      "baseline_value": 14.4,
+      "edit_fraction": 0.05
+    },
+    "assumptions": [
+      "frozen D0 interface operations and frames",
+      "only attachment subregions added",
+      "virtual links excluded"
+    ],
+    "silent_fallback_allowed": false,
+    "attachment_manifest": [
+      {
+        "connector_object": null,
+        "attachment_result_object": "op_006",
+        "source_body": "op_005",
+        "target_carrier": "op_001",
+        "interface_id": "IF_J02",
+        "repair_action": "FUSE_OVERLAPPING_CARRIER"
+      },
+      {
+        "connector_object": null,
+        "attachment_result_object": "op_007",
+        "source_body": "op_005",
+        "target_carrier": "op_004",
+        "interface_id": "IF_J03",
+        "repair_action": "FUSE_OVERLAPPING_CARRIER"
+      }
+    ],
+    "repair_consumption": {
+      "contract_source": "repair_contracts/L03.json",
+      "target_region": "middle_body_region",
+      "before": {
+        "op_id": "op_005",
+        "op_type": "oriented_box",
+        "target_body": "op_005",
+        "dependencies": [],
+        "feature_ref": "BODY",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "start": [
+          0,
+          0,
+          0
+        ],
+        "end": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "width_mm": 25.200000000000003,
+        "depth_mm": 17.92,
+        "operation_mode": "new_body"
+      },
+      "after": {
+        "op_id": "op_005",
+        "op_type": "oriented_box",
+        "target_body": "op_005",
+        "dependencies": [],
+        "feature_ref": "BODY",
+        "reference_frame": {
+          "origin": [
+            0,
+            0,
+            0
+          ],
+          "x_axis": [
+            1,
+            0,
+            0
+          ],
+          "y_axis": [
+            0,
+            1,
+            0
+          ],
+          "z_axis": [
+            0,
+            0,
+            1
+          ]
+        },
+        "start": [
+          0,
+          0,
+          0
+        ],
+        "end": [
+          100.0,
+          0.0,
+          0.0
+        ],
+        "width_mm": 16.380000000000003,
+        "depth_mm": 11.648000000000001,
+        "operation_mode": "new_body"
+      },
+      "parameters": {
+        "width_mm": "*0.65",
+        "depth_mm": "*0.65"
+      }
+    }
+  }
+}

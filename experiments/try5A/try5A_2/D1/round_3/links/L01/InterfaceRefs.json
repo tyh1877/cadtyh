@@ -1,0 +1,56 @@
+{
+  "link_id": "L01",
+  "shared_contract_consumed": true,
+  "interfaces": [
+    {
+      "joint_id": "J00",
+      "side": "child",
+      "center_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "geometry_center_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_local": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius_mm": 22.400000000000002,
+      "depth_mm": 19.6,
+      "interface_family": "coaxial_rotary_interface",
+      "complementary_geometry": true,
+      "contract_sha256": "4767a45f983da95d4fad4ef9131cdc86b80b77d7e77aaecd0ef918a9be1d8c81",
+      "target_gap_m": 0.0005
+    },
+    {
+      "joint_id": "J01",
+      "side": "parent",
+      "center_local_m": [
+        0.0,
+        0.0,
+        0.04225
+      ],
+      "geometry_center_local_m": [
+        0.0,
+        0.0,
+        0.04225
+      ],
+      "axis_local": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "radius_mm": 16.0,
+      "depth_mm": 17.499999999999996,
+      "interface_family": "fork_pin_interface",
+      "complementary_geometry": true,
+      "contract_sha256": "383527ebbcaf2ffff948bfc2974a6eed661ca787100721e197fe171a433e8914",
+      "target_gap_m": 0.0005
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "L00": {
+    "link_id": "L00",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_004"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_002",
+          "op_003"
+        ],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_005"
+    ]
+  },
+  "L01": {
+    "link_id": "L01",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_005"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_002",
+          "op_003",
+          "op_004"
+        ],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_006",
+      "op_009"
+    ]
+  },
+  "L02": {
+    "link_id": "L02",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_005",
+          "op_006"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_002",
+          "op_003",
+          "op_004"
+        ],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_007",
+      "op_008"
+    ]
+  },
+  "L03": {
+    "link_id": "L03",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_005"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_002",
+          "op_003",
+          "op_004"
+        ],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_006",
+      "op_007"
+    ]
+  },
+  "L04": {
+    "link_id": "L04",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_005"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_002",
+          "op_003",
+          "op_004"
+        ],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_006",
+      "op_007"
+    ]
+  },
+  "L05": {
+    "link_id": "L05",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_008"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_002",
+          "op_003",
+          "op_004",
+          "op_005",
+          "op_006",
+          "op_007"
+        ],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_009",
+      "op_010",
+      "op_011"
+    ]
+  },
+  "L06": {
+    "link_id": "L06",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_002"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_003"
+    ]
+  },
+  "L07": {
+    "link_id": "L07",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_005"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_002",
+          "op_003",
+          "op_004"
+        ],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_006",
+      "op_007"
+    ]
+  },
+  "L08": {
+    "link_id": "L08",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_011",
+          "op_012"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_002",
+          "op_003",
+          "op_004",
+          "op_005",
+          "op_006",
+          "op_007",
+          "op_008",
+          "op_009",
+          "op_010"
+        ],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_015",
+      "op_016",
+      "op_017"
+    ]
+  },
+  "L09": {
+    "link_id": "L09",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_002"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_003"
+    ]
+  },
+  "L10": {
+    "link_id": "L10",
+    "regions": {
+      "proximal_interface_region": {
+        "state": "FROZEN",
+        "operations": [
+          "op_001"
+        ],
+        "protected": true
+      },
+      "proximal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "middle_body_region": {
+        "state": "REPLAN",
+        "operations": [
+          "op_002"
+        ],
+        "protected": false
+      },
+      "distal_body_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": false
+      },
+      "distal_interface_region": {
+        "state": "FROZEN",
+        "operations": [],
+        "protected": true
+      }
+    },
+    "attachment_result_operations": [
+      "op_003"
+    ]
+  }
+}

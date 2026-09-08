@@ -1,0 +1,5 @@
+{
+  "accepted": true,
+  "rollback": false,
+  "reason": "target L00-L01 exact volume 303584.0 -> 262648.8 mm3; BICR 20/20"
+}

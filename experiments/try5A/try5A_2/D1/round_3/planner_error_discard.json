@@ -1,0 +1,8 @@
+{
+  "round": 3,
+  "link_id": "L01",
+  "region": "middle_body_region",
+  "accepted": false,
+  "discarded": true,
+  "reason": "planner-error discard: candidate used rejected round-2 lineage after state-write failure"
+}

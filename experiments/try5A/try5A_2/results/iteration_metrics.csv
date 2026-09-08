@@ -1,0 +1,2 @@
+repair_rounds_attempted,accepted_rounds,rollback_count,planner_error_discard_count,active_link_count_total,early_frozen_link_ratio,frozen_region_ratio,repair_success_rate,regression_rate,unresolved_regions,codex_calls,freecad_link_rebuilds
+3,2,1,1,3,0.8181818181818182,0.8363636363636363,0.6666666666666666,0.3333333333333333,L01/middle_body_region; wrist-gripper cluster; L00-L01 residual,0,3

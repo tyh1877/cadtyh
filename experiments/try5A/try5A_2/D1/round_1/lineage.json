@@ -1,0 +1,57 @@
+{
+  "L00": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D1\\round_1\\links\\L00",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D1\\round_1\\links\\L00\\cad_ir.json",
+    "origin": "D1_round_1"
+  },
+  "L01": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L01",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L01\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L02": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L02",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L02\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L03": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L03",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L03\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L04": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L04",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L04\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L05": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L05",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L05\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L06": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L06",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L06\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L07": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L07",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L07\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L08": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L08",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L08\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L09": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L09",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L09\\cad_ir.json",
+    "origin": "D0_physicalized"
+  },
+  "L10": {
+    "model_dir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L10",
+    "cad_ir": "D:\\CADtest\\papertest\\experiments\\try5A\\try5A_2\\D0_physicalized\\links\\L10\\cad_ir.json",
+    "origin": "D0_physicalized"
+  }
+}

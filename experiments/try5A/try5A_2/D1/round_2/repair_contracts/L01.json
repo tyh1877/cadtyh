@@ -1,0 +1,95 @@
+{
+  "repair_id": "D1_R2_L01_middle",
+  "round": 2,
+  "link_id": "L01",
+  "region": "middle_body_region",
+  "failure_type": "LOCAL_COLLISION_FAIL",
+  "collision_pair": [
+    "L00",
+    "L01"
+  ],
+  "collision_with": "L00",
+  "critical_poses": [
+    {
+      "pose_id": "canonical",
+      "active_joint": null,
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J00_lower",
+      "active_joint": "J00",
+      "intersection_volume_mm3": 20198.628961358005
+    },
+    {
+      "pose_id": "J00_zero",
+      "active_joint": "J00",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J00_upper",
+      "active_joint": "J00",
+      "intersection_volume_mm3": 20198.628961751278
+    },
+    {
+      "pose_id": "J01_lower",
+      "active_joint": "J01",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J01_zero",
+      "active_joint": "J01",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J01_upper",
+      "active_joint": "J01",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J02_lower",
+      "active_joint": "J02",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J02_zero",
+      "active_joint": "J02",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J02_upper",
+      "active_joint": "J02",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J03_lower",
+      "active_joint": "J03",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J03_zero",
+      "active_joint": "J03",
+      "intersection_volume_mm3": 20204.689535926427
+    },
+    {
+      "pose_id": "J03_upper",
+      "active_joint": "J03",
+      "intersection_volume_mm3": 20204.689535926427
+    }
+  ],
+  "current_intersection_volume_mm3": 262648.84281829995,
+  "repair_action": "LOCAL_SECTION_SHRINK",
+  "parameter_targets": {
+    "radius_mm": "*0.70",
+    "height_mm": "*0.90"
+  },
+  "protected": [
+    "proximal_interface_region",
+    "distal_interface_region",
+    "frozen InterfaceRefs"
+  ],
+  "must_preserve": [
+    "body-interface connectivity",
+    "link centerline continuity"
+  ],
+  "cad_ir_target_operation": "op_005"
+}

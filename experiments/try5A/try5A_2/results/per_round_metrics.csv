@@ -1,4 +1,5 @@
 round,condition,accepted,BICR,physical_floating_link_rate,active_link_count,active_region_count,true_collision_events,collision_pair_count,total_intersection_volume_mm3,sweep_free_pose_rate,narrow_errors
 0,D0_physicalized,True,1.0,0,0,0,174,22,484327.7157986019,0.0,0
 1,D1_round_1,True,1.0,0,1,1,173,21,439243.83638177026,0.0,0
+2,D1_round_2_candidate,False,0.95,1,1,1,172,20,335507.1114223347,0.0,0
 3,D1_round_3_final,True,1.0,0,1,1,172,21,410133.04863721435,0.0,0

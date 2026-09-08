@@ -1,0 +1,31 @@
+{
+  "rounds_completed": 2,
+  "accepted_rounds": [
+    1
+  ],
+  "rollback_count": 1,
+  "history": [
+    {
+      "round": 1,
+      "link_id": "L00",
+      "region": "middle_body_region",
+      "accepted": true,
+      "reason": "target L00-L01 exact volume 303584.0 -> 262648.8 mm3; BICR 20/20"
+    },
+    {
+      "round": 2,
+      "link_id": "L01",
+      "region": "middle_body_region",
+      "accepted": false,
+      "reason": "rollback: BICR 20/20 -> 19/20; IF_J01 attachment result became two solids"
+    },
+    {
+      "round": 3,
+      "link_id": "L01",
+      "region": "middle_body_region",
+      "accepted": false,
+      "discarded": true,
+      "reason": "planner-error discard: candidate used rejected round-2 lineage after state-write failure"
+    }
+  ]
+}

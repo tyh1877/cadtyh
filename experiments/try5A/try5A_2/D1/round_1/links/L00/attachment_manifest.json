@@ -1,0 +1,10 @@
+[
+  {
+    "connector_object": null,
+    "attachment_result_object": "op_005",
+    "source_body": "op_004",
+    "target_carrier": "op_003",
+    "interface_id": "IF_J00",
+    "repair_action": "FUSE_OVERLAPPING_CARRIER"
+  }
+]

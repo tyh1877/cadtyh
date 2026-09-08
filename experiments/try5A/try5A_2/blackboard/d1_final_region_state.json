@@ -1,0 +1,79 @@
+{
+  "joints": {
+    "J00": "FROZEN",
+    "J01": "FROZEN",
+    "J02": "FROZEN",
+    "J03": "FROZEN",
+    "J04": "FROZEN",
+    "J05": "FROZEN",
+    "J06": "FROZEN",
+    "J07": "FROZEN",
+    "J08": "FROZEN",
+    "J09": "FROZEN",
+    "J10": "FROZEN"
+  },
+  "links": {
+    "L00": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L01": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "REPLAN"
+    },
+    "L02": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L03": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L04": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L05": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L06": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L07": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L08": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L09": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    },
+    "L10": {
+      "proximal_interface_region": "FROZEN",
+      "distal_interface_region": "FROZEN",
+      "middle_body_region": "FROZEN"
+    }
+  },
+  "virtual_links": {
+    "L11": "VIRTUAL_FRAME_EXCLUDED"
+  },
+  "unresolved": [
+    "L01/middle_body_region",
+    "L04-L08 wrist-gripper spatial corridor"
+  ]
+}

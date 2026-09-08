@@ -1,0 +1,6 @@
+{
+  "status": "NOT_RUN",
+  "reason": "D1 final sweep-free pose rate is 0%; protocol requires >0 before morphology refinement",
+  "hard_mechanical_gates_pass": true,
+  "collision_gate_pass": false
+}

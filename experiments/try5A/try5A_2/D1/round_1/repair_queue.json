@@ -1,0 +1,97 @@
+[
+  {
+    "repair_id": "D1_R1_L00_middle",
+    "round": 1,
+    "link_id": "L00",
+    "region": "middle_body_region",
+    "failure_type": "LOCAL_COLLISION_FAIL",
+    "collision_pair": [
+      "L00",
+      "L01"
+    ],
+    "collision_with": "L01",
+    "critical_poses": [
+      {
+        "pose_id": "canonical",
+        "active_joint": null,
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J00_lower",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23346.30120005994
+      },
+      {
+        "pose_id": "J00_zero",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J00_upper",
+        "active_joint": "J00",
+        "intersection_volume_mm3": 23346.30120101447
+      },
+      {
+        "pose_id": "J01_lower",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J01_zero",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J01_upper",
+        "active_joint": "J01",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_lower",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_zero",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J02_upper",
+        "active_joint": "J02",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_lower",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_zero",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      },
+      {
+        "pose_id": "J03_upper",
+        "active_joint": "J03",
+        "intersection_volume_mm3": 23353.76472928714
+      }
+    ],
+    "current_intersection_volume_mm3": 303584.0144232329,
+    "repair_action": "LOCAL_SECTION_SHRINK",
+    "parameter_targets": {
+      "radius_mm": "*0.70",
+      "height_mm": "*0.90"
+    },
+    "protected": [
+      "proximal_interface_region",
+      "distal_interface_region",
+      "frozen InterfaceRefs"
+    ],
+    "must_preserve": [
+      "body-interface connectivity",
+      "link centerline continuity"
+    ],
+    "cad_ir_target_operation": "op_004"
+  }
+]
