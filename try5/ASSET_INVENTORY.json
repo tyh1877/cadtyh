@@ -1,0 +1,59 @@
+{
+  "schema_version": "try5_asset_inventory_v1",
+  "tracked_collaboration_assets": {
+    "protocols": [
+      "try5/Try5-A.md",
+      "try5/Try5-A.1.md",
+      "try5/Try-5A.2.md"
+    ],
+    "active_implementation": "experiments/try5A/",
+    "historical_a1": "experiments/try5A_1/",
+    "entrypoint": "try5/ASSET_INDEX.md"
+  },
+  "generated_geometry_policy": "FCStd/STEP/STL and raw collision caches remain local and are regenerated from tracked CAD IR, contracts, scripts and manifests.",
+  "generated_geometry_summary": [
+    {
+      "experiment": "Try5-A / Try5-A.2",
+      "suffix": ".FCStd",
+      "local_count": 65,
+      "tracked_in_git": false,
+      "regeneration": "see try5/ASSET_INDEX.md"
+    },
+    {
+      "experiment": "Try5-A / Try5-A.2",
+      "suffix": ".step",
+      "local_count": 65,
+      "tracked_in_git": false,
+      "regeneration": "see try5/ASSET_INDEX.md"
+    },
+    {
+      "experiment": "Try5-A / Try5-A.2",
+      "suffix": ".stl",
+      "local_count": 65,
+      "tracked_in_git": false,
+      "regeneration": "see try5/ASSET_INDEX.md"
+    },
+    {
+      "experiment": "Try5-A.1",
+      "suffix": ".FCStd",
+      "local_count": 26,
+      "tracked_in_git": false,
+      "regeneration": "see experiments/try5A_1/scripts/"
+    },
+    {
+      "experiment": "Try5-A.1",
+      "suffix": ".step",
+      "local_count": 26,
+      "tracked_in_git": false,
+      "regeneration": "see experiments/try5A_1/scripts/"
+    },
+    {
+      "experiment": "Try5-A.1",
+      "suffix": ".stl",
+      "local_count": 26,
+      "tracked_in_git": false,
+      "regeneration": "see experiments/try5A_1/scripts/"
+    }
+  ],
+  "remote": "https://github.com/tyh1877/cadtyh.git"
+}
