@@ -13,10 +13,9 @@
       "confidence": 0.91
     },
     "repair_scope": "R0_PARAMETER_REPAIR",
-    "reason": "small radial clearance deviation; topology and family remain valid; selected from deterministic failure hierarchy",
+    "reason": "minor radius error with valid topology; selected from deterministic failure hierarchy",
     "protected_states": [
-      "URDF_J03_FRAME",
-      "neighboring interfaces"
+      "URDF_J03_FRAME"
     ],
     "upstream_objects_to_modify": [
       "LinkCoarseSpec.parameters"
@@ -36,13 +35,36 @@
       "confidence": 0.84
     },
     "repair_scope": "R1_LOCAL_FEATURE_REPAIR",
-    "reason": "local body-to-carrier load path is absent; selected from deterministic failure hierarchy",
+    "reason": "one local transition is absent; selected from deterministic failure hierarchy",
     "protected_states": [
       "URDF_J03_FRAME",
       "J03 carrier"
     ],
     "upstream_objects_to_modify": [
       "BodyRegionSpec.local_feature"
+    ]
+  },
+  {
+    "target": "L04/middle_region",
+    "failed_gates": [
+      "COLLISION"
+    ],
+    "deterministic_evidence": {
+      "localized_feature_failure": false,
+      "repeated_region_failures": 3
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "body_region_family_mismatch",
+      "confidence": 0.88
+    },
+    "repair_scope": "R2_BODY_REGION_REPLAN",
+    "reason": "repeated collision requires replacement of the middle region family; selected from deterministic failure hierarchy",
+    "protected_states": [
+      "L04 proximal carrier",
+      "L04 distal carrier"
+    ],
+    "upstream_objects_to_modify": [
+      "BodyRegionSpec"
     ]
   },
   {
@@ -60,7 +82,7 @@
       "confidence": 0.89
     },
     "repair_scope": "R3_WHOLE_LINK_REPLAN",
-    "reason": "single beam cannot realize the required paired load path; selected from deterministic failure hierarchy",
+    "reason": "whole-link body family has the wrong load-path topology; selected from deterministic failure hierarchy",
     "protected_states": [
       "URDF_J05_FRAME",
       "URDF_J06_FRAME"
@@ -85,10 +107,10 @@
       "confidence": 0.93
     },
     "repair_scope": "R4_INTERFACE_PAIR_REPLAN",
-    "reason": "base and shoulder require nested concentric carriers; local patching would block annular clearance; selected from deterministic failure hierarchy",
+    "reason": "interface family mismatch requires rebuilding both mating regions; selected from deterministic failure hierarchy",
     "protected_states": [
       "URDF_J00_FRAME",
-      "other frozen interfaces"
+      "other interfaces"
     ],
     "upstream_objects_to_modify": [
       "InterfaceContract",

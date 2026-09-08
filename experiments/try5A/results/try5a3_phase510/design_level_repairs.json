@@ -1,5 +1,6 @@
 [
   {
+    "case_id": "A_parameter",
     "decision": {
       "target": "J03/L03-L04",
       "failed_gates": [
@@ -14,48 +15,36 @@
         "confidence": 0.91
       },
       "repair_scope": "R0_PARAMETER_REPAIR",
-      "reason": "small radial clearance deviation; topology and family remain valid; selected from deterministic failure hierarchy",
+      "reason": "minor radius error with valid topology; selected from deterministic failure hierarchy",
       "protected_states": [
-        "URDF_J03_FRAME",
-        "neighboring interfaces"
+        "URDF_J03_FRAME"
       ],
       "upstream_objects_to_modify": [
         "LinkCoarseSpec.parameters"
       ]
     },
+    "expected_repair_scope": "R0_PARAMETER_REPAIR",
     "design_update": {
-      "kind": "LinkCoarseSpec.parameter_update",
-      "target": "J03/L03-L04",
       "before": {
-        "carrier_radius_mm": 15.0
+        "radius_mm": 15.0
       },
       "after": {
-        "carrier_radius_mm": 14.5
+        "radius_mm": 14.5
       }
     },
-    "cad_ir_projection": {
-      "generated_from": "LinkCoarseSpec.parameter_update",
-      "operations": [
-        {
-          "feature_id": "IF_J03_carrier",
-          "owning_link": "L03",
-          "mechanical_role": "coaxial interface carrier",
-          "source_evidence": "deterministic repair diagnosis plus declared Robot Plan context",
-          "source_design_node": "LinkCoarseSpec/L03",
-          "why_required": "restore declared radial clearance",
-          "related_interface_or_body": "L03",
-          "cad_strategy": "update cylinder radius parameter"
-        }
-      ]
+    "cad_consumption": {
+      "baseline": "experiments/try5A/A3_repair_pilots/A_parameter/baseline/cad_ir.json",
+      "candidate": "experiments/try5A/A3_repair_pilots/A_parameter/candidate/cad_ir.json"
     },
     "mechanical_meaningfulness": [
       {
-        "feature_id": "IF_J03_carrier",
+        "feature_id": "IF_J03",
         "pass": true
       }
     ]
   },
   {
+    "case_id": "B_local_feature",
     "decision": {
       "target": "L03/distal_transition",
       "failed_gates": [
@@ -70,7 +59,7 @@
         "confidence": 0.84
       },
       "repair_scope": "R1_LOCAL_FEATURE_REPAIR",
-      "reason": "local body-to-carrier load path is absent; selected from deterministic failure hierarchy",
+      "reason": "one local transition is absent; selected from deterministic failure hierarchy",
       "protected_states": [
         "URDF_J03_FRAME",
         "J03 carrier"
@@ -79,30 +68,18 @@
         "BodyRegionSpec.local_feature"
       ]
     },
+    "expected_repair_scope": "R1_LOCAL_FEATURE_REPAIR",
     "design_update": {
-      "kind": "BodyRegionSpec.local_feature",
-      "target": "L03/distal_transition",
       "before": {
         "transition_web": "absent"
       },
       "after": {
-        "transition_web": "tapered support web"
+        "transition_web": "tapered_support_web"
       }
     },
-    "cad_ir_projection": {
-      "generated_from": "BodyRegionSpec.local_feature",
-      "operations": [
-        {
-          "feature_id": "L03_transition_web",
-          "owning_link": "L03",
-          "mechanical_role": "connects forearm body to distal carrier",
-          "source_evidence": "deterministic repair diagnosis plus declared Robot Plan context",
-          "source_design_node": "BodyRegionSpec/L03/distal_transition",
-          "why_required": "restore local load path without bridging the joint clearance",
-          "related_interface_or_body": "distal_transition",
-          "cad_strategy": "replace local transition with tapered web"
-        }
-      ]
+    "cad_consumption": {
+      "baseline": "experiments/try5A/A3_repair_pilots/B_local_feature/baseline/cad_ir.json",
+      "candidate": "experiments/try5A/A3_repair_pilots/B_local_feature/candidate/cad_ir.json"
     },
     "mechanical_meaningfulness": [
       {
@@ -112,6 +89,52 @@
     ]
   },
   {
+    "case_id": "B_body_region",
+    "decision": {
+      "target": "L04/middle_region",
+      "failed_gates": [
+        "COLLISION"
+      ],
+      "deterministic_evidence": {
+        "localized_feature_failure": false,
+        "repeated_region_failures": 3
+      },
+      "vlm_diagnosis": {
+        "suspected_root_cause": "body_region_family_mismatch",
+        "confidence": 0.88
+      },
+      "repair_scope": "R2_BODY_REGION_REPLAN",
+      "reason": "repeated collision requires replacement of the middle region family; selected from deterministic failure hierarchy",
+      "protected_states": [
+        "L04 proximal carrier",
+        "L04 distal carrier"
+      ],
+      "upstream_objects_to_modify": [
+        "BodyRegionSpec"
+      ]
+    },
+    "expected_repair_scope": "R2_BODY_REGION_REPLAN",
+    "design_update": {
+      "before": {
+        "body_region_family": "straight_prism"
+      },
+      "after": {
+        "body_region_family": "offset_dual_segment"
+      }
+    },
+    "cad_consumption": {
+      "baseline": "experiments/try5A/A3_repair_pilots/B_body_region/baseline/cad_ir.json",
+      "candidate": "experiments/try5A/A3_repair_pilots/B_body_region/candidate/cad_ir.json"
+    },
+    "mechanical_meaningfulness": [
+      {
+        "feature_id": "L04_middle_region",
+        "pass": true
+      }
+    ]
+  },
+  {
+    "case_id": "C_whole_link",
     "decision": {
       "target": "L05",
       "failed_gates": [
@@ -127,7 +150,7 @@
         "confidence": 0.89
       },
       "repair_scope": "R3_WHOLE_LINK_REPLAN",
-      "reason": "single beam cannot realize the required paired load path; selected from deterministic failure hierarchy",
+      "reason": "whole-link body family has the wrong load-path topology; selected from deterministic failure hierarchy",
       "protected_states": [
         "URDF_J05_FRAME",
         "URDF_J06_FRAME"
@@ -137,42 +160,20 @@
         "LinkCoarseSpec.structural_path"
       ]
     },
+    "expected_repair_scope": "R3_WHOLE_LINK_REPLAN",
     "design_update": {
-      "kind": "LinkCoarseSpec.whole_link_replan",
-      "target": "L05",
       "before": {
         "body_family": "straight_beam",
-        "structural_path": "single beam"
+        "load_paths": 1
       },
       "after": {
         "body_family": "dual_side_plate",
-        "structural_path": "proximal fork carrier -> paired load paths -> distal carrier"
+        "load_paths": 2
       }
     },
-    "cad_ir_projection": {
-      "generated_from": "LinkCoarseSpec.whole_link_replan",
-      "operations": [
-        {
-          "feature_id": "L05_left_side_plate",
-          "owning_link": "L05",
-          "mechanical_role": "first load path between interface carriers",
-          "source_evidence": "deterministic repair diagnosis plus declared Robot Plan context",
-          "source_design_node": "LinkCoarseSpec/L05",
-          "why_required": "correct wrong whole-link topology",
-          "related_interface_or_body": "L05",
-          "cad_strategy": "replace single beam with paired plates"
-        },
-        {
-          "feature_id": "L05_right_side_plate",
-          "owning_link": "L05",
-          "mechanical_role": "second load path between interface carriers",
-          "source_evidence": "deterministic repair diagnosis plus declared Robot Plan context",
-          "source_design_node": "LinkCoarseSpec/L05",
-          "why_required": "maintain symmetric fork-compatible body organization",
-          "related_interface_or_body": "L05",
-          "cad_strategy": "replace single beam with paired plates"
-        }
-      ]
+    "cad_consumption": {
+      "baseline": "experiments/try5A/A3_repair_pilots/C_whole_link/baseline/cad_ir.json",
+      "candidate": "experiments/try5A/A3_repair_pilots/C_whole_link/candidate/cad_ir.json"
     },
     "mechanical_meaningfulness": [
       {
@@ -186,6 +187,7 @@
     ]
   },
   {
+    "case_id": "D_interface_pair",
     "decision": {
       "target": "J00/L00-L01",
       "failed_gates": [
@@ -201,10 +203,10 @@
         "confidence": 0.93
       },
       "repair_scope": "R4_INTERFACE_PAIR_REPLAN",
-      "reason": "base and shoulder require nested concentric carriers; local patching would block annular clearance; selected from deterministic failure hierarchy",
+      "reason": "interface family mismatch requires rebuilding both mating regions; selected from deterministic failure hierarchy",
       "protected_states": [
         "URDF_J00_FRAME",
-        "other frozen interfaces"
+        "other interfaces"
       ],
       "upstream_objects_to_modify": [
         "InterfaceContract",
@@ -212,42 +214,18 @@
         "child_local_region"
       ]
     },
+    "expected_repair_scope": "R4_INTERFACE_PAIR_REPLAN",
     "design_update": {
-      "kind": "InterfaceContract.pair_replan",
-      "target": "J00/L00-L01",
       "before": {
-        "family": "coaxial_rotary_interface"
+        "interface_family": "coaxial_rotary_interface"
       },
       "after": {
-        "family": "nested_rotary_housing",
-        "parent_region": "annular base carrier",
-        "child_region": "nested shoulder carrier"
+        "interface_family": "nested_rotary_housing"
       }
     },
-    "cad_ir_projection": {
-      "generated_from": "InterfaceContract.pair_replan",
-      "operations": [
-        {
-          "feature_id": "J00_outer_housing",
-          "owning_link": "L00",
-          "mechanical_role": "stationary annular base carrier",
-          "source_evidence": "deterministic repair diagnosis plus declared Robot Plan context",
-          "source_design_node": "InterfaceContract/J00",
-          "why_required": "realize nested rotary family",
-          "related_interface_or_body": "J00",
-          "cad_strategy": "concentric outer housing"
-        },
-        {
-          "feature_id": "J00_inner_rotor",
-          "owning_link": "L01",
-          "mechanical_role": "rotating shoulder carrier",
-          "source_evidence": "deterministic repair diagnosis plus declared Robot Plan context",
-          "source_design_node": "InterfaceContract/J00",
-          "why_required": "realize nested rotary family without rigid fusion",
-          "related_interface_or_body": "J00",
-          "cad_strategy": "concentric inner carrier with annular clearance"
-        }
-      ]
+    "cad_consumption": {
+      "baseline": "experiments/try5A/A3_repair_pilots/D_interface_pair/baseline/cad_ir.json",
+      "candidate": "experiments/try5A/A3_repair_pilots/D_interface_pair/candidate/cad_ir.json"
     },
     "mechanical_meaningfulness": [
       {

@@ -1,0 +1,75 @@
+{
+  "experiment": "Try-5A.3",
+  "status": "COMPLETE_WITH_NEGATIVE_WHOLE_ROBOT_RESULT",
+  "research_result": "The two mechanisms are implemented and physically validated on the frozen pilot cases. Knowledge guidance changes interface choices but does not by itself solve whole-robot physical attachment or collision.",
+  "objectives": {
+    "knowledge_base_and_retrieval": true,
+    "knowledge_reaches_current_cad": true,
+    "mechanical_meaningfulness_gate": true,
+    "all_repair_scopes_physically_exercised": true,
+    "repair_dataflow_closed": true,
+    "pilot_repairs_accepted_by_four_gates": true,
+    "gt_leakage_absent": true,
+    "whole_robot_three_round_loop_not_run": true
+  },
+  "interface_knowledge_metrics": {
+    "retrieval_coverage": 1.0,
+    "family_change_rate": 0.36363636363636365,
+    "custom_interface_rate": 0.0,
+    "changed_joints": [
+      "J00",
+      "J08",
+      "J09",
+      "J10"
+    ],
+    "selected_family_distribution": {
+      "coaxial_rotary_interface": 2,
+      "end_tool_interface": 1,
+      "fork_pin_interface": 2,
+      "nested_rotary_housing": 1,
+      "planar_mount_interface": 3,
+      "rail_slider_interface": 2
+    }
+  },
+  "k0_physical_baseline": {
+    "source": "frozen Try-5A.2 D0 / Try-5A.1 C1 physical baseline",
+    "physical_links": 11,
+    "bicr": 0.0,
+    "positive_gap_carriers": 2,
+    "spurious_virtual_geometry_count": 1,
+    "exact_collision_events": 130,
+    "sweep_free_pose_rate": 0.0
+  },
+  "k1_physical_result": {
+    "source": "current knowledge-guided A2 physical generation",
+    "physical_links": 11,
+    "logical_connected_joint_rate": 1.0,
+    "strict_bicr": 0.0,
+    "spurious_virtual_geometry_count": 0,
+    "exact_collision_events": 181,
+    "sweep_free_pose_rate": 0.0
+  },
+  "repair_metrics": {
+    "scope_accuracy": 1.0,
+    "scope_distribution": {
+      "R0_PARAMETER_REPAIR": 1,
+      "R1_LOCAL_FEATURE_REPAIR": 1,
+      "R2_BODY_REGION_REPLAN": 1,
+      "R3_WHOLE_LINK_REPLAN": 1,
+      "R4_INTERFACE_PAIR_REPLAN": 1
+    },
+    "true_replan_rate": 0.6,
+    "repair_success_rate": 1.0,
+    "regression_rate": 0.0,
+    "rollback_rate": 0.0,
+    "meaningful_geometry_rate": 1.0,
+    "meaningless_patch_count": 0,
+    "freecad_execution_success_rate": 1.0
+  },
+  "interpretation": {
+    "rq1": "PARTIAL: retrieval is stable and changes four selections, but strict BICR remains 0 and exact collision events increase from 130 to 181.",
+    "rq2": "SUPPORTED ON PILOTS: R0-R4 scope accuracy and physical repair success are 100%.",
+    "rq3": "SUPPORTED ON PILOTS: MGR is 100% and meaningless patch count is 0.",
+    "whole_robot_acceptance": "FAIL: current K1 assembly uses separate interface/body final solids and has 0% sweep-free poses."
+  }
+}

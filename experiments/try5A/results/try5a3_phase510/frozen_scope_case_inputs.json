@@ -14,12 +14,10 @@
       "confidence": 0.91
     },
     "rationale": [
-      "small radial clearance deviation",
-      "topology and family remain valid"
+      "minor radius error with valid topology"
     ],
     "protected_states": [
-      "URDF_J03_FRAME",
-      "neighboring interfaces"
+      "URDF_J03_FRAME"
     ]
   },
   {
@@ -37,11 +35,33 @@
       "confidence": 0.84
     },
     "rationale": [
-      "local body-to-carrier load path is absent"
+      "one local transition is absent"
     ],
     "protected_states": [
       "URDF_J03_FRAME",
       "J03 carrier"
+    ]
+  },
+  {
+    "case_id": "B_body_region",
+    "target": "L04/middle_region",
+    "failed_gates": [
+      "COLLISION"
+    ],
+    "deterministic_evidence": {
+      "localized_feature_failure": false,
+      "repeated_region_failures": 3
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "body_region_family_mismatch",
+      "confidence": 0.88
+    },
+    "rationale": [
+      "repeated collision requires replacement of the middle region family"
+    ],
+    "protected_states": [
+      "L04 proximal carrier",
+      "L04 distal carrier"
     ]
   },
   {
@@ -60,7 +80,7 @@
       "confidence": 0.89
     },
     "rationale": [
-      "single beam cannot realize the required paired load path"
+      "whole-link body family has the wrong load-path topology"
     ],
     "protected_states": [
       "URDF_J05_FRAME",
@@ -83,12 +103,11 @@
       "confidence": 0.93
     },
     "rationale": [
-      "base and shoulder require nested concentric carriers",
-      "local patching would block annular clearance"
+      "interface family mismatch requires rebuilding both mating regions"
     ],
     "protected_states": [
       "URDF_J00_FRAME",
-      "other frozen interfaces"
+      "other interfaces"
     ]
   }
 ]

@@ -12,6 +12,12 @@
     "correct": true
   },
   {
+    "case_id": "B_body_region",
+    "selected": "R2_BODY_REGION_REPLAN",
+    "expected_repair_scope": "R2_BODY_REGION_REPLAN",
+    "correct": true
+  },
+  {
     "case_id": "C_whole_link",
     "selected": "R3_WHOLE_LINK_REPLAN",
     "expected_repair_scope": "R3_WHOLE_LINK_REPLAN",

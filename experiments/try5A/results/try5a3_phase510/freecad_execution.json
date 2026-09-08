@@ -1,0 +1,72 @@
+[
+  {
+    "case_id": "A_parameter",
+    "variant": "baseline",
+    "returncode": 0,
+    "elapsed_seconds": 7.155009508132935,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "A_parameter",
+    "variant": "candidate",
+    "returncode": 0,
+    "elapsed_seconds": 7.183588981628418,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "B_local_feature",
+    "variant": "baseline",
+    "returncode": 0,
+    "elapsed_seconds": 7.2389044761657715,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "B_local_feature",
+    "variant": "candidate",
+    "returncode": 0,
+    "elapsed_seconds": 7.2974371910095215,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "B_body_region",
+    "variant": "baseline",
+    "returncode": 0,
+    "elapsed_seconds": 7.162631511688232,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "B_body_region",
+    "variant": "candidate",
+    "returncode": 0,
+    "elapsed_seconds": 7.164052963256836,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "C_whole_link",
+    "variant": "baseline",
+    "returncode": 0,
+    "elapsed_seconds": 7.197030067443848,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "C_whole_link",
+    "variant": "candidate",
+    "returncode": 0,
+    "elapsed_seconds": 7.185205459594727,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "D_interface_pair",
+    "variant": "baseline",
+    "returncode": 0,
+    "elapsed_seconds": 7.186516046524048,
+    "status": "SUCCESS"
+  },
+  {
+    "case_id": "D_interface_pair",
+    "variant": "candidate",
+    "returncode": 0,
+    "elapsed_seconds": 7.195742607116699,
+    "status": "SUCCESS"
+  }
+]

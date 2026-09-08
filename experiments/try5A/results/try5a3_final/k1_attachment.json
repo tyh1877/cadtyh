@@ -1,0 +1,239 @@
+{
+  "status": "FAIL",
+  "attachment_count": 21,
+  "attached_count": 0,
+  "bicr": 0.0,
+  "rows": [
+    {
+      "link_id": "L00",
+      "interface_id": "IF_J00",
+      "body_object": "op_004",
+      "carrier_object": "op_003",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 1066.2710764943968,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L01",
+      "interface_id": "IF_J00",
+      "body_object": "op_005",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 30895.98038535821,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L01",
+      "interface_id": "IF_J01",
+      "body_object": "op_005",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 332.9459650340268,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L02",
+      "interface_id": "IF_J01",
+      "body_object": "op_005",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 2274.651857564813,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L02",
+      "interface_id": "IF_J02",
+      "body_object": "op_005",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 74.59087337832352,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L03",
+      "interface_id": "IF_J02",
+      "body_object": "op_005",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 4104.076111684792,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L03",
+      "interface_id": "IF_J03",
+      "body_object": "op_005",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 332.3206161398386,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L04",
+      "interface_id": "IF_J03",
+      "body_object": "op_005",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 4104.076111684792,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L04",
+      "interface_id": "IF_J04",
+      "body_object": "op_005",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 105.45442965167086,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L05",
+      "interface_id": "IF_J04",
+      "body_object": "op_008",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 703.7167544041134,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L05",
+      "interface_id": "IF_J05",
+      "body_object": "op_008",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 68.52991674724439,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L05",
+      "interface_id": "IF_J06",
+      "body_object": "op_008",
+      "carrier_object": "op_007",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 105.45442965167058,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L06",
+      "interface_id": "IF_J05",
+      "body_object": "op_002",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 720.6059565098125,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L07",
+      "interface_id": "IF_J06",
+      "body_object": "op_005",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 703.7167544041135,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L07",
+      "interface_id": "IF_J07",
+      "body_object": "op_005",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 104.82078604084707,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L08",
+      "interface_id": "IF_J07",
+      "body_object": "op_012",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 142.31568647968817,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L08",
+      "interface_id": "IF_J08",
+      "body_object": "op_012",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 200.36147247772033,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L08",
+      "interface_id": "IF_J09",
+      "body_object": "op_011",
+      "carrier_object": "op_007",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 200.36147247772047,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L08",
+      "interface_id": "IF_J10",
+      "body_object": "op_012",
+      "carrier_object": "op_010",
+      "minimum_distance_mm": 2.4999999999999956,
+      "intersection_volume_mm3": 0.0,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "POSITIVE_GAP"
+    },
+    {
+      "link_id": "L09",
+      "interface_id": "IF_J08",
+      "body_object": "op_002",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 262.6608711478266,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L10",
+      "interface_id": "IF_J09",
+      "body_object": "op_002",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 262.6608711478266,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    }
+  ]
+}

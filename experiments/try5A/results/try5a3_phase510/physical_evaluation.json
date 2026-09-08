@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case_id": "A_parameter",
+      "metrics": {
+        "baseline": {
+          "radius_mm": 15.0,
+          "target_error_mm": 0.5
+        },
+        "candidate": {
+          "radius_mm": 14.5,
+          "target_error_mm": 0.0
+        }
+      },
+      "acceptance_gates": {
+        "MECHANICAL_MEANINGFULNESS": "PASS",
+        "INTERFACE_ATTACHMENT": "PASS",
+        "COLLISION": "PASS",
+        "COARSE_MORPHOLOGY": "PASS"
+      },
+      "deterministic_gate": "PASS",
+      "decision": "ACCEPT"
+    },
+    {
+      "case_id": "B_local_feature",
+      "metrics": {
+        "baseline": {
+          "connected_components": 2,
+          "minimum_gap_mm": 5.0
+        },
+        "candidate": {
+          "connected_components": 1,
+          "minimum_gap_mm": 0.0
+        }
+      },
+      "acceptance_gates": {
+        "MECHANICAL_MEANINGFULNESS": "PASS",
+        "INTERFACE_ATTACHMENT": "PASS",
+        "COLLISION": "PASS",
+        "COARSE_MORPHOLOGY": "PASS"
+      },
+      "deterministic_gate": "PASS",
+      "decision": "ACCEPT"
+    },
+    {
+      "case_id": "B_body_region",
+      "metrics": {
+        "baseline": {
+          "obstacle_intersection_mm3": 1439.9999999999998,
+          "region_family": "straight_prism"
+        },
+        "candidate": {
+          "obstacle_intersection_mm3": 0.0,
+          "region_family": "offset_dual_segment"
+        }
+      },
+      "acceptance_gates": {
+        "MECHANICAL_MEANINGFULNESS": "PASS",
+        "INTERFACE_ATTACHMENT": "PASS",
+        "COLLISION": "PASS",
+        "COARSE_MORPHOLOGY": "PASS"
+      },
+      "deterministic_gate": "PASS",
+      "decision": "ACCEPT"
+    },
+    {
+      "case_id": "C_whole_link",
+      "metrics": {
+        "baseline": {
+          "load_paths": 1,
+          "body_family": "straight_beam"
+        },
+        "candidate": {
+          "load_paths": 2,
+          "body_family": "dual_side_plate"
+        }
+      },
+      "acceptance_gates": {
+        "MECHANICAL_MEANINGFULNESS": "PASS",
+        "INTERFACE_ATTACHMENT": "PASS",
+        "COLLISION": "PASS",
+        "COARSE_MORPHOLOGY": "PASS"
+      },
+      "deterministic_gate": "PASS",
+      "decision": "ACCEPT"
+    },
+    {
+      "case_id": "D_interface_pair",
+      "metrics": {
+        "baseline": {
+          "pair_intersection_mm3": 20357.520395261858,
+          "family": "coaxial_rotary_interface"
+        },
+        "candidate": {
+          "pair_intersection_mm3": 0.0,
+          "radial_clearance_mm": 0.49999999999999584,
+          "family": "nested_rotary_housing"
+        }
+      },
+      "acceptance_gates": {
+        "MECHANICAL_MEANINGFULNESS": "PASS",
+        "INTERFACE_ATTACHMENT": "PASS",
+        "COLLISION": "PASS",
+        "COARSE_MORPHOLOGY": "PASS"
+      },
+      "deterministic_gate": "PASS",
+      "decision": "ACCEPT"
+    }
+  ]
+}
