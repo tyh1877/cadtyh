@@ -1,0 +1,17 @@
+{
+  "robot_id": "R01",
+  "stable_to_source": {
+    "L00": "/base_link",
+    "L01": "/shoulder_link",
+    "L02": "/upper_arm_link",
+    "L03": "/forearm_link",
+    "L04": "/gripper_link",
+    "L05": "/ee_arm_link",
+    "L06": "/gripper_prop_link",
+    "L07": "/gripper_bar_link",
+    "L08": "/fingers_link",
+    "L09": "/left_finger_link",
+    "L10": "/right_finger_link",
+    "L11": "/ee_gripper_link"
+  }
+}

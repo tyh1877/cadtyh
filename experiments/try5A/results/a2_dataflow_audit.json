@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "robot_plan_sha256": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+  "joint_interface_graph_sha256": "405e1100214bea5c5443f60d720b48e18751fde86a5086d67db283d0cec79b5f",
+  "joint_contracts": 11,
+  "parent_child_consumptions": 22,
+  "errors": [],
+  "mutation_tests": {
+    "radius_changes_geometry": true,
+    "origin_changes_port_center": true,
+    "prismatic_limit_changes_guide_depth": true
+  },
+  "gt_geometry_consumed": false
+}

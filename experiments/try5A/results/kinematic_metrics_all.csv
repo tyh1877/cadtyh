@@ -1,0 +1,4 @@
+condition,samples,ee_position_error_m,ee_orientation_error_deg,workspace_reference,workspace_coverage,workspace_bbox_x_m,workspace_bbox_y_m,workspace_bbox_z_m,joint_limit_traversal_success,collision_free_aabb_sweep_rate
+A0,256,0,0,sanitized URDF,1.0,0.5631889113055504,0.5892121666839705,0.5649374981775559,1.0,0.0
+A1,256,0,0,sanitized URDF,1.0,0.5631889113055504,0.5892121666839705,0.5649374981775559,1.0,0.0
+A2,256,0,0,sanitized URDF,1.0,0.5631889113055504,0.5892121666839705,0.5649374981775559,1.0,0.0

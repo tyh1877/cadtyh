@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "objective_execution": "COMPLETE",
+  "method_outcome": "PARTIAL_SUCCESS",
+  "checks": {
+    "final_method_hashes_match": true,
+    "frozen_a2_plans_unchanged": true,
+    "a2_dataflow_22_pass": true,
+    "a2_links_12_complete": true,
+    "a2_native_valid_zero_fallback": true,
+    "a2_visibility_all_bodies_present": true,
+    "assemblies_all_reopen": true,
+    "common_metrics_three_conditions": true,
+    "coarse_geometry_rows_30": true,
+    "deterministic_final_tables": true,
+    "robot_level_outputs_complete": true,
+    "contact_sheet_exists": true,
+    "report_exists": true,
+    "a0_a1_frozen_plans_unchanged": true,
+    "no_robot_b_transfer": true,
+    "try5b_absent": true,
+    "no_iterative_repair": true
+  },
+  "method_files": {
+    "experiments\\try5A\\results\\a2_method_snapshot.json": true,
+    "experiments\\try5A\\results\\a2_evaluation_snapshot.json": true,
+    "experiments\\try5A\\results\\coarse_evaluation_snapshot.json": true,
+    "experiments\\try5A\\scripts\\freecad_assemble_a2.py": true,
+    "experiments\\try5A\\scripts\\run_a2_assembly.py": true,
+    "experiments\\try5A\\scripts\\evaluate_condition.py": true,
+    "experiments\\try5A\\scripts\\evaluate_coarse_geometry.py": true,
+    "experiments\\try5A\\scripts\\finalize_try5A.py": true,
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": true,
+    "experiments\\try5A\\blackboard\\joint_interface_graph.json": true
+  },
+  "frozen_a2_files": {
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": true,
+    "experiments\\try5A\\blackboard\\joint_interface_graph.json": true,
+    "experiments\\try5A\\scripts\\materialize_a2.py": true,
+    "try4\\scripts\\freecad_t1_executor.py": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J00.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J01.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J02.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J03.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J04.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J05.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J06.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J07.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J08.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J09.json": true,
+    "experiments\\try5A\\interface_graph\\contracts\\J10.json": true,
+    "experiments\\try5A\\A2\\L00\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L01\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L02\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L03\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L04\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L05\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L06\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L07\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L08\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L09\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L10\\cad_ir.json": true,
+    "experiments\\try5A\\A2\\L11\\cad_ir.json": true
+  },
+  "a2_links": [
+    {
+      "link_id": "L00",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L01",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L02",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L03",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L04",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L05",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L06",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L07",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L08",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L09",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L10",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    },
+    {
+      "link_id": "L11",
+      "missing": [],
+      "valid": true,
+      "fallbacks": 0,
+      "reopen": "PASS",
+      "editable": true
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "source_urdf_sha256": "2d56e0c10bd72d2e681cadbba5d4975b41d5e1140795da6b991231966d7defb9",
+  "meshes": [
+    {
+      "link_id": "L00",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-1-Base.stl",
+      "sha256": "42dcb0a17f6bca3b2c7a1300faff240ad73a164693650af14f55ac9596a9a0f2",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L01",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-2-Shoulder.stl",
+      "sha256": "7bb647e26c773ce1fd408536ed1844d87776e2fb2223a41973d0cabf7d37ba22",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L02",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-3-UA.stl",
+      "sha256": "1313d3926d53132de0ec411a7226289e007b61f36e290785ebd9815acb804858",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L03",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-4-Forearm.stl",
+      "sha256": "72952a7ce9569c2468517538109141a08eb572cb027094d17a9b91f028d0b327",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L04",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-5-Wrist-Gripper.stl",
+      "sha256": "4148d290ad924a78fcd58f18ea0822000cda14e7eaaee01e8d69664d7cf1234a",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L06",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-6-Gripper-Prop.stl",
+      "sha256": "30fcd807817b7c9df6275d2c8100cfe0e7786e2c65b574d22efe177520f1a316",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L07",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-7-Gripper-Bar.stl",
+      "sha256": "b54601da3f60eea180226b695bb95a9b29b187f22f5b74d9a523ac9785d9a518",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L09",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-8-Finger.stl",
+      "sha256": "6a459bd4ef07eb5c4687e258bd9564004e741437e2e668af7ed31964567d8f90",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L10",
+      "source_mesh": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-8-Finger.stl",
+      "sha256": "6a459bd4ef07eb5c4687e258bd9564004e741437e2e668af7ed31964567d8f90",
+      "evaluator_only": true
+    }
+  ],
+  "excluded_virtual_links": [
+    "L05",
+    "L08",
+    "L11"
+  ]
+}

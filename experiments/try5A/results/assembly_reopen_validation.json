@@ -1,0 +1,32 @@
+[
+  {
+    "condition": "A0",
+    "fcstd_exists": true,
+    "reopen": "PASS",
+    "recompute": "PASS",
+    "link_objects": 12,
+    "valid_shapes": 12,
+    "step_exists": true,
+    "stl_exists": true
+  },
+  {
+    "condition": "A1",
+    "fcstd_exists": true,
+    "reopen": "PASS",
+    "recompute": "PASS",
+    "link_objects": 12,
+    "valid_shapes": 12,
+    "step_exists": true,
+    "stl_exists": true
+  },
+  {
+    "condition": "A2",
+    "fcstd_exists": true,
+    "reopen": "PASS",
+    "recompute": "PASS",
+    "link_objects": 12,
+    "valid_shapes": 12,
+    "step_exists": true,
+    "stl_exists": true
+  }
+]

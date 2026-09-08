@@ -1,0 +1,415 @@
+{
+  "method": "conservative transformed STL AABB overlap",
+  "samples": [
+    {
+      "active_joint": "J00",
+      "value_rad": -3.141592653589793,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J00",
+      "value_rad": 0.0,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J00",
+      "value_rad": 3.141592653589793,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J01",
+      "value_rad": -1.9373154697137058,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L00",
+          "L02"
+        ],
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L04",
+          "L08"
+        ],
+        [
+          "L04",
+          "L09"
+        ],
+        [
+          "L04",
+          "L10"
+        ],
+        [
+          "L05",
+          "L08"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J01",
+      "value_rad": 0.0,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J01",
+      "value_rad": 1.8675022996339325,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L00",
+          "L02"
+        ],
+        [
+          "L00",
+          "L03"
+        ],
+        [
+          "L01",
+          "L03"
+        ],
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L04",
+          "L08"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J02",
+      "value_rad": -1.6057029118347832,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L00",
+          "L04"
+        ],
+        [
+          "L00",
+          "L05"
+        ],
+        [
+          "L00",
+          "L06"
+        ],
+        [
+          "L00",
+          "L07"
+        ],
+        [
+          "L00",
+          "L08"
+        ],
+        [
+          "L00",
+          "L09"
+        ],
+        [
+          "L00",
+          "L10"
+        ],
+        [
+          "L01",
+          "L03"
+        ],
+        [
+          "L01",
+          "L04"
+        ],
+        [
+          "L01",
+          "L05"
+        ],
+        [
+          "L01",
+          "L06"
+        ],
+        [
+          "L01",
+          "L07"
+        ],
+        [
+          "L01",
+          "L08"
+        ],
+        [
+          "L02",
+          "L04"
+        ],
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J02",
+      "value_rad": 0.0,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J02",
+      "value_rad": 2.111848394913139,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L04",
+          "L08"
+        ],
+        [
+          "L04",
+          "L09"
+        ],
+        [
+          "L04",
+          "L10"
+        ],
+        [
+          "L05",
+          "L08"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ],
+        [
+          "L07",
+          "L11"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J03",
+      "value_rad": -2.1467549799530254,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L04",
+          "L08"
+        ],
+        [
+          "L04",
+          "L09"
+        ],
+        [
+          "L04",
+          "L10"
+        ],
+        [
+          "L05",
+          "L08"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ],
+        [
+          "L07",
+          "L11"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J03",
+      "value_rad": 0.0,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    },
+    {
+      "active_joint": "J03",
+      "value_rad": 1.7453292519943295,
+      "nonadjacent_aabb_collisions": [
+        [
+          "L04",
+          "L06"
+        ],
+        [
+          "L04",
+          "L07"
+        ],
+        [
+          "L06",
+          "L07"
+        ],
+        [
+          "L06",
+          "L08"
+        ]
+      ],
+      "collision_free": false
+    }
+  ],
+  "joint_limit_traversal_success": 1.0,
+  "collision_free_sample_rate": 0.0
+}

@@ -8,3 +8,4 @@ interface_eval_05,A0 deterministic evaluation,unit conversion and compound-volum
 interface_eval_06,A0 deterministic evaluation,numpy boolean serialization failure,false,cast analytical gate booleans to native bool and replay
 assembly_02,A0/A1 visual assembly,homogeneous placement matrix last row not explicitly initialized,true,archive old assemblies set A41-A43=0 A44=1 and replay identical URDF transforms
 assembly_03,A0/A1 visual assembly,STEP reimport collected hierarchy and duplicate shape objects,true,copy only cad_ir final_objects directly from each link FCStd and replay assembly
+coarse_eval_01,A0/A1/A2 evaluator freeze,URDF package mesh root resolved one directory too deep,false,fix evaluator-only mesh root and refreeze before metrics

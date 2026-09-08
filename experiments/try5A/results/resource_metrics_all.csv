@@ -1,0 +1,4 @@
+condition,links,successful_links,cad_operations,mean_link_build_seconds,silent_fallbacks,model,tokens
+A0,12,12,34,4.846696535746257,0,current_interactive_codex,UNAVAILABLE
+A1,12,12,36,5.336787422498067,0,current_interactive_codex,UNAVAILABLE
+A2,12,12,58,5.1659948627154035,0,current_interactive_codex,UNAVAILABLE

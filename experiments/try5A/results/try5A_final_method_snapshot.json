@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-09-08T06:03:31.581375+00:00",
+  "experiment": "Try-5A complete",
+  "files": {
+    "experiments\\try5A\\results\\a2_method_snapshot.json": "902f5e98ca57457bd073c3aa81979a243d9ccf3dcdd17759cc8efa3b723d6817",
+    "experiments\\try5A\\results\\a2_evaluation_snapshot.json": "8d9c55056384c37036f14d7246c1b61d9710bbc476728ad39a668a39348109a1",
+    "experiments\\try5A\\results\\coarse_evaluation_snapshot.json": "e21acfa9a9b434866faa2e9b0bb16f613ea45ba3d7046ac033b8b4414b290312",
+    "experiments\\try5A\\scripts\\freecad_assemble_a2.py": "43216fcc81c6e062ac22263feaf6d19d2aed94c9a1139cb9c746fe078cfbe880",
+    "experiments\\try5A\\scripts\\run_a2_assembly.py": "00d73e68c723ef9789a3091edcf561ee04ebb122a6a069c5a530dbd64c54a198",
+    "experiments\\try5A\\scripts\\evaluate_condition.py": "c2e4dac8cdedd6fd9a1212f5892796fc18e2c9c0d90c1700072b725799d5a0c6",
+    "experiments\\try5A\\scripts\\evaluate_coarse_geometry.py": "3c3b4e4452e1525c30e6c0b4ecfbade5c2cfe9f7b786f2cff1f41722aa518279",
+    "experiments\\try5A\\scripts\\finalize_try5A.py": "4e5e078633872874758c648a4721ffdd1a00ce94277b4adc167d682aaafe2e42",
+    "experiments\\try5A\\blackboard\\robot_assembly_plan.json": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "experiments\\try5A\\blackboard\\joint_interface_graph.json": "405e1100214bea5c5443f60d720b48e18751fde86a5086d67db283d0cec79b5f"
+  }
+}

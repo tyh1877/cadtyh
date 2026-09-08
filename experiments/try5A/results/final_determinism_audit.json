@@ -1,0 +1,26 @@
+[
+  {
+    "file": "experiments/try5A/results/a0_common_interface_metrics.json",
+    "before": "B0BDD2D3F4DDEB8EB9DD9B1551D57AE8E0CE9436C8CAD4337A9C949EA5957FA4",
+    "after": "B0BDD2D3F4DDEB8EB9DD9B1551D57AE8E0CE9436C8CAD4337A9C949EA5957FA4",
+    "match": true
+  },
+  {
+    "file": "experiments/try5A/results/a1_common_interface_metrics.json",
+    "before": "086C57AE34EE0F3598EAF0DE440A6AF097622FEA36ACC96E18DDDE0232D6BB86",
+    "after": "086C57AE34EE0F3598EAF0DE440A6AF097622FEA36ACC96E18DDDE0232D6BB86",
+    "match": true
+  },
+  {
+    "file": "experiments/try5A/results/a2_common_interface_metrics.json",
+    "before": "61CA5CFC1BF8EA1409AE5FF619252C025B2532D92786B3AAEECCA48697205791",
+    "after": "61CA5CFC1BF8EA1409AE5FF619252C025B2532D92786B3AAEECCA48697205791",
+    "match": true
+  },
+  {
+    "file": "experiments/try5A/results/coarse_geometry_metrics.csv",
+    "before": "BB014F69A221036F93397FC5BD48F255D731D9F4DAC0DE8A829B7DEE4D1A7E17",
+    "after": "BB014F69A221036F93397FC5BD48F255D731D9F4DAC0DE8A829B7DEE4D1A7E17",
+    "match": true
+  }
+]

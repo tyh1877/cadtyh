@@ -1,0 +1,12 @@
+{
+  "robot_id": "R01",
+  "L0": "KINEMATIC_CHECKED",
+  "L1": "ROBOT_PLANNED",
+  "L2": "INTERFACES_PLANNED",
+  "A0": "COMPLETE",
+  "A1": "COMPLETE",
+  "A2": "COMPLETE",
+  "assembly": "COMPLETE",
+  "evaluation": "COMPLETE",
+  "Try5B": "NOT_STARTED"
+}
