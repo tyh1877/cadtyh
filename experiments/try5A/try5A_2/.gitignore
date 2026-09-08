@@ -1,0 +1,5 @@
+/D0/physical_assembly/
+/evaluator/raw/
+evaluator/*.txt
+__pycache__/
+*.pyc

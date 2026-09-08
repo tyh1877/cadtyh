@@ -1,0 +1,3 @@
+import json,subprocess
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[3];HERE=ROOT/'experiments/try5A';job={'root':str(ROOT)};p=HERE/'try5A_2/evaluator/d0_attachment_job.json';p.write_text(json.dumps(job,indent=2)+'\n');r=subprocess.run([r'D:\software\freeCAD\install\bin\python.exe',str(HERE/'scripts/freecad_evaluate_attachment.py'),str(p)],cwd=ROOT,capture_output=True,text=True,timeout=600);(HERE/'try5A_2/evaluator/d0_attachment_stdout.txt').write_text(r.stdout);(HERE/'try5A_2/evaluator/d0_attachment_stderr.txt').write_text(r.stderr);print(r.stdout or r.stderr);raise SystemExit(r.returncode)

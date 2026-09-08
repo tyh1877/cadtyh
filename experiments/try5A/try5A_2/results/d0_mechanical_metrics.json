@@ -1,0 +1,20 @@
+{
+  "condition": "D0",
+  "source": "frozen Try5-A.1 C1",
+  "logical_connected_joint_rate": 1.0,
+  "logical_floating_link_rate": 0.0,
+  "physical_interface_carriers": 20,
+  "physically_attached_carriers": 0,
+  "BICR": 0.0,
+  "geometrically_touching_but_unjoined_carriers": 18,
+  "detached_carriers": 2,
+  "detached_carrier_ids": [
+    "L01/IF_J01",
+    "L08/IF_J07"
+  ],
+  "attachment_qualified_floating_physical_body_rate": 1.0,
+  "raw_spurious_virtual_geometry_count": 1,
+  "filtered_spurious_virtual_geometry_count": 0,
+  "physical_link_count": 11,
+  "virtual_link_count": 1
+}

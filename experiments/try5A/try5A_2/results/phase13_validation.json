@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "d0_frozen": true,
+  "attachment_evaluator_rows": 22,
+  "bicr_denominator": 20,
+  "virtual_filter_l11": true,
+  "virtual_removed_from_physical_population": true,
+  "no_d1": true,
+  "no_d2": true,
+  "physical_d0_assembly_excludes_virtual": true,
+  "stop_before_phase4": true
+}

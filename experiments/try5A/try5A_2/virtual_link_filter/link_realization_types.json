@@ -1,0 +1,125 @@
+{
+  "schema_version": "try5A_2_link_realization_v1",
+  "links": [
+    {
+      "link_id": "L00",
+      "role": "base_housing",
+      "body_family": "base_housing",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L01",
+      "role": "shoulder_housing",
+      "body_family": "rotary_housing",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L02",
+      "role": "upper_arm_link",
+      "body_family": "dual_side_plate",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L03",
+      "role": "forearm_link",
+      "body_family": "central_web",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L04",
+      "role": "wrist_gripper_body",
+      "body_family": "wrist_block",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L05",
+      "role": "end_effector_spacer",
+      "body_family": "straight_beam",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L06",
+      "role": "gripper_actuator_prop",
+      "body_family": "rotary_housing",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L07",
+      "role": "gripper_crossbar",
+      "body_family": "straight_beam",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L08",
+      "role": "finger_carriage",
+      "body_family": "fork_body",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L09",
+      "role": "left_finger",
+      "body_family": "tapered_beam",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L10",
+      "role": "right_finger",
+      "body_family": "tapered_beam",
+      "link_realization_type": "physical_body",
+      "solid_generation_allowed": true,
+      "render_allowed": true,
+      "collision_allowed": true,
+      "reason": "URDF moving or structural link"
+    },
+    {
+      "link_id": "L11",
+      "role": "tool_center_frame",
+      "body_family": "interface_marker",
+      "link_realization_type": "virtual_frame",
+      "solid_generation_allowed": false,
+      "render_allowed": false,
+      "collision_allowed": false,
+      "reason": "tool-center coordinate frame only"
+    }
+  ]
+}

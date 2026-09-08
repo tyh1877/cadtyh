@@ -1,0 +1,2 @@
+condition,source,logical_connected_joint_rate,logical_floating_link_rate,physical_interface_carriers,physically_attached_carriers,BICR,geometrically_touching_but_unjoined_carriers,detached_carriers,detached_carrier_ids,attachment_qualified_floating_physical_body_rate,raw_spurious_virtual_geometry_count,filtered_spurious_virtual_geometry_count,physical_link_count,virtual_link_count
+D0,frozen Try5-A.1 C1,1.0,0.0,20,0,0.0,18,2,"['L01/IF_J01', 'L08/IF_J07']",1.0,1,0,11,1

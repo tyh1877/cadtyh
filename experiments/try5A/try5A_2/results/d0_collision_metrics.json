@@ -1,0 +1,9 @@
+{
+  "condition": "D0",
+  "pair_evaluations_excluding_virtual": 715,
+  "true_collision_events": 130,
+  "true_collision_pair_count": 19,
+  "total_intersection_volume_mm3": 313085.5394475896,
+  "sweep_free_pose_rate": 0.0,
+  "narrow_errors": 0
+}
