@@ -20,6 +20,27 @@
   ],
   "limits": {},
   "interface_family": "planar_mount_interface",
+  "interface_candidate_ranking": {
+    "joint_id": "J07",
+    "candidate_interfaces": [
+      {
+        "family": "planar_mount_interface",
+        "evidence": [
+          "URDF joint is fixed",
+          "roles form a structural mount"
+        ],
+        "knowledge_match": [
+          "fixed joint",
+          "spacer, crossbar, or simple structural mount"
+        ],
+        "confidence": 0.92
+      }
+    ],
+    "selected_family": "planar_mount_interface",
+    "selection_reason": "URDF joint is fixed; roles form a structural mount",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
   "shared_reference_frame": {
     "parent_relative_transform": [
       [
@@ -128,8 +149,9 @@
   "target_gap_m": 0.0,
   "clearance_rule": "coincident_mount",
   "consumption_trace": {
-    "skeleton_sha256": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
-    "robot_plan_sha256": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "skeleton_sha256": "99177325db645b27168d9d50f0b30a59c5101b2729c92cfe1f3582b7a5ac1cc4",
+    "robot_plan_sha256": "56da382a47d07281c2d4d30b51668842c7c186ff78ef6ce228536fcbc13649d9",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
     "l0_joint_fields": {
       "joint_id": "J07",
       "joint_type": "fixed",

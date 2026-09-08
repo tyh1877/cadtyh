@@ -1,0 +1,19 @@
+{
+  "root": "D:\\CADtest\\papertest\\cadtyh",
+  "source_dir": "experiments/try5A",
+  "output_dir": "experiments\\try5A\\results\\try5a3_full\\k1_exact_collision",
+  "poses_path": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A_1\\collision_cache\\collision_poses.json",
+  "physical_links": [
+    "L00",
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10"
+  ]
+}

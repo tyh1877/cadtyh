@@ -1,0 +1,40 @@
+{
+  "condition": "K1_knowledge_guided",
+  "interface_summary": {
+    "status": "PASS",
+    "geometry_relation_method": "generated interface primitives + transformed STL AABB",
+    "links": 11,
+    "joints": 10,
+    "connected_joint_rate": 1.0,
+    "floating_links": [],
+    "floating_link_rate": 0.0,
+    "assembly_connected_component_count": 1,
+    "mean_interface_gap_mm": 0.0,
+    "mean_radius_mismatch_mm": 0.0,
+    "max_axis_angular_error_deg": 0.0,
+    "max_axis_offset_mm": 0.0,
+    "max_interface_center_error_mm": 0.0,
+    "excessive_axial_penetrations": 0,
+    "unexpected_contact_locations": 0,
+    "nonadjacent_aabb_overlap_pairs": 4,
+    "whole_robot_bbox_mm": [
+      338.5,
+      124.96115112304688,
+      233.05
+    ],
+    "overall_reach_from_root_mm": 294.59345291435113,
+    "spurious_virtual_geometry_count": 0
+  },
+  "sweep_free_pose_rate": 0.0,
+  "exact_collision": {
+    "pairs": 715,
+    "broad_candidates": 277,
+    "exact_true": 181,
+    "narrow_errors": 0
+  },
+  "mechanical_meaningfulness": {
+    "rate": 1.0,
+    "patches": 0
+  },
+  "status": "PASS"
+}

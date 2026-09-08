@@ -1,0 +1,200 @@
+{
+  "status": "PASS",
+  "meaningful_geometry_rate": 1.0,
+  "meaningless_patch_count": 0,
+  "features": [
+    {
+      "link_id": "L00",
+      "feature_id": "IF_J00",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L00",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L01",
+      "feature_id": "IF_J00",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L01",
+      "feature_id": "IF_J01",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L01",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L02",
+      "feature_id": "IF_J01",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L02",
+      "feature_id": "IF_J02",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L02",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L03",
+      "feature_id": "IF_J02",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L03",
+      "feature_id": "IF_J03",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L03",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L04",
+      "feature_id": "IF_J03",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L04",
+      "feature_id": "IF_J04",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L04",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L05",
+      "feature_id": "IF_J04",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L05",
+      "feature_id": "IF_J05",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L05",
+      "feature_id": "IF_J06",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L05",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L06",
+      "feature_id": "IF_J05",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L06",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L07",
+      "feature_id": "IF_J06",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L07",
+      "feature_id": "IF_J07",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L07",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "feature_id": "IF_J07",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "feature_id": "IF_J08",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "feature_id": "IF_J09",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "feature_id": "IF_J10",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L09",
+      "feature_id": "IF_J08",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L09",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L10",
+      "feature_id": "IF_J09",
+      "missing": [],
+      "status": "PASS"
+    },
+    {
+      "link_id": "L10",
+      "feature_id": "BODY",
+      "missing": [],
+      "status": "PASS"
+    }
+  ],
+  "virtual_geometry_count": 0
+}

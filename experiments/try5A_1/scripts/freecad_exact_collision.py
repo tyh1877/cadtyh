@@ -2,7 +2,7 @@
 import json,math,sys
 from pathlib import Path
 import FreeCAD as App,Part
-job=json.loads(Path(sys.argv[-1]).read_text());root=Path(job['root']);src=root/'experiments/try5A';here=root/'experiments/try5A_1';poses=json.loads((here/'collision_cache/collision_poses.json').read_text());links=poses['links'];joints=poses['joints'];adj={frozenset((j['parent'],j['child'])) for j in joints};source={}
+job=json.loads(Path(sys.argv[-1]).read_text());root=Path(job['root']);src=root/job.get('source_dir','experiments/try5A');here=root/job.get('output_dir','experiments/try5A_1');poses=json.loads(Path(job.get('poses_path',here/'collision_cache/collision_poses.json')).read_text());links=job.get('physical_links',poses['links']);joints=[j for j in poses['joints'] if j['parent'] in links and j['child'] in links];adj={frozenset((j['parent'],j['child'])) for j in joints};source={}
 for lid in links:
  d=App.openDocument(str(src/f'A2/{lid}/model.FCStd'));ir=json.loads((src/f'A2/{lid}/cad_ir.json').read_text());source[lid]=Part.makeCompound([d.getObject(x).Shape.copy() for x in ir['final_objects']]);App.closeDocument(d.Name)
 def matrix(values):
@@ -37,4 +37,4 @@ for pose in poses['poses']:
     except Exception as e:
      rec.update({'narrow_status':'NARROW_ERROR','classification':'NARROW_ERROR','error':f'{type(e).__name__}: {e}'})
    rows.append(rec)
-(here/'collision_cache/c0_raw_pairs.json').write_text(json.dumps(rows,indent=2)+'\n');summary={'pairs':len(rows),'broad_candidates':sum(x['aabb_overlap'] for x in rows),'exact_true':sum(x['classification'] in ('ADJACENT_UNINTENDED','NONADJACENT_TRUE','MOTION_ADJACENT_UNINTENDED','MOTION_INDUCED_TRUE') for x in rows),'narrow_errors':sum(x['narrow_status']=='NARROW_ERROR' for x in rows)};print(json.dumps(summary))
+here.mkdir(parents=True,exist_ok=True);(here/'raw_pairs.json').write_text(json.dumps(rows,indent=2)+'\n');summary={'pairs':len(rows),'broad_candidates':sum(x['aabb_overlap'] for x in rows),'exact_true':sum(x['classification'] in ('ADJACENT_UNINTENDED','NONADJACENT_TRUE','MOTION_ADJACENT_UNINTENDED','MOTION_INDUCED_TRUE') for x in rows),'narrow_errors':sum(x['narrow_status']=='NARROW_ERROR' for x in rows)};(here/'summary.json').write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary))
