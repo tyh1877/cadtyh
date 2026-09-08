@@ -1,0 +1,26 @@
+[
+  {
+    "case_id": "A_parameter",
+    "selected": "R0_PARAMETER_REPAIR",
+    "expected_repair_scope": "R0_PARAMETER_REPAIR",
+    "correct": true
+  },
+  {
+    "case_id": "B_local_feature",
+    "selected": "R1_LOCAL_FEATURE_REPAIR",
+    "expected_repair_scope": "R1_LOCAL_FEATURE_REPAIR",
+    "correct": true
+  },
+  {
+    "case_id": "C_whole_link",
+    "selected": "R3_WHOLE_LINK_REPLAN",
+    "expected_repair_scope": "R3_WHOLE_LINK_REPLAN",
+    "correct": true
+  },
+  {
+    "case_id": "D_interface_pair",
+    "selected": "R4_INTERFACE_PAIR_REPLAN",
+    "expected_repair_scope": "R4_INTERFACE_PAIR_REPLAN",
+    "correct": true
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "case_id": "A_parameter",
+    "target": "J03/L03-L04",
+    "failed_gates": [
+      "INTERFACE_CLEARANCE"
+    ],
+    "deterministic_evidence": {
+      "topology_valid": true,
+      "parameter_delta_within_tolerance": true
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "minor_radius_error",
+      "confidence": 0.91
+    },
+    "rationale": [
+      "small radial clearance deviation",
+      "topology and family remain valid"
+    ],
+    "protected_states": [
+      "URDF_J03_FRAME",
+      "neighboring interfaces"
+    ]
+  },
+  {
+    "case_id": "B_local_feature",
+    "target": "L03/distal_transition",
+    "failed_gates": [
+      "PHYSICAL_ATTACHMENT"
+    ],
+    "deterministic_evidence": {
+      "localized_feature_failure": true,
+      "repeated_region_failures": 1
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "local_transition_failure",
+      "confidence": 0.84
+    },
+    "rationale": [
+      "local body-to-carrier load path is absent"
+    ],
+    "protected_states": [
+      "URDF_J03_FRAME",
+      "J03 carrier"
+    ]
+  },
+  {
+    "case_id": "C_whole_link",
+    "target": "L05",
+    "failed_gates": [
+      "COARSE_MORPHOLOGY",
+      "STRUCTURAL_PATH"
+    ],
+    "deterministic_evidence": {
+      "body_topology_valid": false,
+      "localized_feature_failure": false
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "body_family_mismatch",
+      "confidence": 0.89
+    },
+    "rationale": [
+      "single beam cannot realize the required paired load path"
+    ],
+    "protected_states": [
+      "URDF_J05_FRAME",
+      "URDF_J06_FRAME"
+    ]
+  },
+  {
+    "case_id": "D_interface_pair",
+    "target": "J00/L00-L01",
+    "failed_gates": [
+      "PHYSICAL_ATTACHMENT",
+      "COLLISION"
+    ],
+    "deterministic_evidence": {
+      "interface_family_plausible": false,
+      "repeated_region_failures": 3
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "interface_family_mismatch",
+      "confidence": 0.93
+    },
+    "rationale": [
+      "base and shoulder require nested concentric carriers",
+      "local patching would block annular clearance"
+    ],
+    "protected_states": [
+      "URDF_J00_FRAME",
+      "other frozen interfaces"
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "phase": "Try-5A.3 Phase 5-10 pilot only",
+  "scope_accuracy": 1.0,
+  "scope_distribution": {
+    "R0_PARAMETER_REPAIR": 1,
+    "R1_LOCAL_FEATURE_REPAIR": 1,
+    "R2_BODY_REGION_REPLAN": 0,
+    "R3_WHOLE_LINK_REPLAN": 1,
+    "R4_INTERFACE_PAIR_REPLAN": 1
+  },
+  "true_replan_rate": 0.5,
+  "meaningful_geometry_rate": 1.0,
+  "meaningless_patch_count": 0,
+  "dataflow_audit": {
+    "expected_scope_excluded_from_arbiter_input": true,
+    "diagnosis_to_scope": true,
+    "scope_to_upstream_design_change": true,
+    "design_to_cad_ir": true
+  },
+  "physical_evaluation": "NOT_RUN: generated FreeCAD artifacts are excluded from the current checkout; this pilot validates scope and design-to-IR dataflow only.",
+  "no_whole_robot_iterative_loop": true
+}

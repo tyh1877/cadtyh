@@ -1,0 +1,99 @@
+[
+  {
+    "target": "J03/L03-L04",
+    "failed_gates": [
+      "INTERFACE_CLEARANCE"
+    ],
+    "deterministic_evidence": {
+      "topology_valid": true,
+      "parameter_delta_within_tolerance": true
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "minor_radius_error",
+      "confidence": 0.91
+    },
+    "repair_scope": "R0_PARAMETER_REPAIR",
+    "reason": "small radial clearance deviation; topology and family remain valid; selected from deterministic failure hierarchy",
+    "protected_states": [
+      "URDF_J03_FRAME",
+      "neighboring interfaces"
+    ],
+    "upstream_objects_to_modify": [
+      "LinkCoarseSpec.parameters"
+    ]
+  },
+  {
+    "target": "L03/distal_transition",
+    "failed_gates": [
+      "PHYSICAL_ATTACHMENT"
+    ],
+    "deterministic_evidence": {
+      "localized_feature_failure": true,
+      "repeated_region_failures": 1
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "local_transition_failure",
+      "confidence": 0.84
+    },
+    "repair_scope": "R1_LOCAL_FEATURE_REPAIR",
+    "reason": "local body-to-carrier load path is absent; selected from deterministic failure hierarchy",
+    "protected_states": [
+      "URDF_J03_FRAME",
+      "J03 carrier"
+    ],
+    "upstream_objects_to_modify": [
+      "BodyRegionSpec.local_feature"
+    ]
+  },
+  {
+    "target": "L05",
+    "failed_gates": [
+      "COARSE_MORPHOLOGY",
+      "STRUCTURAL_PATH"
+    ],
+    "deterministic_evidence": {
+      "body_topology_valid": false,
+      "localized_feature_failure": false
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "body_family_mismatch",
+      "confidence": 0.89
+    },
+    "repair_scope": "R3_WHOLE_LINK_REPLAN",
+    "reason": "single beam cannot realize the required paired load path; selected from deterministic failure hierarchy",
+    "protected_states": [
+      "URDF_J05_FRAME",
+      "URDF_J06_FRAME"
+    ],
+    "upstream_objects_to_modify": [
+      "LinkCoarseSpec.body_family",
+      "LinkCoarseSpec.structural_path"
+    ]
+  },
+  {
+    "target": "J00/L00-L01",
+    "failed_gates": [
+      "PHYSICAL_ATTACHMENT",
+      "COLLISION"
+    ],
+    "deterministic_evidence": {
+      "interface_family_plausible": false,
+      "repeated_region_failures": 3
+    },
+    "vlm_diagnosis": {
+      "suspected_root_cause": "interface_family_mismatch",
+      "confidence": 0.93
+    },
+    "repair_scope": "R4_INTERFACE_PAIR_REPLAN",
+    "reason": "base and shoulder require nested concentric carriers; local patching would block annular clearance; selected from deterministic failure hierarchy",
+    "protected_states": [
+      "URDF_J00_FRAME",
+      "other frozen interfaces"
+    ],
+    "upstream_objects_to_modify": [
+      "InterfaceContract",
+      "parent_local_region",
+      "child_local_region"
+    ]
+  }
+]
