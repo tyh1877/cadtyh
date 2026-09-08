@@ -1,2 +1,4 @@
-condition,links,poses,pair_evaluations,broad_candidates,exact_boolean_candidates,narrow_errors,agent_calls,tokens
-C0,12,13,858,292,292,0,0,UNAVAILABLE
+condition,links,successful_links,cad_operations,mean_link_build_seconds,silent_fallbacks,note
+C0,12,12,0,0,0,frozen A2; no CAD regeneration
+C1,12,12,58,5.00525,0,
+C2,12,12,58,4.856833333333333,0,

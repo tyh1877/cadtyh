@@ -1,3 +1,4 @@
-scope,pair_evaluations,aabb_candidates,true_collision_events,narrow_errors,aabb_noncollision_rate,aabb_false_positive_rate_excluding_expected,collision_free_pose_rate
-canonical,66,19,13,0,0.3157894736842105,0.5,0.0
-sweep,792,273,168,0,0.38461538461538464,0.574468085106383,0.0
+condition,pair_evaluations,aabb_candidates,true_collision_events,canonical_true_collision_pairs,sweep_true_collision_events,adjacent_unintended_events,nonadjacent_events,aabb_noncollision_rate,total_intersection_volume_mm3,collision_free_sweep_pose_rate,narrow_errors,count_aabb_clear,count_aabb_false_positive,count_adjacent_unintended,count_expected_interface,count_motion_adjacent_unintended,count_motion_induced_true,count_nonadjacent_true
+C0,858,292,181,13,168,117,64,0.3801369863013699,554812.5247364677,0.0,0,566,85,9,26,108,60,4
+C1,858,245,130,9,121,91,39,0.46938775510204084,313085.5394475896,0.0,0,613,63,7,52,84,37,2
+C2,858,245,132,9,123,91,41,0.46122448979591835,436273.8204275734,0.0,0,613,61,7,52,84,39,2

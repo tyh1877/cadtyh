@@ -1,2 +1,4 @@
-condition,connected_joint_rate,floating_link_rate,mean_interface_gap_mm,mean_radius_mismatch_mm,excessive_axial_penetrations
-C0,1.0,0.0,0.0,0.0,0
+condition,connected_joint_rate,floating_link_rate,mean_interface_gap_mm,nominal_radius_mismatch_mm,excessive_interface_penetration,axis_origin_error_mm,protected_interface_refs_preserved,protected_interface_ops_preserved,links_checked
+C0,1.0,0.0,0.0,0.0,0,0.0,True,True,12
+C1,1.0,0.0,0.0,0.0,0,0.0,True,True,12
+C2,1.0,0.0,0.0,0.0,0,0.0,True,True,12

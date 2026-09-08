@@ -1,0 +1,26 @@
+{
+  "link_id": "L01",
+  "state": "COLLISION_REPLAN",
+  "collision_pairs": [
+    "L00-L01",
+    "L01-L02",
+    "L01-L03",
+    "L01-L04",
+    "L01-L06",
+    "L01-L08"
+  ],
+  "collision_event_count": 28,
+  "protected_interfaces": [
+    "J00",
+    "J01"
+  ],
+  "recommended_action": "REDUCE_CROSS_SECTION",
+  "do_not_change": [
+    "interface frame",
+    "parent/child port",
+    "interface radius/depth",
+    "target gap",
+    "protected interface geometry"
+  ],
+  "consumed_by": "cad_ir BODY operation only"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "conditions": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "c0_frozen": true,
+  "c1_c2_link_success": true,
+  "interface_preserved": true,
+  "exact_evaluator_errors": {
+    "C0": 0,
+    "C1": 0,
+    "C2": 0
+  },
+  "no_try5b": true,
+  "required_outputs": {
+    "exact_collision_metrics.csv": true,
+    "per_pair_collision.csv": true,
+    "sweep_collision_metrics.csv": true,
+    "coarse_geometry_metrics.csv": true,
+    "per_link_metrics.csv": true,
+    "interface_preservation.csv": true,
+    "resource_metrics.csv": true,
+    "body_plan_dataflow_audit.csv": true,
+    "try5A_1_report.md": true
+  },
+  "conclusion": "PARTIAL_SUCCESS_C1_ONLY; C2_COLLISION_VOLUME_REBOUND; TRY5B_NOT_READY"
+}

@@ -1,0 +1,21 @@
+{
+  "link_id": "L10",
+  "state": "COLLISION_AND_MORPHOLOGY_REPLAN",
+  "collision_pairs": [
+    "L00-L10",
+    "L08-L10"
+  ],
+  "collision_event_count": 14,
+  "protected_interfaces": [
+    "J09"
+  ],
+  "recommended_action": "RESTORE_VISUAL_ENVELOPE_WITHIN_C1_LIMIT",
+  "do_not_change": [
+    "interface frame",
+    "parent/child port",
+    "interface radius/depth",
+    "target gap",
+    "protected interface geometry"
+  ],
+  "consumed_by": "cad_ir BODY operation only"
+}

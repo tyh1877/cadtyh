@@ -1,0 +1,4 @@
+condition,sweep_true_collision_events,adjacent_unintended_events,nonadjacent_events,collision_free_sweep_pose_rate
+C0,168,117,64,0.0
+C1,121,91,39,0.0
+C2,123,91,41,0.0

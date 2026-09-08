@@ -1,6 +1,13 @@
 /C0/
 /C1/
 /C2/
+/assemblies/
 /collision_cache/
+results/*_assembly_job.json
+results/*_assembly_stdout.txt
+results/*_assembly_stderr.txt
+results/*_collision_job.json
+results/*_collision_stdout.txt
+results/*_collision_stderr.txt
 __pycache__/
 *.pyc

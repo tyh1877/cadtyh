@@ -1,0 +1,64 @@
+{
+  "condition": "C2",
+  "link_id": "L02",
+  "state": "COLLISION_AND_MORPHOLOGY_REPLAN",
+  "centerline": {
+    "source": "URDF canonical interface centers",
+    "principal_direction": [
+      0.33,
+      0,
+      0.94
+    ]
+  },
+  "interface_to_interface_span_m": [
+    0.12,
+    0.05,
+    0.035
+  ],
+  "allowed_body_region": {
+    "type": "collision_limited_envelope",
+    "scale_factors": [
+      0.65,
+      0.6
+    ]
+  },
+  "forbidden_collision_region": {
+    "source": "C0 exact collision pairs",
+    "event_count": 13
+  },
+  "neighbor_exclusion_regions": [
+    "L01",
+    "L03"
+  ],
+  "maximum_cross_section_scale": 0.65,
+  "preferred_section_family": "dual_side_plate",
+  "visual_silhouette_constraints": {
+    "description": "restore major silhouette only within C1 clearance envelope",
+    "target": "reference major thickness/taper"
+  },
+  "protected_interface_regions": [
+    "J01",
+    "J02"
+  ],
+  "motion_swept_exclusion_regions": {
+    "source": "13 C0 sampled URDF poses",
+    "active_joints": [
+      "J00",
+      "J01",
+      "J02",
+      "J03"
+    ]
+  },
+  "contract_hashes": {
+    "J01": "383527ebbcaf2ffff948bfc2974a6eed661ca787100721e197fe171a433e8914",
+    "J02": "eaf67d1500cd718cb4738f1e283a808ddd426c02a890e5af93c0129be3f1f102"
+  },
+  "cad_consumption": {
+    "body_operation_scale": [
+      0.65,
+      0.6
+    ],
+    "body_ops_changed": true,
+    "interface_ops_changed": false
+  }
+}
