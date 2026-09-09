@@ -56,7 +56,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 105215.4912071228,
+      "adjacent_aabb_overlap_mm3": 123122.15901947021,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -79,7 +79,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 23045.509929656986,
+      "adjacent_aabb_overlap_mm3": 16381.973476409916,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -125,7 +125,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 4588.978028297424,
+      "adjacent_aabb_overlap_mm3": 2175.0,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -148,7 +148,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 4676.387133598328,
+      "adjacent_aabb_overlap_mm3": 3840.0,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -171,7 +171,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 4521.576613252546,
+      "adjacent_aabb_overlap_mm3": 3235.200128555298,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -194,7 +194,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 5474.986575064104,
+      "adjacent_aabb_overlap_mm3": 3282.1200645017598,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -260,22 +260,22 @@
     {
       "link_a": "L04",
       "link_b": "L06",
-      "aabb_overlap_mm3": 4550.0
+      "aabb_overlap_mm3": 3412.5
     },
     {
       "link_a": "L04",
       "link_b": "L07",
-      "aabb_overlap_mm3": 6843.733085632324
+      "aabb_overlap_mm3": 2469.600098133087
     },
     {
       "link_a": "L06",
       "link_b": "L07",
-      "aabb_overlap_mm3": 8600.0
+      "aabb_overlap_mm3": 7500.000298023224
     },
     {
       "link_a": "L06",
       "link_b": "L08",
-      "aabb_overlap_mm3": 604.0000915527344
+      "aabb_overlap_mm3": 304.0000915527344
     }
   ]
 }

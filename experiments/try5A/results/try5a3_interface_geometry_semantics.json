@@ -1,0 +1,244 @@
+{
+  "status": "PASS",
+  "interfaces_checked": 21,
+  "semantic_match_rate": 1.0,
+  "rows": [
+    {
+      "link_id": "L00",
+      "joint_id": "J00",
+      "side": "parent",
+      "interface_family": "nested_rotary_housing",
+      "cad_operation_types": [
+        "cylinder_primitive",
+        "cylinder_primitive",
+        "boolean_cut"
+      ],
+      "required_semantics": "coaxial cylindrical carrier/housing",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L01",
+      "joint_id": "J00",
+      "side": "child",
+      "interface_family": "nested_rotary_housing",
+      "cad_operation_types": [
+        "cylinder_primitive"
+      ],
+      "required_semantics": "coaxial cylindrical carrier/housing",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L01",
+      "joint_id": "J01",
+      "side": "parent",
+      "interface_family": "fork_pin_interface",
+      "cad_operation_types": [
+        "oriented_box",
+        "oriented_box"
+      ],
+      "required_semantics": "two fork arms on parent; central pin on child",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L02",
+      "joint_id": "J01",
+      "side": "child",
+      "interface_family": "fork_pin_interface",
+      "cad_operation_types": [
+        "cylinder_primitive"
+      ],
+      "required_semantics": "two fork arms on parent; central pin on child",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L02",
+      "joint_id": "J02",
+      "side": "parent",
+      "interface_family": "fork_pin_interface",
+      "cad_operation_types": [
+        "oriented_box",
+        "oriented_box"
+      ],
+      "required_semantics": "two fork arms on parent; central pin on child",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L03",
+      "joint_id": "J02",
+      "side": "child",
+      "interface_family": "fork_pin_interface",
+      "cad_operation_types": [
+        "cylinder_primitive"
+      ],
+      "required_semantics": "two fork arms on parent; central pin on child",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L03",
+      "joint_id": "J03",
+      "side": "parent",
+      "interface_family": "coaxial_rotary_interface",
+      "cad_operation_types": [
+        "cylinder_primitive",
+        "cylinder_primitive",
+        "boolean_cut"
+      ],
+      "required_semantics": "coaxial cylindrical carrier/housing",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L04",
+      "joint_id": "J03",
+      "side": "child",
+      "interface_family": "coaxial_rotary_interface",
+      "cad_operation_types": [
+        "cylinder_primitive"
+      ],
+      "required_semantics": "coaxial cylindrical carrier/housing",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L04",
+      "joint_id": "J04",
+      "side": "parent",
+      "interface_family": "planar_mount_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "planar plate primitive",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L05",
+      "joint_id": "J04",
+      "side": "child",
+      "interface_family": "planar_mount_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "planar plate primitive",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L05",
+      "joint_id": "J05",
+      "side": "parent",
+      "interface_family": "coaxial_rotary_interface",
+      "cad_operation_types": [
+        "cylinder_primitive",
+        "cylinder_primitive",
+        "boolean_cut"
+      ],
+      "required_semantics": "coaxial cylindrical carrier/housing",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L05",
+      "joint_id": "J06",
+      "side": "parent",
+      "interface_family": "planar_mount_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "planar plate primitive",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L06",
+      "joint_id": "J05",
+      "side": "child",
+      "interface_family": "coaxial_rotary_interface",
+      "cad_operation_types": [
+        "cylinder_primitive"
+      ],
+      "required_semantics": "coaxial cylindrical carrier/housing",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L07",
+      "joint_id": "J06",
+      "side": "child",
+      "interface_family": "planar_mount_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "planar plate primitive",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L07",
+      "joint_id": "J07",
+      "side": "parent",
+      "interface_family": "planar_mount_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "planar plate primitive",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "joint_id": "J07",
+      "side": "child",
+      "interface_family": "planar_mount_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "planar plate primitive",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "joint_id": "J08",
+      "side": "parent",
+      "interface_family": "rail_slider_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "rectilinear rail/slider primitives",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "joint_id": "J09",
+      "side": "parent",
+      "interface_family": "rail_slider_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "rectilinear rail/slider primitives",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L08",
+      "joint_id": "J10",
+      "side": "parent",
+      "interface_family": "end_tool_interface",
+      "cad_operation_types": [],
+      "required_semantics": "metadata only; no solid",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L09",
+      "joint_id": "J08",
+      "side": "child",
+      "interface_family": "rail_slider_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "rectilinear rail/slider primitives",
+      "status": "PASS"
+    },
+    {
+      "link_id": "L10",
+      "joint_id": "J09",
+      "side": "child",
+      "interface_family": "rail_slider_interface",
+      "cad_operation_types": [
+        "oriented_box"
+      ],
+      "required_semantics": "rectilinear rail/slider primitives",
+      "status": "PASS"
+    }
+  ]
+}
