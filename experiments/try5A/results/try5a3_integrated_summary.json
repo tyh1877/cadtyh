@@ -1,5 +1,5 @@
 {
-  "status": "SUCCESS",
+  "status": "BUILT_BUT_REJECTED",
   "condition": "A3_integrated",
   "integrated_scopes": [
     "R0_PARAMETER_REPAIR",
@@ -49,6 +49,20 @@
     "overall_reach_from_root_mm": 294.59345291435113,
     "spurious_virtual_geometry_count": 0
   },
+  "coarse_morphology_gate": {
+    "status": "FAIL",
+    "failure_targets": [
+      "L01",
+      "L02",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L10",
+      "opposed_prismatic_pair_L08"
+    ],
+    "visual_review_status": "REVIEW_CONSUMED"
+  },
   "aabb_sweep_free_rate": 0.0,
   "artifact_paths": {
     "fcstd": "experiments/try5A/assemblies/A3_integrated/assembled_robot.FCStd",
@@ -56,5 +70,5 @@
     "stl": "experiments/try5A/assemblies/A3_integrated/assembled_robot.stl",
     "isometric_render": "experiments/try5A/assemblies/A3_integrated/renders/isometric.png"
   },
-  "warning": "Visual integration preview only; exact collision and strict whole-robot BICR acceptance remain unresolved."
+  "warning": "Generated artifacts are inspection candidates only. Gate failure forbids accepting or freezing this robot."
 }

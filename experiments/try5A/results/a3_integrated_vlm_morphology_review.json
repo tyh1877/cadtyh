@@ -1,0 +1,26 @@
+{
+  "schema_version": "coarse_morphology_vlm_review_v1",
+  "condition": "A3_integrated",
+  "reviewer": "multimodal model inspection of four FreeCAD renders",
+  "render_views": ["front", "side", "top", "isometric"],
+  "render_sha256": {
+    "front": "3fd12ab9c55ef6dba9853347a08779c2516ef416fef721b776189992be4ef9e5",
+    "side": "22cbfb9d622957f1f7bfc44c27dfe784c75c21651fd98a77364cc1b8196dba8c",
+    "top": "e73044dbbf1f0bdfef9fe978b4780f25c035a2d41c116b87a3d67a21353ecf7e",
+    "isometric": "6039322bf70bdc632156f2e0134fd7ad8f0d9ae67e559edd4bd518f95b1dbfe2"
+  },
+  "subassemblies": [
+    {
+      "subassembly_id": "opposed_prismatic_pair_L08",
+      "status": "FAIL",
+      "confidence": 0.94,
+      "suspected_root_cause": "subassembly_layout_mismatch",
+      "evidence": [
+        "functional members are not clearly distinguishable in the isometric terminal silhouette",
+        "an upstream cylindrical actuator dominates the perceived tool-end outline",
+        "the opposed-member organization is visible only after changing view"
+      ],
+      "suggested_scope": "R5_SUBASSEMBLY_REPLAN"
+    }
+  ]
+}

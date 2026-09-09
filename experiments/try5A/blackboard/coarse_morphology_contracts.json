@@ -1,0 +1,371 @@
+{
+  "schema_version": "try5A_coarse_morphology_contract_v1",
+  "compiled_before_cad_evaluation": true,
+  "sources": {
+    "policy": "try5/knowledge/coarse_morphology/gate_policy.json",
+    "policy_sha256": "e913dc196a94270a0ff302323060a7e5bd79e241b6705aa6edaab7c7fcf0a2ae",
+    "plan_sha256": "56da382a47d07281c2d4d30b51668842c7c186ff78ef6ce228536fcbc13649d9",
+    "skeleton_sha256": "99177325db645b27168d9d50f0b30a59c5101b2729c92cfe1f3582b7a5ac1cc4"
+  },
+  "thresholds": {
+    "minimum_envelope_ratio": 0.35,
+    "maximum_envelope_ratio": 2.5,
+    "minimum_principal_extent_fraction": 0.75,
+    "minimum_terminal_extension_mm": 2.0,
+    "minimum_opposed_member_separation_mm": 1.0
+  },
+  "links": [
+    {
+      "link_id": "L00",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        125.0,
+        105.0,
+        55.0
+      ],
+      "principal_direction_local": [
+        0,
+        0,
+        1
+      ],
+      "body_family": "base_housing",
+      "functional_role": "base_housing",
+      "required_interfaces": [
+        "J00"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L01",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        75.0,
+        70.0,
+        65.0
+      ],
+      "principal_direction_local": [
+        0,
+        0,
+        1
+      ],
+      "body_family": "rotary_housing",
+      "functional_role": "shoulder_housing",
+      "required_interfaces": [
+        "J00",
+        "J01"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L02",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        120.0,
+        50.0,
+        35.0
+      ],
+      "principal_direction_local": [
+        0.33,
+        0,
+        0.94
+      ],
+      "body_family": "dual_side_plate",
+      "functional_role": "upper_arm_link",
+      "required_interfaces": [
+        "J01",
+        "J02"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L03",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        110.0,
+        45.0,
+        32.0
+      ],
+      "principal_direction_local": [
+        1,
+        0,
+        0
+      ],
+      "body_family": "central_web",
+      "functional_role": "forearm_link",
+      "required_interfaces": [
+        "J02",
+        "J03"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L04",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        75.0,
+        60.0,
+        52.0
+      ],
+      "principal_direction_local": [
+        1,
+        0,
+        0
+      ],
+      "body_family": "wrist_block",
+      "functional_role": "wrist_gripper_body",
+      "required_interfaces": [
+        "J03",
+        "J04"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L05",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        12.0,
+        25.0,
+        25.0
+      ],
+      "principal_direction_local": [
+        1,
+        0,
+        0
+      ],
+      "body_family": "straight_beam",
+      "functional_role": "end_effector_spacer",
+      "required_interfaces": [
+        "J04",
+        "J05",
+        "J06"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L06",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        25.0,
+        20.0,
+        20.0
+      ],
+      "principal_direction_local": [
+        1,
+        0,
+        0
+      ],
+      "body_family": "rotary_housing",
+      "functional_role": "gripper_actuator_prop",
+      "required_interfaces": [
+        "J05"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L07",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        30.0,
+        80.0,
+        18.0
+      ],
+      "principal_direction_local": [
+        0,
+        1,
+        0
+      ],
+      "body_family": "straight_beam",
+      "functional_role": "gripper_crossbar",
+      "required_interfaces": [
+        "J06",
+        "J07"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L08",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        35.0,
+        75.0,
+        25.0
+      ],
+      "principal_direction_local": [
+        0,
+        1,
+        0
+      ],
+      "body_family": "fork_body",
+      "functional_role": "finger_carriage",
+      "required_interfaces": [
+        "J07",
+        "J08",
+        "J09"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L09",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        55.0,
+        12.0,
+        18.0
+      ],
+      "principal_direction_local": [
+        1,
+        0,
+        0
+      ],
+      "body_family": "tapered_beam",
+      "functional_role": "left_finger",
+      "required_interfaces": [
+        "J08"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L10",
+      "realization": "physical_body",
+      "planned_envelope_mm": [
+        55.0,
+        12.0,
+        18.0
+      ],
+      "principal_direction_local": [
+        1,
+        0,
+        0
+      ],
+      "body_family": "tapered_beam",
+      "functional_role": "right_finger",
+      "required_interfaces": [
+        "J09"
+      ],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved",
+        "connected_rigid_load_path"
+      ]
+    },
+    {
+      "link_id": "L11",
+      "realization": "virtual_frame",
+      "planned_envelope_mm": [
+        6.0,
+        6.0,
+        6.0
+      ],
+      "principal_direction_local": [
+        1,
+        0,
+        0
+      ],
+      "body_family": "interface_marker",
+      "functional_role": "tool_center_frame",
+      "required_interfaces": [],
+      "required_relations": [
+        "valid_geometry",
+        "commensurate_envelope",
+        "principal_direction_preserved"
+      ]
+    }
+  ],
+  "functional_subassemblies": [
+    {
+      "subassembly_id": "opposed_prismatic_pair_L08",
+      "derived_from": "shared parent + two prismatic children + negative mimic relation",
+      "carrier_link": "L08",
+      "functional_members": [
+        "L09",
+        "L10"
+      ],
+      "joint_ids": [
+        "J08",
+        "J09"
+      ],
+      "motion_axes_local": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "tool_direction_local": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "required_relations": [
+        "members_are_distinct",
+        "members_lie_on_opposite_sides_of_carrier",
+        "members_extend_beyond_nonfunctional_carrier_along_tool_direction",
+        "motion_mimic_is_opposed",
+        "multi_view_functional_members_are_distinguishable"
+      ],
+      "suggested_failure_scope": "R5_SUBASSEMBLY_REPLAN"
+    }
+  ],
+  "visual_evidence_required": [
+    "front",
+    "side",
+    "top",
+    "isometric"
+  ]
+}

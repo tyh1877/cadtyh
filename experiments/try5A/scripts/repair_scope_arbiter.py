@@ -1,6 +1,6 @@
 """Hierarchical, deterministic repair-scope arbitration for Try-5A.3."""
 
-SCOPES = ("R0_PARAMETER_REPAIR", "R1_LOCAL_FEATURE_REPAIR", "R2_BODY_REGION_REPLAN", "R3_WHOLE_LINK_REPLAN", "R4_INTERFACE_PAIR_REPLAN")
+SCOPES = ("R0_PARAMETER_REPAIR", "R1_LOCAL_FEATURE_REPAIR", "R2_BODY_REGION_REPLAN", "R3_WHOLE_LINK_REPLAN", "R4_INTERFACE_PAIR_REPLAN", "R5_SUBASSEMBLY_REPLAN")
 
 
 def arbitrate(case):
@@ -10,7 +10,10 @@ def arbitrate(case):
     diagnosis = case.get("vlm_diagnosis", {})
     cause = diagnosis.get("suspected_root_cause", "")
 
-    if cause == "interface_family_mismatch" or evidence.get("interface_family_plausible") is False:
+    if cause == "subassembly_layout_mismatch" or evidence.get("functional_subassembly_valid") is False:
+        scope = "R5_SUBASSEMBLY_REPLAN"
+        upstream = ["SubassemblyPlan", "member LinkCoarseSpecs", "internal InterfaceContracts"]
+    elif cause == "interface_family_mismatch" or evidence.get("interface_family_plausible") is False:
         scope = "R4_INTERFACE_PAIR_REPLAN"
         upstream = ["InterfaceContract", "parent_local_region", "child_local_region"]
     elif evidence.get("body_topology_valid") is False or cause == "body_family_mismatch":

@@ -1,0 +1,404 @@
+{
+  "gate": "COARSE_MORPHOLOGY",
+  "condition": "A3_integrated",
+  "status": "FAIL",
+  "decision_rule": "hard failure -> FAIL; otherwise missing required visual review -> REVIEW_REQUIRED; PASS requires both",
+  "interface_semantics_status": "PASS",
+  "links": [
+    {
+      "link_id": "L00",
+      "functional_role": "base_housing",
+      "body_family": "base_housing",
+      "planned_envelope_mm": [
+        125.0,
+        105.0,
+        55.0
+      ],
+      "actual_envelope_mm": [
+        125.0,
+        124.96115112304688,
+        63.04999923706055
+      ],
+      "envelope_ratio": [
+        1.0,
+        1.190106201171875,
+        1.14636362249201
+      ],
+      "freecad_solid_components": 1,
+      "principal_direction_check_applicable": false,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": true
+      },
+      "hard_status": "PASS"
+    },
+    {
+      "link_id": "L01",
+      "functional_role": "shoulder_housing",
+      "body_family": "rotary_housing",
+      "planned_envelope_mm": [
+        75.0,
+        70.0,
+        65.0
+      ],
+      "actual_envelope_mm": [
+        70.0,
+        69.97824096679688,
+        102.06999969482422
+      ],
+      "envelope_ratio": [
+        0.9333333333333333,
+        0.9996891566685268,
+        1.5703076876126802
+      ],
+      "freecad_solid_components": 2,
+      "principal_direction_check_applicable": false,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": false
+      },
+      "hard_status": "FAIL"
+    },
+    {
+      "link_id": "L02",
+      "functional_role": "upper_arm_link",
+      "body_family": "dual_side_plate",
+      "planned_envelope_mm": [
+        120.0,
+        50.0,
+        35.0
+      ],
+      "actual_envelope_mm": [
+        57.60700607299805,
+        63.0,
+        136.08799743652344
+      ],
+      "envelope_ratio": [
+        0.4800583839416504,
+        1.26,
+        3.888228498186384
+      ],
+      "freecad_solid_components": 5,
+      "principal_direction_check_applicable": false,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": false,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": false
+      },
+      "hard_status": "FAIL"
+    },
+    {
+      "link_id": "L03",
+      "functional_role": "forearm_link",
+      "body_family": "central_web",
+      "planned_envelope_mm": [
+        110.0,
+        45.0,
+        32.0
+      ],
+      "actual_envelope_mm": [
+        128.89552402496338,
+        26.0,
+        30.0
+      ],
+      "envelope_ratio": [
+        1.1717774911360308,
+        0.5777777777777777,
+        0.9375
+      ],
+      "freecad_solid_components": 1,
+      "principal_direction_check_applicable": true,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": true
+      },
+      "hard_status": "PASS"
+    },
+    {
+      "link_id": "L04",
+      "functional_role": "wrist_gripper_body",
+      "body_family": "wrist_block",
+      "planned_envelope_mm": [
+        75.0,
+        60.0,
+        52.0
+      ],
+      "actual_envelope_mm": [
+        78.88206672668457,
+        34.0,
+        42.0
+      ],
+      "envelope_ratio": [
+        1.0517608896891275,
+        0.5666666666666667,
+        0.8076923076923077
+      ],
+      "freecad_solid_components": 1,
+      "principal_direction_check_applicable": true,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": true
+      },
+      "hard_status": "PASS"
+    },
+    {
+      "link_id": "L05",
+      "functional_role": "end_effector_spacer",
+      "body_family": "straight_beam",
+      "planned_envelope_mm": [
+        12.0,
+        25.0,
+        25.0
+      ],
+      "actual_envelope_mm": [
+        12.0,
+        30.0,
+        16.0
+      ],
+      "envelope_ratio": [
+        1.0,
+        1.2,
+        0.64
+      ],
+      "freecad_solid_components": 1,
+      "principal_direction_check_applicable": false,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": true
+      },
+      "hard_status": "PASS"
+    },
+    {
+      "link_id": "L06",
+      "functional_role": "gripper_actuator_prop",
+      "body_family": "rotary_housing",
+      "planned_envelope_mm": [
+        25.0,
+        20.0,
+        20.0
+      ],
+      "actual_envelope_mm": [
+        25.0,
+        20.0,
+        20.0
+      ],
+      "envelope_ratio": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "freecad_solid_components": 2,
+      "principal_direction_check_applicable": true,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": false
+      },
+      "hard_status": "FAIL"
+    },
+    {
+      "link_id": "L07",
+      "functional_role": "gripper_crossbar",
+      "body_family": "straight_beam",
+      "planned_envelope_mm": [
+        30.0,
+        80.0,
+        18.0
+      ],
+      "actual_envelope_mm": [
+        26.368749618530273,
+        19.200000762939453,
+        80.0
+      ],
+      "envelope_ratio": [
+        0.8789583206176758,
+        0.24000000953674316,
+        4.444444444444445
+      ],
+      "freecad_solid_components": 3,
+      "principal_direction_check_applicable": true,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": false,
+        "principal_direction_preserved": false,
+        "connected_rigid_load_path": false
+      },
+      "hard_status": "FAIL"
+    },
+    {
+      "link_id": "L08",
+      "functional_role": "finger_carriage",
+      "body_family": "fork_body",
+      "planned_envelope_mm": [
+        35.0,
+        75.0,
+        25.0
+      ],
+      "actual_envelope_mm": [
+        40.760000228881836,
+        86.5999984741211,
+        22.5
+      ],
+      "envelope_ratio": [
+        1.1645714351109095,
+        1.1546666463216146,
+        0.9
+      ],
+      "freecad_solid_components": 5,
+      "principal_direction_check_applicable": true,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": false
+      },
+      "hard_status": "FAIL"
+    },
+    {
+      "link_id": "L09",
+      "functional_role": "left_finger",
+      "body_family": "tapered_beam",
+      "planned_envelope_mm": [
+        55.0,
+        12.0,
+        18.0
+      ],
+      "actual_envelope_mm": [
+        60.760000228881836,
+        18.0,
+        12.0
+      ],
+      "envelope_ratio": [
+        1.1047272768887606,
+        1.5,
+        0.6666666666666666
+      ],
+      "freecad_solid_components": 2,
+      "principal_direction_check_applicable": true,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": false
+      },
+      "hard_status": "FAIL"
+    },
+    {
+      "link_id": "L10",
+      "functional_role": "right_finger",
+      "body_family": "tapered_beam",
+      "planned_envelope_mm": [
+        55.0,
+        12.0,
+        18.0
+      ],
+      "actual_envelope_mm": [
+        60.760000228881836,
+        18.0,
+        12.0
+      ],
+      "envelope_ratio": [
+        1.1047272768887606,
+        1.5,
+        0.6666666666666666
+      ],
+      "freecad_solid_components": 2,
+      "principal_direction_check_applicable": true,
+      "checks": {
+        "geometry_valid": true,
+        "envelope_commensurate": true,
+        "principal_direction_preserved": true,
+        "connected_rigid_load_path": false
+      },
+      "hard_status": "FAIL"
+    },
+    {
+      "link_id": "L11",
+      "hard_status": "PASS",
+      "checks": {
+        "virtual_has_no_geometry": true
+      }
+    }
+  ],
+  "functional_subassemblies": [
+    {
+      "subassembly_id": "opposed_prismatic_pair_L08",
+      "carrier_link": "L08",
+      "functional_members": [
+        "L09",
+        "L10"
+      ],
+      "member_separation_mm": 52.0,
+      "terminal_extension_mm": 20.0,
+      "checks": {
+        "members_are_distinct": true,
+        "members_on_opposite_sides": true,
+        "members_define_terminal_envelope": true,
+        "opposed_mimic_contract": true
+      },
+      "deterministic_status": "PASS",
+      "visual_status": "FAIL",
+      "suggested_failure_scope": "R5_SUBASSEMBLY_REPLAN",
+      "visual_evidence": {
+        "subassembly_id": "opposed_prismatic_pair_L08",
+        "status": "FAIL",
+        "confidence": 0.94,
+        "suspected_root_cause": "subassembly_layout_mismatch",
+        "evidence": [
+          "functional members are not clearly distinguishable in the isometric terminal silhouette",
+          "an upstream cylindrical actuator dominates the perceived tool-end outline",
+          "the opposed-member organization is visible only after changing view"
+        ],
+        "suggested_scope": "R5_SUBASSEMBLY_REPLAN"
+      }
+    }
+  ],
+  "failure_targets": [
+    "L01",
+    "L02",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "opposed_prismatic_pair_L08"
+  ],
+  "visual_review_packet": {
+    "condition": "A3_integrated",
+    "render_paths": {
+      "front": "experiments/try5A/assemblies/A3_integrated/renders/front.png",
+      "side": "experiments/try5A/assemblies/A3_integrated/renders/side.png",
+      "top": "experiments/try5A/assemblies/A3_integrated/renders/top.png",
+      "isometric": "experiments/try5A/assemblies/A3_integrated/renders/isometric.png"
+    },
+    "render_sha256": {
+      "front": "3fd12ab9c55ef6dba9853347a08779c2516ef416fef721b776189992be4ef9e5",
+      "side": "22cbfb9d622957f1f7bfc44c27dfe784c75c21651fd98a77364cc1b8196dba8c",
+      "top": "e73044dbbf1f0bdfef9fe978b4780f25c035a2d41c116b87a3d67a21353ecf7e",
+      "isometric": "6039322bf70bdc632156f2e0134fd7ad8f0d9ae67e559edd4bd518f95b1dbfe2"
+    },
+    "questions": [
+      {
+        "subassembly_id": "opposed_prismatic_pair_L08",
+        "checks": [
+          "Can every functional member be visually distinguished in at least two views?",
+          "Do functional terminal members, rather than an actuator or carrier, define the perceived terminal silhouette?",
+          "Does the observed coarse organization contradict the frozen relational contract?"
+        ]
+      }
+    ],
+    "status": "REVIEW_CONSUMED"
+  }
+}

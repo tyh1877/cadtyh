@@ -1,0 +1,4 @@
+"""Attach the post-render morphology decision to the integrated build summary."""
+import json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[3];HERE=ROOT/'experiments/try5A';gate=json.loads((HERE/'results/a3_integrated_coarse_morphology_gate.json').read_text());path=HERE/'results/try5a3_integrated_summary.json';summary=json.loads(path.read_text());summary['status']='SUCCESS' if gate['status']=='PASS' else 'BUILT_BUT_REJECTED';summary['coarse_morphology_gate']={'status':gate['status'],'failure_targets':gate['failure_targets'],'visual_review_status':gate['visual_review_packet']['status']};summary['warning']='Generated artifacts are inspection candidates only. Gate failure forbids accepting or freezing this robot.' if gate['status']!='PASS' else '';path.write_text(json.dumps(summary,indent=2)+'\n');print(json.dumps(summary['coarse_morphology_gate'],indent=2));raise SystemExit(gate['status']=='FAIL')

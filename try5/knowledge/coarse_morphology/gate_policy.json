@@ -1,0 +1,26 @@
+{
+  "schema_version": "coarse_morphology_gate_policy_v1",
+  "principle": "Validate frozen, plan-conditioned relations rather than robot-specific part names.",
+  "states": ["PASS", "FAIL", "REVIEW_REQUIRED"],
+  "thresholds": {
+    "minimum_envelope_ratio": 0.35,
+    "maximum_envelope_ratio": 2.5,
+    "minimum_principal_extent_fraction": 0.75,
+    "minimum_terminal_extension_mm": 2.0,
+    "minimum_opposed_member_separation_mm": 1.0
+  },
+  "universal_hard_gates": [
+    "physical geometry exists and is valid",
+    "virtual frames create no solid",
+    "generated envelope remains commensurate with planned envelope",
+    "declared principal direction is preserved",
+    "one rigid link has a connected load path"
+  ],
+  "relational_gates": [
+    "joint topology is preserved",
+    "interface-family geometry semantics are satisfied",
+    "derived functional subassemblies satisfy their frozen relational contract",
+    "functional terminal members define the terminal envelope"
+  ],
+  "visual_policy": "A hard deterministic failure is FAIL. If hard gates pass but required multi-view visual evidence has not been reviewed, return REVIEW_REQUIRED, never PASS."
+}
