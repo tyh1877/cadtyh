@@ -1,0 +1,74 @@
+[
+  {
+    "category": "shoulder",
+    "joint_id": "J01",
+    "joint_type": "revolute",
+    "parent": "L01",
+    "child": "L02",
+    "parent_role": "shoulder_housing",
+    "child_role": "upper_arm_link",
+    "axis_urdf": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "world_axis_canonical": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "limits_rad": {
+      "lower": -1.9373154697137058,
+      "upper": 1.8675022996339325
+    },
+    "selection_reason": "real Robot A role transition shoulder_housing -> upper_arm_link best matches shoulder"
+  },
+  {
+    "category": "elbow",
+    "joint_id": "J02",
+    "joint_type": "revolute",
+    "parent": "L02",
+    "child": "L03",
+    "parent_role": "upper_arm_link",
+    "child_role": "forearm_link",
+    "axis_urdf": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "world_axis_canonical": [
+      0.0,
+      -1.0,
+      1.2246467991473532e-16
+    ],
+    "limits_rad": {
+      "lower": -1.6057029118347832,
+      "upper": 2.111848394913139
+    },
+    "selection_reason": "real Robot A role transition upper_arm_link -> forearm_link best matches elbow"
+  },
+  {
+    "category": "wrist_gripper_neighborhood",
+    "joint_id": "J03",
+    "joint_type": "revolute",
+    "parent": "L03",
+    "child": "L04",
+    "parent_role": "forearm_link",
+    "child_role": "wrist_gripper_body",
+    "axis_urdf": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "world_axis_canonical": [
+      0.0,
+      -1.0,
+      1.2246467991473532e-16
+    ],
+    "limits_rad": {
+      "lower": -2.1467549799530254,
+      "upper": 1.7453292519943295
+    },
+    "selection_reason": "real Robot A role transition forearm_link -> wrist_gripper_body best matches wrist_gripper_neighborhood"
+  }
+]

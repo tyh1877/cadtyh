@@ -1,0 +1,195 @@
+{
+  "experiment": "Try-5A.4",
+  "status": "COMPLETE",
+  "conclusion": "The three Robot A pilots now have separately modeled parent/child rigid groups, strict own-body attachment, URDF-driven relative motion, and exact-collision-valid sampled ranges under M2. This is pilot-level K3 evidence, not a whole-robot claim.",
+  "pilot_joint_ids": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "conditions": {
+    "M0": {
+      "parent_attachment_rate": 0.0,
+      "child_attachment_rate": 0.0,
+      "bicr": 0.0,
+      "floating_interface_count": 6,
+      "forbidden_fusion_count": 0,
+      "mechanical_meaningfulness_rate": 1.0,
+      "collision_free_pose_rate": 0.0,
+      "joint_range_realization_rate": 0.0,
+      "motion_induced_collision_count": 27
+    },
+    "M1": {
+      "parent_attachment_rate": 1.0,
+      "child_attachment_rate": 1.0,
+      "bicr": 1.0,
+      "floating_interface_count": 0,
+      "forbidden_fusion_count": 0,
+      "mechanical_meaningfulness_rate": 1.0,
+      "collision_free_pose_rate": 0.8518518518518517,
+      "joint_range_realization_rate": 0.8518518518518517,
+      "motion_induced_collision_count": 4
+    },
+    "M2": {
+      "parent_attachment_rate": 1.0,
+      "child_attachment_rate": 1.0,
+      "bicr": 1.0,
+      "floating_interface_count": 0,
+      "forbidden_fusion_count": 0,
+      "mechanical_meaningfulness_rate": 1.0,
+      "collision_free_pose_rate": 1.0,
+      "joint_range_realization_rate": 1.0,
+      "motion_induced_collision_count": 0
+    }
+  },
+  "joint_metrics": [
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "collision_free_pose_rate": 0.0,
+      "joint_range_realization_rate": 0.0,
+      "maximum_collision_free_interval_rad": null,
+      "first_collision_q_rad": -1.9373154697137058,
+      "total_swept_collision_volume_mm3": 31838.020349938262,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 9,
+      "structural_motion_gate_pass": false
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "collision_free_pose_rate": 0.7777777777777778,
+      "joint_range_realization_rate": 0.7777777777777778,
+      "maximum_collision_free_interval_rad": [
+        -1.461713248545251,
+        1.3919000784654776
+      ],
+      "first_collision_q_rad": -1.9373154697137058,
+      "total_swept_collision_volume_mm3": 2404.383370371992,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 2,
+      "structural_motion_gate_pass": true
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "collision_free_pose_rate": 1.0,
+      "joint_range_realization_rate": 1.0,
+      "maximum_collision_free_interval_rad": [
+        -1.9373154697137058,
+        1.8675022996339325
+      ],
+      "first_collision_q_rad": null,
+      "total_swept_collision_volume_mm3": 0.0,
+      "minimum_clearance_mm": 0.9999999999999991,
+      "motion_induced_collision_count": 0,
+      "structural_motion_gate_pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "collision_free_pose_rate": 0.0,
+      "joint_range_realization_rate": 0.0,
+      "maximum_collision_free_interval_rad": null,
+      "first_collision_q_rad": -1.6057029118347832,
+      "total_swept_collision_volume_mm3": 31838.02034993826,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 9,
+      "structural_motion_gate_pass": false
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "collision_free_pose_rate": 0.8888888888888888,
+      "joint_range_realization_rate": 0.8888888888888888,
+      "maximum_collision_free_interval_rad": [
+        -1.6057029118347832,
+        1.6471544815696486
+      ],
+      "first_collision_q_rad": 2.111848394913139,
+      "total_swept_collision_volume_mm3": 3807.8457895443244,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 1,
+      "structural_motion_gate_pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "collision_free_pose_rate": 1.0,
+      "joint_range_realization_rate": 1.0,
+      "maximum_collision_free_interval_rad": [
+        -1.6057029118347832,
+        2.111848394913139
+      ],
+      "first_collision_q_rad": null,
+      "total_swept_collision_volume_mm3": 0.0,
+      "minimum_clearance_mm": 1.0,
+      "motion_induced_collision_count": 0,
+      "structural_motion_gate_pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "collision_free_pose_rate": 0.0,
+      "joint_range_realization_rate": 0.0,
+      "maximum_collision_free_interval_rad": null,
+      "first_collision_q_rad": -2.1467549799530254,
+      "total_swept_collision_volume_mm3": 31838.020349938262,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 9,
+      "structural_motion_gate_pass": false
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "collision_free_pose_rate": 0.8888888888888888,
+      "joint_range_realization_rate": 0.8888888888888888,
+      "maximum_collision_free_interval_rad": [
+        -1.6602444509596062,
+        1.7453292519943298
+      ],
+      "first_collision_q_rad": -2.1467549799530254,
+      "total_swept_collision_volume_mm3": 4082.880705924231,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 1,
+      "structural_motion_gate_pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "collision_free_pose_rate": 1.0,
+      "joint_range_realization_rate": 1.0,
+      "maximum_collision_free_interval_rad": [
+        -2.1467549799530254,
+        1.7453292519943298
+      ],
+      "first_collision_q_rad": null,
+      "total_swept_collision_volume_mm3": 0.0,
+      "minimum_clearance_mm": 0.9999999999999991,
+      "motion_induced_collision_count": 0,
+      "structural_motion_gate_pass": true
+    }
+  ],
+  "representation_level": {
+    "M0": "K1 pose-driven only",
+    "M1": "K1 plus partial K2/K3 intervals",
+    "M2": "pilot-level K3 mechanically realized"
+  },
+  "first_nonzero_collision_free_interval": "J01",
+  "full_requested_range_collision_free_joints_M2": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "repair_metrics": {
+    "scope_distribution": {
+      "R2_BODY_REGION_REPLAN": 3
+    },
+    "repair_success_rate": 1.0,
+    "R4_rate": 0.0,
+    "regression_rate": 0.0,
+    "rollback_rate": 0.0
+  },
+  "freecad_primary_bottleneck": false,
+  "largest_remaining_bottleneck": "whole-robot neighbor-aware swept-corridor scaling while preserving coarse morphology"
+}

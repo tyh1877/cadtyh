@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "generator_inputs": [
+    "experiments/try5A/blackboard/kinematic_skeleton.json",
+    "experiments/try5A/robot_plan/robot_assembly_plan.json",
+    "experiments/try5A/results/try5a3_phase14/interface_candidate_ranking.json",
+    "try5/knowledge/robot_interfaces/families.json",
+    "experiments/try5A/inputs/input_manifest.json",
+    "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf"
+  ],
+  "forbidden_input_access": false,
+  "knowledge_robot_specific_answer_hits": {
+    "Robot A": false,
+    "GT STEP": false,
+    "GT B-Rep": false,
+    "GT swept volume": false,
+    "GT joint CAD": false
+  },
+  "gt_usage": "historical frozen geometry metrics only in auxiliary evaluator context; never consumed by generator or motion planner"
+}

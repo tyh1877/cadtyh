@@ -1,0 +1,149 @@
+{
+  "maximum_repairs_per_joint": 2,
+  "repairs": [
+    {
+      "joint_id": "J01",
+      "repair_iteration": 1,
+      "repair_scope": "R2_BODY_REGION_REPLAN",
+      "trigger": "M1 motion-induced collision in joint-adjacent parent body",
+      "protected_states": [
+        "URDF joint origin",
+        "URDF joint axis",
+        "interface family",
+        "child rigid group"
+      ],
+      "design_change": "straight central parent body -> U-shaped load path outside swept corridor",
+      "before": {
+        "joint_id": "J01",
+        "condition": "M1",
+        "collision_free_pose_rate": 0.7777777777777778,
+        "joint_range_realization_rate": 0.7777777777777778,
+        "maximum_collision_free_interval_rad": [
+          -1.461713248545251,
+          1.3919000784654776
+        ],
+        "first_collision_q_rad": -1.9373154697137058,
+        "total_swept_collision_volume_mm3": 2404.383370371992,
+        "minimum_clearance_mm": 0.0,
+        "motion_induced_collision_count": 2,
+        "structural_motion_gate_pass": true
+      },
+      "after": {
+        "joint_id": "J01",
+        "condition": "M2",
+        "collision_free_pose_rate": 1.0,
+        "joint_range_realization_rate": 1.0,
+        "maximum_collision_free_interval_rad": [
+          -1.9373154697137058,
+          1.8675022996339325
+        ],
+        "first_collision_q_rad": null,
+        "total_swept_collision_volume_mm3": 0.0,
+        "minimum_clearance_mm": 0.9999999999999991,
+        "motion_induced_collision_count": 0,
+        "structural_motion_gate_pass": true
+      },
+      "accepted": true,
+      "regression": false,
+      "rollback": false,
+      "r4_executed": false,
+      "r4_reason": "not required; family remained mechanically plausible after R2"
+    },
+    {
+      "joint_id": "J02",
+      "repair_iteration": 1,
+      "repair_scope": "R2_BODY_REGION_REPLAN",
+      "trigger": "M1 motion-induced collision in joint-adjacent parent body",
+      "protected_states": [
+        "URDF joint origin",
+        "URDF joint axis",
+        "interface family",
+        "child rigid group"
+      ],
+      "design_change": "straight central parent body -> U-shaped load path outside swept corridor",
+      "before": {
+        "joint_id": "J02",
+        "condition": "M1",
+        "collision_free_pose_rate": 0.8888888888888888,
+        "joint_range_realization_rate": 0.8888888888888888,
+        "maximum_collision_free_interval_rad": [
+          -1.6057029118347832,
+          1.6471544815696486
+        ],
+        "first_collision_q_rad": 2.111848394913139,
+        "total_swept_collision_volume_mm3": 3807.8457895443244,
+        "minimum_clearance_mm": 0.0,
+        "motion_induced_collision_count": 1,
+        "structural_motion_gate_pass": true
+      },
+      "after": {
+        "joint_id": "J02",
+        "condition": "M2",
+        "collision_free_pose_rate": 1.0,
+        "joint_range_realization_rate": 1.0,
+        "maximum_collision_free_interval_rad": [
+          -1.6057029118347832,
+          2.111848394913139
+        ],
+        "first_collision_q_rad": null,
+        "total_swept_collision_volume_mm3": 0.0,
+        "minimum_clearance_mm": 1.0,
+        "motion_induced_collision_count": 0,
+        "structural_motion_gate_pass": true
+      },
+      "accepted": true,
+      "regression": false,
+      "rollback": false,
+      "r4_executed": false,
+      "r4_reason": "not required; family remained mechanically plausible after R2"
+    },
+    {
+      "joint_id": "J03",
+      "repair_iteration": 1,
+      "repair_scope": "R2_BODY_REGION_REPLAN",
+      "trigger": "M1 motion-induced collision in joint-adjacent parent body",
+      "protected_states": [
+        "URDF joint origin",
+        "URDF joint axis",
+        "interface family",
+        "child rigid group"
+      ],
+      "design_change": "straight central parent body -> U-shaped load path outside swept corridor",
+      "before": {
+        "joint_id": "J03",
+        "condition": "M1",
+        "collision_free_pose_rate": 0.8888888888888888,
+        "joint_range_realization_rate": 0.8888888888888888,
+        "maximum_collision_free_interval_rad": [
+          -1.6602444509596062,
+          1.7453292519943298
+        ],
+        "first_collision_q_rad": -2.1467549799530254,
+        "total_swept_collision_volume_mm3": 4082.880705924231,
+        "minimum_clearance_mm": 0.0,
+        "motion_induced_collision_count": 1,
+        "structural_motion_gate_pass": true
+      },
+      "after": {
+        "joint_id": "J03",
+        "condition": "M2",
+        "collision_free_pose_rate": 1.0,
+        "joint_range_realization_rate": 1.0,
+        "maximum_collision_free_interval_rad": [
+          -2.1467549799530254,
+          1.7453292519943298
+        ],
+        "first_collision_q_rad": null,
+        "total_swept_collision_volume_mm3": 0.0,
+        "minimum_clearance_mm": 0.9999999999999991,
+        "motion_induced_collision_count": 0,
+        "structural_motion_gate_pass": true
+      },
+      "accepted": true,
+      "regression": false,
+      "rollback": false,
+      "r4_executed": false,
+      "r4_reason": "not required; family remained mechanically plausible after R2"
+    }
+  ]
+}

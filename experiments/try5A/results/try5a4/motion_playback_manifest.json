@@ -1,0 +1,130 @@
+{
+  "artifacts": [
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M0/J01",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J01_M0.png",
+      "gif": null,
+      "collision_overlay_source": "exact B-Rep common volume"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M1/J01",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J01_M1.png",
+      "gif": null,
+      "collision_overlay_source": "exact B-Rep common volume"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M2/J01",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J01_M2.png",
+      "gif": "experiments/try5A/results/try5a4/motion_playback/J01_M2.gif",
+      "collision_overlay_source": "exact B-Rep common volume"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M0/J02",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J02_M0.png",
+      "gif": null,
+      "collision_overlay_source": "exact B-Rep common volume"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M1/J02",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J02_M1.png",
+      "gif": null,
+      "collision_overlay_source": "exact B-Rep common volume"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M2/J02",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J02_M2.png",
+      "gif": "experiments/try5A/results/try5a4/motion_playback/J02_M2.gif",
+      "collision_overlay_source": "exact B-Rep common volume"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M0/J03",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J03_M0.png",
+      "gif": null,
+      "collision_overlay_source": "exact B-Rep common volume"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M1/J03",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J03_M1.png",
+      "gif": null,
+      "collision_overlay_source": "exact B-Rep common volume"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "pose_count": 9,
+      "pose_render_directory": "experiments/try5A/artifacts/try5a4/pose_renders/M2/J03",
+      "start_mid_end_indices": [
+        0,
+        4,
+        8
+      ],
+      "contact_sheet": "experiments/try5A/results/try5a4/contact_sheets/J03_M2.png",
+      "gif": "experiments/try5A/results/try5a4/motion_playback/J03_M2.gif",
+      "collision_overlay_source": "exact B-Rep common volume"
+    }
+  ]
+}

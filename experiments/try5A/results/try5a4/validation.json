@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "protocol_re_read": true,
+  "requirements": {
+    "frozen_inputs": true,
+    "full_case_coverage": true,
+    "real_freecad_backend": true,
+    "exact_collision_evaluation": true,
+    "strict_attachment": true,
+    "independent_rigid_groups": true,
+    "motion_playback": true,
+    "bounded_repairs": true,
+    "dataflow_counterfactuals": true,
+    "leakage_absent": true,
+    "nonzero_sweep_free_rate": true,
+    "report_complete": true
+  },
+  "missing_artifacts": []
+}

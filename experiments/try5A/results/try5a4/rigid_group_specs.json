@@ -1,0 +1,96 @@
+{
+  "schema_version": "try5A4_rigid_group_spec_v1",
+  "principle": "Rigid within Link; movable across Joint",
+  "groups": [
+    {
+      "joint_id": "J01",
+      "parent": {
+        "link_id": "L01",
+        "members": [
+          "parent_body",
+          "parent_interface"
+        ],
+        "rule": "rigid_within_link"
+      },
+      "child": {
+        "link_id": "L02",
+        "members": [
+          "child_body",
+          "child_interface"
+        ],
+        "rule": "rigid_within_link"
+      },
+      "cross_joint_relation": "two independent top-level rigid CAD objects",
+      "forbidden_fusion_pairs": [
+        [
+          "parent_interface",
+          "child_interface"
+        ],
+        [
+          "parent_rigid_group",
+          "child_rigid_group"
+        ]
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "parent": {
+        "link_id": "L02",
+        "members": [
+          "parent_body",
+          "parent_interface"
+        ],
+        "rule": "rigid_within_link"
+      },
+      "child": {
+        "link_id": "L03",
+        "members": [
+          "child_body",
+          "child_interface"
+        ],
+        "rule": "rigid_within_link"
+      },
+      "cross_joint_relation": "two independent top-level rigid CAD objects",
+      "forbidden_fusion_pairs": [
+        [
+          "parent_interface",
+          "child_interface"
+        ],
+        [
+          "parent_rigid_group",
+          "child_rigid_group"
+        ]
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "parent": {
+        "link_id": "L03",
+        "members": [
+          "parent_body",
+          "parent_interface"
+        ],
+        "rule": "rigid_within_link"
+      },
+      "child": {
+        "link_id": "L04",
+        "members": [
+          "child_body",
+          "child_interface"
+        ],
+        "rule": "rigid_within_link"
+      },
+      "cross_joint_relation": "two independent top-level rigid CAD objects",
+      "forbidden_fusion_pairs": [
+        [
+          "parent_interface",
+          "child_interface"
+        ],
+        [
+          "parent_rigid_group",
+          "child_rigid_group"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "experiments/try5A/results/coarse_geometry_metrics.csv",
+  "status": "frozen historical A2 context; not recomputed or optimized in A.4",
+  "whole_robot_A2": {
+    "voxel_iou": 0.4482632541133455,
+    "normalized_chamfer": 0.01955853433040927,
+    "normalized_hd95": 0.09782832515415596,
+    "silhouette_iou_mean": 0.6486326510637522
+  }
+}

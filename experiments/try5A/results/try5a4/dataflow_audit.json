@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "forward_chain": {
+    "urdf_to_motion_semantics": true,
+    "knowledge_to_contract": true,
+    "contract_to_rigid_groups": true,
+    "rigid_groups_to_cad_ir": true,
+    "cad_ir_to_freecad": true,
+    "urdf_limits_to_sampled_poses": true,
+    "sampled_poses_to_swept_clearance": true,
+    "swept_clearance_to_m2_body_replanning": true,
+    "m2_plan_to_changed_cad": true,
+    "m2_plan_to_improved_motion_metric": true
+  },
+  "counterfactuals": [
+    {
+      "name": "joint_limit_changes_swept_clearance",
+      "joint_id": "J01",
+      "baseline_sample_range_rad": [
+        -1.9373154697137058,
+        1.8675022996339325
+      ],
+      "counterfactual_sample_range_rad": [
+        -0.9861110273767962,
+        0.9162978572970231
+      ],
+      "baseline_swept_bbox_size_mm": [
+        101.82247382190567,
+        140.4744654530834,
+        10.000000000000002
+      ],
+      "counterfactual_swept_bbox_size_mm": [
+        80.20165436825421,
+        122.0316302653337,
+        10.0
+      ],
+      "pass": true
+    },
+    {
+      "name": "knowledge_family_changes_interface_realization",
+      "joint_id": "J01",
+      "baseline_family": "fork_pin_interface",
+      "counterfactual_family": "coaxial_rotary_interface",
+      "baseline_parent_interface_volume_mm3": 9275.491528163771,
+      "counterfactual_parent_interface_volume_mm3": 8894.780481742473,
+      "pass": true
+    },
+    {
+      "name": "clearance_parameter_changes_cad_and_motion_metric",
+      "joint_id": "J01",
+      "baseline_axial_clearance_mm": 1.0,
+      "counterfactual_axial_clearance_mm": -1.0,
+      "baseline_collision_free_pose_rate": 1.0,
+      "counterfactual_collision_free_pose_rate": 0.0,
+      "baseline_parent_interface_volume_mm3": 9275.491528163771,
+      "counterfactual_parent_interface_volume_mm3": 9275.491528163773,
+      "baseline_parent_bbox": {
+        "min_mm": [
+          -82.0,
+          -17.998793913511676,
+          -12.0
+        ],
+        "max_mm": [
+          18.0,
+          17.998793913511676,
+          12.0
+        ],
+        "size_mm": [
+          100.0,
+          35.99758782702335,
+          24.0
+        ]
+      },
+      "counterfactual_parent_bbox": {
+        "min_mm": [
+          -82.0,
+          -18.0,
+          -10.0
+        ],
+        "max_mm": [
+          18.0,
+          18.0,
+          10.0
+        ],
+        "size_mm": [
+          100.0,
+          36.0,
+          20.0
+        ]
+      },
+      "pass": true
+    }
+  ]
+}

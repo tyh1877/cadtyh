@@ -1,0 +1,121 @@
+{
+  "schema_version": "try5A4_motion_interface_contract_v1",
+  "joint_id": "J03",
+  "joint_type": "revolute",
+  "interface_family": "coaxial_rotary_interface",
+  "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+  "knowledge_entry_version": "try5A4_motion_realization_v2",
+  "allowed_dof": [
+    "rotation_about_urdf_axis"
+  ],
+  "constrained_dof": [
+    "translation_x",
+    "translation_y",
+    "translation_z",
+    "rotation_about_two_orthogonal_axes"
+  ],
+  "motion_axis": {
+    "source": "sanitized_urdf:J03:axis",
+    "value": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "motion_range": {
+    "source": "sanitized_urdf:J03:limits",
+    "lower_rad": -2.1467549799530254,
+    "upper_rad": 1.7453292519943298,
+    "continuous_proxy": false,
+    "sample_fractions": [
+      0.0,
+      0.125,
+      0.25,
+      0.375,
+      0.5,
+      0.625,
+      0.75,
+      0.875,
+      1.0
+    ],
+    "sample_values_rad": [
+      -2.1467549799530254,
+      -1.6602444509596062,
+      -1.1737339219661866,
+      -0.6872233929727671,
+      -0.20071286397934784,
+      0.28579766501407144,
+      0.7723081940074912,
+      1.2588187230009105,
+      1.7453292519943298
+    ]
+  },
+  "parent_rigid_group": {
+    "link_id": "L03",
+    "members": [
+      "parent_body",
+      "parent_interface"
+    ],
+    "rule": "rigid_within_link"
+  },
+  "child_rigid_group": {
+    "link_id": "L04",
+    "members": [
+      "child_body",
+      "child_interface"
+    ],
+    "rule": "rigid_within_link"
+  },
+  "parent_attachment_region": "forearm_link:joint_adjacent_support",
+  "child_attachment_region": "wrist_gripper_body:joint_adjacent_carrier",
+  "allowed_contact_regions": [
+    "optional coaxial bearing surface"
+  ],
+  "required_clearance_regions": [
+    "rotating_carrier_radial_envelope",
+    "carrier_side_faces",
+    "child_link_swept_corridor"
+  ],
+  "swept_clearance_region": {
+    "source": "generated CAD + sampled URDF motion",
+    "artifact": "motion_clearance_specs.json"
+  },
+  "forbidden_fusion_pairs": [
+    [
+      "parent_interface",
+      "child_interface"
+    ],
+    [
+      "parent_rigid_group",
+      "child_rigid_group"
+    ]
+  ],
+  "relative_motion_rule": "inner child carrier rotates about the URDF axis inside parent supports",
+  "motion_validation_rule": "apply URDF FK rigid-group transforms at every frozen pose and accept only exact-collision-valid samples",
+  "frozen_k1_selection": {
+    "joint_id": "J03",
+    "K0_selected_family": "coaxial_rotary_interface",
+    "K1": {
+      "joint_id": "J03",
+      "candidate_interfaces": [
+        {
+          "family": "coaxial_rotary_interface",
+          "evidence": [
+            "revolute/continuous joint",
+            "URDF axis supports coaxial carrier"
+          ],
+          "knowledge_match": [
+            "revolute or continuous joint",
+            "compact rotary housing or inline wrist"
+          ],
+          "confidence": 0.74
+        }
+      ],
+      "selected_family": "coaxial_rotary_interface",
+      "selection_reason": "revolute/continuous joint; URDF axis supports coaxial carrier",
+      "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+    },
+    "family_changed": false
+  }
+}

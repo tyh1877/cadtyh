@@ -1,0 +1,88 @@
+{
+  "schema_version": "try5A4_motion_cad_ir_v1",
+  "condition": "M1",
+  "joint_id": "J01",
+  "interface_family": "fork_pin_interface",
+  "contract_path": "experiments/try5A/results/try5a4/contracts/J01.json",
+  "reference_frame": {
+    "origin_source": "sanitized_urdf:J01:origin",
+    "axis_source": "sanitized_urdf:J01:axis",
+    "local_motion_axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  "sample_values_rad": [
+    -1.9373154697137058,
+    -1.461713248545251,
+    -0.9861110273767962,
+    -0.5105088062083414,
+    -0.03490658503988664,
+    0.4406956361285681,
+    0.9162978572970231,
+    1.3919000784654776,
+    1.8675022996339325
+  ],
+  "parent_rigid_group": {
+    "link_id": "L01",
+    "members": [
+      "parent_body",
+      "parent_interface"
+    ],
+    "rule": "rigid_within_link"
+  },
+  "child_rigid_group": {
+    "link_id": "L02",
+    "members": [
+      "child_body",
+      "child_interface"
+    ],
+    "rule": "rigid_within_link"
+  },
+  "forbidden_fusion_pairs": [
+    [
+      "parent_interface",
+      "child_interface"
+    ],
+    [
+      "parent_rigid_group",
+      "child_rigid_group"
+    ]
+  ],
+  "parameters": {
+    "parent_carrier_radius_mm": 18.0,
+    "child_boss_radius_mm": 10.0,
+    "child_boss_half_depth_mm": 5.0,
+    "axial_clearance_mm": 1.0,
+    "child_body_length_mm": 70.0
+  },
+  "feature_provenance": [
+    {
+      "feature_id": "J01_parent_carrier",
+      "owning_rigid_group": "L01",
+      "mechanical_role": "parent-side support for fork_pin_interface",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "MotionInterfaceContract/J01/parent_side",
+      "cad_strategy": "paired supports outside the child rotational corridor"
+    },
+    {
+      "feature_id": "J01_child_carrier",
+      "owning_rigid_group": "L02",
+      "mechanical_role": "child-side coaxial boss and structural neck",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "MotionInterfaceContract/J01/child_side",
+      "cad_strategy": "coaxial boss with body-attached neck"
+    },
+    {
+      "feature_id": "J01_body_region",
+      "owning_rigid_group": "L01",
+      "mechanical_role": "joint-adjacent parent load path",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "MotionClearance/J01/body_region",
+      "cad_strategy": "unchanged straight coarse body"
+    }
+  ],
+  "body_replanning": "none",
+  "silent_fallback_allowed": false
+}

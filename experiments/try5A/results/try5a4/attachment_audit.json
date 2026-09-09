@@ -1,0 +1,166 @@
+{
+  "rows": [
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "side": "parent",
+      "minimum_distance_mm": 2.0,
+      "intersection_volume_mm3": 0.0,
+      "connected_solid_count": 2,
+      "pass": false
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "side": "child",
+      "minimum_distance_mm": 4.0,
+      "intersection_volume_mm3": 0.0,
+      "connected_solid_count": 2,
+      "pass": false
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 192.0,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 319.99999999999994,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 576.0,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 319.99999999999994,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "side": "parent",
+      "minimum_distance_mm": 2.0,
+      "intersection_volume_mm3": 0.0,
+      "connected_solid_count": 2,
+      "pass": false
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "side": "child",
+      "minimum_distance_mm": 4.0,
+      "intersection_volume_mm3": 0.0,
+      "connected_solid_count": 2,
+      "pass": false
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 192.0,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 319.99999999999994,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 576.0,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 319.99999999999994,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "side": "parent",
+      "minimum_distance_mm": 2.0,
+      "intersection_volume_mm3": 0.0,
+      "connected_solid_count": 2,
+      "pass": false
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "side": "child",
+      "minimum_distance_mm": 4.0,
+      "intersection_volume_mm3": 0.0,
+      "connected_solid_count": 2,
+      "pass": false
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 287.9999999999999,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 319.99999999999994,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 864.0,
+      "connected_solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 319.99999999999994,
+      "connected_solid_count": 1,
+      "pass": true
+    }
+  ]
+}

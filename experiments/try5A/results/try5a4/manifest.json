@@ -1,0 +1,53 @@
+{
+  "experiment": "Try-5A.4",
+  "protocol_sha256": "4ec35aa24d6e8c5f31e20840e86dae6954c36ce8bba135dcb8a04b652983bf51",
+  "git_commit_before_run": "3e87d7690eca73b8732a12ef1da451329fc38e1c",
+  "robot": "Robot A / R01 only",
+  "inputs": {
+    "experiments/try5A/blackboard/kinematic_skeleton.json": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+    "experiments/try5A/robot_plan/robot_assembly_plan.json": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "experiments/try5A/results/try5a3_phase14/interface_candidate_ranking.json": "3cf4f2fddc82101586eff24957eb1e18ccd493669727ca9a9b95122509a237d6",
+    "try5/knowledge/robot_interfaces/families.json": "670933aaa45b68ef4c86e54f554e94b901eefb2af112267c261ce32093641aad",
+    "experiments/try5A/inputs/input_manifest.json": "ce655aa20beeac0bf137452f6b673eb77c9666a702f5c5455b9afd1f3ddbc1e3",
+    "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664"
+  },
+  "pilot_selector": "role-transition-v1",
+  "pilot_joint_ids": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "conditions": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "pose_fractions": [
+    0.0,
+    0.125,
+    0.25,
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0
+  ],
+  "case_denominator": 81,
+  "model": "Codex task model (same run for all conditions)",
+  "freecad_python": "D:\\software\\freeCAD\\install\\bin\\python.exe",
+  "collision_evaluator": "FreeCAD exact B-Rep Shape.common + Shape.distToShape",
+  "implementation_hashes": {
+    "driver": "2bead557987f9d599065aa621d794d4622106c186ba1bbab0b119d705bdd8ca5",
+    "freecad_worker": "faddb3d2df3d9dcdbd479461cadc36a4ada1af872b3813dcc7b9622d0ffe5149",
+    "knowledge_upgrade": "14cbebbbce801310c6142863d5c9bd998484288a67a732965b613f993d8c2804"
+  },
+  "broad_phase_role": "diagnostic only; not used for formal validity",
+  "generator_forbidden_inputs": [
+    "GT STEP",
+    "GT B-Rep",
+    "GT interface dimensions",
+    "GT swept volume",
+    "GT collision-free body"
+  ]
+}

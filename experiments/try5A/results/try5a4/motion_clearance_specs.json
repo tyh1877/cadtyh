@@ -1,0 +1,364 @@
+{
+  "specs": [
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -1.9373154697137058,
+        -1.461713248545251,
+        -0.9861110273767962,
+        -0.5105088062083414,
+        -0.03490658503988664,
+        0.4406956361285681,
+        0.9162978572970231,
+        1.3919000784654776,
+        1.8675022996339325
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -31.620819453651464,
+          -70.34601179952614,
+          -5.000000000000001
+        ],
+        "max_mm": [
+          70.20165436825421,
+          70.12845365355727,
+          5.000000000000001
+        ],
+        "size_mm": [
+          101.82247382190567,
+          140.4744654530834,
+          10.000000000000002
+        ]
+      },
+      "minimum_exact_clearance_mm": 0.0,
+      "body_response": "none"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -1.9373154697137058,
+        -1.461713248545251,
+        -0.9861110273767962,
+        -0.5105088062083414,
+        -0.03490658503988664,
+        0.4406956361285681,
+        0.9162978572970231,
+        1.3919000784654776,
+        1.8675022996339325
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -31.620819453651464,
+          -70.34601179952614,
+          -5.000000000000001
+        ],
+        "max_mm": [
+          70.20165436825421,
+          70.12845365355727,
+          5.000000000000001
+        ],
+        "size_mm": [
+          101.82247382190567,
+          140.4744654530834,
+          10.000000000000002
+        ]
+      },
+      "minimum_exact_clearance_mm": 0.0,
+      "body_response": "none"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -1.9373154697137058,
+        -1.461713248545251,
+        -0.9861110273767962,
+        -0.5105088062083414,
+        -0.03490658503988664,
+        0.4406956361285681,
+        0.9162978572970231,
+        1.3919000784654776,
+        1.8675022996339325
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -31.620819453651464,
+          -70.34601179952614,
+          -5.000000000000001
+        ],
+        "max_mm": [
+          70.20165436825421,
+          70.12845365355727,
+          5.000000000000001
+        ],
+        "size_mm": [
+          101.82247382190567,
+          140.4744654530834,
+          10.000000000000002
+        ]
+      },
+      "minimum_exact_clearance_mm": 0.9999999999999991,
+      "body_response": "motion_swept_R2"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -1.6057029118347832,
+        -1.141008998491293,
+        -0.6763150851478027,
+        -0.2116211718043124,
+        0.2530727415391778,
+        0.7177666548826682,
+        1.1824605682261584,
+        1.6471544815696486,
+        2.111848394913139
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -42.052836348618584,
+          -70.20165436825421,
+          -5.0
+        ],
+        "max_mm": [
+          69.9087338926749,
+          70.33001708284034,
+          5.0
+        ],
+        "size_mm": [
+          111.96157024129349,
+          140.53167145109455,
+          10.0
+        ]
+      },
+      "minimum_exact_clearance_mm": 0.0,
+      "body_response": "none"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -1.6057029118347832,
+        -1.141008998491293,
+        -0.6763150851478027,
+        -0.2116211718043124,
+        0.2530727415391778,
+        0.7177666548826682,
+        1.1824605682261584,
+        1.6471544815696486,
+        2.111848394913139
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -42.052836348618584,
+          -70.20165436825421,
+          -5.0
+        ],
+        "max_mm": [
+          69.9087338926749,
+          70.33001708284034,
+          5.0
+        ],
+        "size_mm": [
+          111.96157024129349,
+          140.53167145109455,
+          10.0
+        ]
+      },
+      "minimum_exact_clearance_mm": 0.0,
+      "body_response": "none"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -1.6057029118347832,
+        -1.141008998491293,
+        -0.6763150851478027,
+        -0.2116211718043124,
+        0.2530727415391778,
+        0.7177666548826682,
+        1.1824605682261584,
+        1.6471544815696486,
+        2.111848394913139
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -42.052836348618584,
+          -70.20165436825421,
+          -5.0
+        ],
+        "max_mm": [
+          69.9087338926749,
+          70.33001708284034,
+          5.0
+        ],
+        "size_mm": [
+          111.96157024129349,
+          140.53167145109455,
+          10.0
+        ]
+      },
+      "minimum_exact_clearance_mm": 1.0,
+      "body_response": "motion_swept_R2"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -2.1467549799530254,
+        -1.6602444509596062,
+        -1.1737339219661866,
+        -0.6872233929727671,
+        -0.20071286397934784,
+        0.28579766501407144,
+        0.7723081940074912,
+        1.2588187230009105,
+        1.7453292519943298
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -43.99542642666988,
+          -70.34545507297017,
+          -5.000000000000001
+        ],
+        "max_mm": [
+          69.99030486437846,
+          70.15207995452307,
+          5.000000000000001
+        ],
+        "size_mm": [
+          113.98573129104834,
+          140.49753502749326,
+          10.000000000000002
+        ]
+      },
+      "minimum_exact_clearance_mm": 0.0,
+      "body_response": "none"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -2.1467549799530254,
+        -1.6602444509596062,
+        -1.1737339219661866,
+        -0.6872233929727671,
+        -0.20071286397934784,
+        0.28579766501407144,
+        0.7723081940074912,
+        1.2588187230009105,
+        1.7453292519943298
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -43.99542642666988,
+          -70.34545507297017,
+          -5.000000000000001
+        ],
+        "max_mm": [
+          69.99030486437846,
+          70.15207995452307,
+          5.000000000000001
+        ],
+        "size_mm": [
+          113.98573129104834,
+          140.49753502749326,
+          10.000000000000002
+        ]
+      },
+      "minimum_exact_clearance_mm": 0.0,
+      "body_response": "none"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "source_chain": [
+        "generated CAD",
+        "sanitized URDF joint/limits",
+        "motion-aware contract",
+        "parent/child rigid groups"
+      ],
+      "sample_values_rad": [
+        -2.1467549799530254,
+        -1.6602444509596062,
+        -1.1737339219661866,
+        -0.6872233929727671,
+        -0.20071286397934784,
+        0.28579766501407144,
+        0.7723081940074912,
+        1.2588187230009105,
+        1.7453292519943298
+      ],
+      "required_clearance_corridor": {
+        "min_mm": [
+          -43.99542642666988,
+          -70.34545507297017,
+          -5.000000000000001
+        ],
+        "max_mm": [
+          69.99030486437846,
+          70.15207995452307,
+          5.000000000000001
+        ],
+        "size_mm": [
+          113.98573129104834,
+          140.49753502749326,
+          10.000000000000002
+        ]
+      },
+      "minimum_exact_clearance_mm": 0.9999999999999991,
+      "body_response": "motion_swept_R2"
+    }
+  ]
+}

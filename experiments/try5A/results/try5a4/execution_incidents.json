@@ -1,0 +1,23 @@
+{
+  "incidents": [
+    {
+      "run": 1,
+      "status": "FORMAL_GATE_FAIL",
+      "case_coverage": 81,
+      "failed_gates": [
+        "dataflow_counterfactuals",
+        "repair_acceptance"
+      ],
+      "evidence": {
+        "M1_collision_events": 1,
+        "M2_collision_events": 0,
+        "clearance_counterfactual_motion_changed": true,
+        "clearance_counterfactual_geometry_test": "incorrectly compared invariant volume instead of changed placement/bounds"
+      },
+      "diagnosis": "The unreplanned M1 body envelope did not intersect two pilots' sampled sweeps, so unnecessary R2 repairs could not meet the strict improvement rule. The clearance counterfactual changed CAD placement and motion but the audit tested volume only.",
+      "correction": "Freeze a broader unreplanned joint-adjacent M1 housing consistently across pilots; retain M2 swept-corridor routing. Audit clearance CAD change using exact B-Rep bounds plus motion rate.",
+      "discarded_cases": 0,
+      "silent_retry": false
+    }
+  ]
+}
