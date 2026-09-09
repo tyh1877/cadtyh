@@ -1,0 +1,27 @@
+{
+  "experiment": "Try-5A.4 completion",
+  "git_commit_before_run": "4921279aa5f203f633818b1aeeeaa9f2491c2ddd",
+  "protocol_sha256": "4ec35aa24d6e8c5f31e20840e86dae6954c36ce8bba135dcb8a04b652983bf51",
+  "inputs": {
+    "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+    "experiments/try5A/blackboard/kinematic_skeleton.json": "f381d6f7da5fe3a5ee72161825f390c11b9c4dc3d28bdabffc4d2976a5ff6879",
+    "experiments/try5A/robot_plan/robot_assembly_plan.json": "df46fd13b8130d4ef5a3ebefbedb00812166c391a5fb419fd52292412d4df0c9",
+    "experiments/try5A/results/try5a3_phase14/interface_candidate_ranking.json": "3cf4f2fddc82101586eff24957eb1e18ccd493669727ca9a9b95122509a237d6",
+    "experiments/try5A/results/try5a3_final/k1_attachment.json": "cc8bf37767941ce0319d06f52e8b5686d1ea33b9eefebcdd2e4c9931d368f4a8",
+    "try5/knowledge/robot_interfaces/families.json": "670933aaa45b68ef4c86e54f554e94b901eefb2af112267c261ce32093641aad",
+    "experiments/try5A/results/evaluator_gt_mesh_manifest.json": "bd7ba99a2e2a2c941af18d60c6eee07751835c59c986a89e5794a121b6bf517d"
+  },
+  "conditions": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "pose_rule": "q_min + eighths + q_max + q=0",
+  "freecad_runtime": "D:\\software\\freeCAD\\install\\bin\\python.exe",
+  "collision_judge": "exact B-Rep common; AABB broad phase only",
+  "implementation_hashes": {
+    "experiments/try5A/scripts/run_try5a4.py": "42a69ca0b143fb7a9d9a6a59ac834548d99978a130f674c46d92f0abcfe07d60",
+    "experiments/try5A/scripts/freecad_motion_realization.py": "c385081deae25b2e5d87f7f67c1e165c2372b215e1c54d79f5b61e95c176835e"
+  },
+  "generator_gt_access": false
+}

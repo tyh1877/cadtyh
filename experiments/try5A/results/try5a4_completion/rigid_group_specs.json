@@ -1,0 +1,86 @@
+{
+  "principle": "Rigid within Link; movable across Joint",
+  "groups": [
+    {
+      "joint_id": "J01",
+      "parent_rigid_group": {
+        "link_id": "L01",
+        "members": [
+          "parent_body",
+          "parent_interface"
+        ]
+      },
+      "child_rigid_group": {
+        "link_id": "L02",
+        "members": [
+          "child_body",
+          "child_interface"
+        ]
+      },
+      "forbidden_fusion_pairs": [
+        [
+          "parent_interface",
+          "child_interface"
+        ],
+        [
+          "parent_rigid_group",
+          "child_rigid_group"
+        ]
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "parent_rigid_group": {
+        "link_id": "L02",
+        "members": [
+          "parent_body",
+          "parent_interface"
+        ]
+      },
+      "child_rigid_group": {
+        "link_id": "L03",
+        "members": [
+          "child_body",
+          "child_interface"
+        ]
+      },
+      "forbidden_fusion_pairs": [
+        [
+          "parent_interface",
+          "child_interface"
+        ],
+        [
+          "parent_rigid_group",
+          "child_rigid_group"
+        ]
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "parent_rigid_group": {
+        "link_id": "L03",
+        "members": [
+          "parent_body",
+          "parent_interface"
+        ]
+      },
+      "child_rigid_group": {
+        "link_id": "L04",
+        "members": [
+          "child_body",
+          "child_interface"
+        ]
+      },
+      "forbidden_fusion_pairs": [
+        [
+          "parent_interface",
+          "child_interface"
+        ],
+        [
+          "parent_rigid_group",
+          "child_rigid_group"
+        ]
+      ]
+    }
+  ]
+}

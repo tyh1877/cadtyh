@@ -1,0 +1,142 @@
+{
+  "decisions": [
+    {
+      "joint_id": "J01",
+      "input": {
+        "target": "J01",
+        "failed_gates": [
+          "EXACT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 2,
+          "localized_feature_failure": false
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "sampled exact collisions occupy the joint-adjacent body region"
+        ],
+        "protected_states": [
+          "URDF frame",
+          "URDF axis",
+          "interface family",
+          "own-body attachment"
+        ]
+      },
+      "decision": {
+        "target": "J01",
+        "failed_gates": [
+          "EXACT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 2,
+          "localized_feature_failure": false
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R2_BODY_REGION_REPLAN",
+        "reason": "sampled exact collisions occupy the joint-adjacent body region; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frame",
+          "URDF axis",
+          "interface family",
+          "own-body attachment"
+        ],
+        "upstream_objects_to_modify": [
+          "BodyRegionSpec"
+        ]
+      },
+      "repair_iteration": 1
+    },
+    {
+      "joint_id": "J02",
+      "input": {
+        "target": "J02",
+        "failed_gates": [
+          "EXACT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 2,
+          "localized_feature_failure": true
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "sampled exact collisions occupy the joint-adjacent body region"
+        ],
+        "protected_states": [
+          "URDF frame",
+          "URDF axis",
+          "interface family",
+          "own-body attachment"
+        ]
+      },
+      "decision": {
+        "target": "J02",
+        "failed_gates": [
+          "EXACT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 2,
+          "localized_feature_failure": true
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R2_BODY_REGION_REPLAN",
+        "reason": "sampled exact collisions occupy the joint-adjacent body region; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frame",
+          "URDF axis",
+          "interface family",
+          "own-body attachment"
+        ],
+        "upstream_objects_to_modify": [
+          "BodyRegionSpec"
+        ]
+      },
+      "repair_iteration": 1
+    },
+    {
+      "joint_id": "J03",
+      "input": {
+        "target": "J03",
+        "failed_gates": [
+          "EXACT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 3,
+          "localized_feature_failure": false
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "sampled exact collisions occupy the joint-adjacent body region"
+        ],
+        "protected_states": [
+          "URDF frame",
+          "URDF axis",
+          "interface family",
+          "own-body attachment"
+        ]
+      },
+      "decision": {
+        "target": "J03",
+        "failed_gates": [
+          "EXACT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 3,
+          "localized_feature_failure": false
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R2_BODY_REGION_REPLAN",
+        "reason": "sampled exact collisions occupy the joint-adjacent body region; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frame",
+          "URDF axis",
+          "interface family",
+          "own-body attachment"
+        ],
+        "upstream_objects_to_modify": [
+          "BodyRegionSpec"
+        ]
+      },
+      "repair_iteration": 1
+    }
+  ]
+}

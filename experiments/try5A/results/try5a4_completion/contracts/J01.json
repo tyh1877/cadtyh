@@ -1,0 +1,80 @@
+{
+  "schema_version": "try5A4_motion_interface_contract_v2",
+  "joint_id": "J01",
+  "joint_type": "revolute",
+  "interface_family": "fork_pin_interface",
+  "allowed_dof": [
+    "rotation_about_urdf_axis"
+  ],
+  "constrained_dof": [
+    "translation_x",
+    "translation_y",
+    "translation_z",
+    "rotation_about_two_orthogonal_axes"
+  ],
+  "motion_axis": {
+    "source": "sanitized_urdf",
+    "value": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  "motion_range": {
+    "source": "sanitized_urdf",
+    "lower_rad": -1.9373154697137058,
+    "upper_rad": 1.8675022996339325,
+    "samples_rad": [
+      -1.937315469713706,
+      -1.461713248545251,
+      -0.986111027376796,
+      -0.510508806208341,
+      -0.034906585039887,
+      0.0,
+      0.440695636128568,
+      0.916297857297023,
+      1.391900078465478,
+      1.867502299633933
+    ]
+  },
+  "parent_rigid_group": {
+    "link_id": "L01",
+    "members": [
+      "parent_body",
+      "parent_interface"
+    ]
+  },
+  "child_rigid_group": {
+    "link_id": "L02",
+    "members": [
+      "child_body",
+      "child_interface"
+    ]
+  },
+  "parent_attachment_region": "shoulder_housing:joint_region",
+  "child_attachment_region": "upper_arm_link:joint_region",
+  "allowed_contact_regions": [
+    "pin/bore or bearing surface"
+  ],
+  "required_clearance_regions": [
+    "radial bearing clearance",
+    "axial side clearance",
+    "child swept corridor"
+  ],
+  "swept_clearance_region": {
+    "generated_before_m2": true,
+    "source": "M1 generated child and interface B-Reps + URDF samples"
+  },
+  "forbidden_fusion_pairs": [
+    [
+      "parent_interface",
+      "child_interface"
+    ],
+    [
+      "parent_rigid_group",
+      "child_rigid_group"
+    ]
+  ],
+  "relative_motion_rule": "child rotates about the frozen URDF axis only",
+  "motion_validation_rule": "full repository FK + exact B-Rep at every frozen pose"
+}

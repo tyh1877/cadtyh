@@ -1,0 +1,46 @@
+{
+  "schema_version": "try5A4_completion_cad_ir_v2",
+  "joint_id": "J01",
+  "condition": "M2",
+  "interface_family": "fork_pin_interface",
+  "sample_values_rad": [
+    -1.937315469713706,
+    -1.461713248545251,
+    -0.986111027376796,
+    -0.510508806208341,
+    -0.034906585039887,
+    0.0,
+    0.440695636128568,
+    0.916297857297023,
+    1.391900078465478,
+    1.867502299633933
+  ],
+  "parameters": {
+    "clearance_mm": 0.6
+  },
+  "swept_input_path": "experiments/try5A/artifacts/try5a4_completion/sweeps/J01/child_swept.step",
+  "swept_input_sha256": "5f6c177fd13898c132515be45bbe424f9b5c23b11a77e3d47289b6b7fb9f485b",
+  "repair_decision": {
+    "target": "J01",
+    "failed_gates": [
+      "EXACT_COLLISION"
+    ],
+    "deterministic_evidence": {
+      "repeated_region_failures": 2,
+      "localized_feature_failure": false
+    },
+    "vlm_diagnosis": {},
+    "repair_scope": "R2_BODY_REGION_REPLAN",
+    "reason": "sampled exact collisions occupy the joint-adjacent body region; selected from deterministic failure hierarchy",
+    "protected_states": [
+      "URDF frame",
+      "URDF axis",
+      "interface family",
+      "own-body attachment"
+    ],
+    "upstream_objects_to_modify": [
+      "BodyRegionSpec"
+    ]
+  },
+  "construction": "consume frozen swept B-Rep bbox and route a U-shaped parent body outside it"
+}

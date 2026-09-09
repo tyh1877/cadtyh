@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "command": ".venv/Scripts/python.exe experiments/try5A/scripts/run_try5a4.py",
+  "rerun_exit_code": 0,
+  "collision_table": {
+    "sha256": "38206f7f562e41f425c720a97b1c0827d270772b97244aa39f6351e9856d1e06",
+    "byte_stable": true
+  },
+  "joint_range_metrics": {
+    "sha256": "a0db890690647ef6aa58bf73bad611d62e60e94b5f2a44653f6c23937874c507",
+    "byte_stable": true
+  }
+}

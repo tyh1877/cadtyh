@@ -1,0 +1,20 @@
+{
+  "incidents": [
+    {
+      "run": 1,
+      "status": "DRIVER_FAIL",
+      "failure": "neighbor metadata was assigned after FK pose construction",
+      "discarded_cases": 0,
+      "repair": "assign frozen downstream neighbor IDs before building pose records"
+    },
+    {
+      "run": 2,
+      "status": "COMPLETION_GATE_FAIL",
+      "failure": "relative FK audit compared a parent-relative transform with a world-frame expected transform",
+      "evidence": "axis and center errors were zero; relative_transform_max_abs_error reached 2.0 on J03",
+      "discarded_cases": 0,
+      "repair": "compare inv(T_parent) * T_child directly with origin_transform * joint_motion"
+    }
+  ],
+  "silent_retry": false
+}

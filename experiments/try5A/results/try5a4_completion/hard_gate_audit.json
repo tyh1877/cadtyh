@@ -1,0 +1,121 @@
+{
+  "rows": [
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "parent_attachment": "FAIL",
+      "child_attachment": "FAIL",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "FAIL",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "FAIL",
+      "motion_realization": "FAIL"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "parent_attachment": "PASS",
+      "child_attachment": "PASS",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "FAIL",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "FAIL",
+      "motion_realization": "FAIL"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "parent_attachment": "PASS",
+      "child_attachment": "PASS",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "PASS",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "PASS",
+      "motion_realization": "PASS"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "parent_attachment": "FAIL",
+      "child_attachment": "FAIL",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "FAIL",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "FAIL",
+      "motion_realization": "FAIL"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "parent_attachment": "PASS",
+      "child_attachment": "PASS",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "FAIL",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "FAIL",
+      "motion_realization": "FAIL"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "parent_attachment": "PASS",
+      "child_attachment": "PASS",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "PASS",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "PASS",
+      "motion_realization": "PASS"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "parent_attachment": "FAIL",
+      "child_attachment": "FAIL",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "FAIL",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "FAIL",
+      "motion_realization": "FAIL"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "parent_attachment": "PASS",
+      "child_attachment": "PASS",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "FAIL",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "FAIL",
+      "motion_realization": "FAIL"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "parent_attachment": "PASS",
+      "child_attachment": "PASS",
+      "forbidden_fusion": "PASS",
+      "joint_axis": "PASS",
+      "joint_center": "PASS",
+      "motion_clearance": "PASS",
+      "mechanical_meaningfulness": "PASS",
+      "exact_collision": "PASS",
+      "motion_realization": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "artifacts": [
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J01/child.stl",
+      "sha256": "e2da43ce80718ff5fa050fb6b10be76e16f01902bd2ee028c5d521c473602acf",
+      "bytes": 76684
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J01/model.20260909-144636.FCBak",
+      "sha256": "0b74a8d77885b93e43a167b4b735d2cbb881429f452f4702c09f721ec2fce8e1",
+      "bytes": 11383
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J01/model.FCStd",
+      "sha256": "af3cf7d17587f9c3ee68f1fc478280a9410b1a025b8e20fffc35717d6f0d4d9b",
+      "bytes": 11383
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J01/model.step",
+      "sha256": "b526f1c245af5de80b934864e5ed1614912bd6ea04ae492df93dcd7ba58d3288",
+      "bytes": 27359
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J01/parent.stl",
+      "sha256": "2d581cc9556e26fe108536073f4a53a521305ed710cc8915452d6113e8e495f2",
+      "bytes": 100484
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J02/child.stl",
+      "sha256": "9b211beabba0ce6194c506d36f70dba43342d83a9e91ec3604bd44b30be823c5",
+      "bytes": 76084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J02/model.20260909-144637.FCBak",
+      "sha256": "9381f53e35d8112fd396f351a0fef68207b2390572dc7a0b1317ff95745a52ee",
+      "bytes": 12118
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J02/model.FCStd",
+      "sha256": "d9e2e2c1fd3f4982d54209fd9267a00eff3be374670dc3536bc053859bde771b",
+      "bytes": 12118
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J02/model.step",
+      "sha256": "9a6e6b6457d9394bd01dbcffa0a86994fabcd9fd3d9dfa4776abc18d4a1608f9",
+      "bytes": 30896
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J02/parent.stl",
+      "sha256": "e2da43ce80718ff5fa050fb6b10be76e16f01902bd2ee028c5d521c473602acf",
+      "bytes": 76684
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J03/child.stl",
+      "sha256": "0f307c207813fd62c89500f32199651b5b7a766203cbeccb2bd723414840e1b6",
+      "bytes": 76084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J03/model.20260909-144638.FCBak",
+      "sha256": "11cb0b2ea6199722bddd5db8254ae7211687b6a03af13af4c2819b9e1d8b3215",
+      "bytes": 10827
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J03/model.FCStd",
+      "sha256": "4ad69e2200d4db8d35681b79377077816ecebe6ccf3b379e5d6988a972f0d2cf",
+      "bytes": 10826
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J03/model.step",
+      "sha256": "40a4182c15bdc3d797bd2a9bdd521b4397755d4d53677407be4231d29553167d",
+      "bytes": 23367
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M0/J03/parent.stl",
+      "sha256": "9b211beabba0ce6194c506d36f70dba43342d83a9e91ec3604bd44b30be823c5",
+      "bytes": 76084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J01/child.stl",
+      "sha256": "a4caa93c292910bc122150355059e976b03b6d50a72253402e30f12b8845e623",
+      "bytes": 46084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J01/model.20260909-144637.FCBak",
+      "sha256": "1fd355f222b9557408d40c91e8e5d9fa0ec360c700d1584ed837ed47807e3d96",
+      "bytes": 9850
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J01/model.FCStd",
+      "sha256": "0046503f66563da1c6bda8bcc022060985a878875ea2d3611cce769b6f9d358c",
+      "bytes": 9851
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J01/model.step",
+      "sha256": "aa0dc77d05067fd096934ce13af506e6957c921008548373496780a461af5483",
+      "bytes": 24153
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J01/parent.stl",
+      "sha256": "bb15d2903a0ec0254f60d78a7ef6a4d19f6780c22e9e3e59690788c1be5b765a",
+      "bytes": 77284
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J02/child.stl",
+      "sha256": "a4caa93c292910bc122150355059e976b03b6d50a72253402e30f12b8845e623",
+      "bytes": 46084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J02/model.20260909-144637.FCBak",
+      "sha256": "a0f1f30caa3cf4aa8120a1da900a16b9c5ac4855ecdbf214ef426c5c617eb9ac",
+      "bytes": 9849
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J02/model.FCStd",
+      "sha256": "296f2b9dcfacf2095fc47d60a34570516cd211d10796ac8014358afff04fee7b",
+      "bytes": 9852
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J02/model.step",
+      "sha256": "89906f38417eac81c944d88c859b034d51257e036d639c65ee53442d3bdb4e1e",
+      "bytes": 24153
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J02/parent.stl",
+      "sha256": "bb15d2903a0ec0254f60d78a7ef6a4d19f6780c22e9e3e59690788c1be5b765a",
+      "bytes": 77284
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J03/child.stl",
+      "sha256": "5e72b1c21e93f1cebaaf7117892f13a8636705d19990a8f8469e0b1bd77599be",
+      "bytes": 123084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J03/model.20260909-144638.FCBak",
+      "sha256": "c0fd793a02f8de392f7ba8427bf3308ef54e9ae3a6624361195a5eb754d24c01",
+      "bytes": 12488
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J03/model.FCStd",
+      "sha256": "46b4c165a0e22a3b57fa9808db3a18e14895e327218958a52c10c813a24eb559",
+      "bytes": 12484
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J03/model.step",
+      "sha256": "acf47dff05ec2126244f4b64eb06328ad84d21dae55c3ce071b5855307766655",
+      "bytes": 37884
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M1/J03/parent.stl",
+      "sha256": "1fe4c8bdc7135cf92d4437845efcb43a6dd449585320116fe131174ddb28f9f2",
+      "bytes": 102684
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J01/child.stl",
+      "sha256": "a4caa93c292910bc122150355059e976b03b6d50a72253402e30f12b8845e623",
+      "bytes": 46084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J01/model.20260909-144639.FCBak",
+      "sha256": "a4183efc29f8e7a227c7502cd1bc8f965b53608575a4a09c78b176992c0e3268",
+      "bytes": 11854
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J01/model.FCStd",
+      "sha256": "953ebfaeec16fef4f2a807e491bc063b4335cdb95e4a2545447419581355a440",
+      "bytes": 11845
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J01/model.step",
+      "sha256": "1605adabc0b9076c39ad0436fbb3022b0a42197e6af0874f517d788532846387",
+      "bytes": 29030
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J01/parent.stl",
+      "sha256": "e6257cbd63eb99d576f411ed708f2d47b5d9b8ecbcfd38fe2a709e2eefeebde7",
+      "bytes": 70084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J02/child.stl",
+      "sha256": "a4caa93c292910bc122150355059e976b03b6d50a72253402e30f12b8845e623",
+      "bytes": 46084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J02/model.20260909-144640.FCBak",
+      "sha256": "885047bb092ff7948a5d31dc7f2e51865b31116e9101f8833ea96fd6743472ee",
+      "bytes": 11861
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J02/model.FCStd",
+      "sha256": "27ec92ff121af6d8ca0aab28204b7c6f2ff8351187671391ee6f79fc48aee8b1",
+      "bytes": 11860
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J02/model.step",
+      "sha256": "d3af9d61ab399572fc7053a5fad405d16dd9859d967792e1e613aed57af25780",
+      "bytes": 29032
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J02/parent.stl",
+      "sha256": "dba941d7ca6b9f61870cc7f6ad668a23a53e77594d016a8b7a936e9a736bc5d7",
+      "bytes": 70084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J03/child.stl",
+      "sha256": "5e72b1c21e93f1cebaaf7117892f13a8636705d19990a8f8469e0b1bd77599be",
+      "bytes": 123084
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J03/model.20260909-144641.FCBak",
+      "sha256": "0d29425bf066f14e096335c73321f7ce098d7d5889cba03e7ad3ecee4249e68d",
+      "bytes": 14779
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J03/model.FCStd",
+      "sha256": "e893dd3cbe4ac976de62896e31b36b56b00fc535a9ed9eaf9e1c62b3dab2fca5",
+      "bytes": 14781
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J03/model.step",
+      "sha256": "7d33d41b46c498b01017e70d3aa360fd74d5b4312030056775948701209c3c58",
+      "bytes": 43462
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/cad/M2/J03/parent.stl",
+      "sha256": "0d72ee82c8e33a70e296f69b9295c5b6f4ab94f6ced13612e832c56103a78eb5",
+      "bytes": 103484
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/sweeps/J01/child_swept.step",
+      "sha256": "5f6c177fd13898c132515be45bbe424f9b5c23b11a77e3d47289b6b7fb9f485b",
+      "bytes": 92280
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/sweeps/J01/interface_swept.step",
+      "sha256": "2486684a88b478704bb8c50917309f3e34c71a78a37dc82d79f8834f5d496630",
+      "bytes": 38417
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/sweeps/J02/child_swept.step",
+      "sha256": "dff8e04b75725534363b7cfaed0abfa103ed62d50baf118c820bb930b9ef2848",
+      "bytes": 92378
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/sweeps/J02/interface_swept.step",
+      "sha256": "663edfa09c131b37a56f1e979ae09beaadafc95769bd43a1f476745b24149d7f",
+      "bytes": 38446
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/sweeps/J03/child_swept.step",
+      "sha256": "29236a42f33d46fbccb2bcfe5dcbf40aa0a7c5843fe1ce87822a48cf5dd8e9a6",
+      "bytes": 233906
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5a4_completion/sweeps/J03/interface_swept.step",
+      "sha256": "d90a24d070ec16434242646cf8522b294f0445536cbc25bfa51c71e467cea114",
+      "bytes": 98484
+    }
+  ]
+}

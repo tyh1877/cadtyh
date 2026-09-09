@@ -1,0 +1,9 @@
+{
+  "schema_version": "try5A4_completion_cad_ir_v2",
+  "joint_id": "J03",
+  "condition": "M0",
+  "realization": "frozen_A2_K1_replay",
+  "parent_model": "experiments/try5A/A2/L03/model.FCStd",
+  "child_model": "experiments/try5A/A2/L04/model.FCStd",
+  "contract": "experiments/try5A/results/try5a4_completion/contracts/J03.json"
+}

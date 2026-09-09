@@ -1,0 +1,23 @@
+{
+  "schema_version": "try5A4_completion_cad_ir_v2",
+  "joint_id": "J03",
+  "condition": "M1",
+  "interface_family": "coaxial_rotary_interface",
+  "sample_values_rad": [
+    -2.146754979953025,
+    -1.660244450959606,
+    -1.173733921966187,
+    -0.687223392972767,
+    -0.200712863979348,
+    0.0,
+    0.285797665014071,
+    0.772308194007491,
+    1.25881872300091,
+    1.74532925199433
+  ],
+  "parameters": {
+    "clearance_mm": 0.6
+  },
+  "contract": "experiments/try5A/results/try5a4_completion/contracts/J03.json",
+  "construction": "family-specific pin/bore or paired bearing; unreplanned parent body"
+}

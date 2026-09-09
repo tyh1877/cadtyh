@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "formal_narrow_phase": "exact B-Rep",
+  "broad_phase": "AABB diagnostic only",
+  "supported_classes": [
+    "EXPECTED_INTERFACE_CONTACT",
+    "ADJACENT_UNINTENDED_COLLISION",
+    "NONADJACENT_COLLISION",
+    "MOTION_INDUCED_COLLISION",
+    "CLEAR"
+  ],
+  "observed_counts": {
+    "CLEAR": 63,
+    "MOTION_INDUCED_COLLISION": 24,
+    "ADJACENT_UNINTENDED_COLLISION": 2,
+    "NONADJACENT_COLLISION": 3
+  }
+}

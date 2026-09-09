@@ -1,0 +1,406 @@
+{
+  "status": "PASS",
+  "planner_records": [
+    {
+      "joint_id": "J01",
+      "swept_bbox_consumed": {
+        "min_mm": [
+          -26.386823632610568,
+          -6.0,
+          -58.14202173632
+        ],
+        "max_mm": [
+          58.174064947323025,
+          6.0,
+          58.30846886600742
+        ],
+        "size_mm": [
+          84.56088857993359,
+          12.0,
+          116.45049060232742
+        ]
+      },
+      "clearance_mm": 0.6,
+      "side_inner_mm": 6.6,
+      "rear_bridge_x_mm": [
+        -40.986823632610566,
+        -34.986823632610566
+      ],
+      "strategy": "swept_bbox_driven_U_body",
+      "input_swept_sha256": "5f6c177fd13898c132515be45bbe424f9b5c23b11a77e3d47289b6b7fb9f485b"
+    },
+    {
+      "joint_id": "J02",
+      "swept_bbox_consumed": {
+        "min_mm": [
+          -35.01521214899353,
+          -6.0,
+          -58.28869952068
+        ],
+        "max_mm": [
+          58.0,
+          6.0,
+          58.174064947323
+        ],
+        "size_mm": [
+          93.01521214899353,
+          12.0,
+          116.462764468003
+        ]
+      },
+      "clearance_mm": 0.6,
+      "side_inner_mm": 6.6,
+      "rear_bridge_x_mm": [
+        -49.61521214899353,
+        -43.61521214899353
+      ],
+      "strategy": "swept_bbox_driven_U_body",
+      "input_swept_sha256": "dff8e04b75725534363b7cfaed0abfa103ed62d50baf118c820bb930b9ef2848"
+    },
+    {
+      "joint_id": "J03",
+      "swept_bbox_consumed": {
+        "min_mm": [
+          -36.62108743855171,
+          -9.0,
+          -58.16073874071
+        ],
+        "max_mm": [
+          58.03184047451311,
+          9.0,
+          58.30409998197714
+        ],
+        "size_mm": [
+          94.65292791306481,
+          18.0,
+          116.46483872268715
+        ]
+      },
+      "clearance_mm": 0.6,
+      "side_inner_mm": 9.6,
+      "rear_bridge_x_mm": [
+        -51.22108743855171,
+        -45.22108743855171
+      ],
+      "strategy": "swept_bbox_driven_U_body",
+      "input_swept_sha256": "29236a42f33d46fbccb2bcfe5dcbf40aa0a7c5843fe1ce87822a48cf5dd8e9a6"
+    }
+  ],
+  "counterfactuals": [
+    {
+      "joint_id": "J01",
+      "joint_limit": {
+        "baseline_parent_bbox": {
+          "min_mm": [
+            -40.986823632610566,
+            -13.6,
+            -15.995603929727912
+          ],
+          "max_mm": [
+            15.998642573259314,
+            13.6,
+            16.0
+          ],
+          "size_mm": [
+            56.98546620586988,
+            27.2,
+            31.995603929727913
+          ]
+        },
+        "counterfactual_parent_bbox": {
+          "min_mm": [
+            -24.600000000000005,
+            -13.6,
+            -16.0
+          ],
+          "max_mm": [
+            16.0,
+            13.6,
+            16.0
+          ],
+          "size_mm": [
+            40.60000000000001,
+            27.2,
+            32.0
+          ]
+        },
+        "pass": true
+      },
+      "knowledge_family": {
+        "baseline": "fork_pin_interface",
+        "counterfactual": "coaxial_rotary_interface",
+        "baseline_topology": {
+          "parent": [
+            "fork_left",
+            "fork_right",
+            "cross_pin"
+          ],
+          "child": [
+            "central_boss",
+            "pin_bore"
+          ]
+        },
+        "counterfactual_topology": {
+          "parent": [
+            "left_bearing",
+            "right_bearing"
+          ],
+          "child": [
+            "inner_rotor",
+            "axial_shoulders"
+          ]
+        },
+        "pass": true
+      },
+      "clearance": {
+        "baseline_mm": 0.6,
+        "counterfactual_mm": 1.0,
+        "baseline_parent_bbox": {
+          "min_mm": [
+            -40.986823632610566,
+            -13.6,
+            -15.995603929727912
+          ],
+          "max_mm": [
+            15.998642573259314,
+            13.6,
+            16.0
+          ],
+          "size_mm": [
+            56.98546620586988,
+            27.2,
+            31.995603929727913
+          ]
+        },
+        "counterfactual_parent_bbox": {
+          "min_mm": [
+            -41.38682363261066,
+            -14.0,
+            -16.0
+          ],
+          "max_mm": [
+            16.0,
+            14.0,
+            16.0
+          ],
+          "size_mm": [
+            57.38682363261066,
+            28.0,
+            32.0
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "joint_id": "J02",
+      "joint_limit": {
+        "baseline_parent_bbox": {
+          "min_mm": [
+            -49.61521214899353,
+            -13.6,
+            -15.995603929727912
+          ],
+          "max_mm": [
+            15.998642573259314,
+            13.6,
+            16.0
+          ],
+          "size_mm": [
+            65.61385472225284,
+            27.2,
+            31.995603929727913
+          ]
+        },
+        "counterfactual_parent_bbox": {
+          "min_mm": [
+            -24.600000000000005,
+            -13.6,
+            -16.0
+          ],
+          "max_mm": [
+            16.0,
+            13.6,
+            16.0
+          ],
+          "size_mm": [
+            40.60000000000001,
+            27.2,
+            32.0
+          ]
+        },
+        "pass": true
+      },
+      "knowledge_family": {
+        "baseline": "fork_pin_interface",
+        "counterfactual": "coaxial_rotary_interface",
+        "baseline_topology": {
+          "parent": [
+            "fork_left",
+            "fork_right",
+            "cross_pin"
+          ],
+          "child": [
+            "central_boss",
+            "pin_bore"
+          ]
+        },
+        "counterfactual_topology": {
+          "parent": [
+            "left_bearing",
+            "right_bearing"
+          ],
+          "child": [
+            "inner_rotor",
+            "axial_shoulders"
+          ]
+        },
+        "pass": true
+      },
+      "clearance": {
+        "baseline_mm": 0.6,
+        "counterfactual_mm": 1.0,
+        "baseline_parent_bbox": {
+          "min_mm": [
+            -49.61521214899353,
+            -13.6,
+            -15.995603929727912
+          ],
+          "max_mm": [
+            15.998642573259314,
+            13.6,
+            16.0
+          ],
+          "size_mm": [
+            65.61385472225284,
+            27.2,
+            31.995603929727913
+          ]
+        },
+        "counterfactual_parent_bbox": {
+          "min_mm": [
+            -50.01521214899582,
+            -14.000000000000002,
+            -16.0
+          ],
+          "max_mm": [
+            16.0,
+            14.000000000000002,
+            16.0
+          ],
+          "size_mm": [
+            66.01521214899583,
+            28.000000000000004,
+            32.0
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "joint_id": "J03",
+      "joint_limit": {
+        "baseline_parent_bbox": {
+          "min_mm": [
+            -51.22108743855171,
+            -16.6,
+            -16.0
+          ],
+          "max_mm": [
+            15.998642573259314,
+            16.6,
+            16.0
+          ],
+          "size_mm": [
+            67.21973001181102,
+            33.2,
+            32.0
+          ]
+        },
+        "counterfactual_parent_bbox": {
+          "min_mm": [
+            -26.100000000000005,
+            -16.6,
+            -16.0
+          ],
+          "max_mm": [
+            16.0,
+            16.6,
+            16.0
+          ],
+          "size_mm": [
+            42.10000000000001,
+            33.2,
+            32.0
+          ]
+        },
+        "pass": true
+      },
+      "knowledge_family": {
+        "baseline": "coaxial_rotary_interface",
+        "counterfactual": "fork_pin_interface",
+        "baseline_topology": {
+          "parent": [
+            "left_bearing",
+            "right_bearing"
+          ],
+          "child": [
+            "inner_rotor",
+            "axial_shoulders"
+          ]
+        },
+        "counterfactual_topology": {
+          "parent": [
+            "fork_left",
+            "fork_right",
+            "cross_pin"
+          ],
+          "child": [
+            "central_boss",
+            "pin_bore"
+          ]
+        },
+        "pass": true
+      },
+      "clearance": {
+        "baseline_mm": 0.6,
+        "counterfactual_mm": 1.0,
+        "baseline_parent_bbox": {
+          "min_mm": [
+            -51.22108743855171,
+            -16.6,
+            -16.0
+          ],
+          "max_mm": [
+            15.998642573259314,
+            16.6,
+            16.0
+          ],
+          "size_mm": [
+            67.21973001181102,
+            33.2,
+            32.0
+          ]
+        },
+        "counterfactual_parent_bbox": {
+          "min_mm": [
+            -51.62108743854413,
+            -17.0,
+            -16.0
+          ],
+          "max_mm": [
+            16.0,
+            17.0,
+            16.0
+          ],
+          "size_mm": [
+            67.62108743854412,
+            34.0,
+            32.0
+          ]
+        },
+        "pass": true
+      }
+    }
+  ]
+}

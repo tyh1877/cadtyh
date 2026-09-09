@@ -1,0 +1,402 @@
+{
+  "status": "PASS",
+  "repository_fk": "experiments/try5A/scripts/kinematics.py",
+  "ee_link": "L11",
+  "ee_translation_range_norm_m": {
+    "J01": 0.6947823588470663,
+    "J02": 0.5352711317520257,
+    "J03": 0.2852862423725706
+  },
+  "rows": [
+    {
+      "joint_id": "J01",
+      "sample_index": 0,
+      "q_rad": -1.937315469713706,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        -0.18243935570794326,
+        0.0,
+        0.28927795956201185
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 1,
+      "q_rad": -1.461713248545251,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        -0.07234405040590487,
+        0.0,
+        0.35103424175880954
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 2,
+      "q_rad": -0.986111027376796,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        0.05380915391722809,
+        0.0,
+        0.35552686675155215
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 3,
+      "q_rad": -0.510508806208341,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        0.1680185708084251,
+        0.0,
+        0.3017586258123852
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 4,
+      "q_rad": -0.034906585039887,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        0.24493362515602163,
+        0.0,
+        0.2016642250947339
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 5,
+      "q_rad": 0.0,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        0.248575,
+        0.0,
+        0.19305
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 6,
+      "q_rad": 0.440695636128568,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        0.2674818117714654,
+        0.0,
+        0.07746119002443183
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 7,
+      "q_rad": 0.916297857297023,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        0.23065820624496627,
+        0.0,
+        -0.043281663662021734
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 8,
+      "q_rad": 1.391900078465478,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        0.14263638658078928,
+        0.0,
+        -0.13376356187004262
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "sample_index": 9,
+      "q_rad": 1.867502299633933,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.938893903907228e-18,
+      "ee_translation_m": [
+        0.022954179094849196,
+        0.0,
+        -0.17390062518578525
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 0,
+      "q_rad": -1.605702911834783,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.027546339991763414,
+        -2.61394608534521e-17,
+        -0.020394895880603385
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 1,
+      "q_rad": -1.141008998491293,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.12399189315735407,
+        -2.3776675638058695e-17,
+        -0.0011012904342128822
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 2,
+      "q_rad": -0.676315085147803,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.2015638284765622,
+        -1.6371275036827423e-17,
+        0.05936839442828952
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 3,
+      "q_rad": -0.211621171804312,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.2438105006267032,
+        -5.493814478890176e-18,
+        0.1481896003915971
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 4,
+      "q_rad": 0.0,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.248575,
+        0.0,
+        0.19305
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 5,
+      "q_rad": 0.253072741539178,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.24177213229375438,
+        6.5487876589677784e-18,
+        0.2465249093659274
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 6,
+      "q_rad": 0.717766654882668,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.19588102560750897,
+        1.7202506930676144e-17,
+        0.33351912907993714
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 7,
+      "q_rad": 1.182460568226158,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.11586987845104595,
+        2.420787655737532e-17,
+        0.3907223131455517
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 8,
+      "q_rad": 1.647154481569649,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.0187076501453183,
+        2.6079180655111785e-17,
+        0.40600267070692647
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "sample_index": 9,
+      "q_rad": 2.111848394913139,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        -0.07499925684891484,
+        2.241954848474305e-17,
+        0.37611950624745366
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 0,
+      "q_rad": -2.146754979953025,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 1.0669588769261079e-33,
+      "ee_translation_m": [
+        0.07314262159816834,
+        -1.1665006885808033e-17,
+        0.09779799024559845
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 1,
+      "q_rad": -1.660244450959606,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 6.385385480442757e-33,
+      "ee_translation_m": [
+        0.12485447094430957,
+        -1.3853320682387988e-17,
+        0.07992905204967497
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 2,
+      "q_rad": -1.173733921966187,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 3.0023426957383915e-33,
+      "ee_translation_m": [
+        0.17892069746790187,
+        -1.2826825091750109e-17,
+        0.08831102464252841
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 3,
+      "q_rad": -0.687223392972767,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 3.782401648064448e-33,
+      "ee_translation_m": [
+        0.22279466224067287,
+        -8.823729257851883e-18,
+        0.12099878275111398
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 4,
+      "q_rad": -0.200712863979348,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 1.1657759521469592e-32,
+      "ee_translation_m": [
+        0.24629494832731072,
+        -2.7729938508313902e-18,
+        0.17040678684856683
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 5,
+      "q_rad": 0.0,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 0.0,
+      "ee_translation_m": [
+        0.248575,
+        0.0,
+        0.19305
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 6,
+      "q_rad": 0.285797665014071,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 3.0247829134934322e-33,
+      "ee_translation_m": [
+        0.24396806612444016,
+        3.9212440684555995e-18,
+        0.225069387722123
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 7,
+      "q_rad": 0.772308194007491,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 5.455120278086173e-33,
+      "ee_translation_m": [
+        0.21635399322445512,
+        9.705515884318047e-18,
+        0.2723015514765188
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 8,
+      "q_rad": 1.25881872300091,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 7.786792408235027e-33,
+      "ee_translation_m": [
+        0.16986086691180116,
+        1.323752022669563e-17,
+        0.3011425556324657
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "sample_index": 9,
+      "q_rad": 1.74532925199433,
+      "axis_angular_error_deg": 0.0,
+      "joint_center_error_mm": 0.0,
+      "relative_transform_max_abs_error": 1.1963053231141041e-32,
+      "ee_translation_m": [
+        0.11527790822147835,
+        1.3697618181865302e-17,
+        0.30489954054836155
+      ]
+    }
+  ]
+}

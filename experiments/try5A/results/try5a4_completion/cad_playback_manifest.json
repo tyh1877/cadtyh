@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "artifacts": [
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "actual_brep_tessellation": true,
+      "frame_count": 3,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J01_M0.png",
+      "gif": null,
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M0/J01"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "actual_brep_tessellation": true,
+      "frame_count": 3,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J01_M1.png",
+      "gif": null,
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M1/J01"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "actual_brep_tessellation": true,
+      "frame_count": 3,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J02_M0.png",
+      "gif": null,
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M0/J02"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "actual_brep_tessellation": true,
+      "frame_count": 3,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J02_M1.png",
+      "gif": null,
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M1/J02"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "actual_brep_tessellation": true,
+      "frame_count": 3,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J03_M0.png",
+      "gif": null,
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M0/J03"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "actual_brep_tessellation": true,
+      "frame_count": 3,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J03_M1.png",
+      "gif": null,
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M1/J03"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "actual_brep_tessellation": true,
+      "frame_count": 10,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J01_M2.png",
+      "gif": "experiments/try5A/results/try5a4_completion/motion_playback/J01__M2.gif",
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M2/J01"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "actual_brep_tessellation": true,
+      "frame_count": 10,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J02_M2.png",
+      "gif": "experiments/try5A/results/try5a4_completion/motion_playback/J02__M2.gif",
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M2/J02"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "actual_brep_tessellation": true,
+      "frame_count": 10,
+      "contact_sheet": "experiments/try5A/results/try5a4_completion/contact_sheets/J03_M2.png",
+      "gif": "experiments/try5A/results/try5a4_completion/motion_playback/J03__M2.gif",
+      "frame_directory": "experiments/try5A/artifacts/try5a4_completion/cad_pose_renders/M2/J03"
+    }
+  ]
+}

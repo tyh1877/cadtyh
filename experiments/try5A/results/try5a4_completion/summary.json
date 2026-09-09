@@ -1,0 +1,216 @@
+{
+  "experiment": "Try-5A.4 completion",
+  "status": "COMPLETE",
+  "pilots": [
+    "J01",
+    "J02",
+    "J03"
+  ],
+  "conditions": {
+    "M0": {
+      "parent_rate": 0.0,
+      "child_rate": 0.0,
+      "bicr": 0.0,
+      "collision_free_pose_rate": 0.3,
+      "jr3": 0.0,
+      "collision_events": 21,
+      "swept_collision_volume_mm3": 23887.203934120087,
+      "physical_floating_rate": 1.0,
+      "forbidden_parent_child_fusion_count": 0,
+      "mechanical_meaningfulness_rate": 1.0
+    },
+    "M1": {
+      "parent_rate": 1.0,
+      "child_rate": 1.0,
+      "bicr": 1.0,
+      "collision_free_pose_rate": 0.7999999999999999,
+      "jr3": 0.7999999999999999,
+      "collision_events": 6,
+      "swept_collision_volume_mm3": 15122.259575050786,
+      "physical_floating_rate": 0.0,
+      "forbidden_parent_child_fusion_count": 0,
+      "mechanical_meaningfulness_rate": 1.0
+    },
+    "M2": {
+      "parent_rate": 1.0,
+      "child_rate": 1.0,
+      "bicr": 1.0,
+      "collision_free_pose_rate": 1.0,
+      "jr3": 1.0,
+      "collision_events": 0,
+      "swept_collision_volume_mm3": 0.0,
+      "physical_floating_rate": 0.0,
+      "forbidden_parent_child_fusion_count": 0,
+      "mechanical_meaningfulness_rate": 1.0
+    }
+  },
+  "joint_metrics": [
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "pose_count": 10,
+      "collision_free_pose_rate": 0.6,
+      "joint_range_realization_rate": 0.0,
+      "maximum_collision_free_interval_rad": null,
+      "first_collision_q_rad": -0.986111027376796,
+      "total_swept_collision_volume_mm3": 14133.677348058034,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 4
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "pose_count": 10,
+      "collision_free_pose_rate": 0.8,
+      "joint_range_realization_rate": 0.8,
+      "maximum_collision_free_interval_rad": [
+        -1.461713248545251,
+        1.391900078465478
+      ],
+      "first_collision_q_rad": -1.937315469713706,
+      "total_swept_collision_volume_mm3": 4349.044607879536,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 2
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "pose_count": 10,
+      "collision_free_pose_rate": 0.3,
+      "joint_range_realization_rate": 0.0,
+      "maximum_collision_free_interval_rad": null,
+      "first_collision_q_rad": -1.605702911834783,
+      "total_swept_collision_volume_mm3": 2326.244312978869,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 7
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "pose_count": 10,
+      "collision_free_pose_rate": 0.9,
+      "joint_range_realization_rate": 0.9,
+      "maximum_collision_free_interval_rad": [
+        -1.605702911834783,
+        1.647154481569649
+      ],
+      "first_collision_q_rad": 2.111848394913139,
+      "total_swept_collision_volume_mm3": 4437.726282756725,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 1
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "pose_count": 10,
+      "collision_free_pose_rate": 0.0,
+      "joint_range_realization_rate": 0.0,
+      "maximum_collision_free_interval_rad": null,
+      "first_collision_q_rad": -2.146754979953025,
+      "total_swept_collision_volume_mm3": 7427.282273083186,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 10
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "pose_count": 10,
+      "collision_free_pose_rate": 0.7,
+      "joint_range_realization_rate": 0.7,
+      "maximum_collision_free_interval_rad": [
+        -1.173733921966187,
+        1.25881872300091
+      ],
+      "first_collision_q_rad": -2.146754979953025,
+      "total_swept_collision_volume_mm3": 6335.488684414526,
+      "minimum_clearance_mm": 0.0,
+      "motion_induced_collision_count": 3
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "pose_count": 10,
+      "collision_free_pose_rate": 1.0,
+      "joint_range_realization_rate": 1.0,
+      "maximum_collision_free_interval_rad": [
+        -1.937315469713706,
+        1.867502299633933
+      ],
+      "first_collision_q_rad": null,
+      "total_swept_collision_volume_mm3": 0.0,
+      "minimum_clearance_mm": 0.5999999999999893,
+      "motion_induced_collision_count": 0
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "pose_count": 10,
+      "collision_free_pose_rate": 1.0,
+      "joint_range_realization_rate": 1.0,
+      "maximum_collision_free_interval_rad": [
+        -1.605702911834783,
+        2.111848394913139
+      ],
+      "first_collision_q_rad": null,
+      "total_swept_collision_volume_mm3": 0.0,
+      "minimum_clearance_mm": 0.5999999999999786,
+      "motion_induced_collision_count": 0
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "pose_count": 10,
+      "collision_free_pose_rate": 1.0,
+      "joint_range_realization_rate": 1.0,
+      "maximum_collision_free_interval_rad": [
+        -2.146754979953025,
+        1.74532925199433
+      ],
+      "first_collision_q_rad": null,
+      "total_swept_collision_volume_mm3": 0.0,
+      "minimum_clearance_mm": 0.20000000000000018,
+      "motion_induced_collision_count": 0
+    }
+  ],
+  "representation_metrics": {
+    "selected_interface_families": {
+      "J01": "fork_pin_interface",
+      "J02": "fork_pin_interface",
+      "J03": "coaxial_rotary_interface"
+    },
+    "rigid_group_correctness_rate_M2": 1.0,
+    "knowledge_entry_consumption_rate": 1.0,
+    "custom_interface_rate": 0.0
+  },
+  "repair_metrics": {
+    "scope_distribution": {
+      "R2_BODY_REGION_REPLAN": 3
+    },
+    "repair_success_rate": 1.0,
+    "R4_rate": 0.0,
+    "regression_rate": 0.0,
+    "rollback_rate": 0.0,
+    "motion_improvement_after_repair": 0.20000000000000007
+  },
+  "hard_gates": {
+    "m0_replay": true,
+    "fk": true,
+    "mechanical_dof": true,
+    "mechanical_meaningfulness": true,
+    "swept_dataflow": true,
+    "repair_arbiter": true,
+    "cad_ir_consumed": true,
+    "cad_playback": true,
+    "collision_coverage": true,
+    "geometry_metrics": true,
+    "m2_nonzero": true,
+    "m2_improves": true,
+    "leakage": true
+  },
+  "levels": {
+    "K1": "PASS",
+    "K2": "PASS",
+    "K3": "PASS"
+  },
+  "resource_seconds": 26.227164268493652
+}

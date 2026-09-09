@@ -1,0 +1,154 @@
+{
+  "rows": [
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "side": "parent",
+      "pass": false,
+      "source": "frozen strict K1 attachment audit"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M0",
+      "side": "child",
+      "pass": false,
+      "source": "frozen strict K1 attachment audit"
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 41.85751387787326,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M1",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 196.20133055194128,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "side": "parent",
+      "pass": false,
+      "source": "frozen strict K1 attachment audit"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "side": "child",
+      "pass": false,
+      "source": "frozen strict K1 attachment audit"
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 41.85751387787326,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 196.20133055194128,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "side": "parent",
+      "pass": false,
+      "source": "frozen strict K1 attachment audit"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M0",
+      "side": "child",
+      "pass": false,
+      "source": "frozen strict K1 attachment audit"
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 41.85751387787326,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M1",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 135.05993321126346,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "side": "parent",
+      "minimum_distance_mm": 1.7763568394002505e-15,
+      "intersection_volume_mm3": 209.28756938936618,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 196.20133055194128,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "side": "parent",
+      "minimum_distance_mm": 1.7763568394002505e-15,
+      "intersection_volume_mm3": 209.28756938936618,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 196.20133055194128,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "side": "parent",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 100.45803330689577,
+      "solid_count": 1,
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "side": "child",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 135.05993321126346,
+      "solid_count": 1,
+      "pass": true
+    }
+  ]
+}

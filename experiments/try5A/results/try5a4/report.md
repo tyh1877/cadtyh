@@ -1,5 +1,8 @@
 # Try-5A.4 final report
 
+> Historical incomplete run. The closed-gap rerun and final conclusions are in
+> `../try5a4_completion/report.md`; this file remains unchanged as failure history.
+
 Status: **PARTIAL — protocol completion gates remain open**
 
 ## Answer-first conclusion

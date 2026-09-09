@@ -1,0 +1,173 @@
+{
+  "status": "PASS",
+  "strict_attachment_source": "experiments/try5A/results/try5a3_final/k1_attachment.json",
+  "strict_attachment_sha256": "cc8bf37767941ce0319d06f52e8b5686d1ea33b9eefebcdd2e4c9931d368f4a8",
+  "selected_strict_attachment_rows": [
+    {
+      "link_id": "L01",
+      "interface_id": "IF_J01",
+      "body_object": "op_005",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 332.9459650340268,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L02",
+      "interface_id": "IF_J01",
+      "body_object": "op_005",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 2274.651857564813,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L02",
+      "interface_id": "IF_J02",
+      "body_object": "op_005",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 74.59087337832352,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L03",
+      "interface_id": "IF_J02",
+      "body_object": "op_005",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 4104.076111684792,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L03",
+      "interface_id": "IF_J03",
+      "body_object": "op_005",
+      "carrier_object": "op_004",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 332.3206161398386,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    },
+    {
+      "link_id": "L04",
+      "interface_id": "IF_J03",
+      "body_object": "op_005",
+      "carrier_object": "op_001",
+      "minimum_distance_mm": 0.0,
+      "intersection_volume_mm3": 4104.076111684792,
+      "same_connected_solid": false,
+      "attached": false,
+      "classification": "SEPARATE_FINAL_SOLID"
+    }
+  ],
+  "rows": [
+    {
+      "joint_id": "J01",
+      "parent": {
+        "ir_sha256": "2bfc8f97a93814aaadc21780dadd9f2eabe45ef6d35f9c0b12efb4799854f943",
+        "model_sha256": "10c60dae626796d3230276de6cd3a1a8f916b46b832f1dba9a84ee3fa76185b9",
+        "ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L01\\cad_ir.json",
+        "model_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L01\\model.FCStd",
+        "final_object_names": [
+          "op_001",
+          "op_004",
+          "op_005"
+        ],
+        "interface_names": [
+          "op_004"
+        ]
+      },
+      "child": {
+        "ir_sha256": "82b236e5cfd0f80a6c5bac24502f68acd342328af7ad5b0ed2f7e79db2317907",
+        "model_sha256": "a673ce89e5ab8916864a42215f5f00be0c1d40ad7ae3cfc799f23682e5dc0e22",
+        "ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L02\\cad_ir.json",
+        "model_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L02\\model.FCStd",
+        "final_object_names": [
+          "op_001",
+          "op_004",
+          "op_005",
+          "op_006"
+        ],
+        "interface_names": [
+          "op_001"
+        ]
+      },
+      "consumed": true
+    },
+    {
+      "joint_id": "J02",
+      "parent": {
+        "ir_sha256": "82b236e5cfd0f80a6c5bac24502f68acd342328af7ad5b0ed2f7e79db2317907",
+        "model_sha256": "a673ce89e5ab8916864a42215f5f00be0c1d40ad7ae3cfc799f23682e5dc0e22",
+        "ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L02\\cad_ir.json",
+        "model_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L02\\model.FCStd",
+        "final_object_names": [
+          "op_001",
+          "op_004",
+          "op_005",
+          "op_006"
+        ],
+        "interface_names": [
+          "op_004"
+        ]
+      },
+      "child": {
+        "ir_sha256": "8cdac4d8a2b5e1c25fcd987cba61556496e1ab5ce8fb1075ca22136736ecf646",
+        "model_sha256": "2537ea2274a745e16a38abb8e9fbb53608aa4ef4340522854997b6c4c25d162d",
+        "ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L03\\cad_ir.json",
+        "model_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L03\\model.FCStd",
+        "final_object_names": [
+          "op_001",
+          "op_004",
+          "op_005"
+        ],
+        "interface_names": [
+          "op_001"
+        ]
+      },
+      "consumed": true
+    },
+    {
+      "joint_id": "J03",
+      "parent": {
+        "ir_sha256": "8cdac4d8a2b5e1c25fcd987cba61556496e1ab5ce8fb1075ca22136736ecf646",
+        "model_sha256": "2537ea2274a745e16a38abb8e9fbb53608aa4ef4340522854997b6c4c25d162d",
+        "ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L03\\cad_ir.json",
+        "model_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L03\\model.FCStd",
+        "final_object_names": [
+          "op_001",
+          "op_004",
+          "op_005"
+        ],
+        "interface_names": [
+          "op_004"
+        ]
+      },
+      "child": {
+        "ir_sha256": "c7c2428d65e21803e459ab615823e33479e3243df09c95841052fab844b19ee6",
+        "model_sha256": "8950c05262239fbfd00909e7bba920fb335108592bd70536a4c0ebc0d4ead56c",
+        "ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L04\\cad_ir.json",
+        "model_path": "D:\\CADtest\\papertest\\experiments\\try5A\\A2\\L04\\model.FCStd",
+        "final_object_names": [
+          "op_001",
+          "op_004",
+          "op_005"
+        ],
+        "interface_names": [
+          "op_001"
+        ]
+      },
+      "consumed": true
+    }
+  ]
+}

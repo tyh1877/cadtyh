@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "protocol_re_read": true,
+  "gates": {
+    "m0_replay": true,
+    "fk": true,
+    "mechanical_dof": true,
+    "mechanical_meaningfulness": true,
+    "swept_dataflow": true,
+    "repair_arbiter": true,
+    "cad_ir_consumed": true,
+    "cad_playback": true,
+    "collision_coverage": true,
+    "geometry_metrics": true,
+    "m2_nonzero": true,
+    "m2_improves": true,
+    "leakage": true
+  },
+  "case_denominator": 90,
+  "failed_cases_preserved": true
+}

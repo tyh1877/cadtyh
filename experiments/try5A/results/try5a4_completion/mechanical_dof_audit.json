@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "joint_id": "J01",
+      "family": "fork_pin_interface",
+      "intended_rotation_samples_clear": true,
+      "constrained_dof_tests": [
+        {
+          "constrained_dof": "translation_x",
+          "exact_common_mm3": 19.139111217688757,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "translation_y",
+          "exact_common_mm3": 136.7221122842278,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "translation_z",
+          "exact_common_mm3": 19.139111217688733,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "rotation_x",
+          "exact_common_mm3": 0.03068026903634108,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "rotation_z",
+          "exact_common_mm3": 0.03067989231659049,
+          "rejected_by_geometry": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "joint_id": "J02",
+      "family": "fork_pin_interface",
+      "intended_rotation_samples_clear": true,
+      "constrained_dof_tests": [
+        {
+          "constrained_dof": "translation_x",
+          "exact_common_mm3": 19.139111217688757,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "translation_y",
+          "exact_common_mm3": 136.7221122842278,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "translation_z",
+          "exact_common_mm3": 19.139111217688733,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "rotation_x",
+          "exact_common_mm3": 0.03068026903634108,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "rotation_z",
+          "exact_common_mm3": 0.03067989231659049,
+          "rejected_by_geometry": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "joint_id": "J03",
+      "family": "coaxial_rotary_interface",
+      "intended_rotation_samples_clear": true,
+      "constrained_dof_tests": [
+        {
+          "constrained_dof": "translation_x",
+          "exact_common_mm3": 19.082609538766278,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "translation_y",
+          "exact_common_mm3": 95.00176184455523,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "translation_z",
+          "exact_common_mm3": 19.082609538766512,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "rotation_x",
+          "exact_common_mm3": 34.03717634634833,
+          "rejected_by_geometry": true
+        },
+        {
+          "constrained_dof": "rotation_z",
+          "exact_common_mm3": 34.03717548183048,
+          "rejected_by_geometry": true
+        }
+      ],
+      "pass": true
+    }
+  ]
+}

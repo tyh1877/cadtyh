@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETE",
+  "source_gap_audit": "experiments/try5A/results/try5a4/protocol_gap_audit.json",
+  "closed_gates": [
+    {
+      "gate": "frozen M0 replay",
+      "evidence": "m0_replay_audit.json loads and hashes the original A2/K1 FCStd and CAD IR files plus the frozen strict attachment rows"
+    },
+    {
+      "gate": "true URDF FK",
+      "evidence": "fk_motion_audit.json records repository FK world transforms, URDF-Y axis/center/relative-transform errors, descendant transforms, and L11 EE poses"
+    },
+    {
+      "gate": "mechanically constrained DOF",
+      "evidence": "mechanical_dof_audit.json proves intended Y rotation remains clear and tx/ty/tz/rx/rz perturbations are rejected by exact B-Rep interference"
+    },
+    {
+      "gate": "causal swept design",
+      "evidence": "pre_m2_sweeps.json is generated before M2; M2 CAD IR freezes its STEP hash; planner records consume it; all three counterfactuals change downstream CAD"
+    },
+    {
+      "gate": "Repair Scope Arbiter",
+      "evidence": "repair_arbiter_audit.json records actual calls to repair_scope_arbiter.arbitrate and one bounded R2 decision per pilot"
+    },
+    {
+      "gate": "CAD playback",
+      "evidence": "cad_playback_manifest.json indexes actual transformed FreeCAD B-Rep tessellation renders, contact sheets, and three M2 GIFs"
+    },
+    {
+      "gate": "collision and auxiliary metric coverage",
+      "evidence": "collision_taxonomy.json and collision_table.csv separate AABB broad phase from exact B-Rep classes and include the frozen downstream nonadjacent neighbor; auxiliary_geometry_metrics.json reports pilot-link metrics and frozen whole-robot context"
+    }
+  ],
+  "completion_scope": "three Robot A physical-joint motion-realization pilots specified by Try-5A.4; not a whole-robot K3 claim"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "generator_inputs": [
+    "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "experiments/try5A/blackboard/kinematic_skeleton.json",
+    "experiments/try5A/robot_plan/robot_assembly_plan.json",
+    "experiments/try5A/results/try5a3_phase14/interface_candidate_ranking.json",
+    "try5/knowledge/robot_interfaces/families.json",
+    "experiments/try5A/A2"
+  ],
+  "gt_first_access_stage": "auxiliary_geometry_evaluator_after_CAD_and_motion_results",
+  "generator_gt_access": false
+}

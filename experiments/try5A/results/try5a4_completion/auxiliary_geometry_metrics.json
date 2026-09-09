@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "per_link_pilot_local": [
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "side": "parent",
+      "link_id": "L01",
+      "voxel_iou": 0.05449591280653951,
+      "normalized_chamfer": 0.11902736863257041,
+      "normalized_hd95": 0.324671374400329,
+      "silhouette_iou_mean": 0.22759010373211266
+    },
+    {
+      "joint_id": "J01",
+      "condition": "M2",
+      "side": "child",
+      "link_id": "L02",
+      "voxel_iou": 0.00878293601003764,
+      "normalized_chamfer": 0.2925755285274334,
+      "normalized_hd95": 0.7738275504385582,
+      "silhouette_iou_mean": 0.06688246087870854
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "side": "parent",
+      "link_id": "L02",
+      "voxel_iou": 0.04867529266789895,
+      "normalized_chamfer": 0.11647433552819794,
+      "normalized_hd95": 0.30818576713100987,
+      "silhouette_iou_mean": 0.19522653602480589
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M0",
+      "side": "child",
+      "link_id": "L03",
+      "voxel_iou": 0.004123711340206186,
+      "normalized_chamfer": 0.3495567070059954,
+      "normalized_hd95": 0.7580086862179901,
+      "silhouette_iou_mean": 0.08388644701699584
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "side": "parent",
+      "link_id": "L02",
+      "voxel_iou": 0.2058596761757903,
+      "normalized_chamfer": 0.09231613028130937,
+      "normalized_hd95": 0.3228715269135087,
+      "silhouette_iou_mean": 0.23693562479880695
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M1",
+      "side": "child",
+      "link_id": "L03",
+      "voxel_iou": 0.015069967707212056,
+      "normalized_chamfer": 0.2844018818670724,
+      "normalized_hd95": 0.835095243395124,
+      "silhouette_iou_mean": 0.0949057554859107
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "side": "parent",
+      "link_id": "L02",
+      "voxel_iou": 0.07586206896551724,
+      "normalized_chamfer": 0.13838465526559632,
+      "normalized_hd95": 0.5708935799960002,
+      "silhouette_iou_mean": 0.18313950096228207
+    },
+    {
+      "joint_id": "J02",
+      "condition": "M2",
+      "side": "child",
+      "link_id": "L03",
+      "voxel_iou": 0.015069967707212056,
+      "normalized_chamfer": 0.2844018818670724,
+      "normalized_hd95": 0.835095243395124,
+      "silhouette_iou_mean": 0.0949057554859107
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "side": "parent",
+      "link_id": "L03",
+      "voxel_iou": 0.0,
+      "normalized_chamfer": 0.5059744768490655,
+      "normalized_hd95": 0.860497024532194,
+      "silhouette_iou_mean": 0.04013961605584642
+    },
+    {
+      "joint_id": "J03",
+      "condition": "M2",
+      "side": "child",
+      "link_id": "L04",
+      "voxel_iou": 0.011363636363636364,
+      "normalized_chamfer": 0.26566530729616245,
+      "normalized_hd95": 0.5946128399243638,
+      "silhouette_iou_mean": 0.0831925437667047
+    }
+  ],
+  "whole_robot_frozen_A2": {
+    "level": "whole_robot",
+    "link_id": "ALL",
+    "condition": "A2",
+    "voxel_iou": "0.4482632541133455",
+    "normalized_chamfer": "0.01955853433040927",
+    "normalized_hd95": "0.09782832515415596",
+    "silhouette_iou_mean": "0.6486326510637522",
+    "bbox_error_mm": "55.922291857402854"
+  },
+  "note": "GT used only here after generation; A.4 is a three-joint pilot, so the whole-robot number remains the frozen A2 context."
+}

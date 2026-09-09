@@ -1,0 +1,23 @@
+{
+  "schema_version": "try5A4_completion_cad_ir_v2",
+  "joint_id": "J01",
+  "condition": "M1",
+  "interface_family": "fork_pin_interface",
+  "sample_values_rad": [
+    -1.937315469713706,
+    -1.461713248545251,
+    -0.986111027376796,
+    -0.510508806208341,
+    -0.034906585039887,
+    0.0,
+    0.440695636128568,
+    0.916297857297023,
+    1.391900078465478,
+    1.867502299633933
+  ],
+  "parameters": {
+    "clearance_mm": 0.6
+  },
+  "contract": "experiments/try5A/results/try5a4_completion/contracts/J01.json",
+  "construction": "family-specific pin/bore or paired bearing; unreplanned parent body"
+}

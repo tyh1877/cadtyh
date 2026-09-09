@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "features": [
+    {
+      "feature_id": "J01_fork_left",
+      "joint_id": "J01",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "fork left",
+      "design_provenance": "MotionInterfaceContract/J01",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J01",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J01_fork_right",
+      "joint_id": "J01",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "fork right",
+      "design_provenance": "MotionInterfaceContract/J01",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J01",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J01_cross_pin",
+      "joint_id": "J01",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "cross pin",
+      "design_provenance": "MotionInterfaceContract/J01",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J01",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J01_central_boss",
+      "joint_id": "J01",
+      "owning_rigid_group": "child",
+      "mechanical_role": "central boss",
+      "design_provenance": "MotionInterfaceContract/J01",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J01",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J01_pin_bore",
+      "joint_id": "J01",
+      "owning_rigid_group": "child",
+      "mechanical_role": "pin bore",
+      "design_provenance": "MotionInterfaceContract/J01",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J01",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J01_swept_body_support",
+      "joint_id": "J01",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "swept-corridor structural support",
+      "design_provenance": "PreM2Sweep/J01",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "RepairDecision/J01",
+      "cad_strategy": "U-shaped body from swept bbox"
+    },
+    {
+      "feature_id": "J02_fork_left",
+      "joint_id": "J02",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "fork left",
+      "design_provenance": "MotionInterfaceContract/J02",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J02",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J02_fork_right",
+      "joint_id": "J02",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "fork right",
+      "design_provenance": "MotionInterfaceContract/J02",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J02",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J02_cross_pin",
+      "joint_id": "J02",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "cross pin",
+      "design_provenance": "MotionInterfaceContract/J02",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J02",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J02_central_boss",
+      "joint_id": "J02",
+      "owning_rigid_group": "child",
+      "mechanical_role": "central boss",
+      "design_provenance": "MotionInterfaceContract/J02",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J02",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J02_pin_bore",
+      "joint_id": "J02",
+      "owning_rigid_group": "child",
+      "mechanical_role": "pin bore",
+      "design_provenance": "MotionInterfaceContract/J02",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "CAD_IR/M2/J02",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J02_swept_body_support",
+      "joint_id": "J02",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "swept-corridor structural support",
+      "design_provenance": "PreM2Sweep/J02",
+      "source_knowledge": "fork_pin_interface",
+      "source_design_node": "RepairDecision/J02",
+      "cad_strategy": "U-shaped body from swept bbox"
+    },
+    {
+      "feature_id": "J03_left_bearing",
+      "joint_id": "J03",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "left bearing",
+      "design_provenance": "MotionInterfaceContract/J03",
+      "source_knowledge": "coaxial_rotary_interface",
+      "source_design_node": "CAD_IR/M2/J03",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J03_right_bearing",
+      "joint_id": "J03",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "right bearing",
+      "design_provenance": "MotionInterfaceContract/J03",
+      "source_knowledge": "coaxial_rotary_interface",
+      "source_design_node": "CAD_IR/M2/J03",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J03_inner_rotor",
+      "joint_id": "J03",
+      "owning_rigid_group": "child",
+      "mechanical_role": "inner rotor",
+      "design_provenance": "MotionInterfaceContract/J03",
+      "source_knowledge": "coaxial_rotary_interface",
+      "source_design_node": "CAD_IR/M2/J03",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J03_axial_shoulders",
+      "joint_id": "J03",
+      "owning_rigid_group": "child",
+      "mechanical_role": "axial shoulders",
+      "design_provenance": "MotionInterfaceContract/J03",
+      "source_knowledge": "coaxial_rotary_interface",
+      "source_design_node": "CAD_IR/M2/J03",
+      "cad_strategy": "family-specific constraining geometry"
+    },
+    {
+      "feature_id": "J03_swept_body_support",
+      "joint_id": "J03",
+      "owning_rigid_group": "parent",
+      "mechanical_role": "swept-corridor structural support",
+      "design_provenance": "PreM2Sweep/J03",
+      "source_knowledge": "coaxial_rotary_interface",
+      "source_design_node": "RepairDecision/J03",
+      "cad_strategy": "U-shaped body from swept bbox"
+    }
+  ],
+  "negative_control": {
+    "candidate": {
+      "feature_id": "gap_box"
+    },
+    "rejected": true
+  }
+}
