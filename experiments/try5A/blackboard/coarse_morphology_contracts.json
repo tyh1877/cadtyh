@@ -5,6 +5,7 @@
     "policy": "try5/knowledge/coarse_morphology/gate_policy.json",
     "policy_sha256": "e913dc196a94270a0ff302323060a7e5bd79e241b6705aa6edaab7c7fcf0a2ae",
     "plan_sha256": "56da382a47d07281c2d4d30b51668842c7c186ff78ef6ce228536fcbc13649d9",
+    "r5_subassembly_plan_sha256": "a1a3e750b814ff9b36d5aba3cd1c0482bbdd32acc4888a691a6ebe0739147b42",
     "skeleton_sha256": "99177325db645b27168d9d50f0b30a59c5101b2729c92cfe1f3582b7a5ac1cc4"
   },
   "thresholds": {
@@ -184,8 +185,8 @@
         0,
         0
       ],
-      "body_family": "rotary_housing",
-      "functional_role": "gripper_actuator_prop",
+      "body_family": "compact_rotary_actuator",
+      "functional_role": "embedded_gripper_actuator",
       "required_interfaces": [
         "J05"
       ],
@@ -201,16 +202,16 @@
       "realization": "physical_body",
       "planned_envelope_mm": [
         30.0,
-        80.0,
-        18.0
+        36.0,
+        22.0
       ],
       "principal_direction_local": [
-        0,
         1,
+        0,
         0
       ],
-      "body_family": "straight_beam",
-      "functional_role": "gripper_crossbar",
+      "body_family": "compact_adapter",
+      "functional_role": "gripper_wrist_adapter",
       "required_interfaces": [
         "J06",
         "J07"
@@ -226,17 +227,17 @@
       "link_id": "L08",
       "realization": "physical_body",
       "planned_envelope_mm": [
-        35.0,
-        75.0,
-        25.0
+        36.0,
+        88.0,
+        24.0
       ],
       "principal_direction_local": [
         0,
         1,
         0
       ],
-      "body_family": "fork_body",
-      "functional_role": "finger_carriage",
+      "body_family": "integrated_gripper_palm",
+      "functional_role": "opposed_gripper_palm",
       "required_interfaces": [
         "J07",
         "J08",
@@ -253,17 +254,17 @@
       "link_id": "L09",
       "realization": "physical_body",
       "planned_envelope_mm": [
-        55.0,
-        12.0,
-        18.0
+        80.0,
+        22.0,
+        22.0
       ],
       "principal_direction_local": [
         1,
         0,
         0
       ],
-      "body_family": "tapered_beam",
-      "functional_role": "left_finger",
+      "body_family": "hooked_contact_finger",
+      "functional_role": "left_hooked_finger",
       "required_interfaces": [
         "J08"
       ],
@@ -278,17 +279,17 @@
       "link_id": "L10",
       "realization": "physical_body",
       "planned_envelope_mm": [
-        55.0,
-        12.0,
-        18.0
+        80.0,
+        22.0,
+        22.0
       ],
       "principal_direction_local": [
         1,
         0,
         0
       ],
-      "body_family": "tapered_beam",
-      "functional_role": "right_finger",
+      "body_family": "hooked_contact_finger",
+      "functional_role": "right_hooked_finger",
       "required_interfaces": [
         "J09"
       ],

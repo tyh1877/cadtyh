@@ -1,7 +1,7 @@
-"""Apply accepted Try-5A.3 R0-R4 design repairs to the current Robot-A CAD IR."""
-import copy,json,shutil
+"""Apply accepted Try-5A.3 R0-R5 design repairs to the current Robot-A CAD IR."""
+import copy,hashlib,json,shutil
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[3];HERE=ROOT/'experiments/try5A';SRC=HERE/'A2';DST=HERE/'A3_integrated';FRAME={'origin':[0,0,0],'x_axis':[1,0,0],'y_axis':[0,1,0],'z_axis':[0,0,1]}
+ROOT=Path(__file__).resolve().parents[3];HERE=ROOT/'experiments/try5A';SRC=HERE/'A2';DST=HERE/'A3_integrated';R5_PATH=HERE/'blackboard/r5_subassembly_plan.json';R5=json.loads(R5_PATH.read_text());FRAME={'origin':[0,0,0],'x_axis':[1,0,0],'y_axis':[0,1,0],'z_axis':[0,0,1]}
 def dump(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,indent=2)+'\n')
 def box(i,f,start,end,w,d):return {'op_id':f'op_{i:03d}','op_type':'oriented_box','target_body':f'op_{i:03d}','dependencies':[],'feature_ref':f,'reference_frame':FRAME,'start':start,'end':end,'width_mm':w,'depth_mm':d,'operation_mode':'new_body'}
 def loft(i,f,start,end,a,b):return {'op_id':f'op_{i:03d}','op_type':'lofted_prism','target_body':f'op_{i:03d}','dependencies':[],'feature_ref':f,'reference_frame':FRAME,'start':start,'end':end,'start_size_mm':a,'end_size_mm':b,'operation_mode':'new_body'}
@@ -18,12 +18,21 @@ repairs={
  'L01':['R4_INTERFACE_PAIR_REPLAN: nested inner rotor and rebuilt adjacent region'],
  'L03':['R0_PARAMETER_REPAIR: J03 carrier radius','R1_LOCAL_FEATURE_REPAIR: tapered body-to-carrier transitions'],
  'L04':['R2_BODY_REGION_REPLAN: straight wrist block replaced by tapered structural region'],
- 'L05':['R3_WHOLE_LINK_REPLAN: straight spacer replaced by dual side plates']}
+ 'L05':['R3_WHOLE_LINK_REPLAN: straight spacer replaced by dual side plates'],
+ 'L06':['R5_SUBASSEMBLY_REPLAN: embed actuator inside the proximal gripper envelope'],
+ 'L07':['R5_SUBASSEMBLY_REPLAN: replace oversized crossbar with compact wrist-to-palm adapter'],
+ 'L08':['R5_SUBASSEMBLY_REPLAN: rebuild carrier as one connected palm with opposed guides'],
+ 'L09':['R5_SUBASSEMBLY_REPLAN: rebuild left member as a hooked finger with inward contact pad'],
+ 'L10':['R5_SUBASSEMBLY_REPLAN: mirror the hooked finger and inward contact pad']}
 for idx in range(12):
  lid=f'L{idx:02d}';src=SRC/lid;dst=DST/lid;agent=copy.deepcopy(json.loads((src/'agent_output.json').read_text()));ir=agent['cad_ir'];agent['condition']='A3_integrated';agent['part_id']=lid
  dst.mkdir(parents=True,exist_ok=True)
  for name in ('InterfaceRefs.json','LinkCoarseSpec.json','parameter_manifest.json'):
   if (src/name).is_file():shutil.copyfile(src/name,dst/name)
+ if lid in R5['link_overrides']:
+  spec=json.loads((dst/'LinkCoarseSpec.json').read_text());spec.update(R5['link_overrides'][lid]);spec['repair_scope']='R5_SUBASSEMBLY_REPLAN';spec['r5_subassembly_plan']='blackboard/r5_subassembly_plan.json';dump(dst/'LinkCoarseSpec.json',spec)
+  refs=json.loads((dst/'InterfaceRefs.json').read_text());refs['r5_interface_contract_updates']={j:v for j,v in R5['interface_contract_updates'].items() if any(x['joint_id']==j for x in refs['interfaces'])};dump(dst/'InterfaceRefs.json',refs)
+  params=json.loads((dst/'parameter_manifest.json').read_text());params['r5_subassembly_plan_sha256']=hashlib.sha256(R5_PATH.read_bytes()).hexdigest();params['r5_link_override']=R5['link_overrides'][lid];dump(dst/'parameter_manifest.json',params)
  if not ir.get('final_objects'):
   dump(dst/'agent_output.json',agent);dump(dst/'cad_ir.json',ir);dump(dst/'repair_manifest.json',{'link_id':lid,'repairs':[],'virtual_frame':True});continue
  ir['ir_version']='try5A3_integrated_robot_v1';ir['assumptions'].append('accepted Try-5A.3 repair scopes integrated into Robot A')
@@ -37,5 +46,15 @@ for idx in range(12):
   i=next_id(ir);replace_body(ir,[loft(i,'BODY_A3_OFFSET_REGION',[0,0,0],[63,0,0],[42,34],[26,22])]);mount=next(x for x in ir['operations'] if x['feature_ref']=='IF_J04');fuse(ir,list(ir['final_objects']),next_id(ir));ir['editable_parameter']={'object_id':mount['op_id'],'property':'Length','baseline_value':mount['width_mm'],'edit_fraction':.05}
  elif lid=='L05':
   i=next_id(ir);plates=[box(i,'BODY_A3_LEFT_PLATE',[-3,-7,0],[9,-7,0],8,16),box(i+1,'BODY_A3_RIGHT_PLATE',[-3,7,0],[9,7,0],8,16)];replace_body(ir,plates);fuse(ir,list(ir['final_objects']),next_id(ir));ir['editable_parameter']={'object_id':plates[0]['op_id'],'property':'Length','baseline_value':8.0,'edit_fraction':.05}
+ elif lid=='L06':
+  actuator=next(x for x in ir['operations'] if x['feature_ref']=='BODY');fuse(ir,list(ir['final_objects']),next_id(ir));ir['editable_parameter']={'object_id':actuator['op_id'],'property':'Radius','baseline_value':actuator['radius_mm'],'edit_fraction':.05}
+ elif lid=='L07':
+  i=next_id(ir);adapter=box(i,'BODY_R5_COMPACT_ADAPTER',[-2,0,0],[25,0,0],20,34);replace_body(ir,[adapter]);fuse(ir,list(ir['final_objects']),next_id(ir));ir['editable_parameter']={'object_id':adapter['op_id'],'property':'Length','baseline_value':20.0,'edit_fraction':.05}
+ elif lid=='L08':
+  i=next_id(ir);palm=box(i,'BODY_R5_PALM_BACKPLATE',[-4,0,0],[14,0,0],22,60);nose=box(i+1,'BODY_R5_PALM_NOSE',[10,0,0],[30,0,0],20,34);replace_body(ir,[palm,nose]);fuse(ir,list(ir['final_objects']),next_id(ir));ir['editable_parameter']={'object_id':palm['op_id'],'property':'Length','baseline_value':22.0,'edit_fraction':.05}
+ elif lid in ('L09','L10'):
+  i=next_id(ir);side=-5.5 if lid=='L09' else 5.5;finger=loft(i,'BODY_R5_FINGER',[2,0,0],[68,0,0],[18,14],[14,11]);tip=box(i+1,'BODY_R5_INWARD_CONTACT_PAD',[54,side,0],[76,side,0],20,18);replace_body(ir,[finger,tip]);fuse(ir,list(ir['final_objects']),next_id(ir));ir['editable_parameter']={'object_id':tip['op_id'],'property':'Length','baseline_value':20.0,'edit_fraction':.05}
+ if lid in R5['link_overrides']:
+  ir['assumptions'].append('R5 subassembly plan consumed before FreeCAD regeneration; L0 joint frames remain frozen')
  ir['bodies']=[{'body_id':'A3_'+lid,'role':'integrated repaired link','feature_ids':repairs.get(lid,[]),'final_object':x} for x in ir['final_objects']];agent['feature_graph']['features'].extend([{'feature_id':f'A3_REPAIR_{i+1}','status':'PLANNED','critical':True,'feature_type':r.split(':')[0],'mechanical_role':r.split(': ',1)[1],'source_evidence':'accepted Try-5A.3 physical pilot','source_design_node':'RepairScope/'+r.split(':')[0],'why_required':'integrate accepted design-level repair into whole robot','related_interface_or_body':lid,'cad_strategy':'regenerate affected link from updated CAD IR','requirement_refs':['Try5-A.3.md']} for i,r in enumerate(repairs.get(lid,[]))]);dump(dst/'agent_output.json',agent);dump(dst/'cad_ir.json',ir);dump(dst/'repair_manifest.json',{'link_id':lid,'repairs':repairs.get(lid,[]),'final_objects':ir['final_objects']})
-print(json.dumps({'condition':'A3_integrated','links':12,'physical_links':11,'repaired_links':sorted(repairs)}))
+print(json.dumps({'condition':'A3_integrated','links':12,'physical_links':11,'repair_scope':'R5_SUBASSEMBLY_REPLAN','repaired_links':sorted(repairs)}))

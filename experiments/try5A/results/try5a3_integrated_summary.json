@@ -6,14 +6,20 @@
     "R1_LOCAL_FEATURE_REPAIR",
     "R2_BODY_REGION_REPLAN",
     "R3_WHOLE_LINK_REPLAN",
-    "R4_INTERFACE_PAIR_REPLAN"
+    "R4_INTERFACE_PAIR_REPLAN",
+    "R5_SUBASSEMBLY_REPLAN"
   ],
   "repaired_links": [
     "L00",
     "L01",
     "L03",
     "L04",
-    "L05"
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10"
   ],
   "freecad_link_success_rate": 1.0,
   "assembly": {
@@ -21,6 +27,7 @@
     "condition": "A3_integrated",
     "source_condition": "A3_integrated",
     "placement_authority": "sanitized URDF canonical transforms",
+    "translation_matrix_a14_a24_a34_verified": true,
     "visual_adjustments": 0,
     "links": 11
   },
@@ -40,11 +47,11 @@
     "max_interface_center_error_mm": 0.0,
     "excessive_axial_penetrations": 0,
     "unexpected_contact_locations": 0,
-    "nonadjacent_aabb_overlap_pairs": 4,
+    "nonadjacent_aabb_overlap_pairs": 6,
     "whole_robot_bbox_mm": [
-      338.5,
+      359.5,
       124.96115112304688,
-      233.05
+      214.05
     ],
     "overall_reach_from_root_mm": 294.59345291435113,
     "spurious_virtual_geometry_count": 0
@@ -53,13 +60,7 @@
     "status": "FAIL",
     "failure_targets": [
       "L01",
-      "L02",
-      "L06",
-      "L07",
-      "L08",
-      "L09",
-      "L10",
-      "opposed_prismatic_pair_L08"
+      "L02"
     ],
     "visual_review_status": "REVIEW_CONSUMED"
   },
@@ -70,5 +71,11 @@
     "stl": "experiments/try5A/assemblies/A3_integrated/assembled_robot.stl",
     "isometric_render": "experiments/try5A/assemblies/A3_integrated/renders/isometric.png"
   },
-  "warning": "Generated artifacts are inspection candidates only. Gate failure forbids accepting or freezing this robot."
+  "warning": "Generated artifacts are inspection candidates only. Gate failure forbids accepting or freezing this robot.",
+  "r5_subassembly": {
+    "status": "PASS",
+    "target": "opposed_prismatic_pair_L08",
+    "member_separation_mm": 44.5,
+    "terminal_extension_mm": 46.0
+  }
 }

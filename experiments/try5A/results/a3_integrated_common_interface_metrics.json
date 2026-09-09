@@ -15,11 +15,11 @@
     "max_interface_center_error_mm": 0.0,
     "excessive_axial_penetrations": 0,
     "unexpected_contact_locations": 0,
-    "nonadjacent_aabb_overlap_pairs": 4,
+    "nonadjacent_aabb_overlap_pairs": 6,
     "whole_robot_bbox_mm": [
-      338.5,
+      359.5,
       124.96115112304688,
-      233.05
+      214.05
     ],
     "overall_reach_from_root_mm": 294.59345291435113,
     "spurious_virtual_geometry_count": 0
@@ -171,7 +171,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 3235.200128555298,
+      "adjacent_aabb_overlap_mm3": 5280.0,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -194,7 +194,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 3282.1200645017598,
+      "adjacent_aabb_overlap_mm3": 5276.800155639648,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -217,7 +217,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 8804.160049438477,
+      "adjacent_aabb_overlap_mm3": 15376.80009841919,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -240,7 +240,7 @@
       "connected_from_ports": true,
       "complementary_geometry": true,
       "adjacent_aabb_distance_mm": 0.0,
-      "adjacent_aabb_overlap_mm3": 8804.160049438477,
+      "adjacent_aabb_overlap_mm3": 15376.80009841919,
       "parent_interface_center_error_mm": 0.0,
       "child_interface_center_error_mm": 0.0,
       "parent_axis_angular_error_deg": 0.0,
@@ -265,17 +265,27 @@
     {
       "link_a": "L04",
       "link_b": "L07",
-      "aabb_overlap_mm3": 2469.600098133087
+      "aabb_overlap_mm3": 2401.25
     },
     {
       "link_a": "L06",
       "link_b": "L07",
-      "aabb_overlap_mm3": 7500.000298023224
+      "aabb_overlap_mm3": 8000.0
     },
     {
       "link_a": "L06",
       "link_b": "L08",
       "aabb_overlap_mm3": 304.0000915527344
+    },
+    {
+      "link_a": "L07",
+      "link_b": "L09",
+      "aabb_overlap_mm3": 853.600025177002
+    },
+    {
+      "link_a": "L07",
+      "link_b": "L10",
+      "aabb_overlap_mm3": 853.600025177002
     }
   ]
 }

@@ -1,0 +1,68 @@
+{
+  "schema_version": "try5A3_r5_subassembly_plan_v1",
+  "repair_scope": "R5_SUBASSEMBLY_REPLAN",
+  "target": "terminal_gripper_subassembly",
+  "members": ["L06", "L07", "L08", "L09", "L10"],
+  "preserved_joint_kinematics": ["J05", "J06", "J07", "J08", "J09", "J10"],
+  "design_intent": [
+    "the opposed fingers, not the actuator, define the terminal silhouette",
+    "left and right contact pads face the grasp centerline",
+    "the palm provides one connected load path from J07 to both slider guides",
+    "J08 and J09 retain opposed prismatic motion and their frozen travel limits"
+  ],
+  "link_overrides": {
+    "L06": {
+      "role": "embedded_gripper_actuator",
+      "coarse_envelope_m": [0.025, 0.020, 0.020],
+      "principal_direction": [1, 0, 0],
+      "body_family": "compact_rotary_actuator",
+      "proximal_region": "actuator_axis",
+      "distal_region": "internal_drive_only"
+    },
+    "L07": {
+      "role": "gripper_wrist_adapter",
+      "coarse_envelope_m": [0.030, 0.036, 0.022],
+      "principal_direction": [1, 0, 0],
+      "body_family": "compact_adapter",
+      "proximal_region": "wrist_mount",
+      "distal_region": "palm_mount"
+    },
+    "L08": {
+      "role": "opposed_gripper_palm",
+      "coarse_envelope_m": [0.036, 0.088, 0.024],
+      "principal_direction": [0, 1, 0],
+      "body_family": "integrated_gripper_palm",
+      "proximal_region": "palm_mount",
+      "distal_region": "opposed_slider_guides"
+    },
+    "L09": {
+      "role": "left_hooked_finger",
+      "coarse_envelope_m": [0.080, 0.022, 0.022],
+      "principal_direction": [1, 0, 0],
+      "body_family": "hooked_contact_finger",
+      "proximal_region": "left_slider_carriage",
+      "distal_region": "inward_contact_pad"
+    },
+    "L10": {
+      "role": "right_hooked_finger",
+      "coarse_envelope_m": [0.080, 0.022, 0.022],
+      "principal_direction": [1, 0, 0],
+      "body_family": "hooked_contact_finger",
+      "proximal_region": "right_slider_carriage",
+      "distal_region": "inward_contact_pad"
+    }
+  },
+  "interface_contract_updates": {
+    "J07": "compact planar palm mount with a continuous rigid load path",
+    "J08": "left rail carriage fused to the left finger root; travel corridor remains clear",
+    "J09": "right rail carriage fused to the right finger root; mirrored about the grasp centerline",
+    "J10": "tool frame remains virtual and lies between the opposed contact pads"
+  },
+  "acceptance_relations": [
+    "finger members are visually distinct in front, top, and isometric views",
+    "both fingers extend beyond the palm along +X",
+    "contact pads turn inward toward the Y=0 grasp centerline",
+    "actuator remains proximal to the finger tips",
+    "each physical member is a single connected B-Rep solid"
+  ]
+}

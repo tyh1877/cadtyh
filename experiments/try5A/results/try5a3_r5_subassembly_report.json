@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "repair_scope": "R5_SUBASSEMBLY_REPLAN",
+  "target": "opposed_prismatic_pair_L08",
+  "members": [
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10"
+  ],
+  "checks": {
+    "all_r5_links_pass_hard_gates": true,
+    "opposed_pair_deterministic_pass": true,
+    "opposed_pair_visual_pass": true,
+    "fresh_visual_review_consumed": true,
+    "canonical_xyz_placement_verified": true
+  },
+  "member_separation_mm": 44.5,
+  "terminal_extension_mm": 46.0,
+  "whole_robot_gate_status": "FAIL",
+  "remaining_whole_robot_failures": [
+    "L01",
+    "L02"
+  ],
+  "artifacts": {
+    "fcstd": "experiments/try5A/assemblies/A3_integrated/assembled_robot.FCStd",
+    "isometric": "experiments/try5A/assemblies/A3_integrated/renders/isometric.png",
+    "front": "experiments/try5A/assemblies/A3_integrated/renders/front.png",
+    "top": "experiments/try5A/assemblies/A3_integrated/renders/top.png"
+  }
+}
