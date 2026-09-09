@@ -1,0 +1,60 @@
+{
+  "status": "SUCCESS",
+  "condition": "A3_integrated",
+  "integrated_scopes": [
+    "R0_PARAMETER_REPAIR",
+    "R1_LOCAL_FEATURE_REPAIR",
+    "R2_BODY_REGION_REPLAN",
+    "R3_WHOLE_LINK_REPLAN",
+    "R4_INTERFACE_PAIR_REPLAN"
+  ],
+  "repaired_links": [
+    "L00",
+    "L01",
+    "L03",
+    "L04",
+    "L05"
+  ],
+  "freecad_link_success_rate": 1.0,
+  "assembly": {
+    "status": "SUCCESS",
+    "condition": "A3_integrated",
+    "source_condition": "A3_integrated",
+    "placement_authority": "sanitized URDF canonical transforms",
+    "visual_adjustments": 0,
+    "links": 11
+  },
+  "logical_interface_metrics": {
+    "status": "PASS",
+    "geometry_relation_method": "generated interface primitives + transformed STL AABB",
+    "links": 11,
+    "joints": 10,
+    "connected_joint_rate": 1.0,
+    "floating_links": [],
+    "floating_link_rate": 0.0,
+    "assembly_connected_component_count": 1,
+    "mean_interface_gap_mm": 0.0,
+    "mean_radius_mismatch_mm": 0.0,
+    "max_axis_angular_error_deg": 0.0,
+    "max_axis_offset_mm": 0.0,
+    "max_interface_center_error_mm": 0.0,
+    "excessive_axial_penetrations": 0,
+    "unexpected_contact_locations": 0,
+    "nonadjacent_aabb_overlap_pairs": 4,
+    "whole_robot_bbox_mm": [
+      338.5,
+      124.96115112304688,
+      233.05
+    ],
+    "overall_reach_from_root_mm": 294.59345291435113,
+    "spurious_virtual_geometry_count": 0
+  },
+  "aabb_sweep_free_rate": 0.0,
+  "artifact_paths": {
+    "fcstd": "experiments/try5A/assemblies/A3_integrated/assembled_robot.FCStd",
+    "step": "experiments/try5A/assemblies/A3_integrated/assembled_robot.step",
+    "stl": "experiments/try5A/assemblies/A3_integrated/assembled_robot.stl",
+    "isometric_render": "experiments/try5A/assemblies/A3_integrated/renders/isometric.png"
+  },
+  "warning": "Visual integration preview only; exact collision and strict whole-robot BICR acceptance remain unresolved."
+}

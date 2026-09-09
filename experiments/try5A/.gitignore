@@ -2,7 +2,9 @@
 /A1/
 /A2/
 /A3_repair_pilots/
+/A3_integrated/
 /results/try5a3_*/**/*_job.json
+/results/try5a3_*_job.json
 /link_cad/
 /assemblies/
 /simulation/
