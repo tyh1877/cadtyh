@@ -1,13 +1,727 @@
 {
-  "schema_version": "try5A3_robot_interface_knowledge_v1",
+  "schema_version": "try5A4_robot_interface_motion_knowledge_v2",
   "scope": "generic_robotic_joint_realization_only",
   "families": [
-    {"interface_family":"coaxial_rotary_interface","applicability":["revolute or continuous joint","compact rotary housing or inline wrist"],"required_mechanical_substructures":["rotary carrier","coaxial bore or pin","rotational clearance"],"required_geometric_relations":["joint axis coaxial with carrier","parent and child remain separate solids"],"allowed_clearance_or_contact":"radial rotational clearance; intended carrier contact only","typical_parent_child_layout":"inline rotary housings or housing-to-link","cad_realization_strategy":"cylindrical carrier with bore/pin clearance","forbidden_configurations":["solid bridge across rotating clearance","fused parent-child solids"],"verification_rules":["axis coaxiality","gap within contract","no rigid fusion"],"uncertainty_notes":"Use only when visual evidence does not show a fork or nested shell."},
-    {"interface_family":"fork_pin_interface","applicability":["revolute joint","one side is dual side plate or fork body"],"required_mechanical_substructures":["left fork arm","right fork arm","central mating member","coaxial pin/bore region"],"required_geometric_relations":["fork arms symmetric about joint plane","axis crosses both arms","central member lies between arms"],"allowed_clearance_or_contact":"pin/bore clearance with separated fork arms","typical_parent_child_layout":"forked arm to central boss/housing","cad_realization_strategy":"two side plates plus central pin or bore carrier","forbidden_configurations":["solid bridge across fork clearance","arbitrary connector block","fused parent-child solids"],"verification_rules":["two-arm presence","axis passes both arms","rotation clearance"],"uncertainty_notes":"Coarse evidence may not establish pin diameter."},
-    {"interface_family":"nested_rotary_housing","applicability":["revolute joint","base/shoulder or concentric housing pair"],"required_mechanical_substructures":["outer housing","inner rotating carrier","annular clearance"],"required_geometric_relations":["concentric carrier axes","nested radial envelopes","separate rotating members"],"allowed_clearance_or_contact":"annular rotational clearance; no radial solid bridge","typical_parent_child_layout":"base housing around shoulder or wrist carrier","cad_realization_strategy":"concentric cylinders/shells with protected annular gap","forbidden_configurations":["single fused cylinder","blocking annular clearance"],"verification_rules":["concentricity","annular clearance","separate components"],"uncertainty_notes":"Do not infer bearing internals."},
-    {"interface_family":"flange_interface","applicability":["fixed mount","broad face-to-face equipment mount"],"required_mechanical_substructures":["mating faces","fastener zone or flange ring"],"required_geometric_relations":["coincident mount frames","face alignment"],"allowed_clearance_or_contact":"intended planar contact","typical_parent_child_layout":"tool or actuator mount","cad_realization_strategy":"planar flange with non-rotating attachment","forbidden_configurations":["using flange for an active revolute joint"],"verification_rules":["frame coincidence","attachment continuity"],"uncertainty_notes":"Fastener pattern is intentionally coarse."},
-    {"interface_family":"planar_mount_interface","applicability":["fixed joint","spacer, crossbar, or simple structural mount"],"required_mechanical_substructures":["mating plane","support web or mount pad"],"required_geometric_relations":["coincident frames","continuous load path"],"allowed_clearance_or_contact":"direct fixed contact","typical_parent_child_layout":"spacer-to-crossbar or fixed subassembly","cad_realization_strategy":"mount pad integrated into adjacent body","forbidden_configurations":["isolated floating pad","using it as sliding or rotary joint"],"verification_rules":["physical attachment","no gap"],"uncertainty_notes":"Do not invent bolt detail."},
-    {"interface_family":"rail_slider_interface","applicability":["prismatic joint","carriage and finger or linear guide"],"required_mechanical_substructures":["guide rail","sliding carriage","travel clearance"],"required_geometric_relations":["rail aligned with URDF translation axis","travel range unobstructed"],"allowed_clearance_or_contact":"guided sliding clearance","typical_parent_child_layout":"gripper carriage to opposed finger","cad_realization_strategy":"rail and carriage envelopes with protected travel corridor","forbidden_configurations":["cylindrical rotary bore as only guide","solid bridge over travel path"],"verification_rules":["axis alignment","limit traversal","clear travel corridor"],"uncertainty_notes":"Exact rail profile is not inferred."},
-    {"interface_family":"end_tool_interface","applicability":["tool center frame","interface-only or virtual frame child"],"required_mechanical_substructures":["reference frame metadata"],"required_geometric_relations":["frame anchored to physical parent"],"allowed_clearance_or_contact":"no generated child solid","typical_parent_child_layout":"physical tool carrier to virtual TCP","cad_realization_strategy":"metadata/helper frame only","forbidden_configurations":["generating a solid for virtual frame","treating marker as a physical mount"],"verification_rules":["virtual geometry count zero","frame retained"],"uncertainty_notes":"This is not a physical joint realization."}
-  ]
+    {
+      "interface_family": "coaxial_rotary_interface",
+      "applicability": [
+        "revolute or continuous joint",
+        "compact rotary housing or inline wrist"
+      ],
+      "required_mechanical_substructures": [
+        "rotary carrier",
+        "coaxial bore or pin",
+        "rotational clearance"
+      ],
+      "required_geometric_relations": [
+        "joint axis coaxial with carrier",
+        "parent and child remain separate solids"
+      ],
+      "allowed_clearance_or_contact": "radial rotational clearance; intended carrier contact only",
+      "typical_parent_child_layout": "inline rotary housings or housing-to-link",
+      "cad_realization_strategy": "cylindrical carrier with bore/pin clearance",
+      "forbidden_configurations": [
+        "solid bridge across rotating clearance",
+        "fused parent-child solids",
+        "Boolean Fuse between parent and child rigid groups",
+        "solid bridge crossing an allowed-motion clearance",
+        "connector that locks the intended degree of freedom"
+      ],
+      "verification_rules": [
+        "axis coaxiality",
+        "gap within contract",
+        "no rigid fusion"
+      ],
+      "uncertainty_notes": "Use only when visual evidence does not show a fork or nested shell.",
+      "joint_semantics": {
+        "compatible_joint_types": [
+          "revolute",
+          "continuous"
+        ],
+        "allowed_dof": [
+          "rotation_about_urdf_axis"
+        ],
+        "constrained_dof": [
+          "translation_x",
+          "translation_y",
+          "translation_z",
+          "rotation_about_two_orthogonal_axes"
+        ],
+        "motion_axis_source": "sanitized_urdf_joint_axis",
+        "motion_range_semantics": "sample the sanitized URDF limits; use [-pi, pi] only as an explicit continuous-joint evaluation proxy"
+      },
+      "motion_preserving_constraints": {
+        "radial_clearance": "positive radial gap around the rotating carrier",
+        "axial_clearance": "positive side gap between parent supports and child carrier",
+        "swept_clearance": "exclude parent/neighbor body from the generated child swept occupancy",
+        "required_clearance_regions": [
+          "rotating_carrier_radial_envelope",
+          "carrier_side_faces",
+          "child_link_swept_corridor"
+        ]
+      },
+      "parent_side": {
+        "members": [
+          "paired_bearing_supports",
+          "parent_housing_neck"
+        ],
+        "rigid_attachment": "bearing supports and neck belong to the parent rigid group"
+      },
+      "child_side": {
+        "members": [
+          "inner_rotor_boss",
+          "child_neck"
+        ],
+        "rigid_attachment": "rotor boss is rigidly connected to the child body"
+      },
+      "parent_child_relation": {
+        "allowed_contact_regions": [
+          "optional coaxial bearing surface"
+        ],
+        "clearance_regions": [
+          "annular_gap",
+          "axial_side_gaps"
+        ],
+        "never_fuse": [
+          "bearing_supports:inner_rotor_boss",
+          "parent_rigid_group:child_rigid_group"
+        ],
+        "relative_motion_rule": "inner child carrier rotates about the URDF axis inside parent supports"
+      },
+      "cad_construction_logic": [
+        "construct parent bearing supports outside the motion corridor",
+        "construct coaxial child rotor",
+        "protect annular and axial gaps",
+        "attach carriers to owning bodies only"
+      ],
+      "verification": {
+        "attachment_rules": [
+          "parent carrier attached to parent body",
+          "child carrier attached to child body"
+        ],
+        "axis_rules": [
+          "axis angular error within evaluator tolerance",
+          "joint center within evaluator tolerance"
+        ],
+        "separation_rules": [
+          "parent and child remain separate top-level rigid groups",
+          "all forbidden fusion pairs absent"
+        ],
+        "clearance_rules": [
+          "rotating_carrier_radial_envelope",
+          "carrier_side_faces",
+          "child_link_swept_corridor"
+        ],
+        "motion_validation_rule": "apply URDF FK rigid-group transforms at every frozen pose and accept only exact-collision-valid samples"
+      }
+    },
+    {
+      "interface_family": "fork_pin_interface",
+      "applicability": [
+        "revolute joint",
+        "one side is dual side plate or fork body"
+      ],
+      "required_mechanical_substructures": [
+        "left fork arm",
+        "right fork arm",
+        "central mating member",
+        "coaxial pin/bore region"
+      ],
+      "required_geometric_relations": [
+        "fork arms symmetric about joint plane",
+        "axis crosses both arms",
+        "central member lies between arms"
+      ],
+      "allowed_clearance_or_contact": "pin/bore clearance with separated fork arms",
+      "typical_parent_child_layout": "forked arm to central boss/housing",
+      "cad_realization_strategy": "two side plates plus central pin or bore carrier",
+      "forbidden_configurations": [
+        "solid bridge across fork clearance",
+        "arbitrary connector block",
+        "fused parent-child solids",
+        "Boolean Fuse between parent and child rigid groups",
+        "solid bridge crossing an allowed-motion clearance",
+        "connector that locks the intended degree of freedom"
+      ],
+      "verification_rules": [
+        "two-arm presence",
+        "axis passes both arms",
+        "rotation clearance"
+      ],
+      "uncertainty_notes": "Coarse evidence may not establish pin diameter.",
+      "joint_semantics": {
+        "compatible_joint_types": [
+          "revolute",
+          "continuous"
+        ],
+        "allowed_dof": [
+          "rotation_about_urdf_axis"
+        ],
+        "constrained_dof": [
+          "translation_x",
+          "translation_y",
+          "translation_z",
+          "rotation_about_two_orthogonal_axes"
+        ],
+        "motion_axis_source": "sanitized_urdf_joint_axis",
+        "motion_range_semantics": "sample the sanitized URDF limits; use [-pi, pi] only as an explicit continuous-joint evaluation proxy"
+      },
+      "motion_preserving_constraints": {
+        "radial_clearance": "positive radial gap around the rotating carrier",
+        "axial_clearance": "positive side gap between parent supports and child carrier",
+        "swept_clearance": "exclude parent/neighbor body from the generated child swept occupancy",
+        "required_clearance_regions": [
+          "rotating_carrier_radial_envelope",
+          "carrier_side_faces",
+          "child_link_swept_corridor"
+        ]
+      },
+      "parent_side": {
+        "members": [
+          "fork_left",
+          "fork_right",
+          "parent_support"
+        ],
+        "rigid_attachment": "both fork arms and support are rigidly attached to the parent body"
+      },
+      "child_side": {
+        "members": [
+          "central_boss",
+          "child_neck"
+        ],
+        "rigid_attachment": "boss connects to the child body through a structural neck"
+      },
+      "parent_child_relation": {
+        "allowed_contact_regions": [
+          "optional pin/bore bearing surface"
+        ],
+        "clearance_regions": [
+          "boss-to-fork side gaps",
+          "fork opening"
+        ],
+        "never_fuse": [
+          "fork_left:central_boss",
+          "fork_right:central_boss",
+          "parent_rigid_group:child_rigid_group"
+        ],
+        "relative_motion_rule": "child rotates relative to parent only about the URDF axis"
+      },
+      "cad_construction_logic": [
+        "construct symmetric parent fork supports",
+        "construct child boss between supports",
+        "align all carrier axes to the URDF axis",
+        "leave positive axial and radial clearance",
+        "attach each carrier only to its owning body"
+      ],
+      "verification": {
+        "attachment_rules": [
+          "parent carrier attached to parent body",
+          "child carrier attached to child body"
+        ],
+        "axis_rules": [
+          "axis angular error within evaluator tolerance",
+          "joint center within evaluator tolerance"
+        ],
+        "separation_rules": [
+          "parent and child remain separate top-level rigid groups",
+          "all forbidden fusion pairs absent"
+        ],
+        "clearance_rules": [
+          "rotating_carrier_radial_envelope",
+          "carrier_side_faces",
+          "child_link_swept_corridor"
+        ],
+        "motion_validation_rule": "apply URDF FK rigid-group transforms at every frozen pose and accept only exact-collision-valid samples"
+      }
+    },
+    {
+      "interface_family": "nested_rotary_housing",
+      "applicability": [
+        "revolute joint",
+        "base/shoulder or concentric housing pair"
+      ],
+      "required_mechanical_substructures": [
+        "outer housing",
+        "inner rotating carrier",
+        "annular clearance"
+      ],
+      "required_geometric_relations": [
+        "concentric carrier axes",
+        "nested radial envelopes",
+        "separate rotating members"
+      ],
+      "allowed_clearance_or_contact": "annular rotational clearance; no radial solid bridge",
+      "typical_parent_child_layout": "base housing around shoulder or wrist carrier",
+      "cad_realization_strategy": "concentric cylinders/shells with protected annular gap",
+      "forbidden_configurations": [
+        "single fused cylinder",
+        "blocking annular clearance",
+        "Boolean Fuse between parent and child rigid groups",
+        "solid bridge crossing an allowed-motion clearance",
+        "connector that locks the intended degree of freedom"
+      ],
+      "verification_rules": [
+        "concentricity",
+        "annular clearance",
+        "separate components"
+      ],
+      "uncertainty_notes": "Do not infer bearing internals.",
+      "joint_semantics": {
+        "compatible_joint_types": [
+          "revolute",
+          "continuous"
+        ],
+        "allowed_dof": [
+          "rotation_about_urdf_axis"
+        ],
+        "constrained_dof": [
+          "translation_x",
+          "translation_y",
+          "translation_z",
+          "rotation_about_two_orthogonal_axes"
+        ],
+        "motion_axis_source": "sanitized_urdf_joint_axis",
+        "motion_range_semantics": "sample the sanitized URDF limits; use [-pi, pi] only as an explicit continuous-joint evaluation proxy"
+      },
+      "motion_preserving_constraints": {
+        "radial_clearance": "positive radial gap around the rotating carrier",
+        "axial_clearance": "positive side gap between parent supports and child carrier",
+        "swept_clearance": "exclude parent/neighbor body from the generated child swept occupancy",
+        "required_clearance_regions": [
+          "rotating_carrier_radial_envelope",
+          "carrier_side_faces",
+          "child_link_swept_corridor"
+        ]
+      },
+      "parent_side": {
+        "members": [
+          "outer_housing",
+          "parent_support"
+        ],
+        "rigid_attachment": "outer housing is continuous with the parent body"
+      },
+      "child_side": {
+        "members": [
+          "inner_rotating_carrier",
+          "child_support"
+        ],
+        "rigid_attachment": "inner carrier is continuous with the child body"
+      },
+      "parent_child_relation": {
+        "allowed_contact_regions": [
+          "optional bearing race"
+        ],
+        "clearance_regions": [
+          "annular_shell_gap",
+          "axial_end_gap"
+        ],
+        "never_fuse": [
+          "outer_housing:inner_rotating_carrier",
+          "parent_rigid_group:child_rigid_group"
+        ],
+        "relative_motion_rule": "nested child carrier rotates about the URDF axis without a radial bridge"
+      },
+      "cad_construction_logic": [
+        "construct concentric outer and inner envelopes",
+        "subtract a protected annular gap",
+        "route body supports outside the swept corridor",
+        "keep housings in separate rigid groups"
+      ],
+      "verification": {
+        "attachment_rules": [
+          "parent carrier attached to parent body",
+          "child carrier attached to child body"
+        ],
+        "axis_rules": [
+          "axis angular error within evaluator tolerance",
+          "joint center within evaluator tolerance"
+        ],
+        "separation_rules": [
+          "parent and child remain separate top-level rigid groups",
+          "all forbidden fusion pairs absent"
+        ],
+        "clearance_rules": [
+          "rotating_carrier_radial_envelope",
+          "carrier_side_faces",
+          "child_link_swept_corridor"
+        ],
+        "motion_validation_rule": "apply URDF FK rigid-group transforms at every frozen pose and accept only exact-collision-valid samples"
+      }
+    },
+    {
+      "interface_family": "flange_interface",
+      "applicability": [
+        "fixed mount",
+        "broad face-to-face equipment mount"
+      ],
+      "required_mechanical_substructures": [
+        "mating faces",
+        "fastener zone or flange ring"
+      ],
+      "required_geometric_relations": [
+        "coincident mount frames",
+        "face alignment"
+      ],
+      "allowed_clearance_or_contact": "intended planar contact",
+      "typical_parent_child_layout": "tool or actuator mount",
+      "cad_realization_strategy": "planar flange with non-rotating attachment",
+      "forbidden_configurations": [
+        "using flange for an active revolute joint",
+        "Boolean Fuse between parent and child rigid groups",
+        "solid bridge crossing an allowed-motion clearance",
+        "connector that locks the intended degree of freedom"
+      ],
+      "verification_rules": [
+        "frame coincidence",
+        "attachment continuity"
+      ],
+      "uncertainty_notes": "Fastener pattern is intentionally coarse.",
+      "joint_semantics": {
+        "compatible_joint_types": [
+          "fixed"
+        ],
+        "allowed_dof": [],
+        "constrained_dof": [
+          "all_relative_translation",
+          "all_relative_rotation"
+        ],
+        "motion_axis_source": "not_applicable",
+        "motion_range_semantics": "fixed transform only"
+      },
+      "parent_side": {
+        "members": [
+          "parent_flange"
+        ],
+        "rigid_attachment": "flange is integrated into the parent body"
+      },
+      "child_side": {
+        "members": [
+          "child_flange"
+        ],
+        "rigid_attachment": "flange is integrated into the child body"
+      },
+      "parent_child_relation": {
+        "allowed_contact_regions": [
+          "mating_flange_faces"
+        ],
+        "clearance_regions": [],
+        "never_fuse": [],
+        "relative_motion_rule": "no relative motion after fixed assembly"
+      },
+      "motion_preserving_constraints": {
+        "radial_clearance": "not applicable",
+        "axial_clearance": "zero intended mating-face gap",
+        "swept_clearance": "fixed occupancy only",
+        "required_clearance_regions": []
+      },
+      "cad_construction_logic": [
+        "construct aligned mating faces",
+        "attach each face to its owning body",
+        "represent fixed fastening without inventing detailed hardware"
+      ],
+      "verification": {
+        "attachment_rules": [
+          "parent carrier attached to parent body",
+          "child carrier attached to child body"
+        ],
+        "axis_rules": [
+          "axis angular error within evaluator tolerance",
+          "joint center within evaluator tolerance"
+        ],
+        "separation_rules": [
+          "parent and child remain separate top-level rigid groups",
+          "all forbidden fusion pairs absent"
+        ],
+        "clearance_rules": [],
+        "motion_validation_rule": "apply URDF FK rigid-group transforms at every frozen pose and accept only exact-collision-valid samples"
+      }
+    },
+    {
+      "interface_family": "planar_mount_interface",
+      "applicability": [
+        "fixed joint",
+        "spacer, crossbar, or simple structural mount"
+      ],
+      "required_mechanical_substructures": [
+        "mating plane",
+        "support web or mount pad"
+      ],
+      "required_geometric_relations": [
+        "coincident frames",
+        "continuous load path"
+      ],
+      "allowed_clearance_or_contact": "direct fixed contact",
+      "typical_parent_child_layout": "spacer-to-crossbar or fixed subassembly",
+      "cad_realization_strategy": "mount pad integrated into adjacent body",
+      "forbidden_configurations": [
+        "isolated floating pad",
+        "using it as sliding or rotary joint",
+        "Boolean Fuse between parent and child rigid groups",
+        "solid bridge crossing an allowed-motion clearance",
+        "connector that locks the intended degree of freedom"
+      ],
+      "verification_rules": [
+        "physical attachment",
+        "no gap"
+      ],
+      "uncertainty_notes": "Do not invent bolt detail.",
+      "joint_semantics": {
+        "compatible_joint_types": [
+          "fixed"
+        ],
+        "allowed_dof": [],
+        "constrained_dof": [
+          "all_relative_translation",
+          "all_relative_rotation"
+        ],
+        "motion_axis_source": "not_applicable",
+        "motion_range_semantics": "fixed transform only"
+      },
+      "parent_side": {
+        "members": [
+          "parent_mount_pad",
+          "support_web"
+        ],
+        "rigid_attachment": "mount pad and web form a parent-body load path"
+      },
+      "child_side": {
+        "members": [
+          "child_mount_pad"
+        ],
+        "rigid_attachment": "child pad is continuous with the child body"
+      },
+      "parent_child_relation": {
+        "allowed_contact_regions": [
+          "mating_mount_planes"
+        ],
+        "clearance_regions": [],
+        "never_fuse": [],
+        "relative_motion_rule": "no relative motion after fixed assembly"
+      },
+      "motion_preserving_constraints": {
+        "radial_clearance": "not applicable",
+        "axial_clearance": "zero intended mating-plane gap",
+        "swept_clearance": "fixed occupancy only",
+        "required_clearance_regions": []
+      },
+      "cad_construction_logic": [
+        "construct mating pads",
+        "connect pads to owning bodies",
+        "preserve the frozen fixed transform"
+      ],
+      "verification": {
+        "attachment_rules": [
+          "parent carrier attached to parent body",
+          "child carrier attached to child body"
+        ],
+        "axis_rules": [
+          "axis angular error within evaluator tolerance",
+          "joint center within evaluator tolerance"
+        ],
+        "separation_rules": [
+          "parent and child remain separate top-level rigid groups",
+          "all forbidden fusion pairs absent"
+        ],
+        "clearance_rules": [],
+        "motion_validation_rule": "apply URDF FK rigid-group transforms at every frozen pose and accept only exact-collision-valid samples"
+      }
+    },
+    {
+      "interface_family": "rail_slider_interface",
+      "applicability": [
+        "prismatic joint",
+        "carriage and finger or linear guide"
+      ],
+      "required_mechanical_substructures": [
+        "guide rail",
+        "sliding carriage",
+        "travel clearance"
+      ],
+      "required_geometric_relations": [
+        "rail aligned with URDF translation axis",
+        "travel range unobstructed"
+      ],
+      "allowed_clearance_or_contact": "guided sliding clearance",
+      "typical_parent_child_layout": "gripper carriage to opposed finger",
+      "cad_realization_strategy": "rail and carriage envelopes with protected travel corridor",
+      "forbidden_configurations": [
+        "cylindrical rotary bore as only guide",
+        "solid bridge over travel path",
+        "Boolean Fuse between parent and child rigid groups",
+        "solid bridge crossing an allowed-motion clearance",
+        "connector that locks the intended degree of freedom"
+      ],
+      "verification_rules": [
+        "axis alignment",
+        "limit traversal",
+        "clear travel corridor"
+      ],
+      "uncertainty_notes": "Exact rail profile is not inferred.",
+      "joint_semantics": {
+        "compatible_joint_types": [
+          "prismatic"
+        ],
+        "allowed_dof": [
+          "translation_along_urdf_axis"
+        ],
+        "constrained_dof": [
+          "two_orthogonal_translations",
+          "rotation_x",
+          "rotation_y",
+          "rotation_z"
+        ],
+        "motion_axis_source": "sanitized_urdf_joint_axis",
+        "motion_range_semantics": "sample the sanitized URDF lower and upper translation limits"
+      },
+      "parent_side": {
+        "members": [
+          "guide_rail",
+          "parent_rail_support"
+        ],
+        "rigid_attachment": "rail and support are rigidly attached to the parent body"
+      },
+      "child_side": {
+        "members": [
+          "sliding_carriage",
+          "child_mount"
+        ],
+        "rigid_attachment": "carriage mount is rigidly attached to the child body"
+      },
+      "parent_child_relation": {
+        "allowed_contact_regions": [
+          "guide_bearing_surfaces"
+        ],
+        "clearance_regions": [
+          "travel_corridor",
+          "rail_side_clearance"
+        ],
+        "never_fuse": [
+          "guide_rail:sliding_carriage",
+          "parent_rigid_group:child_rigid_group"
+        ],
+        "relative_motion_rule": "child translates only along the URDF axis"
+      },
+      "motion_preserving_constraints": {
+        "radial_clearance": "positive guide side clearance",
+        "axial_clearance": "not applicable to travel direction",
+        "swept_clearance": "keep the complete URDF travel corridor free",
+        "required_clearance_regions": [
+          "carriage_travel_corridor",
+          "finger_neighbor_corridor"
+        ]
+      },
+      "cad_construction_logic": [
+        "construct parent rail",
+        "construct keyed child carriage",
+        "attach each to its own body",
+        "reserve the full translated swept corridor"
+      ],
+      "verification": {
+        "attachment_rules": [
+          "parent carrier attached to parent body",
+          "child carrier attached to child body"
+        ],
+        "axis_rules": [
+          "axis angular error within evaluator tolerance",
+          "joint center within evaluator tolerance"
+        ],
+        "separation_rules": [
+          "parent and child remain separate top-level rigid groups",
+          "all forbidden fusion pairs absent"
+        ],
+        "clearance_rules": [
+          "carriage_travel_corridor",
+          "finger_neighbor_corridor"
+        ],
+        "motion_validation_rule": "apply URDF FK rigid-group transforms at every frozen pose and accept only exact-collision-valid samples"
+      }
+    },
+    {
+      "interface_family": "end_tool_interface",
+      "applicability": [
+        "tool center frame",
+        "interface-only or virtual frame child"
+      ],
+      "required_mechanical_substructures": [
+        "reference frame metadata"
+      ],
+      "required_geometric_relations": [
+        "frame anchored to physical parent"
+      ],
+      "allowed_clearance_or_contact": "no generated child solid",
+      "typical_parent_child_layout": "physical tool carrier to virtual TCP",
+      "cad_realization_strategy": "metadata/helper frame only",
+      "forbidden_configurations": [
+        "generating a solid for virtual frame",
+        "treating marker as a physical mount",
+        "Boolean Fuse between parent and child rigid groups",
+        "solid bridge crossing an allowed-motion clearance",
+        "connector that locks the intended degree of freedom"
+      ],
+      "verification_rules": [
+        "virtual geometry count zero",
+        "frame retained"
+      ],
+      "uncertainty_notes": "This is not a physical joint realization.",
+      "joint_semantics": {
+        "compatible_joint_types": [
+          "fixed_virtual"
+        ],
+        "allowed_dof": [],
+        "constrained_dof": [
+          "all_relative_translation",
+          "all_relative_rotation"
+        ],
+        "motion_axis_source": "not_applicable",
+        "motion_range_semantics": "metadata frame follows the physical parent"
+      },
+      "parent_side": {
+        "members": [
+          "physical_tool_carrier",
+          "frame_anchor"
+        ],
+        "rigid_attachment": "frame anchor belongs to the physical parent"
+      },
+      "child_side": {
+        "members": [
+          "virtual_tool_frame"
+        ],
+        "rigid_attachment": "no child solid is generated"
+      },
+      "parent_child_relation": {
+        "allowed_contact_regions": [],
+        "clearance_regions": [],
+        "never_fuse": [],
+        "relative_motion_rule": "virtual frame follows the parent rigid transform"
+      },
+      "motion_preserving_constraints": {
+        "radial_clearance": "not applicable",
+        "axial_clearance": "not applicable",
+        "swept_clearance": "virtual frame has no occupancy",
+        "required_clearance_regions": []
+      },
+      "cad_construction_logic": [
+        "retain the tool frame as metadata",
+        "anchor metadata to the parent rigid group",
+        "generate no virtual-frame solid"
+      ],
+      "verification": {
+        "attachment_rules": [
+          "parent carrier attached to parent body",
+          "child carrier attached to child body"
+        ],
+        "axis_rules": [
+          "axis angular error within evaluator tolerance",
+          "joint center within evaluator tolerance"
+        ],
+        "separation_rules": [
+          "parent and child remain separate top-level rigid groups",
+          "all forbidden fusion pairs absent"
+        ],
+        "clearance_rules": [],
+        "motion_validation_rule": "apply URDF FK rigid-group transforms at every frozen pose and accept only exact-collision-valid samples"
+      }
+    }
+  ],
+  "motion_realization_scope": "generic parametric construction knowledge; no robot-specific dimensions or ground-truth internals"
 }
