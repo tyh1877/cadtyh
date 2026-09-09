@@ -1,5 +1,5 @@
 {
-  "status": "PASS",
+  "status": "PARTIAL",
   "forward_chain": {
     "urdf_to_motion_semantics": true,
     "knowledge_to_contract": true,
@@ -8,10 +8,11 @@
     "cad_ir_to_freecad": true,
     "urdf_limits_to_sampled_poses": true,
     "sampled_poses_to_swept_clearance": true,
-    "swept_clearance_to_m2_body_replanning": true,
+    "swept_clearance_to_m2_body_replanning": false,
     "m2_plan_to_changed_cad": true,
     "m2_plan_to_improved_motion_metric": true
   },
+  "limitation": "Counterfactuals show sensitivity, but the computed swept envelope is not consumed as an input by the M2 CAD constructor.",
   "counterfactuals": [
     {
       "name": "joint_limit_changes_swept_clearance",

@@ -24,21 +24,21 @@ the named artifact to exist and the final validation gate to confirm it.
 - [x] Sample at least q-min/25%/50%/75%/q-max (the frozen run uses nine poses),
   compute exact B-Rep narrow-phase collision and clearance, and preserve all
   cases/failures in `collision_table.csv` and `joint_range_metrics.json`.
-- [x] Generate motion-clearance and swept-occupancy evidence from generated CAD,
+- [ ] Generate motion-clearance and swept-occupancy evidence from generated CAD,
   URDF motion, contracts, and rigid groups only in
   `motion_clearance_specs.json` and `swept_volume_artifacts.json`.
-- [x] Generate per-pose playback, collision overlays, contact sheets, joint-state
+- [ ] Generate per-pose playback, collision overlays, contact sheets, joint-state
   tables, and M2 GIFs; index them in `motion_playback_manifest.json`.
-- [x] Apply at most two motion-driven repairs per M2 pilot and record scope,
+- [ ] Apply at most two motion-driven repairs per M2 pilot and record scope,
   before/after evidence, acceptance, regression, and R4 usage in
   `repair_contracts.json`.
-- [x] Prove the joint-limit, knowledge-family, and clearance counterfactuals in
+- [ ] Prove the joint-limit, knowledge-family, and clearance counterfactuals in
   `dataflow_audit.json`; prove prohibited GT inputs are absent from generation in
   `leakage_audit.json`.
 - [x] Report interface/attachment, joint geometry, motion, representation, repair,
   resource, and auxiliary frozen geometry metrics in `summary.json` and
   `report.md`.
-- [x] Re-read the protocol and pass the completion audit in `validation.json`.
+- [ ] Re-read the protocol and pass the completion audit in `validation.json`.
 
 Determinism rerun: `summary.json` and `collision_table.csv` reproduced byte-for-byte;
 see `results/try5a4/determinism_audit.json`.

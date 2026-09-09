@@ -1,5 +1,6 @@
 {
-  "status": "PASS",
+  "status": "HISTORICAL_NUMERIC_RUN_PASS",
+  "note": "The numeric summary and collision table were byte-stable before the later protocol-completeness audit revised the summary claim. Collision measurements remain unchanged; the old summary hash is retained as historical rerun evidence only.",
   "command": ".venv/Scripts/python.exe experiments/try5A/scripts/run_try5a4.py",
   "rerun_exit_code": 0,
   "summary": {

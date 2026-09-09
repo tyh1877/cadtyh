@@ -1,7 +1,7 @@
 {
   "experiment": "Try-5A.4",
-  "status": "COMPLETE",
-  "conclusion": "The three Robot A pilots now have separately modeled parent/child rigid groups, strict own-body attachment, URDF-driven relative motion, and exact-collision-valid sampled ranges under M2. This is pilot-level K3 evidence, not a whole-robot claim.",
+  "status": "PARTIAL_PROTOCOL_GAPS",
+  "conclusion": "The reproducible pilot-local run proves CAD object separation, own-body attachment, and exact pair-collision improvement, but it does not yet prove full URDF FK/world-axis motion, a mechanically constraining joint, causal swept-envelope-to-CAD planning, CAD pose renders, or Repair Scope Arbiter integration.",
   "pilot_joint_ids": [
     "J01",
     "J02",
@@ -173,7 +173,7 @@
   "representation_level": {
     "M0": "K1 pose-driven only",
     "M1": "K1 plus partial K2/K3 intervals",
-    "M2": "pilot-level K3 mechanically realized"
+    "M2": "pilot-local exact collision evidence; full K1/K2/K3 not yet proven"
   },
   "first_nonzero_collision_free_interval": "J01",
   "full_requested_range_collision_free_joints_M2": [
@@ -191,5 +191,5 @@
     "rollback_rate": 0.0
   },
   "freecad_primary_bottleneck": false,
-  "largest_remaining_bottleneck": "whole-robot neighbor-aware swept-corridor scaling while preserving coarse morphology"
+  "largest_remaining_bottleneck": "physically constraining joint realization plus correct URDF FK/world-axis and causal swept-envelope-to-CAD integration"
 }

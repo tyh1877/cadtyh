@@ -1,0 +1,53 @@
+{
+  "status": "INCOMPLETE",
+  "audit_scope": "Try-5A.4.md sections 1-34 and final questions 1-35",
+  "completed_evidence": [
+    "three real Robot A pilot joints selected",
+    "all seven interface knowledge families enriched",
+    "motion-aware contracts and rigid-group ownership recorded",
+    "M1/M2 own-body attachment passes in exact FreeCAD topology checks",
+    "parent and child remain separate top-level CAD objects",
+    "81 local pose-pair exact B-Rep collision evaluations preserved",
+    "M0/M1/M2 CAD, tables, schematic playback, contact sheets, and GIFs generated",
+    "joint-limit, family-volume, and clearance sensitivity counterfactuals pass",
+    "leakage audit and deterministic rerun pass"
+  ],
+  "open_hard_gates": [
+    {
+      "requirement": "M0 must use the frozen current Try-5A.3 K1 realization",
+      "finding": "M0 reconstructs a K1-style synthetic overlapping-carrier baseline instead of loading the original K1 CAD.",
+      "required_evidence": "evaluate the frozen A.3 K1 CAD or a hash-identical frozen realization"
+    },
+    {
+      "requirement": "Generated Link CAD + URDF FK + rigid-group transforms",
+      "finding": "The worker rotates child geometry about local Z; selected URDF axes are local Y. Full world FK, descendant links, joint relation, and EE pose are not evaluated.",
+      "required_evidence": "consume kinematics.py transforms and numerically verify axis, center, relative transform, and EE pose at every sample"
+    },
+    {
+      "requirement": "mechanically realized allowed DOF",
+      "finding": "The clearance-separated boss/support geometry does not include a pin, bearing, rail, or equivalent relation that constrains five DOFs while allowing the intended one.",
+      "required_evidence": "family-specific constraining geometry plus deterministic DOF/contact verification"
+    },
+    {
+      "requirement": "motion envelope must drive design",
+      "finding": "The M2 U-shaped body is chosen directly from the condition; the swept bbox is generated after CAD and is not a planner input. Interface sweep and nearby conflict region are not separately computed.",
+      "required_evidence": "persist sweep first, feed it into body-region planning, and prove a limit counterfactual changes downstream CAD"
+    },
+    {
+      "requirement": "formal Repair Scope Arbiter integration",
+      "finding": "R2 is hard-coded for all pilots; the existing arbiter is not invoked.",
+      "required_evidence": "arbiter inputs, decisions, repair iteration records, and deterministic acceptance/rollback"
+    },
+    {
+      "requirement": "motion playback of CAD links",
+      "finding": "Frames and GIFs are schematic matplotlib overlays, not transformed FreeCAD B-Rep renders.",
+      "required_evidence": "start/mid/end and full pose-sequence renders from transformed CAD shapes"
+    },
+    {
+      "requirement": "formal collision coverage and auxiliary metrics",
+      "finding": "Only the local parent/child pair is checked; expected contact, adjacent/nonadjacent robot collisions, continuous inter-sample behavior, and per-link A.4 geometry metrics are absent.",
+      "required_evidence": "full requested collision taxonomy/coverage and per-link plus whole-robot auxiliary geometry metrics"
+    }
+  ],
+  "revised_claim": "reproducible pilot-local feasibility scaffold with exact pair-collision improvement; not completed Try-5A.4 and not K3"
+}

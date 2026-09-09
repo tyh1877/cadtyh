@@ -1,5 +1,5 @@
 {
-  "status": "PASS",
+  "status": "FAIL",
   "protocol_re_read": true,
   "requirements": {
     "frozen_inputs": true,
@@ -13,7 +13,18 @@
     "dataflow_counterfactuals": true,
     "leakage_absent": true,
     "nonzero_sweep_free_rate": true,
-    "report_complete": true
+    "report_complete": true,
+    "m0_replays_frozen_k1_cad": false,
+    "urdf_fk_world_transform_verified": false,
+    "urdf_axis_mapping_verified": false,
+    "end_effector_pose_verified": false,
+    "mechanically_constrained_allowed_dof": false,
+    "interface_swept_occupancy_separately_computed": false,
+    "computed_swept_envelope_consumed_by_m2_planner": false,
+    "nearby_and_nonadjacent_collision_coverage": false,
+    "cad_brep_pose_renders": false,
+    "repair_scope_arbiter_integrated": false,
+    "per_link_a4_geometry_metrics_reported": false
   },
   "missing_artifacts": []
 }
