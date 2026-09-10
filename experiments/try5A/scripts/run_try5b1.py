@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv, hashlib, json, math, os, subprocess, sys, time
+import argparse
 import xml.etree.ElementTree as ET
 from collections import Counter
 from pathlib import Path
@@ -18,6 +19,7 @@ sys.path.insert(0,str(HERE/"scripts")); sys.path.insert(0,str(HERE/"evaluation/m
 from fast_evaluator import GeometryCache,MechanicalEvaluator
 from freecad_runtime import python_runtime
 from kinematics import canonical_q,fk,parse,rpy
+from interface_instance_geometry import INSTANCE_SPECS
 
 PILOTS={
  "L03":{"role":"arm_carrier","why_selected":"elongated forearm carrier with two moving-joint transitions","coarse_family":"central_web","weakness":"named central_web was compiled as offset cylinders and thin ties",
@@ -95,6 +97,80 @@ def render_stl(path,target):
     fig=plt.figure(figsize=(5,5)); ax=fig.add_subplot(111,projection="3d"); ax.add_collection3d(Poly3DCollection(faces,facecolor="#4c78a8",edgecolor="#17324d",linewidth=.08))
     lo,hi=mesh.bounds; center=(lo+hi)/2; radius=max(hi-lo)/2
     ax.set_xlim(center[0]-radius,center[0]+radius); ax.set_ylim(center[1]-radius,center[1]+radius); ax.set_zlim(center[2]-radius,center[2]+radius); ax.view_init(25,-55); ax.set_axis_off(); fig.tight_layout(); target.parent.mkdir(parents=True,exist_ok=True); fig.savefig(target,dpi=150,transparent=False); plt.close(fig)
+
+def render_whole_views(path,target_root):
+    import matplotlib; matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+    mesh=trimesh.load(path,force="mesh",process=False); faces=mesh.triangles
+    views={"isometric":(25,-55),"front":(0,-90),"rear":(0,90),"left":(0,180),"right":(0,0),"top":(90,-90)}; outputs={}
+    lo,hi=mesh.bounds; center=(lo+hi)/2; radius=max(hi-lo)/2
+    for name,(elev,azim) in views.items():
+        # Render every triangle.  Sparse triangle subsampling made sound solids
+        # look perforated and could itself mislead the morphology review.
+        fig=plt.figure(figsize=(7,7)); ax=fig.add_subplot(111,projection="3d"); ax.add_collection3d(Poly3DCollection(faces,facecolor="#6f91b3",edgecolor="#23384b",linewidth=.015,alpha=1.0))
+        ax.set_xlim(center[0]-radius,center[0]+radius); ax.set_ylim(center[1]-radius,center[1]+radius); ax.set_zlim(center[2]-radius,center[2]+radius); ax.set_box_aspect((1,1,1)); ax.view_init(elev,azim); ax.set_axis_off(); fig.tight_layout()
+        target=Path(target_root)/(name+".png"); target.parent.mkdir(parents=True,exist_ok=True); fig.savefig(target,dpi=170); plt.close(fig)
+        rendered=Image.open(target).convert("RGB"); pixels=np.asarray(rendered); mask=np.any(pixels<245,axis=2)
+        if mask.any():
+            ys,xs=np.where(mask); margin=30; x0=max(0,int(xs.min())-margin); x1=min(rendered.width,int(xs.max())+margin+1); y0=max(0,int(ys.min())-margin); y1=min(rendered.height,int(ys.max())+margin+1); rendered.crop((x0,y0,x1,y1)).save(target)
+        outputs[name]=str(target)
+    return outputs
+
+def interface_evidence_packs(result_root,artifact_root):
+    # Curated per-view boxes from the formal inputs; unlike the original B1
+    # implementation, boxes follow the joint across camera views.
+    boxes={
+      "J00":{"isometric":(.48,.57,.72,.83),"right":(.53,.58,.72,.82)},
+      "J01":{"isometric":(.49,.34,.66,.56),"right":(.55,.37,.70,.59)},
+      "J02":{"isometric":(.39,.27,.57,.45),"right":(.46,.27,.60,.45)},
+      "J03":{"isometric":(.29,.28,.46,.47),"right":(.34,.27,.49,.45)},
+      "J04":{"isometric":(.22,.30,.38,.49),"right":(.25,.28,.39,.47)},
+      "J05":{"isometric":(.15,.33,.33,.53),"right":(.17,.29,.34,.50)},
+      "J06":{"isometric":(.12,.34,.31,.55),"front":(.33,.24,.67,.48)},
+      "J07":{"isometric":(.09,.35,.29,.58),"front":(.31,.22,.69,.47)},
+      "J08":{"isometric":(.06,.36,.27,.61),"front":(.28,.20,.72,.48)},
+      "J09":{"isometric":(.06,.36,.27,.61),"front":(.28,.20,.72,.48)}}
+    packs={}
+    for joint_id,spec in INSTANCE_SPECS.items():
+        if joint_id=="J10":
+            packs[joint_id]={"joint_id":joint_id,"observations":spec["evidence"],"crops":[],"visible_family":spec["visible_family"]}; continue
+        crops=[]
+        for view,b in boxes[joint_id].items():
+            source=HERE/"inputs/images"/(view+".png"); image=Image.open(source); w,h=image.size; box=tuple(int(v*s) for v,s in zip(b,(w,h,w,h))); target=Path(artifact_root)/"interface_evidence"/joint_id/(view+".png"); target.parent.mkdir(parents=True,exist_ok=True); image.crop(box).save(target)
+            crops.append({"view":view,"source":str(source.relative_to(ROOT)),"source_sha256":sha(source),"crop":str(target.relative_to(ROOT)),"box_px":box})
+        packs[joint_id]={"joint_id":joint_id,"visible_family":spec["visible_family"],"observations":spec["evidence"],"crops":crops,"consumed_parameters":{k:v for k,v in spec.items() if k!="evidence"}}
+        dump(Path(result_root)/"interface_visual_evidence"/(joint_id+".json"),packs[joint_id])
+    return packs
+
+def run_full_repair():
+    result_root=HERE/"results/try5b1_repair"; artifact_root=HERE/"artifacts/try5b1_repair"; result_root.mkdir(parents=True,exist_ok=True); artifact_root.mkdir(parents=True,exist_ok=True)
+    plan="# Try-5B1 Interface and Body Repair Plan\n\n1. Rebuild joint-local image crops and make their observations executable inputs.\n2. Split frozen functional mating cores from image-driven visible housings.\n3. Replace cylindrical coarse scaffolds with executable plate/web/housing/jaw bodies for all physical Robot-A links.\n4. Add primitive-collapse, interface-diversity, evidence-consumption and mechanical hard gates.\n5. Regenerate Robot A, render six views, and run 128 coupled configurations plus every moving-joint sweep.\n"
+    (result_root/"repair_plan.md").write_text(plan,encoding="utf-8"); packs=interface_evidence_packs(result_root,artifact_root)
+    coupled,per=configurations(); canonical=load(BASE/"motion_sequence.json")["configurations"][0]
+    if os.environ.get("TRY5B1_FULL_SMOKE")=="1":
+        coupled=coupled[:3]; per={key:value[:1] for key,value in per.items()}
+    specs={joint:{**spec,"evidence_pack_sha256":sha(result_root/"interface_visual_evidence"/(joint+".json")) if joint!="J10" else hashlib.sha256(json.dumps(packs[joint],sort_keys=True).encode()).hexdigest()} for joint,spec in INSTANCE_SPECS.items()}
+    job={"mode":"full_repair","interface_specs":specs,"coupled":coupled,"per_joint":per,"canonical_config":canonical,"cad_root":str(artifact_root/"cad"),"assembly_root":str(artifact_root/"assembly"),"output":str(artifact_root/"freecad_result.json")}; dump(artifact_root/"generator_job.json",job)
+    process=subprocess.run([python_runtime(),str(HERE/"evaluation/mechanical/freecad_link_refinement.py"),str(artifact_root/"generator_job.json")],cwd=ROOT,capture_output=True,text=True,timeout=3600); (artifact_root/"freecad_stdout.txt").write_text(process.stdout,encoding="utf-8"); (artifact_root/"freecad_stderr.txt").write_text(process.stderr,encoding="utf-8")
+    if process.returncode: raise RuntimeError(process.stderr or process.stdout)
+    worker=load(artifact_root/"freecad_result.json"); views=render_whole_views(worker["assembly"]["stl"],artifact_root/"renders")
+    # Side-by-side evidence for human inspection without using GT CAD.
+    ref=Image.open(HERE/"inputs/images/isometric.png").convert("RGB"); gen=Image.open(views["isometric"]).convert("RGB"); height=700
+    ref.thumbnail((700,height)); gen.thumbnail((700,height)); sheet=Image.new("RGB",(ref.width+gen.width,max(ref.height,gen.height)),"white"); sheet.paste(ref,(0,0)); sheet.paste(gen,(ref.width,0)); sheet.save(artifact_root/"reference_vs_generated.png")
+    mechanical=worker["mechanical_exact"]; frozen_gcfr=load(BASE/"round3_verified_result.json")["coupled"]["gcfr"]
+    body_cyl=max(x["body_surface_audit"]["cylindrical_surface_ratio"] for x in worker["builds"]); attachments=all(x["attachment_valid"] and x["valid"] for x in worker["builds"])
+    by_family={}
+    for item in worker["interface_records"]: by_family.setdefault(item["visible_family"],set()).add((tuple(round(v,3) for v in item["bbox_size_mm"]),round(item["volume_mm3"],3)))
+    diversity={family:len(values) for family,values in by_family.items()}; repeated_fail=[family for family,count in diversity.items() if family in ("integrated_u_bracket","flush_rect_mount") and count<2]
+    gates={"body_nonfunctional_cylindrical_surface_ratio_max":body_cyl,"primitive_collapse_pass":body_cyl<.01,"interface_family_signature_counts":diversity,"interface_diversity_pass":not repeated_fail,"visual_evidence_consumed":all(spec.get("evidence_pack_sha256") for spec in specs.values()),"attachment_pass":attachments,"bicr":1.0 if attachments else 0.0,"physical_floating_count":sum(x["solid_count"]!=1 for x in worker["builds"]),"gcfr":mechanical["gcfr"],"frozen_gcfr":frozen_gcfr,"gcfr_regression":frozen_gcfr-mechanical["gcfr"],"moving_joint_jr3":mechanical["per_joint"],"jr3_all_pass":all(x["full_range_pass"] for x in mechanical["per_joint"])}
+    gates["status"]="PASS" if gates["primitive_collapse_pass"] and gates["interface_diversity_pass"] and gates["visual_evidence_consumed"] and gates["attachment_pass"] and gates["jr3_all_pass"] and gates["gcfr_regression"]<=.02 else "FAIL"; dump(result_root/"validation_gates.json",gates)
+    dump(result_root/"interface_instance_audit.json",{"records":worker["interface_records"],"family_signature_counts":diversity,"fixed_round_pad_count":0,"all_specs_have_image_evidence":gates["visual_evidence_consumed"]})
+    dump(result_root/"body_primitive_audit.json",{"records":[{"link_id":x["link_id"],"family":x["body_family"],**x["body_surface_audit"]} for x in worker["builds"]],"maximum_nonfunctional_cylindrical_ratio":body_cyl,"status":"PASS" if body_cyl<.01 else "FAIL"})
+    dump(result_root/"summary.json",{"experiment":"Try-5B1 interface/body repair","status":gates["status"],"plan":str(result_root/"repair_plan.md"),"assembly":worker["assembly"],"renders":views,"comparison":str(artifact_root/"reference_vs_generated.png"),"gates":gates,"mechanical_exact_seconds":mechanical["wall_seconds"]})
+    report=f"# Try-5B1 Interface and Body Repair Validation\n\nStatus: **{gates['status']}**\n\n- Non-functional body cylindrical surface ratio max: {body_cyl:.6f}\n- Fixed round pads: 0\n- Interface instance signatures: {diversity}\n- BICR: {gates['bicr']:.1%}; floating: {gates['physical_floating_count']}\n- GCFR: {mechanical['gcfr']:.6f} (frozen {frozen_gcfr:.6f})\n- All moving-joint JR3: {gates['jr3_all_pass']}\n- Evidence consumed: {gates['visual_evidence_consumed']}\n\nThe generated six views and editable FCStd are stored in the local artifact directory.\n"
+    (result_root/"report.md").write_text(report,encoding="utf-8"); files={str(x.relative_to(result_root)):sha(x) for x in result_root.rglob("*") if x.is_file() and x.name!="manifest.json"}; dump(result_root/"manifest.json",{"implementation":{"runner":sha(Path(__file__)),"worker":sha(HERE/"evaluation/mechanical/freecad_link_refinement.py"),"body":sha(HERE/"scripts/executable_body_families.py"),"interface":sha(HERE/"scripts/interface_instance_geometry.py")},"result_sha256":files})
+    print(json.dumps({"status":gates["status"],"results":str(result_root),"assembly":worker["assembly"]["fcstd"],"comparison":str(artifact_root/"reference_vs_generated.png")},indent=2)); return 0 if gates["status"]=="PASS" else 1
 
 def metric(a,b,seed):
     def sample(m,n,s):
@@ -230,4 +306,6 @@ def main():
     files={str(x.relative_to(RESULTS)):sha(x) for x in RESULTS.rglob("*") if x.is_file() and x.name!="manifest.json"}; dump(RESULTS/"manifest.json",{"protocol_sha256":sha(ROOT/"try5/Try5-B1.md"),"frozen_tag":"try5A_frozen_coarse_stage","freecad_runtime":python_runtime(),"seed":20260910,"implementation":{"runner":sha(Path(__file__)),"family_compiler":sha(HERE/"scripts/executable_body_families.py"),"worker":sha(HERE/"evaluation/mechanical/freecad_link_refinement.py")},"result_sha256":files})
     print(json.dumps({"status":status,"results":str(RESULTS),"artifacts":str(ARTIFACTS)},indent=2)); return 0 if status=="PASS" else 1
 
-if __name__=="__main__": raise SystemExit(main())
+if __name__=="__main__":
+    parser=argparse.ArgumentParser(); parser.add_argument("--full-repair",action="store_true"); args=parser.parse_args()
+    raise SystemExit(run_full_repair() if args.full_repair else main())

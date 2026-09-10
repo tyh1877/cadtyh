@@ -1,0 +1,66 @@
+{
+  "body_nonfunctional_cylindrical_surface_ratio_max": 0.0,
+  "primitive_collapse_pass": true,
+  "interface_family_signature_counts": {
+    "concealed_turntable": 2,
+    "integrated_u_bracket": 4,
+    "asymmetric_wrap_hinge": 2,
+    "flush_rect_mount": 3,
+    "compact_wrist_roll": 2,
+    "rect_rail_slider": 2
+  },
+  "interface_diversity_pass": true,
+  "visual_evidence_consumed": true,
+  "attachment_pass": true,
+  "bicr": 1.0,
+  "physical_floating_count": 0,
+  "gcfr": 0.90625,
+  "frozen_gcfr": 0.9140625,
+  "gcfr_regression": 0.0078125,
+  "moving_joint_jr3": [
+    {
+      "joint_id": "J00",
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J01",
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J02",
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J03",
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J05",
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J08",
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J09",
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_rows": []
+    }
+  ],
+  "jr3_all_pass": true,
+  "status": "PASS"
+}

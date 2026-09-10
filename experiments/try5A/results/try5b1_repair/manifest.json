@@ -1,0 +1,26 @@
+{
+  "implementation": {
+    "runner": "9fffc26c636a85ed70f92a6fffb67c269992ab0ca51f545e95c71e581db2f89f",
+    "worker": "362d58d5e2ae16c6421bc55905928e01c60ca1928dd44d9c6bf2ce1e3c1072c2",
+    "body": "86ac9c73d85dd40463114790dac95f0c14900f7cdd85d45bca9f22ec95477c35",
+    "interface": "972fb537c0b10515be92e08eef604f1b0c29a02ebbc3724de0ffadccef38d226"
+  },
+  "result_sha256": {
+    "body_primitive_audit.json": "325089c750accf638401a06cc2e27ddb33b87ac4068509d03224ca8e0a26e0e7",
+    "interface_instance_audit.json": "6e844b48c5cf7ea2039ffbe1c38579c7a90f3906bae2fe66a9b996ee3749639e",
+    "repair_plan.md": "b5c140a38f46fcfae53ba8a09c4b32c06514b4a46dcc69563e22e8381d01acc0",
+    "report.md": "e38850b84e0dacb52790e5d810c676de2a8cb0dcfb60550f112aa5c803b463a9",
+    "summary.json": "b777999bf2d3ccf4cb443f7bdd5e2e42f253b9105e9a0415a2fdc96fd562f9cf",
+    "validation_gates.json": "bd73924345cc9aa92acfae78a7e447f2d4d9ae19a358c5d527c901457d9897fb",
+    "interface_visual_evidence\\J00.json": "395647d5f57a59a31ec3a6bc320e607db171dce84df783720322a7d36ff3f60c",
+    "interface_visual_evidence\\J01.json": "cd76fa721fdc37eadcc3eee999118e9cd22d43efd0cdda47f078b1cff509e497",
+    "interface_visual_evidence\\J02.json": "0b276a9143106c16493b1497b5ae5b3239e82f620e3f213a548f0e761ee0f415",
+    "interface_visual_evidence\\J03.json": "1e3c007e67b593bd36bd4fa76778fc727e5ae83cd7eb43165abc33d5fd07ad72",
+    "interface_visual_evidence\\J04.json": "558976e291141441f7aa6aabdf612526971ab3ef95490c57ef89707fbaac9462",
+    "interface_visual_evidence\\J05.json": "f24d6a82e99b1dafd799e7f3569b41d289a09d1cd54290fb824277f898470e40",
+    "interface_visual_evidence\\J06.json": "ea5c6cf64549dec69544bac6efd35d3481bcb60da3bfbd307f0adde1f94e5a62",
+    "interface_visual_evidence\\J07.json": "d7f3f3af01b93ccce116dbbe875b77a69ceb201d831df8109853d5787bd89442",
+    "interface_visual_evidence\\J08.json": "2c593ce99e6d1cb578f34a89ba7375aba021a4c12de1e06a75c518372d61cb17",
+    "interface_visual_evidence\\J09.json": "a2f4951a9f139c0af3f006221a684307daa1392a08760a84c7b943dc7f41d9f6"
+  }
+}

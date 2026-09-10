@@ -1,0 +1,116 @@
+{
+  "records": [
+    {
+      "link_id": "L00",
+      "family": "robotA_L00",
+      "surface_area_mm2": 7313.7708498984775,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 7313.7708498984775
+      }
+    },
+    {
+      "link_id": "L01",
+      "family": "robotA_L01",
+      "surface_area_mm2": 4775.0,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 4775.0
+      }
+    },
+    {
+      "link_id": "L02",
+      "family": "robotA_L02",
+      "surface_area_mm2": 9444.187803890745,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 9444.187803890745
+      }
+    },
+    {
+      "link_id": "L03",
+      "family": "robotA_L03",
+      "surface_area_mm2": 6131.999999999999,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 6131.999999999999
+      }
+    },
+    {
+      "link_id": "L04",
+      "family": "robotA_L04",
+      "surface_area_mm2": 4728.0,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 4728.0
+      }
+    },
+    {
+      "link_id": "L05",
+      "family": "robotA_L05",
+      "surface_area_mm2": 1091.9999999999998,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 1091.9999999999998
+      }
+    },
+    {
+      "link_id": "L06",
+      "family": "robotA_L06",
+      "surface_area_mm2": 1472.0,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 1472.0
+      }
+    },
+    {
+      "link_id": "L07",
+      "family": "robotA_L07",
+      "surface_area_mm2": 3980.0,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 3980.0
+      }
+    },
+    {
+      "link_id": "L08",
+      "family": "robotA_L08",
+      "surface_area_mm2": 2175.9999999999995,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 2175.9999999999995
+      }
+    },
+    {
+      "link_id": "L09",
+      "family": "robotA_L09",
+      "surface_area_mm2": 3601.3794214898953,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 3601.3794214898953
+      }
+    },
+    {
+      "link_id": "L10",
+      "family": "robotA_L10",
+      "surface_area_mm2": 3601.3794214898953,
+      "cylindrical_surface_area_mm2": 0.0,
+      "cylindrical_surface_ratio": 0.0,
+      "surface_types_mm2": {
+        "Plane": 3601.3794214898953
+      }
+    }
+  ],
+  "maximum_nonfunctional_cylindrical_ratio": 0.0,
+  "status": "PASS"
+}

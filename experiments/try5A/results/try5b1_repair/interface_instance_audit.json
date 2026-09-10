@@ -1,0 +1,279 @@
+{
+  "records": [
+    {
+      "joint_id": "J00",
+      "link_id": "L00",
+      "side": "parent",
+      "visible_family": "concealed_turntable",
+      "volume_mm3": 3870.190821810339,
+      "bbox_size_mm": [
+        32.0,
+        32.0,
+        8.0
+      ],
+      "evidence": [
+        "front:base pedestal",
+        "isometric:turntable mostly concealed"
+      ]
+    },
+    {
+      "joint_id": "J00",
+      "link_id": "L01",
+      "side": "child",
+      "visible_family": "concealed_turntable",
+      "volume_mm3": 2835.2873698647886,
+      "bbox_size_mm": [
+        19.0,
+        19.0,
+        10.0
+      ],
+      "evidence": [
+        "front:base pedestal",
+        "isometric:turntable mostly concealed"
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "link_id": "L01",
+      "side": "parent",
+      "visible_family": "integrated_u_bracket",
+      "volume_mm3": 8048.814111492437,
+      "bbox_size_mm": [
+        30.0,
+        24.0,
+        40.0
+      ],
+      "evidence": [
+        "right:shoulder U bracket",
+        "isometric:rectangular side walls"
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "link_id": "L02",
+      "side": "child",
+      "visible_family": "integrated_u_bracket",
+      "volume_mm3": 4425.498739258869,
+      "bbox_size_mm": [
+        20.1,
+        16.0,
+        20.1
+      ],
+      "evidence": [
+        "right:shoulder U bracket",
+        "isometric:rectangular side walls"
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "link_id": "L02",
+      "side": "parent",
+      "visible_family": "integrated_u_bracket",
+      "volume_mm3": 8251.823486780102,
+      "bbox_size_mm": [
+        33.84556091828117,
+        22.0,
+        46.61202526197442
+      ],
+      "evidence": [
+        "right:upper-arm plate wraps elbow",
+        "isometric:semi-circular plate end"
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "link_id": "L03",
+      "side": "child",
+      "visible_family": "integrated_u_bracket",
+      "volume_mm3": 3299.745454319749,
+      "bbox_size_mm": [
+        18.76,
+        14.0,
+        18.76
+      ],
+      "evidence": [
+        "right:upper-arm plate wraps elbow",
+        "isometric:semi-circular plate end"
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "link_id": "L03",
+      "side": "parent",
+      "visible_family": "asymmetric_wrap_hinge",
+      "volume_mm3": 6836.9323073744545,
+      "bbox_size_mm": [
+        40.0,
+        20.0,
+        26.0
+      ],
+      "evidence": [
+        "right:forearm side plate wraps wrist",
+        "isometric:joint integrated into profile"
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "link_id": "L04",
+      "side": "child",
+      "visible_family": "asymmetric_wrap_hinge",
+      "volume_mm3": 2371.428701288133,
+      "bbox_size_mm": [
+        17.42,
+        12.0,
+        17.42
+      ],
+      "evidence": [
+        "right:forearm side plate wraps wrist",
+        "isometric:joint integrated into profile"
+      ]
+    },
+    {
+      "joint_id": "J04",
+      "link_id": "L04",
+      "side": "parent",
+      "visible_family": "flush_rect_mount",
+      "volume_mm3": 288.0,
+      "bbox_size_mm": [
+        1.0,
+        16.0,
+        18.0
+      ],
+      "evidence": [
+        "isometric:wrist-to-tool rectangular transition"
+      ]
+    },
+    {
+      "joint_id": "J05",
+      "link_id": "L05",
+      "side": "parent",
+      "visible_family": "compact_wrist_roll",
+      "volume_mm3": 1760.2971956594329,
+      "bbox_size_mm": [
+        8.0,
+        24.0,
+        24.0
+      ],
+      "evidence": [
+        "right:compact boxed roll housing",
+        "isometric:not an arm-style clevis"
+      ]
+    },
+    {
+      "joint_id": "J06",
+      "link_id": "L05",
+      "side": "parent",
+      "visible_family": "flush_rect_mount",
+      "volume_mm3": 307.99999999999994,
+      "bbox_size_mm": [
+        1.0,
+        22.0,
+        14.0
+      ],
+      "evidence": [
+        "front:bar fixed inside gripper housing"
+      ]
+    },
+    {
+      "joint_id": "J05",
+      "link_id": "L06",
+      "side": "child",
+      "visible_family": "compact_wrist_roll",
+      "volume_mm3": 2010.6192982974671,
+      "bbox_size_mm": [
+        10.0,
+        16.0,
+        16.0
+      ],
+      "evidence": [
+        "right:compact boxed roll housing",
+        "isometric:not an arm-style clevis"
+      ]
+    },
+    {
+      "joint_id": "J07",
+      "link_id": "L07",
+      "side": "parent",
+      "visible_family": "flush_rect_mount",
+      "volume_mm3": 2448.0,
+      "bbox_size_mm": [
+        6.0,
+        34.0,
+        12.0
+      ],
+      "evidence": [
+        "right:palm/bar flush attachment"
+      ]
+    },
+    {
+      "joint_id": "J08",
+      "link_id": "L08",
+      "side": "parent",
+      "visible_family": "rect_rail_slider",
+      "volume_mm3": 1280.0,
+      "bbox_size_mm": [
+        4.0,
+        32.0,
+        23.0
+      ],
+      "evidence": [
+        "front:parallel rectangular finger guides"
+      ]
+    },
+    {
+      "joint_id": "J09",
+      "link_id": "L08",
+      "side": "parent",
+      "visible_family": "rect_rail_slider",
+      "volume_mm3": 1280.0,
+      "bbox_size_mm": [
+        4.0,
+        32.0,
+        23.0
+      ],
+      "evidence": [
+        "front:mirrored rectangular finger guides"
+      ]
+    },
+    {
+      "joint_id": "J08",
+      "link_id": "L09",
+      "side": "child",
+      "visible_family": "rect_rail_slider",
+      "volume_mm3": 319.99999999999994,
+      "bbox_size_mm": [
+        4.0,
+        8.0,
+        10.0
+      ],
+      "evidence": [
+        "front:parallel rectangular finger guides"
+      ]
+    },
+    {
+      "joint_id": "J09",
+      "link_id": "L10",
+      "side": "child",
+      "visible_family": "rect_rail_slider",
+      "volume_mm3": 319.99999999999994,
+      "bbox_size_mm": [
+        4.0,
+        8.0,
+        10.0
+      ],
+      "evidence": [
+        "front:mirrored rectangular finger guides"
+      ]
+    }
+  ],
+  "family_signature_counts": {
+    "concealed_turntable": 2,
+    "integrated_u_bracket": 4,
+    "asymmetric_wrap_hinge": 2,
+    "flush_rect_mount": 3,
+    "compact_wrist_roll": 2,
+    "rect_rail_slider": 2
+  },
+  "fixed_round_pad_count": 0,
+  "all_specs_have_image_evidence": true
+}

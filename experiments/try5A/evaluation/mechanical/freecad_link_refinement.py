@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parents[4]
 SCRIPTS = ROOT / "experiments/try5A/scripts"
 sys.path.insert(0, str(SCRIPTS))
 import freecad_motion_realization as frozen
-from executable_body_families import compile_body
+from executable_body_families import compile_body, compile_robot_body
+from interface_instance_geometry import build_interface_half, oriented_prism
 
 
 def load(path): return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -97,8 +98,105 @@ def export(link_id, condition, built, root):
             "volume_mm3":float(built["group"].Volume),"bbox":frozen.bounds(built["group"])}
 
 
+def rectangular_attachment_closure(body, interfaces):
+    def bridge(p1,p2):
+        start=np.asarray([p1.x,p1.y,p1.z],dtype=float); end=np.asarray([p2.x,p2.y,p2.z],dtype=float); d=end-start; n=float(np.linalg.norm(d))
+        return None if n<1e-6 else oriented_prism(start-d/n,end+d/n,3.2,3.2)
+    group=body
+    for interface in interfaces:
+        if interface is None or interface.isNull(): continue
+        for solid in list(interface.Solids) or [interface]:
+            distance,points,_=group.distToShape(solid)
+            if distance>1e-6 and points:
+                p1,p2=points[0]; connector=bridge(p1,p2)
+                if connector is not None: group=group.fuse(connector)
+            group=group.fuse(solid)
+    group=group.removeSplitter(); solids=list(group.Solids)
+    if len(solids)>1:
+        connected=solids[0]
+        for solid in solids[1:]:
+            _,points,_=connected.distToShape(solid)
+            if points:
+                p1,p2=points[0]; connector=bridge(p1,p2)
+                if connector is not None: connected=connected.fuse(connector)
+                connected=connected.fuse(solid).removeSplitter()
+        group=connected
+    return group
+
+
+def surface_audit(shape):
+    total=sum(float(face.Area) for face in shape.Faces); cylinders=0.0
+    surface_types= {}
+    for face in shape.Faces:
+        name=type(face.Surface).__name__; surface_types[name]=surface_types.get(name,0.0)+float(face.Area)
+        if "Cylinder" in name: cylinders+=float(face.Area)
+    return {"surface_area_mm2":total,"cylindrical_surface_area_mm2":cylinders,"cylindrical_surface_ratio":cylinders/max(total,1e-9),"surface_types_mm2":surface_types}
+
+
+def clear_parent_mating_envelopes(body, link_id, contracts, specs):
+    value=body
+    for contract in contracts:
+        if contract.get("virtual_child") or contract["parent"]!=link_id or contract["joint_type"] not in ("revolute","continuous"): continue
+        spec=specs[contract["joint_id"]]; family=spec["visible_family"]; center=contract["origin_xyz_mm"]; axis=contract["axis_parent"]
+        if family=="concealed_turntable": radius,depth=10.1,spec["depth"]+4
+        elif family in ("integrated_u_bracket","asymmetric_wrap_hinge"): radius,depth=spec["outer"]+10.0,spec["spacing"]-spec["plate_thickness"]+2
+        elif family=="compact_wrist_roll": radius,depth=8.5,spec["depth"]+4
+        else: continue
+        value=value.cut(frozen.cylinder_axis(radius,depth,center,axis)).removeSplitter()
+    return value
+
+
+def full_robot_repair(job):
+    base=ROOT/"experiments/try5A/results/try5a5"; contracts=load(base/"motion_interface_contracts.json")
+    classification=load(base/"link_realization_classification.json"); physical=[x["link_id"] for x in classification if x["realization_type"]!="virtual_frame"]
+    shapes={}; body_shapes={}; half_shapes={}; builds=[]; interface_records=[]
+    for link_id in physical:
+        body=compile_robot_body(link_id)
+        # Audit the positive body primitive before subtracting protected mating
+        # envelopes.  Cylindrical faces created by a clearance cut are void
+        # boundaries, not the cylinder-body collapse that this gate targets.
+        positive_body_surface_audit=surface_audit(body["shape"])
+        body["shape"]=clear_parent_mating_envelopes(body["shape"],link_id,contracts,job["interface_specs"]); halves=[]; metadata=[]
+        for contract in contracts:
+            if contract.get("virtual_child") or link_id not in (contract["parent"],contract["child"]): continue
+            side="parent" if contract["parent"]==link_id else "child"; half,meta=build_interface_half(contract,side,job["interface_specs"][contract["joint_id"]]); halves.append(half); half_shapes[(link_id,contract["joint_id"])]=half; metadata.append({"joint_id":contract["joint_id"],"side":side,**meta})
+            if half is not None:
+                bb=frozen.bounds(half); interface_records.append({"joint_id":contract["joint_id"],"link_id":link_id,"side":side,"visible_family":meta["visible_family"],"volume_mm3":float(half.Volume),"bbox_size_mm":bb["size_mm"],"evidence":meta["evidence"]})
+        group=rectangular_attachment_closure(body["shape"],halves); built={"shape":body["shape"],"group":group,"executed_family":body["executed_family"],"features":body["features"]}
+        artifact=export(link_id,"FULL_REPAIR",built,job["cad_root"]); builds.append({"link_id":link_id,"body_family":body["executed_family"],"features":body["features"],"body_surface_audit":positive_body_surface_audit,"clearance_cut_surface_audit":surface_audit(body["shape"]),"group_surface_audit":surface_audit(group),"solid_count":len(group.Solids),"attachment_valid":len(group.Solids)==1,"valid":group.isValid() and not group.isNull(),"interfaces":metadata,"artifact":artifact}); shapes[link_id]=group; body_shapes[link_id]=body["shape"]
+    diagnostic=[]; config=job["coupled"][0]
+    for contract in contracts:
+        if contract.get("virtual_child") or contract["joint_type"]=="fixed": continue
+        p,c=contract["parent"],contract["child"]; tp=config["world_transforms"][p]; tc=config["world_transforms"][c]
+        pb=frozen.moved(body_shapes[p],tp); cb=frozen.moved(body_shapes[c],tc); ph=frozen.moved(half_shapes[(p,contract["joint_id"])],tp); ch=frozen.moved(half_shapes[(c,contract["joint_id"])],tc)
+        diagnostic.append({"joint_id":contract["joint_id"],"parent_body_child_body":frozen.common_volume(pb,cb),"parent_body_child_half":frozen.common_volume(pb,ch),"parent_half_child_body":frozen.common_volume(ph,cb),"parent_half_child_half":frozen.common_volume(ph,ch)})
+    exact_start=time.perf_counter(); coupled_rows=[]; flags=[]
+    for config in job["coupled"]:
+        rows,ok=frozen.exact_config(config,shapes,contracts,physical); coupled_rows.extend(rows); flags.append(ok)
+    pair_component_diagnostic=[]
+    for config in job["coupled"][:3]:
+        for a,b in (("L01","L02"),):
+            ca={"body":body_shapes[a],**{joint:shape for (link,joint),shape in half_shapes.items() if link==a and shape is not None}}
+            cb={"body":body_shapes[b],**{joint:shape for (link,joint),shape in half_shapes.items() if link==b and shape is not None}}
+            for na,sa in ca.items():
+                for nb,sb in cb.items():
+                    volume=frozen.common_volume(frozen.moved(sa,config["world_transforms"][a]),frozen.moved(sb,config["world_transforms"][b]))
+                    if volume>1e-6: pair_component_diagnostic.append({"config_id":config["config_id"],"link_a_component":na,"link_b_component":nb,"common_mm3":volume})
+    per_joint=[]
+    for joint_id,configs in job["per_joint"].items():
+        jflags=[]; collision_rows=[]
+        for config in configs:
+            rows,ok=frozen.exact_config(config,shapes,contracts,physical); jflags.append(ok)
+            collision_rows.extend(row for row in rows if row.get("classification") in ("ADJACENT_UNINTENDED_COLLISION","NONADJACENT_COLLISION"))
+        per_joint.append({"joint_id":joint_id,"jr3":sum(jflags)/len(jflags),"full_range_pass":all(jflags),"collision_rows":collision_rows})
+    assembly=frozen.save_assembly(job["assembly_root"],"FULL_REPAIR",shapes,job["canonical_config"],physical)
+    dump(job["output"],{"status":"PASS","mode":"full_robot_interface_body_repair","builds":builds,"interface_records":interface_records,"joint_overlap_diagnostic":diagnostic,"pair_component_diagnostic":pair_component_diagnostic,"mechanical_exact":{"wall_seconds":time.perf_counter()-exact_start,"configuration_count":len(flags),"valid_count":sum(flags),"gcfr":sum(flags)/len(flags),"rows":coupled_rows,"per_joint":per_joint},"assembly":assembly,"physical_links":physical})
+
+
 def main():
     job=load(sys.argv[1]); base=ROOT/"experiments/try5A/results/try5a5"; contracts=load(base/"motion_interface_contracts.json")
+    if job.get("mode")=="full_repair":
+        full_robot_repair(job); return
     classification=load(base/"link_realization_classification.json"); physical=[x["link_id"] for x in classification if x["realization_type"]!="virtual_frame"]
     condition_shapes={}; builds=[]
     for condition in ("F0","F1","F2"):

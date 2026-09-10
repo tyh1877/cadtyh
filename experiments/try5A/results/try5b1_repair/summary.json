@@ -1,0 +1,92 @@
+{
+  "experiment": "Try-5B1 interface/body repair",
+  "status": "PASS",
+  "plan": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\results\\try5b1_repair\\repair_plan.md",
+  "assembly": {
+    "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\assembly\\FULL_REPAIR\\assembly\\whole_robot.FCStd",
+    "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\assembly\\FULL_REPAIR\\assembly\\whole_robot.step",
+    "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\assembly\\FULL_REPAIR\\assembly\\whole_robot.stl",
+    "reopen_recompute": true,
+    "sha256": {
+      "whole_robot.FCStd": "2c90ab047b4ee71cdd4e020edffa305183de96ce21f057d503cbfc19f42ba998",
+      "whole_robot.step": "c916b2458fc291e732a6cd96f6430e56ab9120fbd48addc5ee6aca8c4b98c886",
+      "whole_robot.stl": "b45733389e4c56bd5b1c49121e48e4decfb9dcbac1da96d049f7f57f7439a67e"
+    }
+  },
+  "renders": {
+    "isometric": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\renders\\isometric.png",
+    "front": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\renders\\front.png",
+    "rear": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\renders\\rear.png",
+    "left": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\renders\\left.png",
+    "right": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\renders\\right.png",
+    "top": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\renders\\top.png"
+  },
+  "comparison": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1_repair\\reference_vs_generated.png",
+  "gates": {
+    "body_nonfunctional_cylindrical_surface_ratio_max": 0.0,
+    "primitive_collapse_pass": true,
+    "interface_family_signature_counts": {
+      "concealed_turntable": 2,
+      "integrated_u_bracket": 4,
+      "asymmetric_wrap_hinge": 2,
+      "flush_rect_mount": 3,
+      "compact_wrist_roll": 2,
+      "rect_rail_slider": 2
+    },
+    "interface_diversity_pass": true,
+    "visual_evidence_consumed": true,
+    "attachment_pass": true,
+    "bicr": 1.0,
+    "physical_floating_count": 0,
+    "gcfr": 0.90625,
+    "frozen_gcfr": 0.9140625,
+    "gcfr_regression": 0.0078125,
+    "moving_joint_jr3": [
+      {
+        "joint_id": "J00",
+        "jr3": 1.0,
+        "full_range_pass": true,
+        "collision_rows": []
+      },
+      {
+        "joint_id": "J01",
+        "jr3": 1.0,
+        "full_range_pass": true,
+        "collision_rows": []
+      },
+      {
+        "joint_id": "J02",
+        "jr3": 1.0,
+        "full_range_pass": true,
+        "collision_rows": []
+      },
+      {
+        "joint_id": "J03",
+        "jr3": 1.0,
+        "full_range_pass": true,
+        "collision_rows": []
+      },
+      {
+        "joint_id": "J05",
+        "jr3": 1.0,
+        "full_range_pass": true,
+        "collision_rows": []
+      },
+      {
+        "joint_id": "J08",
+        "jr3": 1.0,
+        "full_range_pass": true,
+        "collision_rows": []
+      },
+      {
+        "joint_id": "J09",
+        "jr3": 1.0,
+        "full_range_pass": true,
+        "collision_rows": []
+      }
+    ],
+    "jr3_all_pass": true,
+    "status": "PASS"
+  },
+  "mechanical_exact_seconds": 94.5718557999935
+}

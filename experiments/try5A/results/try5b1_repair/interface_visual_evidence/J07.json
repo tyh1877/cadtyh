@@ -1,0 +1,41 @@
+{
+  "joint_id": "J07",
+  "visible_family": "flush_rect_mount",
+  "observations": [
+    "right:palm/bar flush attachment"
+  ],
+  "crops": [
+    {
+      "view": "isometric",
+      "source": "experiments\\try5A\\inputs\\images\\isometric.png",
+      "source_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J07\\isometric.png",
+      "box_px": [
+        126,
+        489,
+        406,
+        812
+      ]
+    },
+    {
+      "view": "front",
+      "source": "experiments\\try5A\\inputs\\images\\front.png",
+      "source_sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J07\\front.png",
+      "box_px": [
+        434,
+        308,
+        965,
+        658
+      ]
+    }
+  ],
+  "consumed_parameters": {
+    "visible_family": "flush_rect_mount",
+    "size": [
+      6,
+      34,
+      12
+    ]
+  }
+}

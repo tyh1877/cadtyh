@@ -1,0 +1,39 @@
+{
+  "joint_id": "J05",
+  "visible_family": "compact_wrist_roll",
+  "observations": [
+    "right:compact boxed roll housing",
+    "isometric:not an arm-style clevis"
+  ],
+  "crops": [
+    {
+      "view": "isometric",
+      "source": "experiments\\try5A\\inputs\\images\\isometric.png",
+      "source_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J05\\isometric.png",
+      "box_px": [
+        210,
+        462,
+        462,
+        742
+      ]
+    },
+    {
+      "view": "right",
+      "source": "experiments\\try5A\\inputs\\images\\right.png",
+      "source_sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J05\\right.png",
+      "box_px": [
+        238,
+        406,
+        476,
+        700
+      ]
+    }
+  ],
+  "consumed_parameters": {
+    "visible_family": "compact_wrist_roll",
+    "outer": 12.0,
+    "depth": 8.0
+  }
+}
