@@ -6,3 +6,7 @@ assembly and unified evaluation. See `results/phase13_report.md`, `a0_report.md`
 
 Heavy A0 link CAD and assembly files are ignored under `A0/` and `assemblies/`;
 tracked manifests, metrics and contact sheets preserve their hashes and results.
+
+Try-5A coarse reconstruction is frozen at Try-5A.5. See
+`../../try5A_frozen_spec.md` and revalidate the retained baseline with
+`.venv/Scripts/python.exe experiments/try5A/scripts/validate_frozen_coarse_stage.py`.

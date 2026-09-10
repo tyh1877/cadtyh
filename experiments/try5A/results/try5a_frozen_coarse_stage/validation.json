@@ -1,0 +1,13 @@
+{
+  "experiment": "Freeze Try-5A Coarse Reconstruction Stage",
+  "status": "PASS",
+  "baseline": "Try-5A.5",
+  "baseline_source_commit": "6d7f3085d406d80f97e834a924e4c03d3909788b",
+  "frozen_file_count": 26,
+  "artifact_manifest_entry_count": 50,
+  "local_artifact_status": "MANIFEST_ONLY",
+  "semantic_baseline_validation": "PASS",
+  "candidate_self_check": "PASS",
+  "mechanical_hard_failure_action": "ROLLBACK",
+  "try5b_started": false
+}
