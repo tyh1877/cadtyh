@@ -1,0 +1,14 @@
+{
+  "incidents": [
+    {
+      "stage": "initial runner",
+      "symptom": "repository venv lacked matplotlib imported by run_whole_robot",
+      "resolution": "consume frozen coupled configurations and regenerate joint sweeps through kinematics only"
+    },
+    {
+      "stage": "first Exact authority audit",
+      "symptom": "cad_ir/final produced 10/7040 classification mismatches and GCFR 0.90625",
+      "resolution": "artifact hashes identified cad_ir/round3_verified as the accepted CAD revision; rerun reached 0 mismatches and GCFR 0.9140625"
+    }
+  ]
+}

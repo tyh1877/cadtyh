@@ -1,0 +1,5 @@
+mode,total_pair_poses,culled,broad_candidates,mesh_candidates,exact_calls
+FAST_COLD,7040,384,2387,1887,1887
+FAST_WARM,7040,384,2387,1887,1887
+DIRTY_L03,7040,0,350,268,268
+FINAL_AUDIT,7040,384,2387,1887,2387

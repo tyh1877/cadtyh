@@ -1,0 +1,158 @@
+{
+  "experiment": "Try-5B0",
+  "status": "PASS",
+  "exact_reference": {
+    "provider_wall_seconds": 329.545119300019,
+    "shape_build_seconds": 1.1654976001009345,
+    "tessellation_seconds": 0.21494219987653196,
+    "exact_evaluation_seconds": 184.24356410000473,
+    "total_seconds": 185.6240038999822,
+    "gcfr": 0.9140625,
+    "collision_events": 46
+  },
+  "fast_cold": {
+    "total_pair_poses": 7040,
+    "culled_pair_poses": 384,
+    "reused_pair_poses": 0,
+    "broad_phase_candidates": 2387,
+    "mesh_candidates": 1887,
+    "exact_calls": 1887,
+    "bvh_node_tests": 109116,
+    "candidate_triangle_leaf_pairs": 157978,
+    "wall_seconds": 2.3268182000610977,
+    "cache_hit_rate": 0.9991736778846154,
+    "bvh_build_seconds": 0.17812420008704066,
+    "broad_phase_seconds": 0.33516930509358644,
+    "mesh_narrow_phase_seconds": 1.977457597386092,
+    "exact_seconds": 125.4635825001169
+  },
+  "fast_warm": {
+    "total_pair_poses": 7040,
+    "culled_pair_poses": 384,
+    "reused_pair_poses": 0,
+    "broad_phase_candidates": 2387,
+    "mesh_candidates": 1887,
+    "exact_calls": 1887,
+    "bvh_node_tests": 109116,
+    "candidate_triangle_leaf_pairs": 157978,
+    "wall_seconds": 2.10319699998945,
+    "cache_hit_rate": 0.9995868389423077,
+    "bvh_build_seconds": 0.0,
+    "broad_phase_seconds": 0.1269013062119484,
+    "mesh_narrow_phase_seconds": 1.9626053047832102,
+    "exact_seconds": 125.4635825001169
+  },
+  "dirty_L03": {
+    "total_pair_poses": 7040,
+    "culled_pair_poses": 0,
+    "reused_pair_poses": 5760,
+    "broad_phase_candidates": 350,
+    "mesh_candidates": 268,
+    "exact_calls": 268,
+    "bvh_node_tests": 17063,
+    "candidate_triangle_leaf_pairs": 20832,
+    "wall_seconds": 0.37005969998426735,
+    "cache_hit_rate": 0.9997398994277787,
+    "bvh_build_seconds": 0.03091189987026155,
+    "broad_phase_seconds": 0.05561709776520729,
+    "mesh_narrow_phase_seconds": 0.30639809975400567,
+    "exact_seconds": 20.731373600196093
+  },
+  "final_audit": {
+    "total_pair_poses": 7040,
+    "culled_pair_poses": 384,
+    "reused_pair_poses": 0,
+    "broad_phase_candidates": 2387,
+    "mesh_candidates": 1887,
+    "exact_calls": 2387,
+    "bvh_node_tests": 109116,
+    "candidate_triangle_leaf_pairs": 157978,
+    "wall_seconds": 2.1143318999093026,
+    "cache_hit_rate": 0.9997475674683312,
+    "bvh_build_seconds": 0.0,
+    "broad_phase_seconds": 0.12805690080858767,
+    "mesh_narrow_phase_seconds": 1.9724354951176792,
+    "exact_seconds": 0.0017104966100305319
+  },
+  "classification": {
+    "tp": 46,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6994,
+    "false_negative_rate": 0.0,
+    "false_positive_rate": 0.0,
+    "classification_agreement": 1.0
+  },
+  "dirty_classification": {
+    "tp": 46,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6994,
+    "false_negative_rate": 0.0,
+    "false_positive_rate": 0.0,
+    "classification_agreement": 1.0
+  },
+  "pre_exact": {
+    "false_positive_rate": 0.2632256219616814,
+    "suspicious_false_positives": 1841,
+    "near_contact_count": 1750,
+    "near_contact_recall": 1.0
+  },
+  "per_joint_fast_pose_agreement": true,
+  "repair_agreement": {
+    "repair_target_recall": 1.0,
+    "repair_target_precision": 1.0,
+    "top_k": 10,
+    "top_k_pair_agreement": 1.0
+  },
+  "exact_frozen_consistency": {
+    "status": "PASS",
+    "row_count": 7040,
+    "mismatch_count": 0,
+    "first_mismatches": []
+  },
+  "selective_exact_timing": {
+    "shape_build_seconds": 3.0846998000051826,
+    "baseline": {
+      "wall_seconds": 125.4635825001169,
+      "exact_calls": 1887,
+      "distance_calls": 836,
+      "result_digest": "063aa74deaa36b33f12971c122c50f63df7a45b1616f3ff631175350825106e1"
+    },
+    "dirty_L03": {
+      "wall_seconds": 20.731373600196093,
+      "exact_calls": 268,
+      "distance_calls": 109,
+      "result_digest": "9ea9167a204ced52894107259cedb6071d967a247063970fe5c0311dca1c550e"
+    }
+  },
+  "hard_gates": {
+    "exact_reconstruction_matches_frozen": true,
+    "false_negative_rate_zero": true,
+    "dirty_false_negative_rate_zero": true,
+    "per_joint_fast_classification_unchanged": true,
+    "near_contact_recall_100": true,
+    "repair_target_recall_100": true,
+    "jr3_unchanged": true,
+    "gcfr_unchanged": true,
+    "pose_classification_unchanged": true,
+    "final_audit_no_false_negative": true,
+    "bicr_definition_unchanged": true,
+    "interface_validity_unchanged": true
+  },
+  "performance_targets": {
+    "full_fast_speedup_ge_3": false,
+    "dirty_speedup_ge_10": false
+  },
+  "cache": {
+    "tessellated_once_per_revision": true,
+    "invalidated_links": [
+      "L03"
+    ]
+  },
+  "frozen_inputs": {
+    "urdf_sha256": "411f13c1deaec17c74fde58d8c6b8cb5f84566766cbc575925a4dd47dcb33fd9",
+    "contracts_sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d",
+    "exact_result_sha256": "0f199cb1215ce156cf29c5848c27ed4b32d78fe70d825ac4757ac7214bf5f324"
+  }
+}

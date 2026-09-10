@@ -1,0 +1,35 @@
+{
+  "experiment": "Try-5B0",
+  "protocol_sha256": "19ca51f4ed8604db324ac4875d2a5681b7d1fd207ba18b71647923d0af088d45",
+  "frozen_baseline_commit": "6d7f3085d406d80f97e834a924e4c03d3909788b",
+  "seed": 20260909,
+  "configuration_count": 128,
+  "tessellation_linear_deflection_mm": 0.35,
+  "near_contact_delta_mm": 1.0,
+  "freecad_runtime": "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\FreeCAD 1.1\\bin\\python.exe",
+  "implementation_sha256": {
+    "run_try5b0.py": "40b9756229fecb3a9796154eb48fdfcafa6b44a458b815465ec10302b82890b0",
+    "fast_evaluator.py": "4925d0340f1cb50e806ef377b97dc054ee188f3a5132931c4f554cb43e64527d",
+    "freecad_geometry_provider.py": "c3bc5ab6bfe85b47ba19a44a748226a1c6ac29f6c1a972dbb466c39df0b936cb",
+    "freecad_selective_exact.py": "1b8acb8d92091d3a209bac438fa558670fa2dbceaaad196e54a0e7c6bd1a05dd"
+  },
+  "heavy_artifact": {
+    "path": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b0\\exact_reference.json",
+    "sha256": "9594383314efd1d06645f66e8ce760a5919bb0da58e654c0c77aa8145cc0ceea"
+  },
+  "result_sha256": {
+    "cache_statistics.csv": "3e2bcc7e067c9cb25d4dc5fd3af9cbc2d910ac57ae642fe2c4dfb3360e981788",
+    "dataflow_audit.json": "aa219670b36beae581dd319ea543d00f4ff472d0338c0189356e173d1720aff3",
+    "dirty_set_benchmark.csv": "350ea6d24cb86176726b358455bbe46e780d14431e2ad7f6d24852c8379db93b",
+    "exact_reference_manifest.json": "bd1e676c6b9bb77e58e6deb8365a0c7f99a2a328093833fc29aa47a29c85728b",
+    "execution_incidents.json": "f4a086138333c92e54ec89825466dfd2ba4f22a4a0775eecf5717fa66400ac2d",
+    "fast_vs_exact_joint_sweep_results.csv": "9312f2725346b201405de710c14f91091c88d4e10738ae5affea44ba51bc7d5f",
+    "fast_vs_exact_pair_results.csv": "2fe2ce420525aa5cc933fceee401c0171c4df92fd03f222d8df83c6b140d45b5",
+    "fast_vs_exact_pose_results.csv": "b29cf93e61e2cd86a313e7231ca6dda1c0d68da51f7bc3fa28d856abc35442c5",
+    "repair_target_agreement.csv": "93c68cb41dedfb6d669f6f2776072a0a59a49854b781b861ef9820896bdfa2c7",
+    "selective_exact_calls.csv": "a20a944afd83297373271eb1a67e376d120f5d000f382c4aa4823e2a5eb4cd6e",
+    "speed_benchmark.csv": "2234904f0512e54f061e33d070c697f25b6ea3b9c41c29e9e6a41e56676dbd79",
+    "summary.json": "859fdd11eb1510201576512f9f2865ebaa1596ad644a72bb208ee0b1e3a736de",
+    "try5B0_fast_evaluator_report.md": "7f202f527f29925a5021230558030e50e11b2105d518656a8b1b31557df59735"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "geometry_chain": [
+    "CAD revision hash",
+    "one tessellation",
+    "mesh cache",
+    "BVH",
+    "pose transform",
+    "FAST collision",
+    "repair queue"
+  ],
+  "dirty_chain": [
+    "L03 legal benchmark revision",
+    "invalidate L03 only",
+    "affected L03 pairs",
+    "reuse unchanged pair-pose cache",
+    "global sanity check"
+  ],
+  "invalidated_links": [
+    "L03"
+  ],
+  "recomputed_pair_poses": 1280,
+  "reused_pair_poses": 5760
+}

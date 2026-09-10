@@ -1,0 +1,2 @@
+changed_link,invalidated_links,recomputed_pair_poses,reused_pair_poses,total_pair_poses,cache_hit_rate,wall_seconds,geometry_change,dirty_exact_wall_seconds,fast_stage_seconds,selective_exact_seconds,speedup_vs_full_exact
+L03,L03,1280,5760,7040,0.9997398994277787,0.37005969998426735,body_scale * 0.995,143.9211154000368,0.37005969998426735,20.731373600196093,6.820442637837623

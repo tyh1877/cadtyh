@@ -10,3 +10,8 @@ tracked manifests, metrics and contact sheets preserve their hashes and results.
 Try-5A coarse reconstruction is frozen at Try-5A.5. See
 `../../try5A_frozen_spec.md` and revalidate the retained baseline with
 `.venv/Scripts/python.exe experiments/try5A/scripts/validate_frozen_coarse_stage.py`.
+
+Try-5B0 adds cached mesh/BVH, dirty-set evaluation, and selective Exact checks to
+the canonical mechanical evaluator without changing the frozen Try-5A definitions.
+Run it with `.venv/Scripts/python.exe experiments/try5A/scripts/run_try5b0.py` and
+see `results/try5b0/try5B0_fast_evaluator_report.md`.
