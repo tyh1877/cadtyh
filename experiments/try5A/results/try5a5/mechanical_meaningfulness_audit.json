@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "formal_feature_count": 11,
+  "meaningless_patch_count": 0,
+  "required_fields": [
+    "feature_id",
+    "owning_link",
+    "mechanical_role",
+    "source_design_node",
+    "source_evidence",
+    "why_required",
+    "related_interface_or_body",
+    "cad_strategy"
+  ],
+  "negative_control": {
+    "candidate": {
+      "feature_id": "arbitrary_collision_box"
+    },
+    "rejected": true,
+    "reason": "missing mechanical role, provenance, ownership, requirement, relation, and CAD strategy"
+  },
+  "metric_gaming_geometry_accepted": false
+}

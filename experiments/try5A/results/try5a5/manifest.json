@@ -1,0 +1,41 @@
+{
+  "experiment": "Try-5A.5",
+  "protocol_sha256": "95fb4d9d1fa91964c4abe541e079f7e0f335b53bc96ede7bd326694886790113",
+  "git_commit_before_run": "e56a916fe9c01cefb5269a0c317b272753926c4c",
+  "formal_generator_inputs": {
+    "experiments/try5A/inputs/engineering_text/robot_A.md": "faeab10da52c3894b26301640a885f38081c482b7b0c92d766b415dff4583edb",
+    "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+    "try5/knowledge/robot_interfaces/families.json": "670933aaa45b68ef4c86e54f554e94b901eefb2af112267c261ce32093641aad",
+    "experiments/try5A/inputs/input_manifest.json": "ce655aa20beeac0bf137452f6b673eb77c9666a702f5c5455b9afd1f3ddbc1e3",
+    "experiments/try5A/inputs/images/front.png": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+    "experiments/try5A/inputs/images/isometric.png": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+    "experiments/try5A/inputs/images/left.png": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca",
+    "experiments/try5A/inputs/images/rear.png": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428",
+    "experiments/try5A/inputs/images/right.png": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+    "experiments/try5A/inputs/images/top.png": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+  },
+  "forbidden_generation_inputs": [
+    "A2 CAD",
+    "K1 CAD",
+    "A4 CAD",
+    "historical contracts/specs/sweeps/repairs/parameters",
+    "GT meshes"
+  ],
+  "kb_frozen_sha256": "670933aaa45b68ef4c86e54f554e94b901eefb2af112267c261ce32093641aad",
+  "seed": 20260909,
+  "coupled_sampler": "Sobol",
+  "coupled_count": 128,
+  "freecad_runtime": "D:\\software\\freeCAD\\install\\bin\\python.exe",
+  "implementation_hashes": {
+    "experiments/try5A/scripts/run_whole_robot.py": "cbc065937eca146d4872e652d67ee8e93e10e2442917c858acc1125259df86dd",
+    "experiments/try5A/scripts/freecad_motion_realization.py": "aeaabbe6deb17aa0be12ce4bd0a526bab076ec3d180e4462c59ac51f307944ce"
+  },
+  "completion_verification": {
+    "method": "formal Round-0 through Round-3 plus a full 128-configuration Round-3 semantic rerun",
+    "current_driver_sha256": "4945229e0452f98287874d23cc7131bd1e15287e9c396e60ae973ec84714b81c",
+    "current_worker_sha256": "c541b21da0286f1260875b8ee1d3cc64f812d8d8c9deec66e5d8454ce6841e2d",
+    "round3_verified_evaluation_sha256": "30def08530f6bcd9f91297cb8a3a939cc4e2855f3e536ba6c3edf40533fa0d6b",
+    "coupled_configuration_count": 128,
+    "semantic_rerun_stable": true
+  }
+}

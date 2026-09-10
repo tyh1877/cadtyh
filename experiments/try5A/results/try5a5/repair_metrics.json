@@ -1,0 +1,13 @@
+{
+  "scope_distribution": {
+    "R2_BODY_REGION_REPLAN": 11,
+    "R1_LOCAL_FEATURE_REPAIR": 6,
+    "R3_WHOLE_LINK_REPLAN": 16
+  },
+  "repair_rounds": 3,
+  "accepted_design_updates": 33,
+  "rollback_count": 1,
+  "regression_count": 1,
+  "unresolved_configurations": 11,
+  "final_frozen_ratio": 1.0
+}

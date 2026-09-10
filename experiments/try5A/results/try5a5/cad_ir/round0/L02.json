@@ -1,0 +1,64 @@
+{
+  "schema_version": "try5A5_link_cad_ir_v1",
+  "round_id": "round0",
+  "link_spec": {
+    "link_id": "L02",
+    "realization_type": "physical_body",
+    "parent_joint": "J01",
+    "child_joints": [
+      "J02"
+    ],
+    "rule": "URDF topology requires physical load path",
+    "role": "upper_arm_link",
+    "body_family": "dual_side_plate",
+    "principal_direction": [
+      0.3303504247281061,
+      0.0,
+      0.9438583563660174
+    ],
+    "interface_span_mm": 105.94810050208545,
+    "major_width_mm": 12.44,
+    "major_thickness_mm": 9.952,
+    "major_length_mm": 105.94810050208545,
+    "structural_path": "proximal interface -> dual_side_plate -> distal interface(s)",
+    "expected_articulation_context": [
+      "revolute"
+    ],
+    "neighbor_exclusion_context": [
+      "L03"
+    ],
+    "source_evidence": [
+      "engineering_text:upper_arm_link",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ]
+  },
+  "body_scale": 1.45,
+  "construction_order": [
+    "proximal_interfaces",
+    "distal_interfaces",
+    "rigid_attachment_regions",
+    "main_structural_body",
+    "major_housing_or_opening",
+    "coarse_transition"
+  ],
+  "feature_provenance": {
+    "feature_id": "L02_body",
+    "owning_link": "L02",
+    "mechanical_role": "upper_arm_link",
+    "source_design_node": "LinkCoarseSpec/L02",
+    "source_evidence": [
+      "engineering_text:upper_arm_link",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ],
+    "why_required": "connect planned interfaces with a coarse load path",
+    "related_interface_or_body": [
+      "J02"
+    ],
+    "cad_strategy": "dual_side_plate plus deterministic shortest-path rigid attachment ties"
+  },
+  "repair_state": null
+}

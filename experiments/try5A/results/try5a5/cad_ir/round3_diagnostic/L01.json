@@ -1,0 +1,118 @@
+{
+  "schema_version": "try5A5_link_cad_ir_v1",
+  "round_id": "round3_diagnostic",
+  "link_spec": {
+    "link_id": "L01",
+    "realization_type": "physical_body",
+    "parent_joint": "J00",
+    "child_joints": [
+      "J01"
+    ],
+    "rule": "URDF topology requires physical load path",
+    "role": "shoulder_housing",
+    "body_family": "rotary_housing",
+    "principal_direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "interface_span_mm": 42.25,
+    "major_width_mm": 15.994285714285715,
+    "major_thickness_mm": 12.795428571428573,
+    "major_length_mm": 42.25,
+    "structural_path": "proximal interface -> rotary_housing -> distal interface(s)",
+    "expected_articulation_context": [
+      "revolute"
+    ],
+    "neighbor_exclusion_context": [
+      "L02"
+    ],
+    "source_evidence": [
+      "engineering_text:shoulder_housing",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ]
+  },
+  "body_scale": 0.72,
+  "construction_order": [
+    "proximal_interfaces",
+    "distal_interfaces",
+    "rigid_attachment_regions",
+    "main_structural_body",
+    "major_housing_or_opening",
+    "coarse_transition"
+  ],
+  "feature_provenance": {
+    "feature_id": "L01_body",
+    "owning_link": "L01",
+    "mechanical_role": "shoulder_housing",
+    "source_design_node": "LinkCoarseSpec/L01",
+    "source_evidence": [
+      "engineering_text:shoulder_housing",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ],
+    "why_required": "connect planned interfaces with a coarse load path",
+    "related_interface_or_body": [
+      "J01"
+    ],
+    "cad_strategy": "rotary_housing plus deterministic shortest-path rigid attachment ties"
+  },
+  "repair_state": {
+    "round": 3,
+    "arbiter_input": {
+      "target": "L01",
+      "failed_gates": [
+        "WHOLE_ROBOT_COLLISION"
+      ],
+      "deterministic_evidence": {
+        "repeated_region_failures": 1,
+        "localized_feature_failure": true,
+        "body_topology_valid": false
+      },
+      "vlm_diagnosis": {},
+      "rationale": [
+        "global collision graph localizes repeated collisions to L01"
+      ],
+      "protected_states": [
+        "URDF frames",
+        "joint axes",
+        "joint limits",
+        "frozen interfaces"
+      ]
+    },
+    "arbiter_decision": {
+      "target": "L01",
+      "failed_gates": [
+        "WHOLE_ROBOT_COLLISION"
+      ],
+      "deterministic_evidence": {
+        "repeated_region_failures": 1,
+        "localized_feature_failure": true,
+        "body_topology_valid": false
+      },
+      "vlm_diagnosis": {},
+      "repair_scope": "R3_WHOLE_LINK_REPLAN",
+      "reason": "global collision graph localizes repeated collisions to L01; selected from deterministic failure hierarchy",
+      "protected_states": [
+        "URDF frames",
+        "joint axes",
+        "joint limits",
+        "frozen interfaces"
+      ],
+      "upstream_objects_to_modify": [
+        "LinkCoarseSpec.body_family",
+        "LinkCoarseSpec.structural_path"
+      ]
+    },
+    "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+    "new_scale": 0.72,
+    "source_collision_edges": [
+      "L01|L04",
+      "L01|L05",
+      "L01|L03"
+    ]
+  }
+}

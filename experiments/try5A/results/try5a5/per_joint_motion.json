@@ -1,0 +1,100 @@
+[
+  {
+    "joint_id": "J00",
+    "samples": 5,
+    "jr3": 1.0,
+    "full_range_pass": true,
+    "collision_volume_by_sample_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "collision_rows": []
+  },
+  {
+    "joint_id": "J01",
+    "samples": 5,
+    "jr3": 1.0,
+    "full_range_pass": true,
+    "collision_volume_by_sample_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "collision_rows": []
+  },
+  {
+    "joint_id": "J02",
+    "samples": 5,
+    "jr3": 1.0,
+    "full_range_pass": true,
+    "collision_volume_by_sample_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "collision_rows": []
+  },
+  {
+    "joint_id": "J03",
+    "samples": 5,
+    "jr3": 1.0,
+    "full_range_pass": true,
+    "collision_volume_by_sample_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "collision_rows": []
+  },
+  {
+    "joint_id": "J05",
+    "samples": 5,
+    "jr3": 1.0,
+    "full_range_pass": true,
+    "collision_volume_by_sample_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "collision_rows": []
+  },
+  {
+    "joint_id": "J08",
+    "samples": 5,
+    "jr3": 1.0,
+    "full_range_pass": true,
+    "collision_volume_by_sample_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "collision_rows": []
+  },
+  {
+    "joint_id": "J09",
+    "samples": 5,
+    "jr3": 1.0,
+    "full_range_pass": true,
+    "collision_volume_by_sample_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "collision_rows": []
+  }
+]

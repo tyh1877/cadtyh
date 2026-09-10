@@ -1,0 +1,42 @@
+[
+  {
+    "round_id": "round0",
+    "gcfr": 0.5625,
+    "collision_events": 127,
+    "total_intersection_volume_mm3": 108512.90136629555,
+    "max_intersection_volume_mm3": 10624.059839128371,
+    "active_rebuild_links": 11,
+    "active_rebuild_regions": 11,
+    "frozen_ratio": 0.0
+  },
+  {
+    "round_id": "round1",
+    "gcfr": 0.8046875,
+    "collision_events": 64,
+    "total_intersection_volume_mm3": 30418.984727296393,
+    "max_intersection_volume_mm3": 2858.181286277599,
+    "active_rebuild_links": 11,
+    "active_rebuild_regions": 11,
+    "frozen_ratio": 0.0
+  },
+  {
+    "round_id": "round2",
+    "gcfr": 0.890625,
+    "collision_events": 52,
+    "total_intersection_volume_mm3": 24111.256372385265,
+    "max_intersection_volume_mm3": 2855.9625082205994,
+    "active_rebuild_links": 11,
+    "active_rebuild_regions": 11,
+    "frozen_ratio": 0.0
+  },
+  {
+    "round_id": "round3",
+    "gcfr": 0.9140625,
+    "collision_events": 46,
+    "total_intersection_volume_mm3": 20309.26948407812,
+    "max_intersection_volume_mm3": 2851.8913634755004,
+    "active_rebuild_links": 11,
+    "active_rebuild_regions": 11,
+    "frozen_ratio": 0.0
+  }
+]

@@ -1,0 +1,269 @@
+[
+  {
+    "joint_id": "J00",
+    "candidate_interfaces": [
+      {
+        "family": "nested_rotary_housing",
+        "evidence": [
+          "revolute joint",
+          "concentric housing roles on both sides"
+        ],
+        "knowledge_match": [
+          "revolute joint",
+          "base/shoulder or concentric housing pair"
+        ],
+        "confidence": 0.94
+      },
+      {
+        "family": "coaxial_rotary_interface",
+        "evidence": [
+          "revolute/continuous joint",
+          "URDF axis supports coaxial carrier"
+        ],
+        "knowledge_match": [
+          "revolute or continuous joint",
+          "compact rotary housing or inline wrist"
+        ],
+        "confidence": 0.74
+      }
+    ],
+    "selected_family": "nested_rotary_housing",
+    "selection_reason": "revolute joint; concentric housing roles on both sides",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J01",
+    "candidate_interfaces": [
+      {
+        "family": "fork_pin_interface",
+        "evidence": [
+          "revolute/continuous joint",
+          "dual-side/fork body family in planned link"
+        ],
+        "knowledge_match": [
+          "revolute joint",
+          "one side is dual side plate or fork body"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "family": "coaxial_rotary_interface",
+        "evidence": [
+          "revolute/continuous joint",
+          "URDF axis supports coaxial carrier"
+        ],
+        "knowledge_match": [
+          "revolute or continuous joint",
+          "compact rotary housing or inline wrist"
+        ],
+        "confidence": 0.74
+      }
+    ],
+    "selected_family": "fork_pin_interface",
+    "selection_reason": "revolute/continuous joint; dual-side/fork body family in planned link",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J02",
+    "candidate_interfaces": [
+      {
+        "family": "fork_pin_interface",
+        "evidence": [
+          "revolute/continuous joint",
+          "dual-side/fork body family in planned link"
+        ],
+        "knowledge_match": [
+          "revolute joint",
+          "one side is dual side plate or fork body"
+        ],
+        "confidence": 0.95
+      },
+      {
+        "family": "coaxial_rotary_interface",
+        "evidence": [
+          "revolute/continuous joint",
+          "URDF axis supports coaxial carrier"
+        ],
+        "knowledge_match": [
+          "revolute or continuous joint",
+          "compact rotary housing or inline wrist"
+        ],
+        "confidence": 0.74
+      }
+    ],
+    "selected_family": "fork_pin_interface",
+    "selection_reason": "revolute/continuous joint; dual-side/fork body family in planned link",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J03",
+    "candidate_interfaces": [
+      {
+        "family": "coaxial_rotary_interface",
+        "evidence": [
+          "revolute/continuous joint",
+          "URDF axis supports coaxial carrier"
+        ],
+        "knowledge_match": [
+          "revolute or continuous joint",
+          "compact rotary housing or inline wrist"
+        ],
+        "confidence": 0.74
+      }
+    ],
+    "selected_family": "coaxial_rotary_interface",
+    "selection_reason": "revolute/continuous joint; URDF axis supports coaxial carrier",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J04",
+    "candidate_interfaces": [
+      {
+        "family": "planar_mount_interface",
+        "evidence": [
+          "URDF joint is fixed",
+          "roles form a structural mount"
+        ],
+        "knowledge_match": [
+          "fixed joint",
+          "spacer, crossbar, or simple structural mount"
+        ],
+        "confidence": 0.92
+      }
+    ],
+    "selected_family": "planar_mount_interface",
+    "selection_reason": "URDF joint is fixed; roles form a structural mount",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J05",
+    "candidate_interfaces": [
+      {
+        "family": "coaxial_rotary_interface",
+        "evidence": [
+          "revolute/continuous joint",
+          "URDF axis supports coaxial carrier"
+        ],
+        "knowledge_match": [
+          "revolute or continuous joint",
+          "compact rotary housing or inline wrist"
+        ],
+        "confidence": 0.74
+      }
+    ],
+    "selected_family": "coaxial_rotary_interface",
+    "selection_reason": "revolute/continuous joint; URDF axis supports coaxial carrier",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J06",
+    "candidate_interfaces": [
+      {
+        "family": "planar_mount_interface",
+        "evidence": [
+          "URDF joint is fixed",
+          "roles form a structural mount"
+        ],
+        "knowledge_match": [
+          "fixed joint",
+          "spacer, crossbar, or simple structural mount"
+        ],
+        "confidence": 0.92
+      }
+    ],
+    "selected_family": "planar_mount_interface",
+    "selection_reason": "URDF joint is fixed; roles form a structural mount",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J07",
+    "candidate_interfaces": [
+      {
+        "family": "planar_mount_interface",
+        "evidence": [
+          "URDF joint is fixed",
+          "roles form a structural mount"
+        ],
+        "knowledge_match": [
+          "fixed joint",
+          "spacer, crossbar, or simple structural mount"
+        ],
+        "confidence": 0.92
+      }
+    ],
+    "selected_family": "planar_mount_interface",
+    "selection_reason": "URDF joint is fixed; roles form a structural mount",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J08",
+    "candidate_interfaces": [
+      {
+        "family": "rail_slider_interface",
+        "evidence": [
+          "URDF joint is prismatic",
+          "translation axis and travel limits require guided clearance"
+        ],
+        "knowledge_match": [
+          "prismatic joint",
+          "carriage and finger or linear guide"
+        ],
+        "confidence": 0.98
+      }
+    ],
+    "selected_family": "rail_slider_interface",
+    "selection_reason": "URDF joint is prismatic; translation axis and travel limits require guided clearance",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J09",
+    "candidate_interfaces": [
+      {
+        "family": "rail_slider_interface",
+        "evidence": [
+          "URDF joint is prismatic",
+          "translation axis and travel limits require guided clearance"
+        ],
+        "knowledge_match": [
+          "prismatic joint",
+          "carriage and finger or linear guide"
+        ],
+        "confidence": 0.98
+      }
+    ],
+    "selected_family": "rail_slider_interface",
+    "selection_reason": "URDF joint is prismatic; translation axis and travel limits require guided clearance",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  },
+  {
+    "joint_id": "J10",
+    "candidate_interfaces": [
+      {
+        "family": "end_tool_interface",
+        "evidence": [
+          "child is a virtual/tool reference frame",
+          "knowledge forbids child solid generation"
+        ],
+        "knowledge_match": [
+          "tool center frame",
+          "interface-only or virtual frame child"
+        ],
+        "confidence": 1.0
+      }
+    ],
+    "selected_family": "end_tool_interface",
+    "selection_reason": "child is a virtual/tool reference frame; knowledge forbids child solid generation",
+    "uncertainty": "coarse visual/role evidence; no GT geometry or dimensions consumed",
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json"
+  }
+]

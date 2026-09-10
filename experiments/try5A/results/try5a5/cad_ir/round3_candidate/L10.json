@@ -1,0 +1,58 @@
+{
+  "schema_version": "try5A5_link_cad_ir_v1",
+  "round_id": "round3_candidate",
+  "link_spec": {
+    "link_id": "L10",
+    "realization_type": "physical_body",
+    "parent_joint": "J09",
+    "child_joints": [],
+    "rule": "URDF topology requires physical load path",
+    "role": "right_finger",
+    "body_family": "tapered_beam",
+    "principal_direction": [
+      1,
+      0,
+      0
+    ],
+    "interface_span_mm": 48.0,
+    "major_width_mm": 7.1085714285714285,
+    "major_thickness_mm": 6,
+    "major_length_mm": 48.0,
+    "structural_path": "proximal interface -> tapered_beam -> distal interface(s)",
+    "expected_articulation_context": [],
+    "neighbor_exclusion_context": [],
+    "source_evidence": [
+      "engineering_text:right_finger",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ]
+  },
+  "body_scale": 1.0,
+  "construction_order": [
+    "proximal_interfaces",
+    "distal_interfaces",
+    "rigid_attachment_regions",
+    "main_structural_body",
+    "major_housing_or_opening",
+    "coarse_transition"
+  ],
+  "feature_provenance": {
+    "feature_id": "L10_body",
+    "owning_link": "L10",
+    "mechanical_role": "right_finger",
+    "source_design_node": "LinkCoarseSpec/L10",
+    "source_evidence": [
+      "engineering_text:right_finger",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ],
+    "why_required": "connect planned interfaces with a coarse load path",
+    "related_interface_or_body": [
+      "BODY"
+    ],
+    "cad_strategy": "tapered_beam plus deterministic shortest-path rigid attachment ties"
+  },
+  "repair_state": null
+}

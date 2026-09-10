@@ -1,0 +1,385 @@
+{
+  "links": [
+    {
+      "link_id": "L00",
+      "realization_type": "physical_body",
+      "parent_joint": null,
+      "child_joints": [
+        "J00"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "base_housing",
+      "body_family": "base_housing",
+      "principal_direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "interface_span_mm": 50.8,
+      "major_width_mm": 21.325714285714284,
+      "major_thickness_mm": 17.06057142857143,
+      "major_length_mm": 50.8,
+      "structural_path": "proximal interface -> base_housing -> distal interface(s)",
+      "expected_articulation_context": [
+        "revolute"
+      ],
+      "neighbor_exclusion_context": [
+        "L01"
+      ],
+      "source_evidence": [
+        "engineering_text:base_housing",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L01",
+      "realization_type": "physical_body",
+      "parent_joint": "J00",
+      "child_joints": [
+        "J01"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "shoulder_housing",
+      "body_family": "rotary_housing",
+      "principal_direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "interface_span_mm": 42.25,
+      "major_width_mm": 15.994285714285715,
+      "major_thickness_mm": 12.795428571428573,
+      "major_length_mm": 42.25,
+      "structural_path": "proximal interface -> rotary_housing -> distal interface(s)",
+      "expected_articulation_context": [
+        "revolute"
+      ],
+      "neighbor_exclusion_context": [
+        "L02"
+      ],
+      "source_evidence": [
+        "engineering_text:shoulder_housing",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L02",
+      "realization_type": "physical_body",
+      "parent_joint": "J01",
+      "child_joints": [
+        "J02"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "upper_arm_link",
+      "body_family": "dual_side_plate",
+      "principal_direction": [
+        0.3303504247281061,
+        0.0,
+        0.9438583563660174
+      ],
+      "interface_span_mm": 105.94810050208545,
+      "major_width_mm": 12.44,
+      "major_thickness_mm": 9.952,
+      "major_length_mm": 105.94810050208545,
+      "structural_path": "proximal interface -> dual_side_plate -> distal interface(s)",
+      "expected_articulation_context": [
+        "revolute"
+      ],
+      "neighbor_exclusion_context": [
+        "L03"
+      ],
+      "source_evidence": [
+        "engineering_text:upper_arm_link",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L03",
+      "realization_type": "physical_body",
+      "parent_joint": "J02",
+      "child_joints": [
+        "J03"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "forearm_link",
+      "body_family": "central_web",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 100.0,
+      "major_width_mm": 10.662857142857142,
+      "major_thickness_mm": 8.530285714285714,
+      "major_length_mm": 100.0,
+      "structural_path": "proximal interface -> central_web -> distal interface(s)",
+      "expected_articulation_context": [
+        "revolute"
+      ],
+      "neighbor_exclusion_context": [
+        "L04"
+      ],
+      "source_evidence": [
+        "engineering_text:forearm_link",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L04",
+      "realization_type": "physical_body",
+      "parent_joint": "J03",
+      "child_joints": [
+        "J04"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "wrist_gripper_body",
+      "body_family": "wrist_block",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 63.0,
+      "major_width_mm": 14.217142857142857,
+      "major_thickness_mm": 11.373714285714286,
+      "major_length_mm": 63.0,
+      "structural_path": "proximal interface -> wrist_block -> distal interface(s)",
+      "expected_articulation_context": [
+        "fixed"
+      ],
+      "neighbor_exclusion_context": [
+        "L05"
+      ],
+      "source_evidence": [
+        "engineering_text:wrist_gripper_body",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L05",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J04",
+      "child_joints": [
+        "J05",
+        "J06"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "rigid_mount",
+      "body_family": "straight_beam",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 20.0,
+      "major_width_mm": 8.885714285714286,
+      "major_thickness_mm": 7.108571428571429,
+      "major_length_mm": 20.0,
+      "structural_path": "proximal interface -> straight_beam -> distal interface(s)",
+      "expected_articulation_context": [
+        "continuous",
+        "fixed"
+      ],
+      "neighbor_exclusion_context": [
+        "L06",
+        "L07"
+      ],
+      "source_evidence": [
+        "engineering_text:rigid_mount",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L06",
+      "realization_type": "physical_body",
+      "parent_joint": "J05",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path",
+      "role": "rigid_mount",
+      "body_family": "straight_beam",
+      "principal_direction": [
+        1,
+        0,
+        0
+      ],
+      "interface_span_mm": 20.0,
+      "major_width_mm": 8.885714285714286,
+      "major_thickness_mm": 7.108571428571429,
+      "major_length_mm": 20.0,
+      "structural_path": "proximal interface -> straight_beam -> distal interface(s)",
+      "expected_articulation_context": [],
+      "neighbor_exclusion_context": [],
+      "source_evidence": [
+        "engineering_text:rigid_mount",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L07",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J06",
+      "child_joints": [
+        "J07"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "rigid_mount",
+      "body_family": "straight_beam",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 23.0,
+      "major_width_mm": 8.885714285714286,
+      "major_thickness_mm": 7.108571428571429,
+      "major_length_mm": 23.0,
+      "structural_path": "proximal interface -> straight_beam -> distal interface(s)",
+      "expected_articulation_context": [
+        "fixed"
+      ],
+      "neighbor_exclusion_context": [
+        "L08"
+      ],
+      "source_evidence": [
+        "engineering_text:rigid_mount",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L08",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J07",
+      "child_joints": [
+        "J08",
+        "J09",
+        "J10"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "finger_carriage",
+      "body_family": "fork_body",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 27.575,
+      "major_width_mm": 12.44,
+      "major_thickness_mm": 9.952,
+      "major_length_mm": 27.575,
+      "structural_path": "proximal interface -> fork_body -> distal interface(s)",
+      "expected_articulation_context": [
+        "prismatic",
+        "prismatic",
+        "fixed"
+      ],
+      "neighbor_exclusion_context": [
+        "L09",
+        "L10",
+        "L11"
+      ],
+      "source_evidence": [
+        "engineering_text:finger_carriage",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L09",
+      "realization_type": "physical_body",
+      "parent_joint": "J08",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path",
+      "role": "left_finger",
+      "body_family": "tapered_beam",
+      "principal_direction": [
+        1,
+        0,
+        0
+      ],
+      "interface_span_mm": 48.0,
+      "major_width_mm": 7.1085714285714285,
+      "major_thickness_mm": 6,
+      "major_length_mm": 48.0,
+      "structural_path": "proximal interface -> tapered_beam -> distal interface(s)",
+      "expected_articulation_context": [],
+      "neighbor_exclusion_context": [],
+      "source_evidence": [
+        "engineering_text:left_finger",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L10",
+      "realization_type": "physical_body",
+      "parent_joint": "J09",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path",
+      "role": "right_finger",
+      "body_family": "tapered_beam",
+      "principal_direction": [
+        1,
+        0,
+        0
+      ],
+      "interface_span_mm": 48.0,
+      "major_width_mm": 7.1085714285714285,
+      "major_thickness_mm": 6,
+      "major_length_mm": 48.0,
+      "structural_path": "proximal interface -> tapered_beam -> distal interface(s)",
+      "expected_articulation_context": [],
+      "neighbor_exclusion_context": [],
+      "source_evidence": [
+        "engineering_text:right_finger",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    },
+    {
+      "link_id": "L11",
+      "realization_type": "virtual_frame",
+      "parent_joint": "J10",
+      "child_joints": [],
+      "rule": "fixed leaf sibling of opposed prismatic pair",
+      "role": "tool_center_frame",
+      "body_family": "interface_marker",
+      "principal_direction": [
+        1,
+        0,
+        0
+      ],
+      "interface_span_mm": 20.0,
+      "major_width_mm": 0.0,
+      "major_thickness_mm": 6,
+      "major_length_mm": 20.0,
+      "structural_path": "proximal interface -> interface_marker -> distal interface(s)",
+      "expected_articulation_context": [],
+      "neighbor_exclusion_context": [],
+      "source_evidence": [
+        "engineering_text:tool_center_frame",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ]
+    }
+  ]
+}

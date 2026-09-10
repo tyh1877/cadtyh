@@ -1,0 +1,72 @@
+{
+  "schema_version": "try5A5_link_cad_ir_v1",
+  "round_id": "final",
+  "link_spec": {
+    "link_id": "L08",
+    "realization_type": "rigid_subassembly",
+    "parent_joint": "J07",
+    "child_joints": [
+      "J08",
+      "J09",
+      "J10"
+    ],
+    "rule": "URDF topology requires physical load path",
+    "role": "finger_carriage",
+    "body_family": "fork_body",
+    "principal_direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "interface_span_mm": 27.575,
+    "major_width_mm": 12.44,
+    "major_thickness_mm": 9.952,
+    "major_length_mm": 27.575,
+    "structural_path": "proximal interface -> fork_body -> distal interface(s)",
+    "expected_articulation_context": [
+      "prismatic",
+      "prismatic",
+      "fixed"
+    ],
+    "neighbor_exclusion_context": [
+      "L09",
+      "L10",
+      "L11"
+    ],
+    "source_evidence": [
+      "engineering_text:finger_carriage",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ]
+  },
+  "body_scale": 0.72,
+  "construction_order": [
+    "proximal_interfaces",
+    "distal_interfaces",
+    "rigid_attachment_regions",
+    "main_structural_body",
+    "major_housing_or_opening",
+    "coarse_transition"
+  ],
+  "feature_provenance": {
+    "feature_id": "L08_body",
+    "owning_link": "L08",
+    "mechanical_role": "finger_carriage",
+    "source_design_node": "LinkCoarseSpec/L08",
+    "source_evidence": [
+      "engineering_text:finger_carriage",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ],
+    "why_required": "connect planned interfaces with a coarse load path",
+    "related_interface_or_body": [
+      "J08",
+      "J09",
+      "J10"
+    ],
+    "cad_strategy": "fork_body plus deterministic shortest-path rigid attachment ties"
+  },
+  "repair_state": null
+}

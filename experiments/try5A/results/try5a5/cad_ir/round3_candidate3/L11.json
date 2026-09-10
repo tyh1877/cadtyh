@@ -1,0 +1,58 @@
+{
+  "schema_version": "try5A5_link_cad_ir_v1",
+  "round_id": "round3_candidate3",
+  "link_spec": {
+    "link_id": "L11",
+    "realization_type": "virtual_frame",
+    "parent_joint": "J10",
+    "child_joints": [],
+    "rule": "fixed leaf sibling of opposed prismatic pair",
+    "role": "tool_center_frame",
+    "body_family": "interface_marker",
+    "principal_direction": [
+      1,
+      0,
+      0
+    ],
+    "interface_span_mm": 20.0,
+    "major_width_mm": 0.0,
+    "major_thickness_mm": 6,
+    "major_length_mm": 20.0,
+    "structural_path": "proximal interface -> interface_marker -> distal interface(s)",
+    "expected_articulation_context": [],
+    "neighbor_exclusion_context": [],
+    "source_evidence": [
+      "engineering_text:tool_center_frame",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ]
+  },
+  "body_scale": 1.0,
+  "construction_order": [
+    "proximal_interfaces",
+    "distal_interfaces",
+    "rigid_attachment_regions",
+    "main_structural_body",
+    "major_housing_or_opening",
+    "coarse_transition"
+  ],
+  "feature_provenance": {
+    "feature_id": "L11_body",
+    "owning_link": "L11",
+    "mechanical_role": "tool_center_frame",
+    "source_design_node": "LinkCoarseSpec/L11",
+    "source_evidence": [
+      "engineering_text:tool_center_frame",
+      "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+      "multi_view_foreground_scale:1.110714",
+      "sanitized_urdf_topology"
+    ],
+    "why_required": "connect planned interfaces with a coarse load path",
+    "related_interface_or_body": [
+      "BODY"
+    ],
+    "cad_strategy": "interface_marker plus deterministic shortest-path rigid attachment ties"
+  },
+  "repair_state": null
+}

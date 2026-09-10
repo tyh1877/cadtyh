@@ -1,0 +1,105 @@
+[
+  {
+    "link_id": "L00",
+    "realization_type": "physical_body",
+    "parent_joint": null,
+    "child_joints": [
+      "J00"
+    ],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L01",
+    "realization_type": "physical_body",
+    "parent_joint": "J00",
+    "child_joints": [
+      "J01"
+    ],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L02",
+    "realization_type": "physical_body",
+    "parent_joint": "J01",
+    "child_joints": [
+      "J02"
+    ],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L03",
+    "realization_type": "physical_body",
+    "parent_joint": "J02",
+    "child_joints": [
+      "J03"
+    ],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L04",
+    "realization_type": "physical_body",
+    "parent_joint": "J03",
+    "child_joints": [
+      "J04"
+    ],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L05",
+    "realization_type": "rigid_subassembly",
+    "parent_joint": "J04",
+    "child_joints": [
+      "J05",
+      "J06"
+    ],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L06",
+    "realization_type": "physical_body",
+    "parent_joint": "J05",
+    "child_joints": [],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L07",
+    "realization_type": "rigid_subassembly",
+    "parent_joint": "J06",
+    "child_joints": [
+      "J07"
+    ],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L08",
+    "realization_type": "rigid_subassembly",
+    "parent_joint": "J07",
+    "child_joints": [
+      "J08",
+      "J09",
+      "J10"
+    ],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L09",
+    "realization_type": "physical_body",
+    "parent_joint": "J08",
+    "child_joints": [],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L10",
+    "realization_type": "physical_body",
+    "parent_joint": "J09",
+    "child_joints": [],
+    "rule": "URDF topology requires physical load path"
+  },
+  {
+    "link_id": "L11",
+    "realization_type": "virtual_frame",
+    "parent_joint": "J10",
+    "child_joints": [],
+    "rule": "fixed leaf sibling of opposed prismatic pair"
+  }
+]

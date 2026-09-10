@@ -1,0 +1,50 @@
+[
+  {
+    "file": "front.png",
+    "sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+    "width_px": 1400,
+    "height_px": 1400,
+    "foreground_width_ratio": 0.2557142857142857,
+    "foreground_height_ratio": 0.4857142857142857
+  },
+  {
+    "file": "isometric.png",
+    "sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+    "width_px": 1400,
+    "height_px": 1400,
+    "foreground_width_ratio": 0.675,
+    "foreground_height_ratio": 0.4521428571428571
+  },
+  {
+    "file": "left.png",
+    "sha256": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca",
+    "width_px": 1400,
+    "height_px": 1400,
+    "foreground_width_ratio": 0.8385714285714285,
+    "foreground_height_ratio": 0.4857142857142857
+  },
+  {
+    "file": "rear.png",
+    "sha256": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428",
+    "width_px": 1400,
+    "height_px": 1400,
+    "foreground_width_ratio": 0.2557142857142857,
+    "foreground_height_ratio": 0.4857142857142857
+  },
+  {
+    "file": "right.png",
+    "sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+    "width_px": 1400,
+    "height_px": 1400,
+    "foreground_width_ratio": 0.8385714285714285,
+    "foreground_height_ratio": 0.4857142857142857
+  },
+  {
+    "file": "top.png",
+    "sha256": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22",
+    "width_px": 1400,
+    "height_px": 1400,
+    "foreground_width_ratio": 0.2557142857142857,
+    "foreground_height_ratio": 0.8385714285714285
+  }
+]

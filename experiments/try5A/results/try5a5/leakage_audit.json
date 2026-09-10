@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "generator_inputs": [
+    "experiments/try5A/inputs/engineering_text/robot_A.md",
+    "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "try5/knowledge/robot_interfaces/families.json",
+    "experiments/try5A/inputs/input_manifest.json",
+    "experiments/try5A/inputs/images/front.png",
+    "experiments/try5A/inputs/images/isometric.png",
+    "experiments/try5A/inputs/images/left.png",
+    "experiments/try5A/inputs/images/rear.png",
+    "experiments/try5A/inputs/images/right.png",
+    "experiments/try5A/inputs/images/top.png"
+  ],
+  "forbidden_paths_accessed": false,
+  "previous_robot_A_answers_consumed": false,
+  "gt_first_access": "final geometry evaluator"
+}

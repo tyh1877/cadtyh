@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "round0_to_final_width_scale_min": 0.72,
+  "whole_silhouette_iou": 0.24853530960836898,
+  "mean_per_link_silhouette_iou": 0.11590629467508837,
+  "no_length_change": true,
+  "no_extreme_thin_rod": true,
+  "regression_candidate_rolled_back": true
+}

@@ -1,0 +1,1498 @@
+{
+  "round_id": "round3_formal_probe",
+  "previous_round": "round2",
+  "active_links": [
+    "L00",
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08"
+  ],
+  "links": [
+    {
+      "link_id": "L00",
+      "realization_type": "physical_body",
+      "parent_joint": null,
+      "child_joints": [
+        "J00"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "base_housing",
+      "body_family": "base_housing",
+      "principal_direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "interface_span_mm": 50.8,
+      "major_width_mm": 21.325714285714284,
+      "major_thickness_mm": 17.06057142857143,
+      "major_length_mm": 50.8,
+      "structural_path": "proximal interface -> base_housing -> distal interface(s)",
+      "expected_articulation_context": [
+        "revolute"
+      ],
+      "neighbor_exclusion_context": [
+        "L01"
+      ],
+      "source_evidence": [
+        "engineering_text:base_housing",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L00.json"
+    },
+    {
+      "link_id": "L01",
+      "realization_type": "physical_body",
+      "parent_joint": "J00",
+      "child_joints": [
+        "J01"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "shoulder_housing",
+      "body_family": "rotary_housing",
+      "principal_direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "interface_span_mm": 42.25,
+      "major_width_mm": 15.994285714285715,
+      "major_thickness_mm": 12.795428571428573,
+      "major_length_mm": 42.25,
+      "structural_path": "proximal interface -> rotary_housing -> distal interface(s)",
+      "expected_articulation_context": [
+        "revolute"
+      ],
+      "neighbor_exclusion_context": [
+        "L02"
+      ],
+      "source_evidence": [
+        "engineering_text:shoulder_housing",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L01.json"
+    },
+    {
+      "link_id": "L02",
+      "realization_type": "physical_body",
+      "parent_joint": "J01",
+      "child_joints": [
+        "J02"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "upper_arm_link",
+      "body_family": "dual_side_plate",
+      "principal_direction": [
+        0.3303504247281061,
+        0.0,
+        0.9438583563660174
+      ],
+      "interface_span_mm": 105.94810050208545,
+      "major_width_mm": 12.44,
+      "major_thickness_mm": 9.952,
+      "major_length_mm": 105.94810050208545,
+      "structural_path": "proximal interface -> dual_side_plate -> distal interface(s)",
+      "expected_articulation_context": [
+        "revolute"
+      ],
+      "neighbor_exclusion_context": [
+        "L03"
+      ],
+      "source_evidence": [
+        "engineering_text:upper_arm_link",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L02.json"
+    },
+    {
+      "link_id": "L03",
+      "realization_type": "physical_body",
+      "parent_joint": "J02",
+      "child_joints": [
+        "J03"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "forearm_link",
+      "body_family": "central_web",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 100.0,
+      "major_width_mm": 10.662857142857142,
+      "major_thickness_mm": 8.530285714285714,
+      "major_length_mm": 100.0,
+      "structural_path": "proximal interface -> central_web -> distal interface(s)",
+      "expected_articulation_context": [
+        "revolute"
+      ],
+      "neighbor_exclusion_context": [
+        "L04"
+      ],
+      "source_evidence": [
+        "engineering_text:forearm_link",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L03.json"
+    },
+    {
+      "link_id": "L04",
+      "realization_type": "physical_body",
+      "parent_joint": "J03",
+      "child_joints": [
+        "J04"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "wrist_gripper_body",
+      "body_family": "wrist_block",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 63.0,
+      "major_width_mm": 14.217142857142857,
+      "major_thickness_mm": 11.373714285714286,
+      "major_length_mm": 63.0,
+      "structural_path": "proximal interface -> wrist_block -> distal interface(s)",
+      "expected_articulation_context": [
+        "fixed"
+      ],
+      "neighbor_exclusion_context": [
+        "L05"
+      ],
+      "source_evidence": [
+        "engineering_text:wrist_gripper_body",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L04.json"
+    },
+    {
+      "link_id": "L05",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J04",
+      "child_joints": [
+        "J05",
+        "J06"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "rigid_mount",
+      "body_family": "straight_beam",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 20.0,
+      "major_width_mm": 8.885714285714286,
+      "major_thickness_mm": 7.108571428571429,
+      "major_length_mm": 20.0,
+      "structural_path": "proximal interface -> straight_beam -> distal interface(s)",
+      "expected_articulation_context": [
+        "continuous",
+        "fixed"
+      ],
+      "neighbor_exclusion_context": [
+        "L06",
+        "L07"
+      ],
+      "source_evidence": [
+        "engineering_text:rigid_mount",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L05.json"
+    },
+    {
+      "link_id": "L06",
+      "realization_type": "physical_body",
+      "parent_joint": "J05",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path",
+      "role": "rigid_mount",
+      "body_family": "straight_beam",
+      "principal_direction": [
+        1,
+        0,
+        0
+      ],
+      "interface_span_mm": 20.0,
+      "major_width_mm": 8.885714285714286,
+      "major_thickness_mm": 7.108571428571429,
+      "major_length_mm": 20.0,
+      "structural_path": "proximal interface -> straight_beam -> distal interface(s)",
+      "expected_articulation_context": [],
+      "neighbor_exclusion_context": [],
+      "source_evidence": [
+        "engineering_text:rigid_mount",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L06.json"
+    },
+    {
+      "link_id": "L07",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J06",
+      "child_joints": [
+        "J07"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "rigid_mount",
+      "body_family": "straight_beam",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 23.0,
+      "major_width_mm": 8.885714285714286,
+      "major_thickness_mm": 7.108571428571429,
+      "major_length_mm": 23.0,
+      "structural_path": "proximal interface -> straight_beam -> distal interface(s)",
+      "expected_articulation_context": [
+        "fixed"
+      ],
+      "neighbor_exclusion_context": [
+        "L08"
+      ],
+      "source_evidence": [
+        "engineering_text:rigid_mount",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L07.json"
+    },
+    {
+      "link_id": "L08",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J07",
+      "child_joints": [
+        "J08",
+        "J09",
+        "J10"
+      ],
+      "rule": "URDF topology requires physical load path",
+      "role": "finger_carriage",
+      "body_family": "fork_body",
+      "principal_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "interface_span_mm": 27.575,
+      "major_width_mm": 12.44,
+      "major_thickness_mm": 9.952,
+      "major_length_mm": 27.575,
+      "structural_path": "proximal interface -> fork_body -> distal interface(s)",
+      "expected_articulation_context": [
+        "prismatic",
+        "prismatic",
+        "fixed"
+      ],
+      "neighbor_exclusion_context": [
+        "L09",
+        "L10",
+        "L11"
+      ],
+      "source_evidence": [
+        "engineering_text:finger_carriage",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L08.json"
+    },
+    {
+      "link_id": "L09",
+      "realization_type": "physical_body",
+      "parent_joint": "J08",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path",
+      "role": "left_finger",
+      "body_family": "tapered_beam",
+      "principal_direction": [
+        1,
+        0,
+        0
+      ],
+      "interface_span_mm": 48.0,
+      "major_width_mm": 7.1085714285714285,
+      "major_thickness_mm": 6,
+      "major_length_mm": 48.0,
+      "structural_path": "proximal interface -> tapered_beam -> distal interface(s)",
+      "expected_articulation_context": [],
+      "neighbor_exclusion_context": [],
+      "source_evidence": [
+        "engineering_text:left_finger",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L09.json"
+    },
+    {
+      "link_id": "L10",
+      "realization_type": "physical_body",
+      "parent_joint": "J09",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path",
+      "role": "right_finger",
+      "body_family": "tapered_beam",
+      "principal_direction": [
+        1,
+        0,
+        0
+      ],
+      "interface_span_mm": 48.0,
+      "major_width_mm": 7.1085714285714285,
+      "major_thickness_mm": 6,
+      "major_length_mm": 48.0,
+      "structural_path": "proximal interface -> tapered_beam -> distal interface(s)",
+      "expected_articulation_context": [],
+      "neighbor_exclusion_context": [],
+      "source_evidence": [
+        "engineering_text:right_finger",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L10.json"
+    },
+    {
+      "link_id": "L11",
+      "realization_type": "virtual_frame",
+      "parent_joint": "J10",
+      "child_joints": [],
+      "rule": "fixed leaf sibling of opposed prismatic pair",
+      "role": "tool_center_frame",
+      "body_family": "interface_marker",
+      "principal_direction": [
+        1,
+        0,
+        0
+      ],
+      "interface_span_mm": 20.0,
+      "major_width_mm": 0.0,
+      "major_thickness_mm": 6,
+      "major_length_mm": 20.0,
+      "structural_path": "proximal interface -> interface_marker -> distal interface(s)",
+      "expected_articulation_context": [],
+      "neighbor_exclusion_context": [],
+      "source_evidence": [
+        "engineering_text:tool_center_frame",
+        "engineering_terms:base,shoulder,elbow,wrist,two-finger",
+        "multi_view_foreground_scale:1.110714",
+        "sanitized_urdf_topology"
+      ],
+      "cad_ir_path": "D:\\CADtest\\papertest\\experiments\\try5A\\results\\try5a5\\cad_ir\\round3_formal_probe\\L11.json"
+    }
+  ],
+  "contracts": [
+    {
+      "joint_id": "J00",
+      "joint_type": "revolute",
+      "parent": "L00",
+      "child": "L01",
+      "interface_family": "nested_rotary_housing",
+      "origin_xyz_mm": [
+        0.0,
+        0.0,
+        50.8
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 150.0,
+      "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+      "motion_range": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "unit": "rad"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [
+        "rotation_about_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ],
+      "parent_rigid_group": "L00",
+      "child_rigid_group": "L01",
+      "forbidden_fusion": true,
+      "fixed_connection_strategy": null,
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "revolute joint; concentric housing roles on both sides",
+      "swept_clearance_policy": "sample full URDF range before body repair"
+    },
+    {
+      "joint_id": "J01",
+      "joint_type": "revolute",
+      "parent": "L01",
+      "child": "L02",
+      "interface_family": "fork_pin_interface",
+      "origin_xyz_mm": [
+        0.0,
+        0.0,
+        42.25
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 50.0,
+      "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+      "motion_range": {
+        "lower": -1.9373154697137058,
+        "upper": 1.8675022996339325,
+        "unit": "rad"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [
+        "rotation_about_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ],
+      "parent_rigid_group": "L01",
+      "child_rigid_group": "L02",
+      "forbidden_fusion": true,
+      "fixed_connection_strategy": null,
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "revolute/continuous joint; dual-side/fork body family in planned link",
+      "swept_clearance_policy": "sample full URDF range before body repair"
+    },
+    {
+      "joint_id": "J02",
+      "joint_type": "revolute",
+      "parent": "L02",
+      "child": "L03",
+      "interface_family": "fork_pin_interface",
+      "origin_xyz_mm": [
+        35.0,
+        0.0,
+        100.0
+      ],
+      "origin_rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        0.0,
+        -1.0,
+        1.2246467991473532e-16
+      ],
+      "axis_child": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 50.0,
+      "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+      "motion_range": {
+        "lower": -1.6057029118347832,
+        "upper": 2.111848394913139,
+        "unit": "rad"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [
+        "rotation_about_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ],
+      "parent_rigid_group": "L02",
+      "child_rigid_group": "L03",
+      "forbidden_fusion": true,
+      "fixed_connection_strategy": null,
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "revolute/continuous joint; dual-side/fork body family in planned link",
+      "swept_clearance_policy": "sample full URDF range before body repair"
+    },
+    {
+      "joint_id": "J03",
+      "joint_type": "revolute",
+      "parent": "L03",
+      "child": "L04",
+      "interface_family": "coaxial_rotary_interface",
+      "origin_xyz_mm": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 150.0,
+      "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+      "motion_range": {
+        "lower": -2.1467549799530254,
+        "upper": 1.7453292519943295,
+        "unit": "rad"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [
+        "rotation_about_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ],
+      "parent_rigid_group": "L03",
+      "child_rigid_group": "L04",
+      "forbidden_fusion": true,
+      "fixed_connection_strategy": null,
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "revolute/continuous joint; URDF axis supports coaxial carrier",
+      "swept_clearance_policy": "sample full URDF range before body repair"
+    },
+    {
+      "joint_id": "J04",
+      "joint_type": "fixed",
+      "parent": "L04",
+      "child": "L05",
+      "interface_family": "planar_mount_interface",
+      "origin_xyz_mm": [
+        63.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        -3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 0.0,
+      "allowed_contact_role": "clearance only",
+      "motion_range": {
+        "lower": 0,
+        "upper": 0,
+        "unit": "fixed"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [],
+      "constrained_dof": [
+        "all_six"
+      ],
+      "parent_rigid_group": "L04",
+      "child_rigid_group": "L05",
+      "forbidden_fusion": false,
+      "fixed_connection_strategy": "coincident rigid mount pads",
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "URDF joint is fixed; roles form a structural mount",
+      "swept_clearance_policy": "fixed occupancy"
+    },
+    {
+      "joint_id": "J05",
+      "joint_type": "continuous",
+      "parent": "L05",
+      "child": "L06",
+      "interface_family": "coaxial_rotary_interface",
+      "origin_xyz_mm": [
+        5.5,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 150.0,
+      "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+      "motion_range": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793,
+        "unit": "rad"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [
+        "rotation_about_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ],
+      "parent_rigid_group": "L05",
+      "child_rigid_group": "L06",
+      "forbidden_fusion": true,
+      "fixed_connection_strategy": null,
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "revolute/continuous joint; URDF axis supports coaxial carrier",
+      "swept_clearance_policy": "sample full URDF range before body repair"
+    },
+    {
+      "joint_id": "J06",
+      "joint_type": "fixed",
+      "parent": "L05",
+      "child": "L07",
+      "interface_family": "planar_mount_interface",
+      "origin_xyz_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 0.0,
+      "allowed_contact_role": "clearance only",
+      "motion_range": {
+        "lower": 0,
+        "upper": 0,
+        "unit": "fixed"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [],
+      "constrained_dof": [
+        "all_six"
+      ],
+      "parent_rigid_group": "L05",
+      "child_rigid_group": "L07",
+      "forbidden_fusion": false,
+      "fixed_connection_strategy": "coincident rigid mount pads",
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "URDF joint is fixed; roles form a structural mount",
+      "swept_clearance_policy": "fixed occupancy"
+    },
+    {
+      "joint_id": "J07",
+      "joint_type": "fixed",
+      "parent": "L07",
+      "child": "L08",
+      "interface_family": "planar_mount_interface",
+      "origin_xyz_mm": [
+        23.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 0.0,
+      "allowed_contact_role": "clearance only",
+      "motion_range": {
+        "lower": 0,
+        "upper": 0,
+        "unit": "fixed"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [],
+      "constrained_dof": [
+        "all_six"
+      ],
+      "parent_rigid_group": "L07",
+      "child_rigid_group": "L08",
+      "forbidden_fusion": false,
+      "fixed_connection_strategy": "coincident rigid mount pads",
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "URDF joint is fixed; roles form a structural mount",
+      "swept_clearance_policy": "fixed occupancy"
+    },
+    {
+      "joint_id": "J08",
+      "joint_type": "prismatic",
+      "parent": "L08",
+      "child": "L09",
+      "interface_family": "rail_slider_interface",
+      "origin_xyz_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 25.0,
+      "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+      "motion_range": {
+        "lower": 0.015,
+        "upper": 0.037,
+        "unit": "m"
+      },
+      "motion_range_m": {
+        "lower": 0.015,
+        "upper": 0.037
+      },
+      "allowed_dof": [
+        "translation_along_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ],
+      "parent_rigid_group": "L08",
+      "child_rigid_group": "L09",
+      "forbidden_fusion": true,
+      "fixed_connection_strategy": null,
+      "mimic": null,
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "URDF joint is prismatic; translation axis and travel limits require guided clearance",
+      "swept_clearance_policy": "sample full URDF range before body repair"
+    },
+    {
+      "joint_id": "J09",
+      "joint_type": "prismatic",
+      "parent": "L08",
+      "child": "L10",
+      "interface_family": "rail_slider_interface",
+      "origin_xyz_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 25.0,
+      "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+      "motion_range": {
+        "lower": -0.037,
+        "upper": -0.015,
+        "unit": "m"
+      },
+      "motion_range_m": {
+        "lower": -0.037,
+        "upper": -0.015
+      },
+      "allowed_dof": [
+        "translation_along_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ],
+      "parent_rigid_group": "L08",
+      "child_rigid_group": "L10",
+      "forbidden_fusion": true,
+      "fixed_connection_strategy": null,
+      "mimic": {
+        "joint": "J08",
+        "multiplier": -1.0,
+        "offset": 0.0
+      },
+      "virtual_child": false,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "URDF joint is prismatic; translation axis and travel limits require guided clearance",
+      "swept_clearance_policy": "sample full URDF range before body repair"
+    },
+    {
+      "joint_id": "J10",
+      "joint_type": "fixed",
+      "parent": "L08",
+      "child": "L11",
+      "interface_family": "end_tool_interface",
+      "origin_xyz_mm": [
+        27.575,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_parent": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "allowed_contact_volume_mm3": 0.0,
+      "allowed_contact_role": "clearance only",
+      "motion_range": {
+        "lower": 0,
+        "upper": 0,
+        "unit": "fixed"
+      },
+      "motion_range_m": {
+        "lower": 0,
+        "upper": 0
+      },
+      "allowed_dof": [],
+      "constrained_dof": [
+        "all_six"
+      ],
+      "parent_rigid_group": "L08",
+      "child_rigid_group": "L11",
+      "forbidden_fusion": false,
+      "fixed_connection_strategy": null,
+      "mimic": null,
+      "virtual_child": true,
+      "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+      "selection_reason": "child is a virtual/tool reference frame; knowledge forbids child solid generation",
+      "swept_clearance_policy": "fixed occupancy"
+    }
+  ],
+  "link_scales": {
+    "L00": 0.72,
+    "L01": 0.72,
+    "L02": 0.72,
+    "L03": 0.72,
+    "L04": 0.72,
+    "L05": 0.72,
+    "L06": 0.72,
+    "L07": 0.72,
+    "L08": 0.72,
+    "L09": 1.0,
+    "L10": 1.0
+  },
+  "repair_updates": {
+    "L00": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L00",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L00"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L00",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R1_LOCAL_FEATURE_REPAIR",
+        "reason": "global collision graph localizes repeated collisions to L00; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "BodyRegionSpec.local_feature"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L00|L04",
+        "L00|L03"
+      ]
+    },
+    "L01": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L01",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": false
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L01"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L01",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": false
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R3_WHOLE_LINK_REPLAN",
+        "reason": "global collision graph localizes repeated collisions to L01; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "LinkCoarseSpec.body_family",
+          "LinkCoarseSpec.structural_path"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L01|L04",
+        "L01|L05",
+        "L01|L03"
+      ]
+    },
+    "L02": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L02",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": false
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L02"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L02",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": false
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R3_WHOLE_LINK_REPLAN",
+        "reason": "global collision graph localizes repeated collisions to L02; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "LinkCoarseSpec.body_family",
+          "LinkCoarseSpec.structural_path"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L02|L08",
+        "L02|L06",
+        "L02|L07"
+      ]
+    },
+    "L03": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L03",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": false
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L03"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L03",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": false
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R3_WHOLE_LINK_REPLAN",
+        "reason": "global collision graph localizes repeated collisions to L03; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "LinkCoarseSpec.body_family",
+          "LinkCoarseSpec.structural_path"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L00|L03",
+        "L03|L04",
+        "L01|L03"
+      ]
+    },
+    "L04": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L04",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": false
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L04"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L04",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": false
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R3_WHOLE_LINK_REPLAN",
+        "reason": "global collision graph localizes repeated collisions to L04; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "LinkCoarseSpec.body_family",
+          "LinkCoarseSpec.structural_path"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L01|L04",
+        "L00|L04",
+        "L03|L04"
+      ]
+    },
+    "L05": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L05",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L05"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L05",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R1_LOCAL_FEATURE_REPAIR",
+        "reason": "global collision graph localizes repeated collisions to L05; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "BodyRegionSpec.local_feature"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L01|L05"
+      ]
+    },
+    "L06": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L06",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L06"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L06",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R1_LOCAL_FEATURE_REPAIR",
+        "reason": "global collision graph localizes repeated collisions to L06; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "BodyRegionSpec.local_feature"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L02|L06"
+      ]
+    },
+    "L07": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L07",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L07"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L07",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R1_LOCAL_FEATURE_REPAIR",
+        "reason": "global collision graph localizes repeated collisions to L07; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "BodyRegionSpec.local_feature"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L02|L07"
+      ]
+    },
+    "L08": {
+      "round": 3,
+      "arbiter_input": {
+        "target": "L08",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "rationale": [
+          "global collision graph localizes repeated collisions to L08"
+        ],
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ]
+      },
+      "arbiter_decision": {
+        "target": "L08",
+        "failed_gates": [
+          "WHOLE_ROBOT_COLLISION"
+        ],
+        "deterministic_evidence": {
+          "repeated_region_failures": 1,
+          "localized_feature_failure": true,
+          "body_topology_valid": true
+        },
+        "vlm_diagnosis": {},
+        "repair_scope": "R1_LOCAL_FEATURE_REPAIR",
+        "reason": "global collision graph localizes repeated collisions to L08; selected from deterministic failure hierarchy",
+        "protected_states": [
+          "URDF frames",
+          "joint axes",
+          "joint limits",
+          "frozen interfaces"
+        ],
+        "upstream_objects_to_modify": [
+          "BodyRegionSpec.local_feature"
+        ]
+      },
+      "updated_upstream": "LinkCoarseSpec.major_width/body region scale",
+      "new_scale": 0.72,
+      "source_collision_edges": [
+        "L02|L08"
+      ]
+    }
+  }
+}

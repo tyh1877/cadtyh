@@ -1,0 +1,275 @@
+{
+  "experiment": "Try-5A.5",
+  "status": "COMPLETE",
+  "counts": {
+    "links": 12,
+    "physical_links": 11,
+    "virtual_links": 1,
+    "moving_joints": 7,
+    "fixed_joints": 4,
+    "mimic_joints": 1
+  },
+  "round_metrics": [
+    {
+      "round_id": "round0",
+      "gcfr": 0.5625,
+      "collision_events": 127,
+      "total_intersection_volume_mm3": 108512.90136629555,
+      "max_intersection_volume_mm3": 10624.059839128371,
+      "active_rebuild_links": 11,
+      "active_rebuild_regions": 11,
+      "frozen_ratio": 0.0
+    },
+    {
+      "round_id": "round1",
+      "gcfr": 0.8046875,
+      "collision_events": 64,
+      "total_intersection_volume_mm3": 30418.984727296393,
+      "max_intersection_volume_mm3": 2858.181286277599,
+      "active_rebuild_links": 11,
+      "active_rebuild_regions": 11,
+      "frozen_ratio": 0.0
+    },
+    {
+      "round_id": "round2",
+      "gcfr": 0.890625,
+      "collision_events": 52,
+      "total_intersection_volume_mm3": 24111.256372385265,
+      "max_intersection_volume_mm3": 2855.9625082205994,
+      "active_rebuild_links": 11,
+      "active_rebuild_regions": 11,
+      "frozen_ratio": 0.0
+    },
+    {
+      "round_id": "round3",
+      "gcfr": 0.9140625,
+      "collision_events": 46,
+      "total_intersection_volume_mm3": 20309.26948407812,
+      "max_intersection_volume_mm3": 2851.8913634755004,
+      "active_rebuild_links": 11,
+      "active_rebuild_regions": 11,
+      "frozen_ratio": 0.0
+    }
+  ],
+  "final_gcfr": 0.9140625,
+  "valid_coupled_configurations": 117,
+  "unresolved_coupled_configurations": 11,
+  "per_joint": [
+    {
+      "joint_id": "J00",
+      "samples": 5,
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_volume_by_sample_mm3": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J01",
+      "samples": 5,
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_volume_by_sample_mm3": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J02",
+      "samples": 5,
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_volume_by_sample_mm3": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J03",
+      "samples": 5,
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_volume_by_sample_mm3": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J05",
+      "samples": 5,
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_volume_by_sample_mm3": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J08",
+      "samples": 5,
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_volume_by_sample_mm3": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_rows": []
+    },
+    {
+      "joint_id": "J09",
+      "samples": 5,
+      "jr3": 1.0,
+      "full_range_pass": true,
+      "collision_volume_by_sample_mm3": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "collision_rows": []
+    }
+  ],
+  "levels": {
+    "K1": "PASS",
+    "K2": "PASS",
+    "K3": "PASS"
+  },
+  "hard_gates": {
+    "from_zero_inputs_only": true,
+    "skeleton_regenerated": true,
+    "plan_specs_contracts_regenerated": true,
+    "all_physical_links_generated": true,
+    "artifacts_valid": true,
+    "bicr_100": true,
+    "floating_zero": true,
+    "forbidden_fusion_zero": true,
+    "virtual_geometry_zero": true,
+    "meaningless_patch_zero": true,
+    "all_moving_joint_dof_valid": true,
+    "all_moving_joint_jr3_100": true,
+    "fixed_semantics": true,
+    "prismatic_semantics": true,
+    "mimic_semantics": true,
+    "gcfr_90": true,
+    "morphology_guard": true,
+    "collision_graph_consumed": true,
+    "repair_round_cap": true,
+    "motion_playback": true,
+    "geometry_evaluated_after_generation": true,
+    "counterfactuals": true,
+    "dataflow": true,
+    "leakage_absent": true
+  },
+  "repair_metrics": {
+    "scope_distribution": {
+      "R2_BODY_REGION_REPLAN": 11,
+      "R1_LOCAL_FEATURE_REPAIR": 6,
+      "R3_WHOLE_LINK_REPLAN": 16
+    },
+    "rollback_count": 1
+  },
+  "geometry": {
+    "per_link": [
+      {
+        "link_id": "L00",
+        "voxel_iou": 0.0031088082901554403,
+        "normalized_chamfer": 0.1331293045710537,
+        "normalized_hd95": 0.487060977485926,
+        "silhouette_iou_mean": 0.08119941815920301
+      },
+      {
+        "link_id": "L01",
+        "voxel_iou": 0.05955107650022904,
+        "normalized_chamfer": 0.06638547659865339,
+        "normalized_hd95": 0.17834832037494694,
+        "silhouette_iou_mean": 0.2840705702898603
+      },
+      {
+        "link_id": "L02",
+        "voxel_iou": 0.02895927601809955,
+        "normalized_chamfer": 0.12944235199701726,
+        "normalized_hd95": 0.3209943709106451,
+        "silhouette_iou_mean": 0.1467290021632652
+      },
+      {
+        "link_id": "L03",
+        "voxel_iou": 0.01437699680511182,
+        "normalized_chamfer": 0.377775942150341,
+        "normalized_hd95": 0.7229686994327288,
+        "silhouette_iou_mean": 0.08677542084588831
+      },
+      {
+        "link_id": "L04",
+        "voxel_iou": 0.009080590238365494,
+        "normalized_chamfer": 0.2789918320590111,
+        "normalized_hd95": 0.5994310883784447,
+        "silhouette_iou_mean": 0.08772098082538404
+      },
+      {
+        "link_id": "L06",
+        "voxel_iou": 0.0,
+        "normalized_chamfer": 1.471087041610401,
+        "normalized_hd95": 1.7887108522334976,
+        "silhouette_iou_mean": 0.10630758327427357
+      },
+      {
+        "link_id": "L07",
+        "voxel_iou": 0.0,
+        "normalized_chamfer": 0.5629765415465813,
+        "normalized_hd95": 0.7450143931067362,
+        "silhouette_iou_mean": 0.03640776699029126
+      },
+      {
+        "link_id": "L09",
+        "voxel_iou": 0.04676489429852659,
+        "normalized_chamfer": 0.21405885560019286,
+        "normalized_hd95": 0.6723916974968441,
+        "silhouette_iou_mean": 0.10697295476381485
+      },
+      {
+        "link_id": "L10",
+        "voxel_iou": 0.04676489429852659,
+        "normalized_chamfer": 0.21405885560019286,
+        "normalized_hd95": 0.6723916974968441,
+        "silhouette_iou_mean": 0.10697295476381485
+      }
+    ],
+    "mean_per_link": {
+      "voxel_iou": 0.023178504049890504,
+      "normalized_chamfer": 0.38310068908149386,
+      "normalized_hd95": 0.6874791218796238,
+      "silhouette_iou_mean": 0.11590629467508837
+    },
+    "whole_robot": {
+      "voxel_iou": 0.13924050632911392,
+      "normalized_chamfer": 0.05327832964944637,
+      "normalized_hd95": 0.21962552721680323,
+      "silhouette_iou_mean": 0.24853530960836898
+    }
+  }
+}

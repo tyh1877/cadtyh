@@ -1,0 +1,1009 @@
+{
+  "schema_version": "try5A5_clean_skeleton_v1",
+  "authority": "sanitized_urdf",
+  "root_link": "L00",
+  "links": [
+    {
+      "link_id": "L00",
+      "realization_type": "physical_body",
+      "parent_joint": null,
+      "child_joints": [
+        "J00"
+      ],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L01",
+      "realization_type": "physical_body",
+      "parent_joint": "J00",
+      "child_joints": [
+        "J01"
+      ],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L02",
+      "realization_type": "physical_body",
+      "parent_joint": "J01",
+      "child_joints": [
+        "J02"
+      ],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L03",
+      "realization_type": "physical_body",
+      "parent_joint": "J02",
+      "child_joints": [
+        "J03"
+      ],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L04",
+      "realization_type": "physical_body",
+      "parent_joint": "J03",
+      "child_joints": [
+        "J04"
+      ],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L05",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J04",
+      "child_joints": [
+        "J05",
+        "J06"
+      ],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L06",
+      "realization_type": "physical_body",
+      "parent_joint": "J05",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L07",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J06",
+      "child_joints": [
+        "J07"
+      ],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L08",
+      "realization_type": "rigid_subassembly",
+      "parent_joint": "J07",
+      "child_joints": [
+        "J08",
+        "J09",
+        "J10"
+      ],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L09",
+      "realization_type": "physical_body",
+      "parent_joint": "J08",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L10",
+      "realization_type": "physical_body",
+      "parent_joint": "J09",
+      "child_joints": [],
+      "rule": "URDF topology requires physical load path"
+    },
+    {
+      "link_id": "L11",
+      "realization_type": "virtual_frame",
+      "parent_joint": "J10",
+      "child_joints": [],
+      "rule": "fixed leaf sibling of opposed prismatic pair"
+    }
+  ],
+  "joints": [
+    {
+      "joint_id": "J00",
+      "joint_type": "revolute",
+      "parent": "L00",
+      "child": "L01",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0508
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "lower": -3.141592653589793,
+        "upper": 3.141592653589793
+      },
+      "mimic": null
+    },
+    {
+      "joint_id": "J01",
+      "joint_type": "revolute",
+      "parent": "L01",
+      "child": "L02",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.04225
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -1.9373154697137058,
+        "upper": 1.8675022996339325
+      },
+      "mimic": null
+    },
+    {
+      "joint_id": "J02",
+      "joint_type": "revolute",
+      "parent": "L02",
+      "child": "L03",
+      "origin_xyz_m": [
+        0.035,
+        0.0,
+        0.1
+      ],
+      "origin_rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -1.6057029118347832,
+        "upper": 2.111848394913139
+      },
+      "mimic": null
+    },
+    {
+      "joint_id": "J03",
+      "joint_type": "revolute",
+      "parent": "L03",
+      "child": "L04",
+      "origin_xyz_m": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -2.1467549799530254,
+        "upper": 1.7453292519943295
+      },
+      "mimic": null
+    },
+    {
+      "joint_id": "J04",
+      "joint_type": "fixed",
+      "parent": "L04",
+      "child": "L05",
+      "origin_xyz_m": [
+        0.063,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        -3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {},
+      "mimic": null
+    },
+    {
+      "joint_id": "J05",
+      "joint_type": "continuous",
+      "parent": "L05",
+      "child": "L06",
+      "origin_xyz_m": [
+        0.0055,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {},
+      "mimic": null
+    },
+    {
+      "joint_id": "J06",
+      "joint_type": "fixed",
+      "parent": "L05",
+      "child": "L07",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {},
+      "mimic": null
+    },
+    {
+      "joint_id": "J07",
+      "joint_type": "fixed",
+      "parent": "L07",
+      "child": "L08",
+      "origin_xyz_m": [
+        0.023,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {},
+      "mimic": null
+    },
+    {
+      "joint_id": "J08",
+      "joint_type": "prismatic",
+      "parent": "L08",
+      "child": "L09",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": 0.015,
+        "upper": 0.037
+      },
+      "mimic": null
+    },
+    {
+      "joint_id": "J09",
+      "joint_type": "prismatic",
+      "parent": "L08",
+      "child": "L10",
+      "origin_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limits": {
+        "lower": -0.037,
+        "upper": -0.015
+      },
+      "mimic": {
+        "joint": "J08",
+        "multiplier": -1.0,
+        "offset": 0.0
+      }
+    },
+    {
+      "joint_id": "J10",
+      "joint_type": "fixed",
+      "parent": "L08",
+      "child": "L11",
+      "origin_xyz_m": [
+        0.027575,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limits": {},
+      "mimic": null
+    }
+  ],
+  "canonical_q": {
+    "J00": 0.0,
+    "J01": 0.0,
+    "J02": 0.0,
+    "J03": 0.0,
+    "J04": 0.0,
+    "J05": 0.0,
+    "J06": 0.0,
+    "J07": 0.0,
+    "J08": 0.026,
+    "J09": -0.026,
+    "J10": 0.0
+  },
+  "canonical_world_transforms": {
+    "L00": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L01": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0508
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L02": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.09305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L03": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.035
+      ],
+      [
+        0.0,
+        -1.0,
+        -1.2246467991473532e-16,
+        0.0
+      ],
+      [
+        0.0,
+        1.2246467991473532e-16,
+        -1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L04": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.135
+      ],
+      [
+        0.0,
+        -1.0,
+        -1.2246467991473532e-16,
+        0.0
+      ],
+      [
+        0.0,
+        1.2246467991473532e-16,
+        -1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L05": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.198
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L06": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.20350000000000001
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L07": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.198
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L08": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.221
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L09": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.221
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.026
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L10": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.221
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -0.026
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "L11": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.248575
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "joint_world_transforms": {
+    "J00": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0508
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J01": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.09305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J02": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.035
+      ],
+      [
+        0.0,
+        -1.0,
+        -1.2246467991473532e-16,
+        0.0
+      ],
+      [
+        0.0,
+        1.2246467991473532e-16,
+        -1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J03": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.135
+      ],
+      [
+        0.0,
+        -1.0,
+        -1.2246467991473532e-16,
+        0.0
+      ],
+      [
+        0.0,
+        1.2246467991473532e-16,
+        -1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J04": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.198
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J05": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.20350000000000001
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J06": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.198
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J07": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.221
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J08": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.221
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J09": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.221
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "J10": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.248575
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.19305
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "ee_frame": "L11",
+  "validation": {
+    "frame_completeness": true,
+    "joint_completeness": true,
+    "topology_acyclic": true,
+    "mimic_count": 1
+  }
+}

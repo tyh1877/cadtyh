@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "round0": {
+    "per_link": [
+      {
+        "link_id": "L00",
+        "voxel_iou": 0.022504892367906065,
+        "normalized_chamfer": 0.12406728364445323,
+        "normalized_hd95": 0.4799896814242608,
+        "silhouette_iou_mean": 0.15513086729058642
+      },
+      {
+        "link_id": "L01",
+        "voxel_iou": 0.038886433937251434,
+        "normalized_chamfer": 0.06820373792762549,
+        "normalized_hd95": 0.1639999236872283,
+        "silhouette_iou_mean": 0.31655999623299463
+      },
+      {
+        "link_id": "L02",
+        "voxel_iou": 0.07420814479638009,
+        "normalized_chamfer": 0.11549993909413064,
+        "normalized_hd95": 0.3108485577975018,
+        "silhouette_iou_mean": 0.22481561870936795
+      },
+      {
+        "link_id": "L03",
+        "voxel_iou": 0.019593067068575734,
+        "normalized_chamfer": 0.4006515305628776,
+        "normalized_hd95": 0.8280696574744199,
+        "silhouette_iou_mean": 0.0810404924980245
+      },
+      {
+        "link_id": "L04",
+        "voxel_iou": 0.015527950310559006,
+        "normalized_chamfer": 0.27248014469717474,
+        "normalized_hd95": 0.6005868349435238,
+        "silhouette_iou_mean": 0.09021426194423328
+      },
+      {
+        "link_id": "L06",
+        "voxel_iou": 0.0,
+        "normalized_chamfer": 1.4723517876473957,
+        "normalized_hd95": 1.7861953557928378,
+        "silhouette_iou_mean": 0.08823529411764706
+      },
+      {
+        "link_id": "L07",
+        "voxel_iou": 0.0,
+        "normalized_chamfer": 0.5629670741050138,
+        "normalized_hd95": 0.7448331263736534,
+        "silhouette_iou_mean": 0.0412621359223301
+      },
+      {
+        "link_id": "L09",
+        "voxel_iou": 0.047862156987874924,
+        "normalized_chamfer": 0.2243079967419645,
+        "normalized_hd95": 0.6900999821784715,
+        "silhouette_iou_mean": 0.10324010281655017
+      },
+      {
+        "link_id": "L10",
+        "voxel_iou": 0.047862156987874924,
+        "normalized_chamfer": 0.2243079967419645,
+        "normalized_hd95": 0.6900999821784715,
+        "silhouette_iou_mean": 0.10324010281655017
+      }
+    ],
+    "mean_per_link": {
+      "voxel_iou": 0.02960497805071358,
+      "normalized_chamfer": 0.38498194346251113,
+      "normalized_hd95": 0.6994136779833744,
+      "silhouette_iou_mean": 0.1337487635942538
+    },
+    "whole_robot": {
+      "voxel_iou": 0.16232771822358347,
+      "normalized_chamfer": 0.05179443786108784,
+      "normalized_hd95": 0.22243537457066614,
+      "silhouette_iou_mean": 0.2862841961657799
+    }
+  },
+  "final": {
+    "per_link": [
+      {
+        "link_id": "L00",
+        "voxel_iou": 0.0031088082901554403,
+        "normalized_chamfer": 0.1331293045710537,
+        "normalized_hd95": 0.487060977485926,
+        "silhouette_iou_mean": 0.08119941815920301
+      },
+      {
+        "link_id": "L01",
+        "voxel_iou": 0.05955107650022904,
+        "normalized_chamfer": 0.06638547659865339,
+        "normalized_hd95": 0.17834832037494694,
+        "silhouette_iou_mean": 0.2840705702898603
+      },
+      {
+        "link_id": "L02",
+        "voxel_iou": 0.02895927601809955,
+        "normalized_chamfer": 0.12944235199701726,
+        "normalized_hd95": 0.3209943709106451,
+        "silhouette_iou_mean": 0.1467290021632652
+      },
+      {
+        "link_id": "L03",
+        "voxel_iou": 0.01437699680511182,
+        "normalized_chamfer": 0.377775942150341,
+        "normalized_hd95": 0.7229686994327288,
+        "silhouette_iou_mean": 0.08677542084588831
+      },
+      {
+        "link_id": "L04",
+        "voxel_iou": 0.009080590238365494,
+        "normalized_chamfer": 0.2789918320590111,
+        "normalized_hd95": 0.5994310883784447,
+        "silhouette_iou_mean": 0.08772098082538404
+      },
+      {
+        "link_id": "L06",
+        "voxel_iou": 0.0,
+        "normalized_chamfer": 1.471087041610401,
+        "normalized_hd95": 1.7887108522334976,
+        "silhouette_iou_mean": 0.10630758327427357
+      },
+      {
+        "link_id": "L07",
+        "voxel_iou": 0.0,
+        "normalized_chamfer": 0.5629765415465813,
+        "normalized_hd95": 0.7450143931067362,
+        "silhouette_iou_mean": 0.03640776699029126
+      },
+      {
+        "link_id": "L09",
+        "voxel_iou": 0.04676489429852659,
+        "normalized_chamfer": 0.21405885560019286,
+        "normalized_hd95": 0.6723916974968441,
+        "silhouette_iou_mean": 0.10697295476381485
+      },
+      {
+        "link_id": "L10",
+        "voxel_iou": 0.04676489429852659,
+        "normalized_chamfer": 0.21405885560019286,
+        "normalized_hd95": 0.6723916974968441,
+        "silhouette_iou_mean": 0.10697295476381485
+      }
+    ],
+    "mean_per_link": {
+      "voxel_iou": 0.023178504049890504,
+      "normalized_chamfer": 0.38310068908149386,
+      "normalized_hd95": 0.6874791218796238,
+      "silhouette_iou_mean": 0.11590629467508837
+    },
+    "whole_robot": {
+      "voxel_iou": 0.13924050632911392,
+      "normalized_chamfer": 0.05327832964944637,
+      "normalized_hd95": 0.21962552721680323,
+      "silhouette_iou_mean": 0.24853530960836898
+    }
+  },
+  "whole_silhouette_retention": 0.8681419126064804,
+  "minimum_dimension_scale": 0.72,
+  "lengths_preserved": true,
+  "mechanical_structures_preserved": true,
+  "severe_collapse": false
+}

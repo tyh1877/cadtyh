@@ -1,0 +1,151 @@
+{
+  "joint_limit": {
+    "joint_id": "J02",
+    "baseline_swept_bbox": [
+      [
+        -56.83523606243399,
+        -5.331428571428571,
+        -105.04004180187523
+      ],
+      [
+        103.10059660453318,
+        5.331428571428571,
+        105.27051127333814
+      ]
+    ],
+    "counterfactual_swept_bbox": [
+      [
+        -8.821378241678662,
+        -5.331428571428571,
+        -30.369428976872715
+      ],
+      [
+        105.30995143233322,
+        5.331428571428571,
+        105.27051127333814
+      ]
+    ],
+    "pass": true
+  },
+  "interface_family": {
+    "evaluation": {
+      "status": "PASS",
+      "cases": [
+        {
+          "joint_id": "J03",
+          "variants": [
+            {
+              "name": "baseline",
+              "family": "coaxial_rotary_interface",
+              "parent_volume_mm3": 5013.667715863949,
+              "child_volume_mm3": 5367.411048658162,
+              "parent_bbox": {
+                "min_mm": [
+                  -16.0,
+                  -12.0,
+                  -16.0
+                ],
+                "max_mm": [
+                  16.0,
+                  12.0,
+                  16.0
+                ],
+                "size_mm": [
+                  32.0,
+                  24.0,
+                  32.0
+                ]
+              },
+              "child_bbox": {
+                "min_mm": [
+                  -11.5,
+                  -9.0,
+                  -11.5
+                ],
+                "max_mm": [
+                  11.5,
+                  9.0,
+                  11.5
+                ],
+                "size_mm": [
+                  23.0,
+                  18.0,
+                  23.0
+                ]
+              },
+              "parent_step": "D:\\CADtest\\papertest\\experiments\\try5A\\artifacts\\try5a5\\counterfactuals\\J03\\baseline\\parent.step",
+              "parent_sha256": "6fd4f1dc51d92668fcb6c415dcfbc88fd326e04d6e05d89846f19ffc959ac6fc",
+              "child_step": "D:\\CADtest\\papertest\\experiments\\try5A\\artifacts\\try5a5\\counterfactuals\\J03\\baseline\\child.step",
+              "child_sha256": "f589acc25d25032c16a120e5fa23f3e1e8624bf7cee39f77b5ec211ac7334cb8"
+            },
+            {
+              "name": "counterfactual",
+              "family": "fork_pin_interface",
+              "parent_volume_mm3": 8438.317867542182,
+              "child_volume_mm3": 3281.3306948214667,
+              "parent_bbox": {
+                "min_mm": [
+                  -16.0,
+                  -12.0,
+                  -16.0
+                ],
+                "max_mm": [
+                  16.0,
+                  12.0,
+                  16.0
+                ],
+                "size_mm": [
+                  32.0,
+                  24.0,
+                  32.0
+                ]
+              },
+              "child_bbox": {
+                "min_mm": [
+                  -10.0,
+                  -6.0,
+                  -10.0
+                ],
+                "max_mm": [
+                  10.0,
+                  6.0,
+                  10.0
+                ],
+                "size_mm": [
+                  20.0,
+                  12.0,
+                  20.0
+                ]
+              },
+              "parent_step": "D:\\CADtest\\papertest\\experiments\\try5A\\artifacts\\try5a5\\counterfactuals\\J03\\counterfactual\\parent.step",
+              "parent_sha256": "0a659999a5ae57311c466da5e223c9f274432363dcbbb5d7f7fab7586f3592a7",
+              "child_step": "D:\\CADtest\\papertest\\experiments\\try5A\\artifacts\\try5a5\\counterfactuals\\J03\\counterfactual\\child.step",
+              "child_sha256": "9c0951723f05ec09e451cab92a0ea934c5a5015ac91ec500f81863ee7e735808"
+            }
+          ],
+          "cad_changed": true
+        }
+      ]
+    },
+    "pass": true
+  },
+  "local_body_constraint": {
+    "round2_gcfr": 0.890625,
+    "round3_gcfr": 0.9140625,
+    "changed_link_cad": [
+      "L00",
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L10"
+    ],
+    "pass": true
+  },
+  "status": "PASS"
+}

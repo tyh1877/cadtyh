@@ -1,0 +1,30 @@
+{
+  "incidents": [
+    {
+      "stage": "worker DOF audit",
+      "failure": "nested_rotary_housing was initially absent from the generic rotary audit branch",
+      "repair": "route nested rotary housing through the coaxial-bearing realization",
+      "cases_dropped": 0
+    },
+    {
+      "stage": "within-link attachment",
+      "failure": "a generic connector attempted to fuse a null intermediate shape",
+      "repair": "use deterministic shortest-path attachment and explicit rigid-subassembly constraints",
+      "cases_dropped": 0
+    },
+    {
+      "stage": "motion rendering",
+      "failure": "matplotlib selected Tk in a headless runtime",
+      "repair": "freeze the Agg backend",
+      "cases_dropped": 0
+    },
+    {
+      "stage": "Round-3 regression candidate",
+      "failure": "35 mm direct axial offset crossed moving-interface envelopes and reduced GCFR to zero",
+      "repair": "ROLLBACK to the accepted 18 mm R3 design",
+      "cases_dropped": 0
+    }
+  ],
+  "silent_retry": false,
+  "all_formal_denominators_preserved": true
+}

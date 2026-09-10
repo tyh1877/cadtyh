@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "hard_gates": {
+    "from_zero_inputs_only": true,
+    "skeleton_regenerated": true,
+    "plan_specs_contracts_regenerated": true,
+    "all_physical_links_generated": true,
+    "artifacts_valid": true,
+    "bicr_100": true,
+    "floating_zero": true,
+    "forbidden_fusion_zero": true,
+    "virtual_geometry_zero": true,
+    "meaningless_patch_zero": true,
+    "all_moving_joint_dof_valid": true,
+    "all_moving_joint_jr3_100": true,
+    "fixed_semantics": true,
+    "prismatic_semantics": true,
+    "mimic_semantics": true,
+    "gcfr_90": true,
+    "morphology_guard": true,
+    "collision_graph_consumed": true,
+    "repair_round_cap": true,
+    "motion_playback": true,
+    "geometry_evaluated_after_generation": true,
+    "counterfactuals": true,
+    "dataflow": true,
+    "leakage_absent": true
+  },
+  "case_denominator": 128,
+  "failed_cases_preserved": true,
+  "protocol_re_read": true
+}

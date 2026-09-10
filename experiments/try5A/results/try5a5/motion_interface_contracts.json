@@ -1,0 +1,781 @@
+[
+  {
+    "joint_id": "J00",
+    "joint_type": "revolute",
+    "parent": "L00",
+    "child": "L01",
+    "interface_family": "nested_rotary_housing",
+    "origin_xyz_mm": [
+      0.0,
+      0.0,
+      50.8
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "axis_child": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 150.0,
+    "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+    "motion_range": {
+      "lower": -3.141592653589793,
+      "upper": 3.141592653589793,
+      "unit": "rad"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [
+      "rotation_about_axis"
+    ],
+    "constrained_dof": [
+      "all_except_allowed"
+    ],
+    "parent_rigid_group": "L00",
+    "child_rigid_group": "L01",
+    "forbidden_fusion": true,
+    "fixed_connection_strategy": null,
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "revolute joint; concentric housing roles on both sides",
+    "swept_clearance_policy": "sample full URDF range before body repair",
+    "motion_clearance_spec": {
+      "joint_id": "J00",
+      "samples": [
+        -3.141592653589793,
+        -2.356194490192345,
+        -1.5707963267948966,
+        -0.7853981633974483,
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966,
+        2.356194490192345,
+        3.141592653589793
+      ],
+      "bbox_min_mm": [
+        -7.997142857142857,
+        -7.997142857142857,
+        34.252857142857145
+      ],
+      "bbox_max_mm": [
+        7.997142857142857,
+        7.997142857142857,
+        50.247142857142855
+      ],
+      "axis_half_width_mm": 7.997142857142857,
+      "source": "fresh LinkCoarseSpec + sanitized URDF limits",
+      "generated_before_cad": true
+    }
+  },
+  {
+    "joint_id": "J01",
+    "joint_type": "revolute",
+    "parent": "L01",
+    "child": "L02",
+    "interface_family": "fork_pin_interface",
+    "origin_xyz_mm": [
+      0.0,
+      0.0,
+      42.25
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "axis_child": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 50.0,
+    "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+    "motion_range": {
+      "lower": -1.9373154697137058,
+      "upper": 1.8675022996339325,
+      "unit": "rad"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [
+      "rotation_about_axis"
+    ],
+    "constrained_dof": [
+      "all_except_allowed"
+    ],
+    "parent_rigid_group": "L01",
+    "child_rigid_group": "L02",
+    "forbidden_fusion": true,
+    "fixed_connection_strategy": null,
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "revolute/continuous joint; dual-side/fork body family in planned link",
+    "swept_clearance_policy": "sample full URDF range before body repair",
+    "motion_clearance_spec": {
+      "joint_id": "J01",
+      "samples": [
+        -1.9373154697137058,
+        -1.461713248545251,
+        -0.9861110273767962,
+        -0.5105088062083414,
+        -0.03490658503988664,
+        0.4406956361285681,
+        0.9162978572970231,
+        1.3919000784654776,
+        1.8675022996339325
+      ],
+      "bbox_min_mm": [
+        -112.12092088380568,
+        -6.22,
+        -68.92783693097992
+      ],
+      "bbox_max_mm": [
+        110.85209385621354,
+        6.22,
+        110.57134415967313
+      ],
+      "axis_half_width_mm": 6.22,
+      "source": "fresh LinkCoarseSpec + sanitized URDF limits",
+      "generated_before_cad": true
+    }
+  },
+  {
+    "joint_id": "J02",
+    "joint_type": "revolute",
+    "parent": "L02",
+    "child": "L03",
+    "interface_family": "fork_pin_interface",
+    "origin_xyz_mm": [
+      35.0,
+      0.0,
+      100.0
+    ],
+    "origin_rpy_rad": [
+      3.141592653589793,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      0.0,
+      -1.0,
+      1.2246467991473532e-16
+    ],
+    "axis_child": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 50.0,
+    "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+    "motion_range": {
+      "lower": -1.6057029118347832,
+      "upper": 2.111848394913139,
+      "unit": "rad"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [
+      "rotation_about_axis"
+    ],
+    "constrained_dof": [
+      "all_except_allowed"
+    ],
+    "parent_rigid_group": "L02",
+    "child_rigid_group": "L03",
+    "forbidden_fusion": true,
+    "fixed_connection_strategy": null,
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "revolute/continuous joint; dual-side/fork body family in planned link",
+    "swept_clearance_policy": "sample full URDF range before body repair",
+    "motion_clearance_spec": {
+      "joint_id": "J02",
+      "samples": [
+        -1.6057029118347832,
+        -1.141008998491293,
+        -0.6763150851478027,
+        -0.2116211718043124,
+        0.2530727415391778,
+        0.7177666548826682,
+        1.1824605682261584,
+        1.6471544815696486,
+        2.111848394913139
+      ],
+      "bbox_min_mm": [
+        -56.83523606243399,
+        -5.331428571428571,
+        -105.04004180187523
+      ],
+      "bbox_max_mm": [
+        103.10059660453318,
+        5.331428571428571,
+        105.27051127333814
+      ],
+      "axis_half_width_mm": 5.331428571428571,
+      "source": "fresh LinkCoarseSpec + sanitized URDF limits",
+      "generated_before_cad": true
+    }
+  },
+  {
+    "joint_id": "J03",
+    "joint_type": "revolute",
+    "parent": "L03",
+    "child": "L04",
+    "interface_family": "coaxial_rotary_interface",
+    "origin_xyz_mm": [
+      100.0,
+      0.0,
+      0.0
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "axis_child": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 150.0,
+    "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+    "motion_range": {
+      "lower": -2.1467549799530254,
+      "upper": 1.7453292519943295,
+      "unit": "rad"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [
+      "rotation_about_axis"
+    ],
+    "constrained_dof": [
+      "all_except_allowed"
+    ],
+    "parent_rigid_group": "L03",
+    "child_rigid_group": "L04",
+    "forbidden_fusion": true,
+    "fixed_connection_strategy": null,
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "revolute/continuous joint; URDF axis supports coaxial carrier",
+    "swept_clearance_policy": "sample full URDF range before body repair",
+    "motion_clearance_spec": {
+      "joint_id": "J03",
+      "samples": [
+        -2.1467549799530254,
+        -1.6602444509596062,
+        -1.1737339219661866,
+        -0.6872233929727671,
+        -0.20071286397934784,
+        0.28579766501407144,
+        0.7723081940074912,
+        1.2588187230009105,
+        1.7453292519943298
+      ],
+      "bbox_min_mm": [
+        -41.42083063451813,
+        -7.1085714285714285,
+        -69.15145986834054
+      ],
+      "bbox_max_mm": [
+        68.8438278196837,
+        7.1085714285714285,
+        69.8567089665021
+      ],
+      "axis_half_width_mm": 7.1085714285714285,
+      "source": "fresh LinkCoarseSpec + sanitized URDF limits",
+      "generated_before_cad": true
+    }
+  },
+  {
+    "joint_id": "J04",
+    "joint_type": "fixed",
+    "parent": "L04",
+    "child": "L05",
+    "interface_family": "planar_mount_interface",
+    "origin_xyz_mm": [
+      63.0,
+      0.0,
+      0.0
+    ],
+    "origin_rpy_rad": [
+      -3.141592653589793,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "axis_child": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 0.0,
+    "allowed_contact_role": "clearance only",
+    "motion_range": {
+      "lower": 0,
+      "upper": 0,
+      "unit": "fixed"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [],
+    "constrained_dof": [
+      "all_six"
+    ],
+    "parent_rigid_group": "L04",
+    "child_rigid_group": "L05",
+    "forbidden_fusion": false,
+    "fixed_connection_strategy": "coincident rigid mount pads",
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "URDF joint is fixed; roles form a structural mount",
+    "swept_clearance_policy": "fixed occupancy"
+  },
+  {
+    "joint_id": "J05",
+    "joint_type": "continuous",
+    "parent": "L05",
+    "child": "L06",
+    "interface_family": "coaxial_rotary_interface",
+    "origin_xyz_mm": [
+      5.5,
+      0.0,
+      0.0
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "axis_child": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 150.0,
+    "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+    "motion_range": {
+      "lower": -3.141592653589793,
+      "upper": 3.141592653589793,
+      "unit": "rad"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [
+      "rotation_about_axis"
+    ],
+    "constrained_dof": [
+      "all_except_allowed"
+    ],
+    "parent_rigid_group": "L05",
+    "child_rigid_group": "L06",
+    "forbidden_fusion": true,
+    "fixed_connection_strategy": null,
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "revolute/continuous joint; URDF axis supports coaxial carrier",
+    "swept_clearance_policy": "sample full URDF range before body repair",
+    "motion_clearance_spec": {
+      "joint_id": "J05",
+      "samples": [
+        -3.141592653589793,
+        -2.356194490192345,
+        -1.5707963267948966,
+        -0.7853981633974483,
+        0.0,
+        0.7853981633974483,
+        1.5707963267948966,
+        2.356194490192345,
+        3.141592653589793
+      ],
+      "bbox_min_mm": [
+        15.557142857142857,
+        -4.442857142857143,
+        -4.442857142857143
+      ],
+      "bbox_max_mm": [
+        24.442857142857143,
+        4.442857142857143,
+        4.442857142857143
+      ],
+      "axis_half_width_mm": 4.442857142857143,
+      "source": "fresh LinkCoarseSpec + sanitized URDF limits",
+      "generated_before_cad": true
+    }
+  },
+  {
+    "joint_id": "J06",
+    "joint_type": "fixed",
+    "parent": "L05",
+    "child": "L07",
+    "interface_family": "planar_mount_interface",
+    "origin_xyz_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "axis_child": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 0.0,
+    "allowed_contact_role": "clearance only",
+    "motion_range": {
+      "lower": 0,
+      "upper": 0,
+      "unit": "fixed"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [],
+    "constrained_dof": [
+      "all_six"
+    ],
+    "parent_rigid_group": "L05",
+    "child_rigid_group": "L07",
+    "forbidden_fusion": false,
+    "fixed_connection_strategy": "coincident rigid mount pads",
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "URDF joint is fixed; roles form a structural mount",
+    "swept_clearance_policy": "fixed occupancy"
+  },
+  {
+    "joint_id": "J07",
+    "joint_type": "fixed",
+    "parent": "L07",
+    "child": "L08",
+    "interface_family": "planar_mount_interface",
+    "origin_xyz_mm": [
+      23.0,
+      0.0,
+      0.0
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "axis_child": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 0.0,
+    "allowed_contact_role": "clearance only",
+    "motion_range": {
+      "lower": 0,
+      "upper": 0,
+      "unit": "fixed"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [],
+    "constrained_dof": [
+      "all_six"
+    ],
+    "parent_rigid_group": "L07",
+    "child_rigid_group": "L08",
+    "forbidden_fusion": false,
+    "fixed_connection_strategy": "coincident rigid mount pads",
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "URDF joint is fixed; roles form a structural mount",
+    "swept_clearance_policy": "fixed occupancy"
+  },
+  {
+    "joint_id": "J08",
+    "joint_type": "prismatic",
+    "parent": "L08",
+    "child": "L09",
+    "interface_family": "rail_slider_interface",
+    "origin_xyz_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "axis_child": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 25.0,
+    "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+    "motion_range": {
+      "lower": 0.015,
+      "upper": 0.037,
+      "unit": "m"
+    },
+    "motion_range_m": {
+      "lower": 0.015,
+      "upper": 0.037
+    },
+    "allowed_dof": [
+      "translation_along_axis"
+    ],
+    "constrained_dof": [
+      "all_except_allowed"
+    ],
+    "parent_rigid_group": "L08",
+    "child_rigid_group": "L09",
+    "forbidden_fusion": true,
+    "fixed_connection_strategy": null,
+    "mimic": null,
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "URDF joint is prismatic; translation axis and travel limits require guided clearance",
+    "swept_clearance_policy": "sample full URDF range before body repair",
+    "motion_clearance_spec": {
+      "joint_id": "J08",
+      "samples": [
+        15.0,
+        17.75,
+        20.5,
+        23.25,
+        26.0,
+        28.75,
+        31.5,
+        34.25,
+        37.0
+      ],
+      "bbox_min_mm": [
+        44.44571428571429,
+        11.445714285714285,
+        -3.5542857142857143
+      ],
+      "bbox_max_mm": [
+        51.55428571428571,
+        40.55428571428571,
+        3.5542857142857143
+      ],
+      "axis_half_width_mm": 11.445714285714285,
+      "source": "fresh LinkCoarseSpec + sanitized URDF limits",
+      "generated_before_cad": true
+    }
+  },
+  {
+    "joint_id": "J09",
+    "joint_type": "prismatic",
+    "parent": "L08",
+    "child": "L10",
+    "interface_family": "rail_slider_interface",
+    "origin_xyz_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "axis_child": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 25.0,
+    "allowed_contact_role": "pin/bore bearing, axial shoulder stop, or keyed guide surface",
+    "motion_range": {
+      "lower": -0.037,
+      "upper": -0.015,
+      "unit": "m"
+    },
+    "motion_range_m": {
+      "lower": -0.037,
+      "upper": -0.015
+    },
+    "allowed_dof": [
+      "translation_along_axis"
+    ],
+    "constrained_dof": [
+      "all_except_allowed"
+    ],
+    "parent_rigid_group": "L08",
+    "child_rigid_group": "L10",
+    "forbidden_fusion": true,
+    "fixed_connection_strategy": null,
+    "mimic": {
+      "joint": "J08",
+      "multiplier": -1.0,
+      "offset": 0.0
+    },
+    "virtual_child": false,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "URDF joint is prismatic; translation axis and travel limits require guided clearance",
+    "swept_clearance_policy": "sample full URDF range before body repair",
+    "motion_clearance_spec": {
+      "joint_id": "J09",
+      "samples": [
+        -37.0,
+        -34.25,
+        -31.5,
+        -28.75,
+        -26.0,
+        -23.25,
+        -20.5,
+        -17.75,
+        -15.0
+      ],
+      "bbox_min_mm": [
+        44.44571428571429,
+        -40.55428571428571,
+        -3.5542857142857143
+      ],
+      "bbox_max_mm": [
+        51.55428571428571,
+        -11.445714285714285,
+        3.5542857142857143
+      ],
+      "axis_half_width_mm": 11.445714285714285,
+      "source": "fresh LinkCoarseSpec + sanitized URDF limits",
+      "generated_before_cad": true
+    }
+  },
+  {
+    "joint_id": "J10",
+    "joint_type": "fixed",
+    "parent": "L08",
+    "child": "L11",
+    "interface_family": "end_tool_interface",
+    "origin_xyz_mm": [
+      27.575,
+      0.0,
+      0.0
+    ],
+    "origin_rpy_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axis_parent": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "axis_child": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "clearance_mm": 0.6,
+    "allowed_contact_volume_mm3": 0.0,
+    "allowed_contact_role": "clearance only",
+    "motion_range": {
+      "lower": 0,
+      "upper": 0,
+      "unit": "fixed"
+    },
+    "motion_range_m": {
+      "lower": 0,
+      "upper": 0
+    },
+    "allowed_dof": [],
+    "constrained_dof": [
+      "all_six"
+    ],
+    "parent_rigid_group": "L08",
+    "child_rigid_group": "L11",
+    "forbidden_fusion": false,
+    "fixed_connection_strategy": null,
+    "mimic": null,
+    "virtual_child": true,
+    "knowledge_source": "try5/knowledge/robot_interfaces/families.json",
+    "selection_reason": "child is a virtual/tool reference frame; knowledge forbids child solid generation",
+    "swept_clearance_policy": "fixed occupancy"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "formal_configuration_count": 128,
+  "rerun_scope": "Round-3 full coupled and per-joint exact B-Rep evaluation",
+  "gcfr_first": 0.9140625,
+  "gcfr_rerun": 0.9140625,
+  "per_joint_jr3_first": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+  "per_joint_jr3_rerun": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+  "coupled_semantic_rows_stable": true,
+  "per_joint_semantic_rows_stable": true,
+  "note": "Exact collision classifications and metrics are identical; nondeterministic CAD export headers are excluded."
+}

@@ -1,0 +1,1494 @@
+{
+  "rounds": [
+    {
+      "round0": [
+        {
+          "link_a": "L03",
+          "link_b": "L04",
+          "collision_frequency": 0.1953125,
+          "collision_count": 25,
+          "pose_ids": [
+            "sobol_002",
+            "sobol_005",
+            "sobol_015",
+            "sobol_019",
+            "sobol_020",
+            "sobol_025",
+            "sobol_035",
+            "sobol_036",
+            "sobol_046",
+            "sobol_050",
+            "sobol_053",
+            "sobol_056",
+            "sobol_065",
+            "sobol_075",
+            "sobol_076",
+            "sobol_087",
+            "sobol_090",
+            "sobol_093",
+            "sobol_096",
+            "sobol_103",
+            "sobol_106",
+            "sobol_109",
+            "sobol_118",
+            "sobol_123",
+            "sobol_124"
+          ],
+          "mean_intersection_volume_mm3": 174.4409664085906,
+          "max_intersection_volume_mm3": 175.92918860102918,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": true,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L03",
+          "collision_frequency": 0.1796875,
+          "collision_count": 23,
+          "pose_ids": [
+            "sobol_005",
+            "sobol_011",
+            "sobol_014",
+            "sobol_018",
+            "sobol_023",
+            "sobol_028",
+            "sobol_033",
+            "sobol_036",
+            "sobol_047",
+            "sobol_054",
+            "sobol_056",
+            "sobol_061",
+            "sobol_070",
+            "sobol_072",
+            "sobol_081",
+            "sobol_090",
+            "sobol_095",
+            "sobol_098",
+            "sobol_105",
+            "sobol_108",
+            "sobol_112",
+            "sobol_117",
+            "sobol_123"
+          ],
+          "mean_intersection_volume_mm3": 838.4102801758866,
+          "max_intersection_volume_mm3": 2591.8184379358113,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": true,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L02",
+          "collision_frequency": 0.1328125,
+          "collision_count": 17,
+          "pose_ids": [
+            "sobol_007",
+            "sobol_013",
+            "sobol_019",
+            "sobol_021",
+            "sobol_025",
+            "sobol_037",
+            "sobol_047",
+            "sobol_049",
+            "sobol_059",
+            "sobol_067",
+            "sobol_073",
+            "sobol_087",
+            "sobol_093",
+            "sobol_097",
+            "sobol_107",
+            "sobol_117",
+            "sobol_127"
+          ],
+          "mean_intersection_volume_mm3": 277.7922364557033,
+          "max_intersection_volume_mm3": 611.4682409341077,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": true,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L04",
+          "collision_frequency": 0.0546875,
+          "collision_count": 7,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_018",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_108",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 4115.133954852101,
+          "max_intersection_volume_mm3": 8811.033220144469,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L04",
+          "collision_frequency": 0.046875,
+          "collision_count": 6,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_107",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 3719.277434755477,
+          "max_intersection_volume_mm3": 10624.059839128371,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L03",
+          "collision_frequency": 0.046875,
+          "collision_count": 6,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_047",
+            "sobol_067",
+            "sobol_081",
+            "sobol_095",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 1358.5816535563583,
+          "max_intersection_volume_mm3": 4776.213513580451,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L05",
+          "collision_frequency": 0.03125,
+          "collision_count": 4,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081",
+            "sobol_108"
+          ],
+          "mean_intersection_volume_mm3": 720.0682750623331,
+          "max_intersection_volume_mm3": 1722.7564406695642,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L06",
+          "collision_frequency": 0.03125,
+          "collision_count": 4,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_021",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 404.9628575554063,
+          "max_intersection_volume_mm3": 1051.519081140575,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L05",
+          "collision_frequency": 0.03125,
+          "collision_count": 4,
+          "pose_ids": [
+            "sobol_018",
+            "sobol_021",
+            "sobol_095",
+            "sobol_107"
+          ],
+          "mean_intersection_volume_mm3": 438.6169791467441,
+          "max_intersection_volume_mm3": 902.8427561097682,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L06",
+          "collision_frequency": 0.03125,
+          "collision_count": 4,
+          "pose_ids": [
+            "sobol_021",
+            "sobol_051",
+            "sobol_095",
+            "sobol_107"
+          ],
+          "mean_intersection_volume_mm3": 326.32578618186506,
+          "max_intersection_volume_mm3": 853.915749304048,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L08",
+          "collision_frequency": 0.03125,
+          "collision_count": 4,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_021",
+            "sobol_047",
+            "sobol_077"
+          ],
+          "mean_intersection_volume_mm3": 109.91433163738239,
+          "max_intersection_volume_mm3": 336.54009845670316,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L04",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_018",
+            "sobol_081",
+            "sobol_108"
+          ],
+          "mean_intersection_volume_mm3": 2119.5893583953866,
+          "max_intersection_volume_mm3": 4195.0893195186445,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L03",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_081",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 574.2033922426286,
+          "max_intersection_volume_mm3": 1588.2249866481145,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L06",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 446.0221875882706,
+          "max_intersection_volume_mm3": 807.046982385505,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L05",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 211.7244215016515,
+          "max_intersection_volume_mm3": 328.2568530519005,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L07",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 42.81510737055711,
+          "max_intersection_volume_mm3": 103.07986168727122,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L08",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_021",
+            "sobol_051"
+          ],
+          "mean_intersection_volume_mm3": 718.5424545135204,
+          "max_intersection_volume_mm3": 1185.6079339522316,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L07",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_021",
+            "sobol_095"
+          ],
+          "mean_intersection_volume_mm3": 155.09733279064844,
+          "max_intersection_volume_mm3": 308.7424864606712,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L08",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_014"
+          ],
+          "mean_intersection_volume_mm3": 758.693593258396,
+          "max_intersection_volume_mm3": 758.693593258396,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L07",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_047"
+          ],
+          "mean_intersection_volume_mm3": 177.201010428602,
+          "max_intersection_volume_mm3": 177.201010428602,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L09",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_014"
+          ],
+          "mean_intersection_volume_mm3": 3.545015270470729,
+          "max_intersection_volume_mm3": 3.545015270470729,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L10",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_014"
+          ],
+          "mean_intersection_volume_mm3": 3.5450152564816366,
+          "max_intersection_volume_mm3": 3.5450152564816366,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        }
+      ]
+    },
+    {
+      "round1": [
+        {
+          "link_a": "L03",
+          "link_b": "L04",
+          "collision_frequency": 0.109375,
+          "collision_count": 14,
+          "pose_ids": [
+            "sobol_002",
+            "sobol_015",
+            "sobol_020",
+            "sobol_025",
+            "sobol_046",
+            "sobol_053",
+            "sobol_056",
+            "sobol_065",
+            "sobol_076",
+            "sobol_087",
+            "sobol_096",
+            "sobol_109",
+            "sobol_118",
+            "sobol_123"
+          ],
+          "mean_intersection_volume_mm3": 170.01159540733943,
+          "max_intersection_volume_mm3": 175.46434644058814,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": true,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L04",
+          "collision_frequency": 0.046875,
+          "collision_count": 6,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_018",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 1729.0890230445932,
+          "max_intersection_volume_mm3": 2858.181286277599,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L04",
+          "collision_frequency": 0.046875,
+          "collision_count": 6,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_107",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 1179.5014100515102,
+          "max_intersection_volume_mm3": 2751.00743462115,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L03",
+          "collision_frequency": 0.0390625,
+          "collision_count": 5,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 326.3790215400595,
+          "max_intersection_volume_mm3": 791.073680704077,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L05",
+          "collision_frequency": 0.03125,
+          "collision_count": 4,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081",
+            "sobol_108"
+          ],
+          "mean_intersection_volume_mm3": 562.6550777342685,
+          "max_intersection_volume_mm3": 1093.1036513573038,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L04",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_018",
+            "sobol_081",
+            "sobol_108"
+          ],
+          "mean_intersection_volume_mm3": 541.6198389790551,
+          "max_intersection_volume_mm3": 1565.2568579735646,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L03",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_081",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 354.2612642858897,
+          "max_intersection_volume_mm3": 928.3986027778446,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L06",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 312.383974756619,
+          "max_intersection_volume_mm3": 406.13234389867074,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L06",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_021",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 248.35573752518818,
+          "max_intersection_volume_mm3": 277.88132953339766,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L08",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_021",
+            "sobol_047"
+          ],
+          "mean_intersection_volume_mm3": 32.170718664217205,
+          "max_intersection_volume_mm3": 93.78903016198227,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L03",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_018",
+            "sobol_056",
+            "sobol_095"
+          ],
+          "mean_intersection_volume_mm3": 76.50529362382743,
+          "max_intersection_volume_mm3": 91.69028153998141,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": true,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L05",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 308.68960296850196,
+          "max_intersection_volume_mm3": 328.2568530519005,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L07",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 61.62915342488286,
+          "max_intersection_volume_mm3": 103.07986168730359,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L08",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_014"
+          ],
+          "mean_intersection_volume_mm3": 601.887746874342,
+          "max_intersection_volume_mm3": 601.887746874342,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L08",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 350.3984908710512,
+          "max_intersection_volume_mm3": 350.3984908710512,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L06",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 238.03677203550242,
+          "max_intersection_volume_mm3": 238.03677203550242,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L07",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 26.800901755094436,
+          "max_intersection_volume_mm3": 26.800901755094436,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L10",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_077"
+          ],
+          "mean_intersection_volume_mm3": 21.303523424753802,
+          "max_intersection_volume_mm3": 21.303523424753802,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L09",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_077"
+          ],
+          "mean_intersection_volume_mm3": 21.30352307971948,
+          "max_intersection_volume_mm3": 21.30352307971948,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L05",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_018"
+          ],
+          "mean_intersection_volume_mm3": 8.505420048019406,
+          "max_intersection_volume_mm3": 8.505420048019406,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        }
+      ]
+    },
+    {
+      "round2": [
+        {
+          "link_a": "L01",
+          "link_b": "L04",
+          "collision_frequency": 0.046875,
+          "collision_count": 6,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_018",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 1419.0118288046006,
+          "max_intersection_volume_mm3": 2855.9625082205994,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L04",
+          "collision_frequency": 0.046875,
+          "collision_count": 6,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_107",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 875.8579512818715,
+          "max_intersection_volume_mm3": 1941.1081089546963,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L03",
+          "collision_frequency": 0.0390625,
+          "collision_count": 5,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 321.09263645320345,
+          "max_intersection_volume_mm3": 791.0736808049413,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L05",
+          "collision_frequency": 0.03125,
+          "collision_count": 4,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081",
+            "sobol_108"
+          ],
+          "mean_intersection_volume_mm3": 556.3295376684245,
+          "max_intersection_volume_mm3": 1067.801491093927,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L04",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_018",
+            "sobol_081",
+            "sobol_108"
+          ],
+          "mean_intersection_volume_mm3": 458.0320168655083,
+          "max_intersection_volume_mm3": 1346.7940499748456,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L03",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_081",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 337.39881888212454,
+          "max_intersection_volume_mm3": 877.8112665665492,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L06",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 287.3880382101618,
+          "max_intersection_volume_mm3": 331.144534259299,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L06",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_021",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 238.66438693936462,
+          "max_intersection_volume_mm3": 277.88132953339766,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L03",
+          "link_b": "L04",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_015",
+            "sobol_056",
+            "sobol_065"
+          ],
+          "mean_intersection_volume_mm3": 151.34712367716966,
+          "max_intersection_volume_mm3": 151.52591172950753,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": true,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L03",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_018",
+            "sobol_056",
+            "sobol_095"
+          ],
+          "mean_intersection_volume_mm3": 76.50529362382743,
+          "max_intersection_volume_mm3": 91.69028153998141,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": true,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L05",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 308.68960296850196,
+          "max_intersection_volume_mm3": 328.2568530519005,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L07",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 61.62915342488286,
+          "max_intersection_volume_mm3": 103.07986168730359,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L08",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_021",
+            "sobol_047"
+          ],
+          "mean_intersection_volume_mm3": 43.26520672644259,
+          "max_intersection_volume_mm3": 86.3724390489457,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L08",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_014"
+          ],
+          "mean_intersection_volume_mm3": 492.955938286839,
+          "max_intersection_volume_mm3": 492.955938286839,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L08",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 288.6016482017081,
+          "max_intersection_volume_mm3": 288.6016482017081,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L06",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 202.80826215187653,
+          "max_intersection_volume_mm3": 202.80826215187653,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L07",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 26.800901755094436,
+          "max_intersection_volume_mm3": 26.800901755094436,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L05",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_018"
+          ],
+          "mean_intersection_volume_mm3": 8.505420048019406,
+          "max_intersection_volume_mm3": 8.505420048019406,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L09",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_077"
+          ],
+          "mean_intersection_volume_mm3": 8.204623296529116,
+          "max_intersection_volume_mm3": 8.204623296529116,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L10",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_077"
+          ],
+          "mean_intersection_volume_mm3": 8.20460435252198,
+          "max_intersection_volume_mm3": 8.20460435252198,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        }
+      ]
+    },
+    {
+      "round3": [
+        {
+          "link_a": "L01",
+          "link_b": "L04",
+          "collision_frequency": 0.046875,
+          "collision_count": 6,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_018",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 1147.4987104716913,
+          "max_intersection_volume_mm3": 2851.8913634755004,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L04",
+          "collision_frequency": 0.046875,
+          "collision_count": 6,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_107",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 635.67820134728,
+          "max_intersection_volume_mm3": 1255.004371956696,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L03",
+          "collision_frequency": 0.0390625,
+          "collision_count": 5,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_047",
+            "sobol_081",
+            "sobol_095",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 316.52192938170026,
+          "max_intersection_volume_mm3": 791.0736809884274,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L05",
+          "collision_frequency": 0.03125,
+          "collision_count": 4,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081",
+            "sobol_108"
+          ],
+          "mean_intersection_volume_mm3": 546.2628068865747,
+          "max_intersection_volume_mm3": 1027.534567966532,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L03",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_011",
+            "sobol_081",
+            "sobol_117"
+          ],
+          "mean_intersection_volume_mm3": 293.6161252050151,
+          "max_intersection_volume_mm3": 746.4631855352209,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L06",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 287.3880382101618,
+          "max_intersection_volume_mm3": 331.144534259299,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L06",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_021",
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 238.66438693936462,
+          "max_intersection_volume_mm3": 277.88132953339766,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L08",
+          "collision_frequency": 0.0234375,
+          "collision_count": 3,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_021",
+            "sobol_047"
+          ],
+          "mean_intersection_volume_mm3": 65.29306105649563,
+          "max_intersection_volume_mm3": 120.00000000000048,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L04",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_018",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 517.5406155784331,
+          "max_intersection_volume_mm3": 1014.9027812518106,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L01",
+          "link_b": "L10",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_077"
+          ],
+          "mean_intersection_volume_mm3": 280.3637832484877,
+          "max_intersection_volume_mm3": 560.0854925186167,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L05",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_047",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 308.68960296850196,
+          "max_intersection_volume_mm3": 328.2568530519005,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L07",
+          "collision_frequency": 0.015625,
+          "collision_count": 2,
+          "pose_ids": [
+            "sobol_014",
+            "sobol_081"
+          ],
+          "mean_intersection_volume_mm3": 61.62915342488286,
+          "max_intersection_volume_mm3": 103.07986168730359,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L02",
+          "link_b": "L08",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_014"
+          ],
+          "mean_intersection_volume_mm3": 383.7407423577107,
+          "max_intersection_volume_mm3": 383.7407423577107,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L08",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 229.36066772306822,
+          "max_intersection_volume_mm3": 229.36066772306822,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L06",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 202.80826215187653,
+          "max_intersection_volume_mm3": 202.80826215187653,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L07",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_021"
+          ],
+          "mean_intersection_volume_mm3": 26.800901755094436,
+          "max_intersection_volume_mm3": 26.800901755094436,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        },
+        {
+          "link_a": "L00",
+          "link_b": "L05",
+          "collision_frequency": 0.0078125,
+          "collision_count": 1,
+          "pose_ids": [
+            "sobol_018"
+          ],
+          "mean_intersection_volume_mm3": 8.505420048019406,
+          "max_intersection_volume_mm3": 8.505420048019406,
+          "involved_regions": [
+            "coarse_body_or_interface"
+          ],
+          "adjacent": false,
+          "motion_induced": true
+        }
+      ]
+    }
+  ]
+}
