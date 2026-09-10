@@ -1,0 +1,46 @@
+{
+  "joint_id": "J02",
+  "design_key": "integrated_u_bracket",
+  "observations": [
+    "right:upper-arm plate wraps elbow",
+    "isometric:semi-circular plate end"
+  ],
+  "crops": [
+    {
+      "view": "isometric",
+      "source": "experiments\\try5A\\inputs\\images\\isometric.png",
+      "source_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J02\\isometric.png",
+      "box_px": [
+        546,
+        378,
+        797,
+        630
+      ]
+    },
+    {
+      "view": "right",
+      "source": "experiments\\try5A\\inputs\\images\\right.png",
+      "source_sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J02\\right.png",
+      "box_px": [
+        644,
+        378,
+        840,
+        630
+      ]
+    }
+  ],
+  "consumed_parameters": {
+    "visible_family": "integrated_u_bracket",
+    "outer": 14.0,
+    "plate_length": 31.0,
+    "plate_thickness": 4.0,
+    "spacing": 18.0,
+    "approach": [
+      -0.33,
+      0,
+      -0.94
+    ]
+  }
+}

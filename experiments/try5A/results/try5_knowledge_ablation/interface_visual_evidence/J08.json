@@ -1,15 +1,15 @@
 {
   "joint_id": "J08",
-  "design_key": "J08_lower_rectangular_guide",
+  "design_key": "rect_rail_slider",
   "observations": [
-    "front: lower finger uses a rectangular guide, not a rotary boss"
+    "front:parallel rectangular finger guides"
   ],
   "crops": [
     {
       "view": "isometric",
       "source": "experiments\\try5A\\inputs\\images\\isometric.png",
       "source_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
-      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J08\\isometric.png",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J08\\isometric.png",
       "box_px": [
         84,
         504,
@@ -21,7 +21,7 @@
       "view": "front",
       "source": "experiments\\try5A\\inputs\\images\\front.png",
       "source_sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
-      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J08\\front.png",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J08\\front.png",
       "box_px": [
         392,
         280,
@@ -31,24 +31,7 @@
     }
   ],
   "consumed_parameters": {
-    "design_id": "J08_lower_rectangular_guide",
-    "program": {
-      "parent": [
-        {
-          "op": "single_rail",
-          "z": -9
-        }
-      ],
-      "child": [
-        {
-          "op": "box",
-          "size": [
-            4,
-            8,
-            6
-          ]
-        }
-      ]
-    }
+    "visible_family": "rect_rail_slider",
+    "rail_spacing": 18.0
   }
 }

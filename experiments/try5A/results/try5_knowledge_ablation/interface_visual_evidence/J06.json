@@ -1,15 +1,15 @@
 {
   "joint_id": "J06",
-  "design_key": "J06_internal_crossbar_mount",
+  "design_key": "flush_rect_mount",
   "observations": [
-    "front: fixed connection is already expressed by overlapping rigid link bodies; no added pad is visible"
+    "front:bar fixed inside gripper housing"
   ],
   "crops": [
     {
       "view": "isometric",
       "source": "experiments\\try5A\\inputs\\images\\isometric.png",
       "source_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
-      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J06\\isometric.png",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J06\\isometric.png",
       "box_px": [
         168,
         476,
@@ -21,7 +21,7 @@
       "view": "front",
       "source": "experiments\\try5A\\inputs\\images\\front.png",
       "source_sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
-      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J06\\front.png",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J06\\front.png",
       "box_px": [
         462,
         336,
@@ -31,10 +31,11 @@
     }
   ],
   "consumed_parameters": {
-    "design_id": "J06_internal_crossbar_mount",
-    "program": {
-      "parent": [],
-      "child": []
-    }
+    "visible_family": "flush_rect_mount",
+    "size": [
+      1,
+      22,
+      14
+    ]
   }
 }

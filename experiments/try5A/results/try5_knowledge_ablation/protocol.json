@@ -1,0 +1,30 @@
+{
+  "experiment": "Try5 knowledge-role ablation",
+  "conditions": {
+    "F0": {
+      "generator": "image_first_program",
+      "knowledge": "none"
+    },
+    "F1": {
+      "generator": "legacy_family_dispatch",
+      "knowledge": "template_authority"
+    },
+    "F2": {
+      "generator": "image_first_program",
+      "knowledge": "post_draft_non_binding_advisory"
+    }
+  },
+  "fixed_inputs": [
+    "formal six-view images",
+    "sanitized URDF",
+    "frozen motion contracts",
+    "body recipes",
+    "configuration set"
+  ],
+  "hypotheses": [
+    "F2 visible geometry remains image-controlled",
+    "F2 removes template dispatch and arbitrary auto bridges",
+    "F2 preserves mechanics while knowledge changes only declared hidden/transition details"
+  ],
+  "visual_evaluation_policy": "formal-image mask IoU is diagnostic-only until pose/camera registration exists; no unavailable GT-CAD metric is claimed"
+}

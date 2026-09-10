@@ -1,9 +1,9 @@
 {
   "joint_id": "J03",
-  "visible_family": "asymmetric_wrap_hinge",
+  "design_key": "J03_asymmetric_wrist_wrap",
   "observations": [
-    "right:forearm side plate wraps wrist",
-    "isometric:joint integrated into profile"
+    "right: forearm uses a dominant outer cover and a recessed opposite cheek",
+    "isometric: wrist housing grows from the link rather than two equal discs"
   ],
   "crops": [
     {
@@ -32,15 +32,164 @@
     }
   ],
   "consumed_parameters": {
-    "visible_family": "asymmetric_wrap_hinge",
-    "outer": 13.0,
-    "plate_length": 27.0,
-    "plate_thickness": 4.0,
-    "spacing": 16.0,
-    "approach": [
-      -1,
-      0,
-      0
-    ]
+    "design_id": "J03_asymmetric_wrist_wrap",
+    "clearance_envelope": {
+      "radius": 23,
+      "depth": 12
+    },
+    "program": {
+      "parent": [
+        {
+          "op": "profile_y",
+          "y": -8,
+          "t": 5,
+          "points": [
+            [
+              -27,
+              -12
+            ],
+            [
+              -5,
+              -12
+            ],
+            [
+              6,
+              -10
+            ],
+            [
+              12,
+              -5
+            ],
+            [
+              14,
+              3
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              2,
+              14
+            ],
+            [
+              -10,
+              11
+            ],
+            [
+              -27,
+              7
+            ]
+          ],
+          "bore": 3.6
+        },
+        {
+          "op": "profile_y",
+          "y": 7,
+          "t": 3,
+          "points": [
+            [
+              -20,
+              -9
+            ],
+            [
+              -4,
+              -9
+            ],
+            [
+              7,
+              -7
+            ],
+            [
+              11,
+              0
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              -2,
+              11
+            ],
+            [
+              -20,
+              6
+            ]
+          ],
+          "bore": 3.6
+        },
+        {
+          "op": "box",
+          "offset": [
+            -20,
+            -6.5,
+            0
+          ],
+          "size": [
+            16,
+            5,
+            12
+          ],
+          "knowledge_only": true
+        },
+        {
+          "op": "box",
+          "offset": [
+            -20,
+            6.5,
+            0
+          ],
+          "size": [
+            16,
+            5,
+            12
+          ],
+          "knowledge_only": true
+        }
+      ],
+      "child": [
+        {
+          "op": "profile_y",
+          "y": 0,
+          "t": 11,
+          "points": [
+            [
+              -9,
+              -9
+            ],
+            [
+              7,
+              -11
+            ],
+            [
+              18,
+              -8
+            ],
+            [
+              26,
+              -5
+            ],
+            [
+              26,
+              7
+            ],
+            [
+              13,
+              10
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              -9,
+              5
+            ]
+          ],
+          "bore": 3.6
+        }
+      ]
+    }
   }
 }

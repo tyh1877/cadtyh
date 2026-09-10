@@ -1,0 +1,14 @@
+{
+  "image_sensitivity_proxy_pass": true,
+  "mean_F0_F2_geometry_delta": 0.008235553404364068,
+  "mean_F1_F2_geometry_delta": 0.012338852834172602,
+  "F2_template_dispatch_zero": true,
+  "F2_auto_bridge_zero": true,
+  "F2_bicr": 1.0,
+  "F2_all_jr3": true,
+  "F2_gcfr": 0.90625,
+  "frozen_gcfr": 0.9140625,
+  "F2_gcfr_regression": 0.0078125,
+  "F2_visual_better_than_template": true,
+  "status": "PASS"
+}

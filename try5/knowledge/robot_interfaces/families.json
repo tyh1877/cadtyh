@@ -1,5 +1,7 @@
 {
-  "schema_version": "try5A4_robot_interface_motion_knowledge_v2",
+  "schema_version": "try5A4_robot_interface_motion_knowledge_v2_legacy_baseline",
+  "authority": "legacy_template_baseline_only",
+  "usage_policy": "Do not dispatch visible geometry from this file in the image-first F2 path; retrieve entries only after an image-authored draft as non-binding examples.",
   "scope": "generic_robotic_joint_realization_only",
   "families": [
     {

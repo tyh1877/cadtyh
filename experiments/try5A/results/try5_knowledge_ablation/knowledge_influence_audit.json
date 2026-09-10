@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "advisory_source": "try5\\knowledge\\robot_interfaces\\advisory_principles.json",
+  "records": [
+    {
+      "joint_id": "J00",
+      "image_authored_design_id": "J00_faceted_concealed_turntable",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "front: faceted base surrounds a mostly concealed rotor",
+        "isometric: no exposed twin bearing discs"
+      ]
+    },
+    {
+      "joint_id": "J01",
+      "image_authored_design_id": "J01_shoulder_profile_clevis",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [
+        "box",
+        "box"
+      ],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "right: shoulder sidewalls continue into the upright link",
+        "isometric: curved end is part of the plate contour"
+      ]
+    },
+    {
+      "joint_id": "J02",
+      "image_authored_design_id": "J02_elbow_continuous_sideplates",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "right: upper-arm plates terminate in local semicircular wraps",
+        "isometric: elbow contour is continuous with the incoming plates"
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "image_authored_design_id": "J03_asymmetric_wrist_wrap",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [
+        "box",
+        "box"
+      ],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "right: forearm uses a dominant outer cover and a recessed opposite cheek",
+        "isometric: wrist housing grows from the link rather than two equal discs"
+      ]
+    },
+    {
+      "joint_id": "J04",
+      "image_authored_design_id": "J04_flush_wrist_transition",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "isometric: fixed wrist transition is rectangular and flush"
+      ]
+    },
+    {
+      "joint_id": "J05",
+      "image_authored_design_id": "J05_boxed_roll_bearing",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "right: compact roll joint is enclosed by a box-like wrist housing",
+        "isometric: circular core is subordinate to the housing"
+      ]
+    },
+    {
+      "joint_id": "J06",
+      "image_authored_design_id": "J06_internal_crossbar_mount",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "front: fixed connection is already expressed by overlapping rigid link bodies; no added pad is visible"
+      ]
+    },
+    {
+      "joint_id": "J07",
+      "image_authored_design_id": "J07_palm_blended_mount",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "right: palm grows from the crossbar through a broad rectangular root"
+      ]
+    },
+    {
+      "joint_id": "J08",
+      "image_authored_design_id": "J08_lower_rectangular_guide",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "front: lower finger uses a rectangular guide, not a rotary boss"
+      ]
+    },
+    {
+      "joint_id": "J09",
+      "image_authored_design_id": "J09_upper_rectangular_guide_mirror",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "front: upper guide mirrors the lower guide about the palm plane"
+      ]
+    },
+    {
+      "joint_id": "J10",
+      "image_authored_design_id": "J10_virtual_tcp",
+      "knowledge_retrieved_after_draft": true,
+      "accepted_hidden_or_transition_advice": [],
+      "visible_topology_selected_by_knowledge": false,
+      "evidence": [
+        "URDF: virtual tool frame has no solid"
+      ]
+    }
+  ]
+}

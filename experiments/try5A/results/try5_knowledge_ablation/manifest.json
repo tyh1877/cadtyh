@@ -1,0 +1,27 @@
+{
+  "implementation": {
+    "runner": "017639b292d03fb8888a3ee509c97c55c979c5a741f3f6cdea943a23ca25f877",
+    "worker": "0e8dd65cbb5d968ddfebba727ef6dec1b53ee71c43293fa2759695753d7cb77a",
+    "interface_compiler": "1d84547d46b1d1de0f196bfd16c78e9ddf56bea49aeff294fc5cb29a84eafbb9",
+    "advisory_knowledge": "6d8da3bce7abd12c304cbd19f8e3c1042b9979d0406e8233c7c7aafdb04cf55f",
+    "legacy_knowledge": "689c76eb830945b466980efcd3b0c0718a3c3e04a9fa97758375a719fee7ccdc"
+  },
+  "result_sha256": {
+    "condition_metrics.json": "06b6787a2bce6a60c4f5b291b78a2835c1a8243cb6e2f5c3942a98efa3048bd2",
+    "knowledge_influence_audit.json": "c0205afd0722606e0989cc970293e5ed4f42adbbc330061d221abfaccbd7d831",
+    "knowledge_role_gates.json": "e86c2df0ddeca754ea3d4dea8de96cbb77f2ba64c9a97954d392a1620c3b2c63",
+    "protocol.json": "08d23e8ad49a470718dcc924779c3a606891cf25e655cf91b8c4a8ca43eb94b0",
+    "report.md": "230587489ee1dd766e1b855fa4f58accb3726128a1a11608ff677310a1c8b2f4",
+    "summary.json": "2260ef75e22a2bf28c9096d090666338f4c9b84d8b6414841f5c57f74d14bc3b",
+    "interface_visual_evidence\\J00.json": "9636e03af59288864c21c0567118bebf134352876f9569717f0dfa71d70fedf0",
+    "interface_visual_evidence\\J01.json": "a553227d213c87e536d6c8a35c6298e60420ea68dcff31b5b528a3d2816327d1",
+    "interface_visual_evidence\\J02.json": "ad2351f9d63eda717755e4b800c7683877a88a2b975441df8435c4eccb03a692",
+    "interface_visual_evidence\\J03.json": "db6ca7e8e9191ae9589dbc01b2a632341158f4a12c65cfb7c4fbde93f230e672",
+    "interface_visual_evidence\\J04.json": "ee6a7236227ce9282afa7d8328b54da97088bd15759b916ab4ae0d67f19b6d42",
+    "interface_visual_evidence\\J05.json": "cb2c24fa6145d66b4f18edc7dd1b65d381d235dd163ffd459c29cd8db7b2d215",
+    "interface_visual_evidence\\J06.json": "e9fbad71d4ebb2ce891b40d2b695a9dd3bc68bb6d67197d3f0525afcb8ecabce",
+    "interface_visual_evidence\\J07.json": "2cdfba9a10e4df87685c7d4ebd20697a92024d3730faa28c5297327ce888d2db",
+    "interface_visual_evidence\\J08.json": "2240bab9585cca413402da6424d8b8a0406d5e8c152e8e0db2852ed36cffe082",
+    "interface_visual_evidence\\J09.json": "8aa563ab93504d09edff5401f81a2129bb2dc7d2cead747c88f283687d8a1988"
+  }
+}

@@ -1,9 +1,9 @@
 {
   "joint_id": "J01",
-  "visible_family": "integrated_u_bracket",
+  "design_key": "J01_shoulder_profile_clevis",
   "observations": [
-    "right:shoulder U bracket",
-    "isometric:rectangular side walls"
+    "right: shoulder sidewalls continue into the upright link",
+    "isometric: curved end is part of the plate contour"
   ],
   "crops": [
     {
@@ -32,15 +32,172 @@
     }
   ],
   "consumed_parameters": {
-    "visible_family": "integrated_u_bracket",
-    "outer": 15.0,
-    "plate_length": 25.0,
-    "plate_thickness": 4.0,
-    "spacing": 20.0,
-    "approach": [
-      0,
-      0,
-      -1
-    ]
+    "design_id": "J01_shoulder_profile_clevis",
+    "clearance_envelope": {
+      "radius": 25,
+      "depth": 16
+    },
+    "program": {
+      "parent": [
+        {
+          "op": "profile_y",
+          "y": -10,
+          "t": 4,
+          "points": [
+            [
+              -15,
+              -27
+            ],
+            [
+              15,
+              -27
+            ],
+            [
+              15,
+              -5
+            ],
+            [
+              12,
+              6
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              0,
+              16
+            ],
+            [
+              -7,
+              13
+            ],
+            [
+              -12,
+              6
+            ],
+            [
+              -15,
+              -5
+            ]
+          ],
+          "bore": 3.6
+        },
+        {
+          "op": "profile_y",
+          "y": 10,
+          "t": 4,
+          "points": [
+            [
+              -15,
+              -27
+            ],
+            [
+              15,
+              -27
+            ],
+            [
+              15,
+              -5
+            ],
+            [
+              12,
+              6
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              0,
+              16
+            ],
+            [
+              -7,
+              13
+            ],
+            [
+              -12,
+              6
+            ],
+            [
+              -15,
+              -5
+            ]
+          ],
+          "bore": 3.6
+        },
+        {
+          "op": "box",
+          "offset": [
+            0,
+            -7.5,
+            -25
+          ],
+          "size": [
+            24,
+            5,
+            4
+          ],
+          "knowledge_only": true
+        },
+        {
+          "op": "box",
+          "offset": [
+            0,
+            7.5,
+            -25
+          ],
+          "size": [
+            24,
+            5,
+            4
+          ],
+          "knowledge_only": true
+        }
+      ],
+      "child": [
+        {
+          "op": "profile_y",
+          "y": 0,
+          "t": 12,
+          "points": [
+            [
+              -10,
+              -8
+            ],
+            [
+              10,
+              -8
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              10,
+              14
+            ],
+            [
+              7,
+              23
+            ],
+            [
+              2,
+              25
+            ],
+            [
+              -4,
+              17
+            ],
+            [
+              -9,
+              8
+            ]
+          ],
+          "bore": 3.6
+        }
+      ]
+    }
   }
 }

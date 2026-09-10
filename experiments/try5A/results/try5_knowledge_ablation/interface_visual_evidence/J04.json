@@ -1,15 +1,15 @@
 {
   "joint_id": "J04",
-  "design_key": "J04_flush_wrist_transition",
+  "design_key": "flush_rect_mount",
   "observations": [
-    "isometric: fixed wrist transition is rectangular and flush"
+    "isometric:wrist-to-tool rectangular transition"
   ],
   "crops": [
     {
       "view": "isometric",
       "source": "experiments\\try5A\\inputs\\images\\isometric.png",
       "source_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
-      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J04\\isometric.png",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J04\\isometric.png",
       "box_px": [
         308,
         420,
@@ -21,7 +21,7 @@
       "view": "right",
       "source": "experiments\\try5A\\inputs\\images\\right.png",
       "source_sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
-      "crop": "experiments\\try5A\\artifacts\\try5b1_repair\\interface_evidence\\J04\\right.png",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J04\\right.png",
       "box_px": [
         350,
         392,
@@ -31,19 +31,11 @@
     }
   ],
   "consumed_parameters": {
-    "design_id": "J04_flush_wrist_transition",
-    "program": {
-      "parent": [
-        {
-          "op": "box",
-          "size": [
-            2,
-            14,
-            16
-          ]
-        }
-      ],
-      "child": []
-    }
+    "visible_family": "flush_rect_mount",
+    "size": [
+      1,
+      16,
+      18
+    ]
   }
 }

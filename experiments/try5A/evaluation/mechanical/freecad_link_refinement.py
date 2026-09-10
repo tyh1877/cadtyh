@@ -12,7 +12,7 @@ SCRIPTS = ROOT / "experiments/try5A/scripts"
 sys.path.insert(0, str(SCRIPTS))
 import freecad_motion_realization as frozen
 from executable_body_families import compile_body, compile_robot_body
-from interface_instance_geometry import build_interface_half, oriented_prism
+from interface_instance_geometry import build_image_first_half, build_interface_half, oriented_prism
 
 
 def load(path): return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -124,6 +124,14 @@ def rectangular_attachment_closure(body, interfaces):
     return group
 
 
+def direct_program_attachment(body, interfaces):
+    """Fuse only authored contacts; never invent a shortest-path bridge."""
+    group=body
+    for interface in interfaces:
+        if interface is not None and not interface.isNull(): group=group.fuse(interface)
+    return group.removeSplitter()
+
+
 def surface_audit(shape):
     total=sum(float(face.Area) for face in shape.Faces); cylinders=0.0
     surface_types= {}
@@ -137,8 +145,9 @@ def clear_parent_mating_envelopes(body, link_id, contracts, specs):
     value=body
     for contract in contracts:
         if contract.get("virtual_child") or contract["parent"]!=link_id or contract["joint_type"] not in ("revolute","continuous"): continue
-        spec=specs[contract["joint_id"]]; family=spec["visible_family"]; center=contract["origin_xyz_mm"]; axis=contract["axis_parent"]
-        if family=="concealed_turntable": radius,depth=10.1,spec["depth"]+4
+        spec=specs[contract["joint_id"]]; family=spec.get("visible_family"); center=contract["origin_xyz_mm"]; axis=contract["axis_parent"]
+        if spec.get("clearance_envelope"): radius,depth=spec["clearance_envelope"]["radius"],spec["clearance_envelope"]["depth"]
+        elif family=="concealed_turntable": radius,depth=10.1,spec["depth"]+4
         elif family in ("integrated_u_bracket","asymmetric_wrap_hinge"): radius,depth=spec["outer"]+10.0,spec["spacing"]-spec["plate_thickness"]+2
         elif family=="compact_wrist_roll": radius,depth=8.5,spec["depth"]+4
         else: continue
@@ -149,6 +158,7 @@ def clear_parent_mating_envelopes(body, link_id, contracts, specs):
 def full_robot_repair(job):
     base=ROOT/"experiments/try5A/results/try5a5"; contracts=load(base/"motion_interface_contracts.json")
     classification=load(base/"link_realization_classification.json"); physical=[x["link_id"] for x in classification if x["realization_type"]!="virtual_frame"]
+    condition=job.get("condition","FULL_REPAIR"); generation=job.get("generation_strategy","legacy_template"); advisory=job.get("knowledge_mode")=="advisory"
     shapes={}; body_shapes={}; half_shapes={}; builds=[]; interface_records=[]
     for link_id in physical:
         body=compile_robot_body(link_id)
@@ -159,11 +169,14 @@ def full_robot_repair(job):
         body["shape"]=clear_parent_mating_envelopes(body["shape"],link_id,contracts,job["interface_specs"]); halves=[]; metadata=[]
         for contract in contracts:
             if contract.get("virtual_child") or link_id not in (contract["parent"],contract["child"]): continue
-            side="parent" if contract["parent"]==link_id else "child"; half,meta=build_interface_half(contract,side,job["interface_specs"][contract["joint_id"]]); halves.append(half); half_shapes[(link_id,contract["joint_id"])]=half; metadata.append({"joint_id":contract["joint_id"],"side":side,**meta})
+            side="parent" if contract["parent"]==link_id else "child"
+            if generation=="image_first_program": half,meta=build_image_first_half(contract,side,job["interface_specs"][contract["joint_id"]],advisory=advisory)
+            else: half,meta=build_interface_half(contract,side,job["interface_specs"][contract["joint_id"]])
+            halves.append(half); half_shapes[(link_id,contract["joint_id"])]=half; metadata.append({"joint_id":contract["joint_id"],"side":side,**meta})
             if half is not None:
-                bb=frozen.bounds(half); interface_records.append({"joint_id":contract["joint_id"],"link_id":link_id,"side":side,"visible_family":meta["visible_family"],"volume_mm3":float(half.Volume),"bbox_size_mm":bb["size_mm"],"evidence":meta["evidence"]})
-        group=rectangular_attachment_closure(body["shape"],halves); built={"shape":body["shape"],"group":group,"executed_family":body["executed_family"],"features":body["features"]}
-        artifact=export(link_id,"FULL_REPAIR",built,job["cad_root"]); builds.append({"link_id":link_id,"body_family":body["executed_family"],"features":body["features"],"body_surface_audit":positive_body_surface_audit,"clearance_cut_surface_audit":surface_audit(body["shape"]),"group_surface_audit":surface_audit(group),"solid_count":len(group.Solids),"attachment_valid":len(group.Solids)==1,"valid":group.isValid() and not group.isNull(),"interfaces":metadata,"artifact":artifact}); shapes[link_id]=group; body_shapes[link_id]=body["shape"]
+                bb=frozen.bounds(half); interface_records.append({"joint_id":contract["joint_id"],"link_id":link_id,"side":side,"design_key":meta.get("design_id",meta.get("visible_family")),"visible_family":meta.get("visible_family","instance_program"),"design_origin":meta.get("design_origin","legacy_template"),"knowledge_mode":meta.get("knowledge_mode","template_dispatch"),"accepted_advice":meta.get("accepted_advice",[]),"volume_mm3":float(half.Volume),"bbox_size_mm":bb["size_mm"],"evidence":meta["evidence"]})
+        auto_bridge=generation=="legacy_template"; group=rectangular_attachment_closure(body["shape"],halves) if auto_bridge else direct_program_attachment(body["shape"],halves); built={"shape":body["shape"],"group":group,"executed_family":body["executed_family"],"features":body["features"]}
+        artifact=export(link_id,condition,built,job["cad_root"]); builds.append({"link_id":link_id,"body_family":body["executed_family"],"features":body["features"],"body_surface_audit":positive_body_surface_audit,"clearance_cut_surface_audit":surface_audit(body["shape"]),"group_surface_audit":surface_audit(group),"solid_count":len(group.Solids),"attachment_valid":len(group.Solids)==1,"auto_bridge_enabled":auto_bridge,"valid":group.isValid() and not group.isNull(),"interfaces":metadata,"artifact":artifact}); shapes[link_id]=group; body_shapes[link_id]=body["shape"]
     diagnostic=[]; config=job["coupled"][0]
     for contract in contracts:
         if contract.get("virtual_child") or contract["joint_type"]=="fixed": continue
@@ -189,8 +202,8 @@ def full_robot_repair(job):
             rows,ok=frozen.exact_config(config,shapes,contracts,physical); jflags.append(ok)
             collision_rows.extend(row for row in rows if row.get("classification") in ("ADJACENT_UNINTENDED_COLLISION","NONADJACENT_COLLISION"))
         per_joint.append({"joint_id":joint_id,"jr3":sum(jflags)/len(jflags),"full_range_pass":all(jflags),"collision_rows":collision_rows})
-    assembly=frozen.save_assembly(job["assembly_root"],"FULL_REPAIR",shapes,job["canonical_config"],physical)
-    dump(job["output"],{"status":"PASS","mode":"full_robot_interface_body_repair","builds":builds,"interface_records":interface_records,"joint_overlap_diagnostic":diagnostic,"pair_component_diagnostic":pair_component_diagnostic,"mechanical_exact":{"wall_seconds":time.perf_counter()-exact_start,"configuration_count":len(flags),"valid_count":sum(flags),"gcfr":sum(flags)/len(flags),"rows":coupled_rows,"per_joint":per_joint},"assembly":assembly,"physical_links":physical})
+    assembly=frozen.save_assembly(job["assembly_root"],condition,shapes,job["canonical_config"],physical)
+    dump(job["output"],{"status":"PASS","mode":"full_robot_interface_body_repair","condition":condition,"generation_strategy":generation,"knowledge_mode":job.get("knowledge_mode"),"builds":builds,"interface_records":interface_records,"joint_overlap_diagnostic":diagnostic,"pair_component_diagnostic":pair_component_diagnostic,"mechanical_exact":{"wall_seconds":time.perf_counter()-exact_start,"configuration_count":len(flags),"valid_count":sum(flags),"gcfr":sum(flags)/len(flags),"rows":coupled_rows,"per_joint":per_joint},"assembly":assembly,"physical_links":physical})
 
 
 def main():

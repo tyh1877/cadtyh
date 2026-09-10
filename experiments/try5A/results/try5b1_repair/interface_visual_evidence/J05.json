@@ -1,9 +1,9 @@
 {
   "joint_id": "J05",
-  "visible_family": "compact_wrist_roll",
+  "design_key": "J05_boxed_roll_bearing",
   "observations": [
-    "right:compact boxed roll housing",
-    "isometric:not an arm-style clevis"
+    "right: compact roll joint is enclosed by a box-like wrist housing",
+    "isometric: circular core is subordinate to the housing"
   ],
   "crops": [
     {
@@ -32,8 +32,30 @@
     }
   ],
   "consumed_parameters": {
-    "visible_family": "compact_wrist_roll",
-    "outer": 12.0,
-    "depth": 8.0
+    "design_id": "J05_boxed_roll_bearing",
+    "clearance_envelope": {
+      "radius": 8.6,
+      "depth": 12
+    },
+    "program": {
+      "parent": [
+        {
+          "op": "box_bore",
+          "size": [
+            8,
+            22,
+            20
+          ],
+          "bore": 8.6
+        }
+      ],
+      "child": [
+        {
+          "op": "cylinder",
+          "radius": 8,
+          "depth": 12
+        }
+      ]
+    }
   }
 }

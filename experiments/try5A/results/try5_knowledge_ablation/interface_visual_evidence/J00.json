@@ -1,0 +1,39 @@
+{
+  "joint_id": "J00",
+  "design_key": "concealed_turntable",
+  "observations": [
+    "front:base pedestal",
+    "isometric:turntable mostly concealed"
+  ],
+  "crops": [
+    {
+      "view": "isometric",
+      "source": "experiments\\try5A\\inputs\\images\\isometric.png",
+      "source_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J00\\isometric.png",
+      "box_px": [
+        672,
+        797,
+        1008,
+        1162
+      ]
+    },
+    {
+      "view": "right",
+      "source": "experiments\\try5A\\inputs\\images\\right.png",
+      "source_sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+      "crop": "experiments\\try5A\\artifacts\\try5_knowledge_ablation\\interface_evidence\\J00\\right.png",
+      "box_px": [
+        742,
+        812,
+        1008,
+        1148
+      ]
+    }
+  ],
+  "consumed_parameters": {
+    "visible_family": "concealed_turntable",
+    "outer": 16.0,
+    "depth": 8.0
+  }
+}

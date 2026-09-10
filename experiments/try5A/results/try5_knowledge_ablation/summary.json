@@ -1,0 +1,119 @@
+{
+  "experiment": "Try5 knowledge-role ablation",
+  "status": "PASS",
+  "conditions": [
+    {
+      "condition": "F0",
+      "visual_metrics": {
+        "unregistered_formal_mask_iou_mean": 0.18573947629425128,
+        "unregistered_formal_mask_iou_by_view": {
+          "front": 0.18060992262175693,
+          "right": 0.20633088780809497,
+          "top": 0.08702368692070031,
+          "isometric": 0.26899340782645287
+        },
+        "mean_group_cylindrical_surface_ratio": 0.08360864394484319,
+        "full_twin_disc_template_count": 0
+      },
+      "gcfr": 0.90625,
+      "all_jr3": true,
+      "bicr": 0.8181818181818182,
+      "floating_link_count": 2,
+      "template_dispatch_rate": 0.0,
+      "auto_bridge_enabled_link_count": 0,
+      "accepted_advice_count": 0
+    },
+    {
+      "condition": "F1",
+      "visual_metrics": {
+        "unregistered_formal_mask_iou_mean": 0.1874161560471283,
+        "unregistered_formal_mask_iou_by_view": {
+          "front": 0.18297239012240682,
+          "right": 0.20645187870797627,
+          "top": 0.08562267538796973,
+          "isometric": 0.2746176799701604
+        },
+        "mean_group_cylindrical_surface_ratio": 0.15135301429685913,
+        "full_twin_disc_template_count": 3
+      },
+      "gcfr": 0.90625,
+      "all_jr3": true,
+      "bicr": 1.0,
+      "floating_link_count": 0,
+      "template_dispatch_rate": 1.0,
+      "auto_bridge_enabled_link_count": 11,
+      "accepted_advice_count": 0
+    },
+    {
+      "condition": "F2",
+      "visual_metrics": {
+        "unregistered_formal_mask_iou_mean": 0.1860774897296436,
+        "unregistered_formal_mask_iou_by_view": {
+          "front": 0.18060992262175693,
+          "right": 0.20633088780809497,
+          "top": 0.08840717761243982,
+          "isometric": 0.26896197087628265
+        },
+        "mean_group_cylindrical_surface_ratio": 0.08274276518317998,
+        "full_twin_disc_template_count": 0
+      },
+      "gcfr": 0.90625,
+      "all_jr3": true,
+      "bicr": 1.0,
+      "floating_link_count": 0,
+      "template_dispatch_rate": 0.0,
+      "auto_bridge_enabled_link_count": 0,
+      "accepted_advice_count": 4
+    }
+  ],
+  "gates": {
+    "image_sensitivity_proxy_pass": true,
+    "mean_F0_F2_geometry_delta": 0.008235553404364068,
+    "mean_F1_F2_geometry_delta": 0.012338852834172602,
+    "F2_template_dispatch_zero": true,
+    "F2_auto_bridge_zero": true,
+    "F2_bicr": 1.0,
+    "F2_all_jr3": true,
+    "F2_gcfr": 0.90625,
+    "frozen_gcfr": 0.9140625,
+    "F2_gcfr_regression": 0.0078125,
+    "F2_visual_better_than_template": true,
+    "status": "PASS"
+  },
+  "comparison": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\reference_F0_F1_F2.png",
+  "assemblies": {
+    "F0": {
+      "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F0\\assembly\\whole_robot.FCStd",
+      "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F0\\assembly\\whole_robot.step",
+      "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F0\\assembly\\whole_robot.stl",
+      "reopen_recompute": true,
+      "sha256": {
+        "whole_robot.FCStd": "2db80b9e5abd0f41626163d5093038a0a13166cd7e444fda6b537c2dd2afbce1",
+        "whole_robot.step": "1cc3fb26fe40a5cb5cadee29c8481b6d03fd2476551f695684a7ea3e3a47e056",
+        "whole_robot.stl": "0e1204c44b7e102da4b239c6bb560bc3249545f936d542b4e14b73052b8e9a7d"
+      }
+    },
+    "F1": {
+      "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F1\\assembly\\whole_robot.FCStd",
+      "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F1\\assembly\\whole_robot.step",
+      "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F1\\assembly\\whole_robot.stl",
+      "reopen_recompute": true,
+      "sha256": {
+        "whole_robot.FCStd": "6a64c23fa885db3f89303f7ec63567b5107ce1a72e247f86b4d57347468bfaac",
+        "whole_robot.step": "dfe33fa8d5871968d5a50e93a0e466383fc7c1abda982348d4eec7a299ff9bcf",
+        "whole_robot.stl": "b45733389e4c56bd5b1c49121e48e4decfb9dcbac1da96d049f7f57f7439a67e"
+      }
+    },
+    "F2": {
+      "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F2\\assembly\\whole_robot.FCStd",
+      "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F2\\assembly\\whole_robot.step",
+      "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5_knowledge_ablation\\assembly\\F2\\assembly\\whole_robot.stl",
+      "reopen_recompute": true,
+      "sha256": {
+        "whole_robot.FCStd": "8891bf5e9f7c415d38f7f41e3d387c2c9bcd95ce243715b42fefcb70e39b2118",
+        "whole_robot.step": "0b5b4c52cfc59b8352ffd55808101067aed9b409eaed395b5d629a03326072d2",
+        "whole_robot.stl": "854526599eb0b4dc1154bea5d9aa4f165df31db169b5554a8ae71b58453b8ebc"
+      }
+    }
+  }
+}

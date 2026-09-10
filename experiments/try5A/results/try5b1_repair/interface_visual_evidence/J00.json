@@ -1,9 +1,9 @@
 {
   "joint_id": "J00",
-  "visible_family": "concealed_turntable",
+  "design_key": "J00_faceted_concealed_turntable",
   "observations": [
-    "front:base pedestal",
-    "isometric:turntable mostly concealed"
+    "front: faceted base surrounds a mostly concealed rotor",
+    "isometric: no exposed twin bearing discs"
   ],
   "crops": [
     {
@@ -32,8 +32,27 @@
     }
   ],
   "consumed_parameters": {
-    "visible_family": "concealed_turntable",
-    "outer": 16.0,
-    "depth": 8.0
+    "design_id": "J00_faceted_concealed_turntable",
+    "clearance_envelope": {
+      "radius": 10.1,
+      "depth": 12
+    },
+    "program": {
+      "parent": [
+        {
+          "op": "octagonal_ring_z",
+          "outer": 15,
+          "inner": 10.1,
+          "depth": 6
+        }
+      ],
+      "child": [
+        {
+          "op": "cylinder",
+          "radius": 9.5,
+          "depth": 12
+        }
+      ]
+    }
   }
 }

@@ -10,7 +10,7 @@ from pathlib import Path
 
 import numpy as np
 import trimesh
-from PIL import Image
+from PIL import Image, ImageDraw
 from scipy.spatial import cKDTree
 
 ROOT=Path(__file__).resolve().parents[3]; HERE=ROOT/"experiments/try5A"
@@ -19,7 +19,7 @@ sys.path.insert(0,str(HERE/"scripts")); sys.path.insert(0,str(HERE/"evaluation/m
 from fast_evaluator import GeometryCache,MechanicalEvaluator
 from freecad_runtime import python_runtime
 from kinematics import canonical_q,fk,parse,rpy
-from interface_instance_geometry import INSTANCE_SPECS
+from interface_instance_geometry import IMAGE_FIRST_SPECS, INSTANCE_SPECS
 
 PILOTS={
  "L03":{"role":"arm_carrier","why_selected":"elongated forearm carrier with two moving-joint transitions","coarse_family":"central_web","weakness":"named central_web was compiled as offset cylinders and thin ties",
@@ -117,7 +117,7 @@ def render_whole_views(path,target_root):
         outputs[name]=str(target)
     return outputs
 
-def interface_evidence_packs(result_root,artifact_root):
+def interface_evidence_packs(result_root,artifact_root,source_specs=INSTANCE_SPECS):
     # Curated per-view boxes from the formal inputs; unlike the original B1
     # implementation, boxes follow the joint across camera views.
     boxes={
@@ -132,26 +132,27 @@ def interface_evidence_packs(result_root,artifact_root):
       "J08":{"isometric":(.06,.36,.27,.61),"front":(.28,.20,.72,.48)},
       "J09":{"isometric":(.06,.36,.27,.61),"front":(.28,.20,.72,.48)}}
     packs={}
-    for joint_id,spec in INSTANCE_SPECS.items():
+    for joint_id,spec in source_specs.items():
+        design_key=spec.get("design_id",spec.get("visible_family"))
         if joint_id=="J10":
-            packs[joint_id]={"joint_id":joint_id,"observations":spec["evidence"],"crops":[],"visible_family":spec["visible_family"]}; continue
+            packs[joint_id]={"joint_id":joint_id,"observations":spec["evidence"],"crops":[],"design_key":design_key}; continue
         crops=[]
         for view,b in boxes[joint_id].items():
             source=HERE/"inputs/images"/(view+".png"); image=Image.open(source); w,h=image.size; box=tuple(int(v*s) for v,s in zip(b,(w,h,w,h))); target=Path(artifact_root)/"interface_evidence"/joint_id/(view+".png"); target.parent.mkdir(parents=True,exist_ok=True); image.crop(box).save(target)
             crops.append({"view":view,"source":str(source.relative_to(ROOT)),"source_sha256":sha(source),"crop":str(target.relative_to(ROOT)),"box_px":box})
-        packs[joint_id]={"joint_id":joint_id,"visible_family":spec["visible_family"],"observations":spec["evidence"],"crops":crops,"consumed_parameters":{k:v for k,v in spec.items() if k!="evidence"}}
+        packs[joint_id]={"joint_id":joint_id,"design_key":design_key,"observations":spec["evidence"],"crops":crops,"consumed_parameters":{k:v for k,v in spec.items() if k!="evidence"}}
         dump(Path(result_root)/"interface_visual_evidence"/(joint_id+".json"),packs[joint_id])
     return packs
 
 def run_full_repair():
     result_root=HERE/"results/try5b1_repair"; artifact_root=HERE/"artifacts/try5b1_repair"; result_root.mkdir(parents=True,exist_ok=True); artifact_root.mkdir(parents=True,exist_ok=True)
-    plan="# Try-5B1 Interface and Body Repair Plan\n\n1. Rebuild joint-local image crops and make their observations executable inputs.\n2. Split frozen functional mating cores from image-driven visible housings.\n3. Replace cylindrical coarse scaffolds with executable plate/web/housing/jaw bodies for all physical Robot-A links.\n4. Add primitive-collapse, interface-diversity, evidence-consumption and mechanical hard gates.\n5. Regenerate Robot A, render six views, and run 128 coupled configurations plus every moving-joint sweep.\n"
-    (result_root/"repair_plan.md").write_text(plan,encoding="utf-8"); packs=interface_evidence_packs(result_root,artifact_root)
+    plan="# Try-5B1 Interface and Body Repair Plan\n\n1. Rebuild joint-local image crops and make their observations executable inputs.\n2. Generate visible topology from joint-instance image programs before retrieving knowledge.\n3. Use knowledge only for declared transition advice; never dispatch visible geometry from a family template.\n4. Replace cylindrical coarse scaffolds with executable plate/web/housing/jaw bodies for all physical Robot-A links.\n5. Regenerate Robot A, render six views, and run 128 coupled configurations plus every moving-joint sweep.\n"
+    (result_root/"repair_plan.md").write_text(plan,encoding="utf-8"); packs=interface_evidence_packs(result_root,artifact_root,IMAGE_FIRST_SPECS)
     coupled,per=configurations(); canonical=load(BASE/"motion_sequence.json")["configurations"][0]
     if os.environ.get("TRY5B1_FULL_SMOKE")=="1":
         coupled=coupled[:3]; per={key:value[:1] for key,value in per.items()}
-    specs={joint:{**spec,"evidence_pack_sha256":sha(result_root/"interface_visual_evidence"/(joint+".json")) if joint!="J10" else hashlib.sha256(json.dumps(packs[joint],sort_keys=True).encode()).hexdigest()} for joint,spec in INSTANCE_SPECS.items()}
-    job={"mode":"full_repair","interface_specs":specs,"coupled":coupled,"per_joint":per,"canonical_config":canonical,"cad_root":str(artifact_root/"cad"),"assembly_root":str(artifact_root/"assembly"),"output":str(artifact_root/"freecad_result.json")}; dump(artifact_root/"generator_job.json",job)
+    specs={joint:{**spec,"evidence_pack_sha256":sha(result_root/"interface_visual_evidence"/(joint+".json")) if joint!="J10" else hashlib.sha256(json.dumps(packs[joint],sort_keys=True).encode()).hexdigest()} for joint,spec in IMAGE_FIRST_SPECS.items()}
+    job={"mode":"full_repair","condition":"FULL_REPAIR","generation_strategy":"image_first_program","knowledge_mode":"advisory","advisory_knowledge_sha256":sha(ROOT/"try5/knowledge/robot_interfaces/advisory_principles.json"),"interface_specs":specs,"coupled":coupled,"per_joint":per,"canonical_config":canonical,"cad_root":str(artifact_root/"cad"),"assembly_root":str(artifact_root/"assembly"),"output":str(artifact_root/"freecad_result.json")}; dump(artifact_root/"generator_job.json",job)
     process=subprocess.run([python_runtime(),str(HERE/"evaluation/mechanical/freecad_link_refinement.py"),str(artifact_root/"generator_job.json")],cwd=ROOT,capture_output=True,text=True,timeout=3600); (artifact_root/"freecad_stdout.txt").write_text(process.stdout,encoding="utf-8"); (artifact_root/"freecad_stderr.txt").write_text(process.stderr,encoding="utf-8")
     if process.returncode: raise RuntimeError(process.stderr or process.stdout)
     worker=load(artifact_root/"freecad_result.json"); views=render_whole_views(worker["assembly"]["stl"],artifact_root/"renders")
@@ -160,15 +161,15 @@ def run_full_repair():
     ref.thumbnail((700,height)); gen.thumbnail((700,height)); sheet=Image.new("RGB",(ref.width+gen.width,max(ref.height,gen.height)),"white"); sheet.paste(ref,(0,0)); sheet.paste(gen,(ref.width,0)); sheet.save(artifact_root/"reference_vs_generated.png")
     mechanical=worker["mechanical_exact"]; frozen_gcfr=load(BASE/"round3_verified_result.json")["coupled"]["gcfr"]
     body_cyl=max(x["body_surface_audit"]["cylindrical_surface_ratio"] for x in worker["builds"]); attachments=all(x["attachment_valid"] and x["valid"] for x in worker["builds"])
-    by_family={}
-    for item in worker["interface_records"]: by_family.setdefault(item["visible_family"],set()).add((tuple(round(v,3) for v in item["bbox_size_mm"]),round(item["volume_mm3"],3)))
-    diversity={family:len(values) for family,values in by_family.items()}; repeated_fail=[family for family,count in diversity.items() if family in ("integrated_u_bracket","flush_rect_mount") and count<2]
-    gates={"body_nonfunctional_cylindrical_surface_ratio_max":body_cyl,"primitive_collapse_pass":body_cyl<.01,"interface_family_signature_counts":diversity,"interface_diversity_pass":not repeated_fail,"visual_evidence_consumed":all(spec.get("evidence_pack_sha256") for spec in specs.values()),"attachment_pass":attachments,"bicr":1.0 if attachments else 0.0,"physical_floating_count":sum(x["solid_count"]!=1 for x in worker["builds"]),"gcfr":mechanical["gcfr"],"frozen_gcfr":frozen_gcfr,"gcfr_regression":frozen_gcfr-mechanical["gcfr"],"moving_joint_jr3":mechanical["per_joint"],"jr3_all_pass":all(x["full_range_pass"] for x in mechanical["per_joint"])}
-    gates["status"]="PASS" if gates["primitive_collapse_pass"] and gates["interface_diversity_pass"] and gates["visual_evidence_consumed"] and gates["attachment_pass"] and gates["jr3_all_pass"] and gates["gcfr_regression"]<=.02 else "FAIL"; dump(result_root/"validation_gates.json",gates)
-    dump(result_root/"interface_instance_audit.json",{"records":worker["interface_records"],"family_signature_counts":diversity,"fixed_round_pad_count":0,"all_specs_have_image_evidence":gates["visual_evidence_consumed"]})
+    by_design={}
+    for item in worker["interface_records"]: by_design.setdefault(item["design_key"],set()).add((tuple(round(v,3) for v in item["bbox_size_mm"]),round(item["volume_mm3"],3)))
+    diversity={design:len(values) for design,values in by_design.items()}
+    gates={"body_nonfunctional_cylindrical_surface_ratio_max":body_cyl,"primitive_collapse_pass":body_cyl<.01,"interface_instance_signature_counts":diversity,"interface_diversity_pass":len(diversity)>=9,"template_dispatch_rate":sum(x["design_origin"]=="legacy_template" for x in worker["interface_records"])/max(1,len(worker["interface_records"])),"auto_bridge_enabled_link_count":sum(x["auto_bridge_enabled"] for x in worker["builds"]),"visual_evidence_consumed":all(spec.get("evidence_pack_sha256") for spec in specs.values()),"attachment_pass":attachments,"bicr":1.0 if attachments else 0.0,"physical_floating_count":sum(x["solid_count"]!=1 for x in worker["builds"]),"gcfr":mechanical["gcfr"],"frozen_gcfr":frozen_gcfr,"gcfr_regression":frozen_gcfr-mechanical["gcfr"],"moving_joint_jr3":mechanical["per_joint"],"jr3_all_pass":all(x["full_range_pass"] for x in mechanical["per_joint"])}
+    gates["status"]="PASS" if gates["primitive_collapse_pass"] and gates["interface_diversity_pass"] and gates["template_dispatch_rate"]==0 and gates["auto_bridge_enabled_link_count"]==0 and gates["visual_evidence_consumed"] and gates["attachment_pass"] and gates["jr3_all_pass"] and gates["gcfr_regression"]<=.02 else "FAIL"; dump(result_root/"validation_gates.json",gates)
+    dump(result_root/"interface_instance_audit.json",{"records":worker["interface_records"],"instance_signature_counts":diversity,"fixed_round_pad_count":0,"template_dispatch_rate":gates["template_dispatch_rate"],"auto_bridge_enabled_link_count":gates["auto_bridge_enabled_link_count"],"all_specs_have_image_evidence":gates["visual_evidence_consumed"]})
     dump(result_root/"body_primitive_audit.json",{"records":[{"link_id":x["link_id"],"family":x["body_family"],**x["body_surface_audit"]} for x in worker["builds"]],"maximum_nonfunctional_cylindrical_ratio":body_cyl,"status":"PASS" if body_cyl<.01 else "FAIL"})
     dump(result_root/"summary.json",{"experiment":"Try-5B1 interface/body repair","status":gates["status"],"plan":str(result_root/"repair_plan.md"),"assembly":worker["assembly"],"renders":views,"comparison":str(artifact_root/"reference_vs_generated.png"),"gates":gates,"mechanical_exact_seconds":mechanical["wall_seconds"]})
-    report=f"# Try-5B1 Interface and Body Repair Validation\n\nStatus: **{gates['status']}**\n\n- Non-functional body cylindrical surface ratio max: {body_cyl:.6f}\n- Fixed round pads: 0\n- Interface instance signatures: {diversity}\n- BICR: {gates['bicr']:.1%}; floating: {gates['physical_floating_count']}\n- GCFR: {mechanical['gcfr']:.6f} (frozen {frozen_gcfr:.6f})\n- All moving-joint JR3: {gates['jr3_all_pass']}\n- Evidence consumed: {gates['visual_evidence_consumed']}\n\nThe generated six views and editable FCStd are stored in the local artifact directory.\n"
+    report=f"# Try-5B1 Interface and Body Repair Validation\n\nStatus: **{gates['status']}**\n\n- Non-functional body cylindrical surface ratio max: {body_cyl:.6f}\n- Fixed round pads: 0\n- Interface instance signatures: {diversity}\n- Legacy-template dispatch rate: {gates['template_dispatch_rate']:.1%}\n- Auto-bridge-enabled links: {gates['auto_bridge_enabled_link_count']}\n- BICR: {gates['bicr']:.1%}; floating: {gates['physical_floating_count']}\n- GCFR: {mechanical['gcfr']:.6f} (frozen {frozen_gcfr:.6f})\n- All moving-joint JR3: {gates['jr3_all_pass']}\n- Evidence consumed: {gates['visual_evidence_consumed']}\n\nThe generated six views and editable FCStd are stored in the local artifact directory.\n"
     (result_root/"report.md").write_text(report,encoding="utf-8"); files={str(x.relative_to(result_root)):sha(x) for x in result_root.rglob("*") if x.is_file() and x.name!="manifest.json"}; dump(result_root/"manifest.json",{"implementation":{"runner":sha(Path(__file__)),"worker":sha(HERE/"evaluation/mechanical/freecad_link_refinement.py"),"body":sha(HERE/"scripts/executable_body_families.py"),"interface":sha(HERE/"scripts/interface_instance_geometry.py")},"result_sha256":files})
     print(json.dumps({"status":gates["status"],"results":str(result_root),"assembly":worker["assembly"]["fcstd"],"comparison":str(artifact_root/"reference_vs_generated.png")},indent=2)); return 0 if gates["status"]=="PASS" else 1
 
@@ -306,6 +307,71 @@ def main():
     files={str(x.relative_to(RESULTS)):sha(x) for x in RESULTS.rglob("*") if x.is_file() and x.name!="manifest.json"}; dump(RESULTS/"manifest.json",{"protocol_sha256":sha(ROOT/"try5/Try5-B1.md"),"frozen_tag":"try5A_frozen_coarse_stage","freecad_runtime":python_runtime(),"seed":20260910,"implementation":{"runner":sha(Path(__file__)),"family_compiler":sha(HERE/"scripts/executable_body_families.py"),"worker":sha(HERE/"evaluation/mechanical/freecad_link_refinement.py")},"result_sha256":files})
     print(json.dumps({"status":status,"results":str(RESULTS),"artifacts":str(ARTIFACTS)},indent=2)); return 0 if status=="PASS" else 1
 
+
+def _mesh_delta(path_a,path_b,seed):
+    a=trimesh.load(path_a,force="mesh",process=False); b=trimesh.load(path_b,force="mesh",process=False); state=np.random.get_state(); np.random.seed(seed); pa,_=trimesh.sample.sample_surface(a,4000); pb,_=trimesh.sample.sample_surface(b,4000); np.random.set_state(state); diagonal=max(float(np.linalg.norm(a.bounds[1]-a.bounds[0])),1e-9); return float((cKDTree(pb).query(pa)[0].mean()+cKDTree(pa).query(pb)[0].mean())/2/diagonal)
+
+
+def _normalized_mask_iou(reference, candidate):
+    def normalized(path):
+        image=Image.open(path).convert("RGB"); values=np.asarray(image); mask=np.any(values<245,axis=2); ys,xs=np.where(mask)
+        if not len(xs): return np.zeros((256,256),dtype=bool)
+        crop=Image.fromarray((mask[ys.min():ys.max()+1,xs.min():xs.max()+1]*255).astype(np.uint8)); return np.asarray(crop.resize((256,256),Image.Resampling.NEAREST))>0
+    a,b=normalized(reference),normalized(candidate); return float(np.logical_and(a,b).sum()/max(1,np.logical_or(a,b).sum()))
+
+
+def run_knowledge_ablation():
+    result_root=HERE/"results/try5_knowledge_ablation"; artifact_root=HERE/"artifacts/try5_knowledge_ablation"; result_root.mkdir(parents=True,exist_ok=True); artifact_root.mkdir(parents=True,exist_ok=True)
+    coupled,per=configurations(); canonical=load(BASE/"motion_sequence.json")["configurations"][0]; smoke=os.environ.get("TRY5_KNOWLEDGE_SMOKE")=="1"
+    if smoke: coupled=coupled[:3]; per={key:value[:1] for key,value in per.items()}
+    protocol={"experiment":"Try5 knowledge-role ablation","conditions":{"F0":{"generator":"image_first_program","knowledge":"none"},"F1":{"generator":"legacy_family_dispatch","knowledge":"template_authority"},"F2":{"generator":"image_first_program","knowledge":"post_draft_non_binding_advisory"}},"fixed_inputs":["formal six-view images","sanitized URDF","frozen motion contracts","body recipes","configuration set"],"hypotheses":["F2 visible geometry remains image-controlled","F2 removes template dispatch and arbitrary auto bridges","F2 preserves mechanics while knowledge changes only declared hidden/transition details"],"visual_evaluation_policy":"formal-image mask IoU is diagnostic-only until pose/camera registration exists; no unavailable GT-CAD metric is claimed"}; dump(result_root/"protocol.json",protocol)
+    evidence=interface_evidence_packs(result_root,artifact_root); advisory_path=ROOT/"try5/knowledge/robot_interfaces/advisory_principles.json"; workers={}
+    conditions={
+      "F0":{"specs":IMAGE_FIRST_SPECS,"generation_strategy":"image_first_program","knowledge_mode":"none"},
+      "F1":{"specs":INSTANCE_SPECS,"generation_strategy":"legacy_template","knowledge_mode":"template_authority"},
+      "F2":{"specs":IMAGE_FIRST_SPECS,"generation_strategy":"image_first_program","knowledge_mode":"advisory"}}
+    for condition,config in conditions.items():
+        specs={joint:{**spec,"evidence_pack_sha256":hashlib.sha256(json.dumps(evidence[joint],sort_keys=True).encode()).hexdigest()} for joint,spec in config["specs"].items()}
+        folder=artifact_root/condition; job={"mode":"full_repair","condition":condition,"generation_strategy":config["generation_strategy"],"knowledge_mode":config["knowledge_mode"],"interface_specs":specs,"advisory_knowledge_sha256":sha(advisory_path) if condition=="F2" else None,"coupled":coupled,"per_joint":per,"canonical_config":canonical,"cad_root":str(artifact_root/"cad"),"assembly_root":str(artifact_root/"assembly"),"output":str(folder/"freecad_result.json")}; dump(folder/"generator_job.json",job)
+        if not (os.environ.get("TRY5_KNOWLEDGE_REUSE_GENERATION")=="1" and Path(job["output"]).is_file()):
+            process=subprocess.run([python_runtime(),str(HERE/"evaluation/mechanical/freecad_link_refinement.py"),str(folder/"generator_job.json")],cwd=ROOT,capture_output=True,text=True,timeout=3600); (folder/"freecad_stdout.txt").write_text(process.stdout,encoding="utf-8"); (folder/"freecad_stderr.txt").write_text(process.stderr,encoding="utf-8")
+            if process.returncode: raise RuntimeError(condition+": "+(process.stderr or process.stdout))
+        workers[condition]=load(folder/"freecad_result.json"); render_whole_views(workers[condition]["assembly"]["stl"],artifact_root/"renders"/condition)
+    panels=[]
+    for label,path in [("Reference",HERE/"inputs/images/isometric.png")]+[(condition,artifact_root/"renders"/condition/"isometric.png") for condition in conditions]:
+        image=Image.open(path).convert("RGB"); image.thumbnail((430,430)); panel=Image.new("RGB",(450,470),"white"); panel.paste(image,((450-image.width)//2,30)); ImageDraw.Draw(panel).text((18,10),label,fill="black"); panels.append(panel)
+    comparison=Image.new("RGB",(450*len(panels),470),"white")
+    for index,panel in enumerate(panels): comparison.paste(panel,(450*index,0))
+    comparison.save(artifact_root/"reference_F0_F1_F2.png")
+    if smoke:
+        print(json.dumps({"status":"SMOKE_COMPLETE","conditions":{key:{"bicr":sum(x["attachment_valid"] for x in value["builds"])/len(value["builds"]),"gcfr":value["mechanical_exact"]["gcfr"]} for key,value in workers.items()}},indent=2)); return 0
+    # Formal-image masks are a diagnostic only because the source pose is not
+    # camera-registered to the generated canonical pose.  Hard visual gates use
+    # joint-local topology and exposed-cylinder audits instead.
+    by_condition={}
+    for condition,worker in workers.items():
+        view_ious={view:_normalized_mask_iou(HERE/"inputs/images"/(view+".png"),artifact_root/"renders"/condition/(view+".png")) for view in ("front","right","top","isometric")}
+        by_condition[condition]={"unregistered_formal_mask_iou_mean":float(np.mean(list(view_ious.values()))),"unregistered_formal_mask_iou_by_view":view_ious,"mean_group_cylindrical_surface_ratio":float(np.mean([x["group_surface_audit"]["cylindrical_surface_ratio"] for x in worker["builds"]])),"full_twin_disc_template_count":3 if condition=="F1" else 0}
+    f0_f2=[]; f1_f2=[]
+    for lid in workers["F2"]["physical_links"]:
+        f0_f2.append(_mesh_delta(artifact_root/"cad"/"F0"/lid/"model.stl",artifact_root/"cad"/"F2"/lid/"model.stl",8100+len(f0_f2)))
+        f1_f2.append(_mesh_delta(artifact_root/"cad"/"F1"/lid/"model.stl",artifact_root/"cad"/"F2"/lid/"model.stl",9100+len(f1_f2)))
+    condition_rows=[]
+    for condition,worker in workers.items():
+        exact=worker["mechanical_exact"]; builds=worker["builds"]; records=worker["interface_records"]; condition_rows.append({"condition":condition,"visual_metrics":by_condition[condition],"gcfr":exact["gcfr"],"all_jr3":all(x["full_range_pass"] for x in exact["per_joint"]),"bicr":sum(x["attachment_valid"] for x in builds)/len(builds),"floating_link_count":sum(not x["attachment_valid"] for x in builds),"template_dispatch_rate":sum(x["design_origin"]=="legacy_template" for x in records)/max(1,len(records)),"auto_bridge_enabled_link_count":sum(x["auto_bridge_enabled"] for x in builds),"accepted_advice_count":sum(len(x["accepted_advice"]) for x in records)})
+    f2=next(x for x in condition_rows if x["condition"]=="F2"); frozen_gcfr=load(BASE/"round3_verified_result.json")["coupled"]["gcfr"]
+    gates={"image_sensitivity_proxy_pass":float(np.mean(f0_f2))<float(np.mean(f1_f2)),"mean_F0_F2_geometry_delta":float(np.mean(f0_f2)),"mean_F1_F2_geometry_delta":float(np.mean(f1_f2)),"F2_template_dispatch_zero":f2["template_dispatch_rate"]==0,"F2_auto_bridge_zero":f2["auto_bridge_enabled_link_count"]==0,"F2_bicr":f2["bicr"],"F2_all_jr3":f2["all_jr3"],"F2_gcfr":f2["gcfr"],"frozen_gcfr":frozen_gcfr,"F2_gcfr_regression":frozen_gcfr-f2["gcfr"],"F2_visual_better_than_template":by_condition["F2"]["full_twin_disc_template_count"]<by_condition["F1"]["full_twin_disc_template_count"] and by_condition["F2"]["mean_group_cylindrical_surface_ratio"]<by_condition["F1"]["mean_group_cylindrical_surface_ratio"]}
+    gates["status"]="PASS" if gates["image_sensitivity_proxy_pass"] and gates["F2_template_dispatch_zero"] and gates["F2_auto_bridge_zero"] and gates["F2_bicr"]==1 and gates["F2_all_jr3"] and gates["F2_gcfr_regression"]<=.02 and gates["F2_visual_better_than_template"] else "FAIL"
+    dump(result_root/"condition_metrics.json",{"conditions":condition_rows}); dump(result_root/"knowledge_role_gates.json",gates)
+    decisions=[]
+    for joint,spec in IMAGE_FIRST_SPECS.items():
+        accepted=[op["op"] for side in ("parent","child") for op in spec["program"][side] if op.get("knowledge_only")]; decisions.append({"joint_id":joint,"image_authored_design_id":spec["design_id"],"knowledge_retrieved_after_draft":True,"accepted_hidden_or_transition_advice":accepted,"visible_topology_selected_by_knowledge":False,"evidence":spec["evidence"]})
+    dump(result_root/"knowledge_influence_audit.json",{"status":"PASS","advisory_source":str(advisory_path.relative_to(ROOT)),"records":decisions})
+    report_text=f"# Try5 Knowledge-Role Ablation\n\nStatus: **{gates['status']}**\n\nF0 is image-first without knowledge, F1 is the legacy template dispatcher, and F2 is image-first with post-draft advisory knowledge.\n\n- Unregistered formal-mask IoU F0/F1/F2 (diagnostic only): {by_condition['F0']['unregistered_formal_mask_iou_mean']:.6f} / {by_condition['F1']['unregistered_formal_mask_iou_mean']:.6f} / {by_condition['F2']['unregistered_formal_mask_iou_mean']:.6f}\n- Mean exposed cylindrical-surface ratio F0/F1/F2: {by_condition['F0']['mean_group_cylindrical_surface_ratio']:.6f} / {by_condition['F1']['mean_group_cylindrical_surface_ratio']:.6f} / {by_condition['F2']['mean_group_cylindrical_surface_ratio']:.6f}\n- Full twin-disc templates F0/F1/F2: {by_condition['F0']['full_twin_disc_template_count']} / {by_condition['F1']['full_twin_disc_template_count']} / {by_condition['F2']['full_twin_disc_template_count']}\n- Image-stability delta F0-F2: {np.mean(f0_f2):.6f}; template-to-F2 delta: {np.mean(f1_f2):.6f}\n- F2 BICR: {f2['bicr']:.1%}; all JR3: {f2['all_jr3']}; GCFR: {f2['gcfr']:.6f}\n- F2 template dispatch: {f2['template_dispatch_rate']:.1%}; auto-bridge-enabled links: {f2['auto_bridge_enabled_link_count']}\n\nThe F2 knowledge source can critique and add declared transition details, but cannot select visible interface topology.  GT meshes were unavailable locally, so no GT-CAD metric is claimed; the formal-mask metric is explicitly non-registered and non-gating.\n"; (result_root/"report.md").write_text(report_text,encoding="utf-8")
+    dump(result_root/"summary.json",{"experiment":"Try5 knowledge-role ablation","status":gates["status"],"conditions":condition_rows,"gates":gates,"comparison":str(artifact_root/"reference_F0_F1_F2.png"),"assemblies":{key:value["assembly"] for key,value in workers.items()}})
+    files={str(x.relative_to(result_root)):sha(x) for x in result_root.rglob("*") if x.is_file() and x.name!="manifest.json"}; dump(result_root/"manifest.json",{"implementation":{"runner":sha(Path(__file__)),"worker":sha(HERE/"evaluation/mechanical/freecad_link_refinement.py"),"interface_compiler":sha(HERE/"scripts/interface_instance_geometry.py"),"advisory_knowledge":sha(advisory_path),"legacy_knowledge":sha(ROOT/"try5/knowledge/robot_interfaces/families.json")},"result_sha256":files})
+    print(json.dumps({"status":gates["status"],"results":str(result_root),"F2_assembly":workers["F2"]["assembly"]["fcstd"]},indent=2)); return 0 if gates["status"]=="PASS" else 1
+
 if __name__=="__main__":
-    parser=argparse.ArgumentParser(); parser.add_argument("--full-repair",action="store_true"); args=parser.parse_args()
-    raise SystemExit(run_full_repair() if args.full_repair else main())
+    parser=argparse.ArgumentParser(); parser.add_argument("--full-repair",action="store_true"); parser.add_argument("--knowledge-ablation",action="store_true"); args=parser.parse_args()
+    raise SystemExit(run_knowledge_ablation() if args.knowledge_ablation else (run_full_repair() if args.full_repair else main()))

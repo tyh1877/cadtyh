@@ -1,0 +1,50 @@
+{
+  "schema_version": "try5_interface_advisory_v1",
+  "authority": "non_binding_design_advice",
+  "policy": {
+    "visible_geometry_authority": "multi_view_image_evidence",
+    "motion_authority": "sanitized_urdf_and_frozen_interface_contract",
+    "knowledge_role": "critique_risk_and_hidden_function_only",
+    "conflict_rule": "image evidence wins unless it violates a hard motion or validity constraint",
+    "retrieval_timing": "after_image_first_draft",
+    "forbid_family_dispatch_for_visible_geometry": true
+  },
+  "hard_constraints": [
+    "preserve joint frame axis type and limits",
+    "keep moving parent and child rigid groups separate",
+    "preserve positive swept clearance",
+    "attach every physical interface member to its owning link",
+    "generate no solid for a virtual frame"
+  ],
+  "advice": [
+    {
+      "advice_id": "A_AXIS_SUPPORT",
+      "text": "A visible clevis may use a hidden coaxial pin when the image-authored side plates already support that interpretation.",
+      "may_change": ["hidden_functional_core"],
+      "must_not_change": ["visible_side_plate_count", "visible_profile", "parent_child_ownership"]
+    },
+    {
+      "advice_id": "A_TRANSITION_CONTINUITY",
+      "text": "Prefer an explicit broad transition to an arbitrary shortest-path connector.",
+      "may_change": ["joint_to_link_transition"],
+      "must_not_change": ["joint_frame", "visible_joint_topology"]
+    },
+    {
+      "advice_id": "A_MIRROR_PAIR",
+      "text": "When the image shows a bilateral pair, generate one side and mirror it about the declared plane.",
+      "may_change": ["symmetry_correction"],
+      "must_not_change": ["image_supported_asymmetry"]
+    },
+    {
+      "advice_id": "A_OCCLUDE_CORE",
+      "text": "Do not expose a full bearing barrel when the image shows it enclosed by a housing.",
+      "may_change": ["hidden_core_extent"],
+      "must_not_change": ["visible_housing_profile"]
+    }
+  ],
+  "legacy_family_library": {
+    "path": "try5/knowledge/robot_interfaces/families.json",
+    "allowed_use": "F1_template_baseline_and_post_design_retrieval_examples_only",
+    "forbidden_use": "F2_visible_geometry_dispatch"
+  }
+}

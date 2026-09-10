@@ -1,0 +1,67 @@
+{
+  "conditions": [
+    {
+      "condition": "F0",
+      "visual_metrics": {
+        "unregistered_formal_mask_iou_mean": 0.18573947629425128,
+        "unregistered_formal_mask_iou_by_view": {
+          "front": 0.18060992262175693,
+          "right": 0.20633088780809497,
+          "top": 0.08702368692070031,
+          "isometric": 0.26899340782645287
+        },
+        "mean_group_cylindrical_surface_ratio": 0.08360864394484319,
+        "full_twin_disc_template_count": 0
+      },
+      "gcfr": 0.90625,
+      "all_jr3": true,
+      "bicr": 0.8181818181818182,
+      "floating_link_count": 2,
+      "template_dispatch_rate": 0.0,
+      "auto_bridge_enabled_link_count": 0,
+      "accepted_advice_count": 0
+    },
+    {
+      "condition": "F1",
+      "visual_metrics": {
+        "unregistered_formal_mask_iou_mean": 0.1874161560471283,
+        "unregistered_formal_mask_iou_by_view": {
+          "front": 0.18297239012240682,
+          "right": 0.20645187870797627,
+          "top": 0.08562267538796973,
+          "isometric": 0.2746176799701604
+        },
+        "mean_group_cylindrical_surface_ratio": 0.15135301429685913,
+        "full_twin_disc_template_count": 3
+      },
+      "gcfr": 0.90625,
+      "all_jr3": true,
+      "bicr": 1.0,
+      "floating_link_count": 0,
+      "template_dispatch_rate": 1.0,
+      "auto_bridge_enabled_link_count": 11,
+      "accepted_advice_count": 0
+    },
+    {
+      "condition": "F2",
+      "visual_metrics": {
+        "unregistered_formal_mask_iou_mean": 0.1860774897296436,
+        "unregistered_formal_mask_iou_by_view": {
+          "front": 0.18060992262175693,
+          "right": 0.20633088780809497,
+          "top": 0.08840717761243982,
+          "isometric": 0.26896197087628265
+        },
+        "mean_group_cylindrical_surface_ratio": 0.08274276518317998,
+        "full_twin_disc_template_count": 0
+      },
+      "gcfr": 0.90625,
+      "all_jr3": true,
+      "bicr": 1.0,
+      "floating_link_count": 0,
+      "template_dispatch_rate": 0.0,
+      "auto_bridge_enabled_link_count": 0,
+      "accepted_advice_count": 4
+    }
+  ]
+}

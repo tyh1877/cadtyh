@@ -1,9 +1,9 @@
 {
   "joint_id": "J02",
-  "visible_family": "integrated_u_bracket",
+  "design_key": "J02_elbow_continuous_sideplates",
   "observations": [
-    "right:upper-arm plate wraps elbow",
-    "isometric:semi-circular plate end"
+    "right: upper-arm plates terminate in local semicircular wraps",
+    "isometric: elbow contour is continuous with the incoming plates"
   ],
   "crops": [
     {
@@ -32,15 +32,152 @@
     }
   ],
   "consumed_parameters": {
-    "visible_family": "integrated_u_bracket",
-    "outer": 14.0,
-    "plate_length": 31.0,
-    "plate_thickness": 4.0,
-    "spacing": 18.0,
-    "approach": [
-      -0.33,
-      0,
-      -0.94
-    ]
+    "design_id": "J02_elbow_continuous_sideplates",
+    "clearance_envelope": {
+      "radius": 24,
+      "depth": 14
+    },
+    "program": {
+      "parent": [
+        {
+          "op": "profile_y",
+          "y": -9,
+          "t": 4,
+          "points": [
+            [
+              -13,
+              -2
+            ],
+            [
+              -11,
+              8
+            ],
+            [
+              -5,
+              14
+            ],
+            [
+              3,
+              15
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              13,
+              2
+            ],
+            [
+              9,
+              -8
+            ],
+            [
+              -4,
+              -31
+            ],
+            [
+              -12,
+              -27
+            ],
+            [
+              -7,
+              -10
+            ]
+          ],
+          "bore": 3.6
+        },
+        {
+          "op": "profile_y",
+          "y": 9,
+          "t": 4,
+          "points": [
+            [
+              -13,
+              -2
+            ],
+            [
+              -11,
+              8
+            ],
+            [
+              -5,
+              14
+            ],
+            [
+              3,
+              15
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              13,
+              2
+            ],
+            [
+              9,
+              -8
+            ],
+            [
+              -4,
+              -31
+            ],
+            [
+              -12,
+              -27
+            ],
+            [
+              -7,
+              -10
+            ]
+          ],
+          "bore": 3.6
+        }
+      ],
+      "child": [
+        {
+          "op": "profile_y",
+          "y": 0,
+          "t": 11,
+          "points": [
+            [
+              -10,
+              -9
+            ],
+            [
+              6,
+              -11
+            ],
+            [
+              16,
+              -7
+            ],
+            [
+              24,
+              -4
+            ],
+            [
+              24,
+              7
+            ],
+            [
+              12,
+              10
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              -9,
+              6
+            ]
+          ],
+          "bore": 3.6
+        }
+      ]
+    }
   }
 }

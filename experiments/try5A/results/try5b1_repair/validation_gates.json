@@ -1,15 +1,20 @@
 {
   "body_nonfunctional_cylindrical_surface_ratio_max": 0.0,
   "primitive_collapse_pass": true,
-  "interface_family_signature_counts": {
-    "concealed_turntable": 2,
-    "integrated_u_bracket": 4,
-    "asymmetric_wrap_hinge": 2,
-    "flush_rect_mount": 3,
-    "compact_wrist_roll": 2,
-    "rect_rail_slider": 2
+  "interface_instance_signature_counts": {
+    "J00_faceted_concealed_turntable": 2,
+    "J01_shoulder_profile_clevis": 2,
+    "J02_elbow_continuous_sideplates": 2,
+    "J03_asymmetric_wrist_wrap": 2,
+    "J04_flush_wrist_transition": 1,
+    "J05_boxed_roll_bearing": 2,
+    "J07_palm_blended_mount": 1,
+    "J08_lower_rectangular_guide": 2,
+    "J09_upper_rectangular_guide_mirror": 2
   },
   "interface_diversity_pass": true,
+  "template_dispatch_rate": 0.0,
+  "auto_bridge_enabled_link_count": 0,
   "visual_evidence_consumed": true,
   "attachment_pass": true,
   "bicr": 1.0,
