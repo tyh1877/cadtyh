@@ -1,0 +1,66 @@
+{
+  "L03": {
+    "F1": {
+      "body_family": "central_web",
+      "schema": {
+        "span_mm": 100,
+        "thickness_mm": 8,
+        "proximal_height_mm": 34,
+        "mid_height_mm": 26,
+        "lateral_offset_mm": -18,
+        "major_recess": false
+      }
+    },
+    "F2": {
+      "body_family": "central_web",
+      "schema": {
+        "span_mm": 100,
+        "thickness_mm": 8,
+        "proximal_height_mm": 34,
+        "mid_height_mm": 28,
+        "lateral_offset_mm": -18,
+        "major_recess": true
+      }
+    }
+  },
+  "L04": {
+    "F1": {
+      "body_family": "compound_profile_housing",
+      "schema": {
+        "span_mm": 63,
+        "width_mm": 8,
+        "height_mm": 23,
+        "major_recess": false
+      }
+    },
+    "F2": {
+      "body_family": "compound_profile_housing",
+      "schema": {
+        "span_mm": 63,
+        "width_mm": 8,
+        "height_mm": 23,
+        "major_recess": true
+      }
+    }
+  },
+  "L07": {
+    "F1": {
+      "body_family": "gripper_support",
+      "schema": {
+        "span_mm": 23,
+        "bar_width_mm": 47,
+        "thickness_mm": 10,
+        "working_gap": false
+      }
+    },
+    "F2": {
+      "body_family": "gripper_support",
+      "schema": {
+        "span_mm": 23,
+        "bar_width_mm": 48,
+        "thickness_mm": 10,
+        "working_gap": true
+      }
+    }
+  }
+}

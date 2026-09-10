@@ -1,0 +1,25 @@
+{
+  "urdf_path": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\urdf\\px100.urdf",
+  "urdf_sha256": "11f3a20c4eee1eeeba2731c48220f57c441955e5fdc0aa966b509cfd6690f8cb",
+  "note": "mirror URDF used only to recover visual transforms; mesh hashes equal frozen manifest",
+  "meshes": [
+    {
+      "link_id": "L03",
+      "path": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-4-Forearm.stl",
+      "sha256": "72952a7ce9569c2468517538109141a08eb572cb027094d17a9b91f028d0b327",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L04",
+      "path": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-5-Wrist-Gripper.stl",
+      "sha256": "4148d290ad924a78fcd58f18ea0822000cda14e7eaaee01e8d69664d7cf1234a",
+      "evaluator_only": true
+    },
+    {
+      "link_id": "L07",
+      "path": "go_nogo1\\sources\\urdf_files_dataset\\urdf_files\\robotics-toolbox\\xacro_generated\\interbotix_descriptions\\meshes\\meshes_px100\\PXA-100-M-7-Gripper-Bar.stl",
+      "sha256": "b54601da3f60eea180226b695bb95a9b29b187f22f5b74d9a523ac9785d9a518",
+      "evaluator_only": true
+    }
+  ]
+}

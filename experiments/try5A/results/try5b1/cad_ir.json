@@ -1,0 +1,105 @@
+{
+  "schema_version": "try5B1_refinement_ir_v1",
+  "records": [
+    {
+      "link_id": "L03",
+      "condition": "F1",
+      "planner_family": "central_web",
+      "executable_schema": {
+        "span_mm": 100,
+        "thickness_mm": 8,
+        "proximal_height_mm": 34,
+        "mid_height_mm": 26,
+        "lateral_offset_mm": -18,
+        "major_recess": false
+      },
+      "protected_inputs": [
+        "URDF frame",
+        "Interface Contracts",
+        "swept-clearance"
+      ]
+    },
+    {
+      "link_id": "L04",
+      "condition": "F1",
+      "planner_family": "compound_profile_housing",
+      "executable_schema": {
+        "span_mm": 63,
+        "width_mm": 8,
+        "height_mm": 23,
+        "major_recess": false
+      },
+      "protected_inputs": [
+        "URDF frame",
+        "Interface Contracts",
+        "swept-clearance"
+      ]
+    },
+    {
+      "link_id": "L07",
+      "condition": "F1",
+      "planner_family": "gripper_support",
+      "executable_schema": {
+        "span_mm": 23,
+        "bar_width_mm": 47,
+        "thickness_mm": 10,
+        "working_gap": false
+      },
+      "protected_inputs": [
+        "URDF frame",
+        "Interface Contracts",
+        "swept-clearance"
+      ]
+    },
+    {
+      "link_id": "L03",
+      "condition": "F2",
+      "planner_family": "central_web",
+      "executable_schema": {
+        "span_mm": 100,
+        "thickness_mm": 8,
+        "proximal_height_mm": 34,
+        "mid_height_mm": 28,
+        "lateral_offset_mm": -18,
+        "major_recess": true
+      },
+      "protected_inputs": [
+        "URDF frame",
+        "Interface Contracts",
+        "swept-clearance"
+      ]
+    },
+    {
+      "link_id": "L04",
+      "condition": "F2",
+      "planner_family": "compound_profile_housing",
+      "executable_schema": {
+        "span_mm": 63,
+        "width_mm": 8,
+        "height_mm": 23,
+        "major_recess": true
+      },
+      "protected_inputs": [
+        "URDF frame",
+        "Interface Contracts",
+        "swept-clearance"
+      ]
+    },
+    {
+      "link_id": "L07",
+      "condition": "F2",
+      "planner_family": "gripper_support",
+      "executable_schema": {
+        "span_mm": 23,
+        "bar_width_mm": 48,
+        "thickness_mm": 10,
+        "working_gap": true
+      },
+      "protected_inputs": [
+        "URDF frame",
+        "Interface Contracts",
+        "swept-clearance"
+      ]
+    }
+  ]
+}

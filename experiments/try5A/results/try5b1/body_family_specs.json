@@ -1,0 +1,78 @@
+{
+  "L03": {
+    "role": "arm_carrier",
+    "why_selected": "elongated forearm carrier with two moving-joint transitions",
+    "coarse_family": "central_web",
+    "weakness": "named central_web was compiled as offset cylinders and thin ties",
+    "F1": {
+      "body_family": "central_web",
+      "schema": {
+        "span_mm": 100,
+        "thickness_mm": 8,
+        "proximal_height_mm": 34,
+        "mid_height_mm": 26,
+        "lateral_offset_mm": -18,
+        "major_recess": false
+      }
+    },
+    "F2": {
+      "body_family": "central_web",
+      "schema": {
+        "span_mm": 100,
+        "thickness_mm": 8,
+        "proximal_height_mm": 34,
+        "mid_height_mm": 28,
+        "lateral_offset_mm": -18,
+        "major_recess": true
+      }
+    }
+  },
+  "L04": {
+    "role": "joint_wrist_housing",
+    "why_selected": "wrist-local housing joining a rotary interface to a fixed mount",
+    "coarse_family": "wrist_block",
+    "weakness": "generic cylindrical carrier did not express housing section changes",
+    "F1": {
+      "body_family": "compound_profile_housing",
+      "schema": {
+        "span_mm": 63,
+        "width_mm": 8,
+        "height_mm": 23,
+        "major_recess": false
+      }
+    },
+    "F2": {
+      "body_family": "compound_profile_housing",
+      "schema": {
+        "span_mm": 63,
+        "width_mm": 8,
+        "height_mm": 23,
+        "major_recess": true
+      }
+    }
+  },
+  "L07": {
+    "role": "gripper_end_support",
+    "why_selected": "end-side fixed subassembly supporting the two-finger mechanism",
+    "coarse_family": "straight_beam",
+    "weakness": "short round bar omitted the transverse support and working gap",
+    "F1": {
+      "body_family": "gripper_support",
+      "schema": {
+        "span_mm": 23,
+        "bar_width_mm": 47,
+        "thickness_mm": 10,
+        "working_gap": false
+      }
+    },
+    "F2": {
+      "body_family": "gripper_support",
+      "schema": {
+        "span_mm": 23,
+        "bar_width_mm": 48,
+        "thickness_mm": 10,
+        "working_gap": true
+      }
+    }
+  }
+}

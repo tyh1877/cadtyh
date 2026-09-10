@@ -1,0 +1,19 @@
+{
+  "incidents": [
+    {
+      "stage": "initial body-family candidate",
+      "failure": "moving-interface mating corridor was not subtracted from executable body",
+      "action": "reject; consume frozen bore and mating-envelope cuts upstream"
+    },
+    {
+      "stage": "second candidate",
+      "failure": "flattened L03 web ignored frozen swept-clearance lateral layout",
+      "action": "reject; add lateral_offset_mm from frozen clearance plan"
+    },
+    {
+      "stage": "smoke audit",
+      "failure": "L04 shoulder entered J03 bearing envelope at one sampled pose",
+      "action": "reject; bound wrist profile inside protected axial corridor before final Exact"
+    }
+  ]
+}

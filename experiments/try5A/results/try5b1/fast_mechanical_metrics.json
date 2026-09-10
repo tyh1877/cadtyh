@@ -1,0 +1,70 @@
+{
+  "baseline_fast": {
+    "total_pair_poses": 7040,
+    "culled_pair_poses": 384,
+    "reused_pair_poses": 0,
+    "broad_phase_candidates": 2387,
+    "mesh_candidates": 1887,
+    "exact_calls": 1887,
+    "bvh_node_tests": 109116,
+    "candidate_triangle_leaf_pairs": 157978,
+    "wall_seconds": 2.2943793998565525,
+    "cache_hit_rate": 0.9991736778846154,
+    "bvh_build_seconds": 0.17547750053927302,
+    "broad_phase_seconds": 0.31097189779393375,
+    "mesh_narrow_phase_seconds": 1.9692052023019642,
+    "exact_seconds": 0.0016433955170214176
+  },
+  "conditions": [
+    {
+      "total_pair_poses": 7040,
+      "culled_pair_poses": 384,
+      "reused_pair_poses": 3584,
+      "broad_phase_candidates": 1120,
+      "mesh_candidates": 915,
+      "exact_calls": 915,
+      "bvh_node_tests": 38819,
+      "candidate_triangle_leaf_pairs": 71924,
+      "wall_seconds": 0.9889861999545246,
+      "cache_hit_rate": 0.9982096354166666,
+      "bvh_build_seconds": 0.17133950046263635,
+      "broad_phase_seconds": 0.27808099798858166,
+      "mesh_narrow_phase_seconds": 0.6991041963919997,
+      "exact_seconds": 0.0006156009621918201,
+      "condition": "F1",
+      "invalidated_links": [
+        "L03",
+        "L04",
+        "L07"
+      ],
+      "selective_exact_local_audit": true,
+      "selective_exact_rows": 3456,
+      "final_audit_mode": false
+    },
+    {
+      "total_pair_poses": 7040,
+      "culled_pair_poses": 384,
+      "reused_pair_poses": 3584,
+      "broad_phase_candidates": 1124,
+      "mesh_candidates": 919,
+      "exact_calls": 919,
+      "bvh_node_tests": 53650,
+      "candidate_triangle_leaf_pairs": 76743,
+      "wall_seconds": 1.28836530004628,
+      "cache_hit_rate": 0.9982096354166666,
+      "bvh_build_seconds": 0.20065980032086372,
+      "broad_phase_seconds": 0.30048599862493575,
+      "mesh_narrow_phase_seconds": 0.9752572991419584,
+      "exact_seconds": 0.0007376999128609896,
+      "condition": "F2",
+      "invalidated_links": [
+        "L03",
+        "L04",
+        "L07"
+      ],
+      "selective_exact_local_audit": true,
+      "selective_exact_rows": 3456,
+      "final_audit_mode": true
+    }
+  ]
+}

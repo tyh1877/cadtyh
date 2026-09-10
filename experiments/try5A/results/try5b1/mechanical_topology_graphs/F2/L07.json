@@ -1,0 +1,33 @@
+{
+  "link_id": "L07",
+  "condition": "F2",
+  "nodes": [
+    "carriage",
+    "transverse_support",
+    "left_support",
+    "right_support",
+    "working_gap"
+  ],
+  "edges": [
+    [
+      "transverse_support",
+      "supports",
+      "carriage"
+    ],
+    [
+      "left_support",
+      "symmetric_with",
+      "right_support"
+    ],
+    [
+      "left_support",
+      "separated_by_gap",
+      "right_support"
+    ],
+    [
+      "transverse_support",
+      "surrounds",
+      "working_gap"
+    ]
+  ]
+}

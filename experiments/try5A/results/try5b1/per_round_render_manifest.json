@@ -1,0 +1,40 @@
+{
+  "rounds": [
+    {
+      "link_id": "L03",
+      "round": 1,
+      "condition": "F1",
+      "render": "experiments\\try5A\\artifacts\\try5b1\\renders\\F1\\L03.png"
+    },
+    {
+      "link_id": "L03",
+      "round": 2,
+      "condition": "F2",
+      "render": "experiments\\try5A\\artifacts\\try5b1\\renders\\F2\\L03.png"
+    },
+    {
+      "link_id": "L04",
+      "round": 1,
+      "condition": "F1",
+      "render": "experiments\\try5A\\artifacts\\try5b1\\renders\\F1\\L04.png"
+    },
+    {
+      "link_id": "L04",
+      "round": 2,
+      "condition": "F2",
+      "render": "experiments\\try5A\\artifacts\\try5b1\\renders\\F2\\L04.png"
+    },
+    {
+      "link_id": "L07",
+      "round": 1,
+      "condition": "F1",
+      "render": "experiments\\try5A\\artifacts\\try5b1\\renders\\F1\\L07.png"
+    },
+    {
+      "link_id": "L07",
+      "round": 2,
+      "condition": "F2",
+      "render": "experiments\\try5A\\artifacts\\try5b1\\renders\\F2\\L07.png"
+    }
+  ]
+}

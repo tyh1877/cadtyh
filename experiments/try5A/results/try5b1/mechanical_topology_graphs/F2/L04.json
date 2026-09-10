@@ -1,0 +1,27 @@
+{
+  "link_id": "L04",
+  "condition": "F2",
+  "nodes": [
+    "proximal_housing",
+    "stepped_housing",
+    "distal_mount_transition",
+    "major_recess"
+  ],
+  "edges": [
+    [
+      "stepped_housing",
+      "surrounds",
+      "proximal_housing"
+    ],
+    [
+      "stepped_housing",
+      "continues_into",
+      "distal_mount_transition"
+    ],
+    [
+      "stepped_housing",
+      "surrounds",
+      "major_recess"
+    ]
+  ]
+}

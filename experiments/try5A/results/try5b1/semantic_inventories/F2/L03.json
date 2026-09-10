@@ -1,0 +1,51 @@
+{
+  "required": [
+    [
+      "proximal_joint_housing",
+      "E1"
+    ],
+    [
+      "central_web",
+      "E1"
+    ],
+    [
+      "distal_joint_region",
+      "E1"
+    ]
+  ],
+  "optional": [
+    [
+      "major_recess",
+      "E2"
+    ]
+  ],
+  "uncertain": [
+    [
+      "hidden_actuator",
+      "E3"
+    ]
+  ],
+  "predicted_features": [
+    "proximal_joint_housing",
+    "central_web",
+    "distal_joint_region",
+    "major_recess"
+  ],
+  "relations": [
+    [
+      "central_web",
+      "continues_into",
+      "proximal_joint_housing"
+    ],
+    [
+      "central_web",
+      "continues_into",
+      "distal_joint_region"
+    ],
+    [
+      "central_web",
+      "surrounds",
+      "major_recess"
+    ]
+  ]
+}

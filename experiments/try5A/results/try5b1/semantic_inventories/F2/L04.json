@@ -1,0 +1,51 @@
+{
+  "required": [
+    [
+      "proximal_housing",
+      "E1"
+    ],
+    [
+      "stepped_housing",
+      "E1"
+    ],
+    [
+      "distal_mount_transition",
+      "E1"
+    ]
+  ],
+  "optional": [
+    [
+      "major_recess",
+      "E2"
+    ]
+  ],
+  "uncertain": [
+    [
+      "hidden_bearing",
+      "E3"
+    ]
+  ],
+  "predicted_features": [
+    "proximal_housing",
+    "stepped_housing",
+    "distal_mount_transition",
+    "major_recess"
+  ],
+  "relations": [
+    [
+      "stepped_housing",
+      "surrounds",
+      "proximal_housing"
+    ],
+    [
+      "stepped_housing",
+      "continues_into",
+      "distal_mount_transition"
+    ],
+    [
+      "stepped_housing",
+      "surrounds",
+      "major_recess"
+    ]
+  ]
+}

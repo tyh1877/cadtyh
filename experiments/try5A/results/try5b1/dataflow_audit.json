@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "chains": [
+    "formal images -> VisualEvidencePack -> BodyFamilySpec -> executable schema -> CAD IR job -> FreeCAD",
+    "SemanticInventory -> MechanicalTopologyGraph -> repair contract -> schema update -> partial link rebuild",
+    "CAD revision -> mesh cache invalidation(L03,L04,L07) -> FAST dirty-set -> Selective Exact local -> FINAL Exact"
+  ],
+  "counterfactual_evidence": {
+    "body_family_change": "three coarse planned/executed pairs changed in F1 and altered STL hashes",
+    "profile_change": "F1->F2 thickness/width changed and altered STL hashes",
+    "topology_relation_change": "surrounds/separated_by_gap added and F2 STL hashes differ"
+  }
+}

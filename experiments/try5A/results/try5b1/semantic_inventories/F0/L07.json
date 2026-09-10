@@ -1,0 +1,9 @@
+{
+  "required": [],
+  "optional": [],
+  "uncertain": [],
+  "predicted_features": [
+    "coarse_body"
+  ],
+  "relations": []
+}

@@ -1,0 +1,528 @@
+{
+  "status": "PASS",
+  "family_realization_rate": 1.0,
+  "silent_downgrade_count": 0,
+  "records": [
+    {
+      "condition": "F1",
+      "link_id": "L03",
+      "planned_family": "central_web",
+      "executed_family": "central_web",
+      "artifact": {
+        "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L03\\model.FCStd",
+        "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L03\\model.step",
+        "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L03\\model.stl",
+        "sha256": {
+          ".FCStd": "7a08dfa09c9ede1ba5bf37ca617843848600ec8bb4e6d6fa1d1d5c2191b9d347",
+          ".step": "17a456800737c19a510ccca46da90bc4449cdafe3343963e2cacb2c8e0d7ca07",
+          ".stl": "7134a955c71e4fb20315b2862e17903c9620121b25138f25eb4bbfb3ca6d7f07"
+        },
+        "volume_mm3": 31036.076882869966,
+        "bbox": {
+          "min_mm": [
+            -9.998833858185302,
+            -22.0,
+            -17.0
+          ],
+          "max_mm": [
+            115.99652109348564,
+            12.0,
+            17.0
+          ],
+          "size_mm": [
+            125.99535495167095,
+            34.0,
+            34.0
+          ]
+        }
+      },
+      "attachment_valid": true,
+      "solid_count": 1,
+      "group_valid": true,
+      "features": [
+        "proximal_joint_housing",
+        "central_web",
+        "distal_joint_region"
+      ],
+      "interface_signatures": {
+        "J02": {
+          "side": "child",
+          "volume_mm3": 3281.3306948214667,
+          "bbox": {
+            "min_mm": [
+              -10.0,
+              -6.0,
+              -10.0
+            ],
+            "max_mm": [
+              10.0,
+              6.0,
+              10.0
+            ],
+            "size_mm": [
+              20.0,
+              12.0,
+              20.0
+            ]
+          }
+        },
+        "J03": {
+          "side": "parent",
+          "volume_mm3": 5013.667715863949,
+          "bbox": {
+            "min_mm": [
+              84.0,
+              -12.0,
+              -16.0
+            ],
+            "max_mm": [
+              116.0,
+              12.0,
+              16.0
+            ],
+            "size_mm": [
+              32.0,
+              24.0,
+              32.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "F1",
+      "link_id": "L04",
+      "planned_family": "compound_profile_housing",
+      "executed_family": "compound_profile_housing",
+      "artifact": {
+        "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L04\\model.FCStd",
+        "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L04\\model.step",
+        "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L04\\model.stl",
+        "sha256": {
+          ".FCStd": "0f6a1fd4286fcb236b4315d19115976fed84a772831bb6c444fdd37adc28a829",
+          ".step": "d8b1baa2f8fc039eec33871a6a2e877c9f310831e92891093bb16d646d7b05d5",
+          ".stl": "1f96cb0d5d416a0c50c929ec2cdb520d34e9bc37d9cbab7030a4aba920bcc477"
+        },
+        "volume_mm3": 15909.168134613854,
+        "bbox": {
+          "min_mm": [
+            -11.49642559300939,
+            -9.0,
+            -13.34
+          ],
+          "max_mm": [
+            65.0,
+            9.0,
+            13.34
+          ],
+          "size_mm": [
+            76.49642559300939,
+            18.0,
+            26.68
+          ]
+        }
+      },
+      "attachment_valid": true,
+      "solid_count": 1,
+      "group_valid": true,
+      "features": [
+        "proximal_housing",
+        "stepped_housing",
+        "distal_mount_transition"
+      ],
+      "interface_signatures": {
+        "J03": {
+          "side": "child",
+          "volume_mm3": 5367.411048658162,
+          "bbox": {
+            "min_mm": [
+              -11.5,
+              -9.0,
+              -11.5
+            ],
+            "max_mm": [
+              11.5,
+              9.0,
+              11.5
+            ],
+            "size_mm": [
+              23.0,
+              18.0,
+              23.0
+            ]
+          }
+        },
+        "J04": {
+          "side": "parent",
+          "volume_mm3": 615.7521601035996,
+          "bbox": {
+            "min_mm": [
+              61.0,
+              -7.0,
+              -7.0
+            ],
+            "max_mm": [
+              65.0,
+              7.0,
+              7.0
+            ],
+            "size_mm": [
+              4.0,
+              14.0,
+              14.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "F1",
+      "link_id": "L07",
+      "planned_family": "gripper_support",
+      "executed_family": "gripper_support",
+      "artifact": {
+        "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L07\\model.FCStd",
+        "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L07\\model.step",
+        "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F1\\L07\\model.stl",
+        "sha256": {
+          ".FCStd": "fc3134cdf370f673c2f10cf809008255d2193e822b4b400a5e9dedaf215f6a3f",
+          ".step": "53de26584c2e90dd778c79392b78a858b13eab522329b9536b7d979cb2fab29e",
+          ".stl": "ab6f2bcff0b426ffeb2ba57da17e23511226df87c20fa1e9be3f47bed7d8ba15"
+        },
+        "volume_mm3": 8339.428783018608,
+        "bbox": {
+          "min_mm": [
+            -2.0,
+            -23.5,
+            -7.0
+          ],
+          "max_mm": [
+            25.0,
+            23.5,
+            7.0
+          ],
+          "size_mm": [
+            27.0,
+            47.0,
+            14.0
+          ]
+        }
+      },
+      "attachment_valid": true,
+      "solid_count": 1,
+      "group_valid": true,
+      "features": [
+        "carriage",
+        "transverse_support",
+        "left_support",
+        "right_support"
+      ],
+      "interface_signatures": {
+        "J06": {
+          "side": "child",
+          "volume_mm3": 615.7521601035996,
+          "bbox": {
+            "min_mm": [
+              -2.0,
+              -7.0,
+              -7.0
+            ],
+            "max_mm": [
+              2.0,
+              7.0,
+              7.0
+            ],
+            "size_mm": [
+              4.0,
+              14.0,
+              14.0
+            ]
+          }
+        },
+        "J07": {
+          "side": "parent",
+          "volume_mm3": 615.7521601035996,
+          "bbox": {
+            "min_mm": [
+              21.0,
+              -7.0,
+              -7.0
+            ],
+            "max_mm": [
+              25.0,
+              7.0,
+              7.0
+            ],
+            "size_mm": [
+              4.0,
+              14.0,
+              14.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "F2",
+      "link_id": "L03",
+      "planned_family": "central_web",
+      "executed_family": "central_web",
+      "artifact": {
+        "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L03\\model.FCStd",
+        "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L03\\model.step",
+        "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L03\\model.stl",
+        "sha256": {
+          ".FCStd": "e46808685601cb48cd27641effd5bafbacc3f8588200353aa4863c2ebc33f00f",
+          ".step": "33f27c1975dd490ec59178c743057fa43f674f83d1a073509fc903820526cdc1",
+          ".stl": "32802fbc205c388bd5999243b8b0efe0290af13a2ecd2a046054c14f01d3274f"
+        },
+        "volume_mm3": 30241.179761913507,
+        "bbox": {
+          "min_mm": [
+            -9.998833858185302,
+            -22.0,
+            -17.0
+          ],
+          "max_mm": [
+            115.99652109348564,
+            12.0,
+            17.0
+          ],
+          "size_mm": [
+            125.99535495167095,
+            34.0,
+            34.0
+          ]
+        }
+      },
+      "attachment_valid": true,
+      "solid_count": 1,
+      "group_valid": true,
+      "features": [
+        "proximal_joint_housing",
+        "central_web",
+        "distal_joint_region",
+        "major_recess"
+      ],
+      "interface_signatures": {
+        "J02": {
+          "side": "child",
+          "volume_mm3": 3281.3306948214667,
+          "bbox": {
+            "min_mm": [
+              -10.0,
+              -6.0,
+              -10.0
+            ],
+            "max_mm": [
+              10.0,
+              6.0,
+              10.0
+            ],
+            "size_mm": [
+              20.0,
+              12.0,
+              20.0
+            ]
+          }
+        },
+        "J03": {
+          "side": "parent",
+          "volume_mm3": 5013.667715863949,
+          "bbox": {
+            "min_mm": [
+              84.0,
+              -12.0,
+              -16.0
+            ],
+            "max_mm": [
+              116.0,
+              12.0,
+              16.0
+            ],
+            "size_mm": [
+              32.0,
+              24.0,
+              32.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "F2",
+      "link_id": "L04",
+      "planned_family": "compound_profile_housing",
+      "executed_family": "compound_profile_housing",
+      "artifact": {
+        "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L04\\model.FCStd",
+        "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L04\\model.step",
+        "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L04\\model.stl",
+        "sha256": {
+          ".FCStd": "d9112a083e87acaeb234d03a6f11c782a9748bbae50b3bf729c61d1d62d59180",
+          ".step": "ae1fa7d61f973d6832279cb0c41b38b14768ddc5aaf7bbde57d4ef8adde1c2a1",
+          ".stl": "846f59f0527460c699aacc97318a405c17a2d14a158cbfd86da34ba1db155904"
+        },
+        "volume_mm3": 14612.338585653979,
+        "bbox": {
+          "min_mm": [
+            -11.49642559300939,
+            -9.0,
+            -13.34
+          ],
+          "max_mm": [
+            65.0,
+            9.0,
+            13.34
+          ],
+          "size_mm": [
+            76.49642559300939,
+            18.0,
+            26.68
+          ]
+        }
+      },
+      "attachment_valid": true,
+      "solid_count": 1,
+      "group_valid": true,
+      "features": [
+        "proximal_housing",
+        "stepped_housing",
+        "distal_mount_transition",
+        "major_recess"
+      ],
+      "interface_signatures": {
+        "J03": {
+          "side": "child",
+          "volume_mm3": 5367.411048658162,
+          "bbox": {
+            "min_mm": [
+              -11.5,
+              -9.0,
+              -11.5
+            ],
+            "max_mm": [
+              11.5,
+              9.0,
+              11.5
+            ],
+            "size_mm": [
+              23.0,
+              18.0,
+              23.0
+            ]
+          }
+        },
+        "J04": {
+          "side": "parent",
+          "volume_mm3": 615.7521601035996,
+          "bbox": {
+            "min_mm": [
+              61.0,
+              -7.0,
+              -7.0
+            ],
+            "max_mm": [
+              65.0,
+              7.0,
+              7.0
+            ],
+            "size_mm": [
+              4.0,
+              14.0,
+              14.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "condition": "F2",
+      "link_id": "L07",
+      "planned_family": "gripper_support",
+      "executed_family": "gripper_support",
+      "artifact": {
+        "fcstd": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L07\\model.FCStd",
+        "step": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L07\\model.step",
+        "stl": "D:\\CADtest\\papertest\\cadtyh\\experiments\\try5A\\artifacts\\try5b1\\cad\\F2\\L07\\model.stl",
+        "sha256": {
+          ".FCStd": "89ef4d3407c9f51bc46d617b180ccf8d7505fb7f197a05a2a7c8fa4942787026",
+          ".step": "cc0beb701a396317037346a2a9eaa043260bd24ce60b65835399ed40587663ef",
+          ".stl": "e8fa0ef9d304186d7eea95a0115ade4a1f35d3ded306fb2074c739f9b3218fff"
+        },
+        "volume_mm3": 8107.401135222882,
+        "bbox": {
+          "min_mm": [
+            -2.0,
+            -24.0,
+            -7.0
+          ],
+          "max_mm": [
+            25.0,
+            24.0,
+            7.0
+          ],
+          "size_mm": [
+            27.0,
+            48.0,
+            14.0
+          ]
+        }
+      },
+      "attachment_valid": true,
+      "solid_count": 1,
+      "group_valid": true,
+      "features": [
+        "carriage",
+        "transverse_support",
+        "left_support",
+        "right_support",
+        "working_gap"
+      ],
+      "interface_signatures": {
+        "J06": {
+          "side": "child",
+          "volume_mm3": 615.7521601035996,
+          "bbox": {
+            "min_mm": [
+              -2.0,
+              -7.0,
+              -7.0
+            ],
+            "max_mm": [
+              2.0,
+              7.0,
+              7.0
+            ],
+            "size_mm": [
+              4.0,
+              14.0,
+              14.0
+            ]
+          }
+        },
+        "J07": {
+          "side": "parent",
+          "volume_mm3": 615.7521601035996,
+          "bbox": {
+            "min_mm": [
+              21.0,
+              -7.0,
+              -7.0
+            ],
+            "max_mm": [
+              25.0,
+              7.0,
+              7.0
+            ],
+            "size_mm": [
+              4.0,
+              14.0,
+              14.0
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

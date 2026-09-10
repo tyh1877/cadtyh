@@ -1,0 +1,119 @@
+{
+  "link_id": "L07",
+  "allowed_sources": [
+    "formal multi-view images",
+    "engineering text",
+    "frozen sanitized URDF"
+  ],
+  "views": [
+    {
+      "view": "front",
+      "global_context": "experiments\\try5A\\inputs\\images\\front.png",
+      "link_local_crop": "experiments\\try5A\\artifacts\\try5b1\\visual_evidence\\L07\\front_local.png",
+      "crop_box_px": [
+        896,
+        392,
+        1316,
+        784
+      ],
+      "source_sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc"
+    },
+    {
+      "view": "isometric",
+      "global_context": "experiments\\try5A\\inputs\\images\\isometric.png",
+      "link_local_crop": "experiments\\try5A\\artifacts\\try5b1\\visual_evidence\\L07\\isometric_local.png",
+      "crop_box_px": [
+        896,
+        392,
+        1316,
+        784
+      ],
+      "source_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed"
+    },
+    {
+      "view": "left",
+      "global_context": "experiments\\try5A\\inputs\\images\\left.png",
+      "link_local_crop": "experiments\\try5A\\artifacts\\try5b1\\visual_evidence\\L07\\left_local.png",
+      "crop_box_px": [
+        896,
+        392,
+        1316,
+        784
+      ],
+      "source_sha256": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca"
+    },
+    {
+      "view": "right",
+      "global_context": "experiments\\try5A\\inputs\\images\\right.png",
+      "link_local_crop": "experiments\\try5A\\artifacts\\try5b1\\visual_evidence\\L07\\right_local.png",
+      "crop_box_px": [
+        896,
+        392,
+        1316,
+        784
+      ],
+      "source_sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098"
+    },
+    {
+      "view": "top",
+      "global_context": "experiments\\try5A\\inputs\\images\\top.png",
+      "link_local_crop": "experiments\\try5A\\artifacts\\try5b1\\visual_evidence\\L07\\top_local.png",
+      "crop_box_px": [
+        896,
+        392,
+        1316,
+        784
+      ],
+      "source_sha256": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+    },
+    {
+      "view": "rear",
+      "global_context": "experiments\\try5A\\inputs\\images\\rear.png",
+      "link_local_crop": "experiments\\try5A\\artifacts\\try5b1\\visual_evidence\\L07\\rear_local.png",
+      "crop_box_px": [
+        896,
+        392,
+        1316,
+        784
+      ],
+      "source_sha256": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428"
+    }
+  ],
+  "observations": [
+    {
+      "cue": "visible_contour",
+      "state": "VISIBLE",
+      "value": "non-circular stepped silhouette"
+    },
+    {
+      "cue": "dominant_section",
+      "state": "VISIBLE",
+      "value": "flattened plate/housing section"
+    },
+    {
+      "cue": "thickness",
+      "state": "PARTIALLY_VISIBLE",
+      "value": "bounded by orthogonal views"
+    },
+    {
+      "cue": "symmetry",
+      "state": "VISIBLE",
+      "value": "bilateral support"
+    },
+    {
+      "cue": "open_closed",
+      "state": "PARTIALLY_VISIBLE",
+      "value": "major recess/gap visible but hidden surfaces uncertain"
+    },
+    {
+      "cue": "curvature",
+      "state": "VISIBLE",
+      "value": "localized at joint housing, not along full carrier"
+    },
+    {
+      "cue": "occlusion",
+      "state": "OCCLUDED",
+      "value": "internal motor/bearing excluded"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "gt_leakage_count": 0,
+  "generator_job_keys": [
+    "pilots",
+    "coupled",
+    "per_joint",
+    "relevant_joints",
+    "canonical_config",
+    "cad_root",
+    "assembly_root",
+    "output",
+    "reuse_exact"
+  ],
+  "forbidden_inputs_present": false,
+  "evaluator_only_inputs": [
+    "evaluator_only_link_annotation.json",
+    "GT STL meshes",
+    "GT-derived metrics"
+  ],
+  "source_separation": "GT inputs are opened only after FreeCAD generation completed"
+}

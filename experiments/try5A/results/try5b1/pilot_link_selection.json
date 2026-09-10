@@ -1,0 +1,26 @@
+{
+  "method": "automatic diversity over frozen roles, then evaluator coverage constraint",
+  "selected": [
+    {
+      "link_id": "L03",
+      "role": "arm_carrier",
+      "why_selected": "elongated forearm carrier with two moving-joint transitions",
+      "coarse_family": "central_web",
+      "weakness": "named central_web was compiled as offset cylinders and thin ties"
+    },
+    {
+      "link_id": "L04",
+      "role": "joint_wrist_housing",
+      "why_selected": "wrist-local housing joining a rotary interface to a fixed mount",
+      "coarse_family": "wrist_block",
+      "weakness": "generic cylindrical carrier did not express housing section changes"
+    },
+    {
+      "link_id": "L07",
+      "role": "gripper_end_support",
+      "why_selected": "end-side fixed subassembly supporting the two-finger mechanism",
+      "coarse_family": "straight_beam",
+      "weakness": "short round bar omitted the transverse support and working gap"
+    }
+  ]
+}

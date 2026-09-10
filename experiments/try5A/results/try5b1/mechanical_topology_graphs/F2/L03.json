@@ -1,0 +1,27 @@
+{
+  "link_id": "L03",
+  "condition": "F2",
+  "nodes": [
+    "proximal_joint_housing",
+    "central_web",
+    "distal_joint_region",
+    "major_recess"
+  ],
+  "edges": [
+    [
+      "central_web",
+      "continues_into",
+      "proximal_joint_housing"
+    ],
+    [
+      "central_web",
+      "continues_into",
+      "distal_joint_region"
+    ],
+    [
+      "central_web",
+      "surrounds",
+      "major_recess"
+    ]
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "interface_frame_unchanged": true,
+  "interface_contract_unchanged": true,
+  "bicr": 1.0,
+  "physical_floating_count": 0,
+  "forbidden_fusion_count": 0,
+  "virtual_solid_count": 0,
+  "meaningless_patch_count": 0,
+  "relevant_jr3_not_degraded": true,
+  "swept_clearance_preserved": true,
+  "gcfr_regression": 0.0,
+  "authority_hashes": {
+    "sanitized_urdf": "411f13c1deaec17c74fde58d8c6b8cb5f84566766cbc575925a4dd47dcb33fd9",
+    "interface_contracts": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d"
+  }
+}

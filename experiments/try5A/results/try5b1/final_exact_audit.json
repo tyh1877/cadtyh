@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "mode": "FINAL_AUDIT_MODE",
+  "configuration_count": 128,
+  "frozen_gcfr": 0.9140625,
+  "F1_gcfr": 0.9140625,
+  "F2_gcfr": 0.9140625,
+  "relevant_jr3": [
+    {
+      "joint_id": "J02",
+      "jr3": 1.0,
+      "full_range_pass": true
+    },
+    {
+      "joint_id": "J03",
+      "jr3": 1.0,
+      "full_range_pass": true
+    }
+  ],
+  "interface_contract_sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d"
+}

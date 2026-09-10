@@ -1,0 +1,127 @@
+{
+  "max_rounds_per_link": 3,
+  "contracts": [
+    {
+      "link_id": "L03",
+      "round": 1,
+      "diagnosis": {
+        "incorrect": [
+          {
+            "feature": "main_carrier",
+            "issue": "cylindrical_but_reference_is_flattened_web"
+          }
+        ],
+        "preserve": [
+          "J02",
+          "J03"
+        ]
+      },
+      "scope": "P3_WHOLE_LINK_REPLAN",
+      "upstream_update": "body family executable central_web",
+      "outcome": "ROLLBACK",
+      "hard_gate_failure": "mating corridor overlap"
+    },
+    {
+      "link_id": "L03",
+      "round": 2,
+      "diagnosis": {
+        "incorrect": [
+          {
+            "feature": "central_web",
+            "issue": "ignored frozen swept-clearance lateral layout"
+          }
+        ]
+      },
+      "scope": "P2_REGION_REPLAN",
+      "upstream_update": "consume lateral_offset_mm=-18 from clearance plan",
+      "outcome": "ROLLBACK",
+      "hard_gate_failure": "L02/L03 and L03/L04 sweep collision"
+    },
+    {
+      "link_id": "L03",
+      "round": 3,
+      "diagnosis": {
+        "missing": [
+          "major_recess"
+        ],
+        "preserve": [
+          "interfaces",
+          "central_web",
+          "swept offset"
+        ]
+      },
+      "scope": "P1_FEATURE_REFINE",
+      "upstream_update": "bounded major_recess and mechanically safe thickness",
+      "outcome": "PASS"
+    },
+    {
+      "link_id": "L04",
+      "round": 1,
+      "diagnosis": {
+        "incorrect": [
+          {
+            "feature": "housing",
+            "issue": "generic carrier lacks section change"
+          }
+        ]
+      },
+      "scope": "P3_WHOLE_LINK_REPLAN",
+      "upstream_update": "compound_profile_housing",
+      "outcome": "ROLLBACK",
+      "hard_gate_failure": "mating corridor overlap"
+    },
+    {
+      "link_id": "L04",
+      "round": 2,
+      "diagnosis": {
+        "incorrect": [
+          {
+            "feature": "proximal_housing",
+            "issue": "shoulder entered J03 bearing envelope"
+          }
+        ]
+      },
+      "scope": "P2_REGION_REPLAN",
+      "upstream_update": "start profile beyond rotor and bound axial width",
+      "outcome": "ROLLBACK",
+      "hard_gate_failure": "one smoke pose above allowed contact"
+    },
+    {
+      "link_id": "L04",
+      "round": 3,
+      "diagnosis": {
+        "missing": [
+          "major_recess"
+        ]
+      },
+      "scope": "P1_FEATURE_REFINE",
+      "upstream_update": "bounded recess outside protected envelope",
+      "outcome": "PASS"
+    },
+    {
+      "link_id": "L07",
+      "round": 1,
+      "diagnosis": {
+        "missing": [
+          "transverse_support",
+          "support_pair"
+        ]
+      },
+      "scope": "P2_REGION_REPLAN",
+      "upstream_update": "end-side support region",
+      "outcome": "PASS"
+    },
+    {
+      "link_id": "L07",
+      "round": 2,
+      "diagnosis": {
+        "missing": [
+          "working_gap"
+        ]
+      },
+      "scope": "P2_REGION_REPLAN",
+      "upstream_update": "support relation separated_by_gap",
+      "outcome": "PASS"
+    }
+  ]
+}

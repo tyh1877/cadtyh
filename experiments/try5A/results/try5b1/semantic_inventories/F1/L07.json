@@ -1,0 +1,50 @@
+{
+  "required": [
+    [
+      "carriage",
+      "E1"
+    ],
+    [
+      "transverse_support",
+      "E1"
+    ],
+    [
+      "left_support",
+      "E2"
+    ],
+    [
+      "right_support",
+      "E2"
+    ]
+  ],
+  "optional": [
+    [
+      "working_gap",
+      "E2"
+    ]
+  ],
+  "uncertain": [
+    [
+      "hidden_linkage",
+      "E3"
+    ]
+  ],
+  "predicted_features": [
+    "carriage",
+    "transverse_support",
+    "left_support",
+    "right_support"
+  ],
+  "relations": [
+    [
+      "transverse_support",
+      "supports",
+      "carriage"
+    ],
+    [
+      "left_support",
+      "symmetric_with",
+      "right_support"
+    ]
+  ]
+}

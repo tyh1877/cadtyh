@@ -1,0 +1,94 @@
+{
+  "access": "EVALUATOR_ONLY",
+  "consumer": "semantic_metrics evaluator only; omitted from generator_job.json",
+  "links": {
+    "L03": {
+      "required": [
+        "proximal_joint_housing",
+        "central_web",
+        "distal_joint_region"
+      ],
+      "optional": [
+        "major_recess"
+      ],
+      "family": "central_web",
+      "relations": [
+        [
+          "central_web",
+          "continues_into",
+          "proximal_joint_housing"
+        ],
+        [
+          "central_web",
+          "continues_into",
+          "distal_joint_region"
+        ],
+        [
+          "central_web",
+          "surrounds",
+          "major_recess"
+        ]
+      ]
+    },
+    "L04": {
+      "required": [
+        "proximal_housing",
+        "stepped_housing",
+        "distal_mount_transition",
+        "major_recess"
+      ],
+      "optional": [],
+      "family": "compound_profile_housing",
+      "relations": [
+        [
+          "stepped_housing",
+          "surrounds",
+          "proximal_housing"
+        ],
+        [
+          "stepped_housing",
+          "continues_into",
+          "distal_mount_transition"
+        ],
+        [
+          "stepped_housing",
+          "surrounds",
+          "major_recess"
+        ]
+      ]
+    },
+    "L07": {
+      "required": [
+        "carriage",
+        "transverse_support",
+        "left_support",
+        "right_support",
+        "working_gap"
+      ],
+      "optional": [],
+      "family": "gripper_support",
+      "relations": [
+        [
+          "transverse_support",
+          "supports",
+          "carriage"
+        ],
+        [
+          "left_support",
+          "symmetric_with",
+          "right_support"
+        ],
+        [
+          "left_support",
+          "separated_by_gap",
+          "right_support"
+        ],
+        [
+          "transverse_support",
+          "surrounds",
+          "working_gap"
+        ]
+      ]
+    }
+  }
+}
