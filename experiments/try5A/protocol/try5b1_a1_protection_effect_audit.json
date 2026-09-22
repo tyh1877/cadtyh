@@ -22,7 +22,7 @@
     "frozen_scaffold_preservation_fusion",
     "auto_attachment_closure"
   ],
-  "geometry_changed_rule": "B-Rep SHA-256, volume, solid-count, or bbox differs after an executed operation",
+  "geometry_changed_rule": "Exact symmetric-difference volume, total volume, solid count, or bbox differs after an executed operation; a B-Rep serialization hash change alone is recorded but does not prove geometric effect",
   "prohibited": {
     "mechanical_96_case_evaluation": true,
     "formal_holdout_access": true,

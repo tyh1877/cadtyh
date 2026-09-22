@@ -27,15 +27,19 @@ def shape_state(shape):
         "shape_sha256":hashlib.sha256(shape.exportBrepToString().encode("utf-8")).hexdigest(),
         "volume_mm3":float(shape.Volume),
         "solid_count":len(shape.Solids),
+        "face_count":len(shape.Faces),
+        "edge_count":len(shape.Edges),
+        "vertex_count":len(shape.Vertexes),
         "bbox":frozen.bounds(shape),
     }
 
 
 def protection_effect(operation,applicable,executed,before_shape,after_shape):
     before=shape_state(before_shape); after=shape_state(after_shape); volume_delta=after["volume_mm3"]-before["volume_mm3"]; solid_delta=after["solid_count"]-before["solid_count"]
-    geometry_changed=bool(executed and (before["shape_sha256"]!=after["shape_sha256"] or abs(volume_delta)>1e-9 or solid_delta!=0 or before["bbox"]!=after["bbox"]))
+    removed_volume=float(before_shape.cut(after_shape).Volume) if executed else 0.0; added_volume=float(after_shape.cut(before_shape).Volume) if executed else 0.0; symmetric_difference=removed_volume+added_volume; topology_changed=any(before[key]!=after[key] for key in ("solid_count","face_count","edge_count","vertex_count")); representation_changed=before["shape_sha256"]!=after["shape_sha256"]
+    geometry_changed=bool(executed and (symmetric_difference>1e-7 or abs(volume_delta)>1e-7 or solid_delta!=0 or before["bbox"]!=after["bbox"]))
     status="NOT_APPLICABLE" if not applicable else ("SKIPPED" if not executed else ("GEOMETRY_EFFECTIVE" if geometry_changed else "EXECUTED_BUT_NO_OP"))
-    return {"operation":operation,"applicable":bool(applicable),"executed":bool(executed),"shape_hash_before":before["shape_sha256"],"shape_hash_after":after["shape_sha256"],"volume_before_mm3":before["volume_mm3"],"volume_after_mm3":after["volume_mm3"],"volume_delta_mm3":volume_delta,"solid_count_before":before["solid_count"],"solid_count_after":after["solid_count"],"solid_count_delta":solid_delta,"bbox_before":before["bbox"],"bbox_after":after["bbox"],"geometry_changed":geometry_changed,"effect_status":status}
+    return {"operation":operation,"applicable":bool(applicable),"executed":bool(executed),"shape_hash_before":before["shape_sha256"],"shape_hash_after":after["shape_sha256"],"brep_representation_changed":representation_changed,"volume_before_mm3":before["volume_mm3"],"volume_after_mm3":after["volume_mm3"],"volume_delta_mm3":volume_delta,"removed_volume_mm3":removed_volume,"added_volume_mm3":added_volume,"symmetric_difference_volume_mm3":symmetric_difference,"solid_count_before":before["solid_count"],"solid_count_after":after["solid_count"],"solid_count_delta":solid_delta,"face_count_before":before["face_count"],"face_count_after":after["face_count"],"edge_count_before":before["edge_count"],"edge_count_after":after["edge_count"],"vertex_count_before":before["vertex_count"],"vertex_count_after":after["vertex_count"],"topology_count_changed":topology_changed,"bbox_before":before["bbox"],"bbox_after":after["bbox"],"geometry_changed":geometry_changed,"effect_status":status}
 
 
 def connect(body, interfaces, realization_type):
