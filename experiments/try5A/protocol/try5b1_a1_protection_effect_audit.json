@@ -1,0 +1,35 @@
+{
+  "schema_version": "robotcad_a1_protection_effect_audit_v1",
+  "experiment_id": "try5b1_a1_protection_effect_audit",
+  "source_experiment": "try5b1_a1_mechanical_geometry_protection_ablation",
+  "stage": "GEOMETRY_EFFECT_AUDIT_ONLY",
+  "links": ["L03", "L04", "L07"],
+  "refinement_condition": "F2",
+  "body_family_specs": "experiments/try5A/results/try5b1/body_family_specs.json",
+  "reproducibility_freeze": "experiments/try5A/results/try5b1_a1_geometry_protection/reproducibility_manifest.json",
+  "interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+  "frozen_cad_ir_root": "experiments/try5A/results/try5a5/cad_ir/round3_verified",
+  "mechanical_geometry_policy": {
+    "protected_interface_cuts": true,
+    "distal_clearance_cut": true,
+    "preserve_frozen_scaffold": true,
+    "auto_attachment_closure": true
+  },
+  "operations": [
+    "proximal_interface_protected_cut",
+    "proximal_mating_envelope_cut",
+    "distal_rotary_interface_clearance_cut",
+    "frozen_scaffold_preservation_fusion",
+    "auto_attachment_closure"
+  ],
+  "geometry_changed_rule": "B-Rep SHA-256, volume, solid-count, or bbox differs after an executed operation",
+  "prohibited": {
+    "mechanical_96_case_evaluation": true,
+    "formal_holdout_access": true,
+    "gt_access": true,
+    "body_family_or_schema_change": true,
+    "runtime_rejection_or_rollback": true,
+    "new_evaluator": true
+  },
+  "stop_rule": "STOP_AFTER_PROTECTION_EFFECT_AUDIT"
+}

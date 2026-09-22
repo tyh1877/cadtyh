@@ -22,6 +22,22 @@ def dump(path, value):
 def sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def shape_state(shape):
+    return {
+        "shape_sha256":hashlib.sha256(shape.exportBrepToString().encode("utf-8")).hexdigest(),
+        "volume_mm3":float(shape.Volume),
+        "solid_count":len(shape.Solids),
+        "bbox":frozen.bounds(shape),
+    }
+
+
+def protection_effect(operation,applicable,executed,before_shape,after_shape):
+    before=shape_state(before_shape); after=shape_state(after_shape); volume_delta=after["volume_mm3"]-before["volume_mm3"]; solid_delta=after["solid_count"]-before["solid_count"]
+    geometry_changed=bool(executed and (before["shape_sha256"]!=after["shape_sha256"] or abs(volume_delta)>1e-9 or solid_delta!=0 or before["bbox"]!=after["bbox"]))
+    status="NOT_APPLICABLE" if not applicable else ("SKIPPED" if not executed else ("GEOMETRY_EFFECTIVE" if geometry_changed else "EXECUTED_BUT_NO_OP"))
+    return {"operation":operation,"applicable":bool(applicable),"executed":bool(executed),"shape_hash_before":before["shape_sha256"],"shape_hash_after":after["shape_sha256"],"volume_before_mm3":before["volume_mm3"],"volume_after_mm3":after["volume_mm3"],"volume_delta_mm3":volume_delta,"solid_count_before":before["solid_count"],"solid_count_after":after["solid_count"],"solid_count_delta":solid_delta,"bbox_before":before["bbox"],"bbox_after":after["bbox"],"geometry_changed":geometry_changed,"effect_status":status}
+
+
 def connect(body, interfaces, realization_type):
     group = body
     for interface in interfaces:
@@ -118,6 +134,37 @@ def refined_shape(link_id, family, schema, contracts, realization_type, frozen_s
             "attachment_valid":len(group.Solids)==1,"group_valid":group.isValid() and not group.isNull(),
             "mechanical_policy":policy,"assembly_strategy":assembly_strategy,"raw_body_signature":raw_body_signature,
             "execution_trace":execution_trace}
+
+
+def protection_effect_audit(job):
+    base=ROOT/"experiments/try5A/results/try5a5"; contracts=load(base/"motion_interface_contracts.json"); rows=[]; links=[]; policy=job["mechanical_geometry_policy"]
+    for link_id,spec in job["links"].items():
+        ir=load(base/"cad_ir/round3_verified"/(link_id+".json")); scaffold=frozen.link_shape(ir["link_spec"],contracts,ir["body_scale"],ir.get("repair_state"))["group"]; body=compile_body(spec["body_family"],spec["schema"])["shape"]; interfaces=[]; proximal=None; distal=[]; operations=[]
+        for contract in contracts:
+            if contract.get("virtual_child") or link_id not in (contract["parent"],contract["child"]): continue
+            side="parent" if contract["parent"]==link_id else "child"; shape,_=frozen.joint_half(contract,side); interfaces.append(shape)
+            if side=="child": proximal=contract
+            else: distal.append(contract)
+        applicable=bool(proximal and proximal["joint_type"] in ("revolute","continuous")); before=body
+        after=before
+        if applicable and policy["protected_interface_cuts"]:
+            axis=frozen.unit(proximal["axis_child"]); after=before.cut(frozen.cylinder_axis(3+proximal["clearance_mm"],26,[0,0,0],axis)).removeSplitter()
+        operations.append(protection_effect("proximal_interface_protected_cut",applicable,applicable and policy["protected_interface_cuts"],before,after)); body=after
+        before=body; after=before
+        if applicable and policy["protected_interface_cuts"]:
+            mate_contract=dict(proximal); mate_contract["origin_xyz_mm"]=[0,0,0]; mate_contract["axis_parent"]=mate_contract["axis_child"]; mate,_=frozen.joint_half(mate_contract,"parent"); after=before.cut(mate).removeSplitter()
+        operations.append(protection_effect("proximal_mating_envelope_cut",applicable,applicable and policy["protected_interface_cuts"],before,after)); body=after
+        distal_applicable=[contract for contract in distal if contract["joint_type"] in ("revolute","continuous")]; before=body; after=before
+        if distal_applicable and policy["distal_clearance_cut"]:
+            for contract in distal_applicable:
+                center=frozen.vec(contract["origin_xyz_mm"]); axis=frozen.unit(contract["axis_parent"]); after=after.cut(frozen.cylinder_axis(10+contract["clearance_mm"],16,center,axis)).removeSplitter(); mate_contract=dict(contract); mate_contract["axis_child"]=mate_contract["axis_parent"]; mate,_=frozen.joint_half(mate_contract,"child"); mate.translate(frozen.fcvec(center)); after=after.cut(mate).removeSplitter()
+        operations.append(protection_effect("distal_rotary_interface_clearance_cut",bool(distal_applicable),bool(distal_applicable and policy["distal_clearance_cut"]),before,after)); body=after
+        before=body; scaffold_executed=bool(policy["preserve_frozen_scaffold"]); after=scaffold.fuse(before).removeSplitter() if scaffold_executed else before
+        operations.append(protection_effect("frozen_scaffold_preservation_fusion",True,scaffold_executed,before,after)); group=after
+        closure_applicable=bool(not scaffold_executed and policy["auto_attachment_closure"]); before=group; after=connect(before,interfaces,ir["link_spec"]["realization_type"]) if closure_applicable else before
+        operations.append(protection_effect("auto_attachment_closure",closure_applicable,closure_applicable,before,after)); group=after
+        trace={"schema_version":"robotcad_protection_trace_v1","link_id":link_id,"f2_spec":spec,"policy":policy,"operations":operations,"final_shape":shape_state(group)}; target=Path(job["output_root"])/link_id/"protection_trace.json"; dump(target,trace); links.append({"link_id":link_id,"trace":str(target)}); rows.extend({"link_id":link_id,**operation} for operation in operations)
+    dump(job["output"],{"status":"PASS","mode":"PROTECTION_EFFECT_AUDIT","mechanical_evaluation_run":False,"gt_accessed":False,"formal_holdout_accessed":False,"links":links,"rows":rows})
 
 
 def export(link_id, condition, built, root):
@@ -245,6 +292,8 @@ def full_robot_repair(job):
 
 def main():
     job=load(sys.argv[1]); base=ROOT/"experiments/try5A/results/try5a5"; contracts=load(base/"motion_interface_contracts.json")
+    if job.get("mode")=="protection_effect_audit":
+        protection_effect_audit(job); return
     if job.get("mode")=="full_repair":
         full_robot_repair(job); return
     classification=load(base/"link_realization_classification.json"); physical=[x["link_id"] for x in classification if x["realization_type"]!="virtual_frame"]

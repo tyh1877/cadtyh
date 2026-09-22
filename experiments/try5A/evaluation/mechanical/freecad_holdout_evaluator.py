@@ -60,7 +60,7 @@ def evaluate_condition(condition, candidate, job, contracts, physical):
             current, ok = exact.exact_config(config, shapes, contracts, physical)
             joint_flags.append(ok)
             collision_rows.extend(row for row in current if row["classification"] in ("ADJACENT_UNINTENDED_COLLISION", "NONADJACENT_COLLISION"))
-        per_joint.append({"joint_id": joint_id, "holdout_samples": len(configurations), "jr3": sum(joint_flags) / len(joint_flags), "all_holdout_samples_pass": all(joint_flags), "collision_rows": collision_rows})
+        per_joint.append({"joint_id": joint_id, "sample_count": len(configurations), "jr3": sum(joint_flags) / len(joint_flags), "all_samples_pass": all(joint_flags), "collision_rows": collision_rows})
     invalid = len(flags) - sum(flags)
     return {
         "condition": condition,

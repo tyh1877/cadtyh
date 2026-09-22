@@ -60,6 +60,19 @@ class P1GovernanceTests(unittest.TestCase):
             {"swept_clearance_preserved", "forbidden_fusion_count", "virtual_solid_count", "meaningless_patch_count"},
         )
 
+    def test_protection_effect_audit_is_geometry_only(self):
+        protocol = json.loads((HERE / "protocol/try5b1_a1_protection_effect_audit.json").read_text(encoding="utf-8"))
+        self.assertEqual(protocol["links"], ["L03", "L04", "L07"])
+        self.assertEqual(protocol["refinement_condition"], "F2")
+        self.assertEqual(len(protocol["operations"]), 5)
+        self.assertTrue(all(protocol["prohibited"].values()))
+
+    def test_generic_joint_sample_schema_has_no_holdout_label(self):
+        source = (HERE / "evaluation/mechanical/freecad_holdout_evaluator.py").read_text(encoding="utf-8")
+        self.assertNotIn('"holdout_samples"', source)
+        self.assertNotIn('"all_holdout_samples_pass"', source)
+        self.assertIn('"sample_count"', source)
+
 
 if __name__ == "__main__":
     unittest.main()
