@@ -108,6 +108,20 @@ def main():
             "path": str(path.relative_to(ROOT)).replace("\\", "/"),
             "sha256": file_sha256(path) if path.is_file() else None,
         })
+    holdout_ids = set(split["holdout"]["case_ids"])
+    generator_job_records = []
+    for condition, entry in manifest["generator_jobs"].items():
+        path = ROOT / entry["path"]
+        job = load_json(path) if path.is_file() else {}
+        serialized_ids = {item["config_id"] for item in job.get("coupled", [])}
+        generator_job_records.append({
+            "condition": condition,
+            "path": entry["path"],
+            "canonical_sha256": canonical_hash(job) if job else None,
+            "matches_manifest": bool(job) and canonical_hash(job) == entry["sha256"],
+            "configuration_count": len(serialized_ids),
+            "serialized_holdout_id_count": len(serialized_ids & holdout_ids),
+        })
 
     freecad_python = Path(python_runtime())
     freecad_probe = subprocess.run(
@@ -133,6 +147,11 @@ def main():
         "analysis_plan": analysis_path,
         "case_split": result_root / "case_split.json",
         "candidate_manifest": result_root / "candidate_manifest.json",
+        "development_manifest": result_root / "manifest.json",
+        "development_validation": result_root / "validation.json",
+        "development_summary": result_root / "development_summary.json",
+        "selected_candidates": result_root / "selected_candidates.json",
+        "claim_ledger": result_root / "claim_ledger.json",
         "interface_contracts": ROOT / config["shared"]["frozen_interface_contracts"],
         "frozen_configuration_source": ROOT / config["shared"]["frozen_configuration_source"],
         "sanitized_urdf": ROOT / config["shared"]["sanitized_urdf"],
@@ -144,10 +163,10 @@ def main():
         "branch": git("rev-parse", "--abbrev-ref", "HEAD"),
         "origin_commit": git("rev-parse", "origin/main"),
         "platform": platform.platform(),
-        "python": {"executable": str(Path(sys.executable).resolve()), "version": platform.python_version()},
+        "python": {"executable": ".venv/Scripts/python.exe", "version": platform.python_version()},
         "packages": {name: importlib.metadata.version(name) for name in ("numpy", "scipy", "trimesh")},
         "freecad": {
-            "executable": str(freecad_python),
+            "executable_locator": "experiments/try5A/scripts/freecad_runtime.py:python_runtime",
             "probe_returncode": freecad_probe.returncode,
             "version": freecad_probe.stdout.strip(),
             "stderr": freecad_probe.stderr.strip(),
@@ -157,6 +176,7 @@ def main():
         "inputs": {name: {"path": str(path.relative_to(ROOT)).replace("\\", "/"), "sha256": file_sha256(path)} for name, path in inputs.items()},
         "pilot_candidates": candidate_records,
         "frozen_nonpilot_fcstd": nonpilot_records,
+        "development_generator_jobs": generator_job_records,
         "evaluator_only_gt_inputs": evaluator_gt_inputs(),
     }
     dump_json(result_root / "p1_environment_manifest.json", environment)
@@ -179,6 +199,8 @@ def main():
         "development_implementation_unchanged": file_sha256(script_paths["development_runner"]) == manifest["runner_sha256"] and file_sha256(script_paths["development_worker"]) == manifest["worker_sha256"],
         "candidate_manifest_and_pilot_hashes_pass": candidate_ok,
         "all_nonpilot_fcstd_present": len(nonpilot_records) == len(physical) - len(pilot_ids) and all(item["sha256"] for item in nonpilot_records),
+        "development_generator_jobs_match_and_exclude_holdout": all(item["matches_manifest"] and item["configuration_count"] == split["development"]["count"] and item["serialized_holdout_id_count"] == 0 for item in generator_job_records),
+        "selected_candidates_match_manifest": all(candidate["conditions"][condition]["selected_candidate"] == selected for condition, selected in load_json(result_root / "selected_candidates.json").items()),
         "analysis_plan_matches_experiment": analysis.get("experiment_id") == config["experiment_id"] and analysis.get("comparison", {}).get("paired_holdout_configuration_count") == split["holdout"]["count"],
         "analysis_forbids_case_drop_and_post_holdout_tuning": analysis.get("analysis_rules", {}).get("drop_failed_cases") is False and analysis.get("analysis_rules", {}).get("post_holdout_candidate_change") is False and analysis.get("analysis_rules", {}).get("post_holdout_code_or_metric_change") is False,
         "one_shot_failure_policy_frozen": analysis.get("failure_policy", {}).get("crash_or_interrupt_consumes_attempt") is True and analysis.get("failure_policy", {}).get("delete_lock_to_retry") is False,
