@@ -1,0 +1,84 @@
+{
+  "schema_version": "robotcad_a2_direct_vlm_fairness_contract_v1",
+  "experiment_id": "try5b1_a2_strong_direct_vlm_refinement_baseline",
+  "status": "BLOCKED_MODEL_AND_BUDGET_PARITY",
+  "scope": "L04_PAIRED_DRY_RUN_ONLY",
+  "conditions": ["OURS_FROZEN_STRUCTURED", "DIRECT_VLM"],
+  "shared_inputs": {
+    "link": "L04",
+    "start_cad": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+    "raw_images": "experiments/try5A/inputs/images",
+    "engineering_text": "experiments/try5A/inputs/engineering_text/robot_A.md",
+    "sanitized_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+    "scaffold_preservation": true,
+    "freecad_runtime": "experiments/try5A/scripts/freecad_runtime.py:python_runtime",
+    "formal_holdout_access": false
+  },
+  "direct_vlm_allowed_inputs": [
+    "six raw multi-view images",
+    "engineering text",
+    "sanitized URDF",
+    "same L04 F0 FCStd and neutral renders",
+    "frozen L04 interface frames and mating context",
+    "FreeCAD API execution contract",
+    "frozen scaffold post-processing safeguard"
+  ],
+  "direct_vlm_forbidden_inputs": [
+    "VisualEvidencePack",
+    "Body Family decision or body_family_specs.json",
+    "Semantic Inventory",
+    "Mechanical Topology Graph",
+    "F1/F2 executable schema parameters",
+    "repair_contracts.json",
+    "evaluator GT meshes or STEP",
+    "evaluator-only annotations",
+    "existing F1/F2 CAD, renders, metrics, or diagnoses"
+  ],
+  "required_budget_parity": {
+    "same_exact_model_id": null,
+    "same_model_version_or_snapshot": null,
+    "same_maximum_vlm_calls": null,
+    "same_maximum_refinement_rounds": 3,
+    "comparable_context_token_budget": null,
+    "same_maximum_output_tokens": null,
+    "same_timeout_seconds": null,
+    "same_manual_intervention_count": 0
+  },
+  "known_available_direct_configuration": {
+    "provider": "alibaba_model_studio",
+    "model": "qwen3.7-plus",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 300.0,
+    "max_retries": 0,
+    "source": "go_nogo2/config/llm.local.toml",
+    "credential_recorded": false
+  },
+  "ours_provenance": {
+    "agent": "current_interactive_codex",
+    "model_snapshot": "UNAVAILABLE",
+    "model_version": "UNAVAILABLE",
+    "vlm_call_count": "UNAVAILABLE",
+    "token_usage": "UNAVAILABLE",
+    "original_prompt_response_logs": false,
+    "current_frozen_generator_runtime_vlm_calls": 0,
+    "source": "experiments/try5A/results/resource_metrics.csv"
+  },
+  "hard_gates": {
+    "same_model_proven": false,
+    "same_version_proven": false,
+    "call_budget_parity_proven": false,
+    "token_budget_parity_proven": false,
+    "input_isolation_defined": true,
+    "same_scaffold_safeguard_defined": true,
+    "holdout_unaccessed": true
+  },
+  "execution_policy": "No API call, CAD generation, or metric comparison is permitted while any fairness hard gate is false.",
+  "resolution_options": [
+    "Provide the exact original Ours model/version and call/token logs, plus access to that same model.",
+    "Authorize a new paired experiment that re-runs both Structured and Direct with qwen3.7-plus; this is not the frozen Ours comparison.",
+    "Authorize an exploratory frozen-Ours-versus-Qwen comparison explicitly labeled model/budget-confounded and non-paper-evidentiary."
+  ]
+}

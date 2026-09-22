@@ -1,0 +1,25 @@
+{
+  "schema_version": "robotcad_a2_readiness_v1",
+  "status": "BLOCKED_MODEL_AND_BUDGET_PARITY",
+  "checks": {
+    "raw_input_allowlist_defined": true,
+    "structured_information_denylist_defined": true,
+    "same_f0_defined": true,
+    "same_scaffold_defined": true,
+    "same_freecad_environment_defined": true,
+    "manual_intervention_zero_defined": true,
+    "formal_holdout_unaccessed": true,
+    "same_model_id_proven": false,
+    "same_model_version_proven": false,
+    "same_vlm_call_budget_proven": false,
+    "comparable_token_budget_proven": false,
+    "fairness_contract_pass": false,
+    "l04_model_call_executed": false,
+    "l04_cad_generated": false,
+    "l04_metrics_generated": false
+  },
+  "formal_holdout_accessed": false,
+  "direct_vlm_api_calls": 0,
+  "manual_intervention_count": 0,
+  "next_action_requires_user_decision": true
+}

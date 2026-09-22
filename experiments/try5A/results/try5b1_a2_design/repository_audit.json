@@ -1,0 +1,55 @@
+{
+  "schema_version": "robotcad_a2_repository_audit_v1",
+  "status": "BLOCKED_MODEL_AND_BUDGET_PARITY",
+  "ours": {
+    "frozen_result": "experiments/try5A/results/try5b1",
+    "creation_commit": "91e9e248645681672c277a0464e728cca65eb6c7",
+    "resource_record": "experiments/try5A/results/resource_metrics.csv",
+    "recorded_agent": "current_interactive_codex",
+    "model_snapshot": "UNAVAILABLE",
+    "tokens": "UNAVAILABLE",
+    "prompt_logs_found": 0,
+    "response_logs_found": 0,
+    "call_ledger_found": false,
+    "current_execution_type": "deterministic frozen F2 schema to FreeCAD",
+    "current_runtime_vlm_calls": 0
+  },
+  "available_direct_vlm": {
+    "configuration_exists": true,
+    "configuration_valid_offline": true,
+    "provider": "alibaba_model_studio",
+    "model": "qwen3.7-plus",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 300.0,
+    "max_retries": 0,
+    "credential_value_recorded": false,
+    "belongs_to_same_try5b1_method": false,
+    "api_call_made_for_a2": false
+  },
+  "reusable_infrastructure": {
+    "multimodal_chat_call": "go_nogo2/scripts/run_baseline.py",
+    "secret_safe_config_loader": "go_nogo2/scripts/llm_config.py",
+    "token_latency_logging_available": true,
+    "single_call_no_retry_mode_available": true,
+    "direct_l04_freecad_refinement_adapter_available": false
+  },
+  "frozen_inputs_available": {
+    "six_raw_images": true,
+    "engineering_text": true,
+    "sanitized_urdf": true,
+    "frozen_interface_contract": true,
+    "f0_l04_fcstd": true,
+    "freecad_runtime": true,
+    "scaffold_safeguard": true,
+    "formal_holdout_accessed": false
+  },
+  "hard_failures": [
+    "The exact Ours model and version cannot be identified.",
+    "Ours VLM call count and token/context budget cannot be reconstructed.",
+    "No Ours prompt/response/code-generation logs exist for a paired process comparison.",
+    "The available qwen3.7-plus model is not proven to be the model that created frozen Ours."
+  ],
+  "decision": "Do not call qwen3.7-plus or produce L04 comparison metrics until the user resolves the experimental-design mismatch."
+}
