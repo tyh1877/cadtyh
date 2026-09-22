@@ -1,0 +1,70 @@
+{
+  "schema_version": "robotcad_a2a_same_model_l04_v1",
+  "experiment_id": "try5b1_a2a_same_model_structured_vs_direct_l04",
+  "stage": "ONE_SHOT_L04_DRY_RUN_ONLY",
+  "model": {
+    "provider": "alibaba_model_studio",
+    "requested_identifier": "qwen3.7-plus",
+    "config_path": "go_nogo2/config/llm.local.toml",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 20260923,
+    "max_vlm_calls_per_condition": 1,
+    "max_refinement_rounds": 0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 300.0,
+    "max_retries": 0,
+    "manual_intervention": 0
+  },
+  "shared_inputs": {
+    "link_id": "L04",
+    "raw_image_root": "experiments/try5A/inputs/images",
+    "raw_image_views": ["front", "isometric", "left", "right", "top", "rear"],
+    "engineering_text": "experiments/try5A/inputs/engineering_text/robot_A.md",
+    "sanitized_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "f0_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+    "interface_contracts_source": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+    "development_input": "experiments/try5A/protocol/try5b1_a1_development_input.json",
+    "freecad_runtime": "experiments/try5A/scripts/freecad_runtime.py:python_runtime",
+    "mechanical_policy": {
+      "protected_interface_cuts": true,
+      "distal_clearance_cut": true,
+      "preserve_frozen_scaffold": true,
+      "auto_attachment_closure": false
+    },
+    "relevant_joint_sweeps": ["J03"],
+    "geometry_sample_count": 10000,
+    "formal_holdout_access": false
+  },
+  "conditions": {
+    "STRUCTURED_QWEN": {
+      "method_prompt": "experiments/try5A/prompts/a2a_structured_qwen_l04.md",
+      "output_contract": "fresh structured IR compiled by existing executable_body_families.py"
+    },
+    "DIRECT_QWEN": {
+      "method_prompt": "experiments/try5A/prompts/a2a_direct_qwen_l04.md",
+      "output_contract": "direct allowlisted FreeCAD Python assigning result_shape"
+    }
+  },
+  "historical_frozen_reference": {
+    "result": "experiments/try5A/results/try5b1",
+    "comparison_role": "context_only_not_same_model_evidence"
+  },
+  "forbidden_generator_inputs": [
+    "experiments/try5A/results/try5b1/visual_evidence_packs",
+    "experiments/try5A/results/try5b1/body_family_specs.json",
+    "experiments/try5A/results/try5b1/semantic_inventories",
+    "experiments/try5A/results/try5b1/mechanical_topology_graphs",
+    "experiments/try5A/results/try5b1/repair_contracts.json",
+    "evaluator GT meshes and STEP",
+    "evaluator-only annotations",
+    "historical F1/F2 CAD, renders, diagnoses, or metrics"
+  ],
+  "failure_policy": {
+    "retry": false,
+    "repair": false,
+    "human_edit": false,
+    "drop_failed_condition": false
+  },
+  "stop_rule": "STOP_AFTER_L04_PAIRED_RESULT_AUDIT"
+}

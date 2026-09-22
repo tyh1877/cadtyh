@@ -79,9 +79,15 @@ DEFAULT_MECHANICAL_POLICY = {
 }
 
 
-def refined_shape(link_id, family, schema, contracts, realization_type, frozen_scaffold, mechanical_policy=None):
+def refined_shape(link_id, family, schema, contracts, realization_type, frozen_scaffold, mechanical_policy=None, prebuilt_body_brep=None):
     policy = {**DEFAULT_MECHANICAL_POLICY, **(mechanical_policy or {})}
-    compiled=compile_body(family,schema); body=compiled["shape"]; interfaces=[]; interface_hashes={}
+    if prebuilt_body_brep:
+        body=Part.Shape(); body.importBrep(str(prebuilt_body_brep))
+        if body.isNull() or not body.isValid(): raise RuntimeError("DIRECT_VLM_BODY_INVALID")
+        compiled={"shape":body,"executed_family":"direct_vlm_body","features":["direct_vlm_generated_body"],"schema_consumed":None,"valid":True}
+    else:
+        compiled=compile_body(family,schema); body=compiled["shape"]
+    interfaces=[]; interface_hashes={}
     raw_body_signature={"volume_mm3":round(float(body.Volume),9),"bbox":frozen.bounds(body),"solids":len(body.Solids),"faces":len(body.Faces),"edges":len(body.Edges),"vertices":len(body.Vertexes)}
     proximal=None; distal=[]
     for contract in contracts:
@@ -315,9 +321,9 @@ def main():
             else:
                 spec=job["pilots"][link_id][condition]
                 scaffold=frozen.link_shape(ir["link_spec"],contracts,ir["body_scale"],ir.get("repair_state"))["group"]
-                built=refined_shape(link_id,spec["body_family"],spec["schema"],contracts,ir["link_spec"]["realization_type"],scaffold,policy)
+                built=refined_shape(link_id,spec.get("body_family"),spec.get("schema"),contracts,ir["link_spec"]["realization_type"],scaffold,policy,spec.get("prebuilt_body_brep"))
                 shapes[link_id]=built["group"]; artifact=export(link_id,condition,built,job["cad_root"])
-                builds.append({"condition":condition,"link_id":link_id,"planned_family":spec["body_family"],"executed_family":built["executed_family"],"artifact":artifact,"attachment_valid":built["attachment_valid"],"solid_count":built["solid_count"],"group_valid":built["group_valid"],"features":built["features"],"interface_signatures":built["interface_signatures"],"mechanical_geometry_policy":built["mechanical_policy"],"assembly_strategy":built["assembly_strategy"],"raw_body_signature":built["raw_body_signature"],"execution_trace":built["execution_trace"]})
+                builds.append({"condition":condition,"link_id":link_id,"planned_family":spec.get("body_family","direct_vlm_body"),"executed_family":built["executed_family"],"artifact":artifact,"attachment_valid":built["attachment_valid"],"solid_count":built["solid_count"],"group_valid":built["group_valid"],"features":built["features"],"interface_signatures":built["interface_signatures"],"mechanical_geometry_policy":built["mechanical_policy"],"assembly_strategy":built["assembly_strategy"],"raw_body_signature":built["raw_body_signature"],"execution_trace":built["execution_trace"]})
         condition_shapes[condition]=shapes
     assemblies=[{"condition":condition,**frozen.save_assembly(job["assembly_root"],condition,condition_shapes[condition],job["canonical_config"],physical)} for condition in conditions]
     previous=load(job["output"]) if job.get("reuse_exact") and Path(job["output"]).is_file() else None

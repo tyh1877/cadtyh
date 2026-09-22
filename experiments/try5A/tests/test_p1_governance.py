@@ -92,6 +92,22 @@ class P1GovernanceTests(unittest.TestCase):
         self.assertFalse(case_ids & set(split["holdout"]["case_ids"]))
         self.assertFalse(formal_input["contains_formal_holdout_configurations"])
 
+    def test_a2a_budget_and_scaffold_are_paired(self):
+        protocol = json.loads((HERE / "protocol/try5b1_a2a_same_model_l04.json").read_text(encoding="utf-8"))
+        self.assertEqual(protocol["model"]["requested_identifier"], "qwen3.7-plus")
+        self.assertEqual(protocol["model"]["max_vlm_calls_per_condition"], 1)
+        self.assertEqual(protocol["model"]["max_refinement_rounds"], 0)
+        self.assertEqual(protocol["model"]["max_retries"], 0)
+        self.assertTrue(protocol["shared_inputs"]["mechanical_policy"]["preserve_frozen_scaffold"])
+        self.assertEqual(set(protocol["conditions"]), {"STRUCTURED_QWEN", "DIRECT_QWEN"})
+
+    def test_direct_prompt_contains_no_structured_family_answers(self):
+        direct = (HERE / "prompts/a2a_direct_qwen_l04.md").read_text(encoding="utf-8")
+        for forbidden in ("central_web", "compound_profile_housing", "gripper_support", "span_mm", "major_recess"):
+            self.assertNotIn(forbidden, direct)
+        structured = (HERE / "prompts/a2a_structured_qwen_l04.md").read_text(encoding="utf-8")
+        self.assertIn("compound_profile_housing", structured)
+
 
 if __name__ == "__main__":
     unittest.main()
