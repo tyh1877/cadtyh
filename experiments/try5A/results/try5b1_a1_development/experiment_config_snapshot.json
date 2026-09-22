@@ -4,9 +4,20 @@
   "base_experiment": "Try-5B.1/F2",
   "protocol_source": "try5/Try5-B1.md",
   "shared": {
-    "pilot_links": ["L03", "L04", "L07"],
+    "pilot_links": [
+      "L03",
+      "L04",
+      "L07"
+    ],
     "refinement_condition": "F2",
-    "formal_images": ["front", "isometric", "left", "right", "top", "rear"],
+    "formal_images": [
+      "front",
+      "isometric",
+      "left",
+      "right",
+      "top",
+      "rear"
+    ],
     "engineering_text": "experiments/try5A/inputs/engineering_text/robot_A.md",
     "sanitized_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
     "frozen_interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
@@ -18,7 +29,7 @@
     "fast_mode": "FAST_REPAIR_MODE",
     "final_mode": "FINAL_AUDIT_MODE",
     "tessellation_mm": 1.0,
-    "exact_tolerance_mm3": 0.000001,
+    "exact_tolerance_mm3": 1e-06,
     "geometry_sample_count": 10000,
     "metrics": [
       "voxel_iou",
@@ -44,8 +55,15 @@
       "holdout_evaluation_limit_per_condition": 1
     },
     "per_joint_split": {
-      "development_fractions": [0.25, 0.5, 0.75],
-      "holdout_fractions": [0.0, 1.0]
+      "development_fractions": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "holdout_fractions": [
+        0.0,
+        1.0
+      ]
     },
     "mechanical_thresholds": {
       "artifact_valid": true,

@@ -63,6 +63,7 @@ DEFAULT_MECHANICAL_POLICY = {
 def refined_shape(link_id, family, schema, contracts, realization_type, frozen_scaffold, mechanical_policy=None):
     policy = {**DEFAULT_MECHANICAL_POLICY, **(mechanical_policy or {})}
     compiled=compile_body(family,schema); body=compiled["shape"]; interfaces=[]; interface_hashes={}
+    raw_body_signature={"volume_mm3":round(float(body.Volume),9),"bbox":frozen.bounds(body),"solids":len(body.Solids),"faces":len(body.Faces),"edges":len(body.Edges),"vertices":len(body.Vertexes)}
     proximal=None; distal=[]
     for contract in contracts:
         if contract.get("virtual_child") or link_id not in (contract["parent"],contract["child"]): continue
@@ -103,7 +104,7 @@ def refined_shape(link_id, family, schema, contracts, realization_type, frozen_s
         assembly_strategy="NATURAL_CONTACT_ONLY"
     return {**compiled,"group":group,"interface_signatures":interface_hashes,"solid_count":len(group.Solids),
             "attachment_valid":len(group.Solids)==1,"group_valid":group.isValid() and not group.isNull(),
-            "mechanical_policy":policy,"assembly_strategy":assembly_strategy}
+            "mechanical_policy":policy,"assembly_strategy":assembly_strategy,"raw_body_signature":raw_body_signature}
 
 
 def export(link_id, condition, built, root):
@@ -247,7 +248,7 @@ def main():
                 scaffold=frozen.link_shape(ir["link_spec"],contracts,ir["body_scale"],ir.get("repair_state"))["group"]
                 built=refined_shape(link_id,spec["body_family"],spec["schema"],contracts,ir["link_spec"]["realization_type"],scaffold,policy)
                 shapes[link_id]=built["group"]; artifact=export(link_id,condition,built,job["cad_root"])
-                builds.append({"condition":condition,"link_id":link_id,"planned_family":spec["body_family"],"executed_family":built["executed_family"],"artifact":artifact,"attachment_valid":built["attachment_valid"],"solid_count":built["solid_count"],"group_valid":built["group_valid"],"features":built["features"],"interface_signatures":built["interface_signatures"],"mechanical_policy":built["mechanical_policy"],"assembly_strategy":built["assembly_strategy"]})
+                builds.append({"condition":condition,"link_id":link_id,"planned_family":spec["body_family"],"executed_family":built["executed_family"],"artifact":artifact,"attachment_valid":built["attachment_valid"],"solid_count":built["solid_count"],"group_valid":built["group_valid"],"features":built["features"],"interface_signatures":built["interface_signatures"],"mechanical_policy":built["mechanical_policy"],"assembly_strategy":built["assembly_strategy"],"raw_body_signature":built["raw_body_signature"]})
         condition_shapes[condition]=shapes
     assemblies=[{"condition":condition,**frozen.save_assembly(job["assembly_root"],condition,condition_shapes[condition],job["canonical_config"],physical)} for condition in ("F0","F1","F2")]
     previous=load(job["output"]) if job.get("reuse_exact") and Path(job["output"]).is_file() else None

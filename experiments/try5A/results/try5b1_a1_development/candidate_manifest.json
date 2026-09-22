@@ -1,0 +1,69 @@
+{
+  "experiment_id": "try5b1_a1_mechanical_constraint_ablation",
+  "phase": "development_frozen_candidates",
+  "frozen_nonpilot_root": "experiments/try5A/artifacts/try5a5/round3_verified/links",
+  "interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+  "conditions": {
+    "C1_CONSTRAINED": {
+      "selected_candidate": "F2",
+      "pilot_fcstd": {
+        "L03": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L03/model.FCStd",
+        "L04": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L04/model.FCStd",
+        "L07": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L07/model.FCStd"
+      },
+      "pilot_fcstd_sha256": {
+        "L03": "c5b128bf131fba8af15076fe4d6bdef1217df0409a33819a0355d94992a82334",
+        "L04": "cc97874377a1269fc7c7ea245e3527941d2b0688827ac1c1b1290cc446f9ce09",
+        "L07": "64d98ee99b4da308cd5da88bf67c0d41f763a37c783a5b6e03bd93068c4df331"
+      },
+      "pilot_stl": {
+        "L03": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L03/model.stl",
+        "L04": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L04/model.stl",
+        "L07": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L07/model.stl"
+      },
+      "pilot_stl_sha256": {
+        "L03": "32802fbc205c388bd5999243b8b0efe0290af13a2ecd2a046054c14f01d3274f",
+        "L04": "846f59f0527460c699aacc97318a405c17a2d14a158cbfd86da34ba1db155904",
+        "L07": "e8fa0ef9d304186d7eea95a0115ade4a1f35d3ded306fb2074c739f9b3218fff"
+      },
+      "mechanical_policy": {
+        "protected_interface_cuts": true,
+        "preserve_frozen_scaffold": true,
+        "auto_attachment_closure": true,
+        "mechanical_rejection": true,
+        "rollback_on_failure": true
+      }
+    },
+    "C2_UNCONSTRAINED": {
+      "selected_candidate": "F2",
+      "pilot_fcstd": {
+        "L03": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L03/model.FCStd",
+        "L04": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L04/model.FCStd",
+        "L07": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L07/model.FCStd"
+      },
+      "pilot_fcstd_sha256": {
+        "L03": "023a5b53412409822ab140780d4fae884e37121efbfb527748fe267c5e919882",
+        "L04": "e81d926a5291051fd5bf61c188cd233633aeaa7e003066b414b7faefa86d6552",
+        "L07": "98f10c5862afe4cdc29086f9c5bdfac0ff175ffebe2f25dba665d3ab002df164"
+      },
+      "pilot_stl": {
+        "L03": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L03/model.stl",
+        "L04": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L04/model.stl",
+        "L07": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L07/model.stl"
+      },
+      "pilot_stl_sha256": {
+        "L03": "4821784be312b969ac4c42067317189d243da76833e56ea639f04d8e65fb2426",
+        "L04": "8c37c52c9022f1a2b4c27778b6cadec3f443239e3c1b0174dbc25952d4b20101",
+        "L07": "6ea7437c47e512543bdcbef8f9367d59bb1eddc7fca5b9b1a25b7b7843f97568"
+      },
+      "mechanical_policy": {
+        "protected_interface_cuts": false,
+        "preserve_frozen_scaffold": false,
+        "auto_attachment_closure": false,
+        "mechanical_rejection": false,
+        "rollback_on_failure": false
+      }
+    }
+  },
+  "candidate_manifest_sha256": "ebf987b3fb6bccb1acbe0ca6c2bf411ae537da71fadceed007efdcee6d576576"
+}

@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -236,3 +238,24 @@ def validate_claim_ledger(result_root: str | Path, claims: list[dict]) -> dict:
         "claims": rows,
         "hard_claims_with_noncomputed_evidence": [row["claim_id"] for row in rows if row["hard"] and not row["direct_computed_evidence"]],
     }
+
+
+def acquire_holdout_lock(lock_path: str | Path, experiment_id: str, config_sha256: str) -> dict:
+    """Atomically consume the one-shot holdout allowance.
+
+    A crashed holdout attempt intentionally leaves the lock in place.  A retry
+    requires a new pre-registered experiment version rather than deleting it.
+    """
+    target = Path(lock_path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "schema_version": "robotcad_holdout_lock_v1",
+        "experiment_id": experiment_id,
+        "config_sha256": config_sha256,
+        "created_unix_seconds": time.time(),
+        "process_id": os.getpid(),
+        "status": "HOLDOUT_ATTEMPT_CONSUMED",
+    }
+    with target.open("x", encoding="utf-8") as handle:
+        handle.write(json.dumps(payload, indent=2) + "\n")
+    return payload

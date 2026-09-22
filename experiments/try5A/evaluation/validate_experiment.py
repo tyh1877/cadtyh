@@ -31,7 +31,7 @@ REQUIRED_FILES = (
 )
 
 
-def validate_bundle(result_root: str | Path, config_path: str | Path) -> dict:
+def validate_bundle(result_root: str | Path, config_path: str | Path, phase: str = "formal") -> dict:
     root = Path(result_root)
     config_file = Path(config_path)
     missing = [name for name in REQUIRED_FILES if not (root / name).is_file()]
@@ -59,9 +59,10 @@ def validate_bundle(result_root: str | Path, config_path: str | Path) -> dict:
 
     conditions = set(config["conditions"])
     accounting_rows = {row["condition"]: row for row in accounting["conditions"]}
+    expected_requested = split["development"]["count"] if phase == "development" else split["source_case_count"]
     denominator_ok = set(accounting_rows) == conditions and all(
         row["requested_cases"] == row["completed_cases"] + row["failed_cases"]
-        and row["requested_cases"] == split["source_case_count"]
+        and row["requested_cases"] == expected_requested
         for row in accounting_rows.values()
     )
 
@@ -71,6 +72,7 @@ def validate_bundle(result_root: str | Path, config_path: str | Path) -> dict:
         if event["condition"] in counts:
             counts[event["condition"]] += 1
     one_shot_holdout = set(counts) == conditions and all(count == limit for count in counts.values())
+    holdout_unused = all(count == 0 for count in counts.values())
     post_holdout_tuning = any(event.get("followed_by_tuning", False) for event in holdout_log["events"])
 
     claim_audit = validate_claim_ledger(root, claims)
@@ -84,7 +86,7 @@ def validate_bundle(result_root: str | Path, config_path: str | Path) -> dict:
         "parity_recomputed_pass": recomputed_parity.get("status") == "PASS",
         "parity_reproducible": stored_parity == recomputed_parity,
         "denominator_preserved": denominator_ok,
-        "holdout_evaluated_exactly_once_per_condition": one_shot_holdout,
+        "holdout_phase_correct": holdout_unused if phase == "development" else one_shot_holdout,
         "no_post_holdout_tuning": not post_holdout_tuning,
         "hard_claims_have_direct_computed_evidence": not claim_audit["hard_claims_with_noncomputed_evidence"],
         "claim_ledger_pass": claim_audit["status"] == "PASS",
@@ -95,6 +97,7 @@ def validate_bundle(result_root: str | Path, config_path: str | Path) -> dict:
         "validator": str(Path(__file__).relative_to(Path(__file__).resolve().parents[3])).replace("\\", "/"),
         "validator_sha256": file_sha256(__file__),
         "result_root": str(root),
+        "phase": phase,
         "checks": checks,
         "holdout_evaluation_counts": counts,
         "claim_audit": claim_audit,
@@ -107,8 +110,9 @@ def main() -> int:
     parser.add_argument("--result-dir", required=True)
     parser.add_argument("--config", required=True)
     parser.add_argument("--output")
+    parser.add_argument("--phase", choices=("development", "formal"), default="formal")
     args = parser.parse_args()
-    result = validate_bundle(args.result_dir, args.config)
+    result = validate_bundle(args.result_dir, args.config, args.phase)
     output = Path(args.output) if args.output else Path(args.result_dir) / "validation.json"
     dump_json(output, result)
     print(json.dumps(result, indent=2, ensure_ascii=False))

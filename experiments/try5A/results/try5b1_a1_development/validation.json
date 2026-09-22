@@ -1,0 +1,90 @@
+{
+  "schema_version": "robotcad_independent_validation_v1",
+  "status": "PASS",
+  "validator": "experiments/try5A/evaluation/validate_experiment.py",
+  "validator_sha256": "be917bf76e890ef30661c8d5059934d6c911e2e17b89a532c4586efcedd08b6c",
+  "result_root": "experiments\\try5A\\results\\try5b1_a1_development",
+  "phase": "development",
+  "checks": {
+    "config_snapshot_matches": true,
+    "config_file_sha256_matches_manifest": true,
+    "config_canonical_sha256_matches_manifest": true,
+    "case_split_sha256_matches_manifest": true,
+    "case_split_counts_and_disjointness": true,
+    "stored_parity_pass": true,
+    "parity_recomputed_pass": true,
+    "parity_reproducible": true,
+    "denominator_preserved": true,
+    "holdout_phase_correct": true,
+    "no_post_holdout_tuning": true,
+    "hard_claims_have_direct_computed_evidence": true,
+    "claim_ledger_pass": true
+  },
+  "holdout_evaluation_counts": {
+    "C2_UNCONSTRAINED": 0,
+    "C1_CONSTRAINED": 0
+  },
+  "claim_audit": {
+    "status": "PASS",
+    "claims": [
+      {
+        "claim_id": "condition_parity",
+        "hard": true,
+        "evidence_type": "computed",
+        "direct_computed_evidence": true,
+        "artifact": "development_summary.json",
+        "artifact_sha256": "fdad30b020c78c797096a6883da0387e90a062ee411d66c020b2cc298b145e62",
+        "field": "condition_parity",
+        "actual": "PASS",
+        "operator": "eq",
+        "expected": "PASS",
+        "error": null,
+        "status": "PASS"
+      },
+      {
+        "claim_id": "raw_proposal_parity",
+        "hard": true,
+        "evidence_type": "computed",
+        "direct_computed_evidence": true,
+        "artifact": "development_summary.json",
+        "artifact_sha256": "fdad30b020c78c797096a6883da0387e90a062ee411d66c020b2cc298b145e62",
+        "field": "raw_proposal_parity",
+        "actual": "PASS",
+        "operator": "eq",
+        "expected": "PASS",
+        "error": null,
+        "status": "PASS"
+      },
+      {
+        "claim_id": "holdout_not_serialized",
+        "hard": true,
+        "evidence_type": "computed",
+        "direct_computed_evidence": true,
+        "artifact": "development_summary.json",
+        "artifact_sha256": "fdad30b020c78c797096a6883da0387e90a062ee411d66c020b2cc298b145e62",
+        "field": "holdout_cases_serialized_to_generator",
+        "actual": 0,
+        "operator": "eq",
+        "expected": 0,
+        "error": null,
+        "status": "PASS"
+      },
+      {
+        "claim_id": "development_denominator",
+        "hard": true,
+        "evidence_type": "computed",
+        "direct_computed_evidence": true,
+        "artifact": "development_summary.json",
+        "artifact_sha256": "fdad30b020c78c797096a6883da0387e90a062ee411d66c020b2cc298b145e62",
+        "field": "development_case_count",
+        "actual": 96,
+        "operator": "eq",
+        "expected": 96,
+        "error": null,
+        "status": "PASS"
+      }
+    ],
+    "hard_claims_with_noncomputed_evidence": []
+  },
+  "missing_required_files": []
+}

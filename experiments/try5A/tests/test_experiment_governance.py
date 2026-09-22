@@ -11,6 +11,7 @@ sys.path.insert(0, str(EVALUATION))
 
 from experiment_governance import (  # noqa: E402
     CandidateController,
+    acquire_holdout_lock,
     audit_condition_parity,
     canonical_hash,
     dump_json,
@@ -182,7 +183,29 @@ class GovernanceTests(unittest.TestCase):
             self._write_bundle(result_root, config_path, holdout_events=3)
             result = validate_bundle(result_root, config_path)
             self.assertEqual(result["status"], "FAIL")
-            self.assertFalse(result["checks"]["holdout_evaluated_exactly_once_per_condition"])
+            self.assertFalse(result["checks"]["holdout_phase_correct"])
+
+    def test_development_validator_requires_unused_holdout(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config_path = root / "config.json"
+            dump_json(config_path, config_fixture())
+            result_root = root / "results"
+            result_root.mkdir()
+            self._write_bundle(result_root, config_path)
+            dump_json(result_root / "holdout_evaluation_log.json", {"events": []})
+            dump_json(result_root / "failure_accounting.json", {"conditions": [
+                {"condition": name, "requested_cases": 3, "completed_cases": 3, "failed_cases": 0}
+                for name in config_fixture()["conditions"]
+            ]})
+            self.assertEqual(validate_bundle(result_root, config_path, "development")["status"], "PASS")
+
+    def test_holdout_lock_is_one_shot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            lock = Path(directory) / "holdout.lock"
+            acquire_holdout_lock(lock, "fixture", "abc")
+            with self.assertRaises(FileExistsError):
+                acquire_holdout_lock(lock, "fixture", "abc")
 
 
 if __name__ == "__main__":

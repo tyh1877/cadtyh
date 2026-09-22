@@ -18,6 +18,25 @@ final `validation.json`.
 
 The Try-5B.1-A1 pre-registration and dry-run evidence are under `protocol/`.
 
+P0.5 closes the A1 development phase without consuming the holdout. Run the
+paired 96-case development experiment and its independent validation with:
+
+```powershell
+.venv/Scripts/python.exe experiments/try5A/scripts/run_try5b1.py --mechanical-ablation-development experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json
+.venv/Scripts/python.exe experiments/try5A/evaluation/validate_experiment.py --phase development --result-dir experiments/try5A/results/try5b1_a1_development --config experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json
+```
+
+Only after the candidate manifest is frozen and formal execution is authorized,
+run the one-shot holdout evaluator followed by the independent formal validator:
+
+```powershell
+.venv/Scripts/python.exe experiments/try5A/evaluation/run_holdout.py --result-dir experiments/try5A/results/try5b1_a1_development --config experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json
+.venv/Scripts/python.exe experiments/try5A/evaluation/validate_experiment.py --phase formal --result-dir experiments/try5A/results/try5b1_a1_development --config experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json
+```
+
+The holdout command creates an atomic lock before evaluation and refuses a
+second run. Do not use it for smoke tests.
+
 Try-5A coarse reconstruction is frozen at Try-5A.5. See
 `../../try5A_frozen_spec.md` and revalidate the retained baseline with
 `.venv/Scripts/python.exe experiments/try5A/scripts/validate_frozen_coarse_stage.py`.

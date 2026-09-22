@@ -1,0 +1,27 @@
+{
+  "phase": "development",
+  "experiment_id": "try5b1_a1_mechanical_constraint_ablation",
+  "config_path": "experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json",
+  "config_file_sha256": "9a20f95214c7d2e0cb00b6485c919ecaac8f418e05628f6ac5e124c3f4087654",
+  "config_canonical_sha256": "bd377f321283ccae2a1016985670874361b3ab3a1bb7ebc15c34bd97f9386a09",
+  "case_split_sha256": "384200611a91e8966ed443dc906d00e83eeb4420e6ad12ae915b273a5ec52059",
+  "candidate_manifest_sha256": "ebf987b3fb6bccb1acbe0ca6c2bf411ae537da71fadceed007efdcee6d576576",
+  "runner_sha256": "11bf4349886e4447360fd7d475f889d36ecc72109fc8ed7c6e362949e0abe6e9",
+  "worker_sha256": "bd578d09e5be17a20097eda9bc3de328d67f2424f53bd3d529178ddd5c9371bf",
+  "generator_jobs": {
+    "C1_CONSTRAINED": {
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/generator_job.json",
+      "sha256": "76c05e27c0f4b9fdccae4ac462dbde3d6a860e952d3fbfd04fa9d77f67a1cc77",
+      "serialized_holdout_id_count": 0,
+      "reused_verified_worker_output": true
+    },
+    "C2_UNCONSTRAINED": {
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/generator_job.json",
+      "sha256": "42c8094611efb6af7d5c47bf3c46fa65ab6d9f0f83bf95ca12cc6ca3b2ee8b3c",
+      "serialized_holdout_id_count": 0,
+      "reused_verified_worker_output": true
+    }
+  },
+  "gt_accessed": false,
+  "holdout_accessed": false
+}

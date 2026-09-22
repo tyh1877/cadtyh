@@ -1,0 +1,30 @@
+{
+  "schema_version": "robotcad_execution_incidents_v1",
+  "experiment_id": "try5b1_a1_mechanical_constraint_ablation",
+  "phase": "development",
+  "denominator_impact": "NONE",
+  "holdout_accessed": false,
+  "incidents": [
+    {
+      "incident_id": "DEV-001",
+      "stage": "pre_worker_orchestration",
+      "symptom": "The runner raised NameError because canonical_json was not imported.",
+      "resolution": "Imported the existing governance helper and restarted before any case was evaluated.",
+      "case_impact": "No requested case was dropped or evaluated partially."
+    },
+    {
+      "incident_id": "DEV-002",
+      "stage": "fast_evaluation",
+      "symptom": "The ignored Try-5B0 exact_reference.json was unavailable to the FAST audit.",
+      "resolution": "Added a deterministic fallback that uses the rebuilt B0 geometry cache and the same-condition Exact rows for non-dirty pair reuse. An unintended long B0 rebuild was stopped before resuming A1.",
+      "case_impact": "No requested case was skipped; FAST and Exact evidence was produced for both conditions."
+    },
+    {
+      "incident_id": "DEV-003",
+      "stage": "exact_evaluation",
+      "symptom": "OpenCascade common() raised ValueError for a valid multi-solid compound in C2.",
+      "resolution": "The canonical exact evaluator now falls back to summing exact solid-pair intersections when the compound operation is null.",
+      "case_impact": "The full 96-case development denominator was retained for both conditions."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "artifact_valid": true,
+  "bicr": 1.0,
+  "physical_floating_count": 0,
+  "forbidden_fusion_count": 0,
+  "virtual_solid_count": 0,
+  "meaningless_patch_count": 0,
+  "relevant_jr3": 1.0,
+  "gcfr": 0.9166666666666666,
+  "gcfr_regression": -0.0026041666666666297,
+  "configuration_count": 96,
+  "valid_configurations": 88
+}

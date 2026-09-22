@@ -1,0 +1,46 @@
+{
+  "events": [
+    {
+      "condition": "C1_CONSTRAINED",
+      "previous_candidate": "F0_FROZEN",
+      "proposed_candidate": "F1",
+      "selected_candidate": "F1",
+      "outcome": "ACCEPT",
+      "mechanical_status": "PASS",
+      "failed_gates": []
+    },
+    {
+      "condition": "C1_CONSTRAINED",
+      "previous_candidate": "F1",
+      "proposed_candidate": "F2",
+      "selected_candidate": "F2",
+      "outcome": "ACCEPT",
+      "mechanical_status": "PASS",
+      "failed_gates": []
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "previous_candidate": "F0_FROZEN",
+      "proposed_candidate": "F1",
+      "selected_candidate": "F1",
+      "outcome": "ACCEPT_WITH_MECHANICAL_FAILURE",
+      "mechanical_status": "FAIL",
+      "failed_gates": [
+        "bicr",
+        "physical_floating_count"
+      ]
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "previous_candidate": "F1",
+      "proposed_candidate": "F2",
+      "selected_candidate": "F2",
+      "outcome": "ACCEPT_WITH_MECHANICAL_FAILURE",
+      "mechanical_status": "FAIL",
+      "failed_gates": [
+        "bicr",
+        "physical_floating_count"
+      ]
+    }
+  ]
+}

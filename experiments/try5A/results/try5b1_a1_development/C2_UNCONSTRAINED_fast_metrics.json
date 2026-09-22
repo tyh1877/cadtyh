@@ -1,0 +1,59 @@
+{
+  "baseline_fast": {
+    "source": "RECONSTRUCTED_FROM_CURRENT_EXACT_NONDIRTY_ROWS",
+    "wall_seconds": 0.0,
+    "cache_hit_rate": null
+  },
+  "conditions": [
+    {
+      "total_pair_poses": 5280,
+      "culled_pair_poses": 288,
+      "reused_pair_poses": 2688,
+      "broad_phase_candidates": 823,
+      "mesh_candidates": 681,
+      "exact_calls": 681,
+      "bvh_node_tests": 26486,
+      "candidate_triangle_leaf_pairs": 58541,
+      "wall_seconds": 0.9238070999854244,
+      "cache_hit_rate": 0.9976128472222222,
+      "bvh_build_seconds": 0.13529339991509914,
+      "broad_phase_seconds": 0.22154929995303974,
+      "mesh_narrow_phase_seconds": 0.6930807994795032,
+      "exact_seconds": 0.0003686001291498542,
+      "condition": "F1",
+      "invalidated_links": [
+        "L03",
+        "L04",
+        "L07"
+      ],
+      "selective_exact_local_audit": true,
+      "selective_exact_rows": 2592,
+      "final_audit_mode": false
+    },
+    {
+      "total_pair_poses": 5280,
+      "culled_pair_poses": 288,
+      "reused_pair_poses": 2688,
+      "broad_phase_candidates": 827,
+      "mesh_candidates": 686,
+      "exact_calls": 686,
+      "bvh_node_tests": 28122,
+      "candidate_triangle_leaf_pairs": 61648,
+      "wall_seconds": 1.0764962999965064,
+      "cache_hit_rate": 0.9976128472222222,
+      "bvh_build_seconds": 0.20987009996315464,
+      "broad_phase_seconds": 0.3005270989960991,
+      "mesh_narrow_phase_seconds": 0.7661798011977226,
+      "exact_seconds": 0.00042059971019625664,
+      "condition": "F2",
+      "invalidated_links": [
+        "L03",
+        "L04",
+        "L07"
+      ],
+      "selective_exact_local_audit": true,
+      "selective_exact_rows": 2592,
+      "final_audit_mode": true
+    }
+  ]
+}

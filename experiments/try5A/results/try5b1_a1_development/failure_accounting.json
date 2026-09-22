@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "condition": "C1_CONSTRAINED",
+      "requested_cases": 96,
+      "completed_cases": 96,
+      "failed_cases": 0,
+      "mechanically_invalid_cases": 8
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "requested_cases": 96,
+      "completed_cases": 96,
+      "failed_cases": 0,
+      "mechanically_invalid_cases": 8
+    }
+  ],
+  "execution_failures": []
+}

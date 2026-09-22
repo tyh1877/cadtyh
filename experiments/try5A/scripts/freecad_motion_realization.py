@@ -38,7 +38,21 @@ def union(shapes):
 
 def compound(shapes): return Part.makeCompound(shapes)
 def common_volume(a,b):
-    value=a.common(b); return 0.0 if value.isNull() else float(value.Volume)
+    try:
+        value=a.common(b)
+        return 0.0 if value.isNull() else float(value.Volume)
+    except ValueError:
+        # OCC can reject a direct common() between valid multi-solid compounds.
+        # Evaluate the same exact B-Rep predicate over every solid pair instead
+        # of dropping the case or treating an evaluator exception as clearance.
+        solids_a=list(a.Solids); solids_b=list(b.Solids)
+        if not solids_a or not solids_b: raise
+        total=0.0
+        for solid_a in solids_a:
+            for solid_b in solids_b:
+                value=solid_a.common(solid_b)
+                if not value.isNull(): total+=float(value.Volume)
+        return total
 
 
 def bounds(shape):

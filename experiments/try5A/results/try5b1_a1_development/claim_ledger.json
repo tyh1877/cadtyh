@@ -1,0 +1,40 @@
+{
+  "claims": [
+    {
+      "claim_id": "condition_parity",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "development_summary.json",
+      "field": "condition_parity",
+      "operator": "eq",
+      "expected": "PASS"
+    },
+    {
+      "claim_id": "raw_proposal_parity",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "development_summary.json",
+      "field": "raw_proposal_parity",
+      "operator": "eq",
+      "expected": "PASS"
+    },
+    {
+      "claim_id": "holdout_not_serialized",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "development_summary.json",
+      "field": "holdout_cases_serialized_to_generator",
+      "operator": "eq",
+      "expected": 0
+    },
+    {
+      "claim_id": "development_denominator",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "development_summary.json",
+      "field": "development_case_count",
+      "operator": "eq",
+      "expected": 96
+    }
+  ]
+}

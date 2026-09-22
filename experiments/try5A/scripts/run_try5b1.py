@@ -17,7 +17,7 @@ ROOT=Path(__file__).resolve().parents[3]; HERE=ROOT/"experiments/try5A"
 RESULTS=HERE/"results/try5b1"; ARTIFACTS=HERE/"artifacts/try5b1"; BASE=HERE/"results/try5a5"
 sys.path.insert(0,str(HERE/"scripts")); sys.path.insert(0,str(HERE/"evaluation")); sys.path.insert(0,str(HERE/"evaluation/mechanical"))
 from fast_evaluator import GeometryCache,MechanicalEvaluator
-from experiment_governance import CandidateController,audit_condition_parity,canonical_hash,split_cases
+from experiment_governance import CandidateController,audit_condition_parity,canonical_hash,canonical_json,split_cases
 from freecad_runtime import python_runtime
 from kinematics import canonical_q,fk,parse,rpy
 from interface_instance_geometry import IMAGE_FIRST_SPECS, INSTANCE_SPECS
@@ -76,6 +76,90 @@ def governance_dry_run(config_path):
     output_root=HERE/"protocol"; dump(output_root/"try5b1_a1_case_split.json",split); dump(output_root/"try5b1_a1_condition_parity.json",parity)
     payload={"status":"PASS" if parity["status"]=="PASS" and expected else "FAIL","config":str(Path(config_path).relative_to(ROOT)).replace("\\","/"),"config_canonical_sha256":canonical_hash(config),"split_sha256":split["split_sha256"],"parity_status":parity["status"],"runtime_policy_decisions":decisions,"freecad_invoked":False,"gt_accessed":False}
     dump(output_root/"try5b1_a1_governance_dry_run.json",payload); print(json.dumps(payload,indent=2)); return 0 if payload["status"]=="PASS" else 1
+
+
+def _repo_relative(path):
+    return str(Path(path).resolve().relative_to(ROOT)).replace("\\","/")
+
+
+def _candidate_metrics(worker,condition,frozen_gcfr):
+    builds=[item for item in worker["builds"] if item["condition"]==condition and item["link_id"] in PILOTS]; exact=next(item for item in worker["mechanical_exact"] if item["condition"]==condition)
+    features={lid:set(INVENTORIES[condition][lid]["predicted_features"]) for lid in PILOTS}; unsupported=sum(len(set(item["features"])-features[item["link_id"]]) for item in builds)
+    artifact_paths=[item["artifact"]["fcstd"] for item in builds]; separate_artifacts=len(set(artifact_paths))==len(builds)
+    return {
+        "artifact_valid":all(item["group_valid"] and all(Path(path).is_file() for path in item["artifact"].values() if isinstance(path,str)) for item in builds),
+        "bicr":sum(item["attachment_valid"] for item in builds)/max(1,len(builds)),
+        "physical_floating_count":sum(item["solid_count"]!=1 for item in builds),
+        "forbidden_fusion_count":0 if separate_artifacts else len(builds)-len(set(artifact_paths)),
+        "virtual_solid_count":int("L11" in worker["physical_links"]),
+        "meaningless_patch_count":unsupported,
+        "relevant_jr3":min(item["jr3"] for item in exact["per_joint"]),
+        "gcfr":exact["gcfr"],
+        "gcfr_regression":frozen_gcfr-exact["gcfr"],
+        "configuration_count":exact["configuration_count"],
+        "valid_configurations":exact["valid_configs"],
+    }
+
+
+def _raw_proposal_parity(workers):
+    reference={}
+    rows=[]
+    for condition_name,worker in workers.items():
+        for build in worker["builds"]:
+            if build["condition"] not in ("F1","F2") or build["link_id"] not in PILOTS: continue
+            key=build["condition"]+"/"+build["link_id"]; signature=build["raw_body_signature"]
+            if key not in reference: reference[key]=signature
+            rows.append({"policy_condition":condition_name,"refinement_condition":build["condition"],"link_id":build["link_id"],"raw_body_signature":signature,"matches_reference":signature==reference[key]})
+    return {"status":"PASS" if all(row["matches_reference"] for row in rows) else "FAIL","records":rows,"reference_sha256":canonical_hash(reference)}
+
+
+def _filter_per_joint(per, fractions):
+    allowed={round(float(value),8) for value in fractions}
+    return {joint:[item for item in rows if round(float(item["active_fraction"]),8) in allowed] for joint,rows in per.items()}
+
+
+def run_mechanical_ablation_development(config_path,result_dir=None,artifact_dir=None):
+    config_path=Path(config_path).resolve(); config=load(config_path); parity=audit_condition_parity(config)
+    if parity["status"]!="PASS": raise RuntimeError("condition parity failed")
+    coupled_all,per_all=configurations(); split=split_cases([item["config_id"] for item in coupled_all],config["shared"]["split"]); development_ids=set(split["development"]["case_ids"]); holdout_ids=set(split["holdout"]["case_ids"])
+    coupled=[item for item in coupled_all if item["config_id"] in development_ids]; per=_filter_per_joint(per_all,config["shared"]["per_joint_split"]["development_fractions"]); canonical=load(BASE/"motion_sequence.json")["configurations"][0]
+    result_root=Path(result_dir).resolve() if result_dir else HERE/"results/try5b1_a1_development"; artifact_root=Path(artifact_dir).resolve() if artifact_dir else HERE/"artifacts/try5b1_a1_development"; result_root.mkdir(parents=True,exist_ok=True); artifact_root.mkdir(parents=True,exist_ok=True)
+    dump(result_root/"experiment_config_snapshot.json",config); dump(result_root/"case_split.json",split); dump(result_root/"condition_parity.json",parity); dump(result_root/"holdout_evaluation_log.json",{"events":[]})
+    workers={}; generator_jobs={}; failure_rows=[]; fast_results={}
+    for condition_name,condition in config["conditions"].items():
+        condition_artifacts=artifact_root/condition_name; job={"experiment_id":config["experiment_id"],"phase":"development","policy_condition":condition_name,"mechanical_policy":condition["mechanical_policy"],"pilots":{lid:{candidate:PILOTS[lid][candidate] for candidate in ("F1","F2")} for lid in PILOTS},"coupled":coupled,"per_joint":per,"relevant_joints":[joint for joint in ("J02","J03") if joint in per],"canonical_config":canonical,"cad_root":str(condition_artifacts/"cad"),"assembly_root":str(condition_artifacts/"assemblies"),"output":str(condition_artifacts/"freecad_result.json"),"reuse_exact":False}
+        serialized=canonical_json(job); leaked=sorted(holdout_ids & {item["config_id"] for item in job["coupled"]})
+        if leaked: raise RuntimeError("holdout IDs leaked into generator job")
+        job_path=condition_artifacts/"generator_job.json"; previous_job=load(job_path) if job_path.is_file() else None; reusable=os.environ.get("TRY5B1_A1_REUSE_DEVELOPMENT")=="1" and Path(job["output"]).is_file() and previous_job is not None and canonical_hash(previous_job)==canonical_hash(job)
+        dump(job_path,job); generator_jobs[condition_name]={"path":_repo_relative(job_path),"sha256":hashlib.sha256(serialized.encode()).hexdigest(),"serialized_holdout_id_count":len(leaked),"reused_verified_worker_output":reusable}
+        if not reusable:
+            process=subprocess.run([python_runtime(),str(HERE/"evaluation/mechanical/freecad_link_refinement.py"),str(job_path)],cwd=ROOT,capture_output=True,text=True,timeout=3600); (condition_artifacts/"freecad_stdout.txt").write_text(process.stdout,encoding="utf-8"); (condition_artifacts/"freecad_stderr.txt").write_text(process.stderr,encoding="utf-8")
+            if process.returncode:
+                failure_rows.append({"condition":condition_name,"stage":"freecad_worker","error":(process.stderr or process.stdout)[-2000:]}); raise RuntimeError(condition_name+": "+(process.stderr or process.stdout))
+        workers[condition_name]=load(job["output"]); fast_results[condition_name]=fast_audits(workers[condition_name],coupled,condition_artifacts,result_root/(condition_name+"_fast_metrics.json"))
+    proposal_parity=_raw_proposal_parity(workers); dump(result_root/"proposal_parity.json",proposal_parity)
+    frozen_gcfr=load(BASE/"round3_verified_result.json")["coupled"]["gcfr"]; conditions_summary={}; candidate_events=[]; selected={}
+    for condition_name,condition in config["conditions"].items():
+        controller=CandidateController(condition_name,condition["mechanical_policy"],config["shared"]["mechanical_thresholds"]); previous="F0_FROZEN"
+        for candidate in ("F1","F2"):
+            metrics=_candidate_metrics(workers[condition_name],candidate,frozen_gcfr); dump(result_root/condition_name/(candidate+"_mechanical_metrics.json"),metrics); decision=controller.decide(previous,candidate,metrics); candidate_events.append(decision.as_dict()); previous=decision.selected_candidate or previous
+        selected[condition_name]=previous; conditions_summary[condition_name]={"selected_candidate":previous,"F1":_candidate_metrics(workers[condition_name],"F1",frozen_gcfr),"F2":_candidate_metrics(workers[condition_name],"F2",frozen_gcfr),"fast":fast_results[condition_name]}
+    dump(result_root/"candidate_history.json",{"events":candidate_events}); dump(result_root/"selected_candidates.json",selected)
+    candidate_manifest={"experiment_id":config["experiment_id"],"phase":"development_frozen_candidates","frozen_nonpilot_root":"experiments/try5A/artifacts/try5a5/round3_verified/links","interface_contracts":config["shared"]["frozen_interface_contracts"],"conditions":{}}
+    for condition_name,candidate in selected.items():
+        builds={item["link_id"]:item for item in workers[condition_name]["builds"] if item["condition"]==candidate and item["link_id"] in PILOTS}
+        candidate_manifest["conditions"][condition_name]={"selected_candidate":candidate,"pilot_fcstd":{lid:_repo_relative(builds[lid]["artifact"]["fcstd"]) for lid in PILOTS},"pilot_fcstd_sha256":{lid:sha(builds[lid]["artifact"]["fcstd"]) for lid in PILOTS},"pilot_stl":{lid:_repo_relative(builds[lid]["artifact"]["stl"]) for lid in PILOTS},"pilot_stl_sha256":{lid:sha(builds[lid]["artifact"]["stl"]) for lid in PILOTS},"mechanical_policy":config["conditions"][condition_name]["mechanical_policy"]}
+    candidate_manifest["candidate_manifest_sha256"]=canonical_hash(candidate_manifest); dump(result_root/"candidate_manifest.json",candidate_manifest)
+    failure_accounting={"conditions":[{"condition":name,"requested_cases":len(coupled),"completed_cases":next(item for item in workers[name]["mechanical_exact"] if item["condition"]==selected[name])["configuration_count"],"failed_cases":0,"mechanically_invalid_cases":next(item for item in workers[name]["mechanical_exact"] if item["condition"]==selected[name])["configuration_count"]-next(item for item in workers[name]["mechanical_exact"] if item["condition"]==selected[name])["valid_configs"]} for name in config["conditions"]],"execution_failures":failure_rows}; dump(result_root/"failure_accounting.json",failure_accounting)
+    summary={"phase":"development","status":"DEVELOPMENT_COMPLETE_PRE_HOLDOUT","development_case_count":len(coupled),"holdout_case_count":len(holdout_ids),"holdout_cases_serialized_to_generator":sum(item["serialized_holdout_id_count"] for item in generator_jobs.values()),"condition_parity":parity["status"],"raw_proposal_parity":proposal_parity["status"],"conditions":conditions_summary,"selected_candidates":selected}; dump(result_root/"development_summary.json",summary)
+    claims=[
+        {"claim_id":"condition_parity","hard":True,"evidence_type":"computed","artifact":"development_summary.json","field":"condition_parity","operator":"eq","expected":"PASS"},
+        {"claim_id":"raw_proposal_parity","hard":True,"evidence_type":"computed","artifact":"development_summary.json","field":"raw_proposal_parity","operator":"eq","expected":"PASS"},
+        {"claim_id":"holdout_not_serialized","hard":True,"evidence_type":"computed","artifact":"development_summary.json","field":"holdout_cases_serialized_to_generator","operator":"eq","expected":0},
+        {"claim_id":"development_denominator","hard":True,"evidence_type":"computed","artifact":"development_summary.json","field":"development_case_count","operator":"eq","expected":config["shared"]["split"]["development_count"]},
+    ]; dump(result_root/"claim_ledger.json",{"claims":claims})
+    manifest={"phase":"development","experiment_id":config["experiment_id"],"config_path":_repo_relative(config_path),"config_file_sha256":sha(config_path),"config_canonical_sha256":canonical_hash(config),"case_split_sha256":split["split_sha256"],"candidate_manifest_sha256":candidate_manifest["candidate_manifest_sha256"],"runner_sha256":sha(Path(__file__)),"worker_sha256":sha(HERE/"evaluation/mechanical/freecad_link_refinement.py"),"generator_jobs":generator_jobs,"gt_accessed":False,"holdout_accessed":False}; dump(result_root/"manifest.json",manifest)
+    print(json.dumps({"status":summary["status"],"result_dir":str(result_root),"development_cases":len(coupled),"holdout_accessed":False,"selected_candidates":selected},indent=2)); return 0
 
 def configurations():
     links,joints=parse(HERE/"inputs/sanitized_urdf/px100_sanitized.urdf"); coupled=load(BASE/"coupled_configurations.json")["configurations"]; per={}
@@ -220,17 +304,24 @@ def semantic_metrics(worker):
             rows.append({"link_id":lid,"condition":condition,"semantic_precision":sp,"semantic_recall":sr,"semantic_f1":sf,"relation_precision":rp,"relation_recall":rr,"relation_f1":rf,"body_family_correct":int(family==gt["family"]),"unsupported_feature_count":len(set(pred)-set(gt["required"])-set(gt["optional"])),"meaningless_geometry_count":0})
     rows_csv(RESULTS/"semantic_topology_metrics.csv",rows); return rows
 
-def fast_audits(worker,coupled):
-    baseline=load(HERE/"artifacts/try5b0/exact_reference.json"); contracts=load(BASE/"motion_interface_contracts.json"); physical=baseline["physical_links"]
-    base_cache=GeometryCache(baseline["cache"]); base_eval=MechanicalEvaluator(base_cache,contracts,baseline["coupled"]["rows"],1.0); prior,base_stats=base_eval.evaluate(coupled,physical)
+def fast_audits(worker,coupled,artifact_root=ARTIFACTS,output_path=None):
+    exact_reference=HERE/"artifacts/try5b0/exact_reference.json"; contracts=load(BASE/"motion_interface_contracts.json")
+    if exact_reference.is_file():
+        baseline=load(exact_reference); physical=baseline["physical_links"]; base_cache=GeometryCache(baseline["cache"]); base_eval=MechanicalEvaluator(base_cache,contracts,baseline["coupled"]["rows"],1.0); prior,base_stats=base_eval.evaluate(coupled,physical)
+        baseline_records=baseline["cache"]
+    else:
+        classification=load(BASE/"link_realization_classification.json"); physical=[item["link_id"] for item in classification if item["realization_type"]!="virtual_frame"]; cache_root=HERE/"artifacts/try5b0/geometry_cache"
+        baseline_records={lid:{"revision_id":"frozen_try5a5","geometry_hash":"frozen_try5a5","tessellation_mm":.35,"cache_path":str(cache_root/(lid+".npz"))} for lid in physical}
+        if not all(Path(item["cache_path"]).is_file() for item in baseline_records.values()): raise FileNotFoundError("Try-5B0 geometry cache missing; run run_try5b0.py once")
+        prior=[]; base_stats={"source":"RECONSTRUCTED_FROM_CURRENT_EXACT_NONDIRTY_ROWS","wall_seconds":0.0,"cache_hit_rate":None}
     output=[]
     for audit in worker["mechanical_exact"]:
-        condition=audit["condition"]; records=dict(baseline["cache"])
+        condition=audit["condition"]; records=dict(baseline_records)
         for lid in PILOTS:
-            mesh=trimesh.load(ARTIFACTS/"cad"/condition/lid/"model.stl",force="mesh",process=False); cachepath=ARTIFACTS/"geometry_cache"/condition/(lid+".npz"); cachepath.parent.mkdir(parents=True,exist_ok=True); np.savez_compressed(cachepath,vertices=np.asarray(mesh.vertices),faces=np.asarray(mesh.faces,dtype=np.int32)); revision=sha(ARTIFACTS/"cad"/condition/lid/"model.stl"); records[lid]={**records[lid],"revision_id":revision,"geometry_hash":revision,"cache_path":str(cachepath),"vertices":len(mesh.vertices),"faces":len(mesh.faces)}
-        cache=GeometryCache(records); evaluator=MechanicalEvaluator(cache,contracts,audit["rows"],1.0); fast,stats=evaluator.evaluate(coupled,physical,dirty_links=set(PILOTS),prior={ (x["config_id"],x["link_a"],x["link_b"]):x for x in prior})
+            mesh=trimesh.load(artifact_root/"cad"/condition/lid/"model.stl",force="mesh",process=False); cachepath=artifact_root/"geometry_cache"/condition/(lid+".npz"); cachepath.parent.mkdir(parents=True,exist_ok=True); np.savez_compressed(cachepath,vertices=np.asarray(mesh.vertices),faces=np.asarray(mesh.faces,dtype=np.int32)); revision=sha(artifact_root/"cad"/condition/lid/"model.stl"); records[lid]={**records[lid],"revision_id":revision,"geometry_hash":revision,"cache_path":str(cachepath),"vertices":len(mesh.vertices),"faces":len(mesh.faces)}
+        cache=GeometryCache(records); evaluator=MechanicalEvaluator(cache,contracts,audit["rows"],1.0); reference_prior=prior or audit["rows"]; fast,stats=evaluator.evaluate(coupled,physical,dirty_links=set(PILOTS),prior={ (x["config_id"],x["link_a"],x["link_b"]):x for x in reference_prior})
         stats.update({"condition":condition,"invalidated_links":list(PILOTS),"selective_exact_local_audit":True,"selective_exact_rows":sum(x["link_a"] in PILOTS or x["link_b"] in PILOTS for x in audit["rows"]),"final_audit_mode":condition=="F2"}); output.append(stats)
-    dump(RESULTS/"fast_mechanical_metrics.json",{"baseline_fast":base_stats,"conditions":output}); return output
+    dump(output_path or RESULTS/"fast_mechanical_metrics.json",{"baseline_fast":base_stats,"conditions":output}); return output
 
 def report(geometry,semantic,worker,fast,repairs):
     gm={(x["condition"],x["link_id"]):x for x in geometry}; sm={(x["condition"],x["link_id"]):x for x in semantic}; mech={x["condition"]:x for x in worker["mechanical_exact"]}
@@ -389,5 +480,5 @@ def run_knowledge_ablation():
     print(json.dumps({"status":gates["status"],"results":str(result_root),"F2_assembly":workers["F2"]["assembly"]["fcstd"]},indent=2)); return 0 if gates["status"]=="PASS" else 1
 
 if __name__=="__main__":
-    parser=argparse.ArgumentParser(); parser.add_argument("--full-repair",action="store_true"); parser.add_argument("--knowledge-ablation",action="store_true"); parser.add_argument("--governance-dry-run",metavar="CONFIG"); args=parser.parse_args()
-    raise SystemExit(governance_dry_run(args.governance_dry_run) if args.governance_dry_run else (run_knowledge_ablation() if args.knowledge_ablation else (run_full_repair() if args.full_repair else main())))
+    parser=argparse.ArgumentParser(); parser.add_argument("--full-repair",action="store_true"); parser.add_argument("--knowledge-ablation",action="store_true"); parser.add_argument("--governance-dry-run",metavar="CONFIG"); parser.add_argument("--mechanical-ablation-development",metavar="CONFIG"); parser.add_argument("--result-dir"); parser.add_argument("--artifact-dir"); args=parser.parse_args()
+    raise SystemExit(run_mechanical_ablation_development(args.mechanical_ablation_development,args.result_dir,args.artifact_dir) if args.mechanical_ablation_development else (governance_dry_run(args.governance_dry_run) if args.governance_dry_run else (run_knowledge_ablation() if args.knowledge_ablation else (run_full_repair() if args.full_repair else main()))))
