@@ -1,0 +1,290 @@
+{
+  "rows": [
+    {
+      "link": "L03",
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "bicr": 1.0,
+      "attachment_valid": true,
+      "connected_solid_count": 1,
+      "jr3": 1.0,
+      "jr3_detail": [
+        {
+          "joint_id": "J02",
+          "sample_count": 3,
+          "jr3": 1.0,
+          "all_samples_pass": true,
+          "collision_rows": []
+        },
+        {
+          "joint_id": "J03",
+          "sample_count": 3,
+          "jr3": 1.0,
+          "all_samples_pass": true,
+          "collision_rows": []
+        }
+      ],
+      "gcfr": 0.9166666666666666,
+      "collision_events": 31,
+      "intersection_volume_mm3": 12006.439266016707,
+      "failed_configuration_count": 8,
+      "failed_configuration_ids": [
+        "sobol_011",
+        "sobol_014",
+        "sobol_018",
+        "sobol_021",
+        "sobol_047",
+        "sobol_077",
+        "sobol_095",
+        "sobol_107"
+      ],
+      "final_voxel_iou": 0.2587825560266505,
+      "final_silhouette_iou": 0.6125223906279531,
+      "final_normalized_chamfer": 0.05441609284735502,
+      "final_normalized_hd95": 0.2141696444642864,
+      "final_bbox_error_mm": 16.409633291785045,
+      "final_major_dimension_error_mm": 11.790931463241577,
+      "body_only_diagnostic": {
+        "condition": "S1_SCAFFOLD_PRESERVED",
+        "link_id": "L03",
+        "scope": "refined_body_only",
+        "voxel_iou": 0.15086206896551724,
+        "normalized_chamfer": 0.07771902299918554,
+        "normalized_hd95": 0.2865202605015605,
+        "silhouette_iou_mean": 0.35276469562183843,
+        "bbox_error_mm": 40.71426069143517,
+        "major_dimension_error_mm": 18.204423189163208
+      }
+    },
+    {
+      "link": "L03",
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "bicr": 0.0,
+      "attachment_valid": false,
+      "connected_solid_count": 3,
+      "jr3": 1.0,
+      "jr3_detail": [
+        {
+          "joint_id": "J02",
+          "sample_count": 3,
+          "jr3": 1.0,
+          "all_samples_pass": true,
+          "collision_rows": []
+        },
+        {
+          "joint_id": "J03",
+          "sample_count": 3,
+          "jr3": 1.0,
+          "all_samples_pass": true,
+          "collision_rows": []
+        }
+      ],
+      "gcfr": 0.9166666666666666,
+      "collision_events": 31,
+      "intersection_volume_mm3": 12006.439266016707,
+      "failed_configuration_count": 8,
+      "failed_configuration_ids": [
+        "sobol_011",
+        "sobol_014",
+        "sobol_018",
+        "sobol_021",
+        "sobol_047",
+        "sobol_077",
+        "sobol_095",
+        "sobol_107"
+      ],
+      "final_voxel_iou": 0.20717009916094584,
+      "final_silhouette_iou": 0.553545100210627,
+      "final_normalized_chamfer": 0.05592767787037357,
+      "final_normalized_hd95": 0.2311149337753425,
+      "final_bbox_error_mm": 16.407163823319063,
+      "final_major_dimension_error_mm": 11.787494421005249,
+      "body_only_diagnostic": {
+        "condition": "S0_SCAFFOLD_REMOVED",
+        "link_id": "L03",
+        "scope": "refined_body_only",
+        "voxel_iou": 0.15086206896551724,
+        "normalized_chamfer": 0.07771902299918554,
+        "normalized_hd95": 0.2865202605015605,
+        "silhouette_iou_mean": 0.35276469562183843,
+        "bbox_error_mm": 40.71426069143517,
+        "major_dimension_error_mm": 18.204423189163208
+      }
+    },
+    {
+      "link": "L04",
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "bicr": 1.0,
+      "attachment_valid": true,
+      "connected_solid_count": 1,
+      "jr3": 1.0,
+      "jr3_detail": [
+        {
+          "joint_id": "J03",
+          "sample_count": 3,
+          "jr3": 1.0,
+          "all_samples_pass": true,
+          "collision_rows": []
+        }
+      ],
+      "gcfr": 0.9166666666666666,
+      "collision_events": 31,
+      "intersection_volume_mm3": 14953.638728307726,
+      "failed_configuration_count": 8,
+      "failed_configuration_ids": [
+        "sobol_011",
+        "sobol_014",
+        "sobol_018",
+        "sobol_021",
+        "sobol_047",
+        "sobol_077",
+        "sobol_095",
+        "sobol_107"
+      ],
+      "final_voxel_iou": 0.09487005265839986,
+      "final_silhouette_iou": 0.32006296932503525,
+      "final_normalized_chamfer": 0.12596580592973639,
+      "final_normalized_hd95": 0.2653265407492469,
+      "final_bbox_error_mm": 34.318313997351524,
+      "final_major_dimension_error_mm": 10.047220468521118,
+      "body_only_diagnostic": {
+        "condition": "S1_SCAFFOLD_PRESERVED",
+        "link_id": "L04",
+        "scope": "refined_body_only",
+        "voxel_iou": 0.0894394490147312,
+        "normalized_chamfer": 0.119873261919149,
+        "normalized_hd95": 0.2651313743575124,
+        "silhouette_iou_mean": 0.2554215536535931,
+        "bbox_error_mm": 42.36489932846211,
+        "major_dimension_error_mm": 15.249205350875854
+      }
+    },
+    {
+      "link": "L04",
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "bicr": 0.0,
+      "attachment_valid": false,
+      "connected_solid_count": 3,
+      "jr3": 1.0,
+      "jr3_detail": [
+        {
+          "joint_id": "J03",
+          "sample_count": 3,
+          "jr3": 1.0,
+          "all_samples_pass": true,
+          "collision_rows": []
+        }
+      ],
+      "gcfr": 0.9166666666666666,
+      "collision_events": 31,
+      "intersection_volume_mm3": 13207.814630559984,
+      "failed_configuration_count": 8,
+      "failed_configuration_ids": [
+        "sobol_011",
+        "sobol_014",
+        "sobol_018",
+        "sobol_021",
+        "sobol_047",
+        "sobol_077",
+        "sobol_095",
+        "sobol_107"
+      ],
+      "final_voxel_iou": 0.08310603477667917,
+      "final_silhouette_iou": 0.2975991333341789,
+      "final_normalized_chamfer": 0.12536107408352617,
+      "final_normalized_hd95": 0.2652094435916571,
+      "final_bbox_error_mm": 34.318313997351524,
+      "final_major_dimension_error_mm": 10.047220468521118,
+      "body_only_diagnostic": {
+        "condition": "S0_SCAFFOLD_REMOVED",
+        "link_id": "L04",
+        "scope": "refined_body_only",
+        "voxel_iou": 0.0894394490147312,
+        "normalized_chamfer": 0.119873261919149,
+        "normalized_hd95": 0.2651313743575124,
+        "silhouette_iou_mean": 0.2554215536535931,
+        "bbox_error_mm": 42.36489932846211,
+        "major_dimension_error_mm": 15.249205350875854
+      }
+    },
+    {
+      "link": "L07",
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "bicr": 1.0,
+      "attachment_valid": true,
+      "connected_solid_count": 1,
+      "jr3": null,
+      "jr3_detail": [],
+      "gcfr": 0.9166666666666666,
+      "collision_events": 33,
+      "intersection_volume_mm3": 12744.66526919801,
+      "failed_configuration_count": 8,
+      "failed_configuration_ids": [
+        "sobol_011",
+        "sobol_014",
+        "sobol_018",
+        "sobol_021",
+        "sobol_047",
+        "sobol_077",
+        "sobol_095",
+        "sobol_107"
+      ],
+      "final_voxel_iou": 0.10238179879132599,
+      "final_silhouette_iou": 0.2683546787526973,
+      "final_normalized_chamfer": 0.06029585546811669,
+      "final_normalized_hd95": 0.2221337037542137,
+      "final_bbox_error_mm": 65.74572886854368,
+      "final_major_dimension_error_mm": 55.488182067871094,
+      "body_only_diagnostic": {
+        "condition": "S1_SCAFFOLD_PRESERVED",
+        "link_id": "L07",
+        "scope": "refined_body_only",
+        "voxel_iou": 0.07315288953913679,
+        "normalized_chamfer": 0.06164603956337361,
+        "normalized_hd95": 0.22364371257037427,
+        "silhouette_iou_mean": 0.23992066294134937,
+        "bbox_error_mm": 68.1505753863547,
+        "major_dimension_error_mm": 55.488182067871094
+      }
+    },
+    {
+      "link": "L07",
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "bicr": 0.0,
+      "attachment_valid": false,
+      "connected_solid_count": 3,
+      "jr3": null,
+      "jr3_detail": [],
+      "gcfr": 0.9166666666666666,
+      "collision_events": 31,
+      "intersection_volume_mm3": 12517.942486550517,
+      "failed_configuration_count": 8,
+      "failed_configuration_ids": [
+        "sobol_011",
+        "sobol_014",
+        "sobol_018",
+        "sobol_021",
+        "sobol_047",
+        "sobol_077",
+        "sobol_095",
+        "sobol_107"
+      ],
+      "final_voxel_iou": 0.09270571325907294,
+      "final_silhouette_iou": 0.264356559005395,
+      "final_normalized_chamfer": 0.05954814878025526,
+      "final_normalized_hd95": 0.22217486141773254,
+      "final_bbox_error_mm": 65.74572886854368,
+      "final_major_dimension_error_mm": 55.488182067871094,
+      "body_only_diagnostic": {
+        "condition": "S0_SCAFFOLD_REMOVED",
+        "link_id": "L07",
+        "scope": "refined_body_only",
+        "voxel_iou": 0.07315288953913679,
+        "normalized_chamfer": 0.06164603956337361,
+        "normalized_hd95": 0.22364371257037427,
+        "silhouette_iou_mean": 0.23992066294134937,
+        "bbox_error_mm": 68.1505753863547,
+        "major_dimension_error_mm": 55.488182067871094
+      }
+    }
+  ]
+}

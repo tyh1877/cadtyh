@@ -1,0 +1,73 @@
+{
+  "schema_version": "robotcad_scaffold_ablation_validation_v1",
+  "status": "PASS",
+  "checks": {
+    "config_snapshot_matches": true,
+    "config_hash_matches_manifest": true,
+    "single_variable_parity": true,
+    "holdout_lock_matches_protocol": true,
+    "holdout_locked_and_unaccessed": true,
+    "development_input_only": true,
+    "six_generation_runs_once": true,
+    "six_paired_rows": true,
+    "primary_metrics_complete": true,
+    "motion_metrics_complete": true,
+    "geometry_metrics_complete": true,
+    "denominator_preserved": true,
+    "protection_trace_complete": true,
+    "declarative_metrics_absent": true,
+    "claim_ledger_pass": true,
+    "runner_did_not_self_validate": true
+  },
+  "failed_checks": [],
+  "claim_audit": {
+    "status": "PASS",
+    "claims": [
+      {
+        "claim_id": "six_runs_complete",
+        "hard": true,
+        "evidence_type": "computed",
+        "direct_computed_evidence": true,
+        "artifact": "failure_accounting.json",
+        "artifact_sha256": "8311ae054e1e5110e95affb4a573f500ef90d9222358334c3070ceecb9b10bd6",
+        "field": "generation.completed_runs",
+        "actual": 6,
+        "operator": "eq",
+        "expected": 6,
+        "error": null,
+        "status": "PASS"
+      },
+      {
+        "claim_id": "denominator_preserved",
+        "hard": true,
+        "evidence_type": "computed",
+        "direct_computed_evidence": true,
+        "artifact": "failure_accounting.json",
+        "artifact_sha256": "8311ae054e1e5110e95affb4a573f500ef90d9222358334c3070ceecb9b10bd6",
+        "field": "evaluation.denominator_preserved",
+        "actual": true,
+        "operator": "eq",
+        "expected": true,
+        "error": null,
+        "status": "PASS"
+      },
+      {
+        "claim_id": "holdout_unaccessed",
+        "hard": true,
+        "evidence_type": "computed",
+        "direct_computed_evidence": true,
+        "artifact": "failure_accounting.json",
+        "artifact_sha256": "8311ae054e1e5110e95affb4a573f500ef90d9222358334c3070ceecb9b10bd6",
+        "field": "formal_holdout.accessed",
+        "actual": false,
+        "operator": "eq",
+        "expected": false,
+        "error": null,
+        "status": "PASS"
+      }
+    ],
+    "hard_claims_with_noncomputed_evidence": []
+  },
+  "formal_holdout_accessed": false,
+  "missing_required_files": []
+}

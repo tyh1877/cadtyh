@@ -1,0 +1,100 @@
+{
+  "links": [
+    {
+      "link_id": "L03",
+      "raw_body_signature_equal": true,
+      "body_only_stl_sha256": {
+        "S1": "be889499c4abbd660dfd437730355f665ba60c39926d6314763467a23ce9b6e4",
+        "S0": "be889499c4abbd660dfd437730355f665ba60c39926d6314763467a23ce9b6e4"
+      },
+      "body_only_equal": true,
+      "final_stl_sha256": {
+        "S1": "32802fbc205c388bd5999243b8b0efe0290af13a2ecd2a046054c14f01d3274f",
+        "S0": "4821784be312b969ac4c42067317189d243da76833e56ea639f04d8e65fb2426"
+      },
+      "final_equal": false,
+      "final_volume_mm3": {
+        "S1": 30241.179761913507,
+        "S0": 27087.958410685424
+      },
+      "scaffold_volume_delta_mm3": 3153.221351228083,
+      "S1_execution_trace": {
+        "protected_interface_cuts": "EXECUTED",
+        "distal_clearance_cut": "EXECUTED",
+        "frozen_scaffold_preservation": "EXECUTED",
+        "auto_attachment_closure": "NOT_REACHED_SCAFFOLD_SELECTED"
+      },
+      "S0_execution_trace": {
+        "protected_interface_cuts": "EXECUTED",
+        "distal_clearance_cut": "EXECUTED",
+        "frozen_scaffold_preservation": "SKIPPED_BY_POLICY",
+        "auto_attachment_closure": "SKIPPED_BY_POLICY"
+      },
+      "only_effective_difference": "frozen_scaffold_preservation_fusion"
+    },
+    {
+      "link_id": "L04",
+      "raw_body_signature_equal": true,
+      "body_only_stl_sha256": {
+        "S1": "02e7bd2fb597e7377baf0e86a0755fbd6d64fa15ea306f6fb33441bbcefa0a86",
+        "S0": "02e7bd2fb597e7377baf0e86a0755fbd6d64fa15ea306f6fb33441bbcefa0a86"
+      },
+      "body_only_equal": true,
+      "final_stl_sha256": {
+        "S1": "846f59f0527460c699aacc97318a405c17a2d14a158cbfd86da34ba1db155904",
+        "S0": "8c37c52c9022f1a2b4c27778b6cadec3f443239e3c1b0174dbc25952d4b20101"
+      },
+      "final_equal": false,
+      "final_volume_mm3": {
+        "S1": 14612.338585653979,
+        "S0": 14028.19520876176
+      },
+      "scaffold_volume_delta_mm3": 584.1433768922197,
+      "S1_execution_trace": {
+        "protected_interface_cuts": "EXECUTED",
+        "distal_clearance_cut": "NOT_APPLICABLE",
+        "frozen_scaffold_preservation": "EXECUTED",
+        "auto_attachment_closure": "NOT_REACHED_SCAFFOLD_SELECTED"
+      },
+      "S0_execution_trace": {
+        "protected_interface_cuts": "EXECUTED",
+        "distal_clearance_cut": "NOT_APPLICABLE",
+        "frozen_scaffold_preservation": "SKIPPED_BY_POLICY",
+        "auto_attachment_closure": "SKIPPED_BY_POLICY"
+      },
+      "only_effective_difference": "frozen_scaffold_preservation_fusion"
+    },
+    {
+      "link_id": "L07",
+      "raw_body_signature_equal": true,
+      "body_only_stl_sha256": {
+        "S1": "fbc7406d7896835be7d34208ca841dccc71e4776575e64c3e9fc6bdabaa9dd6f",
+        "S0": "fbc7406d7896835be7d34208ca841dccc71e4776575e64c3e9fc6bdabaa9dd6f"
+      },
+      "body_only_equal": true,
+      "final_stl_sha256": {
+        "S1": "e8fa0ef9d304186d7eea95a0115ade4a1f35d3ded306fb2074c739f9b3218fff",
+        "S0": "6ea7437c47e512543bdcbef8f9367d59bb1eddc7fca5b9b1a25b7b7843f97568"
+      },
+      "final_equal": false,
+      "final_volume_mm3": {
+        "S1": 8107.401135222882,
+        "S0": 8017.424320207199
+      },
+      "scaffold_volume_delta_mm3": 89.9768150156824,
+      "S1_execution_trace": {
+        "protected_interface_cuts": "NOT_APPLICABLE",
+        "distal_clearance_cut": "NOT_APPLICABLE",
+        "frozen_scaffold_preservation": "EXECUTED",
+        "auto_attachment_closure": "NOT_REACHED_SCAFFOLD_SELECTED"
+      },
+      "S0_execution_trace": {
+        "protected_interface_cuts": "NOT_APPLICABLE",
+        "distal_clearance_cut": "NOT_APPLICABLE",
+        "frozen_scaffold_preservation": "SKIPPED_BY_POLICY",
+        "auto_attachment_closure": "SKIPPED_BY_POLICY"
+      },
+      "only_effective_difference": "frozen_scaffold_preservation_fusion"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "STARTED_NO_RETRY",
+  "timestamp_utc": "2026-09-22T15:43:28.321916+00:00",
+  "git_commit": "afc527343f40854d926aa8a3d9bc1cb1cff85ddb",
+  "protocol_sha256": "95adf158609a9a2275cbd6f813dd525b8eb7056ac1810e919a875e7f3304a520",
+  "development_input_sha256": "e6a870772d7fe835063acdb7ba8d680ce441dc966a3b7b790fe5391732527a05",
+  "formal_holdout_accessed": false
+}

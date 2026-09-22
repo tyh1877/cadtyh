@@ -1,0 +1,154 @@
+{
+  "per_link": [
+    {
+      "link": "L03",
+      "direction": "S1_minus_S0",
+      "bicr": 1.0,
+      "connected_solid_count": -2,
+      "jr3": 0.0,
+      "gcfr": 0.0,
+      "collision_events": 0,
+      "intersection_volume_mm3": 0.0,
+      "final_voxel_iou": 0.051612456865704676,
+      "final_silhouette_iou": 0.058977290417326134,
+      "final_normalized_chamfer": -0.0015115850230185482,
+      "final_normalized_hd95": -0.0169452893110561,
+      "final_bbox_error_mm": 0.002469468465982061,
+      "final_major_dimension_error_mm": 0.003437042236328125
+    },
+    {
+      "link": "L04",
+      "direction": "S1_minus_S0",
+      "bicr": 1.0,
+      "connected_solid_count": -2,
+      "jr3": 0.0,
+      "gcfr": 0.0,
+      "collision_events": 0,
+      "intersection_volume_mm3": 1745.8240977477417,
+      "final_voxel_iou": 0.011764017881720684,
+      "final_silhouette_iou": 0.02246383599085633,
+      "final_normalized_chamfer": 0.0006047318462102103,
+      "final_normalized_hd95": 0.000117097157589785,
+      "final_bbox_error_mm": 0.0,
+      "final_major_dimension_error_mm": 0.0
+    },
+    {
+      "link": "L07",
+      "direction": "S1_minus_S0",
+      "bicr": 1.0,
+      "connected_solid_count": -2,
+      "jr3": null,
+      "gcfr": 0.0,
+      "collision_events": 2,
+      "intersection_volume_mm3": 226.72278264749366,
+      "final_voxel_iou": 0.009676085532253048,
+      "final_silhouette_iou": 0.003998119747302298,
+      "final_normalized_chamfer": 0.0007477066878614283,
+      "final_normalized_hd95": -4.1157663518837095e-05,
+      "final_bbox_error_mm": 0.0,
+      "final_major_dimension_error_mm": 0.0
+    }
+  ],
+  "aggregate_by_condition": {
+    "S1_SCAFFOLD_PRESERVED": {
+      "bicr": {
+        "mean": 1.0,
+        "median": 1.0
+      },
+      "connected_solid_count": {
+        "mean": 1,
+        "median": 1
+      },
+      "jr3": {
+        "mean": 1.0,
+        "median": 1.0
+      },
+      "gcfr": {
+        "mean": 0.9166666666666666,
+        "median": 0.9166666666666666
+      },
+      "collision_events": {
+        "mean": 31.666666666666668,
+        "median": 31
+      },
+      "intersection_volume_mm3": {
+        "mean": 13234.914421174148,
+        "median": 12744.66526919801
+      },
+      "final_voxel_iou": {
+        "mean": 0.15201146915879213,
+        "median": 0.10238179879132599
+      },
+      "final_silhouette_iou": {
+        "mean": 0.4003133462352286,
+        "median": 0.32006296932503525
+      },
+      "final_normalized_chamfer": {
+        "mean": 0.08022591808173603,
+        "median": 0.06029585546811669
+      },
+      "final_normalized_hd95": {
+        "mean": 0.23387662965591566,
+        "median": 0.2221337037542137
+      },
+      "final_bbox_error_mm": {
+        "mean": 38.82455871922675,
+        "median": 34.318313997351524
+      },
+      "final_major_dimension_error_mm": {
+        "mean": 25.775444666544598,
+        "median": 11.790931463241577
+      }
+    },
+    "S0_SCAFFOLD_REMOVED": {
+      "bicr": {
+        "mean": 0.0,
+        "median": 0.0
+      },
+      "connected_solid_count": {
+        "mean": 3,
+        "median": 3
+      },
+      "jr3": {
+        "mean": 1.0,
+        "median": 1.0
+      },
+      "gcfr": {
+        "mean": 0.9166666666666666,
+        "median": 0.9166666666666666
+      },
+      "collision_events": {
+        "mean": 31,
+        "median": 31
+      },
+      "intersection_volume_mm3": {
+        "mean": 12577.398794375737,
+        "median": 12517.942486550517
+      },
+      "final_voxel_iou": {
+        "mean": 0.12766061573223264,
+        "median": 0.09270571325907294
+      },
+      "final_silhouette_iou": {
+        "mean": 0.3718335975167336,
+        "median": 0.2975991333341789
+      },
+      "final_normalized_chamfer": {
+        "mean": 0.080278966911385,
+        "median": 0.05954814878025526
+      },
+      "final_normalized_hd95": {
+        "mean": 0.23949974626157738,
+        "median": 0.2311149337753425
+      },
+      "final_bbox_error_mm": {
+        "mean": 38.82373556307142,
+        "median": 34.318313997351524
+      },
+      "final_major_dimension_error_mm": {
+        "mean": 25.774298985799152,
+        "median": 11.787494421005249
+      }
+    }
+  }
+}

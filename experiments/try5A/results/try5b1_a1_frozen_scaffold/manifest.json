@@ -1,0 +1,32 @@
+{
+  "experiment_id": "try5b1_a1_frozen_scaffold_preservation_ablation",
+  "phase": "FORMAL_DEVELOPMENT_COMPLETE_HOLDOUT_UNACCESSED",
+  "config_path": "experiments/try5A/protocol/try5b1_a1_frozen_scaffold_ablation.json",
+  "config_file_sha256": "95adf158609a9a2275cbd6f813dd525b8eb7056ac1810e919a875e7f3304a520",
+  "config_canonical_sha256": "e6993ae91002d821a058c8f1bb7465f5e98b5817266740d957a6f678d3750f7e",
+  "case_split_sha256": "384200611a91e8966ed443dc906d00e83eeb4420e6ad12ae915b273a5ec52059",
+  "formal_holdout_lock_sha256": "1e98bd92b6e3b5997ad959231df8b02bc5f9747463d7b776f3d244f46a306153",
+  "pre_run_manifest_sha256": "9c3303007a5ac2f62fd1ad7730c55a46eaa5586d6c9e7f05369b97fb8e318920",
+  "runner_sha256": "35f99a79a6625c375b63b4f829ec59f00bfd48697501e22e435d1d8e28c192df",
+  "worker_sha256": "4b302f55b97f08762637d80e0fb1ee5f81be3c6647f394aed6a226b41e79b664",
+  "exact_evaluator_sha256": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec",
+  "geometry_evaluator_sha256": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa",
+  "development_input_sha256": "e6a870772d7fe835063acdb7ba8d680ce441dc966a3b7b790fe5391732527a05",
+  "exact_raw_artifacts": {
+    "L03": {
+      "path": "experiments/try5A/artifacts/try5b1_a1_frozen_scaffold/exact_evaluation/L03/mechanical_raw.json",
+      "sha256": "a87c38a676c902e1d48d666eabd5a326ca1e2e34900c267bf3f11032c080406b"
+    },
+    "L04": {
+      "path": "experiments/try5A/artifacts/try5b1_a1_frozen_scaffold/exact_evaluation/L04/mechanical_raw.json",
+      "sha256": "53d30db29ae490a5e6b78a8ba423ac72f875f4ed65652338663994cdc6d5cd8e"
+    },
+    "L07": {
+      "path": "experiments/try5A/artifacts/try5b1_a1_frozen_scaffold/exact_evaluation/L07/mechanical_raw.json",
+      "sha256": "af9fb19d93ec8e4e44761c65dd4ad573ee9ce438b9006cda99c4e8dc752958e8"
+    }
+  },
+  "geometry_raw_sha256": "26d518361b92e20024580a0e809f8588f0a912b5ffaa7e8bf42607a92596ba51",
+  "formal_holdout_accessed": false,
+  "formal_holdout_evaluation_count": 0
+}

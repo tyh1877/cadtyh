@@ -1,0 +1,42 @@
+{
+  "schema_version": "robotcad_scaffold_ablation_result_summary_v1",
+  "status": "FORMAL_DEVELOPMENT_COMPLETE_HOLDOUT_UNACCESSED",
+  "facts": {
+    "runs_completed": 6,
+    "runs_failed": 0,
+    "retry_count": 0,
+    "cases_per_run": 96,
+    "denominator_preserved": true,
+    "formal_holdout_accessed": false,
+    "S1_bicr_all_links": 1.0,
+    "S0_bicr_all_links": 0.0,
+    "S1_connected_solids_all_links": 1,
+    "S0_connected_solids_all_links": 3,
+    "jr3_delta_on_applicable_links": 0.0,
+    "gcfr_delta_all_links": 0.0,
+    "failed_configuration_ids_equal_across_all_runs": true,
+    "mean_S1_minus_S0": {
+      "collision_events": 0.6666666666666666,
+      "intersection_volume_mm3": 657.5156267984117,
+      "final_voxel_iou": 0.02435085342655947,
+      "final_silhouette_iou": 0.02847974871849492,
+      "final_normalized_chamfer": -0.00005304882964896988,
+      "final_normalized_hd95": -0.005623116605661717
+    },
+    "body_only_metrics_identical_within_each_link_pair": true
+  },
+  "interpretation": [
+    "Frozen scaffold preservation is a stable attachment and connected-solid safeguard on all three pilot links.",
+    "It does not change relevant JR3, GCFR, or the identities of failed development configurations in this matrix.",
+    "It improves final-link voxel IoU and silhouette IoU on all three links, so this development result does not show a simple geometry-versus-attachment trade-off.",
+    "It increases Exact intersection volume for L04 and L07 and adds two collision events for L07, indicating a local collision-cost trade-off despite unchanged GCFR.",
+    "At the current evidence level the scaffold is best described as an engineering safeguard; a broader method-contribution claim requires unaccessed holdout and transfer evidence."
+  ],
+  "not_supported": [
+    "The formal 32-case holdout performance is unknown.",
+    "The result does not establish generalization beyond three Robot-A pilot links.",
+    "The result does not establish absolute body reconstruction accuracy because body-only candidates are scored against full-link GT.",
+    "The result does not support a protected-cut or auto-attachment-closure contribution.",
+    "The result does not prove scaffold preservation universally improves collision metrics."
+  ]
+}

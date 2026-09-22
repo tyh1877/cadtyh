@@ -1,0 +1,31 @@
+{
+  "claims": [
+    {
+      "claim_id": "six_runs_complete",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "failure_accounting.json",
+      "field": "generation.completed_runs",
+      "operator": "eq",
+      "expected": 6
+    },
+    {
+      "claim_id": "denominator_preserved",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "failure_accounting.json",
+      "field": "evaluation.denominator_preserved",
+      "operator": "eq",
+      "expected": true
+    },
+    {
+      "claim_id": "holdout_unaccessed",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "failure_accounting.json",
+      "field": "formal_holdout.accessed",
+      "operator": "eq",
+      "expected": false
+    }
+  ]
+}

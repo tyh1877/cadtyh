@@ -1,0 +1,114 @@
+{
+  "generation": {
+    "requested_runs": 6,
+    "completed_runs": 6,
+    "failed_runs": 0,
+    "retry_count": 0
+  },
+  "evaluation": {
+    "rows": [
+      {
+        "run_id": "L03__S1_SCAFFOLD_PRESERVED",
+        "requested_cases": 96,
+        "completed_cases": 96,
+        "failed_evaluation_cases": 8,
+        "failed_configuration_ids": [
+          "sobol_011",
+          "sobol_014",
+          "sobol_018",
+          "sobol_021",
+          "sobol_047",
+          "sobol_077",
+          "sobol_095",
+          "sobol_107"
+        ]
+      },
+      {
+        "run_id": "L03__S0_SCAFFOLD_REMOVED",
+        "requested_cases": 96,
+        "completed_cases": 96,
+        "failed_evaluation_cases": 8,
+        "failed_configuration_ids": [
+          "sobol_011",
+          "sobol_014",
+          "sobol_018",
+          "sobol_021",
+          "sobol_047",
+          "sobol_077",
+          "sobol_095",
+          "sobol_107"
+        ]
+      },
+      {
+        "run_id": "L04__S1_SCAFFOLD_PRESERVED",
+        "requested_cases": 96,
+        "completed_cases": 96,
+        "failed_evaluation_cases": 8,
+        "failed_configuration_ids": [
+          "sobol_011",
+          "sobol_014",
+          "sobol_018",
+          "sobol_021",
+          "sobol_047",
+          "sobol_077",
+          "sobol_095",
+          "sobol_107"
+        ]
+      },
+      {
+        "run_id": "L04__S0_SCAFFOLD_REMOVED",
+        "requested_cases": 96,
+        "completed_cases": 96,
+        "failed_evaluation_cases": 8,
+        "failed_configuration_ids": [
+          "sobol_011",
+          "sobol_014",
+          "sobol_018",
+          "sobol_021",
+          "sobol_047",
+          "sobol_077",
+          "sobol_095",
+          "sobol_107"
+        ]
+      },
+      {
+        "run_id": "L07__S1_SCAFFOLD_PRESERVED",
+        "requested_cases": 96,
+        "completed_cases": 96,
+        "failed_evaluation_cases": 8,
+        "failed_configuration_ids": [
+          "sobol_011",
+          "sobol_014",
+          "sobol_018",
+          "sobol_021",
+          "sobol_047",
+          "sobol_077",
+          "sobol_095",
+          "sobol_107"
+        ]
+      },
+      {
+        "run_id": "L07__S0_SCAFFOLD_REMOVED",
+        "requested_cases": 96,
+        "completed_cases": 96,
+        "failed_evaluation_cases": 8,
+        "failed_configuration_ids": [
+          "sobol_011",
+          "sobol_014",
+          "sobol_018",
+          "sobol_021",
+          "sobol_047",
+          "sobol_077",
+          "sobol_095",
+          "sobol_107"
+        ]
+      }
+    ],
+    "requested_cases_per_run": 96,
+    "denominator_preserved": true
+  },
+  "formal_holdout": {
+    "accessed": false,
+    "evaluation_count": 0
+  }
+}

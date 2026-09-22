@@ -1,0 +1,158 @@
+{
+  "schema_version": "robotcad_a1_dual_scope_geometry_v1",
+  "status": "PASS",
+  "evaluator_only": true,
+  "sample_count": 10000,
+  "seed": 20260910,
+  "gt_inputs": [
+    {
+      "link_id": "L03",
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-4-Forearm.stl",
+      "sha256": "72952a7ce9569c2468517538109141a08eb572cb027094d17a9b91f028d0b327"
+    },
+    {
+      "link_id": "L04",
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-5-Wrist-Gripper.stl",
+      "sha256": "4148d290ad924a78fcd58f18ea0822000cda14e7eaaee01e8d69664d7cf1234a"
+    },
+    {
+      "link_id": "L07",
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-7-Gripper-Bar.stl",
+      "sha256": "b54601da3f60eea180226b695bb95a9b29b187f22f5b74d9a523ac9785d9a518"
+    }
+  ],
+  "rows": [
+    {
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "link_id": "L03",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.15086206896551724,
+      "normalized_chamfer": 0.07771902299918554,
+      "normalized_hd95": 0.2865202605015605,
+      "silhouette_iou_mean": 0.35276469562183843,
+      "bbox_error_mm": 40.71426069143517,
+      "major_dimension_error_mm": 18.204423189163208
+    },
+    {
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "link_id": "L03",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.2587825560266505,
+      "normalized_chamfer": 0.05441609284735502,
+      "normalized_hd95": 0.2141696444642864,
+      "silhouette_iou_mean": 0.6125223906279531,
+      "bbox_error_mm": 16.409633291785045,
+      "major_dimension_error_mm": 11.790931463241577
+    },
+    {
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "link_id": "L03",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.15086206896551724,
+      "normalized_chamfer": 0.07771902299918554,
+      "normalized_hd95": 0.2865202605015605,
+      "silhouette_iou_mean": 0.35276469562183843,
+      "bbox_error_mm": 40.71426069143517,
+      "major_dimension_error_mm": 18.204423189163208
+    },
+    {
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "link_id": "L03",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.20717009916094584,
+      "normalized_chamfer": 0.05592767787037357,
+      "normalized_hd95": 0.2311149337753425,
+      "silhouette_iou_mean": 0.553545100210627,
+      "bbox_error_mm": 16.407163823319063,
+      "major_dimension_error_mm": 11.787494421005249
+    },
+    {
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "link_id": "L04",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.0894394490147312,
+      "normalized_chamfer": 0.119873261919149,
+      "normalized_hd95": 0.2651313743575124,
+      "silhouette_iou_mean": 0.2554215536535931,
+      "bbox_error_mm": 42.36489932846211,
+      "major_dimension_error_mm": 15.249205350875854
+    },
+    {
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "link_id": "L04",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.09487005265839986,
+      "normalized_chamfer": 0.12596580592973639,
+      "normalized_hd95": 0.2653265407492469,
+      "silhouette_iou_mean": 0.32006296932503525,
+      "bbox_error_mm": 34.318313997351524,
+      "major_dimension_error_mm": 10.047220468521118
+    },
+    {
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "link_id": "L04",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.0894394490147312,
+      "normalized_chamfer": 0.119873261919149,
+      "normalized_hd95": 0.2651313743575124,
+      "silhouette_iou_mean": 0.2554215536535931,
+      "bbox_error_mm": 42.36489932846211,
+      "major_dimension_error_mm": 15.249205350875854
+    },
+    {
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "link_id": "L04",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.08310603477667917,
+      "normalized_chamfer": 0.12536107408352617,
+      "normalized_hd95": 0.2652094435916571,
+      "silhouette_iou_mean": 0.2975991333341789,
+      "bbox_error_mm": 34.318313997351524,
+      "major_dimension_error_mm": 10.047220468521118
+    },
+    {
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "link_id": "L07",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.07315288953913679,
+      "normalized_chamfer": 0.06164603956337361,
+      "normalized_hd95": 0.22364371257037427,
+      "silhouette_iou_mean": 0.23992066294134937,
+      "bbox_error_mm": 68.1505753863547,
+      "major_dimension_error_mm": 55.488182067871094
+    },
+    {
+      "condition": "S1_SCAFFOLD_PRESERVED",
+      "link_id": "L07",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.10238179879132599,
+      "normalized_chamfer": 0.06029585546811669,
+      "normalized_hd95": 0.2221337037542137,
+      "silhouette_iou_mean": 0.2683546787526973,
+      "bbox_error_mm": 65.74572886854368,
+      "major_dimension_error_mm": 55.488182067871094
+    },
+    {
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "link_id": "L07",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.07315288953913679,
+      "normalized_chamfer": 0.06164603956337361,
+      "normalized_hd95": 0.22364371257037427,
+      "silhouette_iou_mean": 0.23992066294134937,
+      "bbox_error_mm": 68.1505753863547,
+      "major_dimension_error_mm": 55.488182067871094
+    },
+    {
+      "condition": "S0_SCAFFOLD_REMOVED",
+      "link_id": "L07",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.09270571325907294,
+      "normalized_chamfer": 0.05954814878025526,
+      "normalized_hd95": 0.22217486141773254,
+      "silhouette_iou_mean": 0.264356559005395,
+      "bbox_error_mm": 65.74572886854368,
+      "major_dimension_error_mm": 55.488182067871094
+    }
+  ]
+}
