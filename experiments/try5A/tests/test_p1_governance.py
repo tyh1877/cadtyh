@@ -73,6 +73,25 @@ class P1GovernanceTests(unittest.TestCase):
         self.assertNotIn('"all_holdout_samples_pass"', source)
         self.assertIn('"sample_count"', source)
 
+    def test_scaffold_protocol_has_exactly_one_condition_difference(self):
+        protocol = json.loads((HERE / "protocol/try5b1_a1_frozen_scaffold_ablation.json").read_text(encoding="utf-8"))
+        self.assertEqual(protocol["allowed_condition_differences"], ["mechanical_geometry_policy.preserve_frozen_scaffold"])
+        s1 = protocol["conditions"]["S1_SCAFFOLD_PRESERVED"]["mechanical_geometry_policy"]
+        s0 = protocol["conditions"]["S0_SCAFFOLD_REMOVED"]["mechanical_geometry_policy"]
+        self.assertTrue(s1["preserve_frozen_scaffold"])
+        self.assertFalse(s0["preserve_frozen_scaffold"])
+        self.assertEqual({key: value for key, value in s1.items() if key != "preserve_frozen_scaffold"}, {key: value for key, value in s0.items() if key != "preserve_frozen_scaffold"})
+        self.assertFalse(s1["auto_attachment_closure"])
+
+    def test_formal_runner_input_contains_development_only(self):
+        formal_input = json.loads((HERE / "protocol/try5b1_a1_development_input.json").read_text(encoding="utf-8"))
+        split = json.loads((HERE / "results/try5b1_a1_development/case_split.json").read_text(encoding="utf-8"))
+        case_ids = {item["config_id"] for item in formal_input["coupled_configurations"]}
+        self.assertEqual(len(case_ids), 96)
+        self.assertEqual(case_ids, set(split["development"]["case_ids"]))
+        self.assertFalse(case_ids & set(split["holdout"]["case_ids"]))
+        self.assertFalse(formal_input["contains_formal_holdout_configurations"])
+
 
 if __name__ == "__main__":
     unittest.main()

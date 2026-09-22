@@ -1,0 +1,72 @@
+{
+  "schema_version": "robotcad_a1_frozen_scaffold_ablation_v1",
+  "experiment_id": "try5b1_a1_frozen_scaffold_preservation_ablation",
+  "protocol_source": "user-confirmed Protection Effect Audit reframe",
+  "stage": "FORMAL_DEVELOPMENT_6_RUNS_HOLDOUT_LOCKED_UNACCESSED",
+  "shared": {
+    "pilot_links": ["L03", "L04", "L07"],
+    "refinement_condition": "F2",
+    "body_family_specs": "experiments/try5A/results/try5b1/body_family_specs.json",
+    "visual_evidence_root": "experiments/try5A/results/try5b1/visual_evidence_packs",
+    "semantic_inventory_root": "experiments/try5A/results/try5b1/semantic_inventories/F2",
+    "mechanical_topology_root": "experiments/try5A/results/try5b1/mechanical_topology_graphs/F2",
+    "formal_image_root": "experiments/try5A/inputs/images",
+    "formal_image_views": ["front", "isometric", "left", "right", "top", "rear"],
+    "sanitized_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+    "configuration_source": "experiments/try5A/results/try5a5/coupled_configurations.json",
+    "development_input": "experiments/try5A/protocol/try5b1_a1_development_input.json",
+    "development_split": "experiments/try5A/results/try5b1_a1_development/case_split.json",
+    "formal_holdout_lock": "experiments/try5A/results/try5b1_a1_frozen_scaffold/formal_holdout_lock.json",
+    "frozen_nonpilot_root": "experiments/try5A/artifacts/try5a5/round3_verified/links",
+    "seed": 20260910,
+    "development_configuration_count": 96,
+    "holdout_configuration_count": 32,
+    "joint_sweep_fractions": [0.25, 0.5, 0.75],
+    "relevant_joint_sweeps": {
+      "L03": ["J02", "J03"],
+      "L04": ["J03"],
+      "L07": []
+    },
+    "geometry_sample_count": 10000,
+    "primary_metrics": ["bicr", "attachment_valid", "connected_solid_count"],
+    "secondary_motion_metrics": ["relevant_jr3", "gcfr", "exact_collision_events", "exact_intersection_volume_mm3", "failed_configuration_ids"],
+    "secondary_geometry_metrics": ["voxel_iou", "silhouette_iou_mean", "normalized_chamfer", "normalized_hd95", "bbox_error_mm", "major_dimension_error_mm"],
+    "body_only_interpretation": "paired diagnostic delta against full-link GT; not absolute body reconstruction accuracy",
+    "runtime_rejection": false,
+    "runtime_rollback": false,
+    "post_generation_repair": false,
+    "gt_generator_access": false,
+    "formal_holdout_access": false,
+    "retry_failed_run": false
+  },
+  "conditions": {
+    "S1_SCAFFOLD_PRESERVED": {
+      "mechanical_geometry_policy": {
+        "protected_interface_cuts": true,
+        "distal_clearance_cut": true,
+        "preserve_frozen_scaffold": true,
+        "auto_attachment_closure": false
+      }
+    },
+    "S0_SCAFFOLD_REMOVED": {
+      "mechanical_geometry_policy": {
+        "protected_interface_cuts": true,
+        "distal_clearance_cut": true,
+        "preserve_frozen_scaffold": false,
+        "auto_attachment_closure": false
+      }
+    }
+  },
+  "allowed_condition_differences": [
+    "mechanical_geometry_policy.preserve_frozen_scaffold"
+  ],
+  "failure_policy": {
+    "preserve_all_requested_runs": true,
+    "preserve_all_96_cases": true,
+    "delete_failed_case": false,
+    "automatic_repair": false,
+    "automatic_retry": false
+  },
+  "stop_rule": "STOP_AFTER_DEVELOPMENT_RESULT_AUDIT_WITHOUT_FORMAL_HOLDOUT"
+}

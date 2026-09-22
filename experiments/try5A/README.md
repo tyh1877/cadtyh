@@ -49,6 +49,18 @@ GT inputs without evaluating a holdout configuration. Formal execution also
 requires explicit user authorization and the `--confirm-one-shot` flag; a crash
 after lock creation consumes the attempt.
 
+The superseding A1 scaffold experiment uses a development-only input file and a
+separate unaccessed holdout lock. Prepare, run the six development candidates,
+and independently validate with:
+
+```powershell
+.venv/Scripts/python.exe experiments/try5A/scripts/run_try5b1.py --prepare-scaffold-ablation experiments/try5A/protocol/try5b1_a1_frozen_scaffold_ablation.json
+.venv/Scripts/python.exe experiments/try5A/scripts/run_try5b1.py --run-scaffold-ablation-development experiments/try5A/protocol/try5b1_a1_frozen_scaffold_ablation.json
+.venv/Scripts/python.exe experiments/try5A/evaluation/validate_scaffold_ablation.py --result-dir experiments/try5A/results/try5b1_a1_frozen_scaffold --config experiments/try5A/protocol/try5b1_a1_frozen_scaffold_ablation.json
+```
+
+These commands do not authorize or execute the 32-case formal holdout.
+
 Try-5A coarse reconstruction is frozen at Try-5A.5. See
 `../../try5A_frozen_spec.md` and revalidate the retained baseline with
 `.venv/Scripts/python.exe experiments/try5A/scripts/validate_frozen_coarse_stage.py`.
