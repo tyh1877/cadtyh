@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "conditions": [
+    "S1_SCAFFOLD_PRESERVED",
+    "S0_SCAFFOLD_REMOVED"
+  ],
+  "shared_sha256": "02426847f585ed21c432bee054eaac8b2d9870705fc77c25dd60421b9717ca41",
+  "observed_differences": [
+    "mechanical_geometry_policy.preserve_frozen_scaffold"
+  ],
+  "allowed_differences": [
+    "mechanical_geometry_policy.preserve_frozen_scaffold"
+  ],
+  "unexpected_differences": [],
+  "declared_but_equal": []
+}
