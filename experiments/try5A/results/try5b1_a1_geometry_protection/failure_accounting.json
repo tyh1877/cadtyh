@@ -1,0 +1,12 @@
+{
+  "requested_conditions": [
+    "C1_CONSTRAINED",
+    "C2_UNPROTECTED"
+  ],
+  "completed_generation_conditions": [
+    "C1_CONSTRAINED",
+    "C2_UNPROTECTED"
+  ],
+  "failures": [],
+  "retry_count": 0
+}

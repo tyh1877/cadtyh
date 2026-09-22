@@ -1,0 +1,45 @@
+{
+  "schema_version": "robotcad_a1_dry_run_integrity_review_v1",
+  "status": "PASS_WITH_DISCLOSED_LIMITATIONS",
+  "checks": {
+    "baseline_reproduced": true,
+    "condition_parity_pass": true,
+    "raw_proposal_parity_pass": true,
+    "both_generation_conditions_completed_once": true,
+    "no_runtime_controller_in_jobs": true,
+    "c1_trace_matches_protocol": true,
+    "c2_trace_matches_protocol": true,
+    "build_export_reopen_pass": true,
+    "declarative_metrics_excluded": true,
+    "formal_holdout_not_accessed": true
+  },
+  "findings": {
+    "l04_protected_cut_effective_geometry_delta": false,
+    "evidence": {
+      "body_only_sha256": {
+        "C1_CONSTRAINED": "02e7bd2fb597e7377baf0e86a0755fbd6d64fa15ea306f6fb33441bbcefa0a86",
+        "C2_UNPROTECTED": "02e7bd2fb597e7377baf0e86a0755fbd6d64fa15ea306f6fb33441bbcefa0a86"
+      },
+      "body_only_volume_mm3": {
+        "C1_CONSTRAINED": 8045.031999999999,
+        "C2_UNPROTECTED": 8045.031999999999
+      },
+      "body_only_hashes_equal": true,
+      "body_only_volumes_equal": true,
+      "final_link_sha256": {
+        "C1_CONSTRAINED": "846f59f0527460c699aacc97318a405c17a2d14a158cbfd86da34ba1db155904",
+        "C2_UNPROTECTED": "8c37c52c9022f1a2b4c27778b6cadec3f443239e3c1b0174dbc25952d4b20101"
+      },
+      "final_link_hashes_differ": true
+    },
+    "interpretation": "For L04 the invoked proximal protected cut is a geometric no-op; the observed condition difference is driven primarily by scaffold preservation. This is a disclosed dry-run limitation, not a failed parity check."
+  },
+  "formal_three_link_suitability": "CONDITIONAL_GO",
+  "conditions_before_formal": [
+    "Record per-link pre/post-operation volume or shape-hash deltas so EXECUTED is distinguished from an effective geometry change.",
+    "Interpret A1 as the combined mechanical-geometry-protection bundle, not as an estimate of each individual cut.",
+    "Use body-only scores as paired diagnostics against full-link GT, not as absolute body-segmentation accuracy.",
+    "Rename the reused evaluator field holdout_samples to sample_count before formal execution to avoid a provenance-label ambiguity."
+  ],
+  "formal_three_link_run_executed": false
+}

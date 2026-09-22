@@ -1,0 +1,124 @@
+{
+  "schema_version": "robotcad_a1_reproducibility_freeze_v1",
+  "baseline_execution_commit": "1c50c96f5bb57da2c50b5bf6d32b309ee3ac054a",
+  "python": {
+    "executable": ".venv/Scripts/python.exe",
+    "version": "3.12.14"
+  },
+  "freecad": {
+    "locator": "experiments/try5A/scripts/freecad_runtime.py:python_runtime",
+    "version": "[\"1\", \"1\", \"1\", \"20260414 (Git shallow)\", \"Unknown\", \"2026/04/14 22:09:59\", \"(HEAD detached at 0108fd4b4)\", \"0108fd4b4850cc46e625b60e53cea7a7bbe69f8d\"]"
+  },
+  "input_images": {
+    "front": {
+      "path": "experiments/try5A/inputs/images/front.png",
+      "sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc"
+    },
+    "isometric": {
+      "path": "experiments/try5A/inputs/images/isometric.png",
+      "sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed"
+    },
+    "left": {
+      "path": "experiments/try5A/inputs/images/left.png",
+      "sha256": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca"
+    },
+    "right": {
+      "path": "experiments/try5A/inputs/images/right.png",
+      "sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098"
+    },
+    "top": {
+      "path": "experiments/try5A/inputs/images/top.png",
+      "sha256": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+    },
+    "rear": {
+      "path": "experiments/try5A/inputs/images/rear.png",
+      "sha256": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428"
+    }
+  },
+  "sanitized_urdf": {
+    "path": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664"
+  },
+  "f2_schema": {
+    "sha256": "ab806a7dc8d5d2af814a9123282b82575086ddfb9e83193ff0189c96d32b55a0",
+    "links": {
+      "L03": {
+        "body_family": "central_web",
+        "schema": {
+          "span_mm": 100,
+          "thickness_mm": 8,
+          "proximal_height_mm": 34,
+          "mid_height_mm": 28,
+          "lateral_offset_mm": -18,
+          "major_recess": true
+        }
+      },
+      "L04": {
+        "body_family": "compound_profile_housing",
+        "schema": {
+          "span_mm": 63,
+          "width_mm": 8,
+          "height_mm": 23,
+          "major_recess": true
+        }
+      },
+      "L07": {
+        "body_family": "gripper_support",
+        "schema": {
+          "span_mm": 23,
+          "bar_width_mm": 48,
+          "thickness_mm": 10,
+          "working_gap": true
+        }
+      }
+    }
+  },
+  "interface_contract": {
+    "path": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+    "sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d"
+  },
+  "visual_evidence_packs": {
+    "L03": {
+      "path": "experiments/try5A/results/try5b1/visual_evidence_packs/L03.json",
+      "sha256": "58a22b614f6bb53ac5e843e8a7d1267e4991fa1c26cad017d9c9c81bf2395fe2"
+    },
+    "L04": {
+      "path": "experiments/try5A/results/try5b1/visual_evidence_packs/L04.json",
+      "sha256": "eee11e85053d5ebb3f35168a9b7f0b38ee34bb232d80c3502c971e8ca110bc67"
+    },
+    "L07": {
+      "path": "experiments/try5A/results/try5b1/visual_evidence_packs/L07.json",
+      "sha256": "6de1c01a914eb2359e30dfd97081c9e763f7ebb4fb6572ac57f766739ae9b76d"
+    }
+  },
+  "semantic_inventories": {
+    "L03": "b2c220fac38d44e08cea1dfbc1bce2cd48e1c460ca720d2a5202ff6b8b00006c",
+    "L04": "ac28cd543a36d40700e575b4c5574085a6a3a59a111c4a4d65db6bcf33d5e8e3",
+    "L07": "f6412cd9963ba32773382c3e05a9e18d42592cda9c2a0256b208ef5f43cc4549"
+  },
+  "mechanical_topology": {
+    "L03": "33bf8d46fc270842e37f09f14e01758063b8571470c0ce1bc3f8dfcf94ae0cf6",
+    "L04": "817677e2bc6349e4329715f8fd7b4528793d60c5207112b6125e2f6cfbb390ca",
+    "L07": "c05cf6fafe7db8a2c056df76a505d803afaac4b37b23bbca7b70785d01d857c4"
+  },
+  "seed": 20260910,
+  "evaluator_settings": {
+    "exact_evaluator": "experiments/try5A/scripts/freecad_motion_realization.py",
+    "exact_evaluator_sha256": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a",
+    "geometry_sample_count": 10000,
+    "geometry_metrics": [
+      "voxel_iou",
+      "silhouette_iou_mean",
+      "normalized_chamfer",
+      "normalized_hd95",
+      "bbox_error_mm",
+      "major_dimension_error_mm"
+    ],
+    "coupled_configuration_count": 96,
+    "joint_sweep_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ]
+  }
+}

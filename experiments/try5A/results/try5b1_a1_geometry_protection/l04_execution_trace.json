@@ -1,0 +1,32 @@
+{
+  "C1_CONSTRAINED": {
+    "policy": {
+      "protected_interface_cuts": true,
+      "distal_clearance_cut": true,
+      "preserve_frozen_scaffold": true,
+      "auto_attachment_closure": true
+    },
+    "trace": {
+      "protected_interface_cuts": "EXECUTED",
+      "distal_clearance_cut": "NOT_APPLICABLE",
+      "frozen_scaffold_preservation": "EXECUTED",
+      "auto_attachment_closure": "NOT_REACHED_SCAFFOLD_SELECTED"
+    },
+    "assembly_strategy": "FROZEN_SCAFFOLD"
+  },
+  "C2_UNPROTECTED": {
+    "policy": {
+      "protected_interface_cuts": false,
+      "distal_clearance_cut": false,
+      "preserve_frozen_scaffold": false,
+      "auto_attachment_closure": false
+    },
+    "trace": {
+      "protected_interface_cuts": "SKIPPED_BY_POLICY",
+      "distal_clearance_cut": "NOT_APPLICABLE",
+      "frozen_scaffold_preservation": "SKIPPED_BY_POLICY",
+      "auto_attachment_closure": "SKIPPED_BY_POLICY"
+    },
+    "assembly_strategy": "NATURAL_CONTACT_ONLY"
+  }
+}

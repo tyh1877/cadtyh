@@ -1,0 +1,44 @@
+{
+  "schema_version": "robotcad_a1_condition_parity_v1",
+  "status": "PASS",
+  "config_parity": {
+    "status": "PASS",
+    "conditions": [
+      "C1_CONSTRAINED",
+      "C2_UNPROTECTED"
+    ],
+    "shared_sha256": "bcb2d57c351fdaac5d1b627ff89ab0af435b2df64ef9f96d675328f31d302132",
+    "observed_differences": [
+      "mechanical_geometry_policy.auto_attachment_closure",
+      "mechanical_geometry_policy.distal_clearance_cut",
+      "mechanical_geometry_policy.preserve_frozen_scaffold",
+      "mechanical_geometry_policy.protected_interface_cuts"
+    ],
+    "allowed_differences": [
+      "mechanical_geometry_policy.auto_attachment_closure",
+      "mechanical_geometry_policy.distal_clearance_cut",
+      "mechanical_geometry_policy.preserve_frozen_scaffold",
+      "mechanical_geometry_policy.protected_interface_cuts"
+    ],
+    "unexpected_differences": [],
+    "declared_but_equal": []
+  },
+  "shared_input_hashes": {
+    "input_images": "3d7edf0eac8a48a5cedc1486d8ac65f6806c7f136f41a3d66022e6508c7a2307",
+    "urdf": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+    "pilot_links": "0253af614d4d3828e609b4f7e5fa95f47e96843eb1d9d350f23972fcd2484940",
+    "f2_body_family": "b4af174ddce7f05789d4f7899eea07a6c11f10b7fc95ed6914929215bb1fe413",
+    "f2_schema": "29b49b16367f3f9c23daeee03582494518126c3250087bdce964bf0308e53728",
+    "visual_evidence_pack": "eee11e85053d5ebb3f35168a9b7f0b38ee34bb232d80c3502c971e8ca110bc67",
+    "semantic_inventory": "ac28cd543a36d40700e575b4c5574085a6a3a59a111c4a4d65db6bcf33d5e8e3",
+    "mechanical_topology": "817677e2bc6349e4329715f8fd7b4528793d60c5207112b6125e2f6cfbb390ca",
+    "model_prompt": "NOT_APPLICABLE_DETERMINISTIC_FROZEN_F2",
+    "seed": "1a5ec8639bc971e3ac4efa6646089580e62485332a178f20da27759fa944879e",
+    "evaluator": "191fc265e1299672e8307cb43e4207e98dd9a6b88c3d8c03265d2cdd3f33a74c",
+    "coupled_configurations": "74d1c2a2a4b17e309cb73544e4b83b5a9ea213e47a23fc737acb4f277704970b",
+    "joint_sweeps": "4019e918e6049fb6135fd31f52d9f2d350cf30bb95260813eaa9a8bce416cdaf"
+  },
+  "only_allowed_difference": "mechanical_geometry_policy",
+  "development_cases": 96,
+  "serialized_holdout_ids": 0
+}

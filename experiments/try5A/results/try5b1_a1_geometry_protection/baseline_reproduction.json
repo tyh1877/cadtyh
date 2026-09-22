@@ -1,0 +1,49 @@
+{
+  "schema_version": "robotcad_a1_baseline_reproduction_v1",
+  "status": "PASS",
+  "executed_before_c2_implementation": true,
+  "baseline_execution_commit": "1c50c96f5bb57da2c50b5bf6d32b309ee3ac054a",
+  "worker_sha256": "bd578d09e5be17a20097eda9bc3de328d67f2424f53bd3d529178ddd5c9371bf",
+  "links": [
+    {
+      "link_id": "L03",
+      "raw_body_signature_equal": true,
+      "interface_signatures_equal": true,
+      "attachment_valid_equal": true,
+      "solid_count_equal": true,
+      "stl_sha256_previous": "32802fbc205c388bd5999243b8b0efe0290af13a2ecd2a046054c14f01d3274f",
+      "stl_sha256_reproduced": "32802fbc205c388bd5999243b8b0efe0290af13a2ecd2a046054c14f01d3274f",
+      "stl_equal": true
+    },
+    {
+      "link_id": "L04",
+      "raw_body_signature_equal": true,
+      "interface_signatures_equal": true,
+      "attachment_valid_equal": true,
+      "solid_count_equal": true,
+      "stl_sha256_previous": "846f59f0527460c699aacc97318a405c17a2d14a158cbfd86da34ba1db155904",
+      "stl_sha256_reproduced": "846f59f0527460c699aacc97318a405c17a2d14a158cbfd86da34ba1db155904",
+      "stl_equal": true
+    },
+    {
+      "link_id": "L07",
+      "raw_body_signature_equal": true,
+      "interface_signatures_equal": true,
+      "attachment_valid_equal": true,
+      "solid_count_equal": true,
+      "stl_sha256_previous": "e8fa0ef9d304186d7eea95a0115ade4a1f35d3ded306fb2074c739f9b3218fff",
+      "stl_sha256_reproduced": "e8fa0ef9d304186d7eea95a0115ade4a1f35d3ded306fb2074c739f9b3218fff",
+      "stl_equal": true
+    }
+  ],
+  "exact": {
+    "configuration_count_previous": 96,
+    "configuration_count_reproduced": 96,
+    "valid_previous": 88,
+    "valid_reproduced": 88,
+    "gcfr_previous": 0.9166666666666666,
+    "gcfr_reproduced": 0.9166666666666666,
+    "rows_equal": true,
+    "per_joint_equal": true
+  }
+}

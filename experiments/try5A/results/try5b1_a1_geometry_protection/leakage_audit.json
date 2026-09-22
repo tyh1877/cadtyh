@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "generator_gt_access": false,
+  "generator_repair_enabled": false,
+  "serialized_holdout_ids": 0,
+  "formal_holdout_lock_exists": false,
+  "geometry_gt_access_process": "independent evaluator only"
+}

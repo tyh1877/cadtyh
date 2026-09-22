@@ -1,0 +1,25 @@
+{
+  "schema_version": "robotcad_a1_evaluator_integrity_v1",
+  "status": "PASS",
+  "computed_primary_metrics": {
+    "bicr": "FreeCAD final RigidGroup connected-solid test: solid_count == 1",
+    "connected_solid_count": "FreeCAD len(final_shape.Solids)",
+    "attachment_valid": "FreeCAD final shape solid_count == 1",
+    "relevant_jr3": "independent Exact evaluator per-joint collision-free fraction",
+    "gcfr": "independent Exact evaluator collision-free coupled-configuration fraction",
+    "exact_collision_events": "count of Exact evaluator unintended-collision rows",
+    "failed_configurations": "Exact evaluator configuration IDs with any unintended collision"
+  },
+  "declarative_or_non_primary_fields": {
+    "swept_clearance_preserved": "literal True in legacy runner",
+    "forbidden_fusion_count": "literal/filename-based value, not a geometry evaluator result",
+    "virtual_solid_count": "membership/declaration check, not an evaluated geometry result",
+    "meaningless_patch_count": "semantic feature bookkeeping, not a geometry evaluator result"
+  },
+  "excluded_from_main_quantitative_analysis": [
+    "swept_clearance_preserved",
+    "forbidden_fusion_count",
+    "virtual_solid_count",
+    "meaningless_patch_count"
+  ]
+}

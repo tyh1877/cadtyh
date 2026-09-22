@@ -1,0 +1,192 @@
+{
+  "schema_version": "robotcad_a1_l04_dry_run_v1",
+  "status": "DRY_RUN_COMPLETE_FORMAL_NOT_RUN",
+  "baseline_reproduced": true,
+  "condition_parity": "PASS",
+  "raw_proposal_parity": "PASS",
+  "conditions": {
+    "C1_CONSTRAINED": {
+      "build_export_reopen": {
+        "body_valid": true,
+        "group_valid": true
+      },
+      "planned_family": "compound_profile_housing",
+      "executed_family": "compound_profile_housing",
+      "raw_body_signature": {
+        "volume_mm3": 8045.032,
+        "bbox": {
+          "min_mm": [
+            11.8,
+            -4.96,
+            -13.34
+          ],
+          "max_mm": [
+            63.0,
+            4.960000000000001,
+            13.34
+          ],
+          "size_mm": [
+            51.2,
+            9.920000000000002,
+            26.68
+          ]
+        },
+        "solids": 1,
+        "faces": 19,
+        "edges": 48,
+        "vertices": 32
+      },
+      "bicr": 1.0,
+      "connected_solid_count": 1,
+      "attachment_valid": true,
+      "relevant_jr3": [
+        {
+          "joint_id": "J03",
+          "holdout_samples": 3,
+          "jr3": 1.0,
+          "all_holdout_samples_pass": true,
+          "collision_rows": []
+        }
+      ],
+      "gcfr": 0.9166666666666666,
+      "exact_collision_events": 31,
+      "exact_intersection_volume_mm3": 14953.638728307726,
+      "failed_configuration_count": 8,
+      "failed_configuration_ids": [
+        "sobol_011",
+        "sobol_014",
+        "sobol_018",
+        "sobol_021",
+        "sobol_047",
+        "sobol_077",
+        "sobol_095",
+        "sobol_107"
+      ],
+      "geometry": {
+        "refined_body_only": {
+          "condition": "C1_CONSTRAINED",
+          "link_id": "L04",
+          "scope": "refined_body_only",
+          "voxel_iou": 0.0894394490147312,
+          "normalized_chamfer": 0.119873261919149,
+          "normalized_hd95": 0.2651313743575124,
+          "silhouette_iou_mean": 0.2554215536535931,
+          "bbox_error_mm": 42.36489932846211,
+          "major_dimension_error_mm": 15.249205350875854
+        },
+        "final_assembled_link": {
+          "condition": "C1_CONSTRAINED",
+          "link_id": "L04",
+          "scope": "final_assembled_link",
+          "voxel_iou": 0.09487005265839986,
+          "normalized_chamfer": 0.12596580592973639,
+          "normalized_hd95": 0.2653265407492469,
+          "silhouette_iou_mean": 0.32006296932503525,
+          "bbox_error_mm": 34.318313997351524,
+          "major_dimension_error_mm": 10.047220468521118
+        }
+      }
+    },
+    "C2_UNPROTECTED": {
+      "build_export_reopen": {
+        "body_valid": true,
+        "group_valid": true
+      },
+      "planned_family": "compound_profile_housing",
+      "executed_family": "compound_profile_housing",
+      "raw_body_signature": {
+        "volume_mm3": 8045.032,
+        "bbox": {
+          "min_mm": [
+            11.8,
+            -4.96,
+            -13.34
+          ],
+          "max_mm": [
+            63.0,
+            4.960000000000001,
+            13.34
+          ],
+          "size_mm": [
+            51.2,
+            9.920000000000002,
+            26.68
+          ]
+        },
+        "solids": 1,
+        "faces": 19,
+        "edges": 48,
+        "vertices": 32
+      },
+      "bicr": 0.0,
+      "connected_solid_count": 3,
+      "attachment_valid": false,
+      "relevant_jr3": [
+        {
+          "joint_id": "J03",
+          "holdout_samples": 3,
+          "jr3": 1.0,
+          "all_holdout_samples_pass": true,
+          "collision_rows": []
+        }
+      ],
+      "gcfr": 0.9166666666666666,
+      "exact_collision_events": 31,
+      "exact_intersection_volume_mm3": 13207.814630559984,
+      "failed_configuration_count": 8,
+      "failed_configuration_ids": [
+        "sobol_011",
+        "sobol_014",
+        "sobol_018",
+        "sobol_021",
+        "sobol_047",
+        "sobol_077",
+        "sobol_095",
+        "sobol_107"
+      ],
+      "geometry": {
+        "refined_body_only": {
+          "condition": "C2_UNPROTECTED",
+          "link_id": "L04",
+          "scope": "refined_body_only",
+          "voxel_iou": 0.0894394490147312,
+          "normalized_chamfer": 0.119873261919149,
+          "normalized_hd95": 0.2651313743575124,
+          "silhouette_iou_mean": 0.2554215536535931,
+          "bbox_error_mm": 42.36489932846211,
+          "major_dimension_error_mm": 15.249205350875854
+        },
+        "final_assembled_link": {
+          "condition": "C2_UNPROTECTED",
+          "link_id": "L04",
+          "scope": "final_assembled_link",
+          "voxel_iou": 0.08310603477667917,
+          "normalized_chamfer": 0.12536107408352617,
+          "normalized_hd95": 0.2652094435916571,
+          "silhouette_iou_mean": 0.2975991333341789,
+          "bbox_error_mm": 34.318313997351524,
+          "major_dimension_error_mm": 10.047220468521118
+        }
+      }
+    }
+  },
+  "unexpected_confounds": [
+    {
+      "id": "L04_DISTAL_CLEARANCE_NOT_EXERCISED",
+      "expected": true,
+      "detail": "L04 has no applicable rotary distal interface, so this dry run cannot validate the distal-clearance toggle."
+    },
+    {
+      "id": "BODY_ONLY_GT_IS_FULL_LINK_MESH",
+      "expected": true,
+      "detail": "No evaluator-only body segmentation exists; body-only predictions are scored against the same full-link GT mesh. Use paired deltas, not the body-only absolute score."
+    },
+    {
+      "id": "BUNDLED_PROTECTION_TREATMENT",
+      "expected": true,
+      "detail": "Protected proximal cuts and scaffold preservation are jointly ablated by design; this experiment estimates their combined effect."
+    }
+  ],
+  "formal_three_link_run_executed": false,
+  "suitable_for_formal_three_link_run": true
+}

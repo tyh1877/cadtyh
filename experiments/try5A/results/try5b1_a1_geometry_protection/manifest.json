@@ -1,0 +1,13 @@
+{
+  "experiment_id": "try5b1_a1_mechanical_geometry_protection_ablation",
+  "stage": "L04_PAIRED_DRY_RUN_ONLY",
+  "config_path": "experiments/try5A/protocol/try5b1_a1_geometry_protection.json",
+  "config_sha256": "f99609ddcc7e3d7de6b0741c060fc9a3117eaa797e5fdb187a5dc4d9521712a5",
+  "runner_sha256": "3aaca1c8013882102d5133f83e286abde1b4ee3853631dba731b1ad922a008d3",
+  "generation_worker_sha256": "4fc2551779b975c952cae9606d572a10503500d219d5a7099e8e5a58a7f0cd74",
+  "mechanical_evaluator_sha256": "c8f421e8c1e77a2faf80512a944d6ca2d1ad1a7bb1b48fda4529ccfc94952576",
+  "geometry_evaluator_sha256": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa",
+  "baseline_reproduction_sha256": "c0a2d06f860cac8ab79912171c4451b169689d5eb6d1666e2eb59f757536afae",
+  "reproducibility_manifest_sha256": "7306e1b12538cce2dc5bfd515976ff6b0042b5f9167c890205fd97a1fad52398",
+  "formal_holdout_accessed": false
+}
