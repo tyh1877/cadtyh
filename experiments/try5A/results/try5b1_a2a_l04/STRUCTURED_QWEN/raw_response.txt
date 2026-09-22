@@ -1,0 +1,52 @@
+{
+  "visual_structural_analysis": [
+    "The F0 shape is a dumbbell-like structure with large circular ends and a thinner cylindrical middle, with bbox dimensions [76.49, 18.0, 23.0] mm.",
+    "The actual L04 link (teal forearm in images) is a beam-like structure with cutouts and rounded joint housing regions.",
+    "Joints J03 and J04 are located at x=100 mm and x=63 mm in the L04 frame, indicating a minimum span of 37 mm between joint centers.",
+    "The F0 bbox x-size of 76.5 mm suggests the link body extends significantly beyond the joint centers to form the load path."
+  ],
+  "body_family": "central_web",
+  "semantic_inventory": {
+    "required": [
+      "span_mm",
+      "thickness_mm",
+      "proximal_height_mm",
+      "mid_height_mm"
+    ],
+    "optional": [
+      "lateral_offset_mm",
+      "major_recess"
+    ],
+    "uncertain": [
+      "exact_profile_transition",
+      "recess_dimensions"
+    ]
+  },
+  "mechanical_topology": {
+    "nodes": [
+      "J03",
+      "J04"
+    ],
+    "edges": [
+      {
+        "from": "J03",
+        "to": "J04",
+        "type": "rigid_link"
+      }
+    ]
+  },
+  "executable_geometry_schema": {
+    "span_mm": 76.5,
+    "thickness_mm": 18.0,
+    "proximal_height_mm": 23.0,
+    "mid_height_mm": 18.0,
+    "lateral_offset_mm": 0.0,
+    "major_recess": true
+  },
+  "assumptions": [
+    "The F0 shape dimensions are used as a baseline for the coarse reconstruction envelope.",
+    "The central_web family is chosen to model the varying height (dumbbell shape) of the link, with thicker ends at the joints and a thinner middle.",
+    "The major_recess flag is enabled to account for the cutouts and lightening holes visible in the teal link images.",
+    "The link is centered such that it spans the joint locations at x=63 mm and x=100 mm within the 76.5 mm total span."
+  ]
+}

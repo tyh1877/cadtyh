@@ -123,7 +123,11 @@ def validate_structured(payload):
     if not contract["required"] <= keys or not keys <= contract["required"] | contract["optional"]: raise ValueError("STRUCTURED_SCHEMA_INVALID")
     for key, value in schema.items():
         if isinstance(value, bool): continue
-        if not isinstance(value, (int, float)) or not 0.1 <= abs(float(value)) <= 300: raise ValueError("STRUCTURED_SCHEMA_VALUE_INVALID: " + key)
+        if not isinstance(value, (int, float)): raise ValueError("STRUCTURED_SCHEMA_VALUE_INVALID: " + key)
+        if key == "lateral_offset_mm":
+            if abs(float(value)) > 300: raise ValueError("STRUCTURED_SCHEMA_VALUE_INVALID: " + key)
+        elif not 0.1 <= float(value) <= 300:
+            raise ValueError("STRUCTURED_SCHEMA_VALUE_INVALID: " + key)
     return {"body_family": family, "schema": schema, "semantic_inventory": payload["semantic_inventory"], "mechanical_topology": payload["mechanical_topology"], "visual_structural_analysis": payload["visual_structural_analysis"], "assumptions": payload["assumptions"]}
 
 
@@ -144,6 +148,10 @@ def run(config_path):
     process_summary = {"model_calls": {condition: {key: call_results[condition][key] for key in ("status", "latency_seconds", "request_id", "requested_model", "returned_model", "system_fingerprint", "seed", "max_output_tokens", "timeout_seconds", "usage", "error")} for condition in CONDITIONS}, "same_requested_model": len({call_results[c]["requested_model"] for c in CONDITIONS}) == 1, "same_returned_model": len({call_results[c]["returned_model"] for c in CONDITIONS}) == 1 and all(call_results[c]["returned_model"] for c in CONDITIONS), "api_calls_per_condition": 1, "manual_intervention_count": 0, "repair_calls": 0}; dump(result_root / "process_metrics.json", process_summary)
     if any(call_results[c]["status"] != "SUCCESS" for c in CONDITIONS):
         dump(result_root / "failure_accounting.json", {"status": "MODEL_CALL_FAILURE_RETAINED", "conditions": call_results, "retry_count": 0}); raise RuntimeError("one-shot model call failed; result retained without retry")
+    return continue_after_calls(config_path, config, result_root, artifact_root, call_results, process_summary)
+
+
+def continue_after_calls(config_path, config, result_root, artifact_root, call_results, process_summary):
     structured_raw = extract_json(call_results["STRUCTURED_QWEN"]["content"]); direct_raw = extract_json(call_results["DIRECT_QWEN"]["content"]); structured_ir = validate_structured(structured_raw); dump(result_root / "STRUCTURED_QWEN/structured_ir.json", structured_ir); dump(result_root / "DIRECT_QWEN/direct_response.json", direct_raw)
     direct_code = direct_raw.get("freecad_python")
     if not isinstance(direct_code, str) or not direct_code.strip(): raise ValueError("DIRECT_CODE_MISSING")
@@ -170,8 +178,23 @@ def run(config_path):
     print(json.dumps({"status": manifest["status"], "models": manifest["returned_models"], "rows": len(rows), "holdout_accessed": False}, indent=2)); return 0
 
 
+def resume(config_path):
+    config_path = Path(config_path).resolve(); config = load(config_path); result_root = HERE / "results/try5b1_a2a_l04"; artifact_root = HERE / "artifacts/try5b1_a2a_l04"
+    if not (result_root / "call_started.json").is_file(): raise RuntimeError("no completed one-shot call to resume")
+    if (result_root / "manifest.json").exists(): raise FileExistsError("A2a result already complete")
+    resume_marker = result_root / "executor_resume_started.json"
+    if resume_marker.exists(): raise FileExistsError("executor resume already attempted")
+    call_results = {}
+    for condition in CONDITIONS:
+        record = load(result_root / condition / "call_record.json"); record["content"] = (result_root / condition / "raw_response.txt").read_text(encoding="utf-8"); record["full_response"] = load(result_root / condition / "full_response.json"); call_results[condition] = record
+    if any(record["status"] != "SUCCESS" for record in call_results.values()): raise RuntimeError("cannot resume failed model call")
+    dump(resume_marker, {"status": "RESUME_FROZEN_RESPONSES_ONLY", "timestamp_utc": now(), "reason": "local validator incorrectly rejected legal lateral_offset_mm=0", "new_model_calls": 0, "response_edits": 0, "manual_cad_edits": 0})
+    dump(result_root / "execution_incident.json", {"incident_id": "A2A-EXEC-001", "stage": "post_response_structured_validation", "model_calls_completed": 2, "symptom": "local validator rejected legal optional lateral_offset_mm=0", "resolution": "allow zero only for lateral_offset_mm and resume from immutable saved responses", "new_model_calls": 0, "response_edits": 0, "cad_repairs": 0, "fairness_impact": "NONE"})
+    return continue_after_calls(config_path, config, result_root, artifact_root, call_results, load(result_root / "process_metrics.json"))
+
+
 def main():
-    parser = argparse.ArgumentParser(); parser.add_argument("--config", required=True); group = parser.add_mutually_exclusive_group(required=True); group.add_argument("--prepare", action="store_true"); group.add_argument("--run", action="store_true"); args = parser.parse_args(); return prepare(args.config) if args.prepare else run(args.config)
+    parser = argparse.ArgumentParser(); parser.add_argument("--config", required=True); group = parser.add_mutually_exclusive_group(required=True); group.add_argument("--prepare", action="store_true"); group.add_argument("--run", action="store_true"); group.add_argument("--resume", action="store_true"); args = parser.parse_args(); return prepare(args.config) if args.prepare else (run(args.config) if args.run else resume(args.config))
 
 
 if __name__ == "__main__":
