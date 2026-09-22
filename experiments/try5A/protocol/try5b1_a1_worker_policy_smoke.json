@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "runtime": "D:/software/freeCAD/install/bin/python.exe",
+  "link_id": "L03",
+  "family": "central_web",
+  "constrained": {
+    "assembly_strategy": "FROZEN_SCAFFOLD",
+    "solid_count": 1,
+    "attachment_valid": true
+  },
+  "unconstrained": {
+    "assembly_strategy": "NATURAL_CONTACT_ONLY",
+    "solid_count": 3,
+    "attachment_valid": false
+  },
+  "geometry_changed": true,
+  "freecad_invoked": true,
+  "gt_accessed": false
+}

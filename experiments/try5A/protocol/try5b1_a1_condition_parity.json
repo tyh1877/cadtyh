@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "conditions": [
+    "C1_CONSTRAINED",
+    "C2_UNCONSTRAINED"
+  ],
+  "shared_sha256": "a25eabfa041161c3a2734e6359a8f908eb03965ada77f1e2079b4a563bdfbc9a",
+  "observed_differences": [
+    "mechanical_policy.auto_attachment_closure",
+    "mechanical_policy.mechanical_rejection",
+    "mechanical_policy.preserve_frozen_scaffold",
+    "mechanical_policy.protected_interface_cuts",
+    "mechanical_policy.rollback_on_failure"
+  ],
+  "allowed_differences": [
+    "mechanical_policy.auto_attachment_closure",
+    "mechanical_policy.mechanical_rejection",
+    "mechanical_policy.preserve_frozen_scaffold",
+    "mechanical_policy.protected_interface_cuts",
+    "mechanical_policy.rollback_on_failure"
+  ],
+  "unexpected_differences": [],
+  "declared_but_equal": []
+}

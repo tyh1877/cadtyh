@@ -13,6 +13,14 @@
   source URLs, versions, checksums, and regeneration scripts in tracked files.
 - Do not tune metrics on a frozen audit/test set. Metric development must use a
   declared development split and must be evaluated once on a separate holdout.
+- Before a formal paper matrix or ablation, follow
+  `experiments/try5A/skills/experiment-governance/SKILL.md`. Freeze a tracked
+  condition config, run the parity audit, lock the dev/holdout split, and use the
+  independent validator after the runner exits.
+- A hard experimental claim must cite computed artifact evidence. Copied,
+  asserted, or inferred values may provide context but cannot close a hard gate.
+- Candidate rejection and rollback must be runtime decisions with recorded inputs
+  and outcomes; prewritten narrative records are not execution evidence.
 
 ## Experiment development structure
 

@@ -7,6 +7,17 @@ assembly and unified evaluation. See `results/phase13_report.md`, `a0_report.md`
 Heavy A0 link CAD and assembly files are ignored under `A0/` and `assemblies/`;
 tracked manifests, metrics and contact sheets preserve their hashes and results.
 
+## Formal experiment governance
+
+Formal paper matrices use `skills/experiment-governance/SKILL.md` and the
+deterministic helpers in `evaluation/experiment_governance.py`. A runner prepares
+the tracked configuration snapshot, dev/holdout split, parity report, failure
+accounting, holdout log, and claim ledger. After the runner exits, invoke
+`evaluation/validate_experiment.py`; only that independent command may write the
+final `validation.json`.
+
+The Try-5B.1-A1 pre-registration and dry-run evidence are under `protocol/`.
+
 Try-5A coarse reconstruction is frozen at Try-5A.5. See
 `../../try5A_frozen_spec.md` and revalidate the retained baseline with
 `.venv/Scripts/python.exe experiments/try5A/scripts/validate_frozen_coarse_stage.py`.

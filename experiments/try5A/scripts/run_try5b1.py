@@ -15,8 +15,9 @@ from scipy.spatial import cKDTree
 
 ROOT=Path(__file__).resolve().parents[3]; HERE=ROOT/"experiments/try5A"
 RESULTS=HERE/"results/try5b1"; ARTIFACTS=HERE/"artifacts/try5b1"; BASE=HERE/"results/try5a5"
-sys.path.insert(0,str(HERE/"scripts")); sys.path.insert(0,str(HERE/"evaluation/mechanical"))
+sys.path.insert(0,str(HERE/"scripts")); sys.path.insert(0,str(HERE/"evaluation")); sys.path.insert(0,str(HERE/"evaluation/mechanical"))
 from fast_evaluator import GeometryCache,MechanicalEvaluator
+from experiment_governance import CandidateController,audit_condition_parity,canonical_hash,split_cases
 from freecad_runtime import python_runtime
 from kinematics import canonical_q,fk,parse,rpy
 from interface_instance_geometry import IMAGE_FIRST_SPECS, INSTANCE_SPECS
@@ -60,6 +61,21 @@ def rows_csv(path,rows):
     path=Path(path); path.parent.mkdir(parents=True,exist_ok=True)
     with path.open("w",newline="",encoding="utf-8") as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
+
+
+def governance_dry_run(config_path):
+    """Freeze the A1 split/parity and exercise real policy decisions without CAD/GT."""
+    config_path=Path(config_path).resolve(); config=load(config_path); cases=load(ROOT/config["shared"]["frozen_configuration_source"])["configurations"]
+    case_ids=[item["config_id"] for item in cases]; split=split_cases(case_ids,config["shared"]["split"]); parity=audit_condition_parity(config)
+    failing_metrics={"artifact_valid":True,"bicr":0.5,"physical_floating_count":1,"forbidden_fusion_count":0,"virtual_solid_count":0,"meaningless_patch_count":0,"relevant_jr3":0.8,"gcfr_regression":0.1}
+    decisions=[]
+    for name,condition in config["conditions"].items():
+        controller=CandidateController(name,condition["mechanical_policy"],config["shared"]["mechanical_thresholds"])
+        decisions.append(controller.decide("F1_ACCEPTED","F2_PROPOSED",failing_metrics).as_dict())
+    expected=(next(x for x in decisions if x["condition"]=="C1_CONSTRAINED")["outcome"]=="ROLLBACK" and next(x for x in decisions if x["condition"]=="C2_UNCONSTRAINED")["outcome"]=="ACCEPT_WITH_MECHANICAL_FAILURE")
+    output_root=HERE/"protocol"; dump(output_root/"try5b1_a1_case_split.json",split); dump(output_root/"try5b1_a1_condition_parity.json",parity)
+    payload={"status":"PASS" if parity["status"]=="PASS" and expected else "FAIL","config":str(Path(config_path).relative_to(ROOT)).replace("\\","/"),"config_canonical_sha256":canonical_hash(config),"split_sha256":split["split_sha256"],"parity_status":parity["status"],"runtime_policy_decisions":decisions,"freecad_invoked":False,"gt_accessed":False}
+    dump(output_root/"try5b1_a1_governance_dry_run.json",payload); print(json.dumps(payload,indent=2)); return 0 if payload["status"]=="PASS" else 1
 
 def configurations():
     links,joints=parse(HERE/"inputs/sanitized_urdf/px100_sanitized.urdf"); coupled=load(BASE/"coupled_configurations.json")["configurations"]; per={}
@@ -373,5 +389,5 @@ def run_knowledge_ablation():
     print(json.dumps({"status":gates["status"],"results":str(result_root),"F2_assembly":workers["F2"]["assembly"]["fcstd"]},indent=2)); return 0 if gates["status"]=="PASS" else 1
 
 if __name__=="__main__":
-    parser=argparse.ArgumentParser(); parser.add_argument("--full-repair",action="store_true"); parser.add_argument("--knowledge-ablation",action="store_true"); args=parser.parse_args()
-    raise SystemExit(run_knowledge_ablation() if args.knowledge_ablation else (run_full_repair() if args.full_repair else main()))
+    parser=argparse.ArgumentParser(); parser.add_argument("--full-repair",action="store_true"); parser.add_argument("--knowledge-ablation",action="store_true"); parser.add_argument("--governance-dry-run",metavar="CONFIG"); args=parser.parse_args()
+    raise SystemExit(governance_dry_run(args.governance_dry_run) if args.governance_dry_run else (run_knowledge_ablation() if args.knowledge_ablation else (run_full_repair() if args.full_repair else main())))

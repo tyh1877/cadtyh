@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "config": "experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json",
+  "config_canonical_sha256": "5825ffe66ab582f73989d2c6cad0741455f1df5ba04a325d25f0ca3379409894",
+  "split_sha256": "384200611a91e8966ed443dc906d00e83eeb4420e6ad12ae915b273a5ec52059",
+  "parity_status": "PASS",
+  "runtime_policy_decisions": [
+    {
+      "condition": "C1_CONSTRAINED",
+      "previous_candidate": "F1_ACCEPTED",
+      "proposed_candidate": "F2_PROPOSED",
+      "selected_candidate": "F1_ACCEPTED",
+      "outcome": "ROLLBACK",
+      "mechanical_status": "FAIL",
+      "failed_gates": [
+        "bicr",
+        "physical_floating_count",
+        "relevant_jr3",
+        "gcfr_regression"
+      ]
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "previous_candidate": "F1_ACCEPTED",
+      "proposed_candidate": "F2_PROPOSED",
+      "selected_candidate": "F2_PROPOSED",
+      "outcome": "ACCEPT_WITH_MECHANICAL_FAILURE",
+      "mechanical_status": "FAIL",
+      "failed_gates": [
+        "bicr",
+        "physical_floating_count",
+        "relevant_jr3",
+        "gcfr_regression"
+      ]
+    }
+  ],
+  "freecad_invoked": false,
+  "gt_accessed": false
+}

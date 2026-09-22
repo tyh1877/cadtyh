@@ -1,0 +1,96 @@
+{
+  "schema_version": "robotcad_experiment_config_v1",
+  "experiment_id": "try5b1_a1_mechanical_constraint_ablation",
+  "base_experiment": "Try-5B.1/F2",
+  "protocol_source": "try5/Try5-B1.md",
+  "shared": {
+    "pilot_links": ["L03", "L04", "L07"],
+    "refinement_condition": "F2",
+    "formal_images": ["front", "isometric", "left", "right", "top", "rear"],
+    "engineering_text": "experiments/try5A/inputs/engineering_text/robot_A.md",
+    "sanitized_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "frozen_interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+    "frozen_configuration_source": "experiments/try5A/results/try5a5/coupled_configurations.json",
+    "frozen_coarse_tag": "try5A_frozen_coarse_stage",
+    "seed": 20260910,
+    "max_rounds_per_link": 3,
+    "freecad_backend": "canonical_try5_freecad_worker",
+    "fast_mode": "FAST_REPAIR_MODE",
+    "final_mode": "FINAL_AUDIT_MODE",
+    "tessellation_mm": 1.0,
+    "exact_tolerance_mm3": 0.000001,
+    "geometry_sample_count": 10000,
+    "metrics": [
+      "voxel_iou",
+      "normalized_chamfer",
+      "normalized_hd95",
+      "silhouette_iou_mean",
+      "semantic_f1",
+      "relation_f1",
+      "bicr",
+      "physical_floating_count",
+      "forbidden_fusion_count",
+      "jr3",
+      "gcfr",
+      "collision_event_count",
+      "intersection_volume_mm3",
+      "rollback_count"
+    ],
+    "split": {
+      "method": "sha256_rank_v1",
+      "salt": "try5b1-a1-20260910",
+      "development_count": 96,
+      "holdout_count": 32,
+      "holdout_evaluation_limit_per_condition": 1
+    },
+    "mechanical_thresholds": {
+      "artifact_valid": true,
+      "bicr_min": 1.0,
+      "physical_floating_count_max": 0,
+      "forbidden_fusion_count_max": 0,
+      "virtual_solid_count_max": 0,
+      "meaningless_patch_count_max": 0,
+      "relevant_jr3_min": 1.0,
+      "gcfr_regression_max": 0.0
+    }
+  },
+  "conditions": {
+    "C1_CONSTRAINED": {
+      "mechanical_policy": {
+        "protected_interface_cuts": true,
+        "preserve_frozen_scaffold": true,
+        "auto_attachment_closure": true,
+        "mechanical_rejection": true,
+        "rollback_on_failure": true
+      }
+    },
+    "C2_UNCONSTRAINED": {
+      "mechanical_policy": {
+        "protected_interface_cuts": false,
+        "preserve_frozen_scaffold": false,
+        "auto_attachment_closure": false,
+        "mechanical_rejection": false,
+        "rollback_on_failure": false
+      }
+    }
+  },
+  "allowed_condition_differences": [
+    "mechanical_policy.protected_interface_cuts",
+    "mechanical_policy.preserve_frozen_scaffold",
+    "mechanical_policy.auto_attachment_closure",
+    "mechanical_policy.mechanical_rejection",
+    "mechanical_policy.rollback_on_failure"
+  ],
+  "holdout_policy": {
+    "locked_before_candidate_generation": true,
+    "generator_access": false,
+    "repair_scheduler_access": false,
+    "one_shot_final_evaluation": true,
+    "post_holdout_tuning_forbidden": true
+  },
+  "gt_policy": {
+    "generator_access": false,
+    "repair_access": false,
+    "final_geometry_evaluator_only": true
+  }
+}
