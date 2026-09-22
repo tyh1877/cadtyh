@@ -1,0 +1,8 @@
+{
+  "status": "RESUME_FROZEN_RESPONSES_ONLY",
+  "timestamp_utc": "2026-09-22T16:50:14.187750+00:00",
+  "reason": "local validator incorrectly rejected legal lateral_offset_mm=0",
+  "new_model_calls": 0,
+  "response_edits": 0,
+  "manual_cad_edits": 0
+}

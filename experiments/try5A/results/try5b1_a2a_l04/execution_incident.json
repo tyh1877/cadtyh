@@ -1,0 +1,11 @@
+{
+  "incident_id": "A2A-EXEC-001",
+  "stage": "post_response_structured_validation",
+  "model_calls_completed": 2,
+  "symptom": "local validator rejected legal optional lateral_offset_mm=0",
+  "resolution": "allow zero only for lateral_offset_mm and resume from immutable saved responses",
+  "new_model_calls": 0,
+  "response_edits": 0,
+  "cad_repairs": 0,
+  "fairness_impact": "NONE"
+}

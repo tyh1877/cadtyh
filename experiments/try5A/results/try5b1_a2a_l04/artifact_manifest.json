@@ -1,0 +1,72 @@
+{
+  "schema_version": "robotcad_a2a_artifact_manifest_v1",
+  "freecad_version": "[\"1\", \"1\", \"1\", \"20260414 (Git shallow)\", \"Unknown\", \"2026/04/14 22:09:59\", \"(HEAD detached at 0108fd4b4)\", \"0108fd4b4850cc46e625b60e53cea7a7bbe69f8d\"]",
+  "artifacts": {
+    "STRUCTURED_QWEN.model.FCStd": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\STRUCTURED_QWEN\\canonical_build\\cad\\F2\\L04\\model.FCStd",
+      "sha256": "79f8eecef932e0d27f16106cac970d472c15ab3c67a473ea284e8b2e11650bb7",
+      "bytes": 15618
+    },
+    "STRUCTURED_QWEN.model.step": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\STRUCTURED_QWEN\\canonical_build\\cad\\F2\\L04\\model.step",
+      "sha256": "f85226d4cf6fba29cc2626e6b797612ca612c7e9a6169362d84c7bb41268a493",
+      "bytes": 56631
+    },
+    "STRUCTURED_QWEN.model.stl": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\STRUCTURED_QWEN\\canonical_build\\cad\\F2\\L04\\model.stl",
+      "sha256": "4bcea6b391e518027d14cb3dcd7e394d7975e5a454b574f26d89a11d865ca9b7",
+      "bytes": 152684
+    },
+    "STRUCTURED_QWEN.body_only.stl": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\STRUCTURED_QWEN\\canonical_build\\cad\\F2\\L04\\body_only.stl",
+      "sha256": "4d0929d9a50634715b5510fb6a7d1f2278197bad48b14cf799bf53fce697fd6e",
+      "bytes": 47484
+    },
+    "DIRECT_QWEN.model.FCStd": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\DIRECT_QWEN\\canonical_build\\cad\\F2\\L04\\model.FCStd",
+      "sha256": "7edae1b431ce2aabd003092583568732d2db4594d55b0ac796da1bc71ede999b",
+      "bytes": 53483
+    },
+    "DIRECT_QWEN.model.step": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\DIRECT_QWEN\\canonical_build\\cad\\F2\\L04\\model.step",
+      "sha256": "c3e1ea2851c0f59afdb11d01d457783e86986e16284f3f122ad417c3fe5eda02",
+      "bytes": 129013
+    },
+    "DIRECT_QWEN.model.stl": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\DIRECT_QWEN\\canonical_build\\cad\\F2\\L04\\model.stl",
+      "sha256": "b7649641d43339241a64ed15a0681da8b01aa51cf6eabf7770bba2abeb6eb9e5",
+      "bytes": 258984
+    },
+    "DIRECT_QWEN.body_only.stl": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\DIRECT_QWEN\\canonical_build\\cad\\F2\\L04\\body_only.stl",
+      "sha256": "02296d40f3008a136131c541cf46051457923c563dd9877bf31b1f4d3892b231",
+      "bytes": 108984
+    },
+    "direct_code": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\DIRECT_QWEN\\direct_body.py",
+      "sha256": "328b8b790eb05a00b19f790fd2d7341da1ae1e38cdf9c2845d3067ab0437cfd7",
+      "bytes": 767
+    },
+    "direct_brep": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\DIRECT_QWEN\\direct_body.brep",
+      "sha256": "e623919142f3f2d39183cf6cfecae3dee3734639ad3283b9c8c03e9733951f6f",
+      "bytes": 11208
+    },
+    "direct_body_result": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\DIRECT_QWEN\\direct_body_result.json",
+      "sha256": "2b8e2c4462410fe92cf3ec610d2bd577050af8a5cda7eccccc6df6dc935c3df3",
+      "bytes": 253
+    },
+    "mechanical_raw": {
+      "path": "experiments\\try5A\\artifacts\\try5b1_a2a_l04\\evaluation\\mechanical_raw.json",
+      "sha256": "8bcd4757ed9e81290f6716a322dabf521803606e40d99b328828d0507f4c52b9",
+      "bytes": 3253579
+    },
+    "structured_ir": {
+      "path": "experiments\\try5A\\results\\try5b1_a2a_l04\\STRUCTURED_QWEN\\structured_ir.json",
+      "sha256": "75b7164eaf4c1871b959bcbbaa203e17fa9975967a09316a7d3474c612a6811a",
+      "bytes": 1855
+    }
+  },
+  "formal_holdout_accessed": false
+}

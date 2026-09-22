@@ -1,0 +1,18 @@
+{
+  "experiment_id": "try5b1_a2a_same_model_structured_vs_direct_l04",
+  "status": "L04_DRY_RUN_COMPLETE_FORMAL_NOT_RUN",
+  "config_sha256": "60610d00bd8f53fb92bb0bb95b3db304d72234f25cba0772e0b6b89c15c7c6ea",
+  "shared_input_manifest_sha256": "aa5983cdd37a56456c071cdbfb73f70cc12f90171b18d86a769591747a10a7ac",
+  "requested_model": "qwen3.7-plus",
+  "returned_models": {
+    "STRUCTURED_QWEN": "qwen3.7-plus",
+    "DIRECT_QWEN": "qwen3.7-plus"
+  },
+  "runner_sha256": "af6af130232900d12cd57cc101c8d0941f26489dc9c10d43487429e1c2563283",
+  "worker_sha256": "8c0d32cf0c071c136dc2893cfdebc01eab753111c34dd5f1ed4d94f51aa267e2",
+  "direct_executor_sha256": "62143c7e04b4094cde630f3019f8ae7969c231628f4d0d360b91c4f749299985",
+  "mechanical_evaluator_sha256": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec",
+  "geometry_evaluator_sha256": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa",
+  "formal_holdout_accessed": false,
+  "formal_holdout_evaluation_count": 0
+}

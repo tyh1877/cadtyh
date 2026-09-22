@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "requested_conditions": 2,
+  "completed_conditions": 2,
+  "failed_conditions": 0,
+  "invalid_cad_attempts": 0,
+  "retry_count": 0,
+  "manual_intervention_count": 0,
+  "cases_per_condition": 96,
+  "formal_holdout_accessed": false
+}

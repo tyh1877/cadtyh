@@ -39,5 +39,12 @@
   "same_returned_model": true,
   "api_calls_per_condition": 1,
   "manual_intervention_count": 0,
-  "repair_calls": 0
+  "repair_calls": 0,
+  "cad_runtimes_seconds": {
+    "DIRECT_QWEN_BODY_CODE": 0.40464670001529157,
+    "STRUCTURED_QWEN": 2.03242639999371,
+    "DIRECT_QWEN": 2.1160369000281207
+  },
+  "mechanical_evaluator_runtime_seconds": 354.1814960000338,
+  "geometry_evaluator_runtime_seconds": 3.1291522999526933
 }

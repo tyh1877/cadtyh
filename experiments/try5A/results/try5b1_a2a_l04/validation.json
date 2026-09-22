@@ -1,0 +1,29 @@
+{
+  "schema_version": "robotcad_a2a_l04_validation_v1",
+  "status": "PASS",
+  "checks": {
+    "readiness_passed_before_calls": true,
+    "shared_user_evidence_identical": true,
+    "method_prompt_only_difference": true,
+    "shared_input_manifest_pass": true,
+    "one_successful_call_each": true,
+    "same_exact_requested_and_returned_model": true,
+    "same_seed_ceiling_timeout": true,
+    "token_usage_recorded": true,
+    "full_prompts_and_responses_saved": true,
+    "structured_ir_fresh_artifact_present": true,
+    "direct_output_has_no_structured_ir_fields": true,
+    "same_scaffold_policy": true,
+    "paired_metrics_complete": true,
+    "process_failures_zero": true,
+    "historical_frozen_is_context_only": true,
+    "holdout_unaccessed": true,
+    "runner_did_not_self_validate": true
+  },
+  "failed_checks": [],
+  "returned_model": [
+    "qwen3.7-plus"
+  ],
+  "formal_holdout_accessed": false,
+  "missing_required_files": []
+}

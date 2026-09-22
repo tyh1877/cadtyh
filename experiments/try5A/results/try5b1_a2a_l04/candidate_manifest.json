@@ -1,0 +1,31 @@
+{
+  "schema_version": "robotcad_a2a_l04_candidates_v1",
+  "frozen_nonpilot_root": "experiments/try5A/artifacts/try5a5/round3_verified/links",
+  "interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+  "conditions": {
+    "STRUCTURED_QWEN": {
+      "selected_candidate": "ONE_SHOT",
+      "pilot_fcstd": {
+        "L04": "experiments/try5A/artifacts/try5b1_a2a_l04/STRUCTURED_QWEN/canonical_build/cad/F2/L04/model.FCStd"
+      },
+      "mechanical_policy": {
+        "protected_interface_cuts": true,
+        "distal_clearance_cut": true,
+        "preserve_frozen_scaffold": true,
+        "auto_attachment_closure": false
+      }
+    },
+    "DIRECT_QWEN": {
+      "selected_candidate": "ONE_SHOT",
+      "pilot_fcstd": {
+        "L04": "experiments/try5A/artifacts/try5b1_a2a_l04/DIRECT_QWEN/canonical_build/cad/F2/L04/model.FCStd"
+      },
+      "mechanical_policy": {
+        "protected_interface_cuts": true,
+        "distal_clearance_cut": true,
+        "preserve_frozen_scaffold": true,
+        "auto_attachment_closure": false
+      }
+    }
+  }
+}

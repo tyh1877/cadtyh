@@ -1,0 +1,56 @@
+{
+  "schema_version": "robotcad_a2a_l04_result_summary_v1",
+  "status": "L04_DRY_RUN_COMPLETE_FORMAL_NOT_RUN",
+  "controlled_comparison": ["STRUCTURED_QWEN", "DIRECT_QWEN"],
+  "same_model": "qwen3.7-plus",
+  "model_system_fingerprint": null,
+  "facts": {
+    "shared_input_parity": "PASS",
+    "vlm_calls_per_condition": 1,
+    "repair_calls": 0,
+    "manual_intervention_count": 0,
+    "both_cad_builds_successful": true,
+    "both_bicr": 1.0,
+    "both_connected_solid_count": 1,
+    "structured_geometry_better_on_all_four_primary_geometry_metrics": true,
+    "direct_motion_and_collision_metrics_better": true,
+    "formal_holdout_accessed": false
+  },
+  "structured_qwen": {
+    "body_family": "central_web",
+    "input_tokens": 15750,
+    "output_tokens": 5591,
+    "latency_seconds": 98.98438979999628,
+    "final_voxel_iou": 0.16428295322767686,
+    "final_silhouette_iou": 0.34010841384101403,
+    "final_normalized_chamfer": 0.10778060512046653,
+    "final_normalized_hd95": 0.28419006951136067,
+    "jr3": 0.6666666666666666,
+    "gcfr": 0.6145833333333334,
+    "collision_events": 62,
+    "intersection_volume_mm3": 29359.74723809661,
+    "failed_configuration_count": 37
+  },
+  "direct_qwen": {
+    "output": "allowlisted FreeCAD Python body code",
+    "input_tokens": 15710,
+    "output_tokens": 3561,
+    "latency_seconds": 64.05987059994368,
+    "final_voxel_iou": 0.11351582549187339,
+    "final_silhouette_iou": 0.30385209873139746,
+    "final_normalized_chamfer": 0.1211905890060726,
+    "final_normalized_hd95": 0.3107348367748253,
+    "jr3": 1.0,
+    "gcfr": 0.7395833333333334,
+    "collision_events": 48,
+    "intersection_volume_mm3": 22067.229589988783,
+    "failed_configuration_count": 25
+  },
+  "fairness_confounds": [
+    "The provider returned the same qwen3.7-plus identifier but no system fingerprint or immutable backend snapshot.",
+    "Structured uses a constrained three-family compiler while Direct uses allowlisted general FreeCAD code; the treatment is structured IR plus compiler inductive bias, not IR text alone.",
+    "Actual input/output token usage differs because method prompts and responses differ, although ceilings and source evidence are equal.",
+    "Only one link and one stochastic call per condition were observed."
+  ],
+  "recommendation": "CONDITIONAL_GO_TO_3_LINK_A2A_WITH_FROZEN_PROMPTS_AND_BUNDLE_INTERPRETATION"
+}

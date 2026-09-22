@@ -1,0 +1,60 @@
+{
+  "schema_version": "robotcad_a1_dual_scope_geometry_v1",
+  "status": "PASS",
+  "evaluator_only": true,
+  "sample_count": 10000,
+  "seed": 20260923,
+  "gt_inputs": [
+    {
+      "link_id": "L04",
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-5-Wrist-Gripper.stl",
+      "sha256": "4148d290ad924a78fcd58f18ea0822000cda14e7eaaee01e8d69664d7cf1234a"
+    }
+  ],
+  "rows": [
+    {
+      "condition": "STRUCTURED_QWEN",
+      "link_id": "L04",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.1500081659317328,
+      "normalized_chamfer": 0.10425376599435458,
+      "normalized_hd95": 0.2841894390207523,
+      "silhouette_iou_mean": 0.33290861763338714,
+      "bbox_error_mm": 35.6973626801175,
+      "major_dimension_error_mm": 6.050794839859009
+    },
+    {
+      "condition": "STRUCTURED_QWEN",
+      "link_id": "L04",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.16428295322767686,
+      "normalized_chamfer": 0.10778060512046653,
+      "normalized_hd95": 0.28419006951136067,
+      "silhouette_iou_mean": 0.34010841384101403,
+      "bbox_error_mm": 40.24778590583345,
+      "major_dimension_error_mm": 19.549800157546997
+    },
+    {
+      "condition": "DIRECT_QWEN",
+      "link_id": "L04",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.11711234665960639,
+      "normalized_chamfer": 0.12225492360059836,
+      "normalized_hd95": 0.31045418145566356,
+      "silhouette_iou_mean": 0.30046824647416615,
+      "bbox_error_mm": 31.990621728202548,
+      "major_dimension_error_mm": 4.550794839859009
+    },
+    {
+      "condition": "DIRECT_QWEN",
+      "link_id": "L04",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.11351582549187339,
+      "normalized_chamfer": 0.1211905890060726,
+      "normalized_hd95": 0.3107348367748253,
+      "silhouette_iou_mean": 0.30385209873139746,
+      "bbox_error_mm": 33.22108462198491,
+      "major_dimension_error_mm": 10.047403573989868
+    }
+  ]
+}
