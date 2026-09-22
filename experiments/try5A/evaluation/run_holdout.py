@@ -3,16 +3,11 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import math
 import subprocess
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
-
-import numpy as np
-import trimesh
 
 ROOT = Path(__file__).resolve().parents[3]
 HERE = ROOT / "experiments/try5A"
@@ -21,8 +16,7 @@ sys.path.insert(0, str(HERE / "scripts"))
 
 from experiment_governance import acquire_holdout_lock, canonical_hash, dump_json, file_sha256, load_json  # noqa: E402
 from freecad_runtime import python_runtime  # noqa: E402
-from kinematics import canonical_q, fk, parse, rpy  # noqa: E402
-from run_try5b1 import metric, PILOTS  # noqa: E402
+from kinematics import canonical_q, fk, parse  # noqa: E402
 
 
 def verify_frozen_candidates(candidate_manifest):
@@ -63,46 +57,22 @@ def per_joint_configurations(fractions):
     return result
 
 
-def geometry_holdout(candidate_manifest, output_csv):
-    source = ROOT / "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/urdf/px100.urdf"
-    xml = ET.parse(source).getroot()
-    mapping = load_json(HERE / "protocol/source_id_mapping.json")["links"]
-    stable = {value: key for key, value in mapping.items()}
-    mesh_root = source.parent.parent / "meshes/meshes_px100"
-    rows = []
-    for condition, condition_data in candidate_manifest["conditions"].items():
-        for index, link_id in enumerate(PILOTS):
-            source_name = stable[link_id]
-            link = next(item for item in xml.findall("link") if item.attrib["name"] == source_name)
-            visual = link.find("visual")
-            origin = visual.find("origin")
-            xyz = np.asarray([float(value) for value in origin.attrib.get("xyz", "0 0 0").split()]) * 1000
-            rotation = np.asarray([float(value) for value in origin.attrib.get("rpy", "0 0 0").split()])
-            mesh_path = mesh_root / Path(visual.find("geometry/mesh").attrib["filename"]).name
-            gt = trimesh.load(mesh_path, force="mesh", process=False)
-            transform = np.eye(4)
-            transform[:3, :3] = rpy(rotation)
-            transform[:3, 3] = xyz
-            gt.apply_transform(transform)
-            prediction = trimesh.load(ROOT / condition_data["pilot_stl"][link_id], force="mesh", process=False)
-            rows.append({"condition": condition, "link_id": link_id, **metric(gt, prediction, 12000 + index)})
-    with Path(output_csv).open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
-        writer.writeheader()
-        writer.writerows(rows)
-    return rows
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--result-dir", required=True)
     parser.add_argument("--config", required=True)
+    parser.add_argument("--confirm-one-shot", action="store_true")
     args = parser.parse_args()
+    if not args.confirm_one_shot:
+        raise RuntimeError("formal holdout requires explicit --confirm-one-shot authorization")
     result_root = Path(args.result_dir).resolve()
     config_path = Path(args.config).resolve()
     config = load_json(config_path)
     split = load_json(result_root / "case_split.json")
     candidate = load_json(result_root / "candidate_manifest.json")
+    governance = load_json(result_root / "p1_governance_record.json")
+    if governance.get("status") != "PASS" or not governance.get("formal_holdout_ready"):
+        raise RuntimeError("P1 governance gate has not passed")
     checked_artifacts = verify_frozen_candidates(candidate)
     manifest = load_json(result_root / "manifest.json")
     if manifest["config_file_sha256"] != file_sha256(config_path):
@@ -123,6 +93,7 @@ def main():
         "holdout_configurations": holdout,
         "holdout_per_joint": per_joint,
         "output": str(result_root / "holdout_mechanical_metrics.json"),
+        "geometry_output": str(result_root / "holdout_geometry_metrics.csv"),
     }
     job_path = result_root / "holdout_evaluator_job.json"
     dump_json(job_path, job)
@@ -132,7 +103,11 @@ def main():
     if process.returncode:
         raise RuntimeError(process.stderr or process.stdout)
     mechanical = load_json(job["output"])
-    geometry_holdout(candidate, result_root / "holdout_geometry_metrics.csv")
+    geometry_process = subprocess.run([sys.executable, str(HERE / "evaluation/geometry_holdout_evaluator.py"), str(job_path)], cwd=ROOT, capture_output=True, text=True, timeout=3600)
+    (result_root / "holdout_geometry_stdout.txt").write_text(geometry_process.stdout, encoding="utf-8")
+    (result_root / "holdout_geometry_stderr.txt").write_text(geometry_process.stderr, encoding="utf-8")
+    if geometry_process.returncode:
+        raise RuntimeError(geometry_process.stderr or geometry_process.stdout)
 
     events = [{"condition": item["condition"], "case_count": item["configuration_count"], "followed_by_tuning": False, "lock_sha256": file_sha256(result_root / "holdout_evaluated.lock")} for item in mechanical["conditions"]]
     dump_json(result_root / "holdout_evaluation_log.json", {"events": events})
@@ -149,7 +124,7 @@ def main():
     for index, item in enumerate(mechanical["conditions"]):
         claims["claims"].append({"claim_id": f"holdout_denominator_{item['condition']}", "hard": True, "evidence_type": "computed", "artifact": "holdout_mechanical_metrics.json", "field": f"conditions.{index}.configuration_count", "operator": "eq", "expected": split["holdout"]["count"]})
     dump_json(result_root / "claim_ledger.json", claims)
-    manifest.update({"phase": "formal", "candidate_manifest_sha256": candidate["candidate_manifest_sha256"], "frozen_candidate_artifacts_verified": checked_artifacts, "holdout_lock_sha256": file_sha256(result_root / "holdout_evaluated.lock"), "holdout_worker_sha256": file_sha256(HERE / "evaluation/mechanical/freecad_holdout_evaluator.py"), "holdout_generator_invoked": False, "holdout_repair_invoked": False})
+    manifest.update({"phase": "formal", "candidate_manifest_sha256": candidate["candidate_manifest_sha256"], "frozen_candidate_artifacts_verified": checked_artifacts, "holdout_lock_sha256": file_sha256(result_root / "holdout_evaluated.lock"), "holdout_worker_sha256": file_sha256(HERE / "evaluation/mechanical/freecad_holdout_evaluator.py"), "holdout_geometry_evaluator_sha256": file_sha256(HERE / "evaluation/geometry_holdout_evaluator.py"), "holdout_generator_invoked": False, "holdout_repair_invoked": False})
     dump_json(result_root / "manifest.json", manifest)
     print(json.dumps({"status": "HOLDOUT_COMPLETE_PENDING_INDEPENDENT_VALIDATION", "lock": lock, "conditions": [{"condition": item["condition"], "gcfr": item["gcfr"]} for item in mechanical["conditions"]]}, indent=2))
 

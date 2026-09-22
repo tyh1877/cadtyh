@@ -1,0 +1,82 @@
+{
+  "schema_version": "robotcad_p1_analysis_plan_v1",
+  "experiment_id": "try5b1_a1_mechanical_constraint_ablation",
+  "phase": "formal_holdout_pre_registration",
+  "comparison": {
+    "unit": "the same frozen candidate proposal evaluated under paired C1_CONSTRAINED and C2_UNCONSTRAINED conditions",
+    "independent_variable": "mechanical constraint enforcement authority",
+    "conditions": ["C1_CONSTRAINED", "C2_UNCONSTRAINED"],
+    "paired_holdout_configuration_count": 32,
+    "per_joint_holdout_fractions": [0.0, 1.0]
+  },
+  "primary_outcomes": [
+    {
+      "metric": "bicr",
+      "level": "frozen candidate artifact",
+      "estimand": "C1 minus C2",
+      "expected_direction": "greater_or_equal"
+    },
+    {
+      "metric": "physical_floating_count",
+      "level": "frozen candidate artifact",
+      "estimand": "C1 minus C2",
+      "expected_direction": "less_or_equal"
+    },
+    {
+      "metric": "gcfr",
+      "level": "paired holdout configurations",
+      "estimand": "C1 minus C2",
+      "expected_direction": "greater_or_equal"
+    },
+    {
+      "metric": "collision_events",
+      "level": "paired holdout configurations and link pairs",
+      "estimand": "C1 minus C2",
+      "expected_direction": "less_or_equal"
+    },
+    {
+      "metric": "intersection_volume_mm3",
+      "level": "paired holdout configurations and link pairs",
+      "estimand": "C1 minus C2",
+      "expected_direction": "less_or_equal"
+    },
+    {
+      "metric": "per_joint_jr3",
+      "level": "paired joint endpoint sweeps",
+      "estimand": "C1 minus C2",
+      "expected_direction": "greater_or_equal"
+    }
+  ],
+  "secondary_outcomes": [
+    "voxel_iou",
+    "normalized_chamfer",
+    "normalized_hd95",
+    "silhouette_iou_mean",
+    "bbox_error_mm",
+    "major_dimension_error_mm"
+  ],
+  "analysis_rules": {
+    "report_condition_values_and_paired_differences": true,
+    "report_all_32_holdout_configurations": true,
+    "drop_failed_cases": false,
+    "failed_evaluation_counts_as_failure": true,
+    "missing_metric_imputation": "none",
+    "null_hypothesis_significance_test": "not_pre_registered_small_fixed_holdout_report_descriptive_effects",
+    "multiple_comparison_adjustment": "not_applicable_no_confirmatory_p_values",
+    "threshold_tuning_on_holdout": false,
+    "post_holdout_candidate_change": false,
+    "post_holdout_code_or_metric_change": false
+  },
+  "failure_policy": {
+    "lock_created_before_holdout_deserialization": true,
+    "crash_or_interrupt_consumes_attempt": true,
+    "delete_lock_to_retry": false,
+    "silent_retry": false,
+    "recovery": "freeze a new experiment version and document the invalidated attempt"
+  },
+  "interpretation_limits": [
+    "The 32 configurations are a deterministic holdout for this robot and are not an independent robot population.",
+    "Geometry outcomes cover the three pre-registered pilot links only.",
+    "Causal interpretation is limited to the declared mechanical-policy ablation with all recorded controls held fixed."
+  ]
+}

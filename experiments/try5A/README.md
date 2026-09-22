@@ -30,12 +30,24 @@ Only after the candidate manifest is frozen and formal execution is authorized,
 run the one-shot holdout evaluator followed by the independent formal validator:
 
 ```powershell
-.venv/Scripts/python.exe experiments/try5A/evaluation/run_holdout.py --result-dir experiments/try5A/results/try5b1_a1_development --config experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json
+.venv/Scripts/python.exe experiments/try5A/evaluation/run_holdout.py --result-dir experiments/try5A/results/try5b1_a1_development --config experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json --confirm-one-shot
 .venv/Scripts/python.exe experiments/try5A/evaluation/validate_experiment.py --phase formal --result-dir experiments/try5A/results/try5b1_a1_development --config experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json
 ```
 
 The holdout command creates an atomic lock before evaluation and refuses a
 second run. Do not use it for smoke tests.
+
+P1 freezes the formal analysis and runs a non-evaluating readiness gate. Run it
+from a committed and pushed implementation state:
+
+```powershell
+.venv/Scripts/python.exe experiments/try5A/evaluation/p1_readiness.py --result-dir experiments/try5A/results/try5b1_a1_development --config experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json --analysis-plan experiments/try5A/protocol/try5b1_a1_p1_analysis_plan.json
+```
+
+This fingerprints both runtimes, evaluator code, frozen CAD, and evaluator-only
+GT inputs without evaluating a holdout configuration. Formal execution also
+requires explicit user authorization and the `--confirm-one-shot` flag; a crash
+after lock creation consumes the attempt.
 
 Try-5A coarse reconstruction is frozen at Try-5A.5. See
 `../../try5A_frozen_spec.md` and revalidate the retained baseline with
