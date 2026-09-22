@@ -43,6 +43,23 @@ class P1GovernanceTests(unittest.TestCase):
             self.assertNotIn("run_try5b1", source)
             self.assertNotIn("freecad_link_refinement", source)
 
+    def test_geometry_protection_protocol_has_no_runtime_controller(self):
+        protocol = json.loads((HERE / "protocol/try5b1_a1_geometry_protection.json").read_text(encoding="utf-8"))
+        self.assertFalse(protocol["shared"]["runtime_rejection"])
+        self.assertFalse(protocol["shared"]["runtime_rollback"])
+        self.assertFalse(protocol["shared"]["post_generation_repair"])
+        for condition in protocol["conditions"].values():
+            self.assertEqual(set(condition), {"mechanical_geometry_policy"})
+            self.assertNotIn("mechanical_rejection", condition["mechanical_geometry_policy"])
+            self.assertNotIn("rollback_on_failure", condition["mechanical_geometry_policy"])
+
+    def test_declarative_metrics_are_excluded_from_main_analysis(self):
+        protocol = json.loads((HERE / "protocol/try5b1_a1_geometry_protection.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            set(protocol["shared"]["excluded_declarative_metrics"]),
+            {"swept_clearance_preserved", "forbidden_fusion_count", "virtual_solid_count", "meaningless_patch_count"},
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

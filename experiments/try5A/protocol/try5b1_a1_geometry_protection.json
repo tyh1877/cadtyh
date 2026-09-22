@@ -1,0 +1,63 @@
+{
+  "schema_version": "robotcad_a1_geometry_protection_v1",
+  "experiment_id": "try5b1_a1_mechanical_geometry_protection_ablation",
+  "protocol_source": "user-confirmed repository audit redesign",
+  "stage": "L04_PAIRED_DRY_RUN_ONLY",
+  "baseline_execution_commit": "1c50c96f5bb57da2c50b5bf6d32b309ee3ac054a",
+  "baseline_worker_sha256": "bd578d09e5be17a20097eda9bc3de328d67f2424f53bd3d529178ddd5c9371bf",
+  "shared": {
+    "pilot_links": ["L03", "L04", "L07"],
+    "dry_run_links": ["L04"],
+    "refinement_condition": "F2",
+    "body_family_specs": "experiments/try5A/results/try5b1/body_family_specs.json",
+    "visual_evidence_root": "experiments/try5A/results/try5b1/visual_evidence_packs",
+    "semantic_inventory_root": "experiments/try5A/results/try5b1/semantic_inventories/F2",
+    "mechanical_topology_root": "experiments/try5A/results/try5b1/mechanical_topology_graphs/F2",
+    "formal_image_root": "experiments/try5A/inputs/images",
+    "formal_image_views": ["front", "isometric", "left", "right", "top", "rear"],
+    "sanitized_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+    "configuration_source": "experiments/try5A/results/try5a5/coupled_configurations.json",
+    "development_split": "experiments/try5A/results/try5b1_a1_development/case_split.json",
+    "frozen_cad_ir_root": "experiments/try5A/results/try5a5/cad_ir/round3_verified",
+    "seed": 20260910,
+    "coupled_configuration_count": 96,
+    "relevant_joint_sweeps": ["J03"],
+    "geometry_sample_count": 10000,
+    "geometry_metrics": ["voxel_iou", "silhouette_iou_mean", "normalized_chamfer", "normalized_hd95", "bbox_error_mm", "major_dimension_error_mm"],
+    "geometry_scopes": ["refined_body_only", "final_assembled_link"],
+    "primary_mechanical_metrics": ["bicr", "connected_solid_count", "attachment_valid", "relevant_jr3", "gcfr", "exact_collision_events", "failed_configurations"],
+    "excluded_declarative_metrics": ["swept_clearance_preserved", "forbidden_fusion_count", "virtual_solid_count", "meaningless_patch_count"],
+    "generation_to_evaluation_flow": ["Generation", "Frozen Candidate", "Independent Evaluation"],
+    "runtime_rejection": false,
+    "runtime_rollback": false,
+    "post_generation_repair": false,
+    "gt_generator_access": false,
+    "formal_holdout_access": false
+  },
+  "conditions": {
+    "C1_CONSTRAINED": {
+      "mechanical_geometry_policy": {
+        "protected_interface_cuts": true,
+        "distal_clearance_cut": true,
+        "preserve_frozen_scaffold": true,
+        "auto_attachment_closure": true
+      }
+    },
+    "C2_UNPROTECTED": {
+      "mechanical_geometry_policy": {
+        "protected_interface_cuts": false,
+        "distal_clearance_cut": false,
+        "preserve_frozen_scaffold": false,
+        "auto_attachment_closure": false
+      }
+    }
+  },
+  "allowed_condition_differences": [
+    "mechanical_geometry_policy.protected_interface_cuts",
+    "mechanical_geometry_policy.distal_clearance_cut",
+    "mechanical_geometry_policy.preserve_frozen_scaffold",
+    "mechanical_geometry_policy.auto_attachment_closure"
+  ],
+  "stop_rule": "STOP_AFTER_L04_PAIRED_DRY_RUN"
+}

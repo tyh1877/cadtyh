@@ -53,10 +53,9 @@ def connect(body, interfaces, realization_type):
 
 DEFAULT_MECHANICAL_POLICY = {
     "protected_interface_cuts": True,
+    "distal_clearance_cut": True,
     "preserve_frozen_scaffold": True,
     "auto_attachment_closure": True,
-    "mechanical_rejection": True,
-    "rollback_on_failure": True,
 }
 
 
@@ -76,11 +75,15 @@ def refined_shape(link_id, family, schema, contracts, realization_type, frozen_s
     # Consume the exact frozen mating corridors.  This is a protected-interface
     # subtraction, not a redesign: frame, axis, clearance and mating geometry
     # all come from the frozen contract.
-    if policy["protected_interface_cuts"] and proximal and proximal["joint_type"] in ("revolute","continuous"):
+    proximal_cut_applicable=bool(proximal and proximal["joint_type"] in ("revolute","continuous"))
+    proximal_cut_executed=bool(policy["protected_interface_cuts"] and proximal_cut_applicable)
+    if proximal_cut_executed:
         axis=frozen.unit(proximal["axis_child"]); body=body.cut(frozen.cylinder_axis(3+proximal["clearance_mm"],26,[0,0,0],axis)).removeSplitter()
         mate_contract=dict(proximal); mate_contract["origin_xyz_mm"]=[0,0,0]; mate_contract["axis_parent"]=mate_contract["axis_child"]
         mate,_=frozen.joint_half(mate_contract,"parent"); body=body.cut(mate).removeSplitter()
-    for contract in (distal if policy["protected_interface_cuts"] else []):
+    distal_applicable=[contract for contract in distal if contract["joint_type"] in ("revolute","continuous")]
+    distal_cut_executed=bool(policy["distal_clearance_cut"] and distal_applicable)
+    for contract in (distal_applicable if policy["distal_clearance_cut"] else []):
         if contract["joint_type"] in ("revolute","continuous"):
             center=frozen.vec(contract["origin_xyz_mm"]); axis=frozen.unit(contract["axis_parent"])
             body=body.cut(frozen.cylinder_axis(10+contract["clearance_mm"],16,center,axis)).removeSplitter()
@@ -94,17 +97,27 @@ def refined_shape(link_id, family, schema, contracts, realization_type, frozen_s
     if policy["preserve_frozen_scaffold"]:
         group=frozen_scaffold.fuse(body).removeSplitter()
         assembly_strategy="FROZEN_SCAFFOLD"
+        attachment_trace="NOT_REACHED_SCAFFOLD_SELECTED"
     elif policy["auto_attachment_closure"]:
         group=connect(body,interfaces,realization_type)
         assembly_strategy="AUTO_ATTACHMENT_CLOSURE"
+        attachment_trace="EXECUTED"
     else:
         # Keep the exact same interface inputs, but do not add a connector or the
         # validated coarse scaffold.  Disconnected solids remain visible to BICR.
         group=Part.makeCompound([body]+[shape for shape in interfaces if shape is not None and not shape.isNull()])
         assembly_strategy="NATURAL_CONTACT_ONLY"
+        attachment_trace="SKIPPED_BY_POLICY"
+    execution_trace={
+        "protected_interface_cuts":"EXECUTED" if proximal_cut_executed else ("SKIPPED_BY_POLICY" if proximal_cut_applicable else "NOT_APPLICABLE"),
+        "distal_clearance_cut":"EXECUTED" if distal_cut_executed else ("SKIPPED_BY_POLICY" if distal_applicable else "NOT_APPLICABLE"),
+        "frozen_scaffold_preservation":"EXECUTED" if policy["preserve_frozen_scaffold"] else "SKIPPED_BY_POLICY",
+        "auto_attachment_closure":attachment_trace,
+    }
     return {**compiled,"group":group,"interface_signatures":interface_hashes,"solid_count":len(group.Solids),
             "attachment_valid":len(group.Solids)==1,"group_valid":group.isValid() and not group.isNull(),
-            "mechanical_policy":policy,"assembly_strategy":assembly_strategy,"raw_body_signature":raw_body_signature}
+            "mechanical_policy":policy,"assembly_strategy":assembly_strategy,"raw_body_signature":raw_body_signature,
+            "execution_trace":execution_trace}
 
 
 def export(link_id, condition, built, root):
@@ -114,10 +127,12 @@ def export(link_id, condition, built, root):
     group=doc.addObject("Part::Feature","RigidGroup"); group.Shape=built["group"]
     body.addProperty("App::PropertyString","ExecutedFamily"); body.ExecutedFamily=built["executed_family"]
     body.addProperty("App::PropertyStringList","SemanticFeatures"); body.SemanticFeatures=built["features"]
-    doc.recompute(); fcstd=folder/"model.FCStd"; step=folder/"model.step"; stl=folder/"model.stl"
-    doc.saveAs(str(fcstd)); Part.export([group],str(step)); Mesh.export([group],str(stl)); App.closeDocument(doc.Name)
-    return {"fcstd":str(fcstd),"step":str(step),"stl":str(stl),"sha256":{p.suffix:sha(p) for p in (fcstd,step,stl)},
-            "volume_mm3":float(built["group"].Volume),"bbox":frozen.bounds(built["group"])}
+    doc.recompute(); fcstd=folder/"model.FCStd"; step=folder/"model.step"; stl=folder/"model.stl"; body_stl=folder/"body_only.stl"
+    doc.saveAs(str(fcstd)); Part.export([group],str(step)); Mesh.export([group],str(stl)); Mesh.export([body],str(body_stl)); App.closeDocument(doc.Name)
+    reopened=App.openDocument(str(fcstd)); reopened_body=reopened.getObject("BodyFamily"); reopened_group=reopened.getObject("RigidGroup")
+    reopen={"body_valid":bool(reopened_body and not reopened_body.Shape.isNull() and reopened_body.Shape.isValid()),"group_valid":bool(reopened_group and not reopened_group.Shape.isNull() and reopened_group.Shape.isValid())}; App.closeDocument(reopened.Name)
+    return {"fcstd":str(fcstd),"step":str(step),"stl":str(stl),"body_stl":str(body_stl),"sha256":{p.name:sha(p) for p in (fcstd,step,stl,body_stl)},
+            "volume_mm3":float(built["group"].Volume),"bbox":frozen.bounds(built["group"]),"body_volume_mm3":float(built["shape"].Volume),"body_bbox":frozen.bounds(built["shape"]),"reopen":reopen}
 
 
 def rectangular_attachment_closure(body, interfaces):
@@ -233,8 +248,9 @@ def main():
     if job.get("mode")=="full_repair":
         full_robot_repair(job); return
     classification=load(base/"link_realization_classification.json"); physical=[x["link_id"] for x in classification if x["realization_type"]!="virtual_frame"]
-    condition_shapes={}; builds=[]; policy=job.get("mechanical_policy",DEFAULT_MECHANICAL_POLICY)
-    for condition in ("F0","F1","F2"):
+    condition_shapes={}; builds=[]; policy=job.get("mechanical_geometry_policy",job.get("mechanical_policy",DEFAULT_MECHANICAL_POLICY)); conditions=job.get("conditions",["F0","F1","F2"])
+    if not conditions or any(condition not in ("F0","F1","F2") for condition in conditions): raise ValueError("conditions must be a non-empty subset of F0/F1/F2")
+    for condition in conditions:
         shapes={}
         for link_id in physical:
             ir=load(base/"cad_ir/round3_verified"/(link_id+".json"))
@@ -248,15 +264,17 @@ def main():
                 scaffold=frozen.link_shape(ir["link_spec"],contracts,ir["body_scale"],ir.get("repair_state"))["group"]
                 built=refined_shape(link_id,spec["body_family"],spec["schema"],contracts,ir["link_spec"]["realization_type"],scaffold,policy)
                 shapes[link_id]=built["group"]; artifact=export(link_id,condition,built,job["cad_root"])
-                builds.append({"condition":condition,"link_id":link_id,"planned_family":spec["body_family"],"executed_family":built["executed_family"],"artifact":artifact,"attachment_valid":built["attachment_valid"],"solid_count":built["solid_count"],"group_valid":built["group_valid"],"features":built["features"],"interface_signatures":built["interface_signatures"],"mechanical_policy":built["mechanical_policy"],"assembly_strategy":built["assembly_strategy"],"raw_body_signature":built["raw_body_signature"]})
+                builds.append({"condition":condition,"link_id":link_id,"planned_family":spec["body_family"],"executed_family":built["executed_family"],"artifact":artifact,"attachment_valid":built["attachment_valid"],"solid_count":built["solid_count"],"group_valid":built["group_valid"],"features":built["features"],"interface_signatures":built["interface_signatures"],"mechanical_geometry_policy":built["mechanical_policy"],"assembly_strategy":built["assembly_strategy"],"raw_body_signature":built["raw_body_signature"],"execution_trace":built["execution_trace"]})
         condition_shapes[condition]=shapes
-    assemblies=[{"condition":condition,**frozen.save_assembly(job["assembly_root"],condition,condition_shapes[condition],job["canonical_config"],physical)} for condition in ("F0","F1","F2")]
+    assemblies=[{"condition":condition,**frozen.save_assembly(job["assembly_root"],condition,condition_shapes[condition],job["canonical_config"],physical)} for condition in conditions]
     previous=load(job["output"]) if job.get("reuse_exact") and Path(job["output"]).is_file() else None
-    if previous:
+    if not job.get("evaluation_enabled",True):
+        audits=[]
+    elif previous:
         audits=previous["mechanical_exact"]
     else:
         audits=[]
-        for condition in ("F1","F2"):
+        for condition in [value for value in conditions if value != "F0"]:
             start=time.perf_counter(); rows=[]; flags=[]
             for config in job["coupled"]:
                 current,ok=frozen.exact_config(config,condition_shapes[condition],contracts,physical); rows.extend(current); flags.append(ok)

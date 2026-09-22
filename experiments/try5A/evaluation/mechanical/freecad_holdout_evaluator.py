@@ -43,12 +43,17 @@ def evaluate_condition(condition, candidate, job, contracts, physical):
         shapes[link_id] = load_rigid_group(path)
     rows = []
     flags = []
-    for config in job["holdout_configurations"]:
+    failed_configuration_ids = []
+    configurations=job.get("configurations",job.get("holdout_configurations",[]))
+    per_joint_configurations=job.get("per_joint",job.get("holdout_per_joint",{}))
+    for config in configurations:
         current, ok = exact.exact_config(config, shapes, contracts, physical)
         rows.extend(current)
         flags.append(ok)
+        if not ok:
+            failed_configuration_ids.append(config["config_id"])
     per_joint = []
-    for joint_id, configurations in job["holdout_per_joint"].items():
+    for joint_id, configurations in per_joint_configurations.items():
         joint_flags = []
         collision_rows = []
         for config in configurations:
@@ -63,6 +68,7 @@ def evaluate_condition(condition, candidate, job, contracts, physical):
         "configuration_count": len(flags),
         "valid_configurations": sum(flags),
         "invalid_configurations": invalid,
+        "failed_configuration_ids": failed_configuration_ids,
         "gcfr": sum(flags) / len(flags),
         "collision_events": sum(row["classification"] in ("ADJACENT_UNINTENDED_COLLISION", "NONADJACENT_COLLISION") for row in rows),
         "intersection_volume_mm3": sum(row["exact_common_mm3"] for row in rows if row["classification"] in ("ADJACENT_UNINTENDED_COLLISION", "NONADJACENT_COLLISION")),
@@ -78,7 +84,7 @@ def main():
     classification = load(ROOT / "experiments/try5A/results/try5a5/link_realization_classification.json")
     physical = [item["link_id"] for item in classification if item["realization_type"] != "virtual_frame"]
     results = [evaluate_condition(condition, candidate, job, contracts, physical) for condition in candidate["conditions"]]
-    payload = {"status": "PASS", "mode": "ONE_SHOT_HOLDOUT_EXACT", "generator_invoked": False, "repair_invoked": False, "conditions": results}
+    payload = {"status": "PASS", "mode": job.get("mode","ONE_SHOT_HOLDOUT_EXACT"), "generator_invoked": False, "repair_invoked": False, "conditions": results}
     Path(job["output"]).write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"status": "PASS", "conditions": [{"condition": item["condition"], "gcfr": item["gcfr"]} for item in results]}, indent=2))
 

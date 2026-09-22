@@ -12,7 +12,7 @@ Before a formal matrix:
 1. Put all shared variables and condition policies in one tracked configuration. Do not encode condition differences only in Python branches.
 2. Materialize a deterministic development/holdout split before candidate generation. Generator and repair code may consume development IDs only; holdout is one-shot final evaluation.
 3. Run the condition-parity audit. Any difference outside the declared self-variable is a hard stop.
-4. Use `CandidateController` for runtime accept/reject/rollback decisions. A narrative or prewritten rollback record is not execution evidence.
+4. Use `CandidateController` only when the pre-registered protocol actually has runtime accept/reject/rollback decisions. For a generation-then-independent-evaluation ablation, do not introduce a controller: freeze every generated candidate and record failures without repair, deletion, acceptance filtering, or rerun.
 5. Keep FAST and Exact evaluators active in every condition. An unconstrained condition disables their rejection authority, not measurement.
 6. Preserve all cases in failure accounting, including build, export, reopen, parse, and evaluator failures.
 

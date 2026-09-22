@@ -26,15 +26,14 @@ def main():
     constrained = refined_shape("L03", "central_web", schema, contracts, ir["link_spec"]["realization_type"], scaffold)
     unconstrained = refined_shape("L03", "central_web", schema, contracts, ir["link_spec"]["realization_type"], scaffold, {
         "protected_interface_cuts": False,
+        "distal_clearance_cut": False,
         "preserve_frozen_scaffold": False,
         "auto_attachment_closure": False,
-        "mechanical_rejection": False,
-        "rollback_on_failure": False,
     })
     payload = {
-        "status": "PASS" if constrained["assembly_strategy"] == "FROZEN_SCAFFOLD" and unconstrained["assembly_strategy"] == "NATURAL_CONTACT_ONLY" and constrained["group"].hashCode() != unconstrained["group"].hashCode() else "FAIL",
-        "constrained": {"assembly_strategy": constrained["assembly_strategy"], "solid_count": constrained["solid_count"], "attachment_valid": constrained["attachment_valid"], "shape_hash": constrained["group"].hashCode()},
-        "unconstrained": {"assembly_strategy": unconstrained["assembly_strategy"], "solid_count": unconstrained["solid_count"], "attachment_valid": unconstrained["attachment_valid"], "shape_hash": unconstrained["group"].hashCode()},
+        "status": "PASS" if constrained["assembly_strategy"] == "FROZEN_SCAFFOLD" and unconstrained["assembly_strategy"] == "NATURAL_CONTACT_ONLY" and constrained["group"].hashCode() != unconstrained["group"].hashCode() and constrained["raw_body_signature"] == unconstrained["raw_body_signature"] else "FAIL",
+        "constrained": {"assembly_strategy": constrained["assembly_strategy"], "solid_count": constrained["solid_count"], "attachment_valid": constrained["attachment_valid"], "shape_hash": constrained["group"].hashCode(), "execution_trace": constrained["execution_trace"]},
+        "unconstrained": {"assembly_strategy": unconstrained["assembly_strategy"], "solid_count": unconstrained["solid_count"], "attachment_valid": unconstrained["attachment_valid"], "shape_hash": unconstrained["group"].hashCode(), "execution_trace": unconstrained["execution_trace"]},
     }
     print(json.dumps(payload, indent=2))
     return 0 if payload["status"] == "PASS" else 1
