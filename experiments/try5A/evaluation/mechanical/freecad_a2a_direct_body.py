@@ -71,9 +71,14 @@ def main():
     job = load(sys.argv[1]); mode = job["mode"]; source_shape = f0_shape(job["f0_fcstd"])
     if mode == "export_f0":
         source_shape.exportBrep(job["output_brep"])
-        Part.export([source_shape], job["output_step"])
+        document = FreeCAD.newDocument("A2A_F0_Export")
+        feature = document.addObject("Part::Feature", "RigidGroup")
+        feature.Shape = source_shape
+        document.recompute()
+        Part.export([feature], job["output_step"])
         import Mesh
-        Mesh.export([source_shape], job["output_stl"])
+        Mesh.export([feature], job["output_stl"])
+        FreeCAD.closeDocument(document.Name)
         payload = {"status": "PASS", "mode": mode, "shape": shape_record(source_shape)}
     elif mode == "execute_direct_body":
         code = Path(job["code_path"]).read_text(encoding="utf-8")
