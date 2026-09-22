@@ -1,0 +1,29 @@
+{
+  "schema_version": "robotcad_a1_protection_effect_summary_v1",
+  "status": "AUDIT_COMPLETE_FORMAL_NOT_RUN",
+  "links": [
+    "L03",
+    "L04",
+    "L07"
+  ],
+  "operation_count": 15,
+  "effect_status_counts": {
+    "EXECUTED_BUT_NO_OP": 5,
+    "GEOMETRY_EFFECTIVE": 3,
+    "NOT_APPLICABLE": 7
+  },
+  "cut_effective_links": [],
+  "protected_cuts_effective_on_at_least_2_of_3_links": false,
+  "scaffold_effective_links": [
+    "L03",
+    "L04",
+    "L07"
+  ],
+  "frozen_scaffold_is_main_effective_mechanism": true,
+  "auto_attachment_closure_executed_links": [],
+  "recommendation": "REFRAME_AS_SCAFFOLD_ABLATION",
+  "mechanical_96_case_evaluation_run": false,
+  "gt_accessed": false,
+  "formal_holdout_accessed": false,
+  "formal_three_link_run_executed": false
+}

@@ -1,0 +1,16 @@
+link_id,operation,applicable,executed,geometry_changed,effect_status,brep_representation_changed,symmetric_difference_volume_mm3,volume_delta_mm3,solid_count_delta,topology_count_changed
+L03,proximal_interface_protected_cut,True,True,False,EXECUTED_BUT_NO_OP,True,0.0,0.0,0,False
+L03,proximal_mating_envelope_cut,True,True,False,EXECUTED_BUT_NO_OP,False,0.0,0.0,0,False
+L03,distal_rotary_interface_clearance_cut,True,True,False,EXECUTED_BUT_NO_OP,False,0.0,0.0,0,False
+L03,frozen_scaffold_preservation_fusion,True,True,True,GEOMETRY_EFFECTIVE,True,11448.219661027704,11448.219761913508,0,True
+L03,auto_attachment_closure,False,False,False,NOT_APPLICABLE,False,0.0,0.0,0,False
+L04,proximal_interface_protected_cut,True,True,False,EXECUTED_BUT_NO_OP,False,0.0,0.0,0,False
+L04,proximal_mating_envelope_cut,True,True,False,EXECUTED_BUT_NO_OP,False,0.0,0.0,0,False
+L04,distal_rotary_interface_clearance_cut,False,False,False,NOT_APPLICABLE,False,0.0,0.0,0,False
+L04,frozen_scaffold_preservation_fusion,True,True,True,GEOMETRY_EFFECTIVE,True,6567.307177104259,6567.30658565398,0,True
+L04,auto_attachment_closure,False,False,False,NOT_APPLICABLE,False,0.0,0.0,0,False
+L07,proximal_interface_protected_cut,False,False,False,NOT_APPLICABLE,False,0.0,0.0,0,False
+L07,proximal_mating_envelope_cut,False,False,False,NOT_APPLICABLE,False,0.0,0.0,0,False
+L07,distal_rotary_interface_clearance_cut,False,False,False,NOT_APPLICABLE,False,0.0,0.0,0,False
+L07,frozen_scaffold_preservation_fusion,True,True,True,GEOMETRY_EFFECTIVE,True,1321.4811352228803,1321.4811352228808,0,True
+L07,auto_attachment_closure,False,False,False,NOT_APPLICABLE,False,0.0,0.0,0,False

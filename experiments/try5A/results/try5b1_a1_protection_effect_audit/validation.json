@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checks": {
+    "three_links": true,
+    "five_operations_per_link": true,
+    "trace_fields_complete": true,
+    "status_derived_from_geometry": true,
+    "input_freeze_pass": true,
+    "no_mechanical_evaluation": true,
+    "no_gt_access": true,
+    "no_formal_holdout_access": true,
+    "exactly_one_recommendation": true
+  }
+}

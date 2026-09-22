@@ -1,0 +1,346 @@
+{
+  "schema_version": "robotcad_protection_trace_v1",
+  "link_id": "L04",
+  "f2_spec": {
+    "body_family": "compound_profile_housing",
+    "schema": {
+      "span_mm": 63,
+      "width_mm": 8,
+      "height_mm": 23,
+      "major_recess": true
+    }
+  },
+  "policy": {
+    "protected_interface_cuts": true,
+    "distal_clearance_cut": true,
+    "preserve_frozen_scaffold": true,
+    "auto_attachment_closure": true
+  },
+  "operations": [
+    {
+      "operation": "proximal_interface_protected_cut",
+      "applicable": true,
+      "executed": true,
+      "shape_hash_before": "0dcb5843b393c82c7a8003bcc6e24afe4ed3c76b253d4e55c07b5ff4e1362cf7",
+      "shape_hash_after": "0dcb5843b393c82c7a8003bcc6e24afe4ed3c76b253d4e55c07b5ff4e1362cf7",
+      "brep_representation_changed": false,
+      "volume_before_mm3": 8045.031999999999,
+      "volume_after_mm3": 8045.031999999999,
+      "volume_delta_mm3": 0.0,
+      "removed_volume_mm3": 0.0,
+      "added_volume_mm3": 0.0,
+      "symmetric_difference_volume_mm3": 0.0,
+      "solid_count_before": 1,
+      "solid_count_after": 1,
+      "solid_count_delta": 0,
+      "face_count_before": 19,
+      "face_count_after": 19,
+      "edge_count_before": 48,
+      "edge_count_after": 48,
+      "vertex_count_before": 32,
+      "vertex_count_after": 32,
+      "topology_count_changed": false,
+      "bbox_before": {
+        "min_mm": [
+          11.8,
+          -4.96,
+          -13.34
+        ],
+        "max_mm": [
+          63.0,
+          4.960000000000001,
+          13.34
+        ],
+        "size_mm": [
+          51.2,
+          9.920000000000002,
+          26.68
+        ]
+      },
+      "bbox_after": {
+        "min_mm": [
+          11.8,
+          -4.96,
+          -13.34
+        ],
+        "max_mm": [
+          63.0,
+          4.960000000000001,
+          13.34
+        ],
+        "size_mm": [
+          51.2,
+          9.920000000000002,
+          26.68
+        ]
+      },
+      "geometry_changed": false,
+      "effect_status": "EXECUTED_BUT_NO_OP"
+    },
+    {
+      "operation": "proximal_mating_envelope_cut",
+      "applicable": true,
+      "executed": true,
+      "shape_hash_before": "0dcb5843b393c82c7a8003bcc6e24afe4ed3c76b253d4e55c07b5ff4e1362cf7",
+      "shape_hash_after": "0dcb5843b393c82c7a8003bcc6e24afe4ed3c76b253d4e55c07b5ff4e1362cf7",
+      "brep_representation_changed": false,
+      "volume_before_mm3": 8045.031999999999,
+      "volume_after_mm3": 8045.031999999999,
+      "volume_delta_mm3": 0.0,
+      "removed_volume_mm3": 0.0,
+      "added_volume_mm3": 0.0,
+      "symmetric_difference_volume_mm3": 0.0,
+      "solid_count_before": 1,
+      "solid_count_after": 1,
+      "solid_count_delta": 0,
+      "face_count_before": 19,
+      "face_count_after": 19,
+      "edge_count_before": 48,
+      "edge_count_after": 48,
+      "vertex_count_before": 32,
+      "vertex_count_after": 32,
+      "topology_count_changed": false,
+      "bbox_before": {
+        "min_mm": [
+          11.8,
+          -4.96,
+          -13.34
+        ],
+        "max_mm": [
+          63.0,
+          4.960000000000001,
+          13.34
+        ],
+        "size_mm": [
+          51.2,
+          9.920000000000002,
+          26.68
+        ]
+      },
+      "bbox_after": {
+        "min_mm": [
+          11.8,
+          -4.96,
+          -13.34
+        ],
+        "max_mm": [
+          63.0,
+          4.960000000000001,
+          13.34
+        ],
+        "size_mm": [
+          51.2,
+          9.920000000000002,
+          26.68
+        ]
+      },
+      "geometry_changed": false,
+      "effect_status": "EXECUTED_BUT_NO_OP"
+    },
+    {
+      "operation": "distal_rotary_interface_clearance_cut",
+      "applicable": false,
+      "executed": false,
+      "shape_hash_before": "0dcb5843b393c82c7a8003bcc6e24afe4ed3c76b253d4e55c07b5ff4e1362cf7",
+      "shape_hash_after": "0dcb5843b393c82c7a8003bcc6e24afe4ed3c76b253d4e55c07b5ff4e1362cf7",
+      "brep_representation_changed": false,
+      "volume_before_mm3": 8045.031999999999,
+      "volume_after_mm3": 8045.031999999999,
+      "volume_delta_mm3": 0.0,
+      "removed_volume_mm3": 0.0,
+      "added_volume_mm3": 0.0,
+      "symmetric_difference_volume_mm3": 0.0,
+      "solid_count_before": 1,
+      "solid_count_after": 1,
+      "solid_count_delta": 0,
+      "face_count_before": 19,
+      "face_count_after": 19,
+      "edge_count_before": 48,
+      "edge_count_after": 48,
+      "vertex_count_before": 32,
+      "vertex_count_after": 32,
+      "topology_count_changed": false,
+      "bbox_before": {
+        "min_mm": [
+          11.8,
+          -4.96,
+          -13.34
+        ],
+        "max_mm": [
+          63.0,
+          4.960000000000001,
+          13.34
+        ],
+        "size_mm": [
+          51.2,
+          9.920000000000002,
+          26.68
+        ]
+      },
+      "bbox_after": {
+        "min_mm": [
+          11.8,
+          -4.96,
+          -13.34
+        ],
+        "max_mm": [
+          63.0,
+          4.960000000000001,
+          13.34
+        ],
+        "size_mm": [
+          51.2,
+          9.920000000000002,
+          26.68
+        ]
+      },
+      "geometry_changed": false,
+      "effect_status": "NOT_APPLICABLE"
+    },
+    {
+      "operation": "frozen_scaffold_preservation_fusion",
+      "applicable": true,
+      "executed": true,
+      "shape_hash_before": "0dcb5843b393c82c7a8003bcc6e24afe4ed3c76b253d4e55c07b5ff4e1362cf7",
+      "shape_hash_after": "2d787fd44d55e8b9e6e19ca33473266468d043fcdbc04d3ca3ef334f0b104362",
+      "brep_representation_changed": true,
+      "volume_before_mm3": 8045.031999999999,
+      "volume_after_mm3": 14612.338585653979,
+      "volume_delta_mm3": 6567.30658565398,
+      "removed_volume_mm3": 0.0,
+      "added_volume_mm3": 6567.307177104259,
+      "symmetric_difference_volume_mm3": 6567.307177104259,
+      "solid_count_before": 1,
+      "solid_count_after": 1,
+      "solid_count_delta": 0,
+      "face_count_before": 19,
+      "face_count_after": 50,
+      "edge_count_before": 48,
+      "edge_count_after": 123,
+      "vertex_count_before": 32,
+      "vertex_count_after": 82,
+      "topology_count_changed": true,
+      "bbox_before": {
+        "min_mm": [
+          11.8,
+          -4.96,
+          -13.34
+        ],
+        "max_mm": [
+          63.0,
+          4.960000000000001,
+          13.34
+        ],
+        "size_mm": [
+          51.2,
+          9.920000000000002,
+          26.68
+        ]
+      },
+      "bbox_after": {
+        "min_mm": [
+          -11.5,
+          -9.0,
+          -13.34
+        ],
+        "max_mm": [
+          65.0,
+          9.0,
+          13.34
+        ],
+        "size_mm": [
+          76.5,
+          18.0,
+          26.68
+        ]
+      },
+      "geometry_changed": true,
+      "effect_status": "GEOMETRY_EFFECTIVE"
+    },
+    {
+      "operation": "auto_attachment_closure",
+      "applicable": false,
+      "executed": false,
+      "shape_hash_before": "2d787fd44d55e8b9e6e19ca33473266468d043fcdbc04d3ca3ef334f0b104362",
+      "shape_hash_after": "2d787fd44d55e8b9e6e19ca33473266468d043fcdbc04d3ca3ef334f0b104362",
+      "brep_representation_changed": false,
+      "volume_before_mm3": 14612.338585653979,
+      "volume_after_mm3": 14612.338585653979,
+      "volume_delta_mm3": 0.0,
+      "removed_volume_mm3": 0.0,
+      "added_volume_mm3": 0.0,
+      "symmetric_difference_volume_mm3": 0.0,
+      "solid_count_before": 1,
+      "solid_count_after": 1,
+      "solid_count_delta": 0,
+      "face_count_before": 50,
+      "face_count_after": 50,
+      "edge_count_before": 123,
+      "edge_count_after": 123,
+      "vertex_count_before": 82,
+      "vertex_count_after": 82,
+      "topology_count_changed": false,
+      "bbox_before": {
+        "min_mm": [
+          -11.5,
+          -9.0,
+          -13.34
+        ],
+        "max_mm": [
+          65.0,
+          9.0,
+          13.34
+        ],
+        "size_mm": [
+          76.5,
+          18.0,
+          26.68
+        ]
+      },
+      "bbox_after": {
+        "min_mm": [
+          -11.5,
+          -9.0,
+          -13.34
+        ],
+        "max_mm": [
+          65.0,
+          9.0,
+          13.34
+        ],
+        "size_mm": [
+          76.5,
+          18.0,
+          26.68
+        ]
+      },
+      "geometry_changed": false,
+      "effect_status": "NOT_APPLICABLE"
+    }
+  ],
+  "final_shape": {
+    "shape_sha256": "2d787fd44d55e8b9e6e19ca33473266468d043fcdbc04d3ca3ef334f0b104362",
+    "volume_mm3": 14612.338585653979,
+    "solid_count": 1,
+    "face_count": 50,
+    "edge_count": 123,
+    "vertex_count": 82,
+    "bbox": {
+      "min_mm": [
+        -11.5,
+        -9.0,
+        -13.34
+      ],
+      "max_mm": [
+        65.0,
+        9.0,
+        13.34
+      ],
+      "size_mm": [
+        76.5,
+        18.0,
+        26.68
+      ]
+    }
+  }
+}

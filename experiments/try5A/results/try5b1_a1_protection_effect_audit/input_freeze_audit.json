@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": {
+    "f2_schema": true,
+    "interface_contract": true,
+    "sanitized_urdf": true,
+    "seed": true,
+    "input_images": true,
+    "visual_evidence": true,
+    "semantic_inventory": true,
+    "mechanical_topology": true,
+    "exact_evaluator": true
+  },
+  "formal_holdout_lock_exists": false
+}

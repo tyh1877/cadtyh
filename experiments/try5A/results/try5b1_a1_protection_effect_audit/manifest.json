@@ -1,0 +1,12 @@
+{
+  "experiment_id": "try5b1_a1_protection_effect_audit",
+  "config_path": "experiments/try5A/protocol/try5b1_a1_protection_effect_audit.json",
+  "config_sha256": "76a026214175e96f595ff94da3247ed4e7d196eb9834ab573a8ea12c8331ee63",
+  "runner_sha256": "11a6382be936189fbbe8af9a29b4b57979de5910e7c5f6cf67d7a117db3d3e63",
+  "worker_sha256": "4b302f55b97f08762637d80e0fb1ee5f81be3c6647f394aed6a226b41e79b664",
+  "input_freeze_sha256": "fb1bac672309075744f8a4d8a9af235ab0b6f38b2051dfd02d4449ff492a89f6",
+  "worker_result_sha256": "4e914e8bf201f3ea159974fdb5393e71a56bf92cc6f3ae29e53957aea8453664",
+  "summary_sha256": "95f7bdd1645e659e5a4daae81dd0d95d723df0ddfc9e2f89a97e0789c845b06a",
+  "mechanical_evaluation_run": false,
+  "formal_holdout_accessed": false
+}
