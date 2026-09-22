@@ -1,0 +1,35 @@
+{
+  "schema_version": "robotcad_a2a_readiness_v1",
+  "status": "PASS",
+  "model_config": {
+    "provider": "alibaba_model_studio",
+    "api_key": "<configured>",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "model": "qwen3.7-plus",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 300.0,
+    "max_retries": 0,
+    "config_version": "1.0",
+    "shared_by": [
+      "direct_frontier_mllm",
+      "cadir_simplecad"
+    ]
+  },
+  "seed": 20260923,
+  "budget": {
+    "max_vlm_calls_per_condition": 1,
+    "max_refinement_rounds": 0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 300.0,
+    "max_retries": 0,
+    "manual_intervention": 0
+  },
+  "same_shared_user_evidence": true,
+  "method_prompt_is_only_prompt_difference": true,
+  "formal_holdout_accessed": false,
+  "api_calls": 0,
+  "config_sha256": "60610d00bd8f53fb92bb0bb95b3db304d72234f25cba0772e0b6b89c15c7c6ea",
+  "input_manifest_sha256": "aa5983cdd37a56456c071cdbfb73f70cc12f90171b18d86a769591747a10a7ac"
+}

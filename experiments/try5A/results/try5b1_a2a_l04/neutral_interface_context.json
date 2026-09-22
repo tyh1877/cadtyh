@@ -1,0 +1,74 @@
+{
+  "link_id": "L04",
+  "interfaces": [
+    {
+      "joint_id": "J03",
+      "joint_type": "revolute",
+      "L04_side": "child",
+      "origin_xyz_mm": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_in_L04_frame": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "motion_range": {
+        "lower": -2.1467549799530254,
+        "upper": 1.7453292519943295,
+        "unit": "rad"
+      },
+      "allowed_dof": [
+        "rotation_about_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ]
+    },
+    {
+      "joint_id": "J04",
+      "joint_type": "fixed",
+      "L04_side": "parent",
+      "origin_xyz_mm": [
+        63.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        -3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis_in_L04_frame": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "motion_range": {
+        "lower": 0,
+        "upper": 0,
+        "unit": "fixed"
+      },
+      "allowed_dof": [],
+      "constrained_dof": [
+        "all_six"
+      ]
+    }
+  ],
+  "labels_removed": [
+    "interface_family",
+    "selection_reason",
+    "knowledge_source",
+    "swept_clearance_policy",
+    "motion_clearance_spec"
+  ]
+}
