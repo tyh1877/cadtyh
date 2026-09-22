@@ -1,0 +1,13 @@
+{
+  "schema_version": "robotcad_p1_governance_record_v1",
+  "experiment_id": "try5b1_a1_mechanical_constraint_ablation",
+  "status": "PASS",
+  "formal_holdout_ready": true,
+  "formal_holdout_executed": false,
+  "implementation_commit": "a649d5ea3291f72e806c1b0fe45de9f3f58c35ec",
+  "readiness_sha256": "809fcff7e4e1c27f5f2ea487c6f828c4b0c4307a5ba2e0461b799188a0b574e5",
+  "environment_manifest_sha256": "11ca87e143e8a4ea0f59f941a5eee217566283424a6649a6cd04e03fad6711e0",
+  "analysis_plan_sha256": "09fa5fe2bf05f13a187dc4038fd125a38a11b54ce3d51311373d5d42de1e3169",
+  "required_execution_flag": "--confirm-one-shot",
+  "next_action": "Run the formal holdout exactly once only after explicit user authorization."
+}

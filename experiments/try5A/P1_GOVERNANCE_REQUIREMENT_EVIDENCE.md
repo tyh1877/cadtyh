@@ -3,23 +3,29 @@
 P1 is a governance and readiness phase. It must not execute, deserialize for
 evaluation, or report metrics from the 32-case formal holdout.
 
-- [ ] The P0.5 development bundle independently validates as `PASS` with zero holdout events.
+- [x] The P0.5 development bundle independently validates as `PASS` with zero holdout events.
   Evidence: `results/try5b1_a1_development/validation.json` and the P1 readiness gate.
-- [ ] The experiment config, split, development runner, worker, candidate manifest, and selected candidates are unchanged since P0.5.
+- [x] The experiment config, split, development runner, worker, candidate manifest, and selected candidates are unchanged since P0.5.
   Evidence: hash checks in `results/try5b1_a1_development/p1_readiness.json`.
-- [ ] Every frozen pilot and non-pilot FCStd used by the holdout evaluator exists and has a recorded SHA-256.
+- [x] Every frozen pilot and non-pilot FCStd used by the holdout evaluator exists and has a recorded SHA-256.
   Evidence: `results/try5b1_a1_development/p1_environment_manifest.json`.
-- [ ] The evaluator-only GT inputs exist, are fingerprinted, and remain inaccessible to generator/repair code.
+- [x] The evaluator-only GT inputs exist, are fingerprinted, and remain inaccessible to generator/repair code.
   Evidence: evaluator input inventory in `p1_environment_manifest.json` and static isolation checks.
-- [ ] The Python and FreeCAD runtimes and required packages are available and recorded.
+- [x] The Python and FreeCAD runtimes and required packages are available and recorded.
   Evidence: runtime inventory in `p1_environment_manifest.json`.
-- [ ] Primary outcomes, estimands, comparison direction, denominator policy, and no-post-holdout-tuning rule are frozen before execution.
+- [x] Primary outcomes, estimands, comparison direction, denominator policy, and no-post-holdout-tuning rule are frozen before execution.
   Evidence: `protocol/try5b1_a1_p1_analysis_plan.json`.
-- [ ] No one-shot lock or formal holdout output exists before P1 approval.
+- [x] No one-shot lock or formal holdout output exists before P1 approval.
   Evidence: absence checks in `p1_readiness.json`.
-- [ ] A failed or interrupted formal attempt consumes the allowance; deleting the lock or silently retrying is forbidden.
+- [x] A failed or interrupted formal attempt consumes the allowance; deleting the lock or silently retrying is forbidden.
   Evidence: analysis plan, atomic-lock test, and holdout CLI confirmation gate.
-- [ ] Formal execution requires a passing P1 record plus an explicit one-shot confirmation flag.
+- [x] Formal execution requires a passing P1 record plus an explicit one-shot confirmation flag.
   Evidence: `evaluation/run_holdout.py` preflight enforcement.
-- [ ] P1 governance is independently reproducible from the committed repository state without evaluating holdout cases.
+- [x] P1 governance is independently reproducible from the committed repository state without evaluating holdout cases.
   Evidence: committed readiness command, tests, and final `p1_governance_record.json`.
+
+P1 gate result: `PASS` at implementation commit `a649d5ea3291f72e806c1b0fe45de9f3f58c35ec`.
+All 25 machine checks passed. The formal holdout remains unexecuted; no lock or
+formal metric artifact exists. P1 governance completion authorizes readiness,
+not execution—the latter still requires an explicit user request and the
+`--confirm-one-shot` CLI guard.

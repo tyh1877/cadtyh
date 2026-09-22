@@ -1,0 +1,291 @@
+{
+  "schema_version": "robotcad_p1_environment_manifest_v1",
+  "implementation_commit": "a649d5ea3291f72e806c1b0fe45de9f3f58c35ec",
+  "branch": "main",
+  "origin_commit": "a649d5ea3291f72e806c1b0fe45de9f3f58c35ec",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": {
+    "executable": ".venv/Scripts/python.exe",
+    "version": "3.12.14"
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.0",
+    "trimesh": "4.12.2"
+  },
+  "freecad": {
+    "executable_locator": "experiments/try5A/scripts/freecad_runtime.py:python_runtime",
+    "probe_returncode": 0,
+    "version": "[\"1\", \"1\", \"1\", \"20260414 (Git shallow)\", \"Unknown\", \"2026/04/14 22:09:59\", \"(HEAD detached at 0108fd4b4)\", \"0108fd4b4850cc46e625b60e53cea7a7bbe69f8d\"]",
+    "stderr": ""
+  },
+  "disk_free_at_least_1_gib": true,
+  "scripts": {
+    "development_runner": {
+      "path": "experiments/try5A/scripts/run_try5b1.py",
+      "sha256": "11bf4349886e4447360fd7d475f889d36ecc72109fc8ed7c6e362949e0abe6e9"
+    },
+    "development_worker": {
+      "path": "experiments/try5A/evaluation/mechanical/freecad_link_refinement.py",
+      "sha256": "bd578d09e5be17a20097eda9bc3de328d67f2424f53bd3d529178ddd5c9371bf"
+    },
+    "holdout_orchestrator": {
+      "path": "experiments/try5A/evaluation/run_holdout.py",
+      "sha256": "f0a86808fec43f715d30e4fd105655b18ba92f1540069817d9f0d1d84c33f6dd"
+    },
+    "holdout_mechanical_evaluator": {
+      "path": "experiments/try5A/evaluation/mechanical/freecad_holdout_evaluator.py",
+      "sha256": "479c5d02c159f157b4cd610fac79ed941c5d1ec1a785a626666315def3fd63dc"
+    },
+    "holdout_geometry_evaluator": {
+      "path": "experiments/try5A/evaluation/geometry_holdout_evaluator.py",
+      "sha256": "91b147c341c06fe1072732ba66fbf745d094a49cf5790987e38076fd137b6c2e"
+    },
+    "exact_evaluator": {
+      "path": "experiments/try5A/scripts/freecad_motion_realization.py",
+      "sha256": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a"
+    },
+    "independent_validator": {
+      "path": "experiments/try5A/evaluation/validate_experiment.py",
+      "sha256": "be917bf76e890ef30661c8d5059934d6c911e2e17b89a532c4586efcedd08b6c"
+    },
+    "governance": {
+      "path": "experiments/try5A/evaluation/experiment_governance.py",
+      "sha256": "eb97438e6e406100ca340545ba2e396d46aa734b46d0067359b6279e6cc723f1"
+    },
+    "readiness_gate": {
+      "path": "experiments/try5A/evaluation/p1_readiness.py",
+      "sha256": "6626ceded02c4044ab31d46420a5523e380a6ce45806e0c3d1b5c80068e31d98"
+    }
+  },
+  "inputs": {
+    "experiment_config": {
+      "path": "experiments/try5A/protocol/try5b1_a1_mechanical_ablation.json",
+      "sha256": "9a20f95214c7d2e0cb00b6485c919ecaac8f418e05628f6ac5e124c3f4087654"
+    },
+    "analysis_plan": {
+      "path": "experiments/try5A/protocol/try5b1_a1_p1_analysis_plan.json",
+      "sha256": "09fa5fe2bf05f13a187dc4038fd125a38a11b54ce3d51311373d5d42de1e3169"
+    },
+    "case_split": {
+      "path": "experiments/try5A/results/try5b1_a1_development/case_split.json",
+      "sha256": "2598ff427cbf2126f076920761ddf841451ad4e6d1458e019cc8e865cb48d34b"
+    },
+    "candidate_manifest": {
+      "path": "experiments/try5A/results/try5b1_a1_development/candidate_manifest.json",
+      "sha256": "fb3a8e2034e52f6cd2e26dfad563581240bc36678b129f23be7855000d259a4f"
+    },
+    "development_manifest": {
+      "path": "experiments/try5A/results/try5b1_a1_development/manifest.json",
+      "sha256": "40a04738697e83ee9fd2351153d12b119dd6009cb431296980490b5ed11cd2ff"
+    },
+    "development_validation": {
+      "path": "experiments/try5A/results/try5b1_a1_development/validation.json",
+      "sha256": "a0c4cc1545c45dd5a30b1b17c31eb910f3a724139c0eff40e7c08c6a443e595a"
+    },
+    "development_summary": {
+      "path": "experiments/try5A/results/try5b1_a1_development/development_summary.json",
+      "sha256": "fdad30b020c78c797096a6883da0387e90a062ee411d66c020b2cc298b145e62"
+    },
+    "selected_candidates": {
+      "path": "experiments/try5A/results/try5b1_a1_development/selected_candidates.json",
+      "sha256": "6cb4ef2d4b80291b516ae9828761a4e6fa75ef33fb65bad14bc4b999ae798276"
+    },
+    "claim_ledger": {
+      "path": "experiments/try5A/results/try5b1_a1_development/claim_ledger.json",
+      "sha256": "202ec803e2dd0638517162033cbe2950875bcb3f69116db98e5cac3e30c5031d"
+    },
+    "interface_contracts": {
+      "path": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+      "sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d"
+    },
+    "frozen_configuration_source": {
+      "path": "experiments/try5A/results/try5a5/coupled_configurations.json",
+      "sha256": "08ae1e8a8bd8da6477d469c8d5a013b11e728aa5e8de4d9edd2b43bb17fc8e15"
+    },
+    "sanitized_urdf": {
+      "path": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+      "sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664"
+    },
+    "link_classification": {
+      "path": "experiments/try5A/results/try5a5/link_realization_classification.json",
+      "sha256": "369e2ccb1365d1e366f5be3004d3ee7ee77506fbe248d4735511d565824f0317"
+    }
+  },
+  "pilot_candidates": [
+    {
+      "condition": "C1_CONSTRAINED",
+      "link_id": "L03",
+      "artifact_type": "pilot_fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L03/model.FCStd",
+      "sha256": "c5b128bf131fba8af15076fe4d6bdef1217df0409a33819a0355d94992a82334",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C1_CONSTRAINED",
+      "link_id": "L04",
+      "artifact_type": "pilot_fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L04/model.FCStd",
+      "sha256": "cc97874377a1269fc7c7ea245e3527941d2b0688827ac1c1b1290cc446f9ce09",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C1_CONSTRAINED",
+      "link_id": "L07",
+      "artifact_type": "pilot_fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L07/model.FCStd",
+      "sha256": "64d98ee99b4da308cd5da88bf67c0d41f763a37c783a5b6e03bd93068c4df331",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C1_CONSTRAINED",
+      "link_id": "L03",
+      "artifact_type": "pilot_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L03/model.stl",
+      "sha256": "32802fbc205c388bd5999243b8b0efe0290af13a2ecd2a046054c14f01d3274f",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C1_CONSTRAINED",
+      "link_id": "L04",
+      "artifact_type": "pilot_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L04/model.stl",
+      "sha256": "846f59f0527460c699aacc97318a405c17a2d14a158cbfd86da34ba1db155904",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C1_CONSTRAINED",
+      "link_id": "L07",
+      "artifact_type": "pilot_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/cad/F2/L07/model.stl",
+      "sha256": "e8fa0ef9d304186d7eea95a0115ade4a1f35d3ded306fb2074c739f9b3218fff",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "link_id": "L03",
+      "artifact_type": "pilot_fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L03/model.FCStd",
+      "sha256": "023a5b53412409822ab140780d4fae884e37121efbfb527748fe267c5e919882",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "link_id": "L04",
+      "artifact_type": "pilot_fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L04/model.FCStd",
+      "sha256": "e81d926a5291051fd5bf61c188cd233633aeaa7e003066b414b7faefa86d6552",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "link_id": "L07",
+      "artifact_type": "pilot_fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L07/model.FCStd",
+      "sha256": "98f10c5862afe4cdc29086f9c5bdfac0ff175ffebe2f25dba665d3ab002df164",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "link_id": "L03",
+      "artifact_type": "pilot_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L03/model.stl",
+      "sha256": "4821784be312b969ac4c42067317189d243da76833e56ea639f04d8e65fb2426",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "link_id": "L04",
+      "artifact_type": "pilot_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L04/model.stl",
+      "sha256": "8c37c52c9022f1a2b4c27778b6cadec3f443239e3c1b0174dbc25952d4b20101",
+      "matches_manifest": true
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "link_id": "L07",
+      "artifact_type": "pilot_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/cad/F2/L07/model.stl",
+      "sha256": "6ea7437c47e512543bdcbef8f9367d59bb1eddc7fca5b9b1a25b7b7843f97568",
+      "matches_manifest": true
+    }
+  ],
+  "frozen_nonpilot_fcstd": [
+    {
+      "link_id": "L00",
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L00/model.FCStd",
+      "sha256": "9aba6ac6ca9064c5f2136842248a9d528f8d45cac4df903f515c80e5f1998bfe"
+    },
+    {
+      "link_id": "L01",
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L01/model.FCStd",
+      "sha256": "30f26890a8908bef5987aee32234cdc833162fec12a906e757692696e8c70aba"
+    },
+    {
+      "link_id": "L02",
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L02/model.FCStd",
+      "sha256": "fd70fddb339a3bd9ecc7ea2303219fe8ab949f03643c2338e1860bf5fcd84068"
+    },
+    {
+      "link_id": "L05",
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L05/model.FCStd",
+      "sha256": "cdc2bc789b30ef2d7a85be5d9916b74812b398a5e5ea62fbb24e05ef28ce7561"
+    },
+    {
+      "link_id": "L06",
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L06/model.FCStd",
+      "sha256": "1b1f4d93e98561af345f73c4cad9238b7798a3a2d13ca7b186f03f57c19c1cd8"
+    },
+    {
+      "link_id": "L08",
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L08/model.FCStd",
+      "sha256": "7228c669e81ab6345564a0462662a4428de1f72fed9b33747dc1c0bd421fa74a"
+    },
+    {
+      "link_id": "L09",
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L09/model.FCStd",
+      "sha256": "3fcc9a4aabf286500153d849c137a7e4921cebc64bd11ba8fd97b76372d4b442"
+    },
+    {
+      "link_id": "L10",
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L10/model.FCStd",
+      "sha256": "125b2684ec7cba828982543aa8116a2548b63e4227148b902830c86002112714"
+    }
+  ],
+  "development_generator_jobs": [
+    {
+      "condition": "C1_CONSTRAINED",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C1_CONSTRAINED/generator_job.json",
+      "canonical_sha256": "76c05e27c0f4b9fdccae4ac462dbde3d6a860e952d3fbfd04fa9d77f67a1cc77",
+      "matches_manifest": true,
+      "configuration_count": 96,
+      "serialized_holdout_id_count": 0
+    },
+    {
+      "condition": "C2_UNCONSTRAINED",
+      "path": "experiments/try5A/artifacts/try5b1_a1_development/C2_UNCONSTRAINED/generator_job.json",
+      "canonical_sha256": "42c8094611efb6af7d5c47bf3c46fa65ab6d9f0f83bf95ca12cc6ca3b2ee8b3c",
+      "matches_manifest": true,
+      "configuration_count": 96,
+      "serialized_holdout_id_count": 0
+    }
+  ],
+  "evaluator_only_gt_inputs": [
+    {
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/urdf/px100.urdf",
+      "sha256": "2d56e0c10bd72d2e681cadbba5d4975b41d5e1140795da6b991231966d7defb9"
+    },
+    {
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-4-Forearm.stl",
+      "sha256": "72952a7ce9569c2468517538109141a08eb572cb027094d17a9b91f028d0b327"
+    },
+    {
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-5-Wrist-Gripper.stl",
+      "sha256": "4148d290ad924a78fcd58f18ea0822000cda14e7eaaee01e8d69664d7cf1234a"
+    },
+    {
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-7-Gripper-Bar.stl",
+      "sha256": "b54601da3f60eea180226b695bb95a9b29b187f22f5b74d9a523ac9785d9a518"
+    }
+  ]
+}
