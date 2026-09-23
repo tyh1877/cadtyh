@@ -1,0 +1,8 @@
+{
+  "c0_not_regenerated": true,
+  "c0_source_path": "experiments/try5A/results/try5b1_a2a_three_link/paired_main_table.json",
+  "c0_source_sha256": "1971dcfda7bd5fab38ae83b0765a49ba71105ddbed623eb361655b22f69e535e",
+  "comparison": "single new C1-v2 vs historical frozen Direct-Qwen C0",
+  "model_controlled_pair": false,
+  "no_gt_generator_access": true
+}
