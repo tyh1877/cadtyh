@@ -1,0 +1,29 @@
+{
+  "schema_version": "robotcad_try6_c1_metric_smoke_v1",
+  "status": "PASS",
+  "nonformal": true,
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "index": 0,
+      "objective": 0.2657742034799091,
+      "cad_seconds": 0.8799581999774091
+    },
+    {
+      "index": 1,
+      "objective": 0.25053967723801734,
+      "cad_seconds": 0.8899444999988191
+    }
+  ],
+  "anchor_mutation": {
+    "original_mm": 63.0,
+    "mutated_mm": 60.0,
+    "fixed_cad_objective_original": 0.2657742034799091,
+    "fixed_cad_objective_mutated": 0.2603062086170348,
+    "right_view_metric_height_estimate_original_mm": 15.42089552238806,
+    "right_view_metric_height_estimate_mutated_mm": 14.686567164179104,
+    "solver_metric_result_changed": true
+  },
+  "gt_accessed": false,
+  "motion_feedback": false
+}

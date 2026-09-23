@@ -1,0 +1,25 @@
+{
+  "optimizer": "seeded_sobol_then_local_random",
+  "optimizer_seed": 20260923,
+  "max_solver_evaluations": 32,
+  "sobol_power": 4,
+  "local_radius_fraction": 0.08,
+  "convergence_tolerance": 0.0001,
+  "max_stale_local_evaluations": 6,
+  "candidate_timeout_seconds": 60,
+  "max_runtime_seconds": 240,
+  "objective_weights": {
+    "silhouette": 0.45,
+    "edge_profile": 0.3,
+    "landmark": 0.15,
+    "prior": 0.1
+  },
+  "views": [
+    "right",
+    "top"
+  ],
+  "camera_policy": "FreeCAD MIBA orientation metadata plus fixed color-mask endpoint nuisance registration anchored by 63 mm J03-J04 URDF distance; no calibrated pixel projection claimed",
+  "gt_access": false,
+  "motion_feedback": false,
+  "manual_intervention": 0
+}

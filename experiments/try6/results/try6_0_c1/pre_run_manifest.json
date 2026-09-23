@@ -1,0 +1,47 @@
+{
+  "schema_version": "robotcad_try6_c1_pre_run_v1",
+  "status": "READY",
+  "implementation_commit": "797c2554a877f28db4557e3a9bc8a80216045115",
+  "implementation_sha256": {
+    "runner": "e02bdd3fdd7bd7222d4ae6906f2b21afe04919d912e241e04199c33722260e9d",
+    "metric_solver": "4f6c1078b9c83cb83bda730c8a3f70ace62cabdc4dc7fe99d3f3573452aa31f5",
+    "freecad_builder": "20b88cfb01682480b268d8cb54f1a7dcac5ed603613d00207195bde261142261",
+    "kfdg_contract": "bb9bb09f8e90970070f7346ec808d4695c168cde6972a11321f24c282d2a0087",
+    "independent_validator": "e3d719062d142fe0fd700551e0192ae9ce05468e71540f6fbe8bb8f8bdc2557e"
+  },
+  "protocol_sha256": "7ac72472f3093f0d05b01c3686283512966b12b00d2637aa20dccd19a72cfbaf",
+  "kfdg_schema_sha256": "ac91f844f022ba7afa1b982c9fbfdb3a099f38a92ab9b636406db306816f1f70",
+  "vlm_response_schema_sha256": "bfa20169e311a3518649ac5d4bf96e71a32d28dfd86c220a3e4f714b6a1a8e23",
+  "parameter_bounds_sha256": "636905a1d4faceb5e731128cecf0baf241d6a1b34b8221b706d6319f36928ff5",
+  "prompt_sha256": "3f11f023b99cb805ac7c274d08d25a868d30d190eacdb4d48bc1d5db55bbd395",
+  "model_config": {
+    "provider": "alibaba_model_studio",
+    "api_key": "<configured>",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "model": "qwen3.7-plus",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 300.0,
+    "max_retries": 0,
+    "config_version": "1.0",
+    "shared_by": [
+      "direct_frontier_mllm",
+      "cadir_simplecad"
+    ]
+  },
+  "freecad_version": "[\"1\", \"1\", \"1\", \"20260414 (Git shallow)\", \"Unknown\", \"2026/04/14 22:09:59\", \"(HEAD detached at 0108fd4b4)\", \"0108fd4b4850cc46e625b60e53cea7a7bbe69f8d\"]",
+  "python_executable": ".venv/Scripts/python.exe",
+  "input_hashes_sha256": "31059609f3d33cb65feface17652067dcbe027b3c616061e5544f9ba176ebc63",
+  "c0_baseline_sha256": "63232a221d47cf5b4ebea3344da6780cb85440c83d22f65d1326cfa1415c026b",
+  "camera_audit_sha256": "8d484a9cc33ac156433dd64543b887d77ca8377b543b3c70f489ccf3536aef24",
+  "solver_config_sha256": "f37d9d119a74ad130ca26bb119eed88d755bcd6ee30c8902bd60fefef67c0138",
+  "geometry_evaluator_sha256": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa",
+  "exact_evaluator_sha256": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec",
+  "holdout_lock": {
+    "case_ids_sha256": "7f45cdaea2e865e8de80e27e285aad17a591a7ba544f993239d2d10786e2718d",
+    "accessed": false,
+    "evaluation_count": 0
+  },
+  "vlm_request_sha256": "c8414ab4b4395f027904681e2e37031e58f368e7143fac70ca3065c94b46802f"
+}

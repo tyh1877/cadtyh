@@ -1,0 +1,30 @@
+{
+  "schema_version": "robotcad_try6_c0_frozen_v1",
+  "source": "experiments/try5A/results/try5b1_a2a_three_link/paired_main_table.json",
+  "source_sha256": "1971dcfda7bd5fab38ae83b0765a49ba71105ddbed623eb361655b22f69e535e",
+  "condition": "HISTORICAL_FROZEN_A2A_L04_DIRECT_QWEN",
+  "metrics": {
+    "link": "L04",
+    "method": "DIRECT_QWEN",
+    "final_voxel_iou": 0.12496993987975952,
+    "final_silhouette_iou": 0.3017446993510538,
+    "final_normalized_chamfer": 0.11657432624731785,
+    "final_normalized_hd95": 0.2950432532379807,
+    "bicr": 1.0,
+    "connected_solid_count": 1,
+    "jr3": 1.0,
+    "gcfr": 0.7291666666666666,
+    "collision_events": 50,
+    "intersection_volume_mm3": 26393.013813899426,
+    "failed_configuration_count": 26,
+    "input_tokens": 15675,
+    "output_tokens": 3867,
+    "total_tokens": 19542,
+    "model_latency_seconds": 69.76637409999967,
+    "end_to_end_runtime_seconds": 220.08856010000454,
+    "cad_build_success": true,
+    "status": "EVALUATED"
+  },
+  "qwen_recalled": false,
+  "formal_holdout_accessed": false
+}
