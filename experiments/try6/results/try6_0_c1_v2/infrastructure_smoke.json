@@ -1,0 +1,39 @@
+{
+  "anchor_sensitivity": {
+    "actual_urdf_anchor_mm": 63.0,
+    "fixed_cad_objective_at_63": 0.059748590016398394,
+    "fixed_cad_objective_at_64": 0.060902055741663186,
+    "metric_relation_changed": true,
+    "objective_changed": true,
+    "raw_right_station_width_target_mm_at_63": 12.035820895522388,
+    "raw_right_station_width_target_mm_at_64": 12.226865671641791,
+    "synthetic_anchor_mm": 64.0
+  },
+  "candidate_count": 2,
+  "candidates": [
+    {
+      "contour": 0.04126875693091488,
+      "final_volume_mm3": 17276.75126156184,
+      "housing_width_mm": 17.0,
+      "index": 0,
+      "objective": 0.059748590016398394,
+      "profile": 0.07822842310188191,
+      "seconds": 0.7836757999612018
+    },
+    {
+      "contour": 0.040569506089226035,
+      "final_volume_mm3": 17589.867727282937,
+      "housing_width_mm": 18.0,
+      "index": 1,
+      "objective": 0.057826083658623705,
+      "profile": 0.07508266122802137,
+      "seconds": 0.7645406000083312
+    }
+  ],
+  "formal_holdout_evaluations": 0,
+  "gt_evaluations": 0,
+  "nonformal": true,
+  "schema_version": "robotcad_try6_c1_v2_objective_smoke_v1",
+  "status": "PASS",
+  "visual_evidence_sha256": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5"
+}

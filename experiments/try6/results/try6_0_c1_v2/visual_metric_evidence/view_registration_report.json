@@ -1,0 +1,42 @@
+{
+  "anchor_distance_mm": 63.0,
+  "anchor_source_path": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+  "anchor_source_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+  "calibrated": false,
+  "candidate_specific_reregistration": false,
+  "cross_view_relative_scale_discordance": 0.039573820395738236,
+  "endpoint_fit_residual_caveat": "zero by two-endpoint construction; not independent registration accuracy evidence",
+  "endpoint_fit_residual_px": 0.0,
+  "gt_used": false,
+  "maximum_allowed_discordance": 0.1,
+  "method": "raw teal-color connected component endpoints plus 63 mm URDF L04 anchor; approximate orthographic nuisance registration",
+  "parameters": {
+    "right": {
+      "distal_endpoint_px": 467,
+      "landmark_role": "visible teal envelope endpoints; approximate, not manually annotated joint centers",
+      "perpendicular_center_px": 466.0,
+      "proximal_endpoint_px": 802,
+      "scale_px_per_mm": 5.317460317460317
+    },
+    "top": {
+      "distal_endpoint_px": 927,
+      "landmark_role": "visible teal envelope endpoints; approximate, not manually annotated joint centers",
+      "perpendicular_center_px": 699.5,
+      "proximal_endpoint_px": 605,
+      "scale_px_per_mm": 5.111111111111111
+    }
+  },
+  "registration_gate_pass": true,
+  "schema_version": "robotcad_try6_c1_v2_registration_v1",
+  "uncertainty": "No calibrated intrinsics/extrinsics or articulated reference pose; colored visible-envelope endpoints approximate joint landmarks; central ROI avoids occluded interfaces.",
+  "unresolved_views": [
+    "front",
+    "isometric",
+    "left",
+    "rear"
+  ],
+  "usable_views": [
+    "right",
+    "top"
+  ]
+}

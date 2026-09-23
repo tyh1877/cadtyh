@@ -1,0 +1,14 @@
+{
+  "right": {
+    "distal_endpoint_px": 467,
+    "landmark_role": "visible teal envelope endpoints; approximate, not manually annotated joint centers",
+    "perpendicular_center_px": 466.0,
+    "proximal_endpoint_px": 802
+  },
+  "top": {
+    "distal_endpoint_px": 927,
+    "landmark_role": "visible teal envelope endpoints; approximate, not manually annotated joint centers",
+    "perpendicular_center_px": 699.5,
+    "proximal_endpoint_px": 605
+  }
+}

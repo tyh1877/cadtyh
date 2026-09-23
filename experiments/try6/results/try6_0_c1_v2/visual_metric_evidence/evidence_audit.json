@@ -1,0 +1,8 @@
+{
+  "evidence_gate_pass": true,
+  "formal_holdout_accessed": false,
+  "gt_accessed": false,
+  "registration_gate_pass": true,
+  "registration_report_sha256": "00a5ac45f8f46c2d5dd894efc3f39074028c568a1674da82bef0e00e543f9313",
+  "visual_evidence_sha256": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5"
+}

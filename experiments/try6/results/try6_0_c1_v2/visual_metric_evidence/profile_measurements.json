@@ -1,0 +1,60 @@
+{
+  "right": [
+    {
+      "axis_pixel": 722.2380952380952,
+      "perpendicular_max_px": 497,
+      "perpendicular_min_px": 434,
+      "station_x_mm": 15.0,
+      "support_pixels": 220,
+      "visible_width_mm": 12.035820895522388,
+      "visible_width_px": 64
+    },
+    {
+      "axis_pixel": 642.4761904761905,
+      "perpendicular_max_px": 497,
+      "perpendicular_min_px": 434,
+      "station_x_mm": 30.0,
+      "support_pixels": 320,
+      "visible_width_mm": 12.035820895522388,
+      "visible_width_px": 64
+    },
+    {
+      "axis_pixel": 562.7142857142858,
+      "perpendicular_max_px": 505,
+      "perpendicular_min_px": 426,
+      "station_x_mm": 45.0,
+      "support_pixels": 400,
+      "visible_width_mm": 15.044776119402986,
+      "visible_width_px": 80
+    }
+  ],
+  "top": [
+    {
+      "axis_pixel": 681.6666666666666,
+      "perpendicular_max_px": 763,
+      "perpendicular_min_px": 636,
+      "station_x_mm": 15.0,
+      "support_pixels": 60,
+      "visible_width_mm": 25.043478260869566,
+      "visible_width_px": 128
+    },
+    {
+      "axis_pixel": 758.3333333333333,
+      "perpendicular_max_px": 763,
+      "perpendicular_min_px": 636,
+      "station_x_mm": 30.0,
+      "support_pixels": 640,
+      "visible_width_mm": 25.043478260869566,
+      "visible_width_px": 128
+    },
+    {
+      "axis_pixel": 835.0,
+      "perpendicular_max_px": 747,
+      "perpendicular_min_px": 652,
+      "station_x_mm": 45.0,
+      "support_pixels": 480,
+      "visible_width_mm": 18.782608695652176,
+      "visible_width_px": 96
+    }
+  ]
+}

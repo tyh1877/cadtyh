@@ -1,0 +1,24 @@
+{
+  "right": {
+    "raw_visible_mask_path": "experiments/try6/artifacts/try6_0_c1_v2/visual_metric_evidence/right_raw_teal_visible_mask.png",
+    "raw_visible_mask_sha256": "a21fa1a2f53a6bd2463b4b5264dff37dc8eb72b1953dc4e28b31bd5079bc80fd",
+    "roi_crop_xyxy_px": [
+      525,
+      405,
+      740,
+      528
+    ],
+    "roi_edge_pixels": 805
+  },
+  "top": {
+    "raw_visible_mask_path": "experiments/try6/artifacts/try6_0_c1_v2/visual_metric_evidence/top_raw_teal_visible_mask.png",
+    "raw_visible_mask_sha256": "15ccc437a2bf4d4b2c9f0c890b4a06a58d9704abc0ecec9641b801e2050920aa",
+    "roi_crop_xyxy_px": [
+      616,
+      666,
+      784,
+      872
+    ],
+    "roi_edge_pixels": 1208
+  }
+}
