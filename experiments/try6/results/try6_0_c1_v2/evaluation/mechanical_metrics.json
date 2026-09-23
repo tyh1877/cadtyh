@@ -1,0 +1,33 @@
+{
+  "bicr": 1.0,
+  "collision_events": 42,
+  "configuration_count": 96,
+  "connected_solid_count": 1,
+  "failed_configuration_ids": [
+    "sobol_011",
+    "sobol_014",
+    "sobol_018",
+    "sobol_020",
+    "sobol_021",
+    "sobol_025",
+    "sobol_035",
+    "sobol_046",
+    "sobol_047",
+    "sobol_050",
+    "sobol_053",
+    "sobol_056",
+    "sobol_076",
+    "sobol_077",
+    "sobol_090",
+    "sobol_095",
+    "sobol_107",
+    "sobol_118",
+    "sobol_123"
+  ],
+  "gcfr": 0.8020833333333334,
+  "intersection_volume_mm3": 26456.388605736887,
+  "j03_jr3": 1.0,
+  "mechanical_feedback_to_solver": false,
+  "raw_mechanical_sha256": "932986c91a256fab65ae610fd7b0530021da669a483f6428f1e1546ebe6577ef",
+  "status": "DIAGNOSTIC_AFTER_LOCK"
+}

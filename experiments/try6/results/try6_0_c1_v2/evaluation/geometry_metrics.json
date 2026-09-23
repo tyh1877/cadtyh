@@ -1,0 +1,28 @@
+{
+  "body_only_diagnostic": {
+    "bbox_error_mm": 31.85977913379831,
+    "condition": "C1_V2",
+    "link_id": "L04",
+    "major_dimension_error_mm": 3.449205160140991,
+    "normalized_chamfer": 0.09533186496405781,
+    "normalized_hd95": 0.29204654682260217,
+    "scope": "refined_body_only",
+    "silhouette_iou_mean": 0.34957320875236503,
+    "voxel_iou": 0.20305357469372828
+  },
+  "final": {
+    "bbox_error_mm": 32.60057072749594,
+    "condition": "C1_V2",
+    "link_id": "L04",
+    "major_dimension_error_mm": 10.049576044082642,
+    "normalized_chamfer": 0.1010314900985874,
+    "normalized_hd95": 0.29211681006226614,
+    "scope": "final_assembled_link",
+    "silhouette_iou_mean": 0.3462839613652157,
+    "voxel_iou": 0.1881884426368412
+  },
+  "final_candidate_lock_sha256": "1483914db6a69a3962623189ea35fb32c0cb6fe8cdcb5dd800a8846749e468f4",
+  "gt_evaluation_count": 1,
+  "raw_geometry_sha256": "760f1948564b83fed9e4d6d5cf285ce6f7cf9d100548d88926c0998e8290340f",
+  "status": "EVALUATED_ONCE_AFTER_LOCK"
+}

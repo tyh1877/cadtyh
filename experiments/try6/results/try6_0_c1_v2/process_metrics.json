@@ -1,0 +1,26 @@
+{
+  "cad_builds": 33,
+  "failed_cad_candidates": 0,
+  "final_cad_build_runtime_seconds": 1.1852369999978691,
+  "geometry_evaluator_runtime_seconds": 1.880391700018663,
+  "input_tokens": 13366,
+  "manual_intervention_count": 0,
+  "measured_component_runtime_lower_bound_seconds": 283.50538240000606,
+  "mechanical_evaluator_runtime_seconds": 183.59354339999845,
+  "output_tokens": 4013,
+  "registration_method": "raw teal-color connected component endpoints plus 63 mm URDF L04 anchor; approximate orthographic nuisance registration",
+  "registration_runtime_seconds": null,
+  "render_count": 64,
+  "runtime_accounting_note": "Original evidence/registration extraction and orchestration time were not instrumented; the summed components are a lower bound, not total wall time.",
+  "slot_statuses": {
+    "main_housing": "PRESENT",
+    "profile_transition": "PRESENT",
+    "visible_pocket": "ABSENT"
+  },
+  "solver_evaluations": 32,
+  "solver_runtime_seconds": 24.897755999991205,
+  "total_runtime_seconds": null,
+  "valid_cad_candidates": 32,
+  "vlm_calls": 1,
+  "vlm_latency_seconds": 71.94845429999987
+}

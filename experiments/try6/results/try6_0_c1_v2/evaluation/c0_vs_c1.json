@@ -1,0 +1,51 @@
+{
+  "all_geometry_gates_pass": true,
+  "c0": {
+    "final_normalized_chamfer": 0.11657432624731785,
+    "final_normalized_hd95": 0.2950432532379807,
+    "final_silhouette_iou": 0.3017446993510538,
+    "final_voxel_iou": 0.12496993987975952
+  },
+  "c0_source_path": "experiments/try5A/results/try5b1_a2a_three_link/paired_main_table.json",
+  "c0_source_sha256": "1971dcfda7bd5fab38ae83b0765a49ba71105ddbed623eb361655b22f69e535e",
+  "c1": {
+    "final_bbox_error_mm": 32.60057072749594,
+    "final_major_dimension_error_mm": 10.049576044082642,
+    "final_normalized_chamfer": 0.1010314900985874,
+    "final_normalized_hd95": 0.29211681006226614,
+    "final_silhouette_iou": 0.3462839613652157,
+    "final_voxel_iou": 0.1881884426368412
+  },
+  "decision": "GO_C2",
+  "deltas": {
+    "final_normalized_chamfer": {
+      "absolute": -0.015542836148730449,
+      "relative_to_c0": -0.13332983898835152
+    },
+    "final_normalized_hd95": {
+      "absolute": -0.002926443175714555,
+      "relative_to_c0": -0.009918692068359542
+    },
+    "final_silhouette_iou": {
+      "absolute": 0.04453926201416192,
+      "relative_to_c0": 0.1476057810127241
+    },
+    "final_voxel_iou": {
+      "absolute": 0.06321850275708168,
+      "relative_to_c0": 0.505869674082485
+    }
+  },
+  "gates": {
+    "bicr": true,
+    "connected_solid": true,
+    "nchamfer": true,
+    "nhd95": true,
+    "one_distance_strictly_better": true,
+    "primary_iou": true,
+    "silhouette": true
+  },
+  "objective_gt_direction_misaligned_by_frozen_rule": false,
+  "visual_initial_objective": 0.059748590016398394,
+  "visual_relative_improvement": 0.6142438390772971,
+  "visual_selected_objective": 0.02304838670527038
+}

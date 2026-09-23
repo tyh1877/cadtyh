@@ -1,0 +1,19 @@
+{
+  "conditions": {
+    "C1_V2": {
+      "mechanical_policy": {
+        "auto_attachment_closure": false,
+        "distal_clearance_cut": true,
+        "preserve_frozen_scaffold": true,
+        "protected_interface_cuts": true
+      },
+      "pilot_fcstd": {
+        "L04": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.FCStd"
+      },
+      "selected_candidate": "candidate_031"
+    }
+  },
+  "frozen_nonpilot_root": "experiments/try5A/artifacts/try5a5/round3_verified/links",
+  "interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+  "schema_version": "robotcad_try6_c1_v2_exact_candidate_v1"
+}

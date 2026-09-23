@@ -162,6 +162,13 @@ def validate():
         "manual_intervention_count":slot["manual_intervention"],
         "geometry_evaluator_runtime_seconds":load(RESULT/"evaluation/evaluation_runtime.json")["geometry_seconds"],
         "mechanical_evaluator_runtime_seconds":load(RESULT/"evaluation/evaluation_runtime.json")["exact_mechanics_seconds"]}
+    process["final_cad_build_runtime_seconds"]=load(RESULT/"cad/export_reopen.json")["build_runtime_seconds"]
+    process["registration_runtime_seconds"]=None
+    process["total_runtime_seconds"]=None
+    process["measured_component_runtime_lower_bound_seconds"]=sum(process[key] for key in
+        ("vlm_latency_seconds","solver_runtime_seconds","final_cad_build_runtime_seconds",
+         "geometry_evaluator_runtime_seconds","mechanical_evaluator_runtime_seconds"))
+    process["runtime_accounting_note"]="Original evidence/registration extraction and orchestration time were not instrumented; the summed components are a lower bound, not total wall time."
     save(RESULT/"process_metrics.json",process)
     save(RESULT/"failure_accounting.json",{"requested_formal_candidates":1,"completed_formal_candidates":1,
         "slot_calls":1,"slot_failures":0,"solver_candidate_evaluations":len(rows),

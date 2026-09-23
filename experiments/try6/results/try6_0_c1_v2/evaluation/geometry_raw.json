@@ -1,0 +1,38 @@
+{
+  "schema_version": "robotcad_a1_dual_scope_geometry_v1",
+  "status": "PASS",
+  "evaluator_only": true,
+  "sample_count": 10000,
+  "seed": 20260923,
+  "gt_inputs": [
+    {
+      "link_id": "L04",
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-5-Wrist-Gripper.stl",
+      "sha256": "4148d290ad924a78fcd58f18ea0822000cda14e7eaaee01e8d69664d7cf1234a"
+    }
+  ],
+  "rows": [
+    {
+      "condition": "C1_V2",
+      "link_id": "L04",
+      "scope": "refined_body_only",
+      "voxel_iou": 0.20305357469372828,
+      "normalized_chamfer": 0.09533186496405781,
+      "normalized_hd95": 0.29204654682260217,
+      "silhouette_iou_mean": 0.34957320875236503,
+      "bbox_error_mm": 31.85977913379831,
+      "major_dimension_error_mm": 3.449205160140991
+    },
+    {
+      "condition": "C1_V2",
+      "link_id": "L04",
+      "scope": "final_assembled_link",
+      "voxel_iou": 0.1881884426368412,
+      "normalized_chamfer": 0.1010314900985874,
+      "normalized_hd95": 0.29211681006226614,
+      "silhouette_iou_mean": 0.3462839613652157,
+      "bbox_error_mm": 32.60057072749594,
+      "major_dimension_error_mm": 10.049576044082642
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "claims": [
+    {
+      "artifact": "slot/independent_validation.json",
+      "claim": "fresh single slot call valid",
+      "evidence_type": "computed",
+      "expected": "PASS",
+      "field": "status"
+    },
+    {
+      "artifact": "visual_metric_evidence/evidence_audit.json",
+      "claim": "raw-image registration and evidence gate valid",
+      "evidence_type": "computed",
+      "expected": "true / true",
+      "field": "registration_gate_pass / evidence_gate_pass"
+    },
+    {
+      "artifact": "solver/independent_validation.json",
+      "claim": "theta selected by visual objective only",
+      "evidence_type": "computed",
+      "expected": true,
+      "field": "selection_by_visual_only"
+    },
+    {
+      "artifact": "evaluation/evaluation_started.json",
+      "claim": "final CAD locked before GT",
+      "evidence_type": "computed",
+      "expected": "1483914db6a69a3962623189ea35fb32c0cb6fe8cdcb5dd800a8846749e468f4",
+      "field": "final_candidate_lock_sha256"
+    },
+    {
+      "artifact": "evaluation/mechanical_metrics.json",
+      "claim": "final BICR and one-solid gate",
+      "evidence_type": "computed",
+      "expected": "1.0 / 1",
+      "field": "bicr / connected_solid_count"
+    },
+    {
+      "artifact": "evaluation/c0_vs_c1.json",
+      "claim": "primary IoU >= frozen threshold",
+      "evidence_type": "computed",
+      "expected": true,
+      "field": "gates.primary_iou"
+    },
+    {
+      "artifact": "evaluation/c0_vs_c1.json",
+      "claim": "supporting geometry gates all pass",
+      "evidence_type": "computed",
+      "expected": true,
+      "field": "all_geometry_gates_pass"
+    },
+    {
+      "artifact": "evaluation/mechanical_metrics.json",
+      "claim": "exact development mechanics diagnostic only",
+      "evidence_type": "computed",
+      "expected": "false / 96",
+      "field": "mechanical_feedback_to_solver / configuration_count"
+    },
+    {
+      "artifact": "audit/holdout_audit.json",
+      "claim": "formal holdout lock closed",
+      "evidence_type": "computed",
+      "expected": "false / 0",
+      "field": "lock_accessed / lock_evaluation_count"
+    },
+    {
+      "artifact": "audit/leakage_audit.json",
+      "claim": "no GT path supplied to generator/solver",
+      "evidence_type": "inferred",
+      "expected": true,
+      "field": "source_paths_generator_only",
+      "limitation": "No OS-level filesystem-read trace; not independently sufficient for a stronger no-read claim"
+    }
+  ],
+  "schema_version": "robotcad_try6_c1_v2_claim_ledger_v1"
+}

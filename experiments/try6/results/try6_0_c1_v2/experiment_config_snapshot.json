@@ -1,0 +1,127 @@
+{
+  "active_parameter_rule": {
+    "always_inactive": [
+      "recess_depth_mm",
+      "fillet_radius_mm"
+    ],
+    "base": [
+      "housing_width_mm",
+      "housing_height_mm",
+      "proximal_section_length_mm",
+      "transition_length_mm",
+      "distal_width_mm",
+      "distal_height_mm"
+    ],
+    "if_visible_pocket_present_add": [
+      "recess_length_mm"
+    ],
+    "no_new_parameters": true
+  },
+  "assembly_gates": {
+    "bicr": 1.0,
+    "connected_solid_count": 1
+  },
+  "evaluation": {
+    "development_input": "experiments/try5A/protocol/try5b1_a1_development_input.json",
+    "formal_holdout_access": false,
+    "geometry_evaluator": "experiments/try5A/evaluation/geometry_pair_evaluator.py",
+    "gt_only_after_final_lock": true,
+    "mechanical_evaluator": "experiments/try5A/evaluation/mechanical/freecad_holdout_evaluator.py"
+  },
+  "experiment_id": "try6_0_c1_v2_l04_real_visual_metric_grounding",
+  "formal_holdout_access": false,
+  "frozen_c0_iou": 0.12496993987975952,
+  "frozen_c0_source": "experiments/try5A/results/try5b1_a2a_three_link/paired_main_table.json",
+  "functional_backbone": "experiments/try6/protocol/r1_functional_backbone.json",
+  "gt_access_before_final_candidate_lock": false,
+  "kfdg_schema": "experiments/try6/protocol/r1_v3_kfdg.schema.json",
+  "link_id": "L04",
+  "misalignment_rule": {
+    "maximum_iou_relative_to_c0": 0.95,
+    "minimum_nchamfer_relative_to_c0": 1.05,
+    "minimum_nhd95_relative_to_c0": 1.05,
+    "minimum_relative_visual_objective_improvement": 0.05,
+    "requires_all_three_gt_directions_worse": true
+  },
+  "model": {
+    "identifier": "qwen3.7-plus",
+    "manual_intervention": 0,
+    "max_calls": 1,
+    "max_output_tokens": 4096,
+    "sdk_retries": 0,
+    "seed": 20260923,
+    "technical_retries": 0,
+    "temperature": 0.0,
+    "timeout_seconds": 300,
+    "top_p": 1.0
+  },
+  "model_config": "go_nogo2/config/llm.local.toml",
+  "parameter_registry": "experiments/try6/protocol/r1_parameter_registry.json",
+  "primary_iou_gate": 0.13746693386773548,
+  "r1_v3_readiness": "experiments/try6/results/try6_0_r1_v3/validation.json",
+  "schema_version": "robotcad_try6_0_c1_v2_protocol_v1",
+  "slot_api_schema": "experiments/try6/results/try6_0_r1_v3/schema/api_transport_schema.json",
+  "slot_canonical_schema": "experiments/try6/protocol/r1_v3_slot.schema.json",
+  "slot_prompt": "experiments/try6/prompts/r1_v3_slots_l04.md",
+  "slot_registry": "experiments/try6/protocol/r1_v3_slot_registry.json",
+  "solver": {
+    "candidate_timeout_seconds": 90,
+    "convergence_tolerance": 0.0001,
+    "invalid_candidate_penalty": 10.0,
+    "max_candidate_evaluations": 32,
+    "max_runtime_seconds": 240,
+    "max_stale_evaluations": 6,
+    "optimizer": "seeded_bounded_sobol_then_coordinate_search",
+    "seed": 20260923
+  },
+  "source_input_manifest": "experiments/try6/results/try6_0_c1/input_hashes.json",
+  "starting_commit": "fe47885bd3211d18918d3fe1e2110413f9d3f22a",
+  "stop_before_c2": true,
+  "supporting_gates": {
+    "at_least_one_distance_strictly_better": true,
+    "nchamfer_max_c0_ratio": 1.05,
+    "nhd95_max_c0_ratio": 1.05,
+    "silhouette_min_c0_ratio": 0.98
+  },
+  "view_registration": {
+    "anchor_distance_mm": 63.0,
+    "calibrated": false,
+    "candidate_specific_reregistration": false,
+    "maximum_cross_view_relative_scale_discordance": 0.1,
+    "method": "raw teal-color connected component endpoints plus 63 mm URDF L04 anchor; approximate orthographic nuisance registration",
+    "minimum_visible_pixels_per_view": 10000,
+    "views": [
+      "right",
+      "top"
+    ]
+  },
+  "visual_evidence": {
+    "color_rule": "R<85;G>110;B>85;G>R+40;B>R+35;connected_component>=1000px;top_y>=600",
+    "full_link_silhouette_claim": false,
+    "observed_region": "raw-image teal L04 visible pixels in joint-anchored central ROI, not GT or complete link silhouette",
+    "profile_stations_mm": [
+      15.0,
+      30.0,
+      45.0
+    ],
+    "roi_axis_mm": [
+      12.0,
+      52.0
+    ],
+    "station_half_window_pixels": 2
+  },
+  "visual_objective": {
+    "camera_variables_optimized": false,
+    "components": [
+      "visible_contour_distance",
+      "visible_profile_width"
+    ],
+    "gt_terms": 0,
+    "mechanical_terms": 0,
+    "normalization": "contour by central ROI diagonal; profile by 63 mm URDF anchor; equal mean over two views",
+    "weights": {
+      "visible_contour_distance": 0.5,
+      "visible_profile_width": 0.5
+    }
+  }
+}

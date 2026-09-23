@@ -1,0 +1,7 @@
+{
+  "final_candidate_lock_sha256": "1483914db6a69a3962623189ea35fb32c0cb6fe8cdcb5dd800a8846749e468f4",
+  "formal_holdout_access": false,
+  "gt_evaluation_attempt_limit": 1,
+  "gt_first_access_after_lock": true,
+  "timestamp_utc": "2026-09-23T09:42:21.577437+00:00"
+}

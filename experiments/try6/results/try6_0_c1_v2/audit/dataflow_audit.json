@@ -1,0 +1,95 @@
+{
+  "gt_access_before_final_lock": false,
+  "mechanical_feedback_to_solver": false,
+  "slot_chain": {
+    "active_parameters": [
+      "housing_width_mm",
+      "housing_height_mm",
+      "proximal_section_length_mm",
+      "transition_length_mm",
+      "distal_width_mm",
+      "distal_height_mm"
+    ],
+    "cad_feature_names": [
+      "MainHousingPad",
+      "ProfileTransitionLoft",
+      "HousingWithTransition",
+      "FrozenProximalBore",
+      "FrozenMatingEnvelopeCut",
+      "RigidGroup"
+    ],
+    "kfdg_sha256": "832169747f0f8fcd2a6370f314d891d310fb674c5199a31731e79bacba703e2b",
+    "pocket_instantiated": false,
+    "slot_statuses": {
+      "main_housing": "PRESENT",
+      "profile_transition": "PRESENT",
+      "visible_pocket": "ABSENT"
+    }
+  },
+  "urdf_metric_chain": {
+    "anchor_mm": 63.0,
+    "cad_parameter_table": {
+      "distal_height_mm": 22.140909203886984,
+      "distal_width_mm": 17.38176517443359,
+      "fillet_radius_mm": 1.0,
+      "housing_height_mm": 12.03800277272582,
+      "housing_width_mm": 24.0,
+      "proximal_section_length_mm": 32.0,
+      "recess_depth_mm": 4.0,
+      "recess_length_mm": 12.0,
+      "transition_length_mm": 16.0
+    },
+    "profile_targets_mm": {
+      "right": [
+        12.035820895522388,
+        12.035820895522388,
+        15.044776119402986
+      ],
+      "top": [
+        25.043478260869566,
+        25.043478260869566,
+        18.782608695652176
+      ]
+    },
+    "scale_px_per_mm": {
+      "right": 5.317460317460317,
+      "top": 5.111111111111111
+    },
+    "theta_star": {
+      "distal_height_mm": 22.140909203886984,
+      "distal_width_mm": 17.38176517443359,
+      "fillet_radius_mm": 1.0,
+      "housing_height_mm": 12.03800277272582,
+      "housing_width_mm": 24.0,
+      "proximal_section_length_mm": 32.0,
+      "recess_depth_mm": 4.0,
+      "recess_length_mm": 12.0,
+      "transition_length_mm": 16.0
+    }
+  },
+  "visual_metric_chain": {
+    "evidence_sha256": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5",
+    "initial_objective": 0.059748590016398394,
+    "raw_image_hashes": {
+      "front": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+      "isometric": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+      "left": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca",
+      "rear": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428",
+      "right": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+      "top": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+    },
+    "selected_body_objective_recomputed": 0.02304838670527038,
+    "selected_objective": 0.02304838670527038,
+    "theta_star": {
+      "distal_height_mm": 22.140909203886984,
+      "distal_width_mm": 17.38176517443359,
+      "fillet_radius_mm": 1.0,
+      "housing_height_mm": 12.03800277272582,
+      "housing_width_mm": 24.0,
+      "proximal_section_length_mm": 32.0,
+      "recess_depth_mm": 4.0,
+      "recess_length_mm": 12.0,
+      "transition_length_mm": 16.0
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "api_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "api_key_recorded": false,
+  "branch": "main",
+  "created_utc": "2026-09-23T09:51:37.379554+00:00",
+  "decision": "GO_C2",
+  "evaluator_source_sha256": {
+    "geometry_evaluator": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa",
+    "mechanical_evaluator": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec"
+  },
+  "experiment_id": "try6_0_c1_v2_l04_real_visual_metric_grounding",
+  "final_cad_artifacts": {
+    "body_only.stl": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/body_only.stl",
+      "sha256": "1e901225270033564974bc00aaf5f5a03cd1538df05bc34d02cf90d95ef5efdb"
+    },
+    "final.FCStd": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.FCStd",
+      "sha256": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411"
+    },
+    "final.step": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.step",
+      "sha256": "d2997ad362e3d95fd74bfd9c9fdbddeabb11bb538003ff1d7428157d093e219f"
+    },
+    "final.stl": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.stl",
+      "sha256": "2fc6917a15793b5b8475f74606a76d00810e3d5043b342944544f2d0106249ef"
+    }
+  },
+  "final_candidate_lock_sha256": "1483914db6a69a3962623189ea35fb32c0cb6fe8cdcb5dd800a8846749e468f4",
+  "formal_holdout_accessed": false,
+  "formal_holdout_evaluation_count": 0,
+  "freecad_version": "[\"1\", \"1\", \"1\", \"20260414 (Git shallow)\", \"Unknown\", \"2026/04/14 22:09:59\", \"(HEAD detached at 0108fd4b4)\", \"0108fd4b4850cc46e625b60e53cea7a7bbe69f8d\"]",
+  "frozen_c0_source_sha256": "1971dcfda7bd5fab38ae83b0765a49ba71105ddbed623eb361655b22f69e535e",
+  "functional_backbone_sha256": "ef8897268757ea3fc552de01c1f420c189c8687511e71c1b7dc1f309105163be",
+  "geometry_raw_sha256": "760f1948564b83fed9e4d6d5cf285ce6f7cf9d100548d88926c0998e8290340f",
+  "gt_final_evaluation_count": 1,
+  "implementation_commit_before_formal_call": "dfad69145c28fbd06539c7a4cbdd1a0e884b3385",
+  "kfdg_sha256": "832169747f0f8fcd2a6370f314d891d310fb674c5199a31731e79bacba703e2b",
+  "mechanical_raw_sha256": "932986c91a256fab65ae610fd7b0530021da669a483f6428f1e1546ebe6577ef",
+  "method_source_sha256": {
+    "freecad_builder": "ddbffdcd3742c8a310ca259043e4d539a9db094a637c584f6310feab07d9139b",
+    "geometry_evaluator": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa",
+    "independent_validator": "79c409f57265c549b1dcd2e74ddf6c5095df337fe7d09a3c88a4de6b48643769",
+    "mechanical_evaluator": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec",
+    "objective": "6d02e8266e1a45327c0bd6685ac7215cc54c052dea150f272048b85ee8f97adc",
+    "slot_runner": "5f26a648ed1f3113f010a703be835dd8493fd1abcba673e83df71338fcb3422e",
+    "solver": "20f9573008c31bc3c48904dd88092cd871fd202a0cd4636e013455e3917e4a0c"
+  },
+  "model_requested": "qwen3.7-plus",
+  "model_returned": "qwen3.7-plus",
+  "parameter_registry_sha256": "26d1ddbb5ba8c9cbb4db6de79f5f6ea7ffc88e5397e16148420f9873453415ba",
+  "prior_result_hash_recheck": {
+    "c1_v1": {
+      "files_checked": 21,
+      "manifest_sha256": "84a99bff97ae146259fa113f3bd0dfe07721891cb626ef43a8ef5edd47c7dcb3",
+      "unchanged": true
+    },
+    "r0": {
+      "files_checked": 58,
+      "manifest_sha256": "c678d4fabea469b8f44a27b320f707f0d346f8f27b1f195511f1ae179a2e7e6c",
+      "unchanged": true
+    },
+    "r1_v1": {
+      "files_checked": 41,
+      "manifest_sha256": "87566c73eb4490654beccf258676af22fb64ed483203b504cbf1911462a18f9b",
+      "unchanged": true
+    },
+    "r1_v2": {
+      "files_checked": 55,
+      "manifest_sha256": "bbff476c16a96d7285508f8e692140d41167b33aa6271b2c3880fd69848bdcc9",
+      "unchanged": true
+    },
+    "r1_v3": {
+      "files_checked": 94,
+      "manifest_sha256": "4aeafb902ad3f378301da9efcb895e5783b61b2cda7ded7be0c1d86529fa3cfd",
+      "unchanged": true
+    }
+  },
+  "process_runtime_accounting": "measured components only; full wall time unavailable",
+  "protocol_path": "experiments/try6/protocol/try6_0_c1_v2.json",
+  "protocol_sha256": "6d1bf6ead008b477bee6c775e64256e4a50df2825f1a664a41283bc4937bab91",
+  "python_environment": ".venv/Scripts/python.exe",
+  "raw_image_hashes": {
+    "front": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+    "isometric": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+    "left": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca",
+    "rear": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428",
+    "right": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+    "top": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+  },
+  "result_file_sha256": {
+    "audit/dataflow_audit.json": "af1714783efa97c9145466a339df46488e5798b8f40c8c72f7843b71cca6eddb",
+    "audit/holdout_audit.json": "d5c3a874fc082fb4aedd3bdf4cd67061446261c120db626e2a5ca7fc6c15e1a5",
+    "audit/independent_validation.json": "c4f19a6b9eed1c2234e64f65c83a84ac8cfacff2de773d82013b498958719aee",
+    "audit/leakage_audit.json": "74e703b79276e8a504f2f1463149a9b42926c9ae75dc7ecc113e9d468f39eded",
+    "cad/export_reopen.json": "e4ea944aaa140bcb9fffbccbdbc3877ca37452a6a614a71e179c611ee52ed6ad",
+    "cad/feature_mapping.json": "cfd911dca528d2e0411274222e3cd3e86b689b400357469baab758e324fc2d89",
+    "cad/parameter_table.json": "d2ee4b4c4e4b421b920de6098fbf4c17e15e1c87f678caf2ed4cc85f809b16c1",
+    "case_split.json": "dab7c02d10f7ea19ea3cb053515051e3a831161d10870dd48dfd86f8e2bf4e0d",
+    "claim_ledger.json": "49f29ea235f290ec739f569eab828481522357b78a2032ec75ac9f56323deab6",
+    "condition_parity.json": "83fea5cfc6db615276b201ecabf5e1488e35093af4d29d50d6ad9e76f9f98151",
+    "evaluation/c0_vs_c1.json": "e499e04969f6673abfd89855901251e9940baa6a4b579cb5d563b5c35db68593",
+    "evaluation/candidate_manifest.json": "1013ee629b06098fa2b5074ae1c8c9fb82da65b6b6352d180a6caf3fe84f557d",
+    "evaluation/evaluation_runtime.json": "8495bd9f50ff8a8550ce38fc69c0a7d5af7e4bb79cec583bc74f403e270b6625",
+    "evaluation/evaluation_started.json": "e52726a1e4f884196aa6ef71dcb077cc9a0245756a510c845d45a76d34cf89df",
+    "evaluation/final_candidate_lock.json": "1483914db6a69a3962623189ea35fb32c0cb6fe8cdcb5dd800a8846749e468f4",
+    "evaluation/geometry_metrics.json": "c7605902c909737d8d4abcceb029f2e6df186535b257107b2df48ffbe6a93a58",
+    "evaluation/geometry_raw.json": "760f1948564b83fed9e4d6d5cf285ce6f7cf9d100548d88926c0998e8290340f",
+    "evaluation/geometry_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluation/geometry_stdout.txt": "860dedd5aa4ce80ed20fc86a951029854e0d4956d5e485ffb31c0752cf279a41",
+    "evaluation/mechanical_metrics.json": "83f3ec1ac61d8cef7f63ebde2fa85201eadaf1519205862a74ea6ade5d9494bf",
+    "evaluation/mechanical_raw.json": "932986c91a256fab65ae610fd7b0530021da669a483f6428f1e1546ebe6577ef",
+    "evaluation/mechanical_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluation/mechanical_stdout.txt": "a01dc71bd29b3d0b2c12e3147f637942011019c60d774d5ccc15461eaf832fe1",
+    "experiment_config_snapshot.json": "0e67f6478ed943251997c67dbde8a56b7a19c91730057cfb0e7c55cd5b184b2d",
+    "failure_accounting.json": "b928d6ec50ea012ecf12ecf07e4b7dda7b43e71e27cde13a4e393c4613b3fa9b",
+    "holdout_evaluation_log.json": "9ad5a38573ca79e8d2c6c2129a3b14ef95ef5bb5750cea26afe8ae1664895562",
+    "infrastructure_smoke.json": "585b093a7694a381e9dc790937482984447b25a4f972b83d75e7523828612ce8",
+    "kfdg/active_parameters.json": "88586c7140fa47d3685b029424fe64783e2a46be17b3c08abfd794e0735bdb10",
+    "kfdg/canonical_kfdg.json": "832169747f0f8fcd2a6370f314d891d310fb674c5199a31731e79bacba703e2b",
+    "pre_run_manifest.json": "a4550eab488d75ba910c658bf36830f138a8027504289370dddb26fd770fe2fe",
+    "process_metrics.json": "be417394372d4d08fc960dad5761da0fe6c4a9e9eb4716fec5d6adb7dba137a0",
+    "protocol.json": "0e67f6478ed943251997c67dbde8a56b7a19c91730057cfb0e7c55cd5b184b2d",
+    "report.md": "26593be9febadd750a87bd8d25ef231ddd392f9a1807ea040b8c784178e6fdc2",
+    "slot/attempt_started.json": "b88e23e9560e56c06bc4b48ed2def65f10ffb6429dc22d33399f0e1431ccc985",
+    "slot/http_response.json": "f7d591519619edd29c53acbe7ee6c5031cfcc835c785f59c565ce32d7df3c6c4",
+    "slot/independent_validation.json": "cc0b399ab7404d1a0694f4f2505e5ae0020da7850db8c77c340b6fed2862c5cd",
+    "slot/raw_response.txt": "9ae117ea92c345692bc57cd213199cabed1666e73cb498f496e82b182d2b581e",
+    "slot/request.json": "f0c7a6da23a0eeaa00fd3d62d66f8d9c70196f88834213f833fb6169d247b344",
+    "slot/response.json": "dcafe9eab268674197c4c74f40e365b3562ec1957cec9dd0d216ca1e040e5142",
+    "slot/validated_slots.json": "e47f445686b7ea02f8cca55232f829df584accd7a9dde2546e80de55e9cd0471",
+    "slot/validation.json": "785b232ff7f98bbc4d3186a7f9595266227a7aef7d11945f8d3b2f11fb15cf46",
+    "solver/attempt_started.json": "4e552326fa4ea18c29a18b635d6e847633c802f950366c378ab4731153d38373",
+    "solver/candidate_history.csv": "a0cefc35c3881dff474078cdbf513aea48ae65009fe005c26c5b8130eec83934",
+    "solver/candidate_history.json": "2a7dd3472526f180111de6f2597f9bbe224dc0a046e4e6ca5dca3cc263f22de6",
+    "solver/config.json": "2180884647824d6aea321a7b0a7ca7b087c93d4a0a2e0ddc676822d11fde7849",
+    "solver/independent_validation.json": "ff67b654112cf689e5de053e0a994568b5b20f1c7c07b5ee6704ccd952f86689",
+    "solver/objective_breakdown.csv": "95f4c49f2ff699148c1ebf306d0e714df17befca49e882eaa5914ff7371da74d",
+    "solver/objective_definition.json": "347945762dc9e455fe0b9fa9228bd9c98f98796b41ec4d3ab72e71b44f05960b",
+    "solver/theta_selected.json": "9d5ffcf14db18bac48c9b9160835030af3d432137e6e298b833146b946936dc5",
+    "validation.json": "c4f19a6b9eed1c2234e64f65c83a84ac8cfacff2de773d82013b498958719aee",
+    "visual_metric_evidence/contour_or_edge_evidence.json": "815a7286b05a777c27c2166be5ac2ceba2c770a5d40ebe02bae3ed33552bd171",
+    "visual_metric_evidence/evidence_audit.json": "23a1357139bddc0a5cbcf4faad292679c6761ecf0ea259fc707372b22c134930",
+    "visual_metric_evidence/landmarks.json": "851f6979b040363871619753cadbe59b1a76f4df94accf1b7de77ff5c3468f20",
+    "visual_metric_evidence/profile_measurements.json": "9e28f7c975e51ce2c9041de30d7c4814408059f14857c22a6a0d7de52f563f75",
+    "visual_metric_evidence/view_registration_report.json": "00a5ac45f8f46c2d5dd894efc3f39074028c568a1674da82bef0e00e543f9313",
+    "visual_metric_evidence/visual_metric_evidence.json": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5"
+  },
+  "result_freeze_parent_commit": "b83ff2920b68e018fc77bfa801e3165ebc493489",
+  "sanitized_urdf_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+  "schema_version": "robotcad_try6_c1_v2_manifest_v1",
+  "sdk_version": "2.53.0",
+  "slot_registry_sha256": "5701ca0770b17f0ab03cc3bd2c6c356e62f657cb1421d74aeaf1b1f2dfdfd2d3",
+  "slot_schema_sha256": "71094cc2f970ca0aa910ea6660c12806146fa89271f80f750559bed1b13162a5",
+  "solver_config_sha256": "2180884647824d6aea321a7b0a7ca7b087c93d4a0a2e0ddc676822d11fde7849",
+  "starting_commit": "fe47885bd3211d18918d3fe1e2110413f9d3f22a",
+  "view_registration_sha256": "00a5ac45f8f46c2d5dd894efc3f39074028c568a1674da82bef0e00e543f9313",
+  "visual_evidence_sha256": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5",
+  "visual_objective_sha256": "347945762dc9e455fe0b9fa9228bd9c98f98796b41ec4d3ab72e71b44f05960b"
+}

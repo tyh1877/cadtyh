@@ -1,0 +1,98 @@
+{
+  "bicr": 1.0,
+  "candidate_locked_before_gt": true,
+  "decision": "GO_C2",
+  "final_cad_valid": true,
+  "formal_holdout_accessed": false,
+  "formal_holdout_evaluation_count": 0,
+  "geometry_c0": {
+    "final_normalized_chamfer": 0.11657432624731785,
+    "final_normalized_hd95": 0.2950432532379807,
+    "final_silhouette_iou": 0.3017446993510538,
+    "final_voxel_iou": 0.12496993987975952
+  },
+  "geometry_c1": {
+    "final_bbox_error_mm": 32.60057072749594,
+    "final_major_dimension_error_mm": 10.049576044082642,
+    "final_normalized_chamfer": 0.1010314900985874,
+    "final_normalized_hd95": 0.29211681006226614,
+    "final_silhouette_iou": 0.3462839613652157,
+    "final_voxel_iou": 0.1881884426368412
+  },
+  "gt_evaluation_count": 1,
+  "manual_intervention_count": 0,
+  "mechanical_diagnostic": {
+    "collision_events": 42,
+    "failed_configuration_ids": [
+      "sobol_011",
+      "sobol_014",
+      "sobol_018",
+      "sobol_020",
+      "sobol_021",
+      "sobol_025",
+      "sobol_035",
+      "sobol_046",
+      "sobol_047",
+      "sobol_050",
+      "sobol_053",
+      "sobol_056",
+      "sobol_076",
+      "sobol_077",
+      "sobol_090",
+      "sobol_095",
+      "sobol_107",
+      "sobol_118",
+      "sobol_123"
+    ],
+    "gcfr": 0.8020833333333334,
+    "intersection_volume_mm3": 26456.388605736887,
+    "j03_jr3": 1.0
+  },
+  "misalignment_rule_triggered": false,
+  "primary_iou_gate_pass": true,
+  "prior_result_hash_recheck": {
+    "c1_v1": {
+      "files_checked": 21,
+      "manifest_sha256": "84a99bff97ae146259fa113f3bd0dfe07721891cb626ef43a8ef5edd47c7dcb3",
+      "unchanged": true
+    },
+    "r0": {
+      "files_checked": 58,
+      "manifest_sha256": "c678d4fabea469b8f44a27b320f707f0d346f8f27b1f195511f1ae179a2e7e6c",
+      "unchanged": true
+    },
+    "r1_v1": {
+      "files_checked": 41,
+      "manifest_sha256": "87566c73eb4490654beccf258676af22fb64ed483203b504cbf1911462a18f9b",
+      "unchanged": true
+    },
+    "r1_v2": {
+      "files_checked": 55,
+      "manifest_sha256": "bbff476c16a96d7285508f8e692140d41167b33aa6271b2c3880fd69848bdcc9",
+      "unchanged": true
+    },
+    "r1_v3": {
+      "files_checked": 94,
+      "manifest_sha256": "4aeafb902ad3f378301da9efcb895e5783b61b2cda7ded7be0c1d86529fa3cfd",
+      "unchanged": true
+    }
+  },
+  "registration_pass": true,
+  "representation_pass": true,
+  "schema_version": "robotcad_try6_c1_v2_independent_validation_v1",
+  "single_link_development_only": true,
+  "solver_pass": true,
+  "supporting_gates": {
+    "bicr": true,
+    "connected_solid": true,
+    "nchamfer": true,
+    "nhd95": true,
+    "one_distance_strictly_better": true,
+    "primary_iou": true,
+    "silhouette": true
+  },
+  "timestamp_utc": "2026-09-23T09:49:17.012658+00:00",
+  "visual_evidence_pass": true,
+  "visual_objective_initial": 0.059748590016398394,
+  "visual_objective_selected": 0.02304838670527038
+}

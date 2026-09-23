@@ -1,0 +1,10 @@
+{
+  "audit_limit": "source-path and artifact audit, not OS-level filesystem trace",
+  "first_gt_access_after_candidate_lock": true,
+  "formal_holdout_accessed": false,
+  "generator_solver_gt_reads": 0,
+  "slot_request_excludes_gt": true,
+  "solver_objective_gt_terms": 0,
+  "solver_objective_mechanical_terms": 0,
+  "source_paths_generator_only": true
+}

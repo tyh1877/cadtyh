@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "conditions": [
+    {
+      "condition": "C1_V2",
+      "gcfr": 0.8020833333333334
+    }
+  ]
+}
