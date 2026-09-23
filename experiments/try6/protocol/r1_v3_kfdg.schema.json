@@ -1,0 +1,376 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "authority": {
+      "additionalProperties": false,
+      "properties": {
+        "functional_backbone_sha256": {
+          "type": "string"
+        },
+        "parameter_registry_sha256": {
+          "type": "string"
+        },
+        "slot_registry_sha256": {
+          "type": "string"
+        },
+        "slot_response_sha256": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "functional_backbone_sha256",
+        "parameter_registry_sha256",
+        "slot_registry_sha256",
+        "slot_response_sha256"
+      ],
+      "type": "object"
+    },
+    "constraints": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "interface_fixed",
+              "profile_continuity",
+              "contains",
+              "connected_to"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "target",
+          "type"
+        ],
+        "type": "object"
+      },
+      "maxItems": 4,
+      "minItems": 0,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "functional_nodes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "axis": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "frame_xyz_mm": {
+            "items": {
+              "type": "number"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          },
+          "id": {
+            "type": "string"
+          },
+          "interface_family": {
+            "type": "string"
+          },
+          "joint_id": {
+            "enum": [
+              "J03",
+              "J04"
+            ],
+            "type": "string"
+          },
+          "source": {
+            "enum": [
+              "URDF_AND_FROZEN_INTERFACE"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "joint_port",
+              "mount_port"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "joint_id",
+          "frame_xyz_mm",
+          "axis",
+          "interface_family",
+          "source"
+        ],
+        "type": "object"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+    },
+    "geometric_features": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ],
+            "type": "string"
+          },
+          "evidence_views": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "id": {
+            "type": "string"
+          },
+          "parameter_refs": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "source_slot_id": {
+            "enum": [
+              "main_housing",
+              "visible_pocket",
+              "profile_transition"
+            ],
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "housing",
+              "pocket",
+              "profile_transition"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "parameter_refs",
+          "source_slot_id",
+          "evidence_views",
+          "confidence"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "minItems": 0,
+      "type": "array"
+    },
+    "link_id": {
+      "enum": [
+        "L04"
+      ],
+      "type": "string"
+    },
+    "metric_anchor": {
+      "additionalProperties": false,
+      "properties": {
+        "distance_mm": {
+          "type": "number"
+        },
+        "joint_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 2,
+          "minItems": 2,
+          "type": "array"
+        },
+        "source": {
+          "enum": [
+            "SANITIZED_URDF_J04_L04_ORIGIN"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "joint_ids",
+        "distance_mm",
+        "source"
+      ],
+      "type": "object"
+    },
+    "parameters": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "allowed_orphan": {
+            "type": "boolean"
+          },
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ],
+            "type": "string"
+          },
+          "functional_frozen": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "lower_bound": {
+            "type": "number"
+          },
+          "optimizable": {
+            "type": "boolean"
+          },
+          "owner_feature_id": {
+            "type": "string"
+          },
+          "owner_slot_id": {
+            "enum": [
+              "main_housing",
+              "visible_pocket",
+              "profile_transition",
+              "deferred_fillet"
+            ],
+            "type": "string"
+          },
+          "provenance": {
+            "enum": [
+              "VISUAL_EVIDENCE",
+              "URDF_METRIC_ANCHOR",
+              "KINEMATIC_REQUIREMENT",
+              "SOLVER_ESTIMATED"
+            ],
+            "type": "string"
+          },
+          "semantic_role": {
+            "type": "string"
+          },
+          "unit": {
+            "enum": [
+              "mm"
+            ],
+            "type": "string"
+          },
+          "upper_bound": {
+            "type": "number"
+          },
+          "value": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "value",
+          "unit",
+          "lower_bound",
+          "upper_bound",
+          "provenance",
+          "confidence",
+          "owner_feature_id",
+          "semantic_role",
+          "optimizable",
+          "functional_frozen",
+          "allowed_orphan",
+          "owner_slot_id",
+          "active"
+        ],
+        "type": "object"
+      },
+      "maxItems": 9,
+      "minItems": 9,
+      "type": "array"
+    },
+    "schema_version": {
+      "enum": [
+        "robotcad_kfdg_r1_v3"
+      ],
+      "type": "string"
+    },
+    "slot_provenance": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ],
+            "type": "string"
+          },
+          "evidence_views": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
+          },
+          "slot_id": {
+            "enum": [
+              "main_housing",
+              "visible_pocket",
+              "profile_transition"
+            ],
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PRESENT",
+              "ABSENT",
+              "UNCERTAIN"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "slot_id",
+          "status",
+          "evidence_views",
+          "confidence"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "link_id",
+    "functional_nodes",
+    "geometric_features",
+    "parameters",
+    "constraints",
+    "metric_anchor",
+    "authority",
+    "slot_provenance"
+  ],
+  "title": "Try-6 R1-v3 status-aware canonical KFDG",
+  "type": "object"
+}

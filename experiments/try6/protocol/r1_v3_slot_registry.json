@@ -1,0 +1,20 @@
+{
+  "schema_version": "robotcad_try6_r1_v3_slot_registry_v1",
+  "link_id": "L04",
+  "status_vocabulary": ["PRESENT", "ABSENT", "UNCERTAIN"],
+  "parameter_source": "experiments/try6/protocol/r1_parameter_registry.json",
+  "functional_source": "experiments/try6/protocol/r1_functional_backbone.json",
+  "slots": [
+    {"slot_id": "main_housing", "description": "externally visible primary L04 body housing", "feature_id": "housing_01", "engineering_feature_type": "housing", "parameter_refs": ["housing_width_mm", "housing_height_mm", "proximal_section_length_mm"], "present_requires_evidence": true, "uncertain_requires_evidence": true, "absent_allows_empty_evidence": true, "if_present": "INSTANTIATE", "if_absent": "DO_NOT_INSTANTIATE", "if_uncertain": "PROVENANCE_ONLY", "reconstruction_boundary": "external visible body only"},
+    {"slot_id": "visible_pocket", "description": "externally visible side recess or cutout; axial extent uses frozen recess_length_mm", "feature_id": "recess_01", "engineering_feature_type": "pocket", "parameter_refs": ["recess_length_mm", "recess_depth_mm"], "present_requires_evidence": true, "uncertain_requires_evidence": true, "absent_allows_empty_evidence": true, "if_present": "INSTANTIATE", "if_absent": "DO_NOT_INSTANTIATE", "if_uncertain": "PROVENANCE_ONLY", "reconstruction_boundary": "visible external cutout only; no hidden cavity"},
+    {"slot_id": "profile_transition", "description": "externally visible change from main body to distal profile", "feature_id": "transition_01", "engineering_feature_type": "profile_transition", "parameter_refs": ["transition_length_mm", "distal_width_mm", "distal_height_mm"], "present_requires_evidence": true, "uncertain_requires_evidence": true, "absent_allows_empty_evidence": true, "if_present": "INSTANTIATE", "if_absent": "DO_NOT_INSTANTIATE", "if_uncertain": "PROVENANCE_ONLY", "reconstruction_boundary": "visible outer profile only"}
+  ],
+  "deterministic_relation_rules": [
+    {"if_present": ["main_housing"], "source": "housing_01", "target": "proximal_joint_port", "type": "interface_fixed"},
+    {"if_present": ["main_housing", "profile_transition"], "source": "housing_01", "target": "transition_01", "type": "profile_continuity"},
+    {"if_present": ["main_housing", "visible_pocket"], "source": "housing_01", "target": "recess_01", "type": "contains"},
+    {"if_present": ["profile_transition"], "source": "transition_01", "target": "distal_mount_port", "type": "connected_to"}
+  ],
+  "inactive_parameter_policy": "retain registry node with active=false and owner_slot_id; no geometric feature reference",
+  "dormant_legacy_fillet_policy": "fillet_radius_mm remains inactive and no fillet feature is created"
+}

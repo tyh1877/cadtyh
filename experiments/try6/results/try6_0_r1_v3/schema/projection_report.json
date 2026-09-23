@@ -1,0 +1,21 @@
+{
+  "api_compatible_unverified_until_preflight": true,
+  "api_schema_sha256": "1a1c8e819392f3181ad69c845b3455ddf5a08544b6f8264a03bb4eae35b0eaa6",
+  "canonical_source_path": "experiments/try6/protocol/r1_v3_slot.schema.json",
+  "canonical_source_sha256": "71094cc2f970ca0aa910ea6660c12806146fa89271f80f750559bed1b13162a5",
+  "local_contract_unchanged": true,
+  "projection_rules_path": "experiments/try6/protocol/r1_v3_projection_rules.json",
+  "projection_rules_sha256": "367c5dc178f449d5c7982fedf114c915fb157a28f72688e2343c32fb5c558641",
+  "removed": [
+    {
+      "api_evidence": "experiments/try6/results/try6_0_r1/reliability/call_01/http_response.json",
+      "keyword": "uniqueItems",
+      "local_validator_replacement": "Draft202012Validator(canonical slot schema) plus r1_v3_contract.validate_slots retains evidence uniqueness and exact slot identity",
+      "path": "/properties/slots/items/properties/evidence_views/uniqueItems",
+      "reason": "The same endpoint rejected uniqueItems on arrays in frozen R1-v1; R1-v2 confirmed an API projection without it was accepted.",
+      "value": true
+    }
+  ],
+  "removed_count": 1,
+  "schema_version": "robotcad_try6_r1_v3_projection_report_v1"
+}

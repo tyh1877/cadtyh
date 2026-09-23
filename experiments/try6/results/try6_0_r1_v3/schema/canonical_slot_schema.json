@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "link_id": {
+      "enum": [
+        "L04"
+      ],
+      "type": "string"
+    },
+    "schema_version": {
+      "enum": [
+        "robotcad_slots_l04_r1_v3"
+      ],
+      "type": "string"
+    },
+    "slots": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ],
+            "type": "string"
+          },
+          "evidence_views": {
+            "items": {
+              "enum": [
+                "front",
+                "isometric",
+                "left",
+                "right",
+                "top",
+                "rear",
+                "f0_front",
+                "f0_isometric",
+                "f0_left",
+                "f0_right",
+                "f0_top",
+                "f0_rear"
+              ],
+              "type": "string"
+            },
+            "type": "array",
+            "uniqueItems": true
+          },
+          "slot_id": {
+            "enum": [
+              "main_housing",
+              "visible_pocket",
+              "profile_transition"
+            ],
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PRESENT",
+              "ABSENT",
+              "UNCERTAIN"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "slot_id",
+          "status",
+          "evidence_views",
+          "confidence"
+        ],
+        "type": "object"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "link_id",
+    "slots"
+  ],
+  "title": "Try-6 R1-v3 L04 closed-set visual evidence slots",
+  "type": "object"
+}

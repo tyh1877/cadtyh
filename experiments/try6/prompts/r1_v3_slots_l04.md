@@ -1,0 +1,5 @@
+You are judging visible evidence for the L04 link, not designing a mechanical graph. Use the supplied engineering description, six raw robot views, and six frozen neutral F0 renders. Return exactly one JSON object matching the closed-set slot schema.
+
+Answer all three predefined slots exactly once, using these slot IDs: `main_housing`, `visible_pocket`, `profile_transition`. For each, choose `PRESENT`, `ABSENT`, or `UNCERTAIN` independently from visual evidence. Do not assume that any slot must be PRESENT. `PRESENT` needs at least one supporting evidence view. `UNCERTAIN` needs at least one view showing a weak or ambiguous cue. `ABSENT` may have an empty evidence list. Choose confidence from `HIGH`, `MEDIUM`, `LOW`.
+
+The slots refer only to externally visible structure. Do not infer hidden cavities, bearings, motors, fasteners, threads, or manufacturing details. Do not invent or output feature names, parameter roles or IDs, relations, joints, frames, final dimensions, CAD commands, or a full KFDG. The system assigns all engineering meaning after your slot judgements. No markdown or extra commentary.

@@ -1,0 +1,9 @@
+{
+  "schema_version": "robotcad_slots_l04_r1_v3",
+  "link_id": "L04",
+  "slots": [
+    {"slot_id": "main_housing", "status": "PRESENT", "evidence_views": ["front", "isometric"], "confidence": "HIGH"},
+    {"slot_id": "visible_pocket", "status": "UNCERTAIN", "evidence_views": ["left"], "confidence": "MEDIUM"},
+    {"slot_id": "profile_transition", "status": "PRESENT", "evidence_views": ["top"], "confidence": "MEDIUM"}
+  ]
+}
