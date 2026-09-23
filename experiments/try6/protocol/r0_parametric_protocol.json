@@ -1,0 +1,18 @@
+{
+  "schema_version": "robotcad_try6_r0_parametric_protocol_v1",
+  "link_id": "L04",
+  "anchor_distance_mm": 63.0,
+  "fillet_policy": "disabled_unvalidated_historical_edge_index",
+  "baseline_parameter_source": "experiments/try6/protocol/parameter_bounds.json",
+  "frozen_interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+  "f0_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+  "edits": [
+    {"id": "A", "parameter": "housing_width_mm", "multiplier": 1.05},
+    {"id": "B", "parameter": "housing_height_mm", "multiplier": 0.95},
+    {"id": "C", "parameter": "recess_depth_mm", "multiplier": 1.05}
+  ],
+  "independent_from_baseline": true,
+  "required_pass_count": 3,
+  "gt_access": false,
+  "formal_holdout_access": false
+}

@@ -84,11 +84,9 @@ def build(job):
     pad.setExpression("Length","ParameterTable.proximal_section_length_mm")
     doc.recompute()
     if pad.Shape.isNull() or not pad.Shape.isValid(): raise RuntimeError("main Sketch/Pad invalid")
-    fillet=body.newObject("PartDesign::Fillet","VisibleEdgeFillet")
-    fillet.Base=(pad,["Edge1"]); fillet.Radius=float(params["fillet_radius_mm"])
-    fillet.setExpression("Radius","ParameterTable.fillet_radius_mm")
-    doc.recompute()
-    if fillet.Shape.isNull() or not fillet.Shape.isValid(): raise RuntimeError("PartDesign Fillet invalid")
+    # R0: the previous Edge1 fillet was not stable under base-dimension edits.
+    # Keep the semantic fillet node in KFDG, but defer its CAD realization until
+    # a geometry-based edge selector has been independently validated.
     pocket_sketch=doc.addObject("Sketcher::SketchObject","VisibleRecessSketch")
     body.addObject(pocket_sketch)
     pocket_sketch.Placement=App.Placement(App.Vector(0,0,params["housing_height_mm"]/2),App.Rotation())
@@ -130,8 +128,8 @@ def build(job):
     final=doc.addObject("Part::Fuse","RigidGroup"); final.Base=mate_cut; final.Tool=scaffold
     doc.recompute()
     if final.Shape.isNull() or not final.Shape.isValid(): raise RuntimeError("final scaffold fusion invalid")
-    mapping={"proximal_joint_port":["FrozenProximalBore","FrozenMatingEnvelopeCut"],"distal_mount_port":["ProfileTransitionLoft"],nodes["housing"]:["MainHousingSketch","MainHousingPad"],nodes["profile_transition"]:["TransitionStart","TransitionMiddle","TransitionEnd","ProfileTransitionLoft"],nodes["pocket"]:["VisibleRecessSketch","VisibleRecessPocket"],nodes["fillet"]:["VisibleEdgeFillet"],"scaffold_safeguard":["FrozenScaffold","RigidGroup"]}
-    tree=[feature_state(obj) for obj in (pad,fillet,pocket,loft,join,bore,mate_cut,final)]
+    mapping={"proximal_joint_port":["FrozenProximalBore","FrozenMatingEnvelopeCut"],"distal_mount_port":["ProfileTransitionLoft"],nodes["housing"]:["MainHousingSketch","MainHousingPad"],nodes["profile_transition"]:["TransitionStart","TransitionMiddle","TransitionEnd","ProfileTransitionLoft"],nodes["pocket"]:["VisibleRecessSketch","VisibleRecessPocket"],nodes["fillet"]:[],"scaffold_safeguard":["FrozenScaffold","RigidGroup"]}
+    tree=[feature_state(obj) for obj in (pad,pocket,loft,join,bore,mate_cut,final)]
     for item in tree:
         if not item["valid"]: raise RuntimeError(f"invalid feature: {item['name']}")
     doc.saveAs(str(out/"final.FCStd"))
@@ -146,7 +144,7 @@ def build(job):
     reopen={"valid":obj is not None and not obj.Shape.isNull() and obj.Shape.isValid(),"volume_mm3":float(obj.Shape.Volume) if obj else None,"tree_nodes":len(reopened.Objects)}
     App.closeDocument(reopened.Name)
     if not reopen["valid"]: raise RuntimeError("saved FCStd did not reopen/recompute")
-    dump(out/"feature_mapping.json",{"kfdg_path":str(Path(job["kfdg_path"]).relative_to(ROOT)).replace("\\","/"),"kfdg_to_cad":mapping,"feature_tree":tree,"parameter_binding":{"sheet":"ParameterTable","builder_source":"experiments/try6/scripts/freecad_c1_builder.py","values":params},"final_reopen":reopen})
+    dump(out/"feature_mapping.json",{"kfdg_path":str(Path(job["kfdg_path"]).relative_to(ROOT)).replace("\\","/"),"kfdg_to_cad":mapping,"deferred_features":{"fillet":"disabled in R0: historical Edge1 reference was topologically fragile; no validated semantic selector yet"},"feature_tree":tree,"parameter_binding":{"sheet":"ParameterTable","builder_source":"experiments/try6/scripts/freecad_c1_builder.py","values":params},"final_reopen":reopen})
     payload={"status":"PASS","mode":job["mode"],"feature_tree":tree,"final_volume_mm3":volume,"final_solid_count":tree[-1]["solids"],"reopen":reopen,"artifacts":{key:sha(out/name) for key,name in (("fcstd","final.FCStd"),("step","final.step"),("stl","final.stl"),("body_stl","body_only.stl"))}}
     dump(out/"build_result.json",payload)
     print(json.dumps({"status":"PASS","final_volume_mm3":volume,"final_solid_count":tree[-1]["solids"]},indent=2))
