@@ -1,0 +1,134 @@
+{
+  "api_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "api_key_present": true,
+  "api_key_recorded": false,
+  "formal_holdout_lock": {
+    "accessed": false,
+    "evaluation_count": 0
+  },
+  "freecad_version": "[\"1\", \"1\", \"1\", \"20260414 (Git shallow)\", \"Unknown\", \"2026/04/14 22:09:59\", \"(HEAD detached at 0108fd4b4)\", \"0108fd4b4850cc46e625b60e53cea7a7bbe69f8d\"]",
+  "frozen_hashes": {
+    "assembler_rules": "ab79a3b8b25fb09013564ca0c0b74ecae65ee65e6b5cb817f87e236f0af6c0c8",
+    "functional_backbone": "ef8897268757ea3fc552de01c1f420c189c8687511e71c1b7dc1f309105163be",
+    "kfdg_schema": "47bc2f80ff010e8c5dcd4800e6d70bd0de3625b7f26ad1769904a64491e1d37b",
+    "parameter_registry": "26d1ddbb5ba8c9cbb4db6de79f5f6ea7ffc88e5397e16148420f9873453415ba",
+    "prompt": "085c2bd4952cac558ee1a254a59ac4f069df521a5d6bc39179bfcefc7d558a95",
+    "vfp_schema": "3724b63b697d3c2fb04b6e93a5f1ef99668e57e7578f2dbb366fbab170388f42"
+  },
+  "frozen_prior_results": {
+    "c1_v1": {
+      "enumerated_files_checked": 21,
+      "manifest_sha256": "84a99bff97ae146259fa113f3bd0dfe07721891cb626ef43a8ef5edd47c7dcb3",
+      "unchanged": true
+    },
+    "r0": {
+      "enumerated_files_checked": 58,
+      "manifest_sha256": "c678d4fabea469b8f44a27b320f707f0d346f8f27b1f195511f1ae179a2e7e6c",
+      "unchanged": true
+    }
+  },
+  "functional_authority_audit": {
+    "anchor_mm": 63.0,
+    "interface_sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d",
+    "joint_ids": [
+      "J03",
+      "J04"
+    ],
+    "status": "PASS",
+    "urdf_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664"
+  },
+  "gt_evaluations": 0,
+  "images": [
+    {
+      "path": "experiments/try5A/inputs/images/front.png",
+      "sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+      "view": "front"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/isometric.png",
+      "sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+      "view": "isometric"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/left.png",
+      "sha256": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca",
+      "view": "left"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/right.png",
+      "sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+      "view": "right"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/top.png",
+      "sha256": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22",
+      "view": "top"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/rear.png",
+      "sha256": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428",
+      "view": "rear"
+    },
+    {
+      "path": "experiments/try6/artifacts/try6_0_c1/vlm_inputs/renders/front.png",
+      "sha256": "9de3c00f024a4356bf7f97179e86e2e8cefa4b3060e03d479ffc763ec505c74a",
+      "view": "f0_front"
+    },
+    {
+      "path": "experiments/try6/artifacts/try6_0_c1/vlm_inputs/renders/isometric.png",
+      "sha256": "891bd2bfcc0a99d5263f02dadc787acf66a1936f28a9e233f101a761e92aec40",
+      "view": "f0_isometric"
+    },
+    {
+      "path": "experiments/try6/artifacts/try6_0_c1/vlm_inputs/renders/left.png",
+      "sha256": "60246b92907dac8e537e29c6fae2fd55f0fec2f08903e90bdb3d9f044a7eb9ca",
+      "view": "f0_left"
+    },
+    {
+      "path": "experiments/try6/artifacts/try6_0_c1/vlm_inputs/renders/right.png",
+      "sha256": "efd4710efb3fd4f0e464bf084cc12f7d4c423699492a4ac73f8c54d632305d4e",
+      "view": "f0_right"
+    },
+    {
+      "path": "experiments/try6/artifacts/try6_0_c1/vlm_inputs/renders/top.png",
+      "sha256": "c75ea26cd48ea9f6e62093957dcb20686bb85682e0cb86548e67f5428eae1865",
+      "view": "f0_top"
+    },
+    {
+      "path": "experiments/try6/artifacts/try6_0_c1/vlm_inputs/renders/rear.png",
+      "sha256": "b64d9d92b8673b649f27d31162d680493cfe8042e89bc9923da76c3ee345f4d4",
+      "view": "f0_rear"
+    }
+  ],
+  "model_requested": "qwen3.7-plus",
+  "parameter_registry_audit": {
+    "active_parameter_count": 8,
+    "dormant_parameter_count": 1,
+    "status": "PASS"
+  },
+  "prompt_text_sha256": "085c2bd4952cac558ee1a254a59ac4f069df521a5d6bc39179bfcefc7d558a95",
+  "protocol_sha256": "83b9f20d32f68acea34952d71b678777d12cbdd8b0a0ad306f986e8d0fcbeec3",
+  "python_executable": "D:\\CADtest\\papertest\\.venv\\Scripts\\python.exe",
+  "schema_version": "robotcad_try6_r1_preflight_v1",
+  "source_files": {
+    "engineering_text": {
+      "path": "experiments/try5A/inputs/engineering_text/robot_A.md",
+      "sha256": "faeab10da52c3894b26301640a885f38081c482b7b0c92d766b415dff4583edb"
+    },
+    "f0_fcstd": {
+      "path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+      "sha256": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69"
+    },
+    "frozen_interface_contracts": {
+      "path": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+      "sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d"
+    },
+    "sanitized_urdf": {
+      "path": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+      "sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664"
+    }
+  },
+  "starting_commit": "cfc4b74d5d4281e78659e8d114a62f8520d0c58e",
+  "target_calls": 5,
+  "timestamp_utc": "2026-09-23T07:25:30.850429+00:00"
+}

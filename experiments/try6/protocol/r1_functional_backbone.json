@@ -1,0 +1,16 @@
+{
+  "schema_version": "robotcad_try6_r1_functional_backbone_v1",
+  "link_id": "L04",
+  "authority_sources": {
+    "sanitized_urdf": {"path": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf", "sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664"},
+    "frozen_interfaces": {"path": "experiments/try5A/results/try5a5/motion_interface_contracts.json", "sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d"},
+    "fixed_functional_parameter_spec": {"path": "experiments/try6/protocol/parameter_bounds.json"}
+  },
+  "functional_nodes": [
+    {"id": "proximal_joint_port", "type": "joint_port", "joint_id": "J03", "frame_xyz_mm": [0.0, 0.0, 0.0], "axis": [0.0, 1.0, 0.0], "interface_family": "coaxial_rotary_interface", "source": "URDF_AND_FROZEN_INTERFACE"},
+    {"id": "distal_mount_port", "type": "mount_port", "joint_id": "J04", "frame_xyz_mm": [63.0, 0.0, 0.0], "axis": [1.0, 0.0, 0.0], "interface_family": "planar_mount_interface", "source": "URDF_AND_FROZEN_INTERFACE"}
+  ],
+  "metric_anchor": {"joint_ids": ["J03", "J04"], "distance_mm": 63.0, "source": "SANITIZED_URDF_J04_L04_ORIGIN"},
+  "frozen_interface_geometry_source": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+  "vlm_override_allowed": false
+}

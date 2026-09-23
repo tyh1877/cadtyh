@@ -1,0 +1,19 @@
+{
+  "schema_version": "robotcad_try6_r1_assembler_rules_v1",
+  "required_feature_types": ["main_housing", "pocket", "profile_transition"],
+  "feature_signatures": {
+    "main_housing": {"required_roles": ["width", "height", "depth"], "optional_roles": [], "required_relations": [], "canonical_id": "housing_01", "canonical_type": "housing"},
+    "pocket": {"required_roles": ["length", "depth"], "optional_roles": [], "required_relations": [{"type": "cuts_into", "target_feature_type": "main_housing"}], "canonical_id": "recess_01", "canonical_type": "pocket"},
+    "profile_transition": {"required_roles": ["length", "distal_width", "distal_height"], "optional_roles": [], "required_relations": [{"type": "transitions_from", "target_feature_type": "main_housing"}], "canonical_id": "transition_01", "canonical_type": "profile_transition"}
+  },
+  "canonical_relations": [
+    {"source": "housing_01", "target": "proximal_joint_port", "type": "interface_fixed"},
+    {"source": "housing_01", "target": "transition_01", "type": "profile_continuity"},
+    {"source": "housing_01", "target": "recess_01", "type": "contains"},
+    {"source": "transition_01", "target": "distal_mount_port", "type": "connected_to"}
+  ],
+  "unsupported_visual_feature_policy": "REJECT",
+  "missing_required_feature_policy": "REJECT",
+  "duplicate_role_policy": "REJECT",
+  "orphan_parameter_policy": "REJECT_EXCEPT_REGISTRY_ALLOWED_ORPHAN"
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Try-6 R1 L04 visual feature proposal only",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "link_id", "visual_features"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["robotcad_vfp_l04_r1"]},
+    "link_id": {"type": "string", "enum": ["L04"]},
+    "visual_features": {
+      "type": "array", "minItems": 1, "maxItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["local_name", "feature_type", "parameter_roles", "evidence_views", "relations", "confidence"],
+        "properties": {
+          "local_name": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "feature_type": {"type": "string", "enum": ["main_housing", "pocket", "profile_transition"]},
+          "parameter_roles": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["width", "height", "depth", "length", "distal_width", "distal_height"]}},
+          "evidence_views": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "enum": ["front", "isometric", "left", "right", "top", "rear", "f0_front", "f0_isometric", "f0_left", "f0_right", "f0_top", "f0_rear"]}},
+          "relations": {"type": "array", "uniqueItems": true, "items": {"type": "object", "additionalProperties": false, "required": ["type", "target_feature_type"], "properties": {"type": {"type": "string", "enum": ["cuts_into", "transitions_from"]}, "target_feature_type": {"type": "string", "enum": ["main_housing", "pocket", "profile_transition"]}}}},
+          "confidence": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]}
+        }
+      }
+    }
+  }
+}
