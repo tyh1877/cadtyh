@@ -1,0 +1,18 @@
+{
+  "schema_version": "robotcad_try6_r0_e2e_smoke_v1",
+  "mode": "SYNTHETIC_NON_GT_DATAFLOW_ONLY",
+  "link_id": "L04",
+  "model": "qwen3.7-plus",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "seed": 20260923,
+  "max_output_tokens": 4096,
+  "timeout_seconds": 300,
+  "max_vlm_calls": 1,
+  "candidate_count": 2,
+  "candidate_width_multiplier": 1.05,
+  "synthetic_normalized_width_target": 0.25,
+  "anchor_mutation_test_mm": 60.0,
+  "gt_access": false,
+  "formal_holdout_access": false
+}

@@ -13,6 +13,7 @@ import Part
 import Sketcher
 
 ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "experiments/try5A/scripts"))
 import freecad_motion_realization as frozen  # noqa: E402
 
@@ -64,8 +65,16 @@ def build(job):
     params=job["parameters"]; anchor=float(job["anchor_distance_mm"])
     if abs(anchor-63.0)>1e-9: raise ValueError("frozen J03-J04 anchor changed")
     graph=load(job["kfdg_path"])
-    if graph["schema_version"]!="robotcad_kfdg_l04_v1" or graph["metric_anchor"]["distance_mm"]!=anchor: raise RuntimeError("KFDG/anchor mismatch")
-    if {item["id"] for item in graph["parameter_nodes"]}!={*params}: raise RuntimeError("KFDG parameter identity mismatch")
+    if graph["schema_version"]=="robotcad_kfdg_v1":
+        # Full raw-response validation happens in the repository .venv before
+        # this FreeCAD child process (whose Python lacks jsonschema).
+        if graph["link_id"]!="L04": raise RuntimeError("R0 KFDG link identity mismatch")
+        parameter_nodes=graph["parameters"]
+    elif graph["schema_version"]=="robotcad_kfdg_l04_v1":
+        if graph["metric_anchor"]["distance_mm"]!=anchor: raise RuntimeError("KFDG/anchor mismatch")
+        parameter_nodes=graph["parameter_nodes"]
+    else: raise RuntimeError("unsupported KFDG schema version")
+    if {item["id"] for item in parameter_nodes}!={*params}: raise RuntimeError("KFDG parameter identity mismatch")
     nodes={item["type"]:item["id"] for item in graph["geometric_features"]}
     if not {"housing","profile_transition","pocket","fillet"}<=set(nodes): raise RuntimeError("KFDG feature history incomplete")
     out=Path(job["output_root"]); out.mkdir(parents=True,exist_ok=True)

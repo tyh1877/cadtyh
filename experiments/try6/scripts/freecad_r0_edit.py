@@ -51,6 +51,7 @@ def run(job):
     invariant = all(before[name] == after[name] for name in protected_names)
     final = doc.getObject("RigidGroup")
     solid_count = len(final.Shape.Solids)
+    final_volume = float(final.Shape.Volume)
     cad_valid = all(item["valid"] for item in feature_tree) and solid_count == 1
     doc.saveAs(str(output / "edited.FCStd"))
     Part.export([final], str(output / "edited.step"))
@@ -65,6 +66,7 @@ def run(job):
               "feature_tree": feature_tree, "protected_shape_signatures_before": before, "protected_shape_signatures_after": after,
               "interface_invariant": invariant, "joint_axis_center_invariant": invariant,
               "attachment_anchor_invariant": invariant, "cad_valid": cad_valid, "connected_solid_count": solid_count,
+              "final_volume_mm3": final_volume,
               "export_success": all((output / name).is_file() and (output / name).stat().st_size > 0 for name in ("edited.step", "edited.stl")),
               "reopen_valid": reopen_valid}
     result["pass"] = all([invariant, cad_valid, result["export_success"], reopen_valid])

@@ -29,7 +29,7 @@ def main():
     transport = load(HERE / "results/try6_0_r0/schema_transport/transport_report.json")
     if not transport["all_pass"]: raise RuntimeError("R0-A gate not passed")
     protocol = load(HERE / "protocol/r0_parametric_protocol.json")
-    param_spec = load(HERE / protocol["baseline_parameter_source"])
+    param_spec = load(ROOT / protocol["baseline_parameter_source"])
     values = {item["id"]: item["value"] for item in param_spec["optimizable"]}
     artifacts = HERE / "artifacts/try6_0_r0/parametric_rebuild"
     results = HERE / "results/try6_0_r0/parametric_rebuild"
