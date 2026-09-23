@@ -108,6 +108,18 @@ class P1GovernanceTests(unittest.TestCase):
         structured = (HERE / "prompts/a2a_structured_qwen_l04.md").read_text(encoding="utf-8")
         self.assertIn("compound_profile_housing", structured)
 
+    def test_a2a_three_link_freeze_matches_audited_prompts(self):
+        import hashlib
+
+        protocol = json.loads((HERE / "protocol/try5b1_a2a_three_link.json").read_text(encoding="utf-8"))
+        self.assertEqual(protocol["links"], ["L03", "L04", "L07"])
+        self.assertEqual(protocol["conditions"], ["STRUCTURED_QWEN", "DIRECT_QWEN"])
+        self.assertEqual(protocol["model"]["max_calls_per_link_condition"], 1)
+        self.assertEqual(protocol["model"]["max_refinement_rounds"], 0)
+        for key in ("shared", "structured", "direct"):
+            path = HERE.parents[1] / protocol["prompt_freeze"][key]
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), protocol["prompt_freeze"]["sha256"][key])
+
 
 if __name__ == "__main__":
     unittest.main()
