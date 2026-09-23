@@ -1,0 +1,185 @@
+{
+  "ranking": "g_max then g_sum only",
+  "top_candidates": [
+    {
+      "candidate_id": "L1_5_N",
+      "g_max_mm3": 66.6038559337737,
+      "g_sum_mm3": 406.1913783494074,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 8.0,
+        "distal_width_mm": 8.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 11.922349889576434,
+        "housing_width_mm": 23.942532524093984,
+        "proximal_section_length_mm": 25.679728450626136,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 4.228249143064022
+      }
+    },
+    {
+      "candidate_id": "L1_4_N",
+      "g_max_mm3": 76.41438779246837,
+      "g_sum_mm3": 454.98723015209146,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 9.391502007842064,
+        "distal_width_mm": 8.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 11.922349889576434,
+        "housing_width_mm": 23.942532524093984,
+        "proximal_section_length_mm": 25.679728450626136,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 4.228249143064022
+      }
+    },
+    {
+      "candidate_id": "P0_ALL_LOWER",
+      "g_max_mm3": 76.50485338020876,
+      "g_sum_mm3": 356.1700143884876,
+      "phase": "canonical",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 8.0,
+        "distal_width_mm": 8.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 10.0,
+        "housing_width_mm": 10.0,
+        "proximal_section_length_mm": 18.0,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 4.0
+      }
+    },
+    {
+      "candidate_id": "L0_5_N",
+      "g_max_mm3": 83.70512191855067,
+      "g_sum_mm3": 466.11271505276545,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 8.0,
+        "distal_width_mm": 8.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 10.492682511731982,
+        "housing_width_mm": 17.09359567835927,
+        "proximal_section_length_mm": 23.558165673539044,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 9.762576620280743
+      }
+    },
+    {
+      "candidate_id": "L0_4_N",
+      "g_max_mm3": 85.13473964880419,
+      "g_sum_mm3": 471.8336339908498,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 8.153251141309738,
+        "distal_width_mm": 8.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 10.492682511731982,
+        "housing_width_mm": 17.09359567835927,
+        "proximal_section_length_mm": 23.558165673539044,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 9.762576620280743
+      }
+    },
+    {
+      "candidate_id": "L1_3_N",
+      "g_max_mm3": 90.8613744885139,
+      "g_sum_mm3": 516.2218154650749,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 9.391502007842064,
+        "distal_width_mm": 9.061088725924492,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 11.922349889576434,
+        "housing_width_mm": 23.942532524093984,
+        "proximal_section_length_mm": 25.679728450626136,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 4.228249143064022
+      }
+    },
+    {
+      "candidate_id": "L1_5_P",
+      "g_max_mm3": 91.03570391005542,
+      "g_sum_mm3": 513.340867258121,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 10.991502007842064,
+        "distal_width_mm": 8.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 11.922349889576434,
+        "housing_width_mm": 23.942532524093984,
+        "proximal_section_length_mm": 25.679728450626136,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 4.228249143064022
+      }
+    },
+    {
+      "candidate_id": "L1_2_N",
+      "g_max_mm3": 96.66378281906913,
+      "g_sum_mm3": 544.3852502468297,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 9.391502007842064,
+        "distal_width_mm": 9.061088725924492,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 11.922349889576434,
+        "housing_width_mm": 23.942532524093984,
+        "proximal_section_length_mm": 25.679728450626136,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 5.428249143064022
+      }
+    },
+    {
+      "candidate_id": "L1_1_N",
+      "g_max_mm3": 97.62378771717475,
+      "g_sum_mm3": 549.5375746456025,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 9.391502007842064,
+        "distal_width_mm": 9.061088725924492,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 11.922349889576434,
+        "housing_width_mm": 23.942532524093984,
+        "proximal_section_length_mm": 27.079728450626135,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 5.428249143064022
+      }
+    },
+    {
+      "candidate_id": "L1_2_P",
+      "g_max_mm3": 98.66860600477598,
+      "g_sum_mm3": 555.4531795780265,
+      "phase": "local",
+      "strict_feasible": false,
+      "theta": {
+        "distal_height_mm": 9.391502007842064,
+        "distal_width_mm": 9.061088725924492,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 11.922349889576434,
+        "housing_width_mm": 23.942532524093984,
+        "proximal_section_length_mm": 28.479728450626133,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 5.428249143064022
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "empirical_feasible_sample_density": 0.0,
+  "feasible_distance_to_bounds": null,
+  "feasible_empirical_ranges": null,
+  "near_feasible_stage_a_counts_by_threshold_mm3": {
+    "0.1": 0,
+    "1.0": 0,
+    "10.0": 0
+  },
+  "nearest_feasible_to_c1_initial": null,
+  "nearest_feasible_to_c1_winner": null,
+  "not_a_continuous_volume_estimate": true,
+  "schema_version": "robotcad_try6_d0_empirical_density_v1",
+  "stage_a_minimum_g_max_mm3": 103.00088594208044,
+  "stage_a_minimum_g_sum_mm3": 590.0743870803387,
+  "stage_a_sample_count": 256,
+  "strict_epsilon_mm3": 1e-06,
+  "strict_feasible_distinct_theta_count": 0,
+  "strict_feasible_sample_count": 0
+}

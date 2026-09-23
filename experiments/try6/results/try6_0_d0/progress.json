@@ -1,0 +1,9 @@
+{
+  "canonical": 5,
+  "completed": 322,
+  "elapsed_seconds": 427.33876529999543,
+  "errors": 0,
+  "local": 60,
+  "sobol": 256,
+  "strict_feasible": 0
+}

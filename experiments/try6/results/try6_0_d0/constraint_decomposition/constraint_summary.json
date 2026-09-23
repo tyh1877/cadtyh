@@ -1,0 +1,195 @@
+{
+  "all_unique_candidate_denominator": 321,
+  "g_max_definition": "maximum single frozen neighbor/pose component exact BREP intersection volume",
+  "g_sum_definition": "sum of 13 per-pose BREP intersection volumes; overlapping sweep poses can double-count in this descriptive diagnostic",
+  "per_component": [
+    {
+      "component_id": "L03_J03_00",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": -2.1467549799530254,
+      "stage_a_max_forbidden_mm3": 369.59245894449475,
+      "stage_a_mean_forbidden_mm3": 117.31450327415087,
+      "stage_a_median_forbidden_mm3": 63.16216503122452,
+      "stage_a_rejection_rate": 0.7421875,
+      "stage_a_violation_count": 190
+    },
+    {
+      "component_id": "L03_J03_01",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": -1.498074274628466,
+      "stage_a_max_forbidden_mm3": 84.95412106550678,
+      "stage_a_mean_forbidden_mm3": 14.67009385250567,
+      "stage_a_median_forbidden_mm3": 0.0,
+      "stage_a_rejection_rate": 0.39453125,
+      "stage_a_violation_count": 101
+    },
+    {
+      "component_id": "L03_J03_02",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": -0.849393569303907,
+      "stage_a_max_forbidden_mm3": 0.0,
+      "stage_a_mean_forbidden_mm3": 0.0,
+      "stage_a_median_forbidden_mm3": 0.0,
+      "stage_a_rejection_rate": 0.0,
+      "stage_a_violation_count": 0
+    },
+    {
+      "component_id": "L03_J03_03",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": -0.20071286397934784,
+      "stage_a_max_forbidden_mm3": 0.0,
+      "stage_a_mean_forbidden_mm3": 0.0,
+      "stage_a_median_forbidden_mm3": 0.0,
+      "stage_a_rejection_rate": 0.0,
+      "stage_a_violation_count": 0
+    },
+    {
+      "component_id": "L03_J03_04",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": 0.4479678413452115,
+      "stage_a_max_forbidden_mm3": 157.69892318125957,
+      "stage_a_mean_forbidden_mm3": 26.33805567175041,
+      "stage_a_median_forbidden_mm3": 0.0,
+      "stage_a_rejection_rate": 0.375,
+      "stage_a_violation_count": 96
+    },
+    {
+      "component_id": "L03_J03_05",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": 1.0966485466697709,
+      "stage_a_max_forbidden_mm3": 170.9700516784007,
+      "stage_a_mean_forbidden_mm3": 137.24108848630985,
+      "stage_a_median_forbidden_mm3": 163.65332419409447,
+      "stage_a_rejection_rate": 1.0,
+      "stage_a_violation_count": 256
+    },
+    {
+      "component_id": "L03_J03_06",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": 1.7453292519943295,
+      "stage_a_max_forbidden_mm3": 266.21144679877204,
+      "stage_a_mean_forbidden_mm3": 101.43607124576918,
+      "stage_a_median_forbidden_mm3": 66.6038559337737,
+      "stage_a_rejection_rate": 1.0,
+      "stage_a_violation_count": 256
+    },
+    {
+      "component_id": "L05_FIXED_J04_00",
+      "joint_id": "FIXED_J04",
+      "neighbor_id": "L05",
+      "pose_q_rad": 0.0,
+      "stage_a_max_forbidden_mm3": 1194.523619419955,
+      "stage_a_mean_forbidden_mm3": 189.84315403100564,
+      "stage_a_median_forbidden_mm3": 73.5095534672232,
+      "stage_a_rejection_rate": 1.0,
+      "stage_a_violation_count": 256
+    },
+    {
+      "component_id": "L06_J05_00",
+      "joint_id": "J05",
+      "neighbor_id": "L06",
+      "pose_q_rad": 0.0,
+      "stage_a_max_forbidden_mm3": 796.4946050431242,
+      "stage_a_mean_forbidden_mm3": 443.0442141448409,
+      "stage_a_median_forbidden_mm3": 431.050162447019,
+      "stage_a_rejection_rate": 0.99609375,
+      "stage_a_violation_count": 255
+    },
+    {
+      "component_id": "L06_J05_01",
+      "joint_id": "J05",
+      "neighbor_id": "L06",
+      "pose_q_rad": 1.5707963267948966,
+      "stage_a_max_forbidden_mm3": 796.499520311575,
+      "stage_a_mean_forbidden_mm3": 445.4005079635649,
+      "stage_a_median_forbidden_mm3": 432.44579423807863,
+      "stage_a_rejection_rate": 1.0,
+      "stage_a_violation_count": 256
+    },
+    {
+      "component_id": "L06_J05_02",
+      "joint_id": "J05",
+      "neighbor_id": "L06",
+      "pose_q_rad": 3.141592653589793,
+      "stage_a_max_forbidden_mm3": 796.4953873089039,
+      "stage_a_mean_forbidden_mm3": 443.0442169614509,
+      "stage_a_median_forbidden_mm3": 431.0501624470189,
+      "stage_a_rejection_rate": 0.99609375,
+      "stage_a_violation_count": 255
+    },
+    {
+      "component_id": "L06_J05_03",
+      "joint_id": "J05",
+      "neighbor_id": "L06",
+      "pose_q_rad": 4.71238898038469,
+      "stage_a_max_forbidden_mm3": 796.4995203115755,
+      "stage_a_mean_forbidden_mm3": 445.40050902895126,
+      "stage_a_median_forbidden_mm3": 432.4457942380783,
+      "stage_a_rejection_rate": 1.0,
+      "stage_a_violation_count": 256
+    },
+    {
+      "component_id": "L07_FIXED_J06_00",
+      "joint_id": "FIXED_J06",
+      "neighbor_id": "L07",
+      "pose_q_rad": 0.0,
+      "stage_a_max_forbidden_mm3": 0.0,
+      "stage_a_mean_forbidden_mm3": 0.0,
+      "stage_a_median_forbidden_mm3": 0.0,
+      "stage_a_rejection_rate": 0.0,
+      "stage_a_violation_count": 0
+    }
+  ],
+  "per_neighbor": [
+    {
+      "component_ids": [
+        "L03_J03_00",
+        "L03_J03_01",
+        "L03_J03_02",
+        "L03_J03_03",
+        "L03_J03_04",
+        "L03_J03_05",
+        "L03_J03_06"
+      ],
+      "neighbor_id": "L03",
+      "stage_a_rejected_candidates": 256,
+      "stage_a_rejection_rate": 1.0
+    },
+    {
+      "component_ids": [
+        "L05_FIXED_J04_00"
+      ],
+      "neighbor_id": "L05",
+      "stage_a_rejected_candidates": 256,
+      "stage_a_rejection_rate": 1.0
+    },
+    {
+      "component_ids": [
+        "L06_J05_00",
+        "L06_J05_01",
+        "L06_J05_02",
+        "L06_J05_03"
+      ],
+      "neighbor_id": "L06",
+      "stage_a_rejected_candidates": 256,
+      "stage_a_rejection_rate": 1.0
+    },
+    {
+      "component_ids": [
+        "L07_FIXED_J06_00"
+      ],
+      "neighbor_id": "L07",
+      "stage_a_rejected_candidates": 0,
+      "stage_a_rejection_rate": 0.0
+    }
+  ],
+  "schema_version": "robotcad_try6_d0_constraint_summary_v1",
+  "stage_a_denominator": 256
+}

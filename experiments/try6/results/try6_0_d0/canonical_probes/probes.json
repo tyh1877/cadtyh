@@ -1,0 +1,76 @@
+{
+  "P5_exact_F0_equivalent_omitted": true,
+  "probes": [
+    {
+      "candidate_id": "P0_ALL_LOWER",
+      "theta": {
+        "distal_height_mm": 8.0,
+        "distal_width_mm": 8.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 10.0,
+        "housing_width_mm": 10.0,
+        "proximal_section_length_mm": 18.0,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 4.0
+      }
+    },
+    {
+      "candidate_id": "P1_ALL_UPPER",
+      "theta": {
+        "distal_height_mm": 24.0,
+        "distal_width_mm": 22.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 28.0,
+        "housing_width_mm": 24.0,
+        "proximal_section_length_mm": 32.0,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 16.0
+      }
+    },
+    {
+      "candidate_id": "P2_MIDPOINT",
+      "theta": {
+        "distal_height_mm": 16.0,
+        "distal_width_mm": 15.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 19.0,
+        "housing_width_mm": 17.0,
+        "proximal_section_length_mm": 25.0,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 10.0
+      }
+    },
+    {
+      "candidate_id": "P3_C1_INITIAL",
+      "theta": {
+        "distal_height_mm": 12.0,
+        "distal_width_mm": 14.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 16.0,
+        "housing_width_mm": 17.0,
+        "proximal_section_length_mm": 24.0,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 10.0
+      }
+    },
+    {
+      "candidate_id": "P4_C1_VISUAL_WINNER",
+      "theta": {
+        "distal_height_mm": 22.140909203886984,
+        "distal_width_mm": 17.38176517443359,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 12.03800277272582,
+        "housing_width_mm": 24.0,
+        "proximal_section_length_mm": 32.0,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 16.0
+      }
+    }
+  ],
+  "reason": "frozen F0 coarse FCStd has no exact six-variable current-builder parameter mapping"
+}

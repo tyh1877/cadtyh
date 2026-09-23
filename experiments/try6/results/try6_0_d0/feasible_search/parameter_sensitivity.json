@@ -1,0 +1,32 @@
+{
+  "by_parameter": {
+    "distal_height_mm": {
+      "rho_g_max": 0.6863635957245103,
+      "rho_g_sum": 0.6837641622796977
+    },
+    "distal_width_mm": {
+      "rho_g_max": 0.6650915274736104,
+      "rho_g_sum": 0.6351160162508582
+    },
+    "housing_height_mm": {
+      "rho_g_max": 0.04417458974920828,
+      "rho_g_sum": 0.2499556534676127
+    },
+    "housing_width_mm": {
+      "rho_g_max": 0.001039641936875691,
+      "rho_g_sum": 0.045315718699931326
+    },
+    "proximal_section_length_mm": {
+      "rho_g_max": 0.015276692458060548,
+      "rho_g_sum": 0.017014047837033645
+    },
+    "transition_length_mm": {
+      "rho_g_max": 0.027518145453353987,
+      "rho_g_sum": 0.030153496223392074
+    }
+  },
+  "method": "Spearman rho descriptive only; no causal interpretation",
+  "not_used_by_D0_search": true,
+  "schema_version": "robotcad_try6_d0_parameter_sensitivity_v1",
+  "stage_a_denominator": 256
+}

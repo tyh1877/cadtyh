@@ -1,0 +1,12 @@
+{
+  "GT_evaluations": 0,
+  "VLM_calls": 0,
+  "canonical_probe_count": 5,
+  "final_mechanics_evaluations": 0,
+  "local_count": 60,
+  "protocol_sha256": "4090c05e52de857dba8cfbf7836d232550787c242a91dfb1c13a806e445a0801",
+  "repeat_probe_count": 1,
+  "runtime_ceiling_seconds": 1800,
+  "sobol_count": 256,
+  "timestamp": 1790173979.008257
+}

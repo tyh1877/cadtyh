@@ -1,0 +1,21 @@
+{
+  "SEMANTIC_MISMODEL_SUSPECT_neighbors": [],
+  "candidate_denominator": 321,
+  "diagnostic_only": true,
+  "distinct_theta_strict_feasible_by_subset": {
+    "FULL": 0,
+    "MINUS_L03": 0,
+    "MINUS_L05": 0,
+    "MINUS_L06": 0,
+    "MINUS_L07": 0
+  },
+  "no_KFDE_artifact_modified": true,
+  "semantic_suspect_min_distinct_threshold": 3,
+  "strict_feasible_count_by_subset": {
+    "FULL": 0,
+    "MINUS_L03": 0,
+    "MINUS_L05": 0,
+    "MINUS_L06": 0,
+    "MINUS_L07": 0
+  }
+}

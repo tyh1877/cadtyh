@@ -1,0 +1,38 @@
+{
+  "seed_ids": [
+    "S204",
+    "S040",
+    "S209",
+    "S006",
+    "S084"
+  ],
+  "seed_metrics": [
+    {
+      "candidate_id": "S204",
+      "g_max_mm3": 103.00088594208044,
+      "g_sum_mm3": 590.0743870803387
+    },
+    {
+      "candidate_id": "S040",
+      "g_max_mm3": 109.02938962049477,
+      "g_sum_mm3": 597.152259538016
+    },
+    {
+      "candidate_id": "S209",
+      "g_max_mm3": 134.62384659793173,
+      "g_sum_mm3": 752.2144907630941
+    },
+    {
+      "candidate_id": "S006",
+      "g_max_mm3": 142.21303162491824,
+      "g_sum_mm3": 718.7938520626543
+    },
+    {
+      "candidate_id": "S084",
+      "g_max_mm3": 153.41094059024886,
+      "g_sum_mm3": 756.1606009556299
+    }
+  ],
+  "selection_rule": "lexicographic g_max then g_sum then candidate_id",
+  "visual_objective_used": false
+}

@@ -1,0 +1,45 @@
+{
+  "F0_exact_mapping_available": false,
+  "GT_evaluations": 0,
+  "VLM_calls": 0,
+  "all_unique_strict_feasible": 0,
+  "best_candidate_id": "L1_5_N",
+  "best_g_max_mm3": 66.6038559337737,
+  "best_g_sum_mm3": 406.1913783494074,
+  "canonical_probe_count": 5,
+  "counterfactual_semantic_suspects": [],
+  "counterfactual_strict_counts": {
+    "FULL": 0,
+    "MINUS_L03": 0,
+    "MINUS_L05": 0,
+    "MINUS_L06": 0,
+    "MINUS_L07": 0
+  },
+  "decision": "DOMAIN_KFDE_INCOMPATIBLE",
+  "does_not_prove_continuous_domain_empty": true,
+  "empirical_stage_a_density": 0.0,
+  "final_mechanics_evaluations": 0,
+  "formal_holdout_accessed": false,
+  "formal_holdout_evaluation_count": 0,
+  "frozen_prior_results": {
+    "c1_v2": {
+      "files_checked": 56,
+      "manifest_sha256": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+      "unchanged": true
+    },
+    "c2": {
+      "files_checked": 46,
+      "manifest_sha256": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+      "unchanged": true
+    }
+  },
+  "full_case_count": 322,
+  "infrastructure_errors": 0,
+  "no_KFDE_or_bounds_tuning": true,
+  "reproducibility_repeat_count": 1,
+  "schema_version": "robotcad_try6_d0_independent_validation_v1",
+  "stage_a_sobol_count": 256,
+  "stage_a_strict_feasible": 0,
+  "stage_b_local_count": 60,
+  "strict_epsilon_mm3": 1e-06
+}

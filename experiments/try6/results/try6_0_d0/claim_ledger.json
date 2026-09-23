@@ -1,0 +1,54 @@
+{
+  "claims": [
+    {
+      "artifact": "audit/independent_validation.json",
+      "claim": "C1/C2 frozen artifacts unchanged",
+      "evidence_type": "computed",
+      "expected": "both unchanged",
+      "field": "frozen_prior_results"
+    },
+    {
+      "artifact": "failure_accounting.json",
+      "claim": "322 scheduled D0 CAD/component evaluations completed",
+      "evidence_type": "computed",
+      "expected": "322 / 0",
+      "field": "total_CAD_builds / infrastructure_failures"
+    },
+    {
+      "artifact": "feasible_search/feasible_density.json",
+      "claim": "strict Stage-A feasible density 0/256",
+      "evidence_type": "computed",
+      "expected": "0 / 256",
+      "field": "strict_feasible_sample_count / stage_a_sample_count"
+    },
+    {
+      "artifact": "audit/independent_validation.json",
+      "claim": "best observed g_max materially above frozen epsilon",
+      "evidence_type": "computed",
+      "expected": 66.6038559337737,
+      "field": "best_g_max_mm3"
+    },
+    {
+      "artifact": "counterfactual/semantic_suspect_summary.json",
+      "claim": "no single neighbor removal creates strict feasible D0 sample",
+      "evidence_type": "computed",
+      "expected": "all zero",
+      "field": "strict_feasible_count_by_subset"
+    },
+    {
+      "artifact": "audit/independent_validation.json",
+      "claim": "D0 decision DOMAIN_KFDE_INCOMPATIBLE under finite sample protocol",
+      "evidence_type": "computed",
+      "expected": "DOMAIN_KFDE_INCOMPATIBLE",
+      "field": "decision"
+    },
+    {
+      "artifact": "failure_accounting.json",
+      "claim": "GT/VLM/final mechanics/holdout untouched",
+      "evidence_type": "computed",
+      "expected": "0 / 0 / 0 / 0",
+      "field": "GT_evaluations / VLM_calls / final_mechanics_evaluations / formal_holdout_evaluations"
+    }
+  ],
+  "schema_version": "robotcad_try6_d0_claim_ledger_v1"
+}

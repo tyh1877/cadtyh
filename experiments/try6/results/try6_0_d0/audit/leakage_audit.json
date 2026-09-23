@@ -1,0 +1,14 @@
+{
+  "C1_failed_case_optimization_hints_used": false,
+  "D0_ranking_terms": [
+    "g_max_mm3",
+    "g_sum_mm3"
+  ],
+  "GT_evaluations": 0,
+  "VLM_calls": 0,
+  "audit_limit": "code-path/artifact audit, not OS-level filesystem-read trace",
+  "final_96_case_mechanics_evaluations": 0,
+  "formal_holdout_accessed": false,
+  "source_paths": "sanitized C1 domain/KFDG, frozen CAD compiler, frozen C2 KFDE BREP only",
+  "visual_objective_used": false
+}

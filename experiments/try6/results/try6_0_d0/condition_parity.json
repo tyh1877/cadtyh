@@ -1,0 +1,22 @@
+{
+  "c1_v2": {
+    "file_count": 56,
+    "manifest_sha256": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "unchanged": true
+  },
+  "c2": {
+    "file_count": 46,
+    "manifest_sha256": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+    "unchanged": true
+  },
+  "historical_C2_classification_note": "NO_FEASIBLE_CANDIDATE_UNDER_FROZEN_SEARCH",
+  "no_GT": true,
+  "no_VLM": true,
+  "no_final_mechanics": true,
+  "no_visual_objective_ranking": true,
+  "same_CAD_compiler": true,
+  "same_KFDE_artifact_and_epsilon": true,
+  "same_KFDG": true,
+  "same_six_bounds": true,
+  "status": "PASS"
+}

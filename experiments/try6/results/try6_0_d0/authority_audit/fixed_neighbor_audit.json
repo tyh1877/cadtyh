@@ -1,0 +1,10 @@
+{
+  "J04_allowed_contact_volume_mm3": 0.0,
+  "L05_J04_fixed": true,
+  "L05_stage_a_rejection_rate": 1.0,
+  "L07_J06_fixed": true,
+  "L07_stage_a_rejection_rate": 0.0,
+  "allowed_contact_audit_sha256": "3499355e119049318b2b631c985971d075c329ad59f8794432916bc466cf642e",
+  "frozen_allowed_contact_policy": "exclude frozen L04 scaffold plus exact frozen proximal bore and mating-envelope tool shapes from candidate body before forbidden-overlap test",
+  "interpretation": "J04 is a fixed mount with frozen allowed contact volume 0 mm3; L05 volumetric overlap outside the frozen scaffold/interface allowance is forbidden by current KFDE, but this diagnostic alone cannot prove semantic correctness."
+}
