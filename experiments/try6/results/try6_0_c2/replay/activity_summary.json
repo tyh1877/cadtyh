@@ -1,0 +1,17 @@
+{
+  "activity_status": "PENDING_INDEPENDENT_VALIDATION",
+  "c1_selected_candidate_id": "candidate_031",
+  "c1_selected_feasible": false,
+  "c1_selected_maximum_forbidden_intersection_mm3": 727.9707898709378,
+  "construction_tolerance_mm3": 1e-06,
+  "evaluated": 32,
+  "feasible_count": 0,
+  "final_mechanics_access": false,
+  "gt_access": false,
+  "infeasible_count": 32,
+  "no_candidate_selected_for_C2": true,
+  "rejection_rate": 1.0,
+  "replay_runtime_seconds": 31.980370299948845,
+  "requested": 32,
+  "schema_version": "robotcad_try6_c2_replay_activity_v1"
+}

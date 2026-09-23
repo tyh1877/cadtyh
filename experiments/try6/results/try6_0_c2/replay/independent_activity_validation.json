@@ -1,0 +1,17 @@
+{
+  "activity_decision": "KFDE_ACTIVE_FORMAL_C2_ALLOWED",
+  "all_source_candidate_hashes_verified": true,
+  "c1_selected_feasible": false,
+  "c1_selected_forbidden_volume_mm3": 727.9707898709378,
+  "feasible_count": 0,
+  "final_mechanics_accessed": false,
+  "formal_holdout_accessed": false,
+  "gt_accessed": false,
+  "infeasible_count": 32,
+  "meaningful_volume_tolerance_mm3": 1e-06,
+  "no_C1_candidate_regeneration": true,
+  "rejection_rate": 1.0,
+  "requested": 32,
+  "status": "PASS",
+  "validated": 32
+}
