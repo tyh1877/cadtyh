@@ -1,0 +1,32 @@
+{
+  "c1_failure_diagnostics_not_in_kfde_inputs": true,
+  "c1_final_lock_sha256": "1483914db6a69a3962623189ea35fb32c0cb6fe8cdcb5dd800a8846749e468f4",
+  "c1_manifest_sha256": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+  "c1_parity_sha256": "b78ccf1a09988978c53f5707b729891fa7ac4e00620a9d61414bdaaf6f48f2ec",
+  "freecad_version": "[\"1\", \"1\", \"1\", \"20260414 (Git shallow)\", \"Unknown\", \"2026/04/14 22:09:59\", \"(HEAD detached at 0108fd4b4)\", \"0108fd4b4850cc46e625b60e53cea7a7bbe69f8d\"]",
+  "gt_access_before_final_c2_lock": false,
+  "holdout_lock": {
+    "accessed": false,
+    "evaluation_count": 0
+  },
+  "implementation_commit_before_construction": "b37bf786f81b2f36810c3dcf40ffc4e4d1697800",
+  "kfde_constructor_sha256": "a8dd35f843ba8296ae31e582d9f1e7ef87ee5665970fbd3f342e283692817044",
+  "model_calls_planned": 0,
+  "protocol_sha256": "29299310b6d137c5d00b8c79f90341826d171934e5f20b03e245a94f9ddf483c",
+  "python_environment": ".venv/Scripts/python.exe",
+  "schema_version": "robotcad_try6_c2_pre_run_v1",
+  "source_hashes": {
+    "interface_contracts": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d",
+    "l04_scaffold": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69",
+    "neighbors": {
+      "L03": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+      "L05": "cdc2bc789b30ef2d7a85be5d9916b74812b398a5e5ea62fbb24e05ef28ce7561",
+      "L06": "1b1f4d93e98561af345f73c4cad9238b7798a3a2d13ca7b186f03f57c19c1cd8",
+      "L07": "b3a3ba691e8c364e82143ae6b005788a7fe0a75b87492b7772c35a4e4f630997"
+    },
+    "sanitized_urdf": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664"
+  },
+  "starting_commit": "8e6199decfa84e934ae5c714bc12830bd78a2d85",
+  "status": "READY_FOR_KFDE_CONSTRUCTION",
+  "timestamp_utc": "2026-09-23T10:11:26.027043+00:00"
+}

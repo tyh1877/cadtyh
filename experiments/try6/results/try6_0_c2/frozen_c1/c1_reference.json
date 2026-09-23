@@ -1,0 +1,57 @@
+{
+  "c1_final_lock_sha256": "1483914db6a69a3962623189ea35fb32c0cb6fe8cdcb5dd800a8846749e468f4",
+  "c1_result_manifest_sha256": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+  "c1_result_root": "experiments/try6/results/try6_0_c1_v2",
+  "geometry_metrics": {
+    "bbox_error_mm": 32.60057072749594,
+    "condition": "C1_V2",
+    "link_id": "L04",
+    "major_dimension_error_mm": 10.049576044082642,
+    "normalized_chamfer": 0.1010314900985874,
+    "normalized_hd95": 0.29211681006226614,
+    "scope": "final_assembled_link",
+    "silhouette_iou_mean": 0.3462839613652157,
+    "voxel_iou": 0.1881884426368412
+  },
+  "mechanical_metrics": {
+    "bicr": 1.0,
+    "collision_events": 42,
+    "configuration_count": 96,
+    "connected_solid_count": 1,
+    "failed_configuration_ids": [
+      "sobol_011",
+      "sobol_014",
+      "sobol_018",
+      "sobol_020",
+      "sobol_021",
+      "sobol_025",
+      "sobol_035",
+      "sobol_046",
+      "sobol_047",
+      "sobol_050",
+      "sobol_053",
+      "sobol_056",
+      "sobol_076",
+      "sobol_077",
+      "sobol_090",
+      "sobol_095",
+      "sobol_107",
+      "sobol_118",
+      "sobol_123"
+    ],
+    "gcfr": 0.8020833333333334,
+    "intersection_volume_mm3": 26456.388605736887,
+    "j03_jr3": 1.0,
+    "mechanical_feedback_to_solver": false,
+    "raw_mechanical_sha256": "932986c91a256fab65ae610fd7b0530021da669a483f6428f1e1546ebe6577ef",
+    "status": "DIAGNOSTIC_AFTER_LOCK"
+  },
+  "reference_only_not_KFDE_input": true,
+  "schema_version": "robotcad_try6_c2_frozen_c1_reference_v1",
+  "selected_candidate_id": "candidate_031",
+  "slot_statuses": {
+    "main_housing": "PRESENT",
+    "profile_transition": "PRESENT",
+    "visible_pocket": "ABSENT"
+  }
+}

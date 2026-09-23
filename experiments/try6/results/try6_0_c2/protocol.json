@@ -1,0 +1,82 @@
+{
+  "allowed_contact_policy": "exclude frozen L04 scaffold plus exact frozen proximal bore and mating-envelope tool shapes from candidate body before forbidden-overlap test",
+  "basic_mechanical_gates": {
+    "bicr": 1.0,
+    "connected_solid_count": 1,
+    "j03_jr3": 1.0
+  },
+  "c1_artifact_root": "experiments/try6/artifacts/try6_0_c1_v2",
+  "c1_final_lock": "experiments/try6/results/try6_0_c1_v2/evaluation/final_candidate_lock.json",
+  "c1_protocol": "experiments/try6/protocol/try6_0_c1_v2.json",
+  "c1_replay_candidate_count": 32,
+  "c1_result_root": "experiments/try6/results/try6_0_c1_v2",
+  "c2_max_proposals_if_active": 32,
+  "construction_sweep": {
+    "J03": {
+      "policy": "inclusive_uniform_joint_limit_grid",
+      "sample_count": 7
+    },
+    "J05": {
+      "angles_radians": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ],
+      "policy": "continuous_four_cardinal_angles_radians"
+    },
+    "fixed_neighbors": {
+      "sample_count_each": 1
+    },
+    "not_from_final_development_configs": true
+  },
+  "design_frame": "L04 local millimetres; T_L04_inverse @ T_neighbor from sanitized URDF FK",
+  "engineering_clearance_margin_mm": 0.0,
+  "experiment_id": "try6_0_c2_l04_kfde",
+  "formal_holdout_access": false,
+  "frozen_interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+  "frozen_l04_scaffold": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+  "frozen_neighbor_root": "experiments/try5A/artifacts/try5a5/round3_verified/links",
+  "geometry_preservation": {
+    "iou_min_ratio": 0.95,
+    "nchamfer_max_ratio": 1.05,
+    "nhd95_max_ratio": 1.05,
+    "silhouette_min_ratio": 0.95
+  },
+  "gt_access_before_c2_final_lock": false,
+  "inactive_stop_rule": "all_32_feasible_and_c1_selected_has_zero_meaningful_violation",
+  "incremental_benefit_fraction": 0.1,
+  "integer_failed_case_benefit_threshold": 17,
+  "kfde_hard_feasibility": true,
+  "neighbor_scope": [
+    {
+      "link_id": "L03",
+      "reason": "direct proximal revolute neighbor",
+      "relative_motion_joint": "J03"
+    },
+    {
+      "link_id": "L05",
+      "reason": "direct distal rigid mount",
+      "relative_motion_joint": "FIXED_J04"
+    },
+    {
+      "link_id": "L06",
+      "reason": "direct downstream continuous wrist neighbor",
+      "relative_motion_joint": "J05"
+    },
+    {
+      "link_id": "L07",
+      "reason": "fixed downstream child of L05 near distal mount",
+      "relative_motion_joint": "FIXED_J06"
+    }
+  ],
+  "no_c1_failure_config_consumption_in_kfde": true,
+  "no_new_vlm_call": true,
+  "numerical_forbidden_volume_tolerance_mm3": 1e-06,
+  "primary_kfde_metric": "maximum per-swept-neighbor exact BREP forbidden intersection volume mm3",
+  "sanitized_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+  "schema_version": "robotcad_try6_0_c2_protocol_v1",
+  "starting_commit": "8e6199decfa84e934ae5c714bc12830bd78a2d85",
+  "stop_before_try6_1": true,
+  "visual_loss_penalty_for_infeasible": false
+}
