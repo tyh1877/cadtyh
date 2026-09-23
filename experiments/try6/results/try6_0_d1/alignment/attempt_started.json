@@ -1,0 +1,9 @@
+{
+  "GT_access": false,
+  "KFDE_construction_sha256": "2222bf9b4057505a55de8f679116c05049f83526f437b61819c3ff23d4809e1e",
+  "exact_mechanics_source_sha256": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a",
+  "final_96_case_mechanics": false,
+  "geometry_set_sha256": "55dd95aeafe527978f9a748eeda1730dd9b4500290f4dea460753c527b036f6f",
+  "planned_cases": 65,
+  "protocol_sha256": "b42413eda709c4b1c59755387d1076d5d24ff611c6c411c4300815b9559cb034"
+}

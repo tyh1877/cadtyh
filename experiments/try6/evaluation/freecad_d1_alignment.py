@@ -52,7 +52,10 @@ def main(job):
     for geometry in frozen["geometries"]:
         full=Part.read(str(ROOT/geometry["full_brep_path"]))
         mutable=Part.read(str(ROOT/geometry["mutable_brep_path"]))
-        addition=mutable.cut(allowed)
+        # F0 coarse geometry is fully frozen/allowed and has a Null mutable
+        # BREP after exact subtraction. This represents zero KFDE-added body,
+        # not an OCC error or a reason to omit the F0 denominator.
+        addition=Part.Shape() if mutable.isNull() else mutable.cut(allowed)
         if not addition.isNull() and not addition.isValid():raise RuntimeError("mutable addition invalid")
         shapes["L04"]=full
         for component in construction["components"]:
