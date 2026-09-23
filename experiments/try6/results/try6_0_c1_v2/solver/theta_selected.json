@@ -1,0 +1,44 @@
+{
+  "active_parameters": [
+    "housing_width_mm",
+    "housing_height_mm",
+    "proximal_section_length_mm",
+    "transition_length_mm",
+    "distal_width_mm",
+    "distal_height_mm"
+  ],
+  "actual_candidate_evaluations": 32,
+  "gt_accessed": false,
+  "initial_objective": 0.059748590016398394,
+  "initial_theta": {
+    "distal_height_mm": 12.0,
+    "distal_width_mm": 14.0,
+    "fillet_radius_mm": 1.0,
+    "housing_height_mm": 16.0,
+    "housing_width_mm": 17.0,
+    "proximal_section_length_mm": 24.0,
+    "recess_depth_mm": 4.0,
+    "recess_length_mm": 12.0,
+    "transition_length_mm": 10.0
+  },
+  "invalid_candidates": 0,
+  "mechanical_feedback": false,
+  "selected_candidate_id": "candidate_031",
+  "selected_objective": 0.02304838670527038,
+  "solver_runtime_seconds": 24.897755999991205,
+  "status": "SELECTED_BY_VISUAL_OBJECTIVE_ONLY",
+  "termination": "budget_or_runtime",
+  "theta_star": {
+    "distal_height_mm": 22.140909203886984,
+    "distal_width_mm": 17.38176517443359,
+    "fillet_radius_mm": 1.0,
+    "housing_height_mm": 12.03800277272582,
+    "housing_width_mm": 24.0,
+    "proximal_section_length_mm": 32.0,
+    "recess_depth_mm": 4.0,
+    "recess_length_mm": 12.0,
+    "transition_length_mm": 16.0
+  },
+  "valid_candidates": 32,
+  "visual_objective_improvement": 0.03670020331112801
+}

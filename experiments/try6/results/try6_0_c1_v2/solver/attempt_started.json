@@ -1,0 +1,10 @@
+{
+  "active_parameter_sha256": "88586c7140fa47d3685b029424fe64783e2a46be17b3c08abfd794e0735bdb10",
+  "gt_access": false,
+  "kfdg_sha256": "832169747f0f8fcd2a6370f314d891d310fb674c5199a31731e79bacba703e2b",
+  "manual_intervention": 0,
+  "mechanical_feedback": false,
+  "protocol_sha256": "6d1bf6ead008b477bee6c775e64256e4a50df2825f1a664a41283bc4937bab91",
+  "status": "STARTED_ONE_FORMAL_CANDIDATE",
+  "visual_evidence_sha256": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5"
+}

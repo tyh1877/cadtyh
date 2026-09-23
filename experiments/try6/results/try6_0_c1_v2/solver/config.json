@@ -1,0 +1,10 @@
+{
+  "candidate_timeout_seconds": 90,
+  "convergence_tolerance": 0.0001,
+  "invalid_candidate_penalty": 10.0,
+  "max_candidate_evaluations": 32,
+  "max_runtime_seconds": 240,
+  "max_stale_evaluations": 6,
+  "optimizer": "seeded_bounded_sobol_then_coordinate_search",
+  "seed": 20260923
+}

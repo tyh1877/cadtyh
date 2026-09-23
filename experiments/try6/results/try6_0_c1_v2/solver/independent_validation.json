@@ -1,0 +1,15 @@
+{
+  "candidate_count": 32,
+  "formal_holdout_evaluations": 0,
+  "gt_evaluations": 0,
+  "history_sha256": "2a7dd3472526f180111de6f2597f9bbe224dc0a046e4e6ca5dca3cc263f22de6",
+  "independent_recomputed_objective": 0.02304838670527038,
+  "invalid_count": 0,
+  "mechanical_evaluations": 0,
+  "registration_frozen": true,
+  "selected_candidate_id": "candidate_031",
+  "selected_visual_objective": 0.02304838670527038,
+  "selection_by_visual_only": true,
+  "status": "PASS",
+  "valid_count": 32
+}

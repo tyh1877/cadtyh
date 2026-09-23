@@ -1,0 +1,20 @@
+{
+  "candidate_specific_reregistration": false,
+  "components": [
+    "visible_contour_distance",
+    "visible_profile_width"
+  ],
+  "gt_terms": 0,
+  "mechanical_terms": 0,
+  "normalization": "contour by central ROI diagonal; profile by 63 mm URDF anchor; equal mean over two views",
+  "selected_views": [
+    "right",
+    "top"
+  ],
+  "view_registration_sha256": "00a5ac45f8f46c2d5dd894efc3f39074028c568a1674da82bef0e00e543f9313",
+  "visual_evidence_sha256": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5",
+  "weights": {
+    "visible_contour_distance": 0.5,
+    "visible_profile_width": 0.5
+  }
+}
