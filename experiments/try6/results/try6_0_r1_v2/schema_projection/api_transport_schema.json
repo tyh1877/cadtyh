@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "link_id": {
+      "enum": [
+        "L04"
+      ],
+      "type": "string"
+    },
+    "schema_version": {
+      "enum": [
+        "robotcad_vfp_l04_r1"
+      ],
+      "type": "string"
+    },
+    "visual_features": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ],
+            "type": "string"
+          },
+          "evidence_views": {
+            "items": {
+              "enum": [
+                "front",
+                "isometric",
+                "left",
+                "right",
+                "top",
+                "rear",
+                "f0_front",
+                "f0_isometric",
+                "f0_left",
+                "f0_right",
+                "f0_top",
+                "f0_rear"
+              ],
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "feature_type": {
+            "enum": [
+              "main_housing",
+              "pocket",
+              "profile_transition"
+            ],
+            "type": "string"
+          },
+          "local_name": {
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "type": "string"
+          },
+          "parameter_roles": {
+            "items": {
+              "enum": [
+                "width",
+                "height",
+                "depth",
+                "length",
+                "distal_width",
+                "distal_height"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "relations": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "target_feature_type": {
+                  "enum": [
+                    "main_housing",
+                    "pocket",
+                    "profile_transition"
+                  ],
+                  "type": "string"
+                },
+                "type": {
+                  "enum": [
+                    "cuts_into",
+                    "transitions_from"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "target_feature_type"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "local_name",
+          "feature_type",
+          "parameter_roles",
+          "evidence_views",
+          "relations",
+          "confidence"
+        ],
+        "type": "object"
+      },
+      "maxItems": 5,
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "link_id",
+    "visual_features"
+  ],
+  "title": "Try-6 R1 L04 visual feature proposal only",
+  "type": "object"
+}

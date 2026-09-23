@@ -1,0 +1,37 @@
+{
+  "api_compatible_unverified_until_preflight": true,
+  "api_schema_sha256": "6acdb750aa52c6d5e30ad2862fec49add5f946a7ba3eb80921a67f366b010fb6",
+  "canonical_source_path": "experiments/try6/protocol/r1_vfp.schema.json",
+  "canonical_source_sha256": "3724b63b697d3c2fb04b6e93a5f1ef99668e57e7578f2dbb366fbab170388f42",
+  "local_contract_unchanged": true,
+  "projection_rules_path": "experiments/try6/protocol/r1_v2_projection_rules.json",
+  "projection_rules_sha256": "35dbda7f631a0fbbf3b97892c97f0d940f9edb4287ee6e158ff4b279dcfedd99",
+  "removed": [
+    {
+      "api_evidence": "experiments/try6/results/try6_0_r1/reliability/call_01/http_response.json",
+      "keyword": "uniqueItems",
+      "local_validator_replacement": "jsonschema.Draft202012Validator(canonical VFP schema) followed by r1_contract.validate_vfp; API projection never changes local acceptance",
+      "path": "/properties/visual_features/items/properties/parameter_roles/uniqueItems",
+      "reason": "The production endpoint rejected the frozen R1-v1 schema when uniqueItems was present on arrays (HTTP 400 invalid_parameter_error).",
+      "value": true
+    },
+    {
+      "api_evidence": "experiments/try6/results/try6_0_r1/reliability/call_01/http_response.json",
+      "keyword": "uniqueItems",
+      "local_validator_replacement": "jsonschema.Draft202012Validator(canonical VFP schema) followed by r1_contract.validate_vfp; API projection never changes local acceptance",
+      "path": "/properties/visual_features/items/properties/evidence_views/uniqueItems",
+      "reason": "The production endpoint rejected the frozen R1-v1 schema when uniqueItems was present on arrays (HTTP 400 invalid_parameter_error).",
+      "value": true
+    },
+    {
+      "api_evidence": "experiments/try6/results/try6_0_r1/reliability/call_01/http_response.json",
+      "keyword": "uniqueItems",
+      "local_validator_replacement": "jsonschema.Draft202012Validator(canonical VFP schema) followed by r1_contract.validate_vfp; API projection never changes local acceptance",
+      "path": "/properties/visual_features/items/properties/relations/uniqueItems",
+      "reason": "The production endpoint rejected the frozen R1-v1 schema when uniqueItems was present on arrays (HTTP 400 invalid_parameter_error).",
+      "value": true
+    }
+  ],
+  "removed_count": 3,
+  "schema_version": "robotcad_try6_r1_v2_projection_report_v1"
+}
