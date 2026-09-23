@@ -1,0 +1,167 @@
+{
+  "per_link": [
+    {
+      "link": "L03",
+      "direction": "STRUCTURED_minus_DIRECT",
+      "paired_evaluable": true,
+      "final_voxel_iou": -0.17453304636376943,
+      "final_silhouette_iou": -0.0860565314068702,
+      "final_normalized_chamfer": 0.010976591309360843,
+      "final_normalized_hd95": 0.008983570152702403,
+      "bicr": -1.0,
+      "connected_solid_count": 1,
+      "jr3": 0.0,
+      "gcfr": 0.1875,
+      "collision_events": -30,
+      "intersection_volume_mm3": 1490.6310228104994,
+      "failed_configuration_count": -18,
+      "input_tokens": 40,
+      "output_tokens": -3225,
+      "total_tokens": -3185,
+      "model_latency_seconds": -54.31133190001128,
+      "end_to_end_runtime_seconds": -62.36401260009734
+    },
+    {
+      "link": "L04",
+      "direction": "STRUCTURED_minus_DIRECT",
+      "paired_evaluable": false,
+      "final_voxel_iou": null,
+      "final_silhouette_iou": null,
+      "final_normalized_chamfer": null,
+      "final_normalized_hd95": null,
+      "bicr": null,
+      "connected_solid_count": null,
+      "jr3": null,
+      "gcfr": null,
+      "collision_events": null,
+      "intersection_volume_mm3": null,
+      "failed_configuration_count": null,
+      "input_tokens": 40,
+      "output_tokens": 415,
+      "total_tokens": 455,
+      "model_latency_seconds": 5.56028559996048,
+      "end_to_end_runtime_seconds": -144.7619004000444
+    },
+    {
+      "link": "L07",
+      "direction": "STRUCTURED_minus_DIRECT",
+      "paired_evaluable": false,
+      "final_voxel_iou": null,
+      "final_silhouette_iou": null,
+      "final_normalized_chamfer": null,
+      "final_normalized_hd95": null,
+      "bicr": null,
+      "connected_solid_count": null,
+      "jr3": null,
+      "gcfr": null,
+      "collision_events": null,
+      "intersection_volume_mm3": null,
+      "failed_configuration_count": null,
+      "input_tokens": 40,
+      "output_tokens": 622,
+      "total_tokens": 662,
+      "model_latency_seconds": 10.819222800026182,
+      "end_to_end_runtime_seconds": -123.56233529996825
+    }
+  ],
+  "aggregate": {
+    "final_voxel_iou": {
+      "mean_delta": -0.17453304636376943,
+      "median_delta": -0.17453304636376943,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "final_silhouette_iou": {
+      "mean_delta": -0.0860565314068702,
+      "median_delta": -0.0860565314068702,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "final_normalized_chamfer": {
+      "mean_delta": 0.010976591309360843,
+      "median_delta": 0.010976591309360843,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "final_normalized_hd95": {
+      "mean_delta": 0.008983570152702403,
+      "median_delta": 0.008983570152702403,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "bicr": {
+      "mean_delta": -1.0,
+      "median_delta": -1.0,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "connected_solid_count": {
+      "mean_delta": 1,
+      "median_delta": 1,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "jr3": {
+      "mean_delta": 0.0,
+      "median_delta": 0.0,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "gcfr": {
+      "mean_delta": 0.1875,
+      "median_delta": 0.1875,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "collision_events": {
+      "mean_delta": -30,
+      "median_delta": -30,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "intersection_volume_mm3": {
+      "mean_delta": 1490.6310228104994,
+      "median_delta": 1490.6310228104994,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "failed_configuration_count": {
+      "mean_delta": -18,
+      "median_delta": -18,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "input_tokens": {
+      "mean_delta": 40,
+      "median_delta": 40,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    },
+    "output_tokens": {
+      "mean_delta": -729.3333333333334,
+      "median_delta": 415,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    },
+    "total_tokens": {
+      "mean_delta": -689.3333333333334,
+      "median_delta": 455,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    },
+    "model_latency_seconds": {
+      "mean_delta": -12.643941166674873,
+      "median_delta": 5.56028559996048,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    },
+    "end_to_end_runtime_seconds": {
+      "mean_delta": -110.22941610003666,
+      "median_delta": -123.56233529996825,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    }
+  },
+  "direction": "STRUCTURED_minus_DIRECT",
+  "no_overall_score": true
+}

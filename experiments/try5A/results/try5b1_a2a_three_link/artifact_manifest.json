@@ -1,0 +1,315 @@
+{
+  "schema_version": "robotcad_a2a_three_link_artifact_manifest_v1",
+  "runs": 6,
+  "artifacts": [
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "frozen_model_response",
+      "path": "experiments/try5A/results/try5b1_a2a_three_link/L03/STRUCTURED_QWEN/raw_response.txt",
+      "sha256": "e192449b2025fddd50eb6c551153771025013d7b4d37321941a38d9f378328a2",
+      "bytes": 1769
+    },
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/STRUCTURED_QWEN/canonical_build/cad/F2/L03/model.FCStd",
+      "sha256": "1a4d8a667b403ca6bfe140ebe42bb5c3ae356c5230d264bfb937cc68d35965ac",
+      "bytes": 66527
+    },
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "final_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/STRUCTURED_QWEN/canonical_build/cad/F2/L03/model.stl",
+      "sha256": "d2d721aa06e0f520c3f21561451284732802238b58a24eef324b23fb3bb3a6ac",
+      "bytes": 393884
+    },
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "body_only_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/STRUCTURED_QWEN/canonical_build/cad/F2/L03/body_only.stl",
+      "sha256": "7afb2c92948f42d9cd8b8620af833ab281d8ddeb1c941410221afddf94939421",
+      "bytes": 24684
+    },
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "generation_job",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/STRUCTURED_QWEN/canonical_build/generation_job.json",
+      "sha256": "eb667a6bf2e29cea523fd4c61d0c2b40d3fe999b98aa38e07a1233f810f3963e",
+      "bytes": 828064
+    },
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "exact_raw",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L03/STRUCTURED_QWEN/mechanical_raw.json",
+      "sha256": "46d8e1a2fb64224a3a3dc2dcff3fa1a962fd4df262e6e7b25e577a70fcd6d335",
+      "bytes": 1629667
+    },
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "geometry_raw",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L03/STRUCTURED_QWEN/geometry_raw.json",
+      "sha256": "6001386995b4bedd28872849c208d5ef533b3c9eb82f5f6a9c92e6c8cced3bee",
+      "bytes": 1294
+    },
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "exact_stdout",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L03/STRUCTURED_QWEN/exact_log/stdout.txt",
+      "sha256": "3a918a78ed1d0a0cc008f10e36172dd70582782531bf855c64c8f89b4fafebcf",
+      "bytes": 127
+    },
+    {
+      "run": "L03__STRUCTURED_QWEN",
+      "role": "exact_stderr",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L03/STRUCTURED_QWEN/exact_log/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "frozen_model_response",
+      "path": "experiments/try5A/results/try5b1_a2a_three_link/L03/DIRECT_QWEN/raw_response.txt",
+      "sha256": "0ddf6ae6235e6747083921e818982cc142cae2eb1f947b482b97cb0731116619",
+      "bytes": 2829
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "generated_direct_code",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/DIRECT_QWEN/generated_body.py",
+      "sha256": "bb41c2555f58d3c8bb6505841e279f2af9ad77b88edf3be05519d2ab03969214",
+      "bytes": 1373
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "generated_direct_brep",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/DIRECT_QWEN/direct_body.brep",
+      "sha256": "837f6aece4a76984cb2265b3a56959dce75ba2dde7ce674bb80daac356adb4f2",
+      "bytes": 12032
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/DIRECT_QWEN/canonical_build/cad/F2/L03/model.FCStd",
+      "sha256": "19eb79b6c12957b210cc567d94a68b67cb30266b2ee707b91ce968b72af83ce0",
+      "bytes": 175655
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "final_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/DIRECT_QWEN/canonical_build/cad/F2/L03/model.stl",
+      "sha256": "934fa766839b20921266de3669ccb91aad00d36e2204d318edcf94be3554093b",
+      "bytes": 666784
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "body_only_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/DIRECT_QWEN/canonical_build/cad/F2/L03/body_only.stl",
+      "sha256": "e3bba40c92b2d7859eef84adcfe5b541f94d82728a33bcbd9ee7c23082f5264a",
+      "bytes": 361584
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "generation_job",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L03/DIRECT_QWEN/canonical_build/generation_job.json",
+      "sha256": "aced82a5e4cc4de228f9bdcf46a0d1e378f3293ba7976b164f78662d96d77a28",
+      "bytes": 827962
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "exact_raw",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L03/DIRECT_QWEN/mechanical_raw.json",
+      "sha256": "bc94eca2dee500c8c8d1e9e4d97a5d91478712eda0ae774b7b8193e629a94fe0",
+      "bytes": 1630557
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "geometry_raw",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L03/DIRECT_QWEN/geometry_raw.json",
+      "sha256": "b032f77ee9a2369e0d6c7c4c558c06c8452c2cf057b53afc2f59496eb8eb6dc7",
+      "bytes": 1287
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "exact_stdout",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L03/DIRECT_QWEN/exact_log/stdout.txt",
+      "sha256": "47b7aa687f36301a42b24bede84ae97b8e1f0562d67dfb01d0d2157a8e38a3c7",
+      "bytes": 123
+    },
+    {
+      "run": "L03__DIRECT_QWEN",
+      "role": "exact_stderr",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L03/DIRECT_QWEN/exact_log/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "run": "L04__STRUCTURED_QWEN",
+      "role": "frozen_model_response",
+      "path": "experiments/try5A/results/try5b1_a2a_three_link/L04/STRUCTURED_QWEN/raw_response.txt",
+      "sha256": "8aaf6dea4c084cf52234b0d46d34ed8fab32be30cc5dfc45c2730e490b98ef15",
+      "bytes": 1851
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "frozen_model_response",
+      "path": "experiments/try5A/results/try5b1_a2a_three_link/L04/DIRECT_QWEN/raw_response.txt",
+      "sha256": "b6aed28e96da4dc90df4773ac42c2f1a136ceea22e0e8703b3de09366ee1b3a2",
+      "bytes": 2139
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "generated_direct_code",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L04/DIRECT_QWEN/generated_body.py",
+      "sha256": "aeed992d3a4b6c4333e070105096d29d39afb8a0b176e2dc8c61816b8fe98eb9",
+      "bytes": 938
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "generated_direct_brep",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L04/DIRECT_QWEN/direct_body.brep",
+      "sha256": "2449458776a09777faae76e78ca1c01a7db35b7bd1150b804d4cad4721e34e5e",
+      "bytes": 9197
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L04/DIRECT_QWEN/canonical_build/cad/F2/L04/model.FCStd",
+      "sha256": "06f9a0f6c77511d0a0cbf8cb7f03c7d53263c90be806dc3d287d9b9f51f8641a",
+      "bytes": 58094
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "final_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L04/DIRECT_QWEN/canonical_build/cad/F2/L04/model.stl",
+      "sha256": "07c969a1c2b325575293ab8579858196d5d5fea0b29cda7c91180edaeebd41e1",
+      "bytes": 270484
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "body_only_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L04/DIRECT_QWEN/canonical_build/cad/F2/L04/body_only.stl",
+      "sha256": "53627a18de2542d301842cfd2b06264f28890c0c7cff75288860d676118d5ae3",
+      "bytes": 139484
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "generation_job",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L04/DIRECT_QWEN/canonical_build/generation_job.json",
+      "sha256": "3aee68070fb035bc7bb185a5282eac62fef8bc9259a6ea508bd18879a250a637",
+      "bytes": 802809
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "exact_raw",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L04/DIRECT_QWEN/mechanical_raw.json",
+      "sha256": "ead869c6855dc4d42ec2cbb4e67a3a595627bdc780ce64293c3dc8e5d5013afa",
+      "bytes": 1627655
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "geometry_raw",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L04/DIRECT_QWEN/geometry_raw.json",
+      "sha256": "4a1a95dbb7d991fde6743297fd8329650b31e0f0ccc56a1aa08e418d33b30beb",
+      "bytes": 1292
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "exact_stdout",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L04/DIRECT_QWEN/exact_log/stdout.txt",
+      "sha256": "8a285b3bc8a166ae30d1c5c66b84589bdadb3be9d47703baa6f2cb32ef2822d6",
+      "bytes": 134
+    },
+    {
+      "run": "L04__DIRECT_QWEN",
+      "role": "exact_stderr",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L04/DIRECT_QWEN/exact_log/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "run": "L07__STRUCTURED_QWEN",
+      "role": "frozen_model_response",
+      "path": "experiments/try5A/results/try5b1_a2a_three_link/L07/STRUCTURED_QWEN/raw_response.txt",
+      "sha256": "5e15d15b4eed850cf66940de90b3afa1b501e372c45723ceb1f46129357fa94e",
+      "bytes": 1648
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "frozen_model_response",
+      "path": "experiments/try5A/results/try5b1_a2a_three_link/L07/DIRECT_QWEN/raw_response.txt",
+      "sha256": "c5408db6fb996b28f5c1ebe815a2856e17514011ab55b210a14c7f135b1966f9",
+      "bytes": 2310
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "generated_direct_code",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L07/DIRECT_QWEN/generated_body.py",
+      "sha256": "8bddaadc47259efa79ddf744e875375112bd53fa3f89f34d597291ba34e422ea",
+      "bytes": 1055
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "generated_direct_brep",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L07/DIRECT_QWEN/direct_body.brep",
+      "sha256": "c15df851e836e93f048583097d0315e0d87f1c670701931ea395290ff644c541",
+      "bytes": 3769
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "fcstd",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L07/DIRECT_QWEN/canonical_build/cad/F2/L07/model.FCStd",
+      "sha256": "42c164bff34257273070f9d6ac4385008238f279aa86e33edf0fe728fb5790ce",
+      "bytes": 4103
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "final_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L07/DIRECT_QWEN/canonical_build/cad/F2/L07/model.stl",
+      "sha256": "e10fc602258eca2a4e79ed01eafd6bf212cc8fed260a4ba96ee4b5002256a36b",
+      "bytes": 75484
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "body_only_stl",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L07/DIRECT_QWEN/canonical_build/cad/F2/L07/body_only.stl",
+      "sha256": "2cc9a57110910e2db3399acd3e48a146d77b4f7647fdd91edfad6bc32b62021e",
+      "bytes": 100484
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "generation_job",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/runs/L07/DIRECT_QWEN/canonical_build/generation_job.json",
+      "sha256": "b0733e40beb43cb20fe642199d8dd63ad84e8f9dff398754721d82ecb3e41181",
+      "bytes": 778058
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "exact_raw",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L07/DIRECT_QWEN/mechanical_raw.json",
+      "sha256": "95360f15ef5cbefeb8df706c6d992683cfd764448eeb3ae5fa4133920e1acd68",
+      "bytes": 1625172
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "geometry_raw",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L07/DIRECT_QWEN/geometry_raw.json",
+      "sha256": "a535d1d16191017ede2d7750c94f68f811781a7a32150bb6e1e3c9bf2e8a1e54",
+      "bytes": 1285
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "exact_stdout",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L07/DIRECT_QWEN/exact_log/stdout.txt",
+      "sha256": "92c705c1c597d0e8b9ca10d8ada8d54af8e0f3f1063b2ac59490dbd0b94b4370",
+      "bytes": 134
+    },
+    {
+      "run": "L07__DIRECT_QWEN",
+      "role": "exact_stderr",
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/evaluation/L07/DIRECT_QWEN/exact_log/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "formal_holdout_accessed": false
+}

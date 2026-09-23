@@ -1,0 +1,15 @@
+{
+  "schema_version": "robotcad_a2a_three_link_cross_link_analysis_v1",
+  "pattern": "MIXED_INCONCLUSIVE",
+  "requested_link_pairs": 3,
+  "model_call_pairs_completed": 3,
+  "cad_evaluable_pairs": 1,
+  "structured_evaluable_links": ["L03"],
+  "direct_evaluable_links": ["L03", "L04", "L07"],
+  "structured_schema_failures": ["L04", "L07"],
+  "paired_geometry_better": {"L03": "DIRECT_QWEN", "L04": null, "L07": null},
+  "paired_bicr_better": {"L03": "DIRECT_QWEN", "L04": null, "L07": null},
+  "paired_gcfr_better": {"L03": "STRUCTURED_QWEN", "L04": null, "L07": null},
+  "reason": "Only L03 has both methods' geometry and mechanics. Direct is more reliable at producing evaluable CAD across the three one-shot links; this does not establish a cross-link geometry or motion ranking.",
+  "no_overall_score": true
+}

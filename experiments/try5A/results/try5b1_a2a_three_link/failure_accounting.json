@@ -1,0 +1,83 @@
+{
+  "requested_runs": 6,
+  "attempted_runs": 6,
+  "evaluated_runs": 4,
+  "failed_runs": 2,
+  "requested_cases_per_run": 96,
+  "rows": [
+    {
+      "link": "L03",
+      "method": "STRUCTURED_QWEN",
+      "status": "EVALUATED",
+      "model_calls": 1,
+      "requested_configurations": 96,
+      "completed_exact_configurations": 96,
+      "failed_exact_configurations": 69,
+      "generation_or_evaluator_failure": false,
+      "retry_count": 0,
+      "manual_intervention_count": 0
+    },
+    {
+      "link": "L03",
+      "method": "DIRECT_QWEN",
+      "status": "EVALUATED",
+      "model_calls": 1,
+      "requested_configurations": 96,
+      "completed_exact_configurations": 96,
+      "failed_exact_configurations": 87,
+      "generation_or_evaluator_failure": false,
+      "retry_count": 0,
+      "manual_intervention_count": 0
+    },
+    {
+      "link": "L04",
+      "method": "STRUCTURED_QWEN",
+      "status": "EXECUTION_EXCEPTION",
+      "model_calls": 1,
+      "requested_configurations": 96,
+      "completed_exact_configurations": 0,
+      "failed_exact_configurations": null,
+      "generation_or_evaluator_failure": true,
+      "retry_count": 0,
+      "manual_intervention_count": 0
+    },
+    {
+      "link": "L04",
+      "method": "DIRECT_QWEN",
+      "status": "EVALUATED",
+      "model_calls": 1,
+      "requested_configurations": 96,
+      "completed_exact_configurations": 96,
+      "failed_exact_configurations": 26,
+      "generation_or_evaluator_failure": false,
+      "retry_count": 0,
+      "manual_intervention_count": 0
+    },
+    {
+      "link": "L07",
+      "method": "STRUCTURED_QWEN",
+      "status": "EXECUTION_EXCEPTION",
+      "model_calls": 1,
+      "requested_configurations": 96,
+      "completed_exact_configurations": 0,
+      "failed_exact_configurations": null,
+      "generation_or_evaluator_failure": true,
+      "retry_count": 0,
+      "manual_intervention_count": 0
+    },
+    {
+      "link": "L07",
+      "method": "DIRECT_QWEN",
+      "status": "EVALUATED",
+      "model_calls": 1,
+      "requested_configurations": 96,
+      "completed_exact_configurations": 96,
+      "failed_exact_configurations": 8,
+      "generation_or_evaluator_failure": false,
+      "retry_count": 0,
+      "manual_intervention_count": 0
+    }
+  ],
+  "result_conditioned_retries": 0,
+  "formal_holdout_accessed": false
+}

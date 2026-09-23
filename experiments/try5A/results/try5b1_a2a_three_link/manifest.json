@@ -1,0 +1,74 @@
+{
+  "schema_version": "robotcad_a2a_three_link_manifest_v1",
+  "experiment_id": "try5b1_a2a_same_model_three_link_development",
+  "phase": "FORMAL_DEVELOPMENT_COMPLETE_HOLDOUT_UNACCESSED",
+  "config_path": "experiments/try5A/protocol/try5b1_a2a_three_link.json",
+  "config_sha256": "2f6671f5785c895b0775da96ffb569017e3c3d3d23e7ad7df1eb784111964b73",
+  "generation_implementation_commit": "030402d471eb0450f1b7da33ef7006a77a788e2a",
+  "runner_sha256": "6799b5edfb656b0c1f62f4883b1be42247f04f579cbd9f0bc3cb0bb74147b483",
+  "method_helper_sha256": "af6af130232900d12cd57cc101c8d0941f26489dc9c10d43487429e1c2563283",
+  "worker_sha256": "021e3299d4f7c2bd0fda01ca54667d38d1215eedae393fe5c39d46f19b1b168e",
+  "direct_executor_sha256": "62143c7e04b4094cde630f3019f8ae7969c231628f4d0d360b91c4f749299985",
+  "exact_evaluator_sha256": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec",
+  "geometry_evaluator_sha256": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa",
+  "independent_validator_sha256": "09260f7229636a88e561c85d909a2fa7875e22370ce4fb79cafbb6211d1030fb",
+  "prompt_template_sha256": {
+    "shared": "2e54e71eb48cd2a603d187df895e3789fd9d4863a8aa224e593a599817a4c614",
+    "structured": "8337fba8357d09347760c0d4b0b35316986dba58fe89654363717509da3207fb",
+    "direct": "66ee2e3656006bf01ef853a135f3c07637e86cf93a891a450f875dad75e5b855"
+  },
+  "model_identifier": "qwen3.7-plus",
+  "sdk_version": "2.53.0",
+  "freecad_version": [
+    "1",
+    "1",
+    "1",
+    "20260414 (Git shallow)",
+    "Unknown",
+    "2026/04/14 22:09:59",
+    "(HEAD detached at 0108fd4b4)",
+    "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"
+  ],
+  "development_input_sha256": "e6a870772d7fe835063acdb7ba8d680ce441dc966a3b7b790fe5391732527a05",
+  "holdout_lock": {
+    "case_ids_sha256": "7f45cdaea2e865e8de80e27e285aad17a591a7ba544f993239d2d10786e2718d",
+    "accessed": false,
+    "evaluation_count": 0
+  },
+  "evaluator_gt_inputs": {
+    "L03": {
+      "link_id": "L03",
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-4-Forearm.stl",
+      "sha256": "72952a7ce9569c2468517538109141a08eb572cb027094d17a9b91f028d0b327"
+    },
+    "L04": {
+      "link_id": "L04",
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-5-Wrist-Gripper.stl",
+      "sha256": "4148d290ad924a78fcd58f18ea0822000cda14e7eaaee01e8d69664d7cf1234a"
+    },
+    "L07": {
+      "link_id": "L07",
+      "path": "go_nogo1/sources/urdf_files_dataset/urdf_files/robotics-toolbox/xacro_generated/interbotix_descriptions/meshes/meshes_px100/PXA-100-M-7-Gripper-Bar.stl",
+      "sha256": "b54601da3f60eea180226b695bb95a9b29b187f22f5b74d9a523ac9785d9a518"
+    }
+  },
+  "result_sha256": {
+    "call_ledger.json": "da96ad42a6ffa699d6d82c82ff8143ad4a016a32b40ef64f833d13f8ba7b2691",
+    "run_records.json": "a988699db9b0e43d63f26e428d5eee026acc719d7a33fd05b4f66e15acc453ef",
+    "paired_main_table.json": "1971dcfda7bd5fab38ae83b0765a49ba71105ddbed623eb361655b22f69e535e",
+    "paired_deltas.json": "7ab4f7bdb22c92b9f41616ddc781e6a2bc265aa419a86991ad4c6093654243b8",
+    "failure_accounting.json": "9a093732ee7b767e04ba3d8181b3e6f50d3d41dd308075369c260b9745320e54",
+    "claim_ledger.json": "93e73f7de1203dca17243bd76a978db8302ebeb34ecc0ec622b1d8e130149a14",
+    "artifact_manifest.json": "9fb5d34ec32480a97e6f9bd00e6e73dfeffecf68f89b05479679aa8249ca2a26",
+    "validation.json": "a142cfdf3b79a7c0b8d0735fea38af55d19ac97961c110228251338a0df945e3",
+    "process_classification.json": "21b5622a7dcadf6d9e6e40b4a18c7e5466b425b72eb049d7a41cd1078067aeb5",
+    "cross_link_analysis.json": "1d60566fac95c8f300a7f8c24ab6d383b0d71b6b80f11e90c12278c4ddfaa2cf",
+    "report.md": "52d2eba5271a03a5bd239ebab66ceb0d1c3f3c066289737b30420e81e0d6de0d"
+  },
+  "heavy_artifact_count": 44,
+  "model_calls": 6,
+  "fully_evaluated_runs": 4,
+  "manual_intervention_count": 0,
+  "result_conditioned_retries": 0,
+  "formal_holdout_accessed": false
+}

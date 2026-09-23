@@ -1,0 +1,72 @@
+{
+  "incident": "A2A-ANALYSIS-001",
+  "reason": "process metrics are observed for all three pairs even when CAD validation fails; initial aggregate applied the geometry-evaluable mask",
+  "raw_runs_changed": false,
+  "model_calls_added": 0,
+  "cad_runs_added": 0,
+  "evaluator_runs_added": 0,
+  "before": {
+    "input_tokens": {
+      "mean_delta": 40,
+      "median_delta": 40,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "total_tokens": {
+      "mean_delta": -3185,
+      "median_delta": -3185,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "end_to_end_runtime_seconds": {
+      "mean_delta": -62.36401260009734,
+      "median_delta": -62.36401260009734,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "output_tokens": {
+      "mean_delta": -3225,
+      "median_delta": -3225,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    },
+    "model_latency_seconds": {
+      "mean_delta": -54.31133190001128,
+      "median_delta": -54.31133190001128,
+      "paired_link_count": 1,
+      "requested_link_count": 3
+    }
+  },
+  "after": {
+    "input_tokens": {
+      "mean_delta": 40,
+      "median_delta": 40,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    },
+    "total_tokens": {
+      "mean_delta": -689.3333333333334,
+      "median_delta": 455,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    },
+    "end_to_end_runtime_seconds": {
+      "mean_delta": -110.22941610003666,
+      "median_delta": -123.56233529996825,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    },
+    "output_tokens": {
+      "mean_delta": -729.3333333333334,
+      "median_delta": 415,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    },
+    "model_latency_seconds": {
+      "mean_delta": -12.643941166674873,
+      "median_delta": 5.56028559996048,
+      "paired_link_count": 3,
+      "requested_link_count": 3
+    }
+  }
+}

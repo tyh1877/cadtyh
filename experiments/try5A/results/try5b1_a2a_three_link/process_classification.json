@@ -1,0 +1,89 @@
+{
+  "schema_version": "robotcad_a2a_three_link_process_classification_v1",
+  "runs": [
+    {
+      "link": "L03",
+      "method": "STRUCTURED_QWEN",
+      "status": "EVALUATED",
+      "cad_build_success": true,
+      "structured_schema_failure": false,
+      "direct_code_failure": false,
+      "freecad_execution_failure": false,
+      "evaluator_failure": false,
+      "invalid_cad_attempts": 0,
+      "error": null
+    },
+    {
+      "link": "L03",
+      "method": "DIRECT_QWEN",
+      "status": "EVALUATED",
+      "cad_build_success": true,
+      "structured_schema_failure": false,
+      "direct_code_failure": false,
+      "freecad_execution_failure": false,
+      "evaluator_failure": false,
+      "invalid_cad_attempts": 0,
+      "error": null
+    },
+    {
+      "link": "L04",
+      "method": "STRUCTURED_QWEN",
+      "status": "EXECUTION_EXCEPTION",
+      "cad_build_success": false,
+      "structured_schema_failure": true,
+      "direct_code_failure": false,
+      "freecad_execution_failure": false,
+      "evaluator_failure": false,
+      "invalid_cad_attempts": 0,
+      "error": "ValueError: STRUCTURED_SCHEMA_VALUE_INVALID: major_recess"
+    },
+    {
+      "link": "L04",
+      "method": "DIRECT_QWEN",
+      "status": "EVALUATED",
+      "cad_build_success": true,
+      "structured_schema_failure": false,
+      "direct_code_failure": false,
+      "freecad_execution_failure": false,
+      "evaluator_failure": false,
+      "invalid_cad_attempts": 0,
+      "error": null
+    },
+    {
+      "link": "L07",
+      "method": "STRUCTURED_QWEN",
+      "status": "EXECUTION_EXCEPTION",
+      "cad_build_success": false,
+      "structured_schema_failure": true,
+      "direct_code_failure": false,
+      "freecad_execution_failure": false,
+      "evaluator_failure": false,
+      "invalid_cad_attempts": 0,
+      "error": "ValueError: STRUCTURED_SCHEMA_VALUE_INVALID: major_recess"
+    },
+    {
+      "link": "L07",
+      "method": "DIRECT_QWEN",
+      "status": "EVALUATED",
+      "cad_build_success": true,
+      "structured_schema_failure": false,
+      "direct_code_failure": false,
+      "freecad_execution_failure": false,
+      "evaluator_failure": false,
+      "invalid_cad_attempts": 0,
+      "error": null
+    }
+  ],
+  "counts": {
+    "attempted": 6,
+    "evaluated": 4,
+    "structured_schema_failures": 2,
+    "direct_code_failures": 0,
+    "freecad_execution_failures": 0,
+    "invalid_cad_attempts": 0,
+    "manual_interventions": 0,
+    "result_conditioned_retries": 0
+  },
+  "raw_model_or_cad_artifacts_changed": false,
+  "additional_model_calls": 0
+}

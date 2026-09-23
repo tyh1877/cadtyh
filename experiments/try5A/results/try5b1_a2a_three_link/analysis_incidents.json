@@ -1,0 +1,23 @@
+{
+  "schema_version": "robotcad_a2a_three_link_analysis_incidents_v1",
+  "incidents": [
+    {
+      "id": "A2A-ANALYSIS-001",
+      "stage": "descriptive process aggregation",
+      "symptom": "The initial aggregate restricted token and latency deltas to links where both CAD outputs were evaluable.",
+      "correction": "Compute process deltas across all three model-call pairs while leaving geometry and mechanical aggregates restricted to the one fully evaluable pair.",
+      "raw_model_calls_added": 0,
+      "cad_or_evaluator_runs_added": 0,
+      "metrics_or_thresholds_changed": false
+    },
+    {
+      "id": "A2A-VALIDATION-001",
+      "stage": "independent validation",
+      "symptom": "The validator searched for the substring overall_score in the legitimate no_overall_score flag and reported one false failure.",
+      "correction": "Check for an exact overall_score key; the independent validation then passed all 20 checks.",
+      "raw_model_calls_added": 0,
+      "cad_or_evaluator_runs_added": 0,
+      "metrics_or_thresholds_changed": false
+    }
+  ]
+}
