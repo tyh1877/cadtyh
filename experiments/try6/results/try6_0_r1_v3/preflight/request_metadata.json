@@ -1,0 +1,105 @@
+{
+  "engineering_text_sha256": "faeab10da52c3894b26301640a885f38081c482b7b0c92d766b415dff4583edb",
+  "exact_request_path": "experiments/try6/artifacts/try6_0_r1_v3/preflight/request_payload.json",
+  "exact_request_sha256": "efa28f9642763bac4d8274d5c31782fb1ee25bca786820a11d1ae8c86b055287",
+  "image_sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+  "max_tokens": 4096,
+  "model": "qwen3.7-plus",
+  "prompt_sha256": "298e7e748f141dc6c0261e1ef4ee098d0b407438438176937661dfa72dfe96bb",
+  "response_format": {
+    "json_schema": {
+      "name": "try6_r1_v3_slots_preflight",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "properties": {
+          "link_id": {
+            "enum": [
+              "L04"
+            ],
+            "type": "string"
+          },
+          "schema_version": {
+            "enum": [
+              "robotcad_slots_l04_r1_v3"
+            ],
+            "type": "string"
+          },
+          "slots": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "confidence": {
+                  "enum": [
+                    "HIGH",
+                    "MEDIUM",
+                    "LOW"
+                  ],
+                  "type": "string"
+                },
+                "evidence_views": {
+                  "items": {
+                    "enum": [
+                      "front",
+                      "isometric",
+                      "left",
+                      "right",
+                      "top",
+                      "rear",
+                      "f0_front",
+                      "f0_isometric",
+                      "f0_left",
+                      "f0_right",
+                      "f0_top",
+                      "f0_rear"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "slot_id": {
+                  "enum": [
+                    "main_housing",
+                    "visible_pocket",
+                    "profile_transition"
+                  ],
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "PRESENT",
+                    "ABSENT",
+                    "UNCERTAIN"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "slot_id",
+                "status",
+                "evidence_views",
+                "confidence"
+              ],
+              "type": "object"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          }
+        },
+        "required": [
+          "schema_version",
+          "link_id",
+          "slots"
+        ],
+        "title": "Try-6 R1-v3 L04 closed-set visual evidence slots",
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "seed": 20260923,
+  "temperature": 0.0,
+  "top_p": 1.0
+}

@@ -1,0 +1,8 @@
+{
+  "api_schema_sha256": "1a1c8e819392f3181ad69c845b3455ddf5a08544b6f8264a03bb4eae35b0eaa6",
+  "attempt_limit": 1,
+  "canonical_schema_sha256": "71094cc2f970ca0aa910ea6660c12806146fa89271f80f750559bed1b13162a5",
+  "purpose": "SCHEMA_COMPATIBILITY_ONLY_NOT_RELIABILITY_SAMPLE",
+  "retry_count": 0,
+  "timestamp_utc": "2026-09-23T08:23:38.573861+00:00"
+}
