@@ -1,0 +1,10 @@
+{
+  "C1_visual_objective_calls": 0,
+  "GT_geometry_evaluations": 0,
+  "VLM_calls": 0,
+  "alignment_used_existing_exact_classifier_only": true,
+  "audit_limit": "code-path/artifact audit, not OS-level filesystem-read trace",
+  "final_96_case_mechanics_evaluations": 0,
+  "formal_holdout_accessed": false,
+  "no_KFDE_or_CAD_design_change": true
+}

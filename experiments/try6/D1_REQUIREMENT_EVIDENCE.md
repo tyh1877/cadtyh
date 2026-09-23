@@ -3,11 +3,10 @@
 D1 is a no-GT/no-VLM alignment and clearance-witness diagnosis. C1-v2, C2,
 D0 and the 13-component KFDE remain immutable; no design or C2-v2 is produced.
 
-- [ ] Hash-audit frozen C1/C2/D0 artifacts, five G1–G5 FCStd sources, URDF/FK, interface contracts, exact evaluator source, KFDE/allowed-region BREPs and holdout lock.
-- [ ] Freeze 5×13 local geometry/pose alignment cases, exact-classification mapping, 0.9 alignment threshold and material false-positive criterion before any D1 check.
-- [ ] For each frozen component/geometry, compute KFDE mutable-added overlap and independent exact pair classification at the same URDF pose; retain ambiguous scope rows and full denominator.
-- [ ] Evaluate actual coarse/F0 BREP directly, without inventing six-parameter F0 theta; audit KFDE vs exact at matching poses and historical authority limitations.
-- [ ] Freeze witness subsets (FULL, each neighbor, four named combinations), exact BREP subtraction on mutable C1 body only, 5%/15% magnitude and 80% localization thresholds before witness execution.
-- [ ] Verify full/per-neighbor witness volumes, connectivity, interface/scaffold invariance, proximal/distal carrier continuity and spatial localization; never use witness as a C2 candidate.
-- [ ] Compare required relief against frozen six DOFs with auditable geometric reasons; do not implement a relief feature or change KFDG/KFDE.
-- [ ] Independently validate exact alignment, witness/authority results, decision priority, failure accounting, GT=0, VLM=0, final 96-case mechanics=0 and holdout lock; stop before C2-v2.
+- [x] Hash-audit frozen C1/C2/D0 artifacts, all five G1–G5 FCStd files, exact evaluator source, KFDE/allowed BREPs, URDF and holdout (`pre_run_manifest.json`).
+- [x] Freeze 5×13 cases, exact-taxonomy mapping, 0.9 alignment and material false-positive criteria, nine witness subsets and 5%/15%/80% thresholds before D1 (`a59d229`, `7debed4`).
+- [ ] Complete 65-row KFDE/exact alignment table: **not achieved**. First attempt and one recorded technical retry both failed at G5/F0's non-cuttable zero-volume mutable BREP (`alignment/failure.json`, `D1_TECHNICAL_INCIDENT.md`). No incomplete rate was promoted.
+- [ ] F0 direct-BREP exact authority comparison: geometry source was auditable, but the same zero-volume Boolean boundary prevented completed same-pose mapping; no approximate six-theta F0 was invented.
+- [x] Freeze witness subsets and thresholds before attempting D1; **witness intentionally not run** after critical alignment mapping failed.
+- [ ] Witness relief/connectivity/localization and representation-capacity classifications: **not evaluable**; no diagnostic witness was promoted to a design.
+- [x] Independently validate both retained technical failures, prior-source integrity, absence of complete alignment/witness outputs, GT/VLM/final96/holdout 0. Decision `DIAGNOSTIC_INCONCLUSIVE`; stop before C2-v2.

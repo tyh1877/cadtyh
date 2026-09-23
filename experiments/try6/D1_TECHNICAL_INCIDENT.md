@@ -16,3 +16,12 @@ used to edit the method. Geometry sources, all 13 poses, URDF/FK, frozen KFDE,
 allowed contact, thresholds, existing exact mechanical classifier, witness
 rules, GT prohibition, and holdout lock are unchanged. If the recorded retry
 fails, D1 is `DIAGNOSTIC_INCONCLUSIVE`; no further same-version retry.
+
+The recorded retry **did fail** at the same F0 boundary. The F0 mutable BREP
+was not reported as `isNull()`, but had no cuttable volumetric solid, so OCC
+still raised `ValueError: Null shape`. The second traceback is retained in the
+current `alignment/failure.json` and `alignment/stderr.txt`; the first failure
+remains recoverable from commit `3a33ca3` and is referenced by SHA-256 in
+`alignment/technical_retry_started.json`. No complete 65-case table was
+written. D1 stops as `DIAGNOSTIC_INCONCLUSIVE` without a witness run or further
+code repair in this version.

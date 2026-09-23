@@ -1,0 +1,8 @@
+{
+  "exact_mechanics_source_unchanged": true,
+  "first_failure_sha256": "0be0ec31c146559c60190b3306c848694ec84511430b9e35119c3ae90cc1b624",
+  "geometry_set_unchanged": true,
+  "max_technical_retries": 1,
+  "reason": "Null mutable F0 BREP cut guard only",
+  "scientific_protocol_unchanged": true
+}

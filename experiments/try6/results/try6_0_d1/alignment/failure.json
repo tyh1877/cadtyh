@@ -1,5 +1,5 @@
 {
-  "error": "Traceback (most recent call last):\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_alignment.py\", line 118, in <module>\n    if __name__==\"__main__\":main(load(sys.argv[1]))\n                            ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_alignment.py\", line 55, in main\n    addition=mutable.cut(allowed)\n             ^^^^^^^^^^^^^^^^^^^^\nValueError: Null shape\n",
+  "error": "Traceback (most recent call last):\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_alignment.py\", line 121, in <module>\n    if __name__==\"__main__\":main(load(sys.argv[1]))\n                            ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_alignment.py\", line 58, in main\n    addition=Part.Shape() if mutable.isNull() else mutable.cut(allowed)\n                                                   ^^^^^^^^^^^^^^^^^^^^\nValueError: Null shape\n",
   "no_retry": true,
   "returncode": 1,
   "status": "DIAGNOSTIC_INCONCLUSIVE"

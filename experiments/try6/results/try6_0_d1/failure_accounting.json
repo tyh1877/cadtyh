@@ -1,0 +1,18 @@
+{
+  "GT_geometry_evaluations": 0,
+  "VLM_calls": 0,
+  "additional_retries": 0,
+  "alignment_rate_evaluable": false,
+  "complete_alignment_cases_retained": 0,
+  "final_96_case_mechanics_evaluations": 0,
+  "formal_holdout_evaluations": 0,
+  "initial_alignment_attempts": 1,
+  "initial_failure_artifact_commit": "3a33ca3",
+  "manual_intervention_count": 0,
+  "planned_alignment_cases": 65,
+  "schema_version": "robotcad_try6_d1_failure_accounting_v1",
+  "technical_retries": 1,
+  "technical_retry_failure_sha256": "828bde41fa9d43d9747391992966969370da806bce586db4c08d9affbefea0bc",
+  "witness_subsets_attempted": 0,
+  "witness_subsets_planned": 9
+}

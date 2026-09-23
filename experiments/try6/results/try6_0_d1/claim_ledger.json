@@ -1,0 +1,47 @@
+{
+  "claims": [
+    {
+      "artifact": "audit/independent_validation.json",
+      "claim": "C1/C2/D0 prior results unchanged",
+      "evidence_type": "computed",
+      "expected": "all unchanged",
+      "field": "frozen_prior_results"
+    },
+    {
+      "artifact": "frozen_inputs/geometry_set.json",
+      "claim": "all five source geometries available",
+      "evidence_type": "computed",
+      "expected": "PASS / 5",
+      "field": "status / geometries"
+    },
+    {
+      "artifact": "frozen_inputs/geometry_set.json",
+      "claim": "F0 mutable-added BREP zero volume",
+      "evidence_type": "computed",
+      "expected": 0.0,
+      "field": "G5_F0_COARSE.mutable_volume_mm3"
+    },
+    {
+      "artifact": "audit/independent_validation.json",
+      "claim": "two technical failures retained",
+      "evidence_type": "computed",
+      "expected": "1 / 1",
+      "field": "initial_attempts / recorded_technical_retries"
+    },
+    {
+      "artifact": "audit/independent_validation.json",
+      "claim": "alignment/witness non-evaluable",
+      "evidence_type": "computed",
+      "expected": "0 / true",
+      "field": "complete_alignment_tables / witness_not_run"
+    },
+    {
+      "artifact": "failure_accounting.json",
+      "claim": "GT/VLM/final mechanics/holdout untouched",
+      "evidence_type": "computed",
+      "expected": "0 / 0 / 0 / 0",
+      "field": "GT_geometry_evaluations / VLM_calls / final_96_case_mechanics_evaluations / formal_holdout_evaluations"
+    }
+  ],
+  "schema_version": "robotcad_try6_d1_claim_ledger_v1"
+}

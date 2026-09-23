@@ -1,8 +1,8 @@
 Traceback (most recent call last):
-  File "D:\CADtest\papertest\experiments\try6\evaluation\freecad_d1_alignment.py", line 118, in <module>
+  File "D:\CADtest\papertest\experiments\try6\evaluation\freecad_d1_alignment.py", line 121, in <module>
     if __name__=="__main__":main(load(sys.argv[1]))
                             ^^^^^^^^^^^^^^^^^^^^^^^
-  File "D:\CADtest\papertest\experiments\try6\evaluation\freecad_d1_alignment.py", line 55, in main
-    addition=mutable.cut(allowed)
-             ^^^^^^^^^^^^^^^^^^^^
+  File "D:\CADtest\papertest\experiments\try6\evaluation\freecad_d1_alignment.py", line 58, in main
+    addition=Part.Shape() if mutable.isNull() else mutable.cut(allowed)
+                                                   ^^^^^^^^^^^^^^^^^^^^
 ValueError: Null shape
