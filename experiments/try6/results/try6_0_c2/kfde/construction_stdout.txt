@@ -1,0 +1,1 @@
+{"status": "PASS", "components": 13, "keepout_volume_proxy_mm3": 128564.11238988495, "pose_sensitive": true, "scaffold_exempt": true}

@@ -1,0 +1,782 @@
+{
+  "allowed_region": {
+    "mating_envelope_source": "C1-v2 final.FCStd:FrozenMatingEnvelopeTool",
+    "path": "experiments/try6/artifacts/try6_0_c2/kfde/allowed_contact_and_scaffold.brep",
+    "proximal_bore_source": "C1-v2 final.FCStd:FrozenProximalBoreTool",
+    "scaffold_path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+    "scaffold_sha256": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69",
+    "sha256": "5eef89d6f4469fcd60291fe8761a63cd5fd85b79d016ed9054aa88f0df6432a5",
+    "volume_mm3": 15037.52290882392
+  },
+  "c1_failure_ids_consumed": false,
+  "components": [
+    {
+      "bbox": {
+        "max_mm": [
+          64.46390350150266,
+          12.0,
+          93.8670567945424
+        ],
+        "min_mm": [
+          -16.000000000000043,
+          -22.0,
+          -16.000000000000014
+        ],
+        "size_mm": [
+          80.4639035015027,
+          34.0,
+          109.86705679454242
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_00.brep",
+      "brep_sha256": "fd8ce0eb51467ef088fe5d37b8c2d1bb7dd83c5bad3481b6157573b0980b180f",
+      "component_id": "L03_J03_00",
+      "joint_id": "J03",
+      "link_id": "L03",
+      "q_rad": -2.1467549799530254,
+      "relative_transform_L04": [
+        [
+          -0.544639035015027,
+          -9.9886336767616e-33,
+          0.8386705679454242,
+          0.05446390350150265
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.8386705679454242,
+          -1.008743198884424e-32,
+          -0.544639035015027,
+          0.08386705679454241
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L03/model.FCStd",
+      "source_sha256": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+      "volume_mm3": 13571.034273546156
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          15.999999999999998,
+          12.0,
+          109.73569167005722
+        ],
+        "min_mm": [
+          -17.265797072261076,
+          -22.0,
+          -16.000000000000018
+        ],
+        "size_mm": [
+          33.26579707226107,
+          34.0,
+          125.73569167005724
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_01.brep",
+      "brep_sha256": "034a2b439bf4ad1f82707eb9ad11cf74de9a0319c0abcd0d0417a25bec2b0d34",
+      "component_id": "L03_J03_01",
+      "joint_id": "J03",
+      "link_id": "L03",
+      "q_rad": -1.498074274628466,
+      "relative_transform_L04": [
+        [
+          0.07265797072261071,
+          3.463261799374472e-33,
+          0.9973569167005722,
+          -0.0072657970722610765
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.9973569167005722,
+          -9.947049884739672e-34,
+          0.07265797072261071,
+          0.09973569167005722
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L03/model.FCStd",
+      "source_sha256": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+      "volume_mm3": 13571.034273546158
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          15.999999999999973,
+          12.0,
+          85.08800329814991
+        ],
+        "min_mm": [
+          -76.0438623999008,
+          -22.0,
+          -16.0
+        ],
+        "size_mm": [
+          92.04386239990077,
+          34.0,
+          101.08800329814991
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_02.brep",
+      "brep_sha256": "0986766f8032b976541f11ad435df69f74755547040fbd752040c69e40182b4a",
+      "component_id": "L03_J03_02",
+      "joint_id": "J03",
+      "link_id": "L03",
+      "q_rad": -0.849393569303907,
+      "relative_transform_L04": [
+        [
+          0.6604386239990078,
+          -1.0904944269767387e-32,
+          0.7508800329814992,
+          -0.0660438623999008
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.7508800329814991,
+          1.8160990273304302e-33,
+          0.6604386239990078,
+          0.07508800329814991
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L03/model.FCStd",
+      "source_sha256": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+      "volume_mm3": 13571.034273546156
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          16.0,
+          12.0,
+          29.93679344171973
+        ],
+        "min_mm": [
+          -107.99247046208296,
+          -22.0,
+          -15.999999999999988
+        ],
+        "size_mm": [
+          123.99247046208296,
+          34.0,
+          45.936793441719715
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_03.brep",
+      "brep_sha256": "6474691582403cbd7b3d1a8423559d4e097e5ad5d5d6af127f696b18e6278031",
+      "component_id": "L03_J03_03",
+      "joint_id": "J03",
+      "link_id": "L03",
+      "q_rad": -0.20071286397934784,
+      "relative_transform_L04": [
+        [
+          0.9799247046208297,
+          -2.8286770413489687e-33,
+          0.19936793441719713,
+          -0.09799247046208297
+        ],
+        [
+          -9.244463733058732e-33,
+          1.0,
+          2.465190328815662e-32,
+          0.0
+        ],
+        [
+          -0.1993679344171971,
+          -1.1657759521469592e-32,
+          0.9799247046208296,
+          0.019936793441719725
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L03/model.FCStd",
+      "source_sha256": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+      "volume_mm3": 13571.03427354616
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          15.99999999999997,
+          11.999999999999998,
+          16.00000000000002
+        ],
+        "min_mm": [
+          -100.13291614454623,
+          -21.999999999999996,
+          -53.31347858669629
+        ],
+        "size_mm": [
+          116.1329161445462,
+          33.99999999999999,
+          69.3134785866963
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_04.brep",
+      "brep_sha256": "f41fabae5c03866bbd6c6a91349fe4c7f111faaa4107e3b24449c655b4d0d316",
+      "component_id": "L03_J03_04",
+      "joint_id": "J03",
+      "link_id": "L03",
+      "q_rad": 0.4479678413452115,
+      "relative_transform_L04": [
+        [
+          0.901329161445462,
+          3.4196608792081266e-33,
+          -0.4331347858669632,
+          -0.09013291614454623
+        ],
+        [
+          0.0,
+          1.0,
+          2.465190328815662e-32,
+          -6.162975822039155e-33
+        ],
+        [
+          0.4331347858669632,
+          -1.3778293390183129e-33,
+          0.901329161445462,
+          -0.04331347858669629
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L03/model.FCStd",
+      "source_sha256": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+      "volume_mm3": 13571.034273546145
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          16.0,
+          12.0,
+          16.0
+        ],
+        "min_mm": [
+          -55.65804082611652,
+          -22.0,
+          -98.9682151553052
+        ],
+        "size_mm": [
+          71.65804082611652,
+          34.0,
+          114.9682151553052
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_05.brep",
+      "brep_sha256": "8338ce721966f9458f6c8f9efeabaa34199f386584dfe8df09845a7648de8b90",
+      "component_id": "L03_J03_05",
+      "joint_id": "J03",
+      "link_id": "L03",
+      "q_rad": 1.0966485466697709,
+      "relative_transform_L04": [
+        [
+          0.4565804082611652,
+          4.402159866386159e-33,
+          -0.889682151553052,
+          -0.04565804082611652
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.889682151553052,
+          1.1604125528290996e-33,
+          0.45658040826116525,
+          -0.0889682151553052
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L03/model.FCStd",
+      "source_sha256": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+      "volume_mm3": 13571.034273546153
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          27.364817766693047,
+          12.0,
+          15.999999999999988
+        ],
+        "min_mm": [
+          -15.999999999999991,
+          -22.0,
+          -108.48077530122083
+        ],
+        "size_mm": [
+          43.36481776669304,
+          34.0,
+          124.48077530122082
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_06.brep",
+      "brep_sha256": "87e9cd68a565eb0e97a059f21425dd4577a75d22a22d0410ad4a0b64c76cd3b5",
+      "component_id": "L03_J03_06",
+      "joint_id": "J03",
+      "link_id": "L03",
+      "q_rad": 1.7453292519943295,
+      "relative_transform_L04": [
+        [
+          -0.17364817766693033,
+          -1.0148131876234376e-32,
+          -0.9848077530122082,
+          0.017364817766693047
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.9848077530122081,
+          -2.6532174651502245e-33,
+          -0.17364817766693033,
+          -0.09848077530122083
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L03/model.FCStd",
+      "source_sha256": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+      "volume_mm3": 13571.034273546155
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          80.64443991008635,
+          16.0,
+          16.0
+        ],
+        "min_mm": [
+          52.5,
+          -16.0,
+          -16.0
+        ],
+        "size_mm": [
+          28.144439910086348,
+          32.0,
+          32.0
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L05_FIXED_J04_00.brep",
+      "brep_sha256": "e263427958d2f8fe74a54dc6ccfaf7fe6bca4e0086a0f9c7a086287a17d5886e",
+      "component_id": "L05_FIXED_J04_00",
+      "joint_id": "FIXED_J04",
+      "link_id": "L05",
+      "q_rad": 0.0,
+      "relative_transform_L04": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.063
+        ],
+        [
+          0.0,
+          -1.0,
+          1.2246467991473532e-16,
+          0.0
+        ],
+        [
+          0.0,
+          -1.2246467991473532e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L05/model.FCStd",
+      "source_sha256": "cdc2bc789b30ef2d7a85be5d9916b74812b398a5e5ea62fbb24e05ef28ce7561",
+      "volume_mm3": 6742.337162429758
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          98.5,
+          11.5,
+          11.5
+        ],
+        "min_mm": [
+          59.5,
+          -11.5,
+          -11.5
+        ],
+        "size_mm": [
+          39.0,
+          23.0,
+          23.0
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L06_J05_00.brep",
+      "brep_sha256": "0c3a82d97b831f1f769f9072b784e4327839c2315ad3900f0fafdbf2eaeeac37",
+      "component_id": "L06_J05_00",
+      "joint_id": "J05",
+      "link_id": "L06",
+      "q_rad": 0.0,
+      "relative_transform_L04": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0685
+        ],
+        [
+          0.0,
+          -1.0,
+          1.2246467991473532e-16,
+          0.0
+        ],
+        [
+          0.0,
+          -1.2246467991473532e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L06/model.FCStd",
+      "source_sha256": "1b1f4d93e98561af345f73c4cad9238b7798a3a2d13ca7b186f03f57c19c1cd8",
+      "volume_mm3": 6269.451595983325
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          98.5,
+          11.5,
+          11.5
+        ],
+        "min_mm": [
+          59.5,
+          -11.5,
+          -11.5
+        ],
+        "size_mm": [
+          39.0,
+          23.0,
+          23.0
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L06_J05_01.brep",
+      "brep_sha256": "b2038d9ffad14e43924eb9a601e2b1c80bea32dbfb0b52318ae5af5a9bd4fcdd",
+      "component_id": "L06_J05_01",
+      "joint_id": "J05",
+      "link_id": "L06",
+      "q_rad": 1.5707963267948966,
+      "relative_transform_L04": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0685
+        ],
+        [
+          0.0,
+          1.1442377452219667e-17,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0,
+          1.1442377452219667e-17,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L06/model.FCStd",
+      "source_sha256": "1b1f4d93e98561af345f73c4cad9238b7798a3a2d13ca7b186f03f57c19c1cd8",
+      "volume_mm3": 6269.451595983326
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          98.5,
+          11.5,
+          11.5
+        ],
+        "min_mm": [
+          59.5,
+          -11.5,
+          -11.5
+        ],
+        "size_mm": [
+          39.0,
+          23.0,
+          23.0
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L06_J05_02.brep",
+      "brep_sha256": "e0f4c050cff9ddb1035d68195e9dd5ad9089b362ba19c921f59241974ea4c253",
+      "component_id": "L06_J05_02",
+      "joint_id": "J05",
+      "link_id": "L06",
+      "q_rad": 3.141592653589793,
+      "relative_transform_L04": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0685
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L06/model.FCStd",
+      "source_sha256": "1b1f4d93e98561af345f73c4cad9238b7798a3a2d13ca7b186f03f57c19c1cd8",
+      "volume_mm3": 6269.451595983326
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          98.5,
+          11.5,
+          11.5
+        ],
+        "min_mm": [
+          59.5,
+          -11.5,
+          -11.5
+        ],
+        "size_mm": [
+          39.0,
+          23.0,
+          23.0
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L06_J05_03.brep",
+      "brep_sha256": "edb5ea44b4cacc71bb9a9588c55666d97078f212b200e554f5668d436fcc0560",
+      "component_id": "L06_J05_03",
+      "joint_id": "J05",
+      "link_id": "L06",
+      "q_rad": 4.71238898038469,
+      "relative_transform_L04": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0685
+        ],
+        [
+          0.0,
+          9.957992501029599e-17,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          9.957992501029599e-17,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L06/model.FCStd",
+      "source_sha256": "1b1f4d93e98561af345f73c4cad9238b7798a3a2d13ca7b186f03f57c19c1cd8",
+      "volume_mm3": 6269.451595983326
+    },
+    {
+      "bbox": {
+        "max_mm": [
+          88.0,
+          7.0,
+          7.0
+        ],
+        "min_mm": [
+          61.0,
+          -7.0,
+          -7.0
+        ],
+        "size_mm": [
+          27.0,
+          14.0,
+          14.0
+        ]
+      },
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L07_FIXED_J06_00.brep",
+      "brep_sha256": "3d6c7f2a3679da04085677e7925ab136efe8b74cd0617643acf24809e885f286",
+      "component_id": "L07_FIXED_J06_00",
+      "joint_id": "FIXED_J06",
+      "link_id": "L07",
+      "q_rad": 0.0,
+      "relative_transform_L04": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.063
+        ],
+        [
+          0.0,
+          -1.0,
+          1.2246467991473532e-16,
+          0.0
+        ],
+        [
+          0.0,
+          -1.2246467991473532e-16,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "source_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L07/model.FCStd",
+      "source_sha256": "b3a3ba691e8c364e82143ae6b005788a7fe0a75b87492b7772c35a4e4f630997",
+      "volume_mm3": 1746.7255153959254
+    }
+  ],
+  "coordinate_frame": "L04 local mm",
+  "design_pose_count": 13,
+  "design_pose_policy": {
+    "J03": {
+      "policy": "inclusive_uniform_joint_limit_grid",
+      "sample_count": 7
+    },
+    "J05": {
+      "angles_radians": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ],
+      "policy": "continuous_four_cardinal_angles_radians"
+    },
+    "fixed_neighbors": {
+      "sample_count_each": 1
+    },
+    "not_from_final_development_configs": true
+  },
+  "engineering_margin_mm": 0.0,
+  "final_development_configurations_consumed": false,
+  "gt_accessed": false,
+  "j03_samples_rad": [
+    -2.1467549799530254,
+    -1.498074274628466,
+    -0.849393569303907,
+    -0.20071286397934784,
+    0.4479678413452115,
+    1.0966485466697709,
+    1.7453292519943295
+  ],
+  "j05_samples_rad": [
+    0.0,
+    1.5707963267948966,
+    3.141592653589793,
+    4.71238898038469
+  ],
+  "keepout": {
+    "bbox": {
+      "max_mm": [
+        98.5,
+        16.0,
+        109.73569167005722
+      ],
+      "min_mm": [
+        -107.99247046208296,
+        -22.0,
+        -108.48077530122083
+      ],
+      "size_mm": [
+        206.49247046208296,
+        38.0,
+        218.21646697127807
+      ]
+    },
+    "compound_volume_proxy_mm3": 128564.11238988495,
+    "path": "experiments/try6/artifacts/try6_0_c2/kfde/kfde_keepout.brep",
+    "sha256": "86446319f48ec1ae3467116bc0e572b860735b638b4ec1d405f9c3f27e3fabc5"
+  },
+  "numerical_tolerance_mm3": 1e-06,
+  "sanitized_urdf_path": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+  "sanitized_urdf_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+  "schema_version": "robotcad_try6_c2_kfde_construction_v1",
+  "status": "PASS"
+}

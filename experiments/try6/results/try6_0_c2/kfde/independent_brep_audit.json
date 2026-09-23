@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "allowed_region_valid": true,
+  "keepout_valid": true,
+  "keepout_compound_volume_proxy_mm3": 128564.11238988397,
+  "component_count": 13,
+  "valid_component_count": 13,
+  "frozen_scaffold_residual_mm3": 0.0,
+  "gt_accessed": false
+}

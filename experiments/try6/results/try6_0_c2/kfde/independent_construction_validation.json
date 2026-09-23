@@ -1,0 +1,19 @@
+{
+  "L04_frame_recomputed": true,
+  "allowed_scaffold_residual_mm3": 0.0,
+  "c1_failure_ids_consumed": false,
+  "component_count": 13,
+  "construction_report_sha256": "2222bf9b4057505a55de8f679116c05049f83526f437b61819c3ff23d4809e1e",
+  "final_development_configurations_consumed": false,
+  "formal_holdout_accessed": false,
+  "gt_accessed": false,
+  "keepout_nonempty": true,
+  "neighbor_pose_counts": {
+    "L03": 7,
+    "L05": 1,
+    "L06": 4,
+    "L07": 1
+  },
+  "pose_sensitive": true,
+  "status": "PASS"
+}

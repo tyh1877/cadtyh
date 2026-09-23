@@ -1,0 +1,52 @@
+{
+  "allowed_contact_policy": "exclude frozen L04 scaffold plus exact frozen proximal bore and mating-envelope tool shapes from candidate body before forbidden-overlap test",
+  "construction_sweep": {
+    "J03": {
+      "policy": "inclusive_uniform_joint_limit_grid",
+      "sample_count": 7
+    },
+    "J05": {
+      "angles_radians": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ],
+      "policy": "continuous_four_cardinal_angles_radians"
+    },
+    "fixed_neighbors": {
+      "sample_count_each": 1
+    },
+    "not_from_final_development_configs": true
+  },
+  "design_frame": "L04 local millimetres; T_L04_inverse @ T_neighbor from sanitized URDF FK",
+  "engineering_margin_mm": 0.0,
+  "hard_feasibility": true,
+  "neighbor_scope": [
+    {
+      "link_id": "L03",
+      "reason": "direct proximal revolute neighbor",
+      "relative_motion_joint": "J03"
+    },
+    {
+      "link_id": "L05",
+      "reason": "direct distal rigid mount",
+      "relative_motion_joint": "FIXED_J04"
+    },
+    {
+      "link_id": "L06",
+      "reason": "direct downstream continuous wrist neighbor",
+      "relative_motion_joint": "J05"
+    },
+    {
+      "link_id": "L07",
+      "reason": "fixed downstream child of L05 near distal mount",
+      "relative_motion_joint": "FIXED_J06"
+    }
+  ],
+  "no_C1_failure_diagnostic_input": true,
+  "no_gt": true,
+  "numerical_tolerance_mm3": 1e-06,
+  "primary_metric": "maximum per-swept-neighbor exact BREP forbidden intersection volume mm3",
+  "schema_version": "robotcad_try6_c2_kfde_definition_v1"
+}

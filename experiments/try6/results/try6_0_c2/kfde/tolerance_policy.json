@@ -1,0 +1,8 @@
+{
+  "engineering_margin_mm": 0.0,
+  "existing_frozen_FreeCAD_distance_TOL_mm": 1e-06,
+  "interface_clearance_mm": 0.6,
+  "interpretation": "0.6 mm is a frozen joint-interface clearance, not a new general KFDE margin; zero engineering margin plus predeclared minimum BREP volume epsilon.",
+  "not_tuned_on_C1_failures": true,
+  "numerical_forbidden_volume_tolerance_mm3": 1e-06
+}

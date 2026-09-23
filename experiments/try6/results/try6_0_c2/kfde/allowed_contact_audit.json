@@ -1,0 +1,8 @@
+{
+  "allowed_region_path": "experiments/try6/artifacts/try6_0_c2/kfde/allowed_contact_and_scaffold.brep",
+  "allowed_region_sha256": "5eef89d6f4469fcd60291fe8761a63cd5fd85b79d016ed9054aa88f0df6432a5",
+  "frozen_scaffold_residual_after_exemption_mm3": 0.0,
+  "policy": "exclude frozen L04 scaffold plus exact frozen proximal bore and mating-envelope tool shapes from candidate body before forbidden-overlap test",
+  "protected_interfaces_not_auto_forbidden": true,
+  "status": "PASS"
+}
