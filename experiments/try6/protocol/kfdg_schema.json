@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Try-6.0-C1 L04 KFDG",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "link_id", "functional_nodes", "geometric_features", "parameter_nodes", "relations", "metric_anchor"],
+  "properties": {
+    "schema_version": {"const": "robotcad_kfdg_l04_v1"},
+    "link_id": {"const": "L04"},
+    "functional_nodes": {
+      "type": "array", "minItems": 2,
+      "items": {"type": "object", "additionalProperties": false, "required": ["id", "type", "frame_xyz_mm", "axis", "source"],
+        "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}, "type": {"enum": ["joint_port", "mount_port", "joint_axis"]}, "frame_xyz_mm": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3}, "axis": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3}, "source": {"enum": ["URDF_METRIC_ANCHOR", "KINEMATIC_REQUIREMENT"]}}
+      }
+    },
+    "geometric_features": {
+      "type": "array", "minItems": 2, "maxItems": 8,
+      "items": {"type": "object", "additionalProperties": false, "required": ["id", "type", "evidence_views", "confidence"],
+        "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}, "type": {"enum": ["housing", "profile_transition", "pocket", "bore", "fillet"]}, "evidence_views": {"type": "array", "items": {"enum": ["front", "isometric", "left", "right", "top", "rear"]}, "minItems": 1, "uniqueItems": true}, "confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]}}
+      }
+    },
+    "parameter_nodes": {
+      "type": "array", "minItems": 6, "maxItems": 10,
+      "items": {"type": "object", "additionalProperties": false, "required": ["id", "value", "unit", "lower_bound", "upper_bound", "provenance", "confidence"],
+        "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}, "value": {"type": "number"}, "unit": {"const": "mm"}, "lower_bound": {"type": "number"}, "upper_bound": {"type": "number"}, "provenance": {"enum": ["VISUAL_EVIDENCE", "URDF_METRIC_ANCHOR", "KINEMATIC_REQUIREMENT", "SOLVER_ESTIMATED"]}, "confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]}}
+      }
+    },
+    "relations": {
+      "type": "array", "minItems": 2,
+      "items": {"type": "object", "additionalProperties": false, "required": ["source", "target", "type"],
+        "properties": {"source": {"type": "string"}, "target": {"type": "string"}, "type": {"enum": ["interface_fixed", "coaxial", "parallel", "symmetric", "minimum_wall", "profile_continuity", "contains", "connected_to"]}}
+      }
+    },
+    "metric_anchor": {"type": "object", "additionalProperties": false, "required": ["source", "joint_ids", "distance_mm"], "properties": {"source": {"const": "sanitized_urdf_and_frozen_interface_contract"}, "joint_ids": {"type": "array", "prefixItems": [{"const": "J03"}, {"const": "J04"}], "minItems": 2, "maxItems": 2}, "distance_mm": {"type": "number", "exclusiveMinimum": 0}}}
+  }
+}

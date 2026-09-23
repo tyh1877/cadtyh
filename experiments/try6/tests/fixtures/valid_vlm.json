@@ -1,0 +1,19 @@
+{
+  "visual_observations": ["A visible stepped housing and a recess appear in right and top views."],
+  "geometric_features": [
+    {"id": "main_housing", "type": "housing", "evidence_views": ["right", "top"], "confidence": "MEDIUM"},
+    {"id": "visible_step", "type": "profile_transition", "evidence_views": ["right"], "confidence": "MEDIUM"},
+    {"id": "recess_01", "type": "pocket", "evidence_views": ["right", "isometric"], "confidence": "LOW"},
+    {"id": "rounded_edge", "type": "fillet", "evidence_views": ["isometric"], "confidence": "LOW"}
+  ],
+  "relations": [
+    {"source": "proximal_joint_port", "target": "main_housing", "type": "interface_fixed"},
+    {"source": "main_housing", "target": "visible_step", "type": "profile_continuity"},
+    {"source": "main_housing", "target": "recess_01", "type": "contains"}
+  ],
+  "parameter_cues": [
+    {"parameter_id": "housing_width_mm", "evidence_views": ["top"], "ratio_hint": 0.27, "confidence": "MEDIUM"},
+    {"parameter_id": "housing_height_mm", "evidence_views": ["right"], "ratio_hint": 0.25, "confidence": "MEDIUM"}
+  ],
+  "uncertain_observations": ["The recess depth is not directly visible."]
+}

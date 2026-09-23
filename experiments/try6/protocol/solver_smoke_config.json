@@ -1,0 +1,10 @@
+{
+  "schema_version": "robotcad_try6_c1_solver_smoke_v1",
+  "status": "NONFORMAL_INFRASTRUCTURE_ONLY",
+  "objective_weights": {"silhouette": 0.45, "edge_profile": 0.30, "landmark": 0.15, "prior": 0.10},
+  "candidate_timeout_seconds": 60,
+  "optimizer_seed": 20260923,
+  "smoke_parameter_points": 2,
+  "gt_access": false,
+  "motion_feedback": false
+}

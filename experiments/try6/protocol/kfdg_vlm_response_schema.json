@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Try-6.0-C1 VLM topology-only response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["visual_observations", "geometric_features", "relations", "parameter_cues", "uncertain_observations"],
+  "properties": {
+    "visual_observations": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "geometric_features": {"type": "array", "minItems": 2, "maxItems": 8, "items": {"type": "object", "additionalProperties": false, "required": ["id", "type", "evidence_views", "confidence"], "properties": {"id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"}, "type": {"enum": ["housing", "profile_transition", "pocket", "bore", "fillet"]}, "evidence_views": {"type": "array", "items": {"enum": ["front", "isometric", "left", "right", "top", "rear"]}, "minItems": 1, "uniqueItems": true}, "confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]}}}},
+    "relations": {"type": "array", "minItems": 2, "items": {"type": "object", "additionalProperties": false, "required": ["source", "target", "type"], "properties": {"source": {"type": "string"}, "target": {"type": "string"}, "type": {"enum": ["interface_fixed", "coaxial", "parallel", "symmetric", "minimum_wall", "profile_continuity", "contains", "connected_to"]}}}},
+    "parameter_cues": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["parameter_id", "evidence_views", "ratio_hint", "confidence"], "properties": {"parameter_id": {"enum": ["housing_width_mm", "housing_height_mm", "proximal_section_length_mm", "transition_length_mm", "distal_width_mm", "distal_height_mm", "recess_length_mm", "recess_depth_mm", "fillet_radius_mm"]}, "evidence_views": {"type": "array", "items": {"enum": ["front", "isometric", "left", "right", "top", "rear"]}, "minItems": 1}, "ratio_hint": {"type": "number", "minimum": 0.05, "maximum": 2.0}, "confidence": {"enum": ["HIGH", "MEDIUM", "LOW"]}}}},
+    "uncertain_observations": {"type": "array", "items": {"type": "string"}}
+  }
+}
