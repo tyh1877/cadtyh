@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "final_volume_mm3": 17542.876137067622,
+  "final_solid_count": 1
+}

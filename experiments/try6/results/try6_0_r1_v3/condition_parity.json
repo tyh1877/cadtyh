@@ -1,0 +1,8 @@
+{
+  "e2e_fresh_call_excluded": true,
+  "no_voting_or_best_of_five": true,
+  "preflight_excluded": true,
+  "reliability_exact_request_parity": true,
+  "reliability_exact_request_sha256": "b631322cb72920ff9f5cc8ffe1efbfad454edd3d856b71bef817d07bf983f719",
+  "schema_version": "robotcad_try6_r1_v3_request_parity_v1"
+}

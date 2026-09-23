@@ -1,0 +1,35 @@
+{
+  "cad_dimension_changed": true,
+  "final_volume_changed": true,
+  "fixed_theta_objective_at_synthetic_anchor": 1.7776931374401486e-05,
+  "fixed_theta_relation_at_synthetic_anchor": 0.265625,
+  "functional_cad_anchor_remained_real_urdf": true,
+  "mutated_final_volume_mm3": 17361.202190438744,
+  "mutated_housing_width_mm": 17.26984126984127,
+  "mutated_pad_bbox_mm": [
+    -2.66e-15,
+    -8.634920634920636,
+    -8.000000000000004,
+    24.000000000000004,
+    8.634920634920636,
+    8.000000000000002
+  ],
+  "mutated_theta_objective": 0.0,
+  "normalized_relation_at_real_anchor": 0.2698412698412698,
+  "objective_changed": true,
+  "ratio_target": 0.2698412698412698,
+  "selected_final_volume_mm3": 17276.75126156184,
+  "selected_housing_width_mm": 17.0,
+  "selected_objective": 0.0,
+  "selected_pad_bbox_mm": [
+    -2.66e-15,
+    -8.500000000000002,
+    -8.000000000000004,
+    24.000000000000004,
+    8.500000000000002,
+    8.000000000000002
+  ],
+  "synthetic_anchor_mm": 64.0,
+  "theta_changed": true,
+  "urdf_anchor_mm": 63.0
+}

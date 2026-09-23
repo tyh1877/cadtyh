@@ -1,0 +1,259 @@
+{
+  "final_artifact_paths": {
+    "final.FCStd": "experiments/try6/artifacts/try6_0_r1_v3/e2e_smoke/final.FCStd",
+    "final.step": "experiments/try6/artifacts/try6_0_r1_v3/e2e_smoke/final.step",
+    "final.stl": "experiments/try6/artifacts/try6_0_r1_v3/e2e_smoke/final.stl"
+  },
+  "final_artifact_sha256": {
+    "final.FCStd": "774d568e647ea9b64427251afd14df2e1922490e27337616dc2dd994b312adb9",
+    "final.step": "e330a65146291bf844f0e37681fedb19adc4860b0965c8a347b1392e21e73c34",
+    "final.stl": "7e0c3c9de877b5ae5742e5407cea7fe465df9d35223d01803067692e241ec27b"
+  },
+  "interface_invariant_across_four_builds": true,
+  "protected_shape_signatures": {
+    "0": {
+      "FrozenMatingEnvelopeTool": {
+        "bbox_mm": [
+          -16.0,
+          -12.0,
+          -16.0,
+          16.0,
+          12.0,
+          16.0
+        ],
+        "brep_sha256": "a062d2b970fe5b2332a0483847514b91fdf2bd24ab2b49dc37f925f46517bea4",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 5013.667715863949
+      },
+      "FrozenProximalBoreTool": {
+        "bbox_mm": [
+          -3.6,
+          -13.0,
+          -3.6,
+          3.6,
+          13.0,
+          3.6
+        ],
+        "brep_sha256": "d3d6b43280516ba08e16bff16abf167473c2ad693b6257ccd873c91a20d59eed",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 1058.5910605536167
+      },
+      "FrozenScaffold": {
+        "bbox_mm": [
+          -11.5,
+          -9.0,
+          -11.5,
+          65.0,
+          9.0,
+          11.5
+        ],
+        "brep_sha256": "2795b2ed6d565bb4e3971e323ffe845599a57d46fffd98f2faf64c7106b79411",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 9698.134201036422
+      }
+    },
+    "1": {
+      "FrozenMatingEnvelopeTool": {
+        "bbox_mm": [
+          -16.0,
+          -12.0,
+          -16.0,
+          16.0,
+          12.0,
+          16.0
+        ],
+        "brep_sha256": "a062d2b970fe5b2332a0483847514b91fdf2bd24ab2b49dc37f925f46517bea4",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 5013.667715863949
+      },
+      "FrozenProximalBoreTool": {
+        "bbox_mm": [
+          -3.6,
+          -13.0,
+          -3.6,
+          3.6,
+          13.0,
+          3.6
+        ],
+        "brep_sha256": "d3d6b43280516ba08e16bff16abf167473c2ad693b6257ccd873c91a20d59eed",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 1058.5910605536167
+      },
+      "FrozenScaffold": {
+        "bbox_mm": [
+          -11.5,
+          -9.0,
+          -11.5,
+          65.0,
+          9.0,
+          11.5
+        ],
+        "brep_sha256": "2795b2ed6d565bb4e3971e323ffe845599a57d46fffd98f2faf64c7106b79411",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 9698.134201036422
+      }
+    },
+    "2": {
+      "FrozenMatingEnvelopeTool": {
+        "bbox_mm": [
+          -16.0,
+          -12.0,
+          -16.0,
+          16.0,
+          12.0,
+          16.0
+        ],
+        "brep_sha256": "a062d2b970fe5b2332a0483847514b91fdf2bd24ab2b49dc37f925f46517bea4",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 5013.667715863949
+      },
+      "FrozenProximalBoreTool": {
+        "bbox_mm": [
+          -3.6,
+          -13.0,
+          -3.6,
+          3.6,
+          13.0,
+          3.6
+        ],
+        "brep_sha256": "d3d6b43280516ba08e16bff16abf167473c2ad693b6257ccd873c91a20d59eed",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 1058.5910605536167
+      },
+      "FrozenScaffold": {
+        "bbox_mm": [
+          -11.5,
+          -9.0,
+          -11.5,
+          65.0,
+          9.0,
+          11.5
+        ],
+        "brep_sha256": "2795b2ed6d565bb4e3971e323ffe845599a57d46fffd98f2faf64c7106b79411",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 9698.134201036422
+      }
+    },
+    "3": {
+      "FrozenMatingEnvelopeTool": {
+        "bbox_mm": [
+          -16.0,
+          -12.0,
+          -16.0,
+          16.0,
+          12.0,
+          16.0
+        ],
+        "brep_sha256": "a062d2b970fe5b2332a0483847514b91fdf2bd24ab2b49dc37f925f46517bea4",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 5013.667715863949
+      },
+      "FrozenProximalBoreTool": {
+        "bbox_mm": [
+          -3.6,
+          -13.0,
+          -3.6,
+          3.6,
+          13.0,
+          3.6
+        ],
+        "brep_sha256": "d3d6b43280516ba08e16bff16abf167473c2ad693b6257ccd873c91a20d59eed",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 1058.5910605536167
+      },
+      "FrozenScaffold": {
+        "bbox_mm": [
+          -11.5,
+          -9.0,
+          -11.5,
+          65.0,
+          9.0,
+          11.5
+        ],
+        "brep_sha256": "2795b2ed6d565bb4e3971e323ffe845599a57d46fffd98f2faf64c7106b79411",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 9698.134201036422
+      }
+    }
+  },
+  "selected_build": {
+    "artifacts": {
+      "body_stl": "aecd86c05d4d3a80ffe6628d65c2032d2b493c2fe91ede1729b1edaf4a33b980",
+      "fcstd": "774d568e647ea9b64427251afd14df2e1922490e27337616dc2dd994b312adb9",
+      "step": "e330a65146291bf844f0e37681fedb19adc4860b0965c8a347b1392e21e73c34",
+      "stl": "7e0c3c9de877b5ae5742e5407cea7fe465df9d35223d01803067692e241ec27b"
+    },
+    "feature_tree": [
+      {
+        "faces": 6,
+        "name": "MainHousingPad",
+        "solids": 1,
+        "type_id": "PartDesign::Pad",
+        "valid": true,
+        "volume_mm3": 6528.000000000007
+      },
+      {
+        "faces": 6,
+        "name": "ProfileTransitionLoft",
+        "solids": 1,
+        "type_id": "Part::Loft",
+        "valid": true,
+        "volume_mm3": 7666.369628327683
+      },
+      {
+        "faces": 10,
+        "name": "HousingWithTransition",
+        "solids": 1,
+        "type_id": "Part::Fuse",
+        "valid": true,
+        "volume_mm3": 14194.369628327688
+      },
+      {
+        "faces": 12,
+        "name": "FrozenProximalBore",
+        "solids": 1,
+        "type_id": "Part::Cut",
+        "valid": true,
+        "volume_mm3": 13848.291781608237
+      },
+      {
+        "faces": 20,
+        "name": "FrozenMatingEnvelopeCut",
+        "solids": 1,
+        "type_id": "Part::Cut",
+        "valid": true,
+        "volume_mm3": 13541.354554111782
+      },
+      {
+        "faces": 37,
+        "name": "RigidGroup",
+        "solids": 1,
+        "type_id": "Part::Fuse",
+        "valid": true,
+        "volume_mm3": 17276.75126156184
+      }
+    ],
+    "final_solid_count": 1,
+    "final_volume_mm3": 17276.75126156184,
+    "mode": "R1_V3_SYNTHETIC_NON_GT_E2E",
+    "reopen": {
+      "tree_nodes": 23,
+      "valid": true,
+      "volume_mm3": 17276.75126156184
+    },
+    "status": "PASS"
+  },
+  "selected_candidate": 1
+}

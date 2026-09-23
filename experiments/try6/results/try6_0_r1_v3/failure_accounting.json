@@ -1,0 +1,19 @@
+{
+  "assembly_success": 5,
+  "canonical_kfdg_valid": 5,
+  "contract_valid": 5,
+  "e2e_in_reliability_denominator": false,
+  "excluded_reliability_calls": [],
+  "failed_cad_candidates": 0,
+  "formal_holdout_evaluations": 0,
+  "fresh_e2e_calls": 1,
+  "gt_evaluations": 0,
+  "preflight_attempts": 1,
+  "preflight_in_denominator": false,
+  "preflight_pass": true,
+  "reliability_completed": 5,
+  "reliability_requested": 5,
+  "schema_version": "robotcad_try6_r1_v3_failure_accounting_v1",
+  "solver_candidates": 4,
+  "transport_valid": 5
+}

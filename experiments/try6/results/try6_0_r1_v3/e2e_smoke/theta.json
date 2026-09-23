@@ -1,0 +1,17 @@
+{
+  "candidate_count": 3,
+  "objective": 0.0,
+  "selected_candidate": 1,
+  "synthetic_target_ratio": 0.2698412698412698,
+  "theta": {
+    "distal_height_mm": 12.0,
+    "distal_width_mm": 14.0,
+    "fillet_radius_mm": 1.0,
+    "housing_height_mm": 16.0,
+    "housing_width_mm": 17.0,
+    "proximal_section_length_mm": 24.0,
+    "recess_depth_mm": 4.0,
+    "recess_length_mm": 12.0,
+    "transition_length_mm": 10.0
+  }
+}

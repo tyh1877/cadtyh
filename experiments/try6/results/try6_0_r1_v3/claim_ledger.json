@@ -1,0 +1,54 @@
+{
+  "claims": [
+    {
+      "artifact": "preflight/report.json",
+      "claim": "production slot schema accepted",
+      "evidence_type": "computed",
+      "expected": "200 / true",
+      "field": "http_status / preflight_pass"
+    },
+    {
+      "artifact": "reliability/contract_summary.json",
+      "claim": "five exact requests identical",
+      "evidence_type": "computed",
+      "expected": true,
+      "field": "exact_request_parity"
+    },
+    {
+      "artifact": "reliability/contract_summary.json",
+      "claim": "closed-set contract 5/5",
+      "evidence_type": "computed",
+      "expected": 5,
+      "field": "contract_valid_count"
+    },
+    {
+      "artifact": "reliability/contract_summary.json",
+      "claim": "canonical KFDG 5/5",
+      "evidence_type": "computed",
+      "expected": 5,
+      "field": "canonical_kfdg_valid_count"
+    },
+    {
+      "artifact": "reliability/perception_stability.json",
+      "claim": "visible pocket perception warning",
+      "evidence_type": "computed",
+      "expected": 0.6,
+      "field": "per_slot.visible_pocket.modal_agreement"
+    },
+    {
+      "artifact": "validation.json",
+      "claim": "fresh E2E dataflow passed",
+      "evidence_type": "computed",
+      "expected": "all PASS",
+      "field": "e2e_independent_validation"
+    },
+    {
+      "artifact": "validation.json",
+      "claim": "GT and holdout untouched",
+      "evidence_type": "computed",
+      "expected": "0 / true",
+      "field": "gt_evaluations / holdout_closed"
+    }
+  ],
+  "schema_version": "robotcad_try6_r1_v3_claim_ledger_v1"
+}

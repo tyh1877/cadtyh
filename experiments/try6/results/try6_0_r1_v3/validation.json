@@ -1,0 +1,72 @@
+{
+  "canonical_kfdg_valid_count": 5,
+  "contract_valid_count": 5,
+  "decision": "READY_FOR_C1_V2",
+  "e2e_independent_validation": {
+    "anchor_sensitivity_pass": true,
+    "canonical_kfdg_valid": true,
+    "connected_solid_count": 1,
+    "fcstd_reopen": true,
+    "formal_holdout_evaluations": 0,
+    "fresh_call_valid": true,
+    "gt_evaluations": 0,
+    "independent_final_fcstd_reopen": true,
+    "interface_invariant": true,
+    "objective_finite": true,
+    "parameter_changed_final_cad": true,
+    "response_repair_count": 0,
+    "slot_statuses": {
+      "main_housing": "PRESENT",
+      "profile_transition": "PRESENT",
+      "visible_pocket": "ABSENT"
+    },
+    "solver_candidates": 4,
+    "step_export": true,
+    "stl_export": true,
+    "theta_produced": true,
+    "urdf_anchor_consumed": true
+  },
+  "formal_holdout_evaluations": 0,
+  "gt_evaluations": 0,
+  "holdout_closed": true,
+  "local_tests": {
+    "errors": 0,
+    "failures": 0,
+    "pass": true,
+    "run": 26
+  },
+  "manual_intervention_count": 0,
+  "perception_warning": true,
+  "prior_result_hash_recheck": {
+    "c1_v1": {
+      "files_checked": 21,
+      "manifest_sha256": "84a99bff97ae146259fa113f3bd0dfe07721891cb626ef43a8ef5edd47c7dcb3",
+      "unchanged": true
+    },
+    "r0": {
+      "files_checked": 58,
+      "manifest_sha256": "c678d4fabea469b8f44a27b320f707f0d346f8f27b1f195511f1ae179a2e7e6c",
+      "unchanged": true
+    },
+    "r1_v1": {
+      "files_checked": 41,
+      "manifest_sha256": "87566c73eb4490654beccf258676af22fb64ed483203b504cbf1911462a18f9b",
+      "unchanged": true
+    },
+    "r1_v2": {
+      "files_checked": 55,
+      "manifest_sha256": "bbff476c16a96d7285508f8e692140d41167b33aa6271b2c3880fd69848bdcc9",
+      "unchanged": true
+    }
+  },
+  "production_preflight_pass": true,
+  "representation_gate_pass": true,
+  "response_repair_count": 0,
+  "schema_version": "robotcad_try6_r1_v3_independent_validation_v1",
+  "scope_note": "READY is infrastructure readiness only; synthetic objective does not establish geometry performance or Metric Grounding efficacy",
+  "timestamp_utc": "2026-09-23T08:46:19.917680+00:00",
+  "transport_valid_count": 5,
+  "warning_slots": [
+    "visible_pocket"
+  ]
+}

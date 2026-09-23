@@ -1,0 +1,42 @@
+{
+  "anchor_sensitivity_pass": true,
+  "cad_build_success": true,
+  "canonical_kfdg_valid": true,
+  "connected_solid_count": 1,
+  "fcstd_reopen_success": true,
+  "formal_holdout_evaluations": 0,
+  "fresh_vlm_calls": 1,
+  "gt_evaluations": 0,
+  "interface_invariant": true,
+  "manual_intervention": 0,
+  "model_returned": "qwen3.7-plus",
+  "objective_finite": true,
+  "raw_slot_valid": true,
+  "response_repair_count": 0,
+  "solver_candidates": 4,
+  "status": "PASS",
+  "step_export_success": true,
+  "stl_export_success": true,
+  "theta_produced": true,
+  "token_usage": {
+    "completion_tokens": 3326,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3092,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 233
+    },
+    "prompt_tokens": 13366,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 12672,
+      "image_tokens": 12565,
+      "text_tokens": 801
+    },
+    "total_tokens": 16692
+  },
+  "urdf_anchor_consumed": true,
+  "vlm_latency_seconds": 60.078952500014566
+}
