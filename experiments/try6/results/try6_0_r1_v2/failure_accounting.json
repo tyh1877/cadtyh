@@ -1,0 +1,24 @@
+{
+  "all_attempt_ids": [
+    "call_01",
+    "call_02",
+    "call_03",
+    "call_04",
+    "call_05"
+  ],
+  "cad_builds": 0,
+  "canonical_kfdg_valid": 1,
+  "excluded_attempt_ids": [],
+  "formal_holdout_evaluations": 0,
+  "gt_evaluations": 0,
+  "preflight_accepted": 1,
+  "preflight_attempts": 1,
+  "preflight_in_denominator": false,
+  "reliability_completed": 5,
+  "reliability_requested": 5,
+  "schema_version": "robotcad_try6_r1_v2_failure_accounting_v1",
+  "semantic_failed": 4,
+  "semantic_valid": 1,
+  "solver_candidates": 0,
+  "transport_valid": 5
+}

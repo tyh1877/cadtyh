@@ -1,0 +1,11 @@
+{
+  "all_five_semantic_valid": false,
+  "all_five_transport_valid": true,
+  "confidence_agreement": 0.1,
+  "denominator": 5,
+  "feature_class_agreement": 0.4,
+  "interpretation": "descriptive raw-proposal consistency; invalid proposals retained; not a paper performance metric",
+  "pair_count": 10,
+  "parameter_role_agreement": 0.4,
+  "relation_agreement": 0.4
+}

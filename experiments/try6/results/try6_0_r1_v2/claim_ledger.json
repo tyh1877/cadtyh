@@ -1,0 +1,54 @@
+{
+  "claims": [
+    {
+      "artifact": "preflight/compatibility_report.json",
+      "claim": "projected schema accepted by API",
+      "evidence_type": "computed",
+      "expected": "200 / true",
+      "field": "http_status / preflight_pass"
+    },
+    {
+      "artifact": "reliability/reliability_summary.json",
+      "claim": "five exact requests identical",
+      "evidence_type": "computed",
+      "expected": true,
+      "field": "exact_request_parity"
+    },
+    {
+      "artifact": "reliability/reliability_summary.json",
+      "claim": "TSR=5/5",
+      "evidence_type": "computed",
+      "expected": 1.0,
+      "field": "TSR"
+    },
+    {
+      "artifact": "reliability/reliability_summary.json",
+      "claim": "VSR=1/5",
+      "evidence_type": "computed",
+      "expected": 0.2,
+      "field": "VSR"
+    },
+    {
+      "artifact": "reliability/reliability_summary.json",
+      "claim": "GAR=1/5",
+      "evidence_type": "computed",
+      "expected": 0.2,
+      "field": "GAR"
+    },
+    {
+      "artifact": "validation.json",
+      "claim": "E2E not reached",
+      "evidence_type": "computed",
+      "expected": true,
+      "field": "e2e_not_run"
+    },
+    {
+      "artifact": "validation.json",
+      "claim": "frozen prior results unchanged",
+      "evidence_type": "computed",
+      "expected": "all unchanged",
+      "field": "prior_result_hash_recheck"
+    }
+  ],
+  "schema_version": "robotcad_try6_r1_v2_claim_ledger_v1"
+}

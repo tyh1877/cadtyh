@@ -1,0 +1,39 @@
+{
+  "assembly_success": false,
+  "call_number": 5,
+  "canonical_kfdg_valid": false,
+  "error": "SemanticError: MISSING_OR_EXTRA_VISIBLE_FEATURE: ['main_housing', 'profile_transition']",
+  "exact_request_path": "experiments/try6/artifacts/try6_0_r1_v2/reliability/call_05/request_payload.json",
+  "exact_request_sha256": "5f81288b2da649f426e92b313214dcc9ac9d59c79075093450514bff89878fff",
+  "failure_stage": "LOCAL_SEMANTIC",
+  "http_status": 200,
+  "latency_seconds": 33.19107030000305,
+  "manual_intervention": 0,
+  "model_returned": "qwen3.7-plus",
+  "response_id": "chatcmpl-dc9da3e8-a204-93a4-bfbc-fbf3da0f30bc",
+  "response_repair_count": 0,
+  "retry_count": 0,
+  "semantic_valid": false,
+  "status": "FAIL",
+  "system_fingerprint": null,
+  "token_usage": {
+    "completion_tokens": 1836,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1539,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 296
+    },
+    "prompt_tokens": 13610,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 12672,
+      "image_tokens": 12565,
+      "text_tokens": 1045
+    },
+    "total_tokens": 15446
+  },
+  "transport_valid": true
+}

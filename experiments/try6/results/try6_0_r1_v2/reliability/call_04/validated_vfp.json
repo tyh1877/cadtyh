@@ -1,0 +1,73 @@
+{
+  "link_id": "L04",
+  "schema_version": "robotcad_vfp_l04_r1",
+  "visual_features": [
+    {
+      "confidence": "HIGH",
+      "evidence_views": [
+        "front",
+        "isometric",
+        "left",
+        "right",
+        "top",
+        "rear",
+        "f0_front",
+        "f0_isometric",
+        "f0_left",
+        "f0_right",
+        "f0_top",
+        "f0_rear"
+      ],
+      "feature_type": "main_housing",
+      "local_name": "primary_link_body",
+      "parameter_roles": [
+        "width",
+        "height",
+        "depth"
+      ],
+      "relations": []
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_views": [
+        "isometric",
+        "left",
+        "right"
+      ],
+      "feature_type": "pocket",
+      "local_name": "side_cutout",
+      "parameter_roles": [
+        "length",
+        "depth"
+      ],
+      "relations": [
+        {
+          "target_feature_type": "main_housing",
+          "type": "cuts_into"
+        }
+      ]
+    },
+    {
+      "confidence": "HIGH",
+      "evidence_views": [
+        "front",
+        "isometric",
+        "f0_front",
+        "f0_isometric"
+      ],
+      "feature_type": "profile_transition",
+      "local_name": "shoulder_housing_transition",
+      "parameter_roles": [
+        "length",
+        "distal_width",
+        "distal_height"
+      ],
+      "relations": [
+        {
+          "target_feature_type": "main_housing",
+          "type": "transitions_from"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "declared_identical_inputs": true,
+  "observed_exact_request_body_sha256": "5f81288b2da649f426e92b313214dcc9ac9d59c79075093450514bff89878fff",
+  "observed_exact_request_parity": true,
+  "only_variation": "independent API response/sample stochasticity",
+  "preflight_excluded": true,
+  "schema_version": "robotcad_try6_r1_v2_request_parity_v1"
+}

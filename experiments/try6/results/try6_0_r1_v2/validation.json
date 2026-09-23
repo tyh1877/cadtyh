@@ -1,0 +1,57 @@
+{
+  "GAR": 0.2,
+  "TSR": 1.0,
+  "VSR": 0.2,
+  "cad_builds": 0,
+  "decision": "VFP_SEMANTIC_RELIABILITY_BLOCKED",
+  "e2e_not_run": true,
+  "exact_request_parity": true,
+  "formal_holdout_evaluations": 0,
+  "gt_evaluations": 0,
+  "holdout_lock_closed": true,
+  "local_tests": {
+    "errors": 0,
+    "failures": 0,
+    "pass": true,
+    "run": 31
+  },
+  "prior_result_hash_recheck": {
+    "c1_v1": {
+      "files_checked": 21,
+      "manifest_sha256": "84a99bff97ae146259fa113f3bd0dfe07721891cb626ef43a8ef5edd47c7dcb3",
+      "unchanged": true
+    },
+    "r0": {
+      "files_checked": 58,
+      "manifest_sha256": "c678d4fabea469b8f44a27b320f707f0d346f8f27b1f195511f1ae179a2e7e6c",
+      "unchanged": true
+    },
+    "r1_v1": {
+      "files_checked": 41,
+      "manifest_sha256": "87566c73eb4490654beccf258676af22fb64ed483203b504cbf1911462a18f9b",
+      "unchanged": true
+    }
+  },
+  "production_preflight_pass": true,
+  "repair_count": 0,
+  "representation_gate_pass": false,
+  "schema_version": "robotcad_try6_r1_v2_independent_validation_v1",
+  "semantic_confounds": [
+    "joint/mount local-name substring filter may reject visible geometry descriptors",
+    "prompt permits omitting visually unsupported pocket while gate requires pocket"
+  ],
+  "solver_candidates": 0,
+  "timestamp_utc": "2026-09-23T08:03:13.395061+00:00",
+  "violations": {
+    "dangling_refs": 0,
+    "duplicate_evidence": 0,
+    "duplicate_refs": 0,
+    "duplicate_roles": 0,
+    "functional_conflicts": 0,
+    "invalid_feature_signatures": 0,
+    "missing_required_features": 2,
+    "ownership_violations": 0,
+    "response_repairs": 0,
+    "unsupported_features": 3
+  }
+}

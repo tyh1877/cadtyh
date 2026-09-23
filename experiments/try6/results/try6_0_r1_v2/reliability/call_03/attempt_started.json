@@ -1,0 +1,8 @@
+{
+  "call_number": 3,
+  "manual_intervention": 0,
+  "preflight_not_counted": true,
+  "reliability_freeze_sha256": "ecd08f38212e92d4bd5de8f3389c88606429b85bc54725eded153441a42e01b6",
+  "retry_count": 0,
+  "timestamp_utc": "2026-09-23T07:55:03.991415+00:00"
+}
