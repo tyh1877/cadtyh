@@ -1,0 +1,19 @@
+{
+  "assembly_success": false,
+  "call_number": 5,
+  "canonical_kfdg_valid": false,
+  "dangling_reference_count": 0,
+  "duplicate_reference_count": 0,
+  "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-39aa844c-c343-9573-a7fa-80111860f01b', 'request_id': '39aa844c-c343-9573-a7fa-80111860f01b'}",
+  "exact_http_request_path": "experiments/try6/artifacts/try6_0_r1/reliability/call_05/request_payload.json",
+  "exact_http_request_sha256": "cbfe70e17ca9a5156c8c8b0b2d6da32b40ae5f6aced1536e8dc3157c61d38b58",
+  "failure_stage": "RAW_SCHEMA",
+  "latency_seconds": 0.7962599999736995,
+  "manual_intervention": 0,
+  "raw_schema_valid": false,
+  "response_repaired": false,
+  "retry_count": 0,
+  "semantic_valid": false,
+  "status": "FAIL",
+  "unsupported_feature_count": 0
+}

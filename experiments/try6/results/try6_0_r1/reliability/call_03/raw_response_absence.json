@@ -1,0 +1,6 @@
+{
+  "http_error_artifact": "http_response.json",
+  "model_content_present": false,
+  "not_a_model_semantic_validation": true,
+  "reason": "API_400_SCHEMA_REJECTED"
+}

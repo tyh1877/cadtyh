@@ -3,12 +3,12 @@
 R1 is a representation-reliability study, not a geometry experiment. C1-v1
 and R0 are frozen. No GT, formal holdout cases, C1-v2, C2, or KFDE.
 
-- [ ] Hash-audit C1-v1 and R0 frozen files; preserve their decisions.
-- [ ] Freeze source hashes, VFP schema/prompt, Functional Backbone, Parameter Registry, assembler rules, model config, and N=5 before the first call.
-- [ ] Pass deterministic schema, signature, role, registry, ownership, assembly, authority, unsupported-feature, reference, and holdout-guard tests.
-- [ ] Run exactly five independent production-shaped L04 calls with identical prompt/schema/raw evidence and zero retries; retain every attempt.
-- [ ] Independently compute raw/semantic/assembly/KFDG gates and the requested reliability rates and failure counts.
-- [ ] Compute proposal consistency from all five retained proposals, not a selected subset.
-- [ ] Run one 2–5-candidate non-GT end-to-end smoke only if representation gate is 5/5.
-- [ ] If smoke runs, prove URDF anchor→objective→theta→CAD and export/reopen/interface invariance.
-- [ ] Independently validate the terminal decision, C1/R0 immutability, GT=0, and holdout lock before result freeze.
+- [x] Hash-audit C1-v1 and R0 frozen files; preserve their decisions (`preflight.json`, `validation.json`).
+- [x] Freeze source hashes, VFP schema/prompt, Functional Backbone, Parameter Registry, assembler rules, model config, and N=5 before calls (`aeced19`, `preflight.json`).
+- [x] Pass 23 deterministic schema, signature, role, registry, ownership, assembly, authority, unsupported-feature, reference, and holdout-lock tests.
+- [x] Make exactly five identical-payload production-shaped L04 HTTP attempts with zero retries; retain each request and 400 response (`reliability/call_01`…`call_05`). No model-generated raw content exists.
+- [x] Independently compute the reliability gates and failure accounting (`reliability/reliability_summary.json`); gate **FAIL** because API rejected the frozen schema.
+- [x] Record proposal consistency as **not evaluable** across all five absent proposals; do not infer drift.
+- [x] Enforce the 5/5 gate: end-to-end smoke **not run** because representation failed.
+- [ ] URDF anchor→objective→theta→CAD and export/reopen: **not reached**, cannot claim PASS.
+- [x] Independently validate `SEMANTIC_CONTRACT_BLOCKED` with subtype `VFP_SCHEMA_API_REJECTED`, C1/R0 immutability, GT=0, and holdout lock before result freeze.

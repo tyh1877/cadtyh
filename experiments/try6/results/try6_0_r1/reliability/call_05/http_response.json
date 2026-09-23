@@ -1,0 +1,10 @@
+{
+  "error": {
+    "code": "invalid_parameter_error",
+    "message": "<400> InternalError.Algo.InvalidParameter: Format error : 'response_format.json_schema.schema'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..",
+    "param": null,
+    "type": "invalid_request_error"
+  },
+  "id": "chatcmpl-39aa844c-c343-9573-a7fa-80111860f01b",
+  "request_id": "39aa844c-c343-9573-a7fa-80111860f01b"
+}

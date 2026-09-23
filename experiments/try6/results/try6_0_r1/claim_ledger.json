@@ -1,0 +1,40 @@
+{
+  "claims": [
+    {
+      "artifact": "reliability/reliability_summary.json",
+      "claim": "five identical API attempts",
+      "evidence_type": "computed",
+      "expected": true,
+      "field": "exact_request_body_parity"
+    },
+    {
+      "artifact": "validation.json",
+      "claim": "all attempts rejected by API schema parser",
+      "evidence_type": "computed",
+      "expected": 5,
+      "field": "api_schema_rejections"
+    },
+    {
+      "artifact": "failure_accounting.json",
+      "claim": "no VFP semantic reliability result",
+      "evidence_type": "computed",
+      "expected": 0,
+      "field": "model_generations"
+    },
+    {
+      "artifact": "validation.json",
+      "claim": "prior results unchanged",
+      "evidence_type": "computed",
+      "expected": "all unchanged",
+      "field": "frozen_prior_results_recheck"
+    },
+    {
+      "artifact": "validation.json",
+      "claim": "GT and holdout untouched",
+      "evidence_type": "computed",
+      "expected": "0 / closed",
+      "field": "gt_evaluations / holdout_lock"
+    }
+  ],
+  "schema_version": "robotcad_try6_r1_claim_ledger_v1"
+}

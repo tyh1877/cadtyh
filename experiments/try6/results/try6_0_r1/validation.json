@@ -1,0 +1,36 @@
+{
+  "api_error_fingerprint": "uniqueItems array-keyword rejected by endpoint",
+  "api_schema_rejections": 5,
+  "decision": "SEMANTIC_CONTRACT_BLOCKED",
+  "e2e_not_run": true,
+  "exact_request_body_parity": true,
+  "failure_subtype": "VFP_SCHEMA_API_REJECTED",
+  "frozen_prior_results_recheck": {
+    "c1_v1": {
+      "file_count": 21,
+      "unchanged": true
+    },
+    "r0": {
+      "file_count": 58,
+      "unchanged": true
+    }
+  },
+  "gt_evaluations": 0,
+  "holdout_lock": {
+    "accessed": false,
+    "closed": true,
+    "evaluation_count": 0
+  },
+  "local_contract_tests": {
+    "errors": 0,
+    "failures": 0,
+    "pass": true,
+    "run": 23
+  },
+  "representation_gate_pass": false,
+  "response_repair_count": 0,
+  "retries": 0,
+  "schema_version": "robotcad_try6_r1_independent_validation_v1",
+  "solver_candidates": 0,
+  "timestamp_utc": "2026-09-23T07:32:12.953986+00:00"
+}

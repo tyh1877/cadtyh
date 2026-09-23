@@ -1,0 +1,22 @@
+{
+  "all_attempt_ids": [
+    "call_01",
+    "call_02",
+    "call_03",
+    "call_04",
+    "call_05"
+  ],
+  "api_schema_rejections": 5,
+  "assembly_pass": 0,
+  "canonical_kfdg_pass": 0,
+  "completed_http_attempts": 5,
+  "excluded_attempt_ids": [],
+  "formal_holdout_evaluations": 0,
+  "gt_evaluations": 0,
+  "model_generations": 0,
+  "raw_vfp_available": 0,
+  "requested_http_attempts": 5,
+  "schema_version": "robotcad_try6_r1_failure_accounting_v1",
+  "semantic_vfp_pass": 0,
+  "solver_candidates": 0
+}

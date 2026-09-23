@@ -1,0 +1,33 @@
+{
+  "canonical_valid_count": 0,
+  "dangling_refs": 0,
+  "duplicate_refs": 0,
+  "per_call": [
+    {
+      "call_number": 1,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-91e38b36-d2d8-9c67-ba8a-80f0cc893121', 'request_id': '91e38b36-d2d8-9c67-ba8a-80f0cc893121'}",
+      "valid": false
+    },
+    {
+      "call_number": 2,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-f8633313-018d-9530-ac89-599404885518', 'request_id': 'f8633313-018d-9530-ac89-599404885518'}",
+      "valid": false
+    },
+    {
+      "call_number": 3,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-92f30c7c-7052-924f-9f0a-b8ef393c3301', 'request_id': '92f30c7c-7052-924f-9f0a-b8ef393c3301'}",
+      "valid": false
+    },
+    {
+      "call_number": 4,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-bc7cfc84-e5de-9c2c-9856-aaac2fc11a06', 'request_id': 'bc7cfc84-e5de-9c2c-9856-aaac2fc11a06'}",
+      "valid": false
+    },
+    {
+      "call_number": 5,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-39aa844c-c343-9573-a7fa-80111860f01b', 'request_id': '39aa844c-c343-9573-a7fa-80111860f01b'}",
+      "valid": false
+    }
+  ],
+  "representation_gate_pass": false
+}

@@ -1,0 +1,9 @@
+{
+  "call_number": 4,
+  "manual_intervention": 0,
+  "max_calls": 5,
+  "prompt_sha256": "085c2bd4952cac558ee1a254a59ac4f069df521a5d6bc39179bfcefc7d558a95",
+  "retry_count": 0,
+  "schema_sha256": "3724b63b697d3c2fb04b6e93a5f1ef99668e57e7578f2dbb366fbab170388f42",
+  "timestamp_utc": "2026-09-23T07:26:10.635951+00:00"
+}

@@ -1,0 +1,100 @@
+{
+  "attempts_retained": 5,
+  "calls": [
+    {
+      "assembly_success": false,
+      "attempt_exists": true,
+      "call_number": 1,
+      "canonical_kfdg_valid": false,
+      "dangling_reference_count": 0,
+      "duplicate_reference_count": 0,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-91e38b36-d2d8-9c67-ba8a-80f0cc893121', 'request_id': '91e38b36-d2d8-9c67-ba8a-80f0cc893121'}",
+      "raw_schema_valid": false,
+      "recorded_status": "FAIL",
+      "response_repair_count": 0,
+      "semantic_valid": false,
+      "unsupported_feature_count": 0
+    },
+    {
+      "assembly_success": false,
+      "attempt_exists": true,
+      "call_number": 2,
+      "canonical_kfdg_valid": false,
+      "dangling_reference_count": 0,
+      "duplicate_reference_count": 0,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-f8633313-018d-9530-ac89-599404885518', 'request_id': 'f8633313-018d-9530-ac89-599404885518'}",
+      "raw_schema_valid": false,
+      "recorded_status": "FAIL",
+      "response_repair_count": 0,
+      "semantic_valid": false,
+      "unsupported_feature_count": 0
+    },
+    {
+      "assembly_success": false,
+      "attempt_exists": true,
+      "call_number": 3,
+      "canonical_kfdg_valid": false,
+      "dangling_reference_count": 0,
+      "duplicate_reference_count": 0,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-92f30c7c-7052-924f-9f0a-b8ef393c3301', 'request_id': '92f30c7c-7052-924f-9f0a-b8ef393c3301'}",
+      "raw_schema_valid": false,
+      "recorded_status": "FAIL",
+      "response_repair_count": 0,
+      "semantic_valid": false,
+      "unsupported_feature_count": 0
+    },
+    {
+      "assembly_success": false,
+      "attempt_exists": true,
+      "call_number": 4,
+      "canonical_kfdg_valid": false,
+      "dangling_reference_count": 0,
+      "duplicate_reference_count": 0,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-bc7cfc84-e5de-9c2c-9856-aaac2fc11a06', 'request_id': 'bc7cfc84-e5de-9c2c-9856-aaac2fc11a06'}",
+      "raw_schema_valid": false,
+      "recorded_status": "FAIL",
+      "response_repair_count": 0,
+      "semantic_valid": false,
+      "unsupported_feature_count": 0
+    },
+    {
+      "assembly_success": false,
+      "attempt_exists": true,
+      "call_number": 5,
+      "canonical_kfdg_valid": false,
+      "dangling_reference_count": 0,
+      "duplicate_reference_count": 0,
+      "error": "BadRequestError: Error code: 400 - {'error': {'message': '<400> InternalError.Algo.InvalidParameter: Format error : \\'response_format.json_schema.schema\\'. the specific reason is as follows: When the schema contains the fields \"uniqueItems\", \"contains\", \"minContains\", or \"maxContains\", the type should not be \"array\"..', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_parameter_error'}, 'id': 'chatcmpl-39aa844c-c343-9573-a7fa-80111860f01b', 'request_id': '39aa844c-c343-9573-a7fa-80111860f01b'}",
+      "raw_schema_valid": false,
+      "recorded_status": "FAIL",
+      "response_repair_count": 0,
+      "semantic_valid": false,
+      "unsupported_feature_count": 0
+    }
+  ],
+  "canonical_kfdg_validity_rate": 0.0,
+  "counts": {
+    "assembly_success": 0,
+    "canonical_kfdg_valid": 0,
+    "raw_schema_valid": 0,
+    "semantic_valid": 0
+  },
+  "exact_request_body_parity": true,
+  "formal_holdout_evaluations": 0,
+  "graph_assembly_success_rate": 0.0,
+  "gt_evaluations": 0,
+  "no_repair_rate": 1.0,
+  "raw_schema_validity_rate": 0.0,
+  "representation_gate_pass": false,
+  "request_sha256": "cbfe70e17ca9a5156c8c8b0b2d6da32b40ae5f6aced1536e8dc3157c61d38b58",
+  "requested_calls": 5,
+  "schema_version": "robotcad_try6_r1_reliability_summary_v1",
+  "timestamp_utc": "2026-09-23T07:32:12.895754+00:00",
+  "totals": {
+    "dangling_reference_count": 0,
+    "duplicate_reference_count": 0,
+    "response_repair_count": 0,
+    "unsupported_feature_count": 0
+  },
+  "vfp_semantic_validity_rate": 0.0
+}
