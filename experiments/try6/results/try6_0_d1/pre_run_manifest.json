@@ -1,0 +1,50 @@
+{
+  "FreeCAD_version": "[\"1\", \"1\", \"1\", \"20260414 (Git shallow)\", \"Unknown\", \"2026/04/14 22:09:59\", \"(HEAD detached at 0108fd4b4)\", \"0108fd4b4850cc46e625b60e53cea7a7bbe69f8d\"]",
+  "GT_evaluations": 0,
+  "KFDE_construction_sha256": "2222bf9b4057505a55de8f679116c05049f83526f437b61819c3ff23d4809e1e",
+  "KFDE_keepout_sha256": "86446319f48ec1ae3467116bc0e572b860735b638b4ec1d405f9c3f27e3fabc5",
+  "URDF_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+  "VLM_calls": 0,
+  "alignment_case_count": 65,
+  "allowed_contact_sha256": "5eef89d6f4469fcd60291fe8761a63cd5fd85b79d016ed9054aa88f0df6432a5",
+  "exact_mechanics_source_sha256": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a",
+  "exact_mechanics_wrapper_sha256": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec",
+  "final_mechanics_evaluations": 0,
+  "formal_holdout_accessed": false,
+  "geometry_set_sha256": "55dd95aeafe527978f9a748eeda1730dd9b4500290f4dea460753c527b036f6f",
+  "implementation_commit_before_D1": "a59d229f953059ef8d8b5c76fb8315704e62e3d0",
+  "prior_result_hashes": {
+    "c1_v2": {
+      "files_checked": 56,
+      "manifest_sha256": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+      "unchanged": true
+    },
+    "c2": {
+      "files_checked": 46,
+      "manifest_sha256": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+      "unchanged": true
+    },
+    "d0": {
+      "files_checked": 40,
+      "manifest_sha256": "33bcb7fd039d8bac4b06bec6df874ed5f75a018221a15368df1c052b4a2d4f16",
+      "unchanged": true
+    }
+  },
+  "protocol_sha256": "b42413eda709c4b1c59755387d1076d5d24ff611c6c411c4300815b9559cb034",
+  "python_environment": ".venv/Scripts/python.exe",
+  "schema_version": "robotcad_try6_d1_pre_run_v1",
+  "starting_commit": "37e12eb1685ef8d911d2e3414eba2153c9dc1405",
+  "status": "READY_FOR_FROZEN_ALIGNMENT_AND_WITNESS",
+  "timestamp_utc": "2026-09-23T15:12:29.075892+00:00",
+  "witness_subsets": [
+    "FULL",
+    "L03",
+    "L05",
+    "L06",
+    "L07",
+    "L03_L05",
+    "L03_L06",
+    "L05_L06",
+    "L03_L05_L06"
+  ]
+}

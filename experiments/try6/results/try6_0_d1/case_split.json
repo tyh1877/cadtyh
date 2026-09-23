@@ -1,0 +1,16 @@
+{
+  "KFDE_components": 13,
+  "accessed": false,
+  "alignment_case_count": 65,
+  "diagnostic_geometries": [
+    "G1_C1_FINAL",
+    "G2_D0_P0",
+    "G3_D0_P3",
+    "G4_C0_DIRECT",
+    "G5_F0_COARSE"
+  ],
+  "evaluation_count": 0,
+  "final_development_96_case_rows_used": false,
+  "formal_holdout_case_count": 32,
+  "formal_holdout_ids_not_read": true
+}
