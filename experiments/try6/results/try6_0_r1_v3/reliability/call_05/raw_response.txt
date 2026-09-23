@@ -1,0 +1,36 @@
+{
+  "link_id": "L04",
+  "schema_version": "robotcad_slots_l04_r1_v3",
+  "slots": [
+    {
+      "slot_id": "main_housing",
+      "status": "PRESENT",
+      "evidence_views": [
+        "front",
+        "isometric",
+        "f0_isometric"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "slot_id": "visible_pocket",
+      "status": "PRESENT",
+      "evidence_views": [
+        "left",
+        "right",
+        "isometric"
+      ],
+      "confidence": "MEDIUM"
+    },
+    {
+      "slot_id": "profile_transition",
+      "status": "PRESENT",
+      "evidence_views": [
+        "f0_front",
+        "f0_top",
+        "left"
+      ],
+      "confidence": "HIGH"
+    }
+  ]
+}

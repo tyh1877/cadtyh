@@ -1,0 +1,45 @@
+{
+  "denominator": 5,
+  "per_slot": {
+    "main_housing": {
+      "ABSENT": 0,
+      "PRESENT": 5,
+      "UNCERTAIN": 0,
+      "confidence_counts": {
+        "HIGH": 5
+      },
+      "confidence_modal_agreement": 1.0,
+      "decision_coverage": 5,
+      "modal_agreement": 1.0,
+      "modal_decision": "PRESENT",
+      "status_entropy_bits": -0.0
+    },
+    "profile_transition": {
+      "ABSENT": 0,
+      "PRESENT": 5,
+      "UNCERTAIN": 0,
+      "confidence_counts": {
+        "HIGH": 5
+      },
+      "confidence_modal_agreement": 1.0,
+      "decision_coverage": 5,
+      "modal_agreement": 1.0,
+      "modal_decision": "PRESENT",
+      "status_entropy_bits": -0.0
+    },
+    "visible_pocket": {
+      "ABSENT": 2,
+      "PRESENT": 3,
+      "UNCERTAIN": 0,
+      "confidence_counts": {
+        "HIGH": 1,
+        "MEDIUM": 4
+      },
+      "confidence_modal_agreement": 0.8,
+      "decision_coverage": 5,
+      "modal_agreement": 0.6,
+      "modal_decision": "PRESENT",
+      "status_entropy_bits": 0.9709505944546686
+    }
+  }
+}

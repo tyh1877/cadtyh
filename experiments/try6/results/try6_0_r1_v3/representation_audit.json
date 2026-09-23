@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "assembly_success": 5,
+    "canonical_kfdg_valid": 5,
+    "contract_valid": 5,
+    "transport_valid": 5
+  },
+  "independent_validator": true,
+  "perception_warning": true,
+  "representation_gate_pass": true,
+  "timestamp_utc": "2026-09-23T08:33:51.812648+00:00",
+  "warning_slots": [
+    "visible_pocket"
+  ]
+}

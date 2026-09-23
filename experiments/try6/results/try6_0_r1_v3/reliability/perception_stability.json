@@ -1,0 +1,54 @@
+{
+  "PERCEPTION_STABILITY_WARNING": true,
+  "average_modal_agreement": 0.8666666666666667,
+  "denominator": 5,
+  "no_majority_vote_kfdg": true,
+  "no_overall_performance_score": true,
+  "per_slot": {
+    "main_housing": {
+      "ABSENT": 0,
+      "PRESENT": 5,
+      "UNCERTAIN": 0,
+      "confidence_counts": {
+        "HIGH": 5
+      },
+      "confidence_modal_agreement": 1.0,
+      "decision_coverage": 5,
+      "modal_agreement": 1.0,
+      "modal_decision": "PRESENT",
+      "status_entropy_bits": -0.0
+    },
+    "profile_transition": {
+      "ABSENT": 0,
+      "PRESENT": 5,
+      "UNCERTAIN": 0,
+      "confidence_counts": {
+        "HIGH": 5
+      },
+      "confidence_modal_agreement": 1.0,
+      "decision_coverage": 5,
+      "modal_agreement": 1.0,
+      "modal_decision": "PRESENT",
+      "status_entropy_bits": -0.0
+    },
+    "visible_pocket": {
+      "ABSENT": 2,
+      "PRESENT": 3,
+      "UNCERTAIN": 0,
+      "confidence_counts": {
+        "HIGH": 1,
+        "MEDIUM": 4
+      },
+      "confidence_modal_agreement": 0.8,
+      "decision_coverage": 5,
+      "modal_agreement": 0.6,
+      "modal_decision": "PRESENT",
+      "status_entropy_bits": 0.9709505944546686
+    }
+  },
+  "schema_version": "robotcad_try6_r1_v3_perception_stability_v1",
+  "warning_slots": [
+    "visible_pocket"
+  ],
+  "warning_threshold": 0.8
+}

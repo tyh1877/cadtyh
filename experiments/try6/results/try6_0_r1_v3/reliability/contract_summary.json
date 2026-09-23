@@ -1,0 +1,182 @@
+{
+  "assembly_success_count": 5,
+  "attempts_retained": 5,
+  "canonical_kfdg_valid_count": 5,
+  "contract_valid_count": 5,
+  "exact_request_parity": true,
+  "exact_request_sha256": "b631322cb72920ff9f5cc8ffe1efbfad454edd3d856b71bef817d07bf983f719",
+  "formal_holdout_evaluations": 0,
+  "gt_evaluations": 0,
+  "manual_intervention_count": 0,
+  "per_call": [
+    {
+      "assembly_success": true,
+      "attempt_retained": true,
+      "call_number": 1,
+      "canonical_kfdg_valid": true,
+      "contract_valid": true,
+      "error": null,
+      "latency_seconds": 35.326182599994354,
+      "status": "PASS",
+      "token_usage": {
+        "completion_tokens": 1865,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 1638,
+          "rejected_prediction_tokens": null,
+          "text_tokens": 226
+        },
+        "prompt_tokens": 13366,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 0,
+          "image_tokens": 12565,
+          "text_tokens": 801
+        },
+        "total_tokens": 15231
+      },
+      "transport_valid": true
+    },
+    {
+      "assembly_success": true,
+      "attempt_retained": true,
+      "call_number": 2,
+      "canonical_kfdg_valid": true,
+      "contract_valid": true,
+      "error": null,
+      "latency_seconds": 46.23707650002325,
+      "status": "PASS",
+      "token_usage": {
+        "completion_tokens": 2546,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 2327,
+          "rejected_prediction_tokens": null,
+          "text_tokens": 218
+        },
+        "prompt_tokens": 13366,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 0,
+          "image_tokens": 12565,
+          "text_tokens": 801
+        },
+        "total_tokens": 15912
+      },
+      "transport_valid": true
+    },
+    {
+      "assembly_success": true,
+      "attempt_retained": true,
+      "call_number": 3,
+      "canonical_kfdg_valid": true,
+      "contract_valid": true,
+      "error": null,
+      "latency_seconds": 66.80420740001136,
+      "status": "PASS",
+      "token_usage": {
+        "completion_tokens": 3804,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 3567,
+          "rejected_prediction_tokens": null,
+          "text_tokens": 236
+        },
+        "prompt_tokens": 13366,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 12672,
+          "image_tokens": 12565,
+          "text_tokens": 801
+        },
+        "total_tokens": 17170
+      },
+      "transport_valid": true
+    },
+    {
+      "assembly_success": true,
+      "attempt_retained": true,
+      "call_number": 4,
+      "canonical_kfdg_valid": true,
+      "contract_valid": true,
+      "error": null,
+      "latency_seconds": 141.22926010005176,
+      "status": "PASS",
+      "token_usage": {
+        "completion_tokens": 8195,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 7981,
+          "rejected_prediction_tokens": null,
+          "text_tokens": 213
+        },
+        "prompt_tokens": 13366,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 12672,
+          "image_tokens": 12565,
+          "text_tokens": 801
+        },
+        "total_tokens": 21561
+      },
+      "transport_valid": true
+    },
+    {
+      "assembly_success": true,
+      "attempt_retained": true,
+      "call_number": 5,
+      "canonical_kfdg_valid": true,
+      "contract_valid": true,
+      "error": null,
+      "latency_seconds": 77.21052610001061,
+      "status": "PASS",
+      "token_usage": {
+        "completion_tokens": 4422,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": null,
+          "reasoning_tokens": 4191,
+          "rejected_prediction_tokens": null,
+          "text_tokens": 230
+        },
+        "prompt_tokens": 13366,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cache_write_tokens": null,
+          "cached_tokens": 12672,
+          "image_tokens": 12565,
+          "text_tokens": 801
+        },
+        "total_tokens": 17788
+      },
+      "transport_valid": true
+    }
+  ],
+  "preflight_excluded": true,
+  "representation_gate_pass": true,
+  "requested_calls": 5,
+  "response_repair_count": 0,
+  "schema_version": "robotcad_try6_r1_v3_contract_summary_v1",
+  "transport_valid_count": 5,
+  "violations": {
+    "dangling_refs": 0,
+    "duplicate_evidence": 0,
+    "duplicate_refs": 0,
+    "duplicate_slot_ids": 0,
+    "functional_authority": 0,
+    "invalid_evidence": 0,
+    "invalid_status": 0,
+    "missing_slots": 0,
+    "parameter_ownership": 0,
+    "response_repairs": 0,
+    "unknown_slots": 0
+  }
+}

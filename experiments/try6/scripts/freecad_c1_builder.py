@@ -70,13 +70,21 @@ def build(job):
         # this FreeCAD child process (whose Python lacks jsonschema).
         if graph["link_id"]!="L04": raise RuntimeError("R0 KFDG link identity mismatch")
         parameter_nodes=graph["parameters"]
+    elif graph["schema_version"]=="robotcad_kfdg_r1_v3":
+        # The repository .venv validates this graph before FreeCAD execution.
+        if graph["link_id"]!="L04" or graph["metric_anchor"]["distance_mm"]!=anchor:
+            raise RuntimeError("R1-v3 KFDG/anchor mismatch")
+        parameter_nodes=graph["parameters"]
     elif graph["schema_version"]=="robotcad_kfdg_l04_v1":
         if graph["metric_anchor"]["distance_mm"]!=anchor: raise RuntimeError("KFDG/anchor mismatch")
         parameter_nodes=graph["parameter_nodes"]
     else: raise RuntimeError("unsupported KFDG schema version")
     if {item["id"] for item in parameter_nodes}!={*params}: raise RuntimeError("KFDG parameter identity mismatch")
     nodes={item["type"]:item["id"] for item in graph["geometric_features"]}
-    if not {"housing","profile_transition","pocket","fillet"}<=set(nodes): raise RuntimeError("KFDG feature history incomplete")
+    if graph["schema_version"]=="robotcad_kfdg_r1_v3":
+        if "housing" not in nodes: raise RuntimeError("R1-v3 E2E needs a PRESENT main housing for editable CAD")
+    elif not {"housing","profile_transition","pocket","fillet"}<=set(nodes):
+        raise RuntimeError("KFDG feature history incomplete")
     out=Path(job["output_root"]); out.mkdir(parents=True,exist_ok=True)
     doc=App.newDocument("Try6_C1_L04")
     sheet=doc.addObject("Spreadsheet::Sheet","ParameterTable")
@@ -96,28 +104,35 @@ def build(job):
     # R0: the previous Edge1 fillet was not stable under base-dimension edits.
     # Keep the semantic fillet node in KFDG, but defer its CAD realization until
     # a geometry-based edge selector has been independently validated.
-    pocket_sketch=doc.addObject("Sketcher::SketchObject","VisibleRecessSketch")
-    body.addObject(pocket_sketch)
-    pocket_sketch.Placement=App.Placement(App.Vector(0,0,params["housing_height_mm"]/2),App.Rotation())
-    pocket_sketch.setExpression("Placement.Base.z","ParameterTable.housing_height_mm/2")
-    start=params["proximal_section_length_mm"]*.1
-    rect(pocket_sketch,start,start+params["recess_length_mm"],-params["housing_width_mm"]*.3,params["housing_width_mm"]*.3,{"start_x":"ParameterTable.proximal_section_length_mm*0.1","start_y":"-ParameterTable.housing_width_mm*0.3","length_x":"ParameterTable.recess_length_mm","length_y":"ParameterTable.housing_width_mm*0.6"})
-    pocket=body.newObject("PartDesign::Pocket","VisibleRecessPocket")
-    pocket.Profile=pocket_sketch; pocket.Length=float(params["recess_depth_mm"])
-    pocket.setExpression("Length","ParameterTable.recess_depth_mm")
-    doc.recompute()
-    if pocket.Shape.isNull() or not pocket.Shape.isValid(): raise RuntimeError("PartDesign Pocket invalid")
-    start_section=yz_sketch(doc,"TransitionStart",params["proximal_section_length_mm"],params["housing_width_mm"],params["housing_height_mm"],"ParameterTable.housing_width_mm","ParameterTable.housing_height_mm","ParameterTable.proximal_section_length_mm")
-    middle_section=yz_sketch(doc,"TransitionMiddle",params["proximal_section_length_mm"]+params["transition_length_mm"],(params["housing_width_mm"]+params["distal_width_mm"])/2,(params["housing_height_mm"]+params["distal_height_mm"])/2,"(ParameterTable.housing_width_mm+ParameterTable.distal_width_mm)/2","(ParameterTable.housing_height_mm+ParameterTable.distal_height_mm)/2","ParameterTable.proximal_section_length_mm+ParameterTable.transition_length_mm")
-    end_section=yz_sketch(doc,"TransitionEnd",anchor,params["distal_width_mm"],params["distal_height_mm"],"ParameterTable.distal_width_mm","ParameterTable.distal_height_mm")
-    loft=doc.addObject("Part::Loft","ProfileTransitionLoft")
-    loft.Sections=[start_section,middle_section,end_section]; loft.Solid=True; loft.Ruled=False
-    doc.recompute()
-    if loft.Shape.isNull() or not loft.Shape.isValid(): raise RuntimeError("profile transition Loft invalid")
-    join=doc.addObject("Part::Fuse","HousingWithTransition")
-    join.Base=pocket; join.Tool=loft
-    doc.recompute()
-    if join.Shape.isNull() or not join.Shape.isValid(): raise RuntimeError("housing transition fusion invalid")
+    built=[pad]
+    body_after_pocket=pad
+    if "pocket" in nodes:
+        pocket_sketch=doc.addObject("Sketcher::SketchObject","VisibleRecessSketch")
+        body.addObject(pocket_sketch)
+        pocket_sketch.Placement=App.Placement(App.Vector(0,0,params["housing_height_mm"]/2),App.Rotation())
+        pocket_sketch.setExpression("Placement.Base.z","ParameterTable.housing_height_mm/2")
+        start=params["proximal_section_length_mm"]*.1
+        rect(pocket_sketch,start,start+params["recess_length_mm"],-params["housing_width_mm"]*.3,params["housing_width_mm"]*.3,{"start_x":"ParameterTable.proximal_section_length_mm*0.1","start_y":"-ParameterTable.housing_width_mm*0.3","length_x":"ParameterTable.recess_length_mm","length_y":"ParameterTable.housing_width_mm*0.6"})
+        pocket=body.newObject("PartDesign::Pocket","VisibleRecessPocket")
+        pocket.Profile=pocket_sketch; pocket.Length=float(params["recess_depth_mm"])
+        pocket.setExpression("Length","ParameterTable.recess_depth_mm")
+        doc.recompute()
+        if pocket.Shape.isNull() or not pocket.Shape.isValid(): raise RuntimeError("PartDesign Pocket invalid")
+        body_after_pocket=pocket;built.append(pocket)
+    join=body_after_pocket
+    if "profile_transition" in nodes:
+        start_section=yz_sketch(doc,"TransitionStart",params["proximal_section_length_mm"],params["housing_width_mm"],params["housing_height_mm"],"ParameterTable.housing_width_mm","ParameterTable.housing_height_mm","ParameterTable.proximal_section_length_mm")
+        middle_section=yz_sketch(doc,"TransitionMiddle",params["proximal_section_length_mm"]+params["transition_length_mm"],(params["housing_width_mm"]+params["distal_width_mm"])/2,(params["housing_height_mm"]+params["distal_height_mm"])/2,"(ParameterTable.housing_width_mm+ParameterTable.distal_width_mm)/2","(ParameterTable.housing_height_mm+ParameterTable.distal_height_mm)/2","ParameterTable.proximal_section_length_mm+ParameterTable.transition_length_mm")
+        end_section=yz_sketch(doc,"TransitionEnd",anchor,params["distal_width_mm"],params["distal_height_mm"],"ParameterTable.distal_width_mm","ParameterTable.distal_height_mm")
+        loft=doc.addObject("Part::Loft","ProfileTransitionLoft")
+        loft.Sections=[start_section,middle_section,end_section]; loft.Solid=True; loft.Ruled=False
+        doc.recompute()
+        if loft.Shape.isNull() or not loft.Shape.isValid(): raise RuntimeError("profile transition Loft invalid")
+        join=doc.addObject("Part::Fuse","HousingWithTransition")
+        join.Base=body_after_pocket; join.Tool=loft
+        doc.recompute()
+        if join.Shape.isNull() or not join.Shape.isValid(): raise RuntimeError("housing transition fusion invalid")
+        built.extend([loft,join])
     contracts=load(ROOT/job["frozen_interface_contracts"])
     proximal=next(item for item in contracts if item["joint_id"]=="J03")
     axis=frozen.unit(proximal["axis_child"])
@@ -137,8 +152,11 @@ def build(job):
     final=doc.addObject("Part::Fuse","RigidGroup"); final.Base=mate_cut; final.Tool=scaffold
     doc.recompute()
     if final.Shape.isNull() or not final.Shape.isValid(): raise RuntimeError("final scaffold fusion invalid")
-    mapping={"proximal_joint_port":["FrozenProximalBore","FrozenMatingEnvelopeCut"],"distal_mount_port":["ProfileTransitionLoft"],nodes["housing"]:["MainHousingSketch","MainHousingPad"],nodes["profile_transition"]:["TransitionStart","TransitionMiddle","TransitionEnd","ProfileTransitionLoft"],nodes["pocket"]:["VisibleRecessSketch","VisibleRecessPocket"],nodes["fillet"]:[],"scaffold_safeguard":["FrozenScaffold","RigidGroup"]}
-    tree=[feature_state(obj) for obj in (pad,pocket,loft,join,bore,mate_cut,final)]
+    mapping={"proximal_joint_port":["FrozenProximalBore","FrozenMatingEnvelopeCut"],"distal_mount_port":["ProfileTransitionLoft"] if "profile_transition" in nodes else [],nodes["housing"]:["MainHousingSketch","MainHousingPad"],"scaffold_safeguard":["FrozenScaffold","RigidGroup"]}
+    if "profile_transition" in nodes:mapping[nodes["profile_transition"]]=["TransitionStart","TransitionMiddle","TransitionEnd","ProfileTransitionLoft"]
+    if "pocket" in nodes:mapping[nodes["pocket"]]=["VisibleRecessSketch","VisibleRecessPocket"]
+    if "fillet" in nodes:mapping[nodes["fillet"]]=[]
+    tree=[feature_state(obj) for obj in [*built,bore,mate_cut,final]]
     for item in tree:
         if not item["valid"]: raise RuntimeError(f"invalid feature: {item['name']}")
     doc.saveAs(str(out/"final.FCStd"))

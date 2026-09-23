@@ -1,0 +1,16 @@
+{
+  "schema_version": "robotcad_try6_r1_v3_e2e_smoke_v1",
+  "mode": "SYNTHETIC_NON_GT_DATAFLOW_ONLY",
+  "fresh_vlm_calls": 1,
+  "primary_candidate_width_factors": [0.95, 1.0, 1.05],
+  "primary_candidate_count": 3,
+  "sensitivity_candidate_count": 1,
+  "total_cad_candidate_budget": 4,
+  "metric_ratio_source": "frozen R1 Parameter Registry housing_width_mm divided by actual URDF J04 L04 origin distance 63 mm",
+  "anchor_sensitivity_delta_mm": 1.0,
+  "functional_cad_anchor_always_real_urdf_mm": true,
+  "gt_access": false,
+  "formal_holdout_access": false,
+  "manual_intervention": 0,
+  "retry_count": 0
+}

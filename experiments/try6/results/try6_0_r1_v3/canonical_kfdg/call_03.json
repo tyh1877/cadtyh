@@ -1,0 +1,303 @@
+{
+  "authority": {
+    "functional_backbone_sha256": "ef8897268757ea3fc552de01c1f420c189c8687511e71c1b7dc1f309105163be",
+    "parameter_registry_sha256": "26d1ddbb5ba8c9cbb4db6de79f5f6ea7ffc88e5397e16148420f9873453415ba",
+    "slot_registry_sha256": "5701ca0770b17f0ab03cc3bd2c6c356e62f657cb1421d74aeaf1b1f2dfdfd2d3",
+    "slot_response_sha256": "52e9b8cfe22c6c2974d3882c1905655603bf0e63bcc2d208be23dab1d757348f"
+  },
+  "constraints": [
+    {
+      "source": "housing_01",
+      "target": "proximal_joint_port",
+      "type": "interface_fixed"
+    },
+    {
+      "source": "housing_01",
+      "target": "transition_01",
+      "type": "profile_continuity"
+    },
+    {
+      "source": "housing_01",
+      "target": "recess_01",
+      "type": "contains"
+    },
+    {
+      "source": "transition_01",
+      "target": "distal_mount_port",
+      "type": "connected_to"
+    }
+  ],
+  "functional_nodes": [
+    {
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "frame_xyz_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "id": "proximal_joint_port",
+      "interface_family": "coaxial_rotary_interface",
+      "joint_id": "J03",
+      "source": "URDF_AND_FROZEN_INTERFACE",
+      "type": "joint_port"
+    },
+    {
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "frame_xyz_mm": [
+        63.0,
+        0.0,
+        0.0
+      ],
+      "id": "distal_mount_port",
+      "interface_family": "planar_mount_interface",
+      "joint_id": "J04",
+      "source": "URDF_AND_FROZEN_INTERFACE",
+      "type": "mount_port"
+    }
+  ],
+  "geometric_features": [
+    {
+      "confidence": "HIGH",
+      "evidence_views": [
+        "f0_front",
+        "f0_isometric",
+        "isometric"
+      ],
+      "id": "housing_01",
+      "parameter_refs": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm"
+      ],
+      "source_slot_id": "main_housing",
+      "type": "housing"
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_views": [
+        "f0_right",
+        "left",
+        "right"
+      ],
+      "id": "recess_01",
+      "parameter_refs": [
+        "recess_length_mm",
+        "recess_depth_mm"
+      ],
+      "source_slot_id": "visible_pocket",
+      "type": "pocket"
+    },
+    {
+      "confidence": "HIGH",
+      "evidence_views": [
+        "f0_front",
+        "f0_isometric",
+        "f0_top"
+      ],
+      "id": "transition_01",
+      "parameter_refs": [
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "source_slot_id": "profile_transition",
+      "type": "profile_transition"
+    }
+  ],
+  "link_id": "L04",
+  "metric_anchor": {
+    "distance_mm": 63.0,
+    "joint_ids": [
+      "J03",
+      "J04"
+    ],
+    "source": "SANITIZED_URDF_J04_L04_ORIGIN"
+  },
+  "parameters": [
+    {
+      "active": true,
+      "allowed_orphan": false,
+      "confidence": "MEDIUM",
+      "functional_frozen": false,
+      "id": "housing_width_mm",
+      "lower_bound": 10.0,
+      "optimizable": true,
+      "owner_feature_id": "housing_01",
+      "owner_slot_id": "main_housing",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "width",
+      "unit": "mm",
+      "upper_bound": 24.0,
+      "value": 17.0
+    },
+    {
+      "active": true,
+      "allowed_orphan": false,
+      "confidence": "MEDIUM",
+      "functional_frozen": false,
+      "id": "housing_height_mm",
+      "lower_bound": 10.0,
+      "optimizable": true,
+      "owner_feature_id": "housing_01",
+      "owner_slot_id": "main_housing",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "height",
+      "unit": "mm",
+      "upper_bound": 28.0,
+      "value": 16.0
+    },
+    {
+      "active": true,
+      "allowed_orphan": false,
+      "confidence": "MEDIUM",
+      "functional_frozen": false,
+      "id": "proximal_section_length_mm",
+      "lower_bound": 18.0,
+      "optimizable": true,
+      "owner_feature_id": "housing_01",
+      "owner_slot_id": "main_housing",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "depth",
+      "unit": "mm",
+      "upper_bound": 32.0,
+      "value": 24.0
+    },
+    {
+      "active": true,
+      "allowed_orphan": false,
+      "confidence": "MEDIUM",
+      "functional_frozen": false,
+      "id": "transition_length_mm",
+      "lower_bound": 4.0,
+      "optimizable": true,
+      "owner_feature_id": "transition_01",
+      "owner_slot_id": "profile_transition",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "length",
+      "unit": "mm",
+      "upper_bound": 16.0,
+      "value": 10.0
+    },
+    {
+      "active": true,
+      "allowed_orphan": false,
+      "confidence": "MEDIUM",
+      "functional_frozen": false,
+      "id": "distal_width_mm",
+      "lower_bound": 8.0,
+      "optimizable": true,
+      "owner_feature_id": "transition_01",
+      "owner_slot_id": "profile_transition",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "distal_width",
+      "unit": "mm",
+      "upper_bound": 22.0,
+      "value": 14.0
+    },
+    {
+      "active": true,
+      "allowed_orphan": false,
+      "confidence": "MEDIUM",
+      "functional_frozen": false,
+      "id": "distal_height_mm",
+      "lower_bound": 8.0,
+      "optimizable": true,
+      "owner_feature_id": "transition_01",
+      "owner_slot_id": "profile_transition",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "distal_height",
+      "unit": "mm",
+      "upper_bound": 24.0,
+      "value": 12.0
+    },
+    {
+      "active": true,
+      "allowed_orphan": false,
+      "confidence": "MEDIUM",
+      "functional_frozen": false,
+      "id": "recess_length_mm",
+      "lower_bound": 6.0,
+      "optimizable": true,
+      "owner_feature_id": "recess_01",
+      "owner_slot_id": "visible_pocket",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "length",
+      "unit": "mm",
+      "upper_bound": 16.0,
+      "value": 12.0
+    },
+    {
+      "active": true,
+      "allowed_orphan": false,
+      "confidence": "MEDIUM",
+      "functional_frozen": false,
+      "id": "recess_depth_mm",
+      "lower_bound": 1.0,
+      "optimizable": true,
+      "owner_feature_id": "recess_01",
+      "owner_slot_id": "visible_pocket",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "depth",
+      "unit": "mm",
+      "upper_bound": 9.0,
+      "value": 4.0
+    },
+    {
+      "active": false,
+      "allowed_orphan": true,
+      "confidence": "LOW",
+      "functional_frozen": false,
+      "id": "fillet_radius_mm",
+      "lower_bound": 0.5,
+      "optimizable": false,
+      "owner_feature_id": "deferred_fillet",
+      "owner_slot_id": "deferred_fillet",
+      "provenance": "SOLVER_ESTIMATED",
+      "semantic_role": "radius",
+      "unit": "mm",
+      "upper_bound": 3.0,
+      "value": 1.0
+    }
+  ],
+  "schema_version": "robotcad_kfdg_r1_v3",
+  "slot_provenance": [
+    {
+      "confidence": "HIGH",
+      "evidence_views": [
+        "f0_front",
+        "f0_isometric",
+        "isometric"
+      ],
+      "slot_id": "main_housing",
+      "status": "PRESENT"
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_views": [
+        "left",
+        "right",
+        "f0_right"
+      ],
+      "slot_id": "visible_pocket",
+      "status": "PRESENT"
+    },
+    {
+      "confidence": "HIGH",
+      "evidence_views": [
+        "f0_front",
+        "f0_top",
+        "f0_isometric"
+      ],
+      "slot_id": "profile_transition",
+      "status": "PRESENT"
+    }
+  ]
+}

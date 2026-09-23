@@ -1,0 +1,8 @@
+{
+  "dangling_refs": 0,
+  "duplicate_refs": 0,
+  "functional_conflicts": 0,
+  "gate_pass": true,
+  "requested": 5,
+  "valid": 5
+}

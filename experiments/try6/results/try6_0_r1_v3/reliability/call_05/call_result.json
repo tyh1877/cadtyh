@@ -1,0 +1,37 @@
+{
+  "assembly_success": true,
+  "call_number": 5,
+  "canonical_kfdg_valid": true,
+  "contract_valid": true,
+  "exact_request_path": "experiments/try6/artifacts/try6_0_r1_v3/reliability/call_05/request_payload.json",
+  "exact_request_sha256": "b631322cb72920ff9f5cc8ffe1efbfad454edd3d856b71bef817d07bf983f719",
+  "http_status": 200,
+  "latency_seconds": 77.21052610001061,
+  "manual_intervention": 0,
+  "model_returned": "qwen3.7-plus",
+  "response_id": "chatcmpl-647bc541-cf4d-9a9a-beee-d1fff0931c41",
+  "response_repair_count": 0,
+  "retry_count": 0,
+  "status": "PASS",
+  "system_fingerprint": null,
+  "token_usage": {
+    "completion_tokens": 4422,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 4191,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 230
+    },
+    "prompt_tokens": 13366,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 12672,
+      "image_tokens": 12565,
+      "text_tokens": 801
+    },
+    "total_tokens": 17788
+  },
+  "transport_valid": true
+}

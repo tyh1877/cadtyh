@@ -1,0 +1,14 @@
+{
+  "attempt_ids": [
+    "call_01",
+    "call_02",
+    "call_03",
+    "call_04",
+    "call_05"
+  ],
+  "completed": 5,
+  "formal_holdout_evaluations": 0,
+  "gt_evaluations": 0,
+  "preflight_excluded": true,
+  "requested": 5
+}
