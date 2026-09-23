@@ -1,0 +1,15 @@
+{
+  "vlm_request_sha256": "c8414ab4b4395f027904681e2e37031e58f368e7143fac70ca3065c94b46802f",
+  "allowed_generator_inputs": [
+    "raw_images",
+    "engineering_text",
+    "sanitized_urdf",
+    "f0_fcstd",
+    "neutral_interface_context"
+  ],
+  "gt_generator_access": false,
+  "gt_solver_access": false,
+  "gt_evaluator_access": false,
+  "motion_solver_feedback": false,
+  "formal_holdout_accessed": false
+}

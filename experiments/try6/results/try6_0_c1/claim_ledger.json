@@ -1,0 +1,40 @@
+{
+  "claims": [
+    {
+      "claim_id": "one_model_call",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "failure_accounting.json",
+      "field": "vlm_calls",
+      "operator": "eq",
+      "expected": 1
+    },
+    {
+      "claim_id": "schema_failure",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "failure_accounting.json",
+      "field": "schema_failures",
+      "operator": "eq",
+      "expected": 1
+    },
+    {
+      "claim_id": "no_solver_invocation",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "failure_accounting.json",
+      "field": "solver_evaluations",
+      "operator": "eq",
+      "expected": 0
+    },
+    {
+      "claim_id": "holdout_unaccessed",
+      "hard": true,
+      "evidence_type": "computed",
+      "artifact": "failure_accounting.json",
+      "field": "formal_holdout_accessed",
+      "operator": "eq",
+      "expected": false
+    }
+  ]
+}

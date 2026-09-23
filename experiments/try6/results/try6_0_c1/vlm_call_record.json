@@ -1,0 +1,13 @@
+{
+  "status": "SUCCESS",
+  "requested_model": "qwen3.7-plus",
+  "returned_model": "qwen3.7-plus",
+  "request_id": "chatcmpl-9f9da69d-98d1-995d-8f2b-dafe5fe2c51f",
+  "system_fingerprint": null,
+  "input_tokens": 15821,
+  "output_tokens": 7070,
+  "latency_seconds": 124.20105979999062,
+  "seed": 20260923,
+  "retry_count": 0,
+  "manual_intervention_count": 0
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "robotcad_try6_c1_representation_failure_v1",
+  "response_root_type": "list",
+  "response_array_length": 1,
+  "inner_object_schema_valid_read_only": true,
+  "inner_object_used_for_generation": false,
+  "requested_json_schema_sha256": "bfa20169e311a3518649ac5d4bf96e71a32d28dfd86c220a3e4f714b6a1a8e23",
+  "raw_response_sha256": "c624dd5a9b4584856b81f39e44d0b2b5a5ed12dee15fb9d505a59ab3347c260a",
+  "failure_stage": "KFDG_TOP_LEVEL_TYPED_CONTRACT",
+  "model_returned": "qwen3.7-plus",
+  "finish_reason": "stop",
+  "provider_system_fingerprint": null,
+  "retry_count": 0
+}

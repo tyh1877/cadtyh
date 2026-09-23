@@ -1,0 +1,26 @@
+{
+  "schema_version": "robotcad_try6_c1_incidents_v1",
+  "incidents": [
+    {
+      "id": "C1-REP-001",
+      "stage": "one-shot constrained KFDG response validation",
+      "request_format": "json_schema_strict",
+      "requested_root_type": "object",
+      "returned_root_type": "array",
+      "returned_array_length": 1,
+      "inner_object_valid_in_read_only_postmortem": true,
+      "cause_attribution": "UNKNOWN_PROVIDER_OR_RESPONSE_ENVELOPE_BEHAVIOR",
+      "action": "fail-closed; preserve raw response; do not unwrap, retry, edit, or run solver",
+      "model_calls_added": 0,
+      "solver_evaluations": 0,
+      "formal_holdout_accessed": false
+    },
+    {
+      "id": "C1-EDIT-SMOKE-001",
+      "stage": "nonformal FreeCAD editability infrastructure smoke",
+      "observation": "A small housing_width spreadsheet edit invalidated an Edge1 topological reference in the PartDesign Fillet; a small recess_depth edit recomputed the saved feature tree and changed final volume.",
+      "impact_on_formal_C1": "No formal C1 CAD was generated. This is a known editability limitation for future protocol versions, not a formal PRS result.",
+      "formal_holdout_accessed": false
+    }
+  ]
+}

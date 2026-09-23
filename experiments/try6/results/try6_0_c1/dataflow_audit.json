@@ -1,0 +1,9 @@
+{
+  "vlm_response_sha256": "c624dd5a9b4584856b81f39e44d0b2b5a5ed12dee15fb9d505a59ab3347c260a",
+  "schema_rejected_top_level": true,
+  "kfdg_materialized": false,
+  "metric_solver_invoked": false,
+  "cad_feature_history_built_formally": false,
+  "urdf_anchor_mutation_smoke_pass": true,
+  "no_gt_leakage": true
+}

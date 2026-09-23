@@ -1,0 +1,11 @@
+{
+  "decision": "REPRESENTATION_FAILURE",
+  "reason": "Constrained JSON Schema request returned a one-element array rather than the required top-level object; fail-closed validator rejected the unmodified response.",
+  "kfdg_schema_valid": false,
+  "formal_solver_executed": false,
+  "c1_cad_generated": false,
+  "geometry_gate_evaluated": false,
+  "motion_metrics_evaluated": false,
+  "c0_exact_iou": 0.12496993987975952,
+  "formal_holdout_accessed": false
+}

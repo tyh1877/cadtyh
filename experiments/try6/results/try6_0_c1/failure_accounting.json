@@ -1,0 +1,18 @@
+{
+  "requested_formal_runs": 1,
+  "attempted_formal_runs": 1,
+  "completed_c1_cad_runs": 0,
+  "vlm_calls": 1,
+  "vlm_transport_failures": 0,
+  "schema_failures": 1,
+  "solver_requested_budget": 32,
+  "solver_evaluations": 0,
+  "cad_rebuilds": 0,
+  "mechanical_requested_development_cases": 96,
+  "mechanical_completed_development_cases": 0,
+  "mechanical_uncomputed_due_to_schema_failure": 96,
+  "gt_evaluations": 0,
+  "manual_interventions": 0,
+  "retries": 0,
+  "formal_holdout_accessed": false
+}

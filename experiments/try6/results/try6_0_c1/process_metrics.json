@@ -1,0 +1,16 @@
+{
+  "vlm_calls": 1,
+  "requested_model": "qwen3.7-plus",
+  "returned_model": "qwen3.7-plus",
+  "request_id": "chatcmpl-9f9da69d-98d1-995d-8f2b-dafe5fe2c51f",
+  "input_tokens": 15821,
+  "output_tokens": 7070,
+  "vlm_latency_seconds": 124.20105979999062,
+  "solver_evaluations": 0,
+  "solver_runtime_seconds": 0,
+  "cad_rebuild_count": 0,
+  "failed_cad_candidates": 0,
+  "final_freecad_build_success": false,
+  "manual_intervention_count": 0,
+  "retry_count": 0
+}

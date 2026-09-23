@@ -1,0 +1,22 @@
+{
+  "schema_version": "robotcad_try6_c1_independent_validation_v1",
+  "status": "PASS",
+  "checks": {
+    "frozen_protocol_and_inputs": true,
+    "exact_c0_source": true,
+    "schema_first_infrastructure_smoke": true,
+    "one_qwen_response_saved": true,
+    "schema_root_rejected_without_rewrite": true,
+    "formal_c1_stopped_before_solver_cad_gt": true,
+    "decision_matches_representation_failure": true,
+    "no_gt_or_motion_feedback": true,
+    "holdout_unaccessed": true,
+    "failure_denominator_and_no_retry": true,
+    "claim_ledger_pass": true,
+    "runner_did_not_self_validate": true
+  },
+  "failed_checks": [],
+  "decision": "REPRESENTATION_FAILURE",
+  "formal_holdout_accessed": false,
+  "missing_required_files": []
+}

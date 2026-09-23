@@ -21,8 +21,33 @@ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def dump(path,value):Path(path).write_text(json.dumps(value,indent=2)+"\n",encoding="utf-8")
 
 
+def validate_representation_failure(config_path,root,config):
+    required=("protocol.json","input_hashes.json","c0_baseline.json","camera_or_view_registration.json","infrastructure_smoke.json","pre_run_manifest.json","vlm_request_manifest.json","vlm_call_started.json","vlm_call_record.json","vlm_raw_response.txt","vlm_full_response.json","vlm_failure.json","representation_failure_audit.json","decision.json","failure_accounting.json","process_metrics.json","leakage_audit.json","dataflow_audit.json","claim_ledger.json","holdout_evaluation_log.json")
+    missing=[name for name in required if not (root/name).is_file()]
+    if missing:return {"status":"FAIL","missing_required_files":missing,"checks":{}}
+    pre=load(root/"pre_run_manifest.json");call=load(root/"vlm_call_record.json");raw=load(root/"vlm_raw_response.txt");audit=load(root/"representation_failure_audit.json");decision=load(root/"decision.json");failure=load(root/"failure_accounting.json");leak=load(root/"leakage_audit.json");camera=load(root/"camera_or_view_registration.json");c0=load(root/"c0_baseline.json");lock=load(ROOT/"experiments/try5A/results/try5b1_a1_frozen_scaffold/formal_holdout_lock.json");claim=validate_claim_ledger(root,load(root/"claim_ledger.json")["claims"])
+    forbidden=("kfdg.json","solver_invocation.json","solver_result.json","solver_history.csv","objective_breakdown.csv","final.FCStd","final.step","final.stl","geometry_metrics.json","mechanical_metrics.json")
+    checks={
+        "frozen_protocol_and_inputs":load(root/"protocol.json")==config and pre["protocol_sha256"]==sha(config_path) and pre["input_hashes_sha256"]==sha(root/"input_hashes.json"),
+        "exact_c0_source":c0["source_sha256"]==sha(ROOT/c0["source"]) and c0["metrics"]["link"]=="L04" and c0["metrics"]["method"]=="DIRECT_QWEN",
+        "schema_first_infrastructure_smoke":load(root/"infrastructure_smoke.json")["status"]=="PASS" and camera["available"]["freecad_miba_view_matrices"] and not camera["available"]["camera_intrinsics"],
+        "one_qwen_response_saved":call["status"]=="SUCCESS" and call["returned_model"]==config["model"]["requested_identifier"] and call["retry_count"]==0 and call["input_tokens"]>0 and call["output_tokens"]>0,
+        "schema_root_rejected_without_rewrite":isinstance(raw,list) and len(raw)==1 and audit["response_root_type"]=="list" and audit["inner_object_used_for_generation"] is False and audit["raw_response_sha256"]==sha(root/"vlm_raw_response.txt"),
+        "formal_c1_stopped_before_solver_cad_gt":all(not (root/name).exists() for name in forbidden) and failure["solver_evaluations"]==failure["cad_rebuilds"]==failure["gt_evaluations"]==0,
+        "decision_matches_representation_failure":decision["decision"]=="REPRESENTATION_FAILURE" and decision["geometry_gate_evaluated"] is False,
+        "no_gt_or_motion_feedback":leak["gt_generator_access"] is False and leak["gt_solver_access"] is False and leak["motion_solver_feedback"] is False,
+        "holdout_unaccessed":lock["accessed"] is False and lock["evaluation_count"]==0 and load(root/"holdout_evaluation_log.json")["events"]==[] and failure["formal_holdout_accessed"] is False,
+        "failure_denominator_and_no_retry":failure["mechanical_requested_development_cases"]==96 and failure["mechanical_uncomputed_due_to_schema_failure"]==96 and failure["retries"]==failure["manual_interventions"]==0,
+        "claim_ledger_pass":claim["status"]=="PASS" and not claim["hard_claims_with_noncomputed_evidence"],
+        "runner_did_not_self_validate":not (root/"validation.json").exists()
+    }
+    return {"schema_version":"robotcad_try6_c1_independent_validation_v1","status":"PASS" if all(checks.values()) else "FAIL","checks":checks,"failed_checks":[key for key,value in checks.items() if not value],"decision":"REPRESENTATION_FAILURE","formal_holdout_accessed":False,"missing_required_files":[]}
+
+
 def validate(config_path,result_root):
     config=load(config_path);root=Path(result_root).resolve()
+    if (root/"decision.json").is_file() and load(root/"decision.json").get("decision")=="REPRESENTATION_FAILURE" and (root/"vlm_failure.json").is_file():
+        return validate_representation_failure(config_path,root,config)
     required=("protocol.json","input_hashes.json","c0_baseline.json","camera_or_view_registration.json","pre_run_manifest.json","vlm_call_record.json","vlm_raw_response.txt","vlm_full_response.json","vlm_response.json","kfdg.json","solver_config.json","solver_result.json","solver_history.csv","objective_breakdown.csv","parameter_table.json","feature_mapping.json","geometry_metrics.json","mechanical_metrics.json","process_metrics.json","leakage_audit.json","dataflow_audit.json","decision.json","failure_accounting.json","claim_ledger.json","editability_smoke.json","final.FCStd","final.step","final.stl")
     missing=[name for name in required if not (root/name).is_file()]
     if missing:return {"status":"FAIL","missing_required_files":missing,"checks":{}}

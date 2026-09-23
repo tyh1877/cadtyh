@@ -1,0 +1,144 @@
+[
+  {
+    "visual_observations": [
+      "The L04 link appears as an elongated structural member connecting the elbow joint to the wrist assembly.",
+      "A large circular or blocky housing is visible at the proximal end (elbow side), acting as the joint hub.",
+      "The main body transitions from this large hub into a narrower, long shaft or beam.",
+      "Rectangular cutouts or pockets are visible in the side views of the colored robot, suggesting a lightweight beam structure.",
+      "The distal end features a smaller mounting flange or block for the wrist.",
+      "Exterior edges appear rounded, particularly on the housing and transition zones."
+    ],
+    "geometric_features": [
+      {
+        "id": "housing_main",
+        "type": "housing",
+        "evidence_views": [
+          "front",
+          "isometric",
+          "left",
+          "right",
+          "top",
+          "rear"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "id": "transition_proximal",
+        "type": "profile_transition",
+        "evidence_views": [
+          "isometric",
+          "top",
+          "front",
+          "rear"
+        ],
+        "confidence": "HIGH"
+      },
+      {
+        "id": "pocket_beam",
+        "type": "pocket",
+        "evidence_views": [
+          "left",
+          "right"
+        ],
+        "confidence": "MEDIUM"
+      },
+      {
+        "id": "fillet_edges",
+        "type": "fillet",
+        "evidence_views": [
+          "isometric",
+          "front",
+          "top"
+        ],
+        "confidence": "HIGH"
+      }
+    ],
+    "relations": [
+      {
+        "source": "proximal_joint_port",
+        "target": "housing_main",
+        "type": "interface_fixed"
+      },
+      {
+        "source": "housing_main",
+        "target": "transition_proximal",
+        "type": "profile_continuity"
+      },
+      {
+        "source": "housing_main",
+        "target": "pocket_beam",
+        "type": "contains"
+      },
+      {
+        "source": "housing_main",
+        "target": "distal_mount_port",
+        "type": "connected_to"
+      },
+      {
+        "source": "transition_proximal",
+        "target": "distal_mount_port",
+        "type": "profile_continuity"
+      }
+    ],
+    "parameter_cues": [
+      {
+        "parameter_id": "housing_width_mm",
+        "evidence_views": [
+          "top",
+          "left"
+        ],
+        "ratio_hint": 0.24,
+        "confidence": "MEDIUM"
+      },
+      {
+        "parameter_id": "housing_height_mm",
+        "evidence_views": [
+          "front",
+          "right"
+        ],
+        "ratio_hint": 0.30,
+        "confidence": "MEDIUM"
+      },
+      {
+        "parameter_id": "proximal_section_length_mm",
+        "evidence_views": [
+          "top",
+          "front"
+        ],
+        "ratio_hint": 0.25,
+        "confidence": "MEDIUM"
+      },
+      {
+        "parameter_id": "transition_length_mm",
+        "evidence_views": [
+          "top",
+          "front"
+        ],
+        "ratio_hint": 0.60,
+        "confidence": "MEDIUM"
+      },
+      {
+        "parameter_id": "recess_length_mm",
+        "evidence_views": [
+          "left",
+          "right"
+        ],
+        "ratio_hint": 0.40,
+        "confidence": "LOW"
+      },
+      {
+        "parameter_id": "fillet_radius_mm",
+        "evidence_views": [
+          "isometric"
+        ],
+        "ratio_hint": 0.05,
+        "confidence": "LOW"
+      }
+    ],
+    "uncertain_observations": [
+      "The exact depth and geometry of the pocket/recess are obscured in the coarse neutral renders but visible as cutouts in the colored robot views.",
+      "The precise fillet radius is difficult to determine from the coarse mesh resolution.",
+      "The distal mount interface details are simplified in the coarse CAD."
+    ]
+  }
+]
