@@ -1,0 +1,76 @@
+{
+  "api_schema_accepted": true,
+  "api_schema_sha256": "6acdb750aa52c6d5e30ad2862fec49add5f946a7ba3eb80921a67f366b010fb6",
+  "canonical_schema_sha256": "3724b63b697d3c2fb04b6e93a5f1ef99668e57e7578f2dbb366fbab170388f42",
+  "exact_request_path": "experiments/try6/artifacts/try6_0_r1_v2/preflight/request_payload.json",
+  "exact_request_sha256": "d00b8d579a3654046d1cb93670fd1c7fb5f516bd55139e6742ab607dff29a5e9",
+  "formal_holdout_evaluations": 0,
+  "functional_authority_audit": {
+    "anchor_mm": 63.0,
+    "interface_sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d",
+    "joint_ids": [
+      "J03",
+      "J04"
+    ],
+    "status": "PASS",
+    "urdf_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664"
+  },
+  "gt_evaluations": 0,
+  "http_status": 200,
+  "latency_seconds": 25.318319400015753,
+  "model_requested": "qwen3.7-plus",
+  "model_returned": "qwen3.7-plus",
+  "preflight_pass": true,
+  "prior_results": {
+    "c1_v1": {
+      "files_checked": 21,
+      "manifest_sha256": "84a99bff97ae146259fa113f3bd0dfe07721891cb626ef43a8ef5edd47c7dcb3",
+      "unchanged": true
+    },
+    "r0": {
+      "files_checked": 58,
+      "manifest_sha256": "c678d4fabea469b8f44a27b320f707f0d346f8f27b1f195511f1ae179a2e7e6c",
+      "unchanged": true
+    },
+    "r1_v1": {
+      "files_checked": 41,
+      "manifest_sha256": "87566c73eb4490654beccf258676af22fb64ed483203b504cbf1911462a18f9b",
+      "unchanged": true
+    }
+  },
+  "projection_removed_paths": [
+    "/properties/visual_features/items/properties/parameter_roles/uniqueItems",
+    "/properties/visual_features/items/properties/evidence_views/uniqueItems",
+    "/properties/visual_features/items/properties/relations/uniqueItems"
+  ],
+  "purpose": "API_SCHEMA_COMPATIBILITY_ONLY",
+  "raw_transport_valid_diagnostic": true,
+  "registry_audit": {
+    "active_parameter_count": 8,
+    "dormant_parameter_count": 1,
+    "status": "PASS"
+  },
+  "reliability_sample": false,
+  "retry_count": 0,
+  "schema_actually_sent": true,
+  "schema_version": "robotcad_try6_r1_v2_compatibility_report_v1",
+  "token_usage": {
+    "completion_tokens": 1394,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1009,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 384
+    },
+    "prompt_tokens": 2931,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 0,
+      "image_tokens": 1938,
+      "text_tokens": 993
+    },
+    "total_tokens": 4325
+  }
+}
