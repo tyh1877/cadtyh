@@ -1,0 +1,15 @@
+{
+  "all_candidates_infeasible": true,
+  "denominator": 32,
+  "interpretation_limit": "post-hoc descriptive correlation within 32 C1 proposals; no causal/GT claim and not consumed by KFDE or C2 optimizer",
+  "schema_version": "robotcad_try6_c2_replay_descriptive_v1",
+  "spearman_rho_by_parameter": {
+    "distal_height_mm": 0.8580907123024345,
+    "distal_width_mm": 0.7438414019582367,
+    "housing_height_mm": -0.4307639045254867,
+    "housing_width_mm": 0.6135329628937362,
+    "proximal_section_length_mm": 0.4978638442029708,
+    "transition_length_mm": 0.5769920306861198
+  },
+  "target": "maximum per-pose forbidden intersection volume mm3"
+}

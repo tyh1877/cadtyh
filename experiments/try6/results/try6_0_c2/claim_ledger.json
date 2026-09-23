@@ -1,0 +1,48 @@
+{
+  "claims": [
+    {
+      "artifact": "frozen_c1/parity_audit.json",
+      "claim": "C1 method frozen and only KFDE added",
+      "evidence_type": "computed",
+      "expected": "PASS / hard KFDE feasibility",
+      "field": "status / only_method_increment"
+    },
+    {
+      "artifact": "kfde/independent_construction_validation.json",
+      "claim": "KFDE construction valid and independent",
+      "evidence_type": "computed",
+      "expected": "PASS / 13",
+      "field": "status / component_count"
+    },
+    {
+      "artifact": "replay/independent_activity_validation.json",
+      "claim": "KFDE active on C1 search space",
+      "evidence_type": "computed",
+      "expected": 32,
+      "field": "infeasible_count"
+    },
+    {
+      "artifact": "audit/independent_no_feasible_validation.json",
+      "claim": "formal C2 no feasible candidate",
+      "evidence_type": "computed",
+      "expected": "0 / 17",
+      "field": "feasible_candidates / formal_proposals"
+    },
+    {
+      "artifact": "failure_accounting.json",
+      "claim": "no final GT/mechanics evaluation",
+      "evidence_type": "computed",
+      "expected": "0 / 0",
+      "field": "final_gt_evaluations / final_mechanical_evaluations"
+    },
+    {
+      "artifact": "audit/independent_no_feasible_validation.json",
+      "claim": "protocol decision label gap",
+      "evidence_type": "inferred",
+      "expected": false,
+      "field": "terminal_decision_defined_by_frozen_protocol",
+      "limitation": "requires user-approved protocol amendment for categorical closure"
+    }
+  ],
+  "schema_version": "robotcad_try6_c2_claim_ledger_v1"
+}

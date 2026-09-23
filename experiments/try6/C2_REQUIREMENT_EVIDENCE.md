@@ -3,12 +3,12 @@
 C2 isolates KFDE against frozen C1-v2 L04. No new VLM call, GT/holdout in
 construction or optimization, C1 repair, pocket reclassification, or C2 tuning.
 
-- [ ] Hash-audit frozen C1 artifacts, exact parity of slot/KFDG/active theta/bounds/images/view registration/objective/optimizer/compiler/evaluators, and holdout lock.
-- [ ] Freeze independent URDF-derived J03/J05 design sweep, L03/L05/L06/L07 neighbor geometry, L04 frame, explicit allowed scaffold/interface region and zero-margin/numerical tolerance before replay.
-- [ ] Build non-empty exact FreeCAD BREP keepout; prove pose-transform sensitivity, L04-frame correctness, interface exemption, and zero GT/final-mechanics leakage.
-- [ ] Replay all 32 frozen C1 candidates without regeneration, GT or 96-case evaluator; compute meaningful activity and C1 selected-candidate feasibility.
-- [ ] If all 32 feasible and C1 selected has no meaningful violation, stop as `KFDE_INACTIVE` without formal C2.
-- [ ] Otherwise run the identical 32-proposal visual optimizer with hard KFDE pre-render rejection, preserving every proposal and never ranking by mechanics/GT.
-- [ ] Lock final C2 CAD/theta/KFDE/config/history hashes before any GT or full mechanics evaluation.
-- [ ] Run one final same-evaluator geometry and 96-case exact mechanics diagnosis; independently compute geometry preservation, mechanical non-regression and ≥10% incremental benefit.
-- [ ] Independently validate final decision, leakage/failure accounting, holdout lock and frozen C1 immutability; stop before Try-6.1.
+- [x] Hash-audit frozen C1 and exact slot/KFDG/active theta/bounds/images/registration/objective/optimizer/compiler/evaluator parity; holdout closed (`pre_run_manifest.json`, `frozen_c1/parity_audit.json`).
+- [x] Freeze independent URDF-derived J03/J05 sweep, L03/L05/L06/L07 neighbors, L04 frame, allowed scaffold/interface region, zero margin and 1e-6 mm³ numerical tolerance before replay (`protocol/try6_0_c2.json`).
+- [x] Construct and independently audit a non-empty 13-component exact BREP keepout, pose sensitivity, L04 frame, interface exemption and no GT/development-case/C1-failure leakage (`kfde/`).
+- [x] Replay all 32 frozen C1 CAD candidates without regeneration or final mechanics; 32/32 meaningfully KFDE-infeasible, including `candidate_031` (`replay/`).
+- [x] Enforce activity gate: `KFDE_INACTIVE` false; independent validator permitted formal C2.
+- [x] Run one same-policy frozen C2 search: 17 valid CAD proposals, 17 hard KFDE rejections before render, 0 feasible, 0 visual ranking (`solver/`, `audit/independent_no_feasible_validation.json`).
+- [ ] Final C2 candidate lock: **impossible** because no feasible theta exists under the frozen search; do not invent or select a rejected candidate.
+- [ ] Final GT geometry/96-case mechanics and preservation/benefit gates: **not reached**; GT and final mechanics count 0.
+- [x] Independently verify all 17 rejections, source/protocol hashes, C1 proposal parity, no VLM/GT/holdout, no tuning. **Protocol gap:** no allowed final decision label exactly covers this zero-feasible state; direction requested from user before categorical closure.

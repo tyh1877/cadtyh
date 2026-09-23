@@ -1,0 +1,10 @@
+{
+  "actual_proposals": 17,
+  "feasible_candidates": 0,
+  "gt_accessed": false,
+  "holdout_accessed": false,
+  "kfde_rejects": 17,
+  "status": "NO_FEASIBLE_CANDIDATE",
+  "termination": "no_feasible_after_frozen_C1_initial_and_Sobol_schedule",
+  "visual_objective_evaluations": 0
+}

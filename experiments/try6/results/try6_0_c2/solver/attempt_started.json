@@ -1,0 +1,12 @@
+{
+  "c1_active_parameters_sha256": "88586c7140fa47d3685b029424fe64783e2a46be17b3c08abfd794e0735bdb10",
+  "c1_kfdg_sha256": "832169747f0f8fcd2a6370f314d891d310fb674c5199a31731e79bacba703e2b",
+  "c1_objective_sha256": "347945762dc9e455fe0b9fa9228bd9c98f98796b41ec4d3ab72e71b44f05960b",
+  "c1_optimizer_config_sha256": "2180884647824d6aea321a7b0a7ca7b087c93d4a0a2e0ddc676822d11fde7849",
+  "full_mechanics_feedback": false,
+  "gt_access": false,
+  "kfde_construction_sha256": "2222bf9b4057505a55de8f679116c05049f83526f437b61819c3ff23d4809e1e",
+  "manual_intervention": 0,
+  "protocol_sha256": "29299310b6d137c5d00b8c79f90341826d171934e5f20b03e245a94f9ddf483c",
+  "status": "STARTED_ONE_FORMAL_C2_SEARCH"
+}

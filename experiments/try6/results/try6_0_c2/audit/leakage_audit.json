@@ -1,0 +1,11 @@
+{
+  "GT_evaluations": 0,
+  "audit_limit": "source-path and execution-artifact audit, not OS-level filesystem-read trace",
+  "construction_uses_sanitized_URDF_and_frozen_neighbor_FCStd_only": true,
+  "constructor_read_C1_failure_diagnostics": false,
+  "constructor_read_final_96_case_rows": false,
+  "formal_holdout_accessed": false,
+  "full_final_mechanics_evaluations": 0,
+  "no_new_VLM_call": true,
+  "solver_read_C1_GT_or_mechanical_metrics": false
+}

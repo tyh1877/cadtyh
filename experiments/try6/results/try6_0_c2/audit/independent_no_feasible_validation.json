@@ -1,0 +1,23 @@
+{
+  "execution_outcome": "NO_FEASIBLE_CANDIDATE_AFTER_FROZEN_C1_PROPOSAL_SCHEDULE",
+  "feasible_candidates": 0,
+  "final_candidate_lock_exists": false,
+  "final_development_mechanics_evaluations": 0,
+  "formal_holdout_accessed": false,
+  "formal_holdout_evaluation_count": 0,
+  "formal_proposals": 17,
+  "gt_evaluations": 0,
+  "kfde_hard_rejects": 17,
+  "maximum_max_pose_forbidden_intersection_mm3": 756.6014297702396,
+  "minimum_max_pose_forbidden_intersection_mm3": 142.21303162491824,
+  "no_new_vlm_call": true,
+  "no_tuning_or_retry": true,
+  "protocol_gap": "No allowed final C2 label covers an active, auditable KFDE with zero feasible candidates before final CAD/GT/mechanics; KFDE_OVERCONSTRAINED is defined only after improved mechanics and failed geometry preservation.",
+  "schema_version": "robotcad_try6_c2_no_feasible_audit_v1",
+  "selected_theta_exists": false,
+  "status": "PASS",
+  "terminal_decision_defined_by_frozen_protocol": false,
+  "valid_cad_builds": 17,
+  "visual_objective_evaluations": 0,
+  "visual_renders": 0
+}

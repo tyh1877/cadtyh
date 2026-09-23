@@ -1,0 +1,1712 @@
+{
+  "actual_proposals": 17,
+  "cad_builds": 17,
+  "feasible_candidates": 0,
+  "full_mechanics_feedback": false,
+  "gt_accessed": false,
+  "history": [
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_000",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_000/kfde_check.json",
+      "kfde_check_sha256": "633d7ff32108f457ea21fd58c6150ed99840505014c003ea08ae5a67a734a398",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 281.97125917524625,
+      "kfde_runtime_seconds": 0.9583709000144154,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 3.50546154879037,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 162.07730799671816,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 66.6038559337737,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 42.19070483980415,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 281.97125917524625,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 281.97125917524625,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 281.97125917524625,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 281.97125917524625,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.6804233000148088,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 12.0,
+        "distal_width_mm": 14.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 16.0,
+        "housing_width_mm": 17.0,
+        "proximal_section_length_mm": 24.0,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 10.0
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_001",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_001/kfde_check.json",
+      "kfde_check_sha256": "70bae435a5eb9899d1722c6a9ae45a84b3e400f4815b27074c85186710abce50",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 748.7467901607162,
+      "kfde_runtime_seconds": 0.9554312999825925,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 74.22060474859519,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 66.6038559337737,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 682.9278013542514,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 748.7467457849656,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 748.7467901607158,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 748.746751095297,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 748.7467901607162,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.6504670000285842,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 23.740909203886986,
+        "distal_width_mm": 18.06776517443359,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 12.47018277272582,
+        "housing_width_mm": 22.137505743652582,
+        "proximal_section_length_mm": 30.483523407950997,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 15.680077575147152
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_002",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_002/kfde_check.json",
+      "kfde_check_sha256": "e328c3bfb3d70c9961c65945ec378dd1afbd9c4a3bbef1598ad5f11217c82249",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 199.6295031509543,
+      "kfde_runtime_seconds": 0.8562013000482693,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 199.6295031509543,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_01",
+          "forbidden_intersection_mm3": 23.50830720267432,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -1.498074274628466
+        },
+        {
+          "component_id": "L03_J03_04",
+          "forbidden_intersection_mm3": 36.20047279447918,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 0.4479678413452115
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 129.0448312437886,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 102.56814834602449,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 42.19070483980415,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 184.5256339160899,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 184.5256339160899,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 184.5256339160899,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 184.5256339160899,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.5339285000227392,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 11.498492941260338,
+        "distal_width_mm": 11.281582156196237,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 23.758593916893005,
+        "housing_width_mm": 10.663689881563187,
+        "proximal_section_length_mm": 21.007073985412717,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 9.969824869185686
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_003",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_003/kfde_check.json",
+      "kfde_check_sha256": "97a486796cb0687a6ea1adb1dbe5b52b68d0756224cebd368a02df8628fd3487",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 421.46667352775,
+      "kfde_runtime_seconds": 1.0396905999514274,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 28.744242590480646,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 170.9700516784007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 66.6038559337737,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 44.763828868640076,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 421.46667352775,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 421.4666735277494,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 421.46667352774983,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 421.4666735277488,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.7318510000477545,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 15.77649611234665,
+        "distal_width_mm": 13.561125943437219,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 17.693704379722476,
+        "housing_width_mm": 15.137483760714531,
+        "proximal_section_length_mm": 26.9128649905324,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 12.259899877011776
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_004",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_004/kfde_check.json",
+      "kfde_check_sha256": "7a5a1db297d7b4c537c3fb12162170a75ab0c1c5bf83bf6c5ee86913ba304297",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 747.2485545940639,
+      "kfde_runtime_seconds": 1.0270367999910377,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 99.84008386207101,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 170.9700516784007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 66.98107769323258,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 484.85043417574144,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 747.2485545940629,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 747.2485369297143,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 747.2485545940639,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 747.2485387762773,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.725099199975375,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 19.019431173801422,
+        "distal_width_mm": 20.340849367901683,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 19.97772099263966,
+        "housing_width_mm": 17.663724798709154,
+        "proximal_section_length_mm": 24.139477968215942,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 6.543318588286638
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_005",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_005/kfde_check.json",
+      "kfde_check_sha256": "53300423a7fc122f3e835b72089386fa3978a88badc5599881d699ad0c2b463e",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 756.6014297702396,
+      "kfde_runtime_seconds": 0.9802215000381693,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 1.9111345613200077,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 157.43099645169585,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 66.6038559337737,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 620.6815190038211,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 756.6014297702396,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 756.6014297702396,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 756.6014297702396,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 756.6014297702396,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.7019218999776058,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 20.17204289138317,
+        "distal_width_mm": 19.72441916540265,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 15.738992843776941,
+        "housing_width_mm": 19.50126114487648,
+        "proximal_section_length_mm": 19.639149587601423,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 4.486622508615255
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_006",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_006/kfde_check.json",
+      "kfde_check_sha256": "d5081e217789ba39eed3685d4538a0ba18586f5019daa2c8c02d6842c1c7d0f9",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 201.25832530945425,
+      "kfde_runtime_seconds": 1.054894200002309,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 201.25832530945425,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_01",
+          "forbidden_intersection_mm3": 11.351080335642743,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -1.498074274628466
+        },
+        {
+          "component_id": "L03_J03_04",
+          "forbidden_intersection_mm3": 16.815536752430887,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 0.4479678413452115
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 170.9700516784007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 115.20615778324262,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 42.19070483980415,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 165.35099575041784,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 165.35099575320334,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 165.35099572768593,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 165.35099575321226,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.7946901000104845,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 8.930572673678398,
+        "distal_width_mm": 12.510548777878284,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 22.45056875795126,
+        "housing_width_mm": 16.805059764534235,
+        "proximal_section_length_mm": 29.334135491400957,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 10.566599488258362
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_007",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_007/kfde_check.json",
+      "kfde_check_sha256": "4550c32ec22d7a6e54796f9acbc6300338577d8d487837e2a8339166fab4bfd8",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 142.21303162491824,
+      "kfde_runtime_seconds": 0.8171612999867648,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 59.9804407114861,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 47.77058001169104,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 42.19070483980415,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 142.21303162491824,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 142.21303162491824,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 142.21303162491824,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 142.21303162491824,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.5357242999598384,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 12.34154188632965,
+        "distal_width_mm": 8.645014084875584,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 12.238271286711097,
+        "housing_width_mm": 12.501296062022448,
+        "proximal_section_length_mm": 22.991592114791274,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 7.1631974540650845
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_008",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_008/kfde_check.json",
+      "kfde_check_sha256": "49024ff3767eb500189140f00aa16361e3d51904bb3802bc167e86340decc8ef",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 568.8540596599088,
+      "kfde_runtime_seconds": 1.1423525999998674,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 369.59245894449475,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_01",
+          "forbidden_intersection_mm3": 84.95412106550678,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -1.498074274628466
+        },
+        {
+          "component_id": "L03_J03_04",
+          "forbidden_intersection_mm3": 157.69892318125957,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 0.4479678413452115
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 170.9700516784007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 266.21144679877204,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 106.37383248401264,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 568.8540596599083,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 568.8540596599074,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 568.8540596599082,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 568.8540596599088,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.8300914999563247,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 16.5834698677063,
+        "distal_width_mm": 15.8652372546494,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 27.954241732135415,
+        "housing_width_mm": 23.805037781596184,
+        "proximal_section_length_mm": 25.546869901940227,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 13.236708521842957
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_009",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_009/kfde_check.json",
+      "kfde_check_sha256": "85486e9dc35d8d7dfabe2cf82568dba2f6d1a0b09129831b38adab1943ae9222",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 353.53055008332717,
+      "kfde_runtime_seconds": 1.1010620999732055,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 60.307539223329556,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 170.9700516784007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 66.6038559337737,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 45.2210287688802,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 353.530550083327,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 353.5305500833269,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 353.53055008332717,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 353.53055008332706,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.8308744999812916,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 18.470882788300514,
+        "distal_width_mm": 9.785382308065891,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 18.871563225984573,
+        "housing_width_mm": 23.0885020904243,
+        "proximal_section_length_mm": 22.012483136728406,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 10.9359534047544
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_010",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_010/kfde_check.json",
+      "kfde_check_sha256": "9f2aec6e626bf64b0a120a3ef221abcbcd9383a0f7f5616527d29b093c82cc25",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 506.3096210438293,
+      "kfde_runtime_seconds": 0.9290239999536425,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 142.04022395311395,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_01",
+          "forbidden_intersection_mm3": 0.20914183751677617,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -1.498074274628466
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 163.67377706909954,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 71.31789427729103,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 66.26984077709739,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 506.30962104382894,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 506.30962104382917,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 506.30962104382905,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 506.3096210438293,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.5601935000158846,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 14.729412332177162,
+        "distal_width_mm": 17.009026784449816,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 21.15340020880103,
+        "housing_width_mm": 13.419373832643032,
+        "proximal_section_length_mm": 26.525832066312432,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 5.0078966319561005
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_011",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_011/kfde_check.json",
+      "kfde_check_sha256": "416f0841fd95cca204ae5b8e261df727ef24c841a37c70351671cd5d36d23954",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 402.31551605265975,
+      "kfde_runtime_seconds": 0.984913099964615,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 100.26259766309585,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 66.6038559337737,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 177.12727021097325,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 402.3155160207929,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 402.31550651053516,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 402.31551605265975,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 402.3155067549269,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.7005503000109456,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 10.015373975038528,
+        "distal_width_mm": 21.83880167081952,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 13.403055118396878,
+        "housing_width_mm": 16.088480211794376,
+        "proximal_section_length_mm": 18.868228524923325,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 14.262203719466925
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_012",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_012/kfde_check.json",
+      "kfde_check_sha256": "87466339da3f249ebae1b1bb4a7c2626787c6fdf058c4f1a83d7584ddd5e64d0",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 603.6765131998416,
+      "kfde_runtime_seconds": 1.0834992000018246,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 288.03542514188376,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_01",
+          "forbidden_intersection_mm3": 39.89990017695651,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -1.498074274628466
+        },
+        {
+          "component_id": "L03_J03_04",
+          "forbidden_intersection_mm3": 72.67067585896696,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 0.4479678413452115
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 170.9700516784007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 189.6260896501937,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 420.31292764664704,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 603.6764979100883,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 603.6765131998412,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 603.6764997022427,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 603.6765131998416,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.7790241000475362,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 22.757302194833755,
+        "distal_width_mm": 14.621516652405262,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 24.689286632463336,
+        "housing_width_mm": 20.41940864548087,
+        "proximal_section_length_mm": 30.105149962008,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 8.340818852186203
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_013",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_013/kfde_check.json",
+      "kfde_check_sha256": "44ff3d4ec56136354fe0eedd0415399d2e80607faa1e94a3e94fd534d5e5a627",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 440.5062744391287,
+      "kfde_runtime_seconds": 1.0286991000175476,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 31.875109131695528,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 66.6038559337737,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 56.31919730843605,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 440.50627443912845,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 440.50627443912856,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 440.5062744391285,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 440.5062744391287,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.769672900030855,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 17.91084285080433,
+        "distal_width_mm": 12.313191840425134,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 10.884056560695171,
+        "housing_width_mm": 18.700548611581326,
+        "proximal_section_length_mm": 27.673544455319643,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 8.534213654696941
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_014",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_014/kfde_check.json",
+      "kfde_check_sha256": "4560d12d76471e8e6b84c8bb7ca995b0c3676f5de57dbdaa75e15d78cc0b2b25",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 517.0761740479501,
+      "kfde_runtime_seconds": 1.219370499951765,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 342.38076358172145,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_01",
+          "forbidden_intersection_mm3": 67.09051491625257,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -1.498074274628466
+        },
+        {
+          "component_id": "L03_J03_04",
+          "forbidden_intersection_mm3": 125.42991963528007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 0.4479678413452115
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 170.9700516784007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 237.60282940808548,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 104.0978142305135,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 517.0761740479473,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 517.0697467650617,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 517.0761740479501,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 517.069883626744,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.9252598999883048,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 13.168426349759102,
+        "distal_width_mm": 19.08949395827949,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 26.602241102606058,
+        "housing_width_mm": 14.309034626930952,
+        "proximal_section_length_mm": 23.378731798380613,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 14.818811107426882
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_015",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_015/kfde_check.json",
+      "kfde_check_sha256": "7e1f72559561889f6f1203582e0025ef7dc9a108c5a2d45b57429d2389189b24",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 276.0039306389015,
+      "kfde_runtime_seconds": 0.8231707999948412,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 0.0007166261166367985,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 111.61213295569627,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 37.70852825196711,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 42.19070483980415,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 276.0039306386156,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 276.00393063889334,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 276.0039306363083,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 276.0039306389015,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.5239001999725588,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 9.571421951055527,
+        "distal_width_mm": 16.064353166148067,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 14.700094351544976,
+        "housing_width_mm": 11.700583424419165,
+        "proximal_section_length_mm": 31.47287398390472,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 5.95117699354887
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    },
+    {
+      "active_parameters": [
+        "housing_width_mm",
+        "housing_height_mm",
+        "proximal_section_length_mm",
+        "transition_length_mm",
+        "distal_width_mm",
+        "distal_height_mm"
+      ],
+      "cad_build_success": true,
+      "candidate_id": "candidate_016",
+      "contour_term": null,
+      "kfde_check_path": "experiments/try6/artifacts/try6_0_c2/solver/candidate_016/kfde_check.json",
+      "kfde_check_sha256": "8c9d8f25c3b8704846a62048fa61f66bef603a45ca05c4784e721d1fbc610c7b",
+      "kfde_evaluated": true,
+      "kfde_feasible": false,
+      "kfde_max_forbidden_intersection_mm3": 366.65838792557963,
+      "kfde_runtime_seconds": 1.1201259000226855,
+      "kfde_violating_components": [
+        {
+          "component_id": "L03_J03_00",
+          "forbidden_intersection_mm3": 158.12577231731535,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -2.1467549799530254
+        },
+        {
+          "component_id": "L03_J03_01",
+          "forbidden_intersection_mm3": 2.0306914526366433,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": -1.498074274628466
+        },
+        {
+          "component_id": "L03_J03_04",
+          "forbidden_intersection_mm3": 0.9736205681871232,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 0.4479678413452115
+        },
+        {
+          "component_id": "L03_J03_05",
+          "forbidden_intersection_mm3": 170.9700516784007,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.0966485466697709
+        },
+        {
+          "component_id": "L03_J03_06",
+          "forbidden_intersection_mm3": 85.43458492507426,
+          "joint_id": "J03",
+          "link_id": "L03",
+          "q_rad": 1.7453292519943295
+        },
+        {
+          "component_id": "L05_FIXED_J04_00",
+          "forbidden_intersection_mm3": 133.18200630947902,
+          "joint_id": "FIXED_J04",
+          "link_id": "L05",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_00",
+          "forbidden_intersection_mm3": 366.65837969001984,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 0.0
+        },
+        {
+          "component_id": "L06_J05_01",
+          "forbidden_intersection_mm3": 366.65838792557963,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 1.5707963267948966
+        },
+        {
+          "component_id": "L06_J05_02",
+          "forbidden_intersection_mm3": 366.6583791755187,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 3.141592653589793
+        },
+        {
+          "component_id": "L06_J05_03",
+          "forbidden_intersection_mm3": 366.6583879255795,
+          "joint_id": "J05",
+          "link_id": "L06",
+          "q_rad": 4.71238898038469
+        }
+      ],
+      "landmark_term": null,
+      "profile_term": null,
+      "rejection_reason": "hard forbidden intersection exceeds predeclared numerical tolerance",
+      "render_success": false,
+      "runtime_seconds": 1.8699692000518553,
+      "status": "KFDE_REJECTED",
+      "theta": {
+        "distal_height_mm": 21.31435725092888,
+        "distal_width_mm": 9.281584778800607,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 21.413884362205863,
+        "housing_width_mm": 21.30901274830103,
+        "proximal_section_length_mm": 20.017843520268798,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 12.242675233632326
+      },
+      "total_visual_objective": null,
+      "visual_objective_evaluated": false
+    }
+  ],
+  "infrastructure_failures": 0,
+  "kfde_evaluations": 17,
+  "kfde_rejects": 17,
+  "max_proposals": 32,
+  "no_new_vlm_call": true,
+  "solver_runtime_seconds": 29.19016759999795,
+  "visual_objective_evaluations": 0,
+  "visual_renders": 0
+}

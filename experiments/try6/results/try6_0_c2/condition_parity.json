@@ -1,0 +1,104 @@
+{
+  "active_ids": [
+    "housing_width_mm",
+    "housing_height_mm",
+    "proximal_section_length_mm",
+    "transition_length_mm",
+    "distal_width_mm",
+    "distal_height_mm"
+  ],
+  "active_parameters_sha256": "88586c7140fa47d3685b029424fe64783e2a46be17b3c08abfd794e0735bdb10",
+  "cad_compiler_sha256": "ddbffdcd3742c8a310ca259043e4d539a9db094a637c584f6310feab07d9139b",
+  "engineering_text_sha256": "faeab10da52c3894b26301640a885f38081c482b7b0c92d766b415dff4583edb",
+  "geometry_evaluator_sha256": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa",
+  "kfdg_sha256": "832169747f0f8fcd2a6370f314d891d310fb674c5199a31731e79bacba703e2b",
+  "mechanical_evaluator_sha256": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec",
+  "no_new_vlm_call": true,
+  "only_method_increment": "hard KFDE feasibility before visual ranking",
+  "optimizer_config": {
+    "candidate_timeout_seconds": 90,
+    "convergence_tolerance": 0.0001,
+    "invalid_candidate_penalty": 10.0,
+    "max_candidate_evaluations": 32,
+    "max_runtime_seconds": 240,
+    "max_stale_evaluations": 6,
+    "optimizer": "seeded_bounded_sobol_then_coordinate_search",
+    "seed": 20260923
+  },
+  "optimizer_config_sha256": "2180884647824d6aea321a7b0a7ca7b087c93d4a0a2e0ddc676822d11fde7849",
+  "parameter_bounds": {
+    "distal_height_mm": [
+      8.0,
+      24.0
+    ],
+    "distal_width_mm": [
+      8.0,
+      22.0
+    ],
+    "housing_height_mm": [
+      10.0,
+      28.0
+    ],
+    "housing_width_mm": [
+      10.0,
+      24.0
+    ],
+    "proximal_section_length_mm": [
+      18.0,
+      32.0
+    ],
+    "transition_length_mm": [
+      4.0,
+      16.0
+    ]
+  },
+  "parameter_initial_values": {
+    "distal_height_mm": 12.0,
+    "distal_width_mm": 14.0,
+    "fillet_radius_mm": 1.0,
+    "housing_height_mm": 16.0,
+    "housing_width_mm": 17.0,
+    "proximal_section_length_mm": 24.0,
+    "recess_depth_mm": 4.0,
+    "recess_length_mm": 12.0,
+    "transition_length_mm": 10.0
+  },
+  "raw_image_hashes": {
+    "front": {
+      "path": "experiments/try5A/inputs/images/front.png",
+      "sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc"
+    },
+    "isometric": {
+      "path": "experiments/try5A/inputs/images/isometric.png",
+      "sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed"
+    },
+    "left": {
+      "path": "experiments/try5A/inputs/images/left.png",
+      "sha256": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca"
+    },
+    "rear": {
+      "path": "experiments/try5A/inputs/images/rear.png",
+      "sha256": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428"
+    },
+    "right": {
+      "path": "experiments/try5A/inputs/images/right.png",
+      "sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098"
+    },
+    "top": {
+      "path": "experiments/try5A/inputs/images/top.png",
+      "sha256": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+    }
+  },
+  "sanitized_urdf_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+  "schema_version": "robotcad_try6_c2_parity_v1",
+  "slot_state_reused": true,
+  "slot_state_sha256": "e47f445686b7ea02f8cca55232f829df584accd7a9dde2546e80de55e9cd0471",
+  "status": "PASS",
+  "view_registration_sha256": "00a5ac45f8f46c2d5dd894efc3f39074028c568a1674da82bef0e00e543f9313",
+  "visual_evidence_sha256": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5",
+  "visual_objective_definition_sha256": "347945762dc9e455fe0b9fa9228bd9c98f98796b41ec4d3ab72e71b44f05960b",
+  "visual_objective_weights": {
+    "visible_contour_distance": 0.5,
+    "visible_profile_width": 0.5
+  }
+}

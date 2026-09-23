@@ -1,0 +1,14 @@
+{
+  "actual_proposals": 17,
+  "c1_replay_seconds": 31.980370299948845,
+  "cad_builds": 17,
+  "feasible_candidates": 0,
+  "formal_kfde_check_seconds": 17.12122519989498,
+  "formal_solver_seconds": 29.19016759999795,
+  "kfde_construction_seconds": 1.327119599969592,
+  "kfde_rejects": 17,
+  "manual_intervention_count": 0,
+  "renders": 0,
+  "total_wall_time_including_orchestration": null,
+  "visual_objective_evaluations": 0
+}
