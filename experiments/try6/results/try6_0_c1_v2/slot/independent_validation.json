@@ -1,0 +1,23 @@
+{
+  "active_parameters": [
+    "housing_width_mm",
+    "housing_height_mm",
+    "proximal_section_length_mm",
+    "transition_length_mm",
+    "distal_width_mm",
+    "distal_height_mm"
+  ],
+  "canonical_kfdg_valid": true,
+  "formal_holdout_evaluations": 0,
+  "fresh_calls": 1,
+  "gt_evaluations": 0,
+  "local_contract_valid": true,
+  "no_response_repair": true,
+  "raw_transport_valid": true,
+  "slot_statuses": {
+    "main_housing": "PRESENT",
+    "profile_transition": "PRESENT",
+    "visible_pocket": "ABSENT"
+  },
+  "status": "PASS"
+}

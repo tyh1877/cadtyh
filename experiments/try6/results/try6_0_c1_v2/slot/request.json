@@ -1,0 +1,113 @@
+{
+  "engineering_text_sha256": "faeab10da52c3894b26301640a885f38081c482b7b0c92d766b415dff4583edb",
+  "exact_request_path": "experiments/try6/artifacts/try6_0_c1_v2/slot/request_payload.json",
+  "exact_request_sha256": "e39b42c42307730ea979ce3231b2a7db29071725878e052724e87831a969ca59",
+  "image_hashes": {
+    "f0_front": "9de3c00f024a4356bf7f97179e86e2e8cefa4b3060e03d479ffc763ec505c74a",
+    "f0_isometric": "891bd2bfcc0a99d5263f02dadc787acf66a1936f28a9e233f101a761e92aec40",
+    "f0_left": "60246b92907dac8e537e29c6fae2fd55f0fec2f08903e90bdb3d9f044a7eb9ca",
+    "f0_rear": "b64d9d92b8673b649f27d31162d680493cfe8042e89bc9923da76c3ee345f4d4",
+    "f0_right": "efd4710efb3fd4f0e464bf084cc12f7d4c423699492a4ac73f8c54d632305d4e",
+    "f0_top": "c75ea26cd48ea9f6e62093957dcb20686bb85682e0cb86548e67f5428eae1865",
+    "front": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc",
+    "isometric": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed",
+    "left": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca",
+    "rear": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428",
+    "right": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+    "top": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+  },
+  "prompt_sha256": "298e7e748f141dc6c0261e1ef4ee098d0b407438438176937661dfa72dfe96bb",
+  "response_format": {
+    "json_schema": {
+      "name": "try6_c1_v2_l04_slots",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "properties": {
+          "link_id": {
+            "enum": [
+              "L04"
+            ],
+            "type": "string"
+          },
+          "schema_version": {
+            "enum": [
+              "robotcad_slots_l04_r1_v3"
+            ],
+            "type": "string"
+          },
+          "slots": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "confidence": {
+                  "enum": [
+                    "HIGH",
+                    "MEDIUM",
+                    "LOW"
+                  ],
+                  "type": "string"
+                },
+                "evidence_views": {
+                  "items": {
+                    "enum": [
+                      "front",
+                      "isometric",
+                      "left",
+                      "right",
+                      "top",
+                      "rear",
+                      "f0_front",
+                      "f0_isometric",
+                      "f0_left",
+                      "f0_right",
+                      "f0_top",
+                      "f0_rear"
+                    ],
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "slot_id": {
+                  "enum": [
+                    "main_housing",
+                    "visible_pocket",
+                    "profile_transition"
+                  ],
+                  "type": "string"
+                },
+                "status": {
+                  "enum": [
+                    "PRESENT",
+                    "ABSENT",
+                    "UNCERTAIN"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "slot_id",
+                "status",
+                "evidence_views",
+                "confidence"
+              ],
+              "type": "object"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "type": "array"
+          }
+        },
+        "required": [
+          "schema_version",
+          "link_id",
+          "slots"
+        ],
+        "title": "Try-6 R1-v3 L04 closed-set visual evidence slots",
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  }
+}

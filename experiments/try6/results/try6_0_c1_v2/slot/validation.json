@@ -1,0 +1,46 @@
+{
+  "active_parameters": [
+    "housing_width_mm",
+    "housing_height_mm",
+    "proximal_section_length_mm",
+    "transition_length_mm",
+    "distal_width_mm",
+    "distal_height_mm"
+  ],
+  "contract_valid": true,
+  "formal_holdout_accessed": false,
+  "fresh_calls": 1,
+  "gt_accessed": false,
+  "http_status": 200,
+  "kfdg_valid": true,
+  "latency_seconds": 71.94845429999987,
+  "manual_intervention": 0,
+  "model_returned": "qwen3.7-plus",
+  "retry_count": 0,
+  "slot_statuses": {
+    "main_housing": "PRESENT",
+    "profile_transition": "PRESENT",
+    "visible_pocket": "ABSENT"
+  },
+  "status": "PASS",
+  "token_usage": {
+    "completion_tokens": 4013,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 3796,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 216
+    },
+    "prompt_tokens": 13366,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 0,
+      "image_tokens": 12565,
+      "text_tokens": 801
+    },
+    "total_tokens": 17379
+  },
+  "transport_valid": true
+}
