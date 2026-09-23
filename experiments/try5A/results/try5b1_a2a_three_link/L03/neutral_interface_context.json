@@ -1,0 +1,75 @@
+{
+  "link_id": "L03",
+  "interfaces": [
+    {
+      "joint_id": "J02",
+      "joint_type": "revolute",
+      "target_side": "child",
+      "origin_xyz_mm": [
+        35.0,
+        0.0,
+        100.0
+      ],
+      "origin_rpy_rad": [
+        3.141592653589793,
+        0.0,
+        0.0
+      ],
+      "axis_in_target_frame": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "motion_range": {
+        "lower": -1.6057029118347832,
+        "upper": 2.111848394913139,
+        "unit": "rad"
+      },
+      "allowed_dof": [
+        "rotation_about_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ]
+    },
+    {
+      "joint_id": "J03",
+      "joint_type": "revolute",
+      "target_side": "parent",
+      "origin_xyz_mm": [
+        100.0,
+        0.0,
+        0.0
+      ],
+      "origin_rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_in_target_frame": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "clearance_mm": 0.6,
+      "motion_range": {
+        "lower": -2.1467549799530254,
+        "upper": 1.7453292519943295,
+        "unit": "rad"
+      },
+      "allowed_dof": [
+        "rotation_about_axis"
+      ],
+      "constrained_dof": [
+        "all_except_allowed"
+      ]
+    }
+  ],
+  "excluded_labels": [
+    "interface_family",
+    "selection_reason",
+    "knowledge_source",
+    "motion_clearance_spec"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "robotcad_a2a_three_link_development_v1",
+  "experiment_id": "try5b1_a2a_same_model_three_link_development",
+  "phase": "formal_development_comparison",
+  "links": [
+    "L03",
+    "L04",
+    "L07"
+  ],
+  "conditions": [
+    "STRUCTURED_QWEN",
+    "DIRECT_QWEN"
+  ],
+  "model": {
+    "requested_identifier": "qwen3.7-plus",
+    "config_path": "go_nogo2/config/llm.local.toml",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "seed": 20260923,
+    "max_calls_per_link_condition": 1,
+    "max_refinement_rounds": 0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 300.0,
+    "sdk_retries": 0,
+    "technical_retries": 0,
+    "manual_interventions": 0
+  },
+  "prompt_freeze": {
+    "shared": "experiments/try5A/prompts/a2a_shared_l04_evidence.md",
+    "structured": "experiments/try5A/prompts/a2a_structured_qwen_l04.md",
+    "direct": "experiments/try5A/prompts/a2a_direct_qwen_l04.md",
+    "sha256": {
+      "shared": "2e54e71eb48cd2a603d187df895e3789fd9d4863a8aa224e593a599817a4c614",
+      "structured": "8337fba8357d09347760c0d4b0b35316986dba58fe89654363717509da3207fb",
+      "direct": "66ee2e3656006bf01ef853a135f3c07637e86cf93a891a450f875dad75e5b855"
+    },
+    "version": "A2a-L04-audited-v1",
+    "substitution_rule": "Replace the literal L04 Link identifier with L03, L04, or L07; make no other template edit"
+  },
+  "shared_inputs": {
+    "raw_images": "experiments/try5A/inputs/images",
+    "image_views": [
+      "front",
+      "isometric",
+      "left",
+      "right",
+      "top",
+      "rear"
+    ],
+    "engineering_text": "experiments/try5A/inputs/engineering_text/robot_A.md",
+    "sanitized_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+    "f0_fcstd_pattern": "experiments/try5A/artifacts/try5a5/round3_verified/links/{link_id}/model.FCStd",
+    "interface_contracts": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+    "development_input": "experiments/try5A/protocol/try5b1_a1_development_input.json",
+    "holdout_lock": "experiments/try5A/results/try5b1_a1_frozen_scaffold/formal_holdout_lock.json",
+    "frozen_nonpilot_root": "experiments/try5A/artifacts/try5a5/round3_verified/links",
+    "scaffold_policy": {
+      "protected_interface_cuts": true,
+      "distal_clearance_cut": true,
+      "preserve_frozen_scaffold": true,
+      "auto_attachment_closure": false
+    },
+    "joint_sweeps": {
+      "L03": [
+        "J02",
+        "J03"
+      ],
+      "L04": [
+        "J03"
+      ],
+      "L07": []
+    },
+    "canonical_pose_source": "experiments/try5A/protocol/try5b1_a1_development_input.json",
+    "geometry_sample_count": 10000
+  },
+  "historical_frozen_try5": "context_only",
+  "gt_generator_access": false,
+  "formal_holdout_access": false,
+  "failure_policy": "Every condition remains in the denominator; no result-conditioned retry or CAD edit",
+  "stop_rule": "STOP_AFTER_THREE_LINK_DEVELOPMENT_AUDIT"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "READY",
+  "experiment_id": "try5b1_a2a_same_model_three_link_development",
+  "config_sha256": "2f6671f5785c895b0775da96ffb569017e3c3d3d23e7ad7df1eb784111964b73",
+  "implementation_commit": "030402d471eb0450f1b7da33ef7006a77a788e2a",
+  "prompt_hashes": {
+    "shared": "2e54e71eb48cd2a603d187df895e3789fd9d4863a8aa224e593a599817a4c614",
+    "structured": "8337fba8357d09347760c0d4b0b35316986dba58fe89654363717509da3207fb",
+    "direct": "66ee2e3656006bf01ef853a135f3c07637e86cf93a891a450f875dad75e5b855"
+  },
+  "model_config": {
+    "provider": "alibaba_model_studio",
+    "api_key": "<configured>",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "model": "qwen3.7-plus",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_output_tokens": 32768,
+    "timeout_seconds": 300.0,
+    "max_retries": 0,
+    "config_version": "1.0",
+    "shared_by": [
+      "direct_frontier_mllm",
+      "cadir_simplecad"
+    ]
+  },
+  "sdk_version": "2.53.0",
+  "freecad_version": ["1", "1", "1", "20260414 (Git shallow)", "Unknown", "2026/04/14 22:09:59", "(HEAD detached at 0108fd4b4)", "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"],
+  "development_input_sha256": "e6a870772d7fe835063acdb7ba8d680ce441dc966a3b7b790fe5391732527a05",
+  "holdout_lock": {
+    "case_ids_sha256": "7f45cdaea2e865e8de80e27e285aad17a591a7ba544f993239d2d10786e2718d",
+    "accessed": false,
+    "evaluation_count": 0
+  },
+  "runner_sha256": "6799b5edfb656b0c1f62f4883b1be42247f04f579cbd9f0bc3cb0bb74147b483",
+  "method_helper_sha256": "af6af130232900d12cd57cc101c8d0941f26489dc9c10d43487429e1c2563283",
+  "worker_sha256": "021e3299d4f7c2bd0fda01ca54667d38d1215eedae393fe5c39d46f19b1b168e",
+  "direct_executor_sha256": "62143c7e04b4094cde630f3019f8ae7969c231628f4d0d360b91c4f749299985",
+  "exact_evaluator_sha256": "085e1a0509ebe262645deb5c32d42486537a9b9b775ba49af8c1e7de3d774dec",
+  "geometry_evaluator_sha256": "c93e712d5a69ac7f67496852ed03531f20b0ecee5ca4a7f86db9b9bef924b0aa"
+}

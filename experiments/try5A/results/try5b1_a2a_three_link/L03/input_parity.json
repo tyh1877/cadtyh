@@ -1,0 +1,15 @@
+{
+  "link_id": "L03",
+  "status": "PASS",
+  "shared_input_sha256": "c7d326176350872022da03ded4c864cf30bd06a3d1659d7edf16dca34a72fc5e",
+  "f0_fcstd_sha256": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+  "f0_brep_sha256": "70f0d309c59a33648ba07393875dade71b05c9ca16a770682df6e5d77d953237",
+  "identical_user_text_and_attachments": true,
+  "scaffold_policy": {
+    "protected_interface_cuts": true,
+    "distal_clearance_cut": true,
+    "preserve_frozen_scaffold": true,
+    "auto_attachment_closure": false
+  },
+  "gt_in_generator": false
+}

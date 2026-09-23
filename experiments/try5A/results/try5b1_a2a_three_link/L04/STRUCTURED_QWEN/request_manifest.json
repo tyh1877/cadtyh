@@ -1,0 +1,56 @@
+{
+  "system": "You are participating in a controlled one-shot CAD refinement experiment. Use only supplied evidence. Return JSON only. Do not access evaluator data or historical Try-5 refinement artifacts.\n\n# Structured-Qwen method prompt\n\nYou are the structured condition in a blinded CAD refinement experiment.\nDerive a fresh intermediate representation from the shared evidence in this\nrequest. You have no access to historical Try-5 plans, schemas, diagnoses,\nrefined CAD, metrics, or evaluator data.\n\nSelect exactly one supported executable body family and provide its complete\nschema:\n\n- `central_web`: `span_mm`, `thickness_mm`, `proximal_height_mm`,\n  `mid_height_mm`, optional `lateral_offset_mm`, `major_recess`;\n- `compound_profile_housing`: `span_mm`, `width_mm`, `height_mm`,\n  `major_recess`;\n- `gripper_support`: `span_mm`, `bar_width_mm`, `thickness_mm`,\n  `working_gap`.\n\nReturn JSON only with:\n\n```json\n{\n  \"visual_structural_analysis\": [],\n  \"body_family\": \"...\",\n  \"semantic_inventory\": {\n    \"required\": [], \"optional\": [], \"uncertain\": []\n  },\n  \"mechanical_topology\": {\n    \"nodes\": [], \"edges\": []\n  },\n  \"executable_geometry_schema\": {},\n  \"assumptions\": []\n}\n```\n\nDo not emit FreeCAD code. Do not mention or reconstruct historical F1/F2\nparameters. All numeric choices must be your own inference from the shared raw\nevidence.\n",
+  "user_text": "# Shared L04 evidence block\n\nBoth A2a conditions receive this block verbatim plus the same attached images.\n\n- Target: physical link L04 in the supplied sanitized URDF.\n- Starting artifact: the supplied frozen F0 L04 FreeCAD shape and its six\n  neutral renders. The variable `f0_shape` will be available during CAD\n  execution.\n- Preserve the supplied J03 and J04 numerical frames, axes, limits, and\n  clearances. Do not change URDF semantics.\n- The deterministic execution wrapper applies the same protected cuts and the\n  same frozen scaffold safeguard after the generated body is built.\n- Use millimetres in FreeCAD local link coordinates.\n- Hidden actuators, bearings, small fasteners, tiny holes, fillets, and\n  manufacturing tolerances are outside scope.\n- Produce one final answer. There is no evaluator feedback, repair call, or\n  human edit.\n\nThe request also includes, verbatim, the engineering text, sanitized URDF, and\nneutral numerical interface JSON. Six raw robot views and six neutral F0-link\nrenders are attached in the same order to both conditions.\n\n\n## Engineering text\n\n# Robot A engineering text\n\nPincherX-100 is a compact serial educational manipulator with a rotating base,\nshoulder and elbow pitch joints, a wrist pitch joint and a compact two-finger end\nstructure. Coarse reconstruction should preserve the base, rounded joint housing\nregions, upper-arm and forearm load paths, wrist block and opposed fingers. Small\nholes, cosmetic details and hidden drive components are outside Try-5A.\n\nThe URDF is authoritative for link topology, joint frames, axes and limits. Images\ninform broad envelopes, thickness, curved housing appearance and coarse body\nfamilies only.\n\n\n## Sanitized URDF\n\n```xml\n<?xml version='1.0' encoding='utf-8'?>\n<robot name=\"R01_sanitized\">\n  <link name=\"L00\" />\n  <link name=\"L01\" />\n  <link name=\"L02\" />\n  <link name=\"L03\" />\n  <link name=\"L04\" />\n  <link name=\"L05\" />\n  <link name=\"L06\" />\n  <link name=\"L07\" />\n  <link name=\"L08\" />\n  <link name=\"L09\" />\n  <link name=\"L10\" />\n  <link name=\"L11\" />\n  <joint name=\"J00\" type=\"revolute\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0.0508\" />\n    <axis xyz=\"0 0 1\" />\n    <limit effort=\"100\" lower=\"-3.141592653589793\" upper=\"3.141592653589793\" velocity=\"3.141592653589793\" />\n    <parent link=\"L00\" />\n    <child link=\"L01\" />\n  </joint>\n  <joint name=\"J01\" type=\"revolute\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0.04225\" />\n    <axis xyz=\"0 1 0\" />\n    <limit effort=\"100\" lower=\"-1.9373154697137058\" upper=\"1.8675022996339325\" velocity=\"3.141592653589793\" />\n    <parent link=\"L01\" />\n    <child link=\"L02\" />\n  </joint>\n  <joint name=\"J02\" type=\"revolute\">\n    <origin rpy=\"3.141592653589793 0 0\" xyz=\"0.035 0 0.1\" />\n    <axis xyz=\"0 1 0\" />\n    <limit effort=\"100\" lower=\"-1.6057029118347832\" upper=\"2.111848394913139\" velocity=\"3.141592653589793\" />\n    <parent link=\"L02\" />\n    <child link=\"L03\" />\n  </joint>\n  <joint name=\"J03\" type=\"revolute\">\n    <origin rpy=\"0 0 0\" xyz=\"0.1 0 0\" />\n    <axis xyz=\"0 1 0\" />\n    <limit effort=\"100\" lower=\"-2.1467549799530254\" upper=\"1.7453292519943295\" velocity=\"3.141592653589793\" />\n    <parent link=\"L03\" />\n    <child link=\"L04\" />\n  </joint>\n  <joint name=\"J04\" type=\"fixed\">\n    <origin rpy=\"-3.141592653589793 0 0\" xyz=\"0.063 0 0\" />\n    <axis xyz=\"1 0 0\" />\n    <parent link=\"L04\" />\n    <child link=\"L05\" />\n  </joint>\n  <joint name=\"J05\" type=\"continuous\">\n    <origin rpy=\"0 0 0\" xyz=\"0.0055 0 0\" />\n    <axis xyz=\"1 0 0\" />\n    <limit effort=\"100\" velocity=\"3.141592653589793\" />\n    <parent link=\"L05\" />\n    <child link=\"L06\" />\n  </joint>\n  <joint name=\"J06\" type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n    <axis xyz=\"1 0 0\" />\n    <parent link=\"L05\" />\n    <child link=\"L07\" />\n  </joint>\n  <joint name=\"J07\" type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.023 0 0\" />\n    <axis xyz=\"1 0 0\" />\n    <parent link=\"L07\" />\n    <child link=\"L08\" />\n  </joint>\n  <joint name=\"J08\" type=\"prismatic\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n    <axis xyz=\"0 1 0\" />\n    <limit effort=\"10\" lower=\"0.015\" upper=\"0.037\" velocity=\"1\" />\n    <parent link=\"L08\" />\n    <child link=\"L09\" />\n  </joint>\n  <joint name=\"J09\" type=\"prismatic\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n    <axis xyz=\"0 1 0\" />\n    <limit effort=\"10\" lower=\"-0.037\" upper=\"-0.015\" velocity=\"1\" />\n    <parent link=\"L08\" />\n    <child link=\"L10\" />\n    <mimic joint=\"J08\" multiplier=\"-1\" offset=\"0\" />\n  </joint>\n  <joint name=\"J10\" type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0.027575 0 0\" />\n    <axis xyz=\"1 0 0\" />\n    <parent link=\"L08\" />\n    <child link=\"L11\" />\n  </joint>\n</robot>\n```\n\n## Neutral interface context\n\n```json\n{\n  \"link_id\": \"L04\",\n  \"interfaces\": [\n    {\n      \"joint_id\": \"J03\",\n      \"joint_type\": \"revolute\",\n      \"target_side\": \"child\",\n      \"origin_xyz_mm\": [\n        100.0,\n        0.0,\n        0.0\n      ],\n      \"origin_rpy_rad\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"axis_in_target_frame\": [\n        0.0,\n        1.0,\n        0.0\n      ],\n      \"clearance_mm\": 0.6,\n      \"motion_range\": {\n        \"lower\": -2.1467549799530254,\n        \"upper\": 1.7453292519943295,\n        \"unit\": \"rad\"\n      },\n      \"allowed_dof\": [\n        \"rotation_about_axis\"\n      ],\n      \"constrained_dof\": [\n        \"all_except_allowed\"\n      ]\n    },\n    {\n      \"joint_id\": \"J04\",\n      \"joint_type\": \"fixed\",\n      \"target_side\": \"parent\",\n      \"origin_xyz_mm\": [\n        63.0,\n        0.0,\n        0.0\n      ],\n      \"origin_rpy_rad\": [\n        -3.141592653589793,\n        0.0,\n        0.0\n      ],\n      \"axis_in_target_frame\": [\n        1.0,\n        0.0,\n        0.0\n      ],\n      \"clearance_mm\": 0.6,\n      \"motion_range\": {\n        \"lower\": 0,\n        \"upper\": 0,\n        \"unit\": \"fixed\"\n      },\n      \"allowed_dof\": [],\n      \"constrained_dof\": [\n        \"all_six\"\n      ]\n    }\n  ],\n  \"excluded_labels\": [\n    \"interface_family\",\n    \"selection_reason\",\n    \"knowledge_source\",\n    \"motion_clearance_spec\"\n  ]\n}\n```\n\n## Starting F0 shape record\n\n```json\n{\n  \"status\": \"PASS\",\n  \"mode\": \"export_f0\",\n  \"shape\": {\n    \"valid\": true,\n    \"volume_mm3\": 9698.134201036422,\n    \"solid_count\": 1,\n    \"face_count\": 22,\n    \"bbox_size_mm\": [\n      76.49642559300939,\n      18.0,\n      23.0\n    ]\n  }\n}\n```\n",
+  "attachments": [
+    {
+      "path": "experiments/try5A/inputs/images/front.png",
+      "sha256": "5e7afcf4307cb1a76bbba7fd16e2419db74b4ea6a1fb1768a8cf9f15a6d16bdc"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/isometric.png",
+      "sha256": "d0dcb6e174d70fe59e4f48e83d938abbd275a8c393eb65406ee13e127ac5f2ed"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/left.png",
+      "sha256": "4c5adac5311304ae70ac99b08effef488c8b846b1851d67cf4e37b88e913d3ca"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/right.png",
+      "sha256": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/top.png",
+      "sha256": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+    },
+    {
+      "path": "experiments/try5A/inputs/images/rear.png",
+      "sha256": "cb043c719a6673b9e182c3d0c949005d60a1a3d00d9b584712fb1637a876e428"
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/shared/L04/renders/front.png",
+      "sha256": "9de3c00f024a4356bf7f97179e86e2e8cefa4b3060e03d479ffc763ec505c74a"
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/shared/L04/renders/isometric.png",
+      "sha256": "891bd2bfcc0a99d5263f02dadc787acf66a1936f28a9e233f101a761e92aec40"
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/shared/L04/renders/left.png",
+      "sha256": "60246b92907dac8e537e29c6fae2fd55f0fec2f08903e90bdb3d9f044a7eb9ca"
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/shared/L04/renders/right.png",
+      "sha256": "efd4710efb3fd4f0e464bf084cc12f7d4c423699492a4ac73f8c54d632305d4e"
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/shared/L04/renders/top.png",
+      "sha256": "c75ea26cd48ea9f6e62093957dcb20686bb85682e0cb86548e67f5428eae1865"
+    },
+    {
+      "path": "experiments/try5A/artifacts/try5b1_a2a_three_link/shared/L04/renders/rear.png",
+      "sha256": "b64d9d92b8673b649f27d31162d680493cfe8042e89bc9923da76c3ee345f4d4"
+    }
+  ],
+  "template_sha256": "8337fba8357d09347760c0d4b0b35316986dba58fe89654363717509da3207fb",
+  "prompt_version": "A2a-L04-audited-v1"
+}
