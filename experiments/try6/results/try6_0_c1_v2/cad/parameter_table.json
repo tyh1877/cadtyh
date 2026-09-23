@@ -1,0 +1,28 @@
+{
+  "active_parameters": [
+    "housing_width_mm",
+    "housing_height_mm",
+    "proximal_section_length_mm",
+    "transition_length_mm",
+    "distal_width_mm",
+    "distal_height_mm"
+  ],
+  "final_cad_path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.FCStd",
+  "frozen_parameters": [
+    "recess_length_mm",
+    "recess_depth_mm",
+    "fillet_radius_mm"
+  ],
+  "sheet": "ParameterTable",
+  "theta_star": {
+    "distal_height_mm": 22.140909203886984,
+    "distal_width_mm": 17.38176517443359,
+    "fillet_radius_mm": 1.0,
+    "housing_height_mm": 12.03800277272582,
+    "housing_width_mm": 24.0,
+    "proximal_section_length_mm": 32.0,
+    "recess_depth_mm": 4.0,
+    "recess_length_mm": 12.0,
+    "transition_length_mm": 16.0
+  }
+}

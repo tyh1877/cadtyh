@@ -1,0 +1,54 @@
+{
+  "connected_solid_count": 1,
+  "final_cad_artifacts": {
+    "body_only.stl": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/body_only.stl",
+      "sha256": "1e901225270033564974bc00aaf5f5a03cd1538df05bc34d02cf90d95ef5efdb"
+    },
+    "final.FCStd": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.FCStd",
+      "sha256": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411"
+    },
+    "final.step": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.step",
+      "sha256": "d2997ad362e3d95fd74bfd9c9fdbddeabb11bb538003ff1d7428157d093e219f"
+    },
+    "final.stl": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.stl",
+      "sha256": "2fc6917a15793b5b8475f74606a76d00810e3d5043b342944544f2d0106249ef"
+    }
+  },
+  "formal_holdout_accessed_at_lock": false,
+  "gt_evaluation_count_at_lock": 0,
+  "interface_invariant": true,
+  "kfdg_sha256": "832169747f0f8fcd2a6370f314d891d310fb674c5199a31731e79bacba703e2b",
+  "link_id": "L04",
+  "objective_definition_sha256": "347945762dc9e455fe0b9fa9228bd9c98f98796b41ec4d3ab72e71b44f05960b",
+  "raw_slot_response_sha256": "9ae117ea92c345692bc57cd213199cabed1666e73cb498f496e82b182d2b581e",
+  "schema_version": "robotcad_try6_c1_v2_final_candidate_lock_v1",
+  "selected_candidate_id": "candidate_031",
+  "selection_used_only_visual_objective": true,
+  "slot_statuses": {
+    "main_housing": "PRESENT",
+    "profile_transition": "PRESENT",
+    "visible_pocket": "ABSENT"
+  },
+  "solver_config_sha256": "2180884647824d6aea321a7b0a7ca7b087c93d4a0a2e0ddc676822d11fde7849",
+  "solver_history_sha256": "2a7dd3472526f180111de6f2597f9bbe224dc0a046e4e6ca5dca3cc263f22de6",
+  "theta_selection_sha256": "9d5ffcf14db18bac48c9b9160835030af3d432137e6e298b833146b946936dc5",
+  "theta_sha256": "07138d5cfc939037574c81ab377d2ef78aec92175a228800e06f8e188758979c",
+  "theta_star": {
+    "distal_height_mm": 22.140909203886984,
+    "distal_width_mm": 17.38176517443359,
+    "fillet_radius_mm": 1.0,
+    "housing_height_mm": 12.03800277272582,
+    "housing_width_mm": 24.0,
+    "proximal_section_length_mm": 32.0,
+    "recess_depth_mm": 4.0,
+    "recess_length_mm": 12.0,
+    "transition_length_mm": 16.0
+  },
+  "timestamp_utc": "2026-09-23T09:41:35.363144+00:00",
+  "view_registration_sha256": "00a5ac45f8f46c2d5dd894efc3f39074028c568a1674da82bef0e00e543f9313",
+  "visual_evidence_sha256": "67d9547d80b81e59cfdcab704043dd094f856fa1977c8eee869ba3e4e7220af5"
+}

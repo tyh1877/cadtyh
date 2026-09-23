@@ -1,0 +1,124 @@
+{
+  "artifacts": {
+    "body_only.stl": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/body_only.stl",
+      "sha256": "1e901225270033564974bc00aaf5f5a03cd1538df05bc34d02cf90d95ef5efdb"
+    },
+    "final.FCStd": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.FCStd",
+      "sha256": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411"
+    },
+    "final.step": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.step",
+      "sha256": "d2997ad362e3d95fd74bfd9c9fdbddeabb11bb538003ff1d7428157d093e219f"
+    },
+    "final.stl": {
+      "path": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.stl",
+      "sha256": "2fc6917a15793b5b8475f74606a76d00810e3d5043b342944544f2d0106249ef"
+    }
+  },
+  "build_runtime_seconds": 1.1852369999978691,
+  "feature_tree": [
+    {
+      "faces": 6,
+      "name": "MainHousingPad",
+      "solids": 1,
+      "type_id": "PartDesign::Pad",
+      "valid": true,
+      "volume_mm3": 9245.186129453441
+    },
+    {
+      "faces": 6,
+      "name": "ProfileTransitionLoft",
+      "solids": 1,
+      "type_id": "Part::Loft",
+      "valid": true,
+      "volume_mm3": 10756.456094535317
+    },
+    {
+      "faces": 10,
+      "name": "HousingWithTransition",
+      "solids": 1,
+      "type_id": "Part::Fuse",
+      "valid": true,
+      "volume_mm3": 20001.642223988758
+    },
+    {
+      "faces": 12,
+      "name": "FrozenProximalBore",
+      "solids": 1,
+      "type_id": "Part::Cut",
+      "valid": true,
+      "volume_mm3": 19513.061734502473
+    },
+    {
+      "faces": 20,
+      "name": "FrozenMatingEnvelopeCut",
+      "solids": 1,
+      "type_id": "Part::Cut",
+      "valid": true,
+      "volume_mm3": 18772.872456319492
+    },
+    {
+      "faces": 36,
+      "name": "RigidGroup",
+      "solids": 1,
+      "type_id": "Part::Fuse",
+      "valid": true,
+      "volume_mm3": 22852.281154010434
+    }
+  ],
+  "final_solid_count": 1,
+  "gt_accessed": false,
+  "interface_invariant": true,
+  "protected_shape_signatures": {
+    "FrozenMatingEnvelopeTool": {
+      "bbox_mm": [
+        -16.0,
+        -12.0,
+        -16.0,
+        16.0,
+        12.0,
+        16.0
+      ],
+      "brep_sha256": "a062d2b970fe5b2332a0483847514b91fdf2bd24ab2b49dc37f925f46517bea4",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5013.667715863949
+    },
+    "FrozenProximalBoreTool": {
+      "bbox_mm": [
+        -3.6,
+        -13.0,
+        -3.6,
+        3.6,
+        13.0,
+        3.6
+      ],
+      "brep_sha256": "d3d6b43280516ba08e16bff16abf167473c2ad693b6257ccd873c91a20d59eed",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 1058.5910605536167
+    },
+    "FrozenScaffold": {
+      "bbox_mm": [
+        -11.5,
+        -9.0,
+        -11.5,
+        65.0,
+        9.0,
+        11.5
+      ],
+      "brep_sha256": "2795b2ed6d565bb4e3971e323ffe845599a57d46fffd98f2faf64c7106b79411",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 9698.134201036422
+    }
+  },
+  "reopen": {
+    "tree_nodes": 23,
+    "valid": true,
+    "volume_mm3": 22852.28115401043
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,99 @@
+{
+  "deferred_features": {
+    "fillet": "disabled in R0: historical Edge1 reference was topologically fragile; no validated semantic selector yet"
+  },
+  "feature_tree": [
+    {
+      "faces": 6,
+      "name": "MainHousingPad",
+      "solids": 1,
+      "type_id": "PartDesign::Pad",
+      "valid": true,
+      "volume_mm3": 9245.186129453441
+    },
+    {
+      "faces": 6,
+      "name": "ProfileTransitionLoft",
+      "solids": 1,
+      "type_id": "Part::Loft",
+      "valid": true,
+      "volume_mm3": 10756.456094535317
+    },
+    {
+      "faces": 10,
+      "name": "HousingWithTransition",
+      "solids": 1,
+      "type_id": "Part::Fuse",
+      "valid": true,
+      "volume_mm3": 20001.642223988758
+    },
+    {
+      "faces": 12,
+      "name": "FrozenProximalBore",
+      "solids": 1,
+      "type_id": "Part::Cut",
+      "valid": true,
+      "volume_mm3": 19513.061734502473
+    },
+    {
+      "faces": 20,
+      "name": "FrozenMatingEnvelopeCut",
+      "solids": 1,
+      "type_id": "Part::Cut",
+      "valid": true,
+      "volume_mm3": 18772.872456319492
+    },
+    {
+      "faces": 36,
+      "name": "RigidGroup",
+      "solids": 1,
+      "type_id": "Part::Fuse",
+      "valid": true,
+      "volume_mm3": 22852.281154010434
+    }
+  ],
+  "final_reopen": {
+    "tree_nodes": 23,
+    "valid": true,
+    "volume_mm3": 22852.28115401043
+  },
+  "kfdg_path": "experiments/try6/results/try6_0_c1_v2/kfdg/canonical_kfdg.json",
+  "kfdg_to_cad": {
+    "distal_mount_port": [
+      "ProfileTransitionLoft"
+    ],
+    "housing_01": [
+      "MainHousingSketch",
+      "MainHousingPad"
+    ],
+    "proximal_joint_port": [
+      "FrozenProximalBore",
+      "FrozenMatingEnvelopeCut"
+    ],
+    "scaffold_safeguard": [
+      "FrozenScaffold",
+      "RigidGroup"
+    ],
+    "transition_01": [
+      "TransitionStart",
+      "TransitionMiddle",
+      "TransitionEnd",
+      "ProfileTransitionLoft"
+    ]
+  },
+  "parameter_binding": {
+    "builder_source": "experiments/try6/scripts/freecad_c1_builder.py",
+    "sheet": "ParameterTable",
+    "values": {
+      "distal_height_mm": 22.140909203886984,
+      "distal_width_mm": 17.38176517443359,
+      "fillet_radius_mm": 1.0,
+      "housing_height_mm": 12.03800277272582,
+      "housing_width_mm": 24.0,
+      "proximal_section_length_mm": 32.0,
+      "recess_depth_mm": 4.0,
+      "recess_length_mm": 12.0,
+      "transition_length_mm": 16.0
+    }
+  }
+}
