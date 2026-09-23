@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "constraints": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "interface_fixed",
+              "coaxial",
+              "parallel",
+              "minimum_wall",
+              "profile_continuity",
+              "connected_to"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "source",
+          "target",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "functional_nodes": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "joint_port",
+              "mount_port",
+              "joint_axis"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "geometric_features": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "parameter_refs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "type": {
+            "enum": [
+              "housing",
+              "profile_transition",
+              "pocket",
+              "bore",
+              "fillet"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "parameter_refs"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "link_id": {
+      "type": "string"
+    },
+    "parameters": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "confidence": {
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ],
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "lower_bound": {
+            "type": "number"
+          },
+          "provenance": {
+            "enum": [
+              "VISUAL_EVIDENCE",
+              "URDF_METRIC_ANCHOR",
+              "KINEMATIC_REQUIREMENT",
+              "SOLVER_ESTIMATED"
+            ],
+            "type": "string"
+          },
+          "unit": {
+            "enum": [
+              "mm"
+            ],
+            "type": "string"
+          },
+          "upper_bound": {
+            "type": "number"
+          },
+          "value": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "value",
+          "unit",
+          "lower_bound",
+          "upper_bound",
+          "provenance",
+          "confidence"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_version": {
+      "enum": [
+        "robotcad_kfdg_v1"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "link_id",
+    "functional_nodes",
+    "geometric_features",
+    "parameters",
+    "constraints"
+  ],
+  "title": "Minimal flat KFDG v1 transport contract",
+  "type": "object"
+}

@@ -1,0 +1,44 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": null,
+        "audio": null,
+        "content": "{\n  \"schema_version\": \"1.0\",\n  \"link_id\": \"TEST\",\n  \"parameters\": [\n    {\n      \"id\": \"housing_width\",\n      \"value\": 40.0,\n      \"unit\": \"mm\"\n    }\n  ]\n}",
+        "function_call": null,
+        "reasoning_content": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Output format: Exactly one JSON object.\n    *   Schema version: 1.0\n    *   Link ID: TEST\n    *   Parameters: One parameter with `id` = \"housing_width\", `value` = 40.0, `unit` = \"mm\".\n    *   Constraint: Return *only* the JSON object, no markdown, matching the strict JSON schema (implied by the prompt's structural requirements).\n\n2.  **Construct the JSON:**\n    ```json\n    {\n      \"schema_version\": \"1.0\",\n      \"link_id\": \"TEST\",\n      \"parameters\": [\n        {\n          \"id\": \"housing_width\",\n          \"value\": 40.0,\n          \"unit\": \"mm\"\n        }\n      ]\n    }\n    ```\n\n3.  **Validate against constraints:**\n    *   Exactly one JSON object? Yes.\n    *   `schema_version`: \"1.0\"? Yes.\n    *   `link_id`: \"TEST\"? Yes.\n    *   One parameter? Yes.\n    *   Parameter `id`: \"housing_width\"? Yes.\n    *   Parameter `value`: 40.0? Yes.\n    *   Parameter `unit`: \"mm\"? Yes.\n    *   No markdown? Yes.\n\n4.  **Final Output Generation:** (Just the raw JSON string)\n    {\"schema_version\": \"1.0\", \"link_id\": \"TEST\", \"parameters\": [{\"id\": \"housing_width\", \"value\": 40.0, \"unit\": \"mm\"}]}\n    Wait, let me double check the exact keys usually expected in these generic schema prompts. Usually it's `schema_version`, `link_id`, `parameters`.\n    Let me format it nicely but without markdown.\n    {\n      \"schema_version\": \"1.0\",\n      \"link_id\": \"TEST\",\n      \"parameters\": [\n        {\n          \"id\": \"housing_width\",\n          \"value\": 40.0,\n          \"unit\": \"mm\"\n        }\n      ]\n    }\n    Actually, to be extremely safe against \"no markdown\", I will just output the raw JSON text.\n    {\"schema_version\": \"1.0\", \"link_id\": \"TEST\", \"parameters\": [{\"id\": \"housing_width\", \"value\": 40.0, \"unit\": \"mm\"}]}\n    Done.",
+        "refusal": null,
+        "role": "assistant",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1790146018,
+  "id": "chatcmpl-5ca462dc-9728-902f-bc48-4cdefa33a8a5",
+  "model": "qwen3.7-plus",
+  "moderation": null,
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 616,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 547,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 616
+    },
+    "prompt_tokens": 67,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 67
+    },
+    "total_tokens": 683
+  }
+}

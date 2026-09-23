@@ -1,0 +1,53 @@
+{
+  "max_tokens": 2048,
+  "messages": [
+    {
+      "content": "Return only one JSON object matching the requested strict JSON Schema. No markdown.",
+      "role": "system"
+    },
+    {
+      "content": "Return exactly one JSON object with schema_version 1.0, link_id TEST, and an empty parameters array.",
+      "role": "user"
+    }
+  ],
+  "model": "qwen3.7-plus",
+  "response_format": {
+    "json_schema": {
+      "name": "r0_level_1",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "link_id": {
+            "enum": [
+              "TEST"
+            ],
+            "type": "string"
+          },
+          "parameters": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "schema_version": {
+            "enum": [
+              "1.0"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "schema_version",
+          "link_id",
+          "parameters"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "seed": 20260923,
+  "temperature": 0.0,
+  "top_p": 1.0
+}

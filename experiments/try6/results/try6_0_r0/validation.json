@@ -1,0 +1,112 @@
+{
+  "contract_tests": {
+    "errors": 0,
+    "failures": 0,
+    "fixture_hashes": {
+      "kfdg_v1_valid_full.json": "f270f6369bed9a77f7f1c92636f79c912dff3f44d1e7930bd19d4177dcd45766",
+      "kfdg_v1_valid_minimal.json": "4fcd2a27a18c937764ebeddc4b1e112471dd2e080492ac78d3489798373ac782"
+    },
+    "pass": true,
+    "run": 12
+  },
+  "decision": "SCHEMA_TRANSPORT_BLOCKED",
+  "end_to_end": {
+    "candidate_evaluations": 0,
+    "duplicate_parameter_refs": [
+      {
+        "feature_id": "transition_main",
+        "parameter_refs": [
+          "housing_width_mm",
+          "housing_height_mm",
+          "housing_width_mm",
+          "housing_height_mm"
+        ]
+      }
+    ],
+    "http_sdk_raw_equal": true,
+    "raw_json_schema_valid": true,
+    "raw_semantic_contract_valid": false,
+    "raw_semantic_error": "ValueError: duplicate parameter reference",
+    "schema_actually_sent": true,
+    "vlm_calls": 1
+  },
+  "formal_holdout_evaluations": 0,
+  "formal_holdout_lock_intact": true,
+  "frozen_c1_v1_artifacts_unchanged": true,
+  "frozen_c1_v1_hash_check": {
+    "c0_baseline.json": true,
+    "camera_or_view_registration.json": true,
+    "claim_ledger.json": true,
+    "dataflow_audit.json": true,
+    "decision.json": true,
+    "execution_incidents.json": true,
+    "failure_accounting.json": true,
+    "infrastructure_smoke.json": true,
+    "input_hashes.json": true,
+    "leakage_audit.json": true,
+    "pre_run_manifest.json": true,
+    "process_metrics.json": true,
+    "protocol.json": true,
+    "report.md": true,
+    "representation_failure_audit.json": true,
+    "validation.json": true,
+    "vlm_call_record.json": true,
+    "vlm_failure.json": true,
+    "vlm_full_response.json": true,
+    "vlm_raw_response.txt": true,
+    "vlm_request_manifest.json": true
+  },
+  "gt_evaluations": 0,
+  "parametric_rebuild_rechecks": [
+    {
+      "artifacts_present": true,
+      "edit": "A",
+      "final_volume_changed": true,
+      "pass": true,
+      "protected_shapes_same": true
+    },
+    {
+      "artifacts_present": true,
+      "edit": "B",
+      "final_volume_changed": true,
+      "pass": true,
+      "protected_shapes_same": true
+    },
+    {
+      "artifacts_present": true,
+      "edit": "C",
+      "final_volume_changed": true,
+      "pass": true,
+      "protected_shapes_same": true
+    }
+  ],
+  "schema_version": "robotcad_try6_r0_independent_validation_v1",
+  "timestamp_utc": "2026-09-23T07:02:58.215790+00:00",
+  "transport_level_rechecks": [
+    {
+      "classification": "RAW_RESPONSE_VALID",
+      "level": 0,
+      "pass": true
+    },
+    {
+      "classification": "RAW_RESPONSE_VALID",
+      "level": 1,
+      "pass": true
+    },
+    {
+      "classification": "RAW_RESPONSE_VALID",
+      "level": 2,
+      "pass": true
+    },
+    {
+      "classification": "RAW_RESPONSE_VALID",
+      "level": 3,
+      "pass": true
+    },
+    {
+      "classification": "RAW_RESPONSE_VALID",
+      "level": 4,
+      "pass": true
+    }
+  ]
+}

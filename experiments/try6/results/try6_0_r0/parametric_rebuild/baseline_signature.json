@@ -1,0 +1,79 @@
+{
+  "builder_result": {
+    "artifacts": {
+      "body_stl": "559814373e2114b211fa9f186fbed3c075289a19e9f3f660aa6b708a75bffd4f",
+      "fcstd": "56b4c94365f32783144c8d5537cbe0af8832684270fb0c6533691c6389f20da8",
+      "step": "99067c73f4078045d5abc4a2f88ee87976d13eff546eb49af30192878c17781f",
+      "stl": "a4b2d4899d46ada831941b3a80dbce824febf2cd647d2fbe44cfb3a57e8ae9a9"
+    },
+    "feature_tree": [
+      {
+        "faces": 6,
+        "name": "MainHousingPad",
+        "solids": 1,
+        "type_id": "PartDesign::Pad",
+        "valid": true,
+        "volume_mm3": 6528.000000000007
+      },
+      {
+        "faces": 11,
+        "name": "VisibleRecessPocket",
+        "solids": 1,
+        "type_id": "PartDesign::Pocket",
+        "valid": true,
+        "volume_mm3": 6038.40000000001
+      },
+      {
+        "faces": 6,
+        "name": "ProfileTransitionLoft",
+        "solids": 1,
+        "type_id": "Part::Loft",
+        "valid": true,
+        "volume_mm3": 7666.369628327683
+      },
+      {
+        "faces": 15,
+        "name": "HousingWithTransition",
+        "solids": 1,
+        "type_id": "Part::Fuse",
+        "valid": true,
+        "volume_mm3": 13704.769628327691
+      },
+      {
+        "faces": 17,
+        "name": "FrozenProximalBore",
+        "solids": 1,
+        "type_id": "Part::Cut",
+        "valid": true,
+        "volume_mm3": 13358.691781608242
+      },
+      {
+        "faces": 25,
+        "name": "FrozenMatingEnvelopeCut",
+        "solids": 1,
+        "type_id": "Part::Cut",
+        "valid": true,
+        "volume_mm3": 13051.754554111785
+      },
+      {
+        "faces": 43,
+        "name": "RigidGroup",
+        "solids": 1,
+        "type_id": "Part::Fuse",
+        "valid": true,
+        "volume_mm3": 17004.71461177673
+      }
+    ],
+    "final_solid_count": 1,
+    "final_volume_mm3": 17004.71461177673,
+    "mode": "R0_PARAMETRIC_BASELINE",
+    "reopen": {
+      "tree_nodes": 25,
+      "valid": true,
+      "volume_mm3": 17004.71461177673
+    },
+    "status": "PASS"
+  },
+  "path": "experiments/try6/artifacts/try6_0_r0/parametric_rebuild/baseline.FCStd",
+  "sha256": "56b4c94365f32783144c8d5537cbe0af8832684270fb0c6533691c6389f20da8"
+}

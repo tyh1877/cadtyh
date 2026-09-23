@@ -1,0 +1,39 @@
+{
+  "max_tokens": 2048,
+  "messages": [
+    {
+      "content": "Return only one JSON object matching the requested strict JSON Schema. No markdown.",
+      "role": "system"
+    },
+    {
+      "content": "Return exactly one JSON object with value equal to the integer 1.",
+      "role": "user"
+    }
+  ],
+  "model": "qwen3.7-plus",
+  "response_format": {
+    "json_schema": {
+      "name": "r0_level_0",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "value": {
+            "enum": [
+              1
+            ],
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "seed": 20260923,
+  "temperature": 0.0,
+  "top_p": 1.0
+}

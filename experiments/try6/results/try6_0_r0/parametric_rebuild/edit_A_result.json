@@ -1,0 +1,147 @@
+{
+  "attachment_anchor_invariant": true,
+  "cad_valid": true,
+  "connected_solid_count": 1,
+  "edit_id": "A",
+  "export_success": true,
+  "feature_tree": [
+    {
+      "error_state": "['Up-to-date']",
+      "name": "MainHousingPad",
+      "solids": 1,
+      "valid": true
+    },
+    {
+      "error_state": "['Up-to-date']",
+      "name": "VisibleRecessPocket",
+      "solids": 1,
+      "valid": true
+    },
+    {
+      "error_state": "['Up-to-date']",
+      "name": "ProfileTransitionLoft",
+      "solids": 1,
+      "valid": true
+    },
+    {
+      "error_state": "['Up-to-date']",
+      "name": "HousingWithTransition",
+      "solids": 1,
+      "valid": true
+    },
+    {
+      "error_state": "['Up-to-date']",
+      "name": "FrozenProximalBore",
+      "solids": 1,
+      "valid": true
+    },
+    {
+      "error_state": "['Up-to-date']",
+      "name": "FrozenMatingEnvelopeCut",
+      "solids": 1,
+      "valid": true
+    },
+    {
+      "error_state": "['Up-to-date']",
+      "name": "RigidGroup",
+      "solids": 1,
+      "valid": true
+    }
+  ],
+  "final_volume_mm3": 17256.165079390765,
+  "interface_invariant": true,
+  "joint_axis_center_invariant": true,
+  "new_value_mm": 17.85,
+  "old_value_mm": 17.0,
+  "parameter": "housing_width_mm",
+  "pass": true,
+  "protected_shape_signatures_after": {
+    "FrozenMatingEnvelopeTool": {
+      "bbox_mm": [
+        -16.0,
+        -12.0,
+        -16.0,
+        16.0,
+        12.0,
+        16.0
+      ],
+      "brep_sha256": "a062d2b970fe5b2332a0483847514b91fdf2bd24ab2b49dc37f925f46517bea4",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5013.667715863949
+    },
+    "FrozenProximalBoreTool": {
+      "bbox_mm": [
+        -3.6,
+        -13.0,
+        -3.6,
+        3.6,
+        13.0,
+        3.6
+      ],
+      "brep_sha256": "d3d6b43280516ba08e16bff16abf167473c2ad693b6257ccd873c91a20d59eed",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 1058.5910605536167
+    },
+    "FrozenScaffold": {
+      "bbox_mm": [
+        -11.5,
+        -9.0,
+        -11.5,
+        65.0,
+        9.0,
+        11.5
+      ],
+      "brep_sha256": "2795b2ed6d565bb4e3971e323ffe845599a57d46fffd98f2faf64c7106b79411",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 9698.134201036422
+    }
+  },
+  "protected_shape_signatures_before": {
+    "FrozenMatingEnvelopeTool": {
+      "bbox_mm": [
+        -16.0,
+        -12.0,
+        -16.0,
+        16.0,
+        12.0,
+        16.0
+      ],
+      "brep_sha256": "a062d2b970fe5b2332a0483847514b91fdf2bd24ab2b49dc37f925f46517bea4",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 5013.667715863949
+    },
+    "FrozenProximalBoreTool": {
+      "bbox_mm": [
+        -3.6,
+        -13.0,
+        -3.6,
+        3.6,
+        13.0,
+        3.6
+      ],
+      "brep_sha256": "d3d6b43280516ba08e16bff16abf167473c2ad693b6257ccd873c91a20d59eed",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 1058.5910605536167
+    },
+    "FrozenScaffold": {
+      "bbox_mm": [
+        -11.5,
+        -9.0,
+        -11.5,
+        65.0,
+        9.0,
+        11.5
+      ],
+      "brep_sha256": "2795b2ed6d565bb4e3971e323ffe845599a57d46fffd98f2faf64c7106b79411",
+      "solids": 1,
+      "valid": true,
+      "volume_mm3": 9698.134201036422
+    }
+  },
+  "reopen_valid": true
+}

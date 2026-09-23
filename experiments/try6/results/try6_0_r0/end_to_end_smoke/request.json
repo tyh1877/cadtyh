@@ -1,0 +1,190 @@
+{
+  "max_tokens": 4096,
+  "messages": [
+    {
+      "content": "Return only one JSON object that strictly conforms to the supplied schema. No wrapper array or markdown.",
+      "role": "system"
+    },
+    {
+      "content": "This is ONLY a synthetic CAD dataflow test, not visual reconstruction. Return one KFDG v1 JSON object for link L04. Use functional_nodes [{id: proximal_joint_port, type: joint_port}, {id: distal_mount_port, type: mount_port}]. Use exactly four geometric_features with ids housing_main (housing), transition_main (profile_transition), recess_main (pocket), fillet_main (fillet). Each feature must have parameter_refs: housing_main references housing_width_mm and housing_height_mm; transition_main references proximal_section_length_mm, transition_length_mm, distal_width_mm, distal_height_mm; recess_main references recess_length_mm and recess_depth_mm; fillet_main references fillet_radius_mm. Use a connected_to constraint from housing_main to proximal_joint_port and another from transition_main to distal_mount_port. Use exactly these nine parameters, preserving IDs, numeric values and bounds; set each unit mm, provenance SOLVER_ESTIMATED, confidence MEDIUM: [{\"id\":\"housing_width_mm\",\"value\":17.0,\"lower_bound\":10.0,\"upper_bound\":24.0},{\"id\":\"housing_height_mm\",\"value\":16.0,\"lower_bound\":10.0,\"upper_bound\":28.0},{\"id\":\"proximal_section_length_mm\",\"value\":24.0,\"lower_bound\":18.0,\"upper_bound\":32.0},{\"id\":\"transition_length_mm\",\"value\":10.0,\"lower_bound\":4.0,\"upper_bound\":16.0},{\"id\":\"distal_width_mm\",\"value\":14.0,\"lower_bound\":8.0,\"upper_bound\":22.0},{\"id\":\"distal_height_mm\",\"value\":12.0,\"lower_bound\":8.0,\"upper_bound\":24.0},{\"id\":\"recess_length_mm\",\"value\":12.0,\"lower_bound\":6.0,\"upper_bound\":16.0},{\"id\":\"recess_depth_mm\",\"value\":4.0,\"lower_bound\":1.0,\"upper_bound\":9.0},{\"id\":\"fillet_radius_mm\",\"value\":1.0,\"lower_bound\":0.5,\"upper_bound\":3.0}]. No GT, no images, no geometry performance claim.",
+      "role": "user"
+    }
+  ],
+  "model": "qwen3.7-plus",
+  "response_format": {
+    "json_schema": {
+      "name": "r0_e2e_kfdg_v1",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false,
+        "properties": {
+          "constraints": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "source": {
+                  "type": "string"
+                },
+                "target": {
+                  "type": "string"
+                },
+                "type": {
+                  "enum": [
+                    "interface_fixed",
+                    "coaxial",
+                    "parallel",
+                    "minimum_wall",
+                    "profile_continuity",
+                    "connected_to"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source",
+                "target",
+                "type"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "functional_nodes": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "enum": [
+                    "joint_port",
+                    "mount_port",
+                    "joint_axis"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "geometric_features": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "parameter_refs": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "type": {
+                  "enum": [
+                    "housing",
+                    "profile_transition",
+                    "pocket",
+                    "bore",
+                    "fillet"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "parameter_refs"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "link_id": {
+            "type": "string"
+          },
+          "parameters": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "confidence": {
+                  "enum": [
+                    "HIGH",
+                    "MEDIUM",
+                    "LOW"
+                  ],
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                },
+                "lower_bound": {
+                  "type": "number"
+                },
+                "provenance": {
+                  "enum": [
+                    "VISUAL_EVIDENCE",
+                    "URDF_METRIC_ANCHOR",
+                    "KINEMATIC_REQUIREMENT",
+                    "SOLVER_ESTIMATED"
+                  ],
+                  "type": "string"
+                },
+                "unit": {
+                  "enum": [
+                    "mm"
+                  ],
+                  "type": "string"
+                },
+                "upper_bound": {
+                  "type": "number"
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "id",
+                "value",
+                "unit",
+                "lower_bound",
+                "upper_bound",
+                "provenance",
+                "confidence"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "schema_version": {
+            "enum": [
+              "robotcad_kfdg_v1"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "schema_version",
+          "link_id",
+          "functional_nodes",
+          "geometric_features",
+          "parameters",
+          "constraints"
+        ],
+        "title": "Minimal flat KFDG v1 transport contract",
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "seed": 20260923,
+  "temperature": 0.0,
+  "top_p": 1.0
+}

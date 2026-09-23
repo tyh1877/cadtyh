@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "link_id": "TEST",
+  "parameters": [
+    {
+      "id": "housing_width",
+      "value": 40.0,
+      "unit": "mm"
+    }
+  ]
+}

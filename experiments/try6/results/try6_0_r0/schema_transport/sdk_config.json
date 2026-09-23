@@ -1,0 +1,20 @@
+{
+  "api_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "api_key_present": true,
+  "api_key_value_recorded": false,
+  "httpx_version": "0.28.1",
+  "jsonschema_version": "4.26.0",
+  "max_output_tokens": 2048,
+  "model": "qwen3.7-plus",
+  "openai_version": "2.53.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "request_payload_capture": "httpx request event hook before network send",
+  "response_capture": "httpx response event hook reads raw HTTP JSON body",
+  "sdk_retries": 0,
+  "seed": 20260923,
+  "technical_retries": 0,
+  "temperature": 0.0,
+  "timeout_seconds": 300,
+  "top_p": 1.0
+}

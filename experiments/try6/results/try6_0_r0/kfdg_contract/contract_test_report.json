@@ -1,0 +1,10 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "fixture_hashes": {
+    "kfdg_v1_valid_full.json": "f270f6369bed9a77f7f1c92636f79c912dff3f44d1e7930bd19d4177dcd45766",
+    "kfdg_v1_valid_minimal.json": "4fcd2a27a18c937764ebeddc4b1e112471dd2e080492ac78d3489798373ac782"
+  },
+  "pass": true,
+  "run": 12
+}

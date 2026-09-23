@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "link_id": "TEST",
+  "functional_nodes": [
+    {
+      "id": "node_1",
+      "type": "link"
+    }
+  ],
+  "geometric_features": [
+    {
+      "id": "feat_1",
+      "type": "housing",
+      "parameter_refs": [
+       "param_1"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "param_1",
+      "value": 0.05,
+      "unit": "m"
+    }
+  ],
+  "constraints": [
+    {
+      "source": "node_1",
+      "target": "ground",
+      "type": "connected_to"
+    }
+  ]
+}

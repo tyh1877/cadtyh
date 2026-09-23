@@ -1,0 +1,44 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": null,
+        "audio": null,
+        "content": "{\n  \"schema_version\": \"1.0\",\n  \"link_id\": \"TEST\",\n  \"functional_nodes\": [\n    {\n      \"id\": \"node_1\",\n      \"type\": \"link\"\n    }\n  ],\n  \"geometric_features\": [\n    {\n      \"id\": \"feat_1\",\n      \"type\": \"housing\",\n      \"parameter_refs\": [\n       \"param_1\"\n      ]\n    }\n  ],\n  \"parameters\": [\n    {\n      \"id\": \"param_1\",\n      \"value\": 0.05,\n      \"unit\": \"m\"\n    }\n  ],\n  \"constraints\": [\n    {\n      \"source\": \"node_1\",\n      \"target\": \"ground\",\n      \"type\": \"connected_to\"\n    }\n  ]\n}",
+        "function_call": null,
+        "reasoning_content": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Target: Return exactly one JSON object.\n    *   Content: Synthetic link \"TEST\".\n    *   Components required:\n        *   One `joint_port`\n        *   One `housing` feature\n        *   One `housing_width` parameter\n        *   One `connected_to` constraint\n    *   Constraint: Strict JSON Schema matching (implied by \"schema transport test\", though no explicit schema is provided in the prompt, I must infer a standard robotic/link schema or create a valid JSON structure that fulfills these exact keys/requirements based on typical ontology/schema representations for this kind of prompt). Wait, the prompt says \"matching the requested strict JSON Schema\" but doesn't *provide* the schema. I need to output a JSON object that logically contains these elements. Let me construct a clean, standard JSON representation.\n    *   Wait, is there a hidden schema or is it a generic test of following instructions? \"Return only one JSON object matching the requested strict JSON Schema. No markdown.\"\n    *   Let's create a JSON object with the exact keys mentioned: `joint_port`, `housing`, `housing_width`, `connected_to`.\n    *   Let's refine the structure to look like a typical link definition:\n        ```json\n        {\n          \"link\": \"TEST\",\n          \"joint_port\": {\n            \"type\": \"revolute\",\n            \"axis\": [0, 0, 1]\n          },\n          \"housing\": {\n            \"type\": \"cylindrical\"\n          },\n          \"housing_width\": 0.05,\n          \"connected_to\": \"BASE\"\n        }\n        ```\n    *   Wait, the prompt asks for \"one JSON object for synthetic link TEST with one joint_port, one housing feature, one housing_width parameter, and one connected_to constraint.\"\n    *   Let's ensure the JSON is perfectly valid and contains no markdown.\n    *   Keys to include: `joint_port`, `housing`, `housing_width`, `connected_to`.\n    *   Let's make it simple and direct.\n\n    ```json\n    {\n      \"id\": \"TEST\",\n      \"joint_port\": {\n        \"type\": \"fixed\"\n      },\n      \"housing\": {\n        \"shape\": \"box\"\n      },\n      \"housing_width\": 10.0,\n      \"connected_to\": \"ground\"\n    }\n    ```\n    *   Wait, \"synthetic link TEST\" -> maybe the root object is the link, or has a name \"TEST\".\n    *   Let's use a standard format:\n    ```json\n    {\n      \"name\": \"TEST\",\n      \"joint_port\": {\n        \"id\": \"jp1\",\n        \"type\": \"revolute\"\n      },\n      \"housing\": {\n        \"id\": \"h1\",\n        \"type\": \"cylinder\"\n      },\n      \"housing_width\": 0.05,\n      \"connected_to\": {\n        \"target\": \"link_0\",\n        \"joint\": \"jp1\"\n      }\n    }\n    ```\n    *   Let's review the prompt: \"Return only one JSON object matching the requested strict JSON Schema. No markdown.\"\n    *   Since I don't have the explicit schema, I will provide a well-formed JSON that strictly uses the requested terms as keys or nested objects.\n    *   Actually, could \"housing feature\" mean a feature array? \"one housing feature\" -> `housing: [{...}]` or `features: {housing: {...}}`. Let's just use `housing` as an object.\n    *   Let's construct the JSON carefully.\n\n    ```json\n    {\n      \"link\": \"TEST\",\n      \"joint_port\": {\n        \"type\": \"revolute\",\n        \"axis\": [0, 0, 1]\n      },\n      \"housing\": {\n        \"type\": \"cylindrical\",\n        \"material\": \"aluminum\"\n      },\n      \"housing_width\": 0.05,\n      \"connected_to\": \"BASE\"\n    }\n    ```\n    *   Wait, what if the schema expects exactly these keys at the root?\n    *   Root keys: `joint_port`, `housing`, `housing_width`, `connected_to`.\n    *   Let's just output the JSON without markdown.\n\n    {\n      \"name\": \"TEST\",\n      \"joint_port\": {\n        \"id\": \"port_1\"\n      },\n      \"housing\": {\n        \"id\": \"feature_1\"\n      },\n      \"housing_width\": 0.1,\n      \"connected_to\": \"link_0\"\n    }\n\n    Let's make sure there is absolutely no markdown (no ```json ... ```).\n    Just the raw JSON string.\n    Done.",
+        "refusal": null,
+        "role": "assistant",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1790146027,
+  "id": "chatcmpl-a76ace43-3a97-9913-99a6-ba6ec2196c95",
+  "model": "qwen3.7-plus",
+  "moderation": null,
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1274,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 1071,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 1274
+    },
+    "prompt_tokens": 72,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 72
+    },
+    "total_tokens": 1346
+  }
+}

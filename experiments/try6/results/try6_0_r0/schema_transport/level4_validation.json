@@ -1,0 +1,34 @@
+{
+  "actual_model": "qwen3.7-plus",
+  "classification": "RAW_RESPONSE_VALID",
+  "http_status": 200,
+  "latency_seconds": 43.875,
+  "level": 4,
+  "raw_http_content_type": "str",
+  "raw_response_valid": true,
+  "response_headers": {
+    "content-type": "application/json",
+    "x-request-id": "de21ac9a-de2c-926a-ba56-533673bd328f"
+  },
+  "schema_sha256": "5190aa004dd46f073a84d39c101235b4670d0e5dde2cdb8f75047aea578e032b",
+  "sdk_content_type": "str",
+  "started_at_utc": "2026-09-23T06:47:29.241867+00:00",
+  "usage": {
+    "completion_tokens": 3126,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 2839,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 3126
+    },
+    "prompt_tokens": 103,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 103
+    },
+    "total_tokens": 3229
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "max_tokens": 2048,
+  "messages": [
+    {
+      "content": "Return only one JSON object matching the requested strict JSON Schema. No markdown.",
+      "role": "system"
+    },
+    {
+      "content": "Return one JSON object for synthetic link TEST with one joint_port, one housing feature, one housing_width parameter, and one connected_to constraint. This is a schema transport test, not a robot reconstruction.",
+      "role": "user"
+    }
+  ],
+  "model": "qwen3.7-plus",
+  "response_format": {
+    "json_schema": {
+      "name": "r0_level_3",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "constraints": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "source": {
+                  "type": "string"
+                },
+                "target": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source",
+                "target",
+                "type"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "functional_nodes": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "geometric_features": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "parameter_refs": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "parameter_refs"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "link_id": {
+            "enum": [
+              "TEST"
+            ],
+            "type": "string"
+          },
+          "parameters": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "unit": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "id",
+                "value",
+                "unit"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "schema_version": {
+            "enum": [
+              "1.0"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "schema_version",
+          "link_id",
+          "functional_nodes",
+          "geometric_features",
+          "parameters",
+          "constraints"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "seed": 20260923,
+  "temperature": 0.0,
+  "top_p": 1.0
+}

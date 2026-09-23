@@ -1,0 +1,38 @@
+{
+  "constraints": [
+    {
+      "source": "housing_01",
+      "target": "port_01",
+      "type": "connected_to"
+    }
+  ],
+  "functional_nodes": [
+    {
+      "id": "port_01",
+      "type": "joint_port"
+    }
+  ],
+  "geometric_features": [
+    {
+      "id": "housing_01",
+      "parameter_refs": [
+        "housing_width"
+      ],
+      "type": "housing"
+    }
+  ],
+  "link_id": "TEST",
+  "parameters": [
+    {
+      "confidence": "MEDIUM",
+      "id": "housing_width",
+      "lower_bound": 30.0,
+      "provenance": "SOLVER_ESTIMATED",
+      "unit": "mm",
+      "upper_bound": 50.0,
+      "value": 40.0
+    }
+  ],
+  "schema_version": "robotcad_kfdg_v1",
+  "unexpected": 1
+}

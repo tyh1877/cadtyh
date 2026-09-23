@@ -1,0 +1,76 @@
+{
+  "max_tokens": 2048,
+  "messages": [
+    {
+      "content": "Return only one JSON object matching the requested strict JSON Schema. No markdown.",
+      "role": "system"
+    },
+    {
+      "content": "Return exactly one JSON object with schema_version 1.0, link_id TEST, and one parameter: id housing_width, value 40.0, unit mm.",
+      "role": "user"
+    }
+  ],
+  "model": "qwen3.7-plus",
+  "response_format": {
+    "json_schema": {
+      "name": "r0_level_2",
+      "schema": {
+        "additionalProperties": false,
+        "properties": {
+          "link_id": {
+            "enum": [
+              "TEST"
+            ],
+            "type": "string"
+          },
+          "parameters": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "enum": [
+                    "housing_width"
+                  ],
+                  "type": "string"
+                },
+                "unit": {
+                  "enum": [
+                    "mm"
+                  ],
+                  "type": "string"
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "id",
+                "value",
+                "unit"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "schema_version": {
+            "enum": [
+              "1.0"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "schema_version",
+          "link_id",
+          "parameters"
+        ],
+        "type": "object"
+      },
+      "strict": true
+    },
+    "type": "json_schema"
+  },
+  "seed": 20260923,
+  "temperature": 0.0,
+  "top_p": 1.0
+}

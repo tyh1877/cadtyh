@@ -1,0 +1,44 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "annotations": null,
+        "audio": null,
+        "content": "{\n  \"schema_version\": \"1.0\",\n  \"link_id\": \"TEST\",\n  \"parameters\": []\n}",
+        "function_call": null,
+        "reasoning_content": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Output: Exactly one JSON object.\n    *   Schema constraints (implicit from prompt, but explicit in instructions):\n        *   `schema_version`: \"1.0\"\n        *   `link_id`: \"TEST\"\n        *   `parameters`: [] (empty array)\n    *   Formatting constraints: Return *only* the JSON object. No markdown (no ```json ... ```).\n\n2.  **Construct the JSON:**\n    ```json\n    {\n      \"schema_version\": \"1.0\",\n      \"link_id\": \"TEST\",\n      \"parameters\": []\n    }\n    ```\n\n3.  **Apply Formatting Constraints:**\n    *   Remove markdown backticks.\n    *   Ensure strict JSON compliance.\n\n    {\"schema_version\": \"1.0\", \"link_id\": \"TEST\", \"parameters\": []}\n\n4.  **Final Verification:**\n    *   One JSON object? Yes.\n    *   schema_version is \"1.0\"? Yes.\n    *   link_id is \"TEST\"? Yes.\n    *   parameters is an empty array? Yes.\n    *   No markdown? Yes.\n    *   No extra text? Yes.\n    *   Matches strict JSON schema requirements? Yes.\n    *   Ready to output.",
+        "refusal": null,
+        "role": "assistant",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1790146012,
+  "id": "chatcmpl-23e37499-6367-9d75-ad5d-211a53f5df96",
+  "model": "qwen3.7-plus",
+  "moderation": null,
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 325,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": null,
+      "reasoning_tokens": 293,
+      "rejected_prediction_tokens": null,
+      "text_tokens": 325
+    },
+    "prompt_tokens": 55,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cache_write_tokens": null,
+      "cached_tokens": 0,
+      "text_tokens": 55
+    },
+    "total_tokens": 380
+  }
+}
