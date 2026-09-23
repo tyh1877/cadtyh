@@ -1,0 +1,25 @@
+{
+  "schema_version": "robotcad_try6_r0_levels_v1",
+  "levels": [
+    {
+      "level": 0,
+      "prompt": "Return exactly one JSON object with value equal to the integer 1.",
+      "schema": {"type": "object", "additionalProperties": false, "required": ["value"], "properties": {"value": {"type": "integer", "enum": [1]}}}
+    },
+    {
+      "level": 1,
+      "prompt": "Return exactly one JSON object with schema_version 1.0, link_id TEST, and an empty parameters array.",
+      "schema": {"type": "object", "additionalProperties": false, "required": ["schema_version", "link_id", "parameters"], "properties": {"schema_version": {"type": "string", "enum": ["1.0"]}, "link_id": {"type": "string", "enum": ["TEST"]}, "parameters": {"type": "array", "items": {"type": "string"}}}}
+    },
+    {
+      "level": 2,
+      "prompt": "Return exactly one JSON object with schema_version 1.0, link_id TEST, and one parameter: id housing_width, value 40.0, unit mm.",
+      "schema": {"type": "object", "additionalProperties": false, "required": ["schema_version", "link_id", "parameters"], "properties": {"schema_version": {"type": "string", "enum": ["1.0"]}, "link_id": {"type": "string", "enum": ["TEST"]}, "parameters": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "value", "unit"], "properties": {"id": {"type": "string", "enum": ["housing_width"]}, "value": {"type": "number"}, "unit": {"type": "string", "enum": ["mm"]}}}}}}
+    },
+    {
+      "level": 3,
+      "prompt": "Return one JSON object for synthetic link TEST with one joint_port, one housing feature, one housing_width parameter, and one connected_to constraint. This is a schema transport test, not a robot reconstruction.",
+      "schema": {"type": "object", "additionalProperties": false, "required": ["schema_version", "link_id", "functional_nodes", "geometric_features", "parameters", "constraints"], "properties": {"schema_version": {"type": "string", "enum": ["1.0"]}, "link_id": {"type": "string", "enum": ["TEST"]}, "functional_nodes": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "type"], "properties": {"id": {"type": "string"}, "type": {"type": "string"}}}}, "geometric_features": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "type", "parameter_refs"], "properties": {"id": {"type": "string"}, "type": {"type": "string"}, "parameter_refs": {"type": "array", "items": {"type": "string"}}}}}, "parameters": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["id", "value", "unit"], "properties": {"id": {"type": "string"}, "value": {"type": "number"}, "unit": {"type": "string"}}}}, "constraints": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["source", "target", "type"], "properties": {"source": {"type": "string"}, "target": {"type": "string"}, "type": {"type": "string"}}}}}}
+    }
+  ]
+}

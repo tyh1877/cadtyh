@@ -1,0 +1,8 @@
+{
+  "schema_version": "robotcad_kfdg_v1",
+  "link_id": "TEST",
+  "functional_nodes": [{"id": "port_01", "type": "joint_port"}],
+  "geometric_features": [{"id": "housing_01", "type": "housing", "parameter_refs": ["housing_width"]}],
+  "parameters": [{"id": "housing_width", "value": 40.0, "unit": "mm", "lower_bound": 30.0, "upper_bound": 50.0, "provenance": "SOLVER_ESTIMATED", "confidence": "MEDIUM"}],
+  "constraints": [{"source": "housing_01", "target": "port_01", "type": "connected_to"}]
+}
