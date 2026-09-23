@@ -1,0 +1,110 @@
+{
+  "component_count": 13,
+  "components": [
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_00.brep",
+      "brep_sha256": "fd8ce0eb51467ef088fe5d37b8c2d1bb7dd83c5bad3481b6157573b0980b180f",
+      "component_id": "L03_J03_00",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": -2.1467549799530254
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_01.brep",
+      "brep_sha256": "034a2b439bf4ad1f82707eb9ad11cf74de9a0319c0abcd0d0417a25bec2b0d34",
+      "component_id": "L03_J03_01",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": -1.498074274628466
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_02.brep",
+      "brep_sha256": "0986766f8032b976541f11ad435df69f74755547040fbd752040c69e40182b4a",
+      "component_id": "L03_J03_02",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": -0.849393569303907
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_03.brep",
+      "brep_sha256": "6474691582403cbd7b3d1a8423559d4e097e5ad5d5d6af127f696b18e6278031",
+      "component_id": "L03_J03_03",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": -0.20071286397934784
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_04.brep",
+      "brep_sha256": "f41fabae5c03866bbd6c6a91349fe4c7f111faaa4107e3b24449c655b4d0d316",
+      "component_id": "L03_J03_04",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": 0.4479678413452115
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_05.brep",
+      "brep_sha256": "8338ce721966f9458f6c8f9efeabaa34199f386584dfe8df09845a7648de8b90",
+      "component_id": "L03_J03_05",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": 1.0966485466697709
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L03_J03_06.brep",
+      "brep_sha256": "87e9cd68a565eb0e97a059f21425dd4577a75d22a22d0410ad4a0b64c76cd3b5",
+      "component_id": "L03_J03_06",
+      "joint_id": "J03",
+      "neighbor_id": "L03",
+      "pose_q_rad": 1.7453292519943295
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L05_FIXED_J04_00.brep",
+      "brep_sha256": "e263427958d2f8fe74a54dc6ccfaf7fe6bca4e0086a0f9c7a086287a17d5886e",
+      "component_id": "L05_FIXED_J04_00",
+      "joint_id": "FIXED_J04",
+      "neighbor_id": "L05",
+      "pose_q_rad": 0.0
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L06_J05_00.brep",
+      "brep_sha256": "0c3a82d97b831f1f769f9072b784e4327839c2315ad3900f0fafdbf2eaeeac37",
+      "component_id": "L06_J05_00",
+      "joint_id": "J05",
+      "neighbor_id": "L06",
+      "pose_q_rad": 0.0
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L06_J05_01.brep",
+      "brep_sha256": "b2038d9ffad14e43924eb9a601e2b1c80bea32dbfb0b52318ae5af5a9bd4fcdd",
+      "component_id": "L06_J05_01",
+      "joint_id": "J05",
+      "neighbor_id": "L06",
+      "pose_q_rad": 1.5707963267948966
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L06_J05_02.brep",
+      "brep_sha256": "e0f4c050cff9ddb1035d68195e9dd5ad9089b362ba19c921f59241974ea4c253",
+      "component_id": "L06_J05_02",
+      "joint_id": "J05",
+      "neighbor_id": "L06",
+      "pose_q_rad": 3.141592653589793
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L06_J05_03.brep",
+      "brep_sha256": "edb5ea44b4cacc71bb9a9588c55666d97078f212b200e554f5668d436fcc0560",
+      "component_id": "L06_J05_03",
+      "joint_id": "J05",
+      "neighbor_id": "L06",
+      "pose_q_rad": 4.71238898038469
+    },
+    {
+      "brep_path": "experiments/try6/artifacts/try6_0_c2/kfde/components/L07_FIXED_J06_00.brep",
+      "brep_sha256": "3d6c7f2a3679da04085677e7925ab136efe8b74cd0617643acf24809e885f286",
+      "component_id": "L07_FIXED_J06_00",
+      "joint_id": "FIXED_J06",
+      "neighbor_id": "L07",
+      "pose_q_rad": 0.0
+    }
+  ],
+  "source_construction_sha256": "2222bf9b4057505a55de8f679116c05049f83526f437b61819c3ff23d4809e1e"
+}

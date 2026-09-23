@@ -1,0 +1,13 @@
+{
+  "canonical_probes": 5,
+  "diagnostic_subjects": [
+    "L04"
+  ],
+  "formal_holdout_case_count": 32,
+  "formal_holdout_ids_not_read": true,
+  "holdout_accessed": false,
+  "holdout_evaluation_count": 0,
+  "holdout_lock_sha256": "1e98bd92b6e3b5997ad959231df8b02bc5f9747463d7b776f3d244f46a306153",
+  "stage_a_samples": 256,
+  "stage_b_proposals": 60
+}

@@ -1,0 +1,68 @@
+{
+  "active_bounds": {
+    "distal_height_mm": [
+      8.0,
+      24.0
+    ],
+    "distal_width_mm": [
+      8.0,
+      22.0
+    ],
+    "housing_height_mm": [
+      10.0,
+      28.0
+    ],
+    "housing_width_mm": [
+      10.0,
+      24.0
+    ],
+    "proximal_section_length_mm": [
+      18.0,
+      32.0
+    ],
+    "transition_length_mm": [
+      4.0,
+      16.0
+    ]
+  },
+  "active_ids": [
+    "housing_width_mm",
+    "housing_height_mm",
+    "proximal_section_length_mm",
+    "transition_length_mm",
+    "distal_width_mm",
+    "distal_height_mm"
+  ],
+  "near_thresholds_mm3": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "ranking_terms": [
+    "g_max_mm3",
+    "g_sum_mm3"
+  ],
+  "runtime_ceiling_seconds": 1800,
+  "stage_a": {
+    "include_all_even_if_feasible": true,
+    "method": "seeded_scrambled_Sobol",
+    "sample_count": 256,
+    "seed": 20260923
+  },
+  "stage_b": {
+    "coordinate_order": "frozen active_ids order",
+    "directions_per_coordinate": [
+      -1,
+      1
+    ],
+    "method": "deterministic_bounded_coordinate_descent_on_lexicographic_gmax_then_gsum",
+    "proposals_per_seed": 12,
+    "seed_count": 5,
+    "step_fraction_of_parameter_range": 0.1,
+    "tie_break": "g_max then g_sum then candidate_id",
+    "total_proposal_budget": 60,
+    "update_after_each_coordinate_pair": true
+  },
+  "strict_epsilon_mm3": 1e-06,
+  "visual_objective_used": false
+}

@@ -1,0 +1,14 @@
+{
+  "allowed_contact_sha256": "5eef89d6f4469fcd60291fe8761a63cd5fd85b79d016ed9054aa88f0df6432a5",
+  "c2_protocol_sha256": "29299310b6d137c5d00b8c79f90341826d171934e5f20b03e245a94f9ddf483c",
+  "component_count": 13,
+  "construction_report_sha256": "2222bf9b4057505a55de8f679116c05049f83526f437b61819c3ff23d4809e1e",
+  "keepout_sha256": "86446319f48ec1ae3467116bc0e572b860735b638b4ec1d405f9c3f27e3fabc5",
+  "neighbor_source_hashes": {
+    "L03": "3d186c9a759d3eadf162ff4549f2fa08f7a37d6eca39750fad877a9896396278",
+    "L05": "cdc2bc789b30ef2d7a85be5d9916b74812b398a5e5ea62fbb24e05ef28ce7561",
+    "L06": "1b1f4d93e98561af345f73c4cad9238b7798a3a2d13ca7b186f03f57c19c1cd8",
+    "L07": "b3a3ba691e8c364e82143ae6b005788a7fe0a75b87492b7772c35a4e4f630997"
+  },
+  "numerical_tolerance_mm3": 1e-06
+}

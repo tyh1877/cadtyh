@@ -1,0 +1,12 @@
+{
+  "diagnostic_only": true,
+  "never_changes_frozen_KFDE": true,
+  "rule": "FULL includes all 13 frozen pose components; MINUS_<LID> removes only components with that neighbor_id; per-component volumes are never recomputed/tuned",
+  "subsets": [
+    "FULL",
+    "MINUS_L05",
+    "MINUS_L07",
+    "MINUS_L06",
+    "MINUS_L03"
+  ]
+}

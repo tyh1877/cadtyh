@@ -1,0 +1,7 @@
+{
+  "does_not_expand_KFDE_OVERCONSTRAINED_definition": true,
+  "historical_C2_execution_label": "NO_FEASIBLE_CANDIDATE_UNDER_FROZEN_SEARCH",
+  "old_C2_artifacts_modified": false,
+  "source_C2_manifest_sha256": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+  "source_C2_validation_path": "experiments/try6/results/try6_0_c2/validation.json"
+}

@@ -1,0 +1,10 @@
+{
+  "f0_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+  "object_names": [
+    "RigidGroup"
+  ],
+  "has_frozen_six_parameter_table": false,
+  "exact_F0_equivalent_current_theta_mapping_available": false,
+  "reason": "Coarse F0 FCStd has no verified one-to-one mapping to six current R1-v3 parametric housing variables; do not manually approximate a P5 theta.",
+  "GT_accessed": false
+}
