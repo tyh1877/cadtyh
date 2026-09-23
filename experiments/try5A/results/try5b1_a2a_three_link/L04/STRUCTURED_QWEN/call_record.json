@@ -1,0 +1,19 @@
+{
+  "condition": "STRUCTURED_QWEN",
+  "status": "SUCCESS",
+  "started_utc": "2026-09-23T02:21:41.008547+00:00",
+  "latency_seconds": 75.32665969996015,
+  "request_id": "chatcmpl-83d4c87a-39f2-98d9-ade0-9f3352a132c9",
+  "requested_model": "qwen3.7-plus",
+  "returned_model": "qwen3.7-plus",
+  "system_fingerprint": null,
+  "seed": 20260923,
+  "max_output_tokens": 32768,
+  "timeout_seconds": 300.0,
+  "usage": {
+    "input_tokens": 15715,
+    "output_tokens": 4282,
+    "total_tokens": 19997
+  },
+  "error": null
+}

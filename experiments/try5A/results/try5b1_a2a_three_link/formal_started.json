@@ -1,0 +1,7 @@
+{
+  "status": "STARTED_NO_RESULT_RETRIES",
+  "timestamp_utc": "2026-09-23T02:19:56.413334+00:00",
+  "config_sha256": "2f6671f5785c895b0775da96ffb569017e3c3d3d23e7ad7df1eb784111964b73",
+  "model_calls_planned": 6,
+  "formal_holdout_accessed": false
+}

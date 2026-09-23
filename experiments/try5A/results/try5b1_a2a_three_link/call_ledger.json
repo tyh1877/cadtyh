@@ -1,0 +1,121 @@
+{
+  "calls": {
+    "L03__STRUCTURED_QWEN": {
+      "condition": "STRUCTURED_QWEN",
+      "status": "SUCCESS",
+      "started_utc": "2026-09-23T02:19:56.484853+00:00",
+      "latency_seconds": 50.17249389999779,
+      "request_id": "chatcmpl-0eb20915-1f8e-9270-9f33-169fb0c16204",
+      "requested_model": "qwen3.7-plus",
+      "returned_model": "qwen3.7-plus",
+      "system_fingerprint": null,
+      "seed": 20260923,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 300.0,
+      "usage": {
+        "input_tokens": 15725,
+        "output_tokens": 2722,
+        "total_tokens": 18447
+      },
+      "error": null
+    },
+    "L03__DIRECT_QWEN": {
+      "condition": "DIRECT_QWEN",
+      "status": "SUCCESS",
+      "started_utc": "2026-09-23T02:19:56.484853+00:00",
+      "latency_seconds": 104.48382580000907,
+      "request_id": "chatcmpl-1821faeb-c356-9a1d-94d9-694748919488",
+      "requested_model": "qwen3.7-plus",
+      "returned_model": "qwen3.7-plus",
+      "system_fingerprint": null,
+      "seed": 20260923,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 300.0,
+      "usage": {
+        "input_tokens": 15685,
+        "output_tokens": 5947,
+        "total_tokens": 21632
+      },
+      "error": null
+    },
+    "L04__STRUCTURED_QWEN": {
+      "condition": "STRUCTURED_QWEN",
+      "status": "SUCCESS",
+      "started_utc": "2026-09-23T02:21:41.008547+00:00",
+      "latency_seconds": 75.32665969996015,
+      "request_id": "chatcmpl-83d4c87a-39f2-98d9-ade0-9f3352a132c9",
+      "requested_model": "qwen3.7-plus",
+      "returned_model": "qwen3.7-plus",
+      "system_fingerprint": null,
+      "seed": 20260923,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 300.0,
+      "usage": {
+        "input_tokens": 15715,
+        "output_tokens": 4282,
+        "total_tokens": 19997
+      },
+      "error": null
+    },
+    "L04__DIRECT_QWEN": {
+      "condition": "DIRECT_QWEN",
+      "status": "SUCCESS",
+      "started_utc": "2026-09-23T02:21:41.014749+00:00",
+      "latency_seconds": 69.76637409999967,
+      "request_id": "chatcmpl-0c73c8e9-f339-9fa2-9612-9f6d5c5a098e",
+      "requested_model": "qwen3.7-plus",
+      "returned_model": "qwen3.7-plus",
+      "system_fingerprint": null,
+      "seed": 20260923,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 300.0,
+      "usage": {
+        "input_tokens": 15675,
+        "output_tokens": 3867,
+        "total_tokens": 19542
+      },
+      "error": null
+    },
+    "L07__STRUCTURED_QWEN": {
+      "condition": "STRUCTURED_QWEN",
+      "status": "SUCCESS",
+      "started_utc": "2026-09-23T02:22:56.374795+00:00",
+      "latency_seconds": 54.98492989997612,
+      "request_id": "chatcmpl-d1f1fb9f-2c76-9474-a526-97529249f3f9",
+      "requested_model": "qwen3.7-plus",
+      "returned_model": "qwen3.7-plus",
+      "system_fingerprint": null,
+      "seed": 20260923,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 300.0,
+      "usage": {
+        "input_tokens": 16526,
+        "output_tokens": 3011,
+        "total_tokens": 19537
+      },
+      "error": null
+    },
+    "L07__DIRECT_QWEN": {
+      "condition": "DIRECT_QWEN",
+      "status": "SUCCESS",
+      "started_utc": "2026-09-23T02:22:56.381108+00:00",
+      "latency_seconds": 44.16570709994994,
+      "request_id": "chatcmpl-dc00e20e-35ed-9e1d-8b14-bfe6a562ea68",
+      "requested_model": "qwen3.7-plus",
+      "returned_model": "qwen3.7-plus",
+      "system_fingerprint": null,
+      "seed": 20260923,
+      "max_output_tokens": 32768,
+      "timeout_seconds": 300.0,
+      "usage": {
+        "input_tokens": 16486,
+        "output_tokens": 2389,
+        "total_tokens": 18875
+      },
+      "error": null
+    }
+  },
+  "technical_retries": 0,
+  "result_conditioned_retries": 0,
+  "manual_interventions": 0
+}

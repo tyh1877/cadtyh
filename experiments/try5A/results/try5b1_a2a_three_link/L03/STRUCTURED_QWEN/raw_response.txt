@@ -1,0 +1,51 @@
+{
+  "visual_structural_analysis": [
+    "L03 is a forearm/upper-arm link connecting revolute joints J02 and J03.",
+    "The URDF specifies a 100mm span between joint origins along the X-axis.",
+    "The F0 shape bbox is approximately 126x34x32 mm, indicating hubs extend beyond the 100mm joint span.",
+    "Neutral renders show a long central bar with two distinct circular hubs (one larger ring, one smaller solid circle).",
+    "The structure resembles a central web with proximal and distal mounting hubs.",
+    "The volume (13571 mm3) is much less than the bounding box volume, confirming a recessed/webbed geometry."
+  ],
+  "body_family": "central_web",
+  "semantic_inventory": {
+    "required": [
+      "span_mm",
+      "thickness_mm",
+      "proximal_height_mm",
+      "mid_height_mm",
+      "major_recess"
+    ],
+    "optional": [
+      "lateral_offset_mm"
+    ],
+    "uncertain": [
+      "exact hub diameters",
+      "web taper profile"
+    ]
+  },
+  "mechanical_topology": {
+    "nodes": [
+      "J02_proximal_hub",
+      "central_web",
+      "J03_distal_hub"
+    ],
+    "edges": [
+      "J02_proximal_hub_to_web",
+      "web_to_J03_distal_hub"
+    ]
+  },
+  "executable_geometry_schema": {
+    "span_mm": 126.0,
+    "thickness_mm": 10.0,
+    "proximal_height_mm": 32.0,
+    "mid_height_mm": 18.0,
+    "major_recess": true
+  },
+  "assumptions": [
+    "The span_mm of 126.0 accounts for the total length including hubs, while the functional joint span is 100mm.",
+    "The joint axis is Y, so the web thickness (10mm) is along the Y-axis.",
+    "The major_recess flag captures the large circular cutouts visible in the F0 renders.",
+    "Proximal height matches the maximum Z-dimension of the bbox (32mm)."
+  ]
+}
