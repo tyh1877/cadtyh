@@ -1,0 +1,5 @@
+{
+  "no_silent_retry": true,
+  "returncode": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_v3_geometry.py\", line 176, in <module>\n    main(read(sys.argv[1]))\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_v3_geometry.py\", line 116, in main\n    raise RuntimeError(\"frozen region partition numerically inconsistent: \" + subset)\nRuntimeError: frozen region partition numerically inconsistent: FULL\n"
+}

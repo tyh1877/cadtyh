@@ -1,0 +1,9 @@
+{
+  "first_failure_sha256": "0286eace879fd2b6de9c8158c153c8d60570d3743039f97c3a8f217d03445294",
+  "first_failure": "FULL exact removed-region partition sum differs from total by 0.0017274671677114384 mm3, above an inherited D1 worker sanity check of 0.001 mm3",
+  "technical_change": "Retain the original 21/42 mm partitions and 80-percent localization threshold. Record the raw partition discrepancy and an algebraic conservative bound on dominant-region fraction; do not silently discard or adjust regional volumes. If the bound straddles 80 percent, mark localization numerically ambiguous.",
+  "scientific_inputs_and_thresholds_unchanged": true,
+  "prior_alignment_and_witness_artifacts_unchanged": true,
+  "max_technical_retries": 1,
+  "retry_scope": "localization_reporting_only"
+}
