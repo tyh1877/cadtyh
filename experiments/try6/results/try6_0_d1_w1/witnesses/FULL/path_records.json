@@ -1,0 +1,242 @@
+[
+  {
+    "BREP_parity": true,
+    "BREP_reopen": {
+      "bbox_mm": [
+        -2.000000642529698e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112265718793
+    },
+    "FCStd_parity": true,
+    "FCStd_reopen": {
+      "bbox_mm": [
+        -2.33e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112265718828
+    },
+    "accounting_delta_mm3": 0.00772199615403224,
+    "accounting_relief_fraction": 5.9307090251594665e-06,
+    "accounting_source_fraction": 5.870388601191929e-07,
+    "cleanup_status": "OPTIONAL_CLEANUP_FAILED: Bnd_Box is void",
+    "memory": {
+      "bbox_mm": [
+        -2.000000642529698e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112265718826
+    },
+    "path": "UNION_THEN_SINGLE_CUT",
+    "repeat": 0,
+    "unique_removed_volume_mm3": 1302.0436373097718,
+    "witness_FCStd_path": "experiments/try6/artifacts/try6_0_d1_w1/witnesses/FULL/UNION_THEN_SINGLE_CUT_0.FCStd",
+    "witness_FCStd_sha256": "2f9e2c33dc7854083afd773bc38d20b47bb2fdc9fb93662d6cc6488c9877bb56",
+    "witness_brep_path": "experiments/try6/artifacts/try6_0_d1_w1/witnesses/FULL/UNION_THEN_SINGLE_CUT_0.brep",
+    "witness_brep_sha256": "5cf1e4eaa36f01d2addc1b34d63f40419800142d0f11b32e0a2624b2957e0ba3"
+  },
+  {
+    "BREP_parity": true,
+    "BREP_reopen": {
+      "bbox_mm": [
+        -2.000000642529698e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112265718793
+    },
+    "FCStd_parity": true,
+    "FCStd_reopen": {
+      "bbox_mm": [
+        -2.33e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112265718828
+    },
+    "accounting_delta_mm3": 0.00772199615403224,
+    "accounting_relief_fraction": 5.9307090251594665e-06,
+    "accounting_source_fraction": 5.870388601191929e-07,
+    "cleanup_status": "OPTIONAL_CLEANUP_FAILED: Bnd_Box is void",
+    "memory": {
+      "bbox_mm": [
+        -2.000000642529698e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112265718826
+    },
+    "path": "UNION_THEN_SINGLE_CUT",
+    "repeat": 1,
+    "unique_removed_volume_mm3": 1302.0436373097718,
+    "witness_FCStd_path": "experiments/try6/artifacts/try6_0_d1_w1/witnesses/FULL/UNION_THEN_SINGLE_CUT_1.FCStd",
+    "witness_FCStd_sha256": "2ad7f6cd9baf2a7d789b9bd62c3287b7b76b3c3d761af2b9112e9632220e35fe",
+    "witness_brep_path": "experiments/try6/artifacts/try6_0_d1_w1/witnesses/FULL/UNION_THEN_SINGLE_CUT_1.brep",
+    "witness_brep_sha256": "5cf1e4eaa36f01d2addc1b34d63f40419800142d0f11b32e0a2624b2957e0ba3"
+  },
+  {
+    "BREP_parity": true,
+    "BREP_reopen": {
+      "bbox_mm": [
+        -2.000000642529698e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112083964075
+    },
+    "FCStd_parity": true,
+    "FCStd_reopen": {
+      "bbox_mm": [
+        -2.33e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112083964106
+    },
+    "accounting_delta_mm3": 0.007540241432252515,
+    "accounting_relief_fraction": 5.791115506881951e-06,
+    "accounting_source_fraction": 5.732215669521746e-07,
+    "cleanup_status": "OPTIONAL_CLEANUP_FAILED: Bnd_Box is void",
+    "memory": {
+      "bbox_mm": [
+        -2.000000642529698e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112083964104
+    },
+    "path": "ORDERED_SEQUENTIAL_CUT",
+    "repeat": 0,
+    "unique_removed_volume_mm3": 1302.0436373097718,
+    "witness_FCStd_path": "experiments/try6/artifacts/try6_0_d1_w1/witnesses/FULL/ORDERED_SEQUENTIAL_CUT_0.FCStd",
+    "witness_FCStd_sha256": "f125360a8d6f8b1d09643261889d76abeabe04f249e8f18f67a5e484615059bf",
+    "witness_brep_path": "experiments/try6/artifacts/try6_0_d1_w1/witnesses/FULL/ORDERED_SEQUENTIAL_CUT_0.brep",
+    "witness_brep_sha256": "4fea737ac7ba93b85b01c94a07da1a3c7126815a497207ffb87795b31d32203d"
+  },
+  {
+    "BREP_parity": true,
+    "BREP_reopen": {
+      "bbox_mm": [
+        -2.000000642529698e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112083964075
+    },
+    "FCStd_parity": true,
+    "FCStd_reopen": {
+      "bbox_mm": [
+        -2.33e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112083964106
+    },
+    "accounting_delta_mm3": 0.007540241432252515,
+    "accounting_relief_fraction": 5.791115506881951e-06,
+    "accounting_source_fraction": 5.732215669521746e-07,
+    "cleanup_status": "OPTIONAL_CLEANUP_FAILED: Bnd_Box is void",
+    "memory": {
+      "bbox_mm": [
+        -2.000000642529698e-15,
+        -12.000000000000007,
+        -11.070454601943494,
+        63.0,
+        12.000000000000007,
+        11.070454601943494
+      ],
+      "keepout_residual_mm3": 0.0,
+      "outside_source_mm3": 0.0,
+      "solid_count": 3,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 11852.112083964104
+    },
+    "path": "ORDERED_SEQUENTIAL_CUT",
+    "repeat": 1,
+    "unique_removed_volume_mm3": 1302.0436373097718,
+    "witness_FCStd_path": "experiments/try6/artifacts/try6_0_d1_w1/witnesses/FULL/ORDERED_SEQUENTIAL_CUT_1.FCStd",
+    "witness_FCStd_sha256": "876cdbccf9c91e14a7163a538fb1d2987e47250869b206107f559fe746fc1097",
+    "witness_brep_path": "experiments/try6/artifacts/try6_0_d1_w1/witnesses/FULL/ORDERED_SEQUENTIAL_CUT_1.brep",
+    "witness_brep_sha256": "4fea737ac7ba93b85b01c94a07da1a3c7126815a497207ffb87795b31d32203d"
+  }
+]

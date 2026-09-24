@@ -1,0 +1,19 @@
+{
+  "no_GT_VLM_final_mechanics_holdout": true,
+  "paths": [
+    "UNION_THEN_SINGLE_CUT",
+    "ORDERED_SEQUENTIAL_CUT"
+  ],
+  "repeats_per_path": 2,
+  "subsets": [
+    "FULL",
+    "L03",
+    "L05",
+    "L06",
+    "L07",
+    "L03_L05",
+    "L03_L06",
+    "L05_L06",
+    "L03_L05_L06"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "accounting_error_policy": "diagnostic_only_never_a_hard_gate",
+  "experiment_id": "try6_0_d1_w1_engineering_witness_validation",
+  "fatal_exception_policy": "continue per subset after local Boolean failure; stop only on corrupt shared source or frozen input mismatch",
+  "frozen_d1_protocol": "experiments/try6/protocol/try6_0_d1.json",
+  "frozen_d1_v2_result": "experiments/try6/results/try6_0_d1_v2",
+  "frozen_geometry_set": "experiments/try6/results/try6_0_d1/frozen_inputs/geometry_set.json",
+  "frozen_kfde_construction": "experiments/try6/results/try6_0_c2/kfde/construction_report.json",
+  "frozen_w0_result": "experiments/try6/results/try6_0_d1_w0",
+  "occupancy_policy": {
+    "keepout_intersection_limit_mm3": 1e-06,
+    "keepout_not_relaxed_by_accounting_error": true,
+    "source_exterior_not_relaxed_by_accounting_error": true,
+    "source_exterior_volume_limit": "W0 synthetic-calibrated absolute+relative policy"
+  },
+  "path_order": "frozen W0 order",
+  "paths": [
+    "UNION_THEN_SINGLE_CUT",
+    "ORDERED_SEQUENTIAL_CUT"
+  ],
+  "prohibited": [
+    "alignment rerun",
+    "localization",
+    "representation-capacity interpretation",
+    "KFDE/CAD modification",
+    "GT",
+    "VLM",
+    "final 96-case mechanics",
+    "formal holdout"
+  ],
+  "repeats_per_path": 2,
+  "requirements_to_evidence": {
+    "frozen_inputs_and_holdout": "frozen_inputs/parity_audit.json",
+    "independent_readiness": "audit/independent_validation.json",
+    "nine_subsets_all_attempted": "summary/witness_engineering_metrics.csv",
+    "no_science_leakage": "audit/leakage_audit.json",
+    "path_repeat_reopen_occupancy": "witnesses/*/path_records.json",
+    "relief_interval_category": "summary/category_stability.json",
+    "topology": "summary/topology_stability.json"
+  },
+  "scope": "technical_readiness_only",
+  "stability_policy": {
+    "bbox_limit_mm": 1e-07,
+    "category_boundary_policy": "crossing 0.05 or 0.15 is explicitly NUMERICALLY_AMBIGUOUS, not forced to either side",
+    "maximum_relief_interval_width_ratio": 0.001,
+    "maximum_width_basis": "one fiftieth of the frozen 5-percent SMALL threshold, preregistered before W1 real subsets",
+    "near_zero_negative_relief_rule": "if V(G)-V(W) is negative by no more than the W0 synthetic-calibrated volume stability limit, record raw value and use zero only for category; otherwise numeric failure",
+    "topology_rule": "same T0 state and solid count across both paths, repeats, BREP and FCStd reopen; one solid CONNECTED_SINGLE_SOLID, multiple solids DISCONNECTED_MULTI_SOLID, empty EFFECTIVELY_EMPTY",
+    "volume_and_residual_limit": "W0 synthetic-calibrated absolute+relative policy"
+  }
+}

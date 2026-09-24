@@ -1,0 +1,58 @@
+{
+  "C1_source_sha256": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411",
+  "D1_protocol_sha256": "b42413eda709c4b1c59755387d1076d5d24ff611c6c411c4300815b9559cb034",
+  "W0_Boolean_helper_sha256": "dd7b80b96719badf43c98de4e1d2a426255e0c3f9e0f660dcd2240ac872f1989",
+  "W0_calibration_sha256": "207dfae0b2f72b0048b0cf5ee53ad67417d3d8d5fede4ba077d411b394e81a07",
+  "W1_semantics_sha256": "cd113b0b145097982fd8c5ad630d25f5514c3beb1c5a28fd8397c44e5ce0552c",
+  "W1_worker_sha256": "4dad007fcd09a5791ed94d6879e20c5fb4afe965600ee14e5a93d2ec0e16e0b9",
+  "allowed_sha256": "5eef89d6f4469fcd60291fe8761a63cd5fd85b79d016ed9054aa88f0df6432a5",
+  "component_hashes": {
+    "L03_J03_00": "fd8ce0eb51467ef088fe5d37b8c2d1bb7dd83c5bad3481b6157573b0980b180f",
+    "L03_J03_01": "034a2b439bf4ad1f82707eb9ad11cf74de9a0319c0abcd0d0417a25bec2b0d34",
+    "L03_J03_02": "0986766f8032b976541f11ad435df69f74755547040fbd752040c69e40182b4a",
+    "L03_J03_03": "6474691582403cbd7b3d1a8423559d4e097e5ad5d5d6af127f696b18e6278031",
+    "L03_J03_04": "f41fabae5c03866bbd6c6a91349fe4c7f111faaa4107e3b24449c655b4d0d316",
+    "L03_J03_05": "8338ce721966f9458f6c8f9efeabaa34199f386584dfe8df09845a7648de8b90",
+    "L03_J03_06": "87e9cd68a565eb0e97a059f21425dd4577a75d22a22d0410ad4a0b64c76cd3b5",
+    "L05_FIXED_J04_00": "e263427958d2f8fe74a54dc6ccfaf7fe6bca4e0086a0f9c7a086287a17d5886e",
+    "L06_J05_00": "0c3a82d97b831f1f769f9072b784e4327839c2315ad3900f0fafdbf2eaeeac37",
+    "L06_J05_01": "b2038d9ffad14e43924eb9a601e2b1c80bea32dbfb0b52318ae5af5a9bd4fcdd",
+    "L06_J05_02": "e0f4c050cff9ddb1035d68195e9dd5ad9089b362ba19c921f59241974ea4c253",
+    "L06_J05_03": "edb5ea44b4cacc71bb9a9588c55666d97078f212b200e554f5668d436fcc0560",
+    "L07_FIXED_J06_00": "3d6c7f2a3679da04085677e7925ab136efe8b74cd0617643acf24809e885f286"
+  },
+  "created_utc": "2026-09-24T02:19:04.747204+00:00",
+  "holdout_lock_sha256": "1e98bd92b6e3b5997ad959231df8b02bc5f9747463d7b776f3d244f46a306153",
+  "occupancy_policy": {
+    "keepout_intersection_limit_mm3": 1e-06,
+    "keepout_not_relaxed_by_accounting_error": true,
+    "source_exterior_not_relaxed_by_accounting_error": true,
+    "source_exterior_volume_limit": "W0 synthetic-calibrated absolute+relative policy"
+  },
+  "prior_manifest_sha256": {
+    "try6_0_c1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "try6_0_c2": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+    "try6_0_d0": "33bcb7fd039d8bac4b06bec6df874ed5f75a018221a15368df1c052b4a2d4f16",
+    "try6_0_d1": "f6677fa2bc4f6314587e2d01193f15831db8eae36b1ac75afffda020e6476f4a",
+    "try6_0_d1_t0": "ca6ab7c4bc78432f75ac5ef40413a6bc0a5bcaa48b9ade09c56058ae25700b17",
+    "try6_0_d1_v2": "71837948a34c40d84040fdbc25df3063c4f45c4192c35552b9f248b64120d474",
+    "try6_0_d1_w0": "96ca28eba716ddb71737c7a346aab0696be11833f67e19458d5b9b1f5a2ac153"
+  },
+  "protocol_sha256": "aab35e01e18c5eca99c8c662e554651b8f966fede10755f05d16149496cf51a4",
+  "python_environment": "D:\\CADtest\\papertest\\.venv\\Scripts\\python.exe",
+  "relief_thresholds": {
+    "moderate_max": 0.15,
+    "small_max": 0.05
+  },
+  "stability_policy": {
+    "bbox_limit_mm": 1e-07,
+    "category_boundary_policy": "crossing 0.05 or 0.15 is explicitly NUMERICALLY_AMBIGUOUS, not forced to either side",
+    "maximum_relief_interval_width_ratio": 0.001,
+    "maximum_width_basis": "one fiftieth of the frozen 5-percent SMALL threshold, preregistered before W1 real subsets",
+    "near_zero_negative_relief_rule": "if V(G)-V(W) is negative by no more than the W0 synthetic-calibrated volume stability limit, record raw value and use zero only for category; otherwise numeric failure",
+    "topology_rule": "same T0 state and solid count across both paths, repeats, BREP and FCStd reopen; one solid CONNECTED_SINGLE_SOLID, multiple solids DISCONNECTED_MULTI_SOLID, empty EFFECTIVELY_EMPTY",
+    "volume_and_residual_limit": "W0 synthetic-calibrated absolute+relative policy"
+  },
+  "starting_commit": "1c933dc50417e900b7aea83a547e1836636c47ec",
+  "subset_definition_sha256": "4f2ea7e32d5916f20cac71294e8fc606412b44092d5b94f856652ec1b6a96a9b"
+}

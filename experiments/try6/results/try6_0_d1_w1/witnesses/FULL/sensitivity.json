@@ -1,0 +1,32 @@
+{
+  "audited_status": "PASS",
+  "category": {
+    "category": "MODERATE_RELIEF",
+    "category_status": "ROBUST",
+    "endpoint_categories": [
+      "MODERATE_RELIEF",
+      "MODERATE_RELIEF"
+    ],
+    "interval": [
+      0.0989829137846478,
+      0.09898292760194331
+    ],
+    "is_statistical_confidence_interval": false
+  },
+  "frozen_minimum_allowed_ratio": -1.0076021646269878e-10,
+  "negative_exceeds_frozen": false,
+  "raw_ratios": [
+    0.09898291378464794,
+    0.09898291378465042,
+    0.0989829137846478,
+    0.09898291378464794,
+    0.09898291378465042,
+    0.0989829137846478,
+    0.09898292760194109,
+    0.09898292760194331,
+    0.09898292760194095,
+    0.09898292760194109,
+    0.09898292760194331,
+    0.09898292760194095
+  ]
+}

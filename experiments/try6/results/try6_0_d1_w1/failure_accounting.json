@@ -1,0 +1,38 @@
+{
+  "attempted": [
+    "FULL",
+    "L03",
+    "L05",
+    "L06",
+    "L07",
+    "L03_L05",
+    "L03_L06",
+    "L05_L06",
+    "L03_L05_L06"
+  ],
+  "dropped": [],
+  "failed": {
+    "L07": "WITNESS_NUMERICALLY_UNSTABLE"
+  },
+  "passed": [
+    "FULL",
+    "L03",
+    "L05",
+    "L06",
+    "L03_L05",
+    "L03_L06",
+    "L05_L06",
+    "L03_L05_L06"
+  ],
+  "requested": [
+    "FULL",
+    "L03",
+    "L05",
+    "L06",
+    "L07",
+    "L03_L05",
+    "L03_L06",
+    "L05_L06",
+    "L03_L05_L06"
+  ]
+}

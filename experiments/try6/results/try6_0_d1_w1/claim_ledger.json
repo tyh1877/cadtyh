@@ -1,0 +1,14 @@
+{
+  "L07_negative_relief_numeric_failure": {
+    "artifact": "witnesses/L07/sensitivity.json",
+    "evidence_type": "computed"
+  },
+  "READY_FOR_D1_V3": {
+    "evidence_type": "not_supported",
+    "reason": "L07 numeric gate failed"
+  },
+  "eight_usable_witnesses": {
+    "artifact": "summary/witness_engineering_metrics.csv",
+    "evidence_type": "computed"
+  }
+}

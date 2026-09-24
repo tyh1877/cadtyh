@@ -1,0 +1,25 @@
+{
+  "L07_correction_reason": "Valid constructed BREP with negative relief beyond preregistered near-zero limit is numeric failure, not construction failure",
+  "audited": {
+    "FULL": "PASS",
+    "L03": "PASS",
+    "L03_L05": "PASS",
+    "L03_L05_L06": "PASS",
+    "L03_L06": "PASS",
+    "L05": "PASS",
+    "L05_L06": "PASS",
+    "L06": "PASS",
+    "L07": "WITNESS_NUMERICALLY_UNSTABLE"
+  },
+  "raw": {
+    "FULL": "PASS",
+    "L03": "PASS",
+    "L03_L05": "PASS",
+    "L03_L05_L06": "PASS",
+    "L03_L06": "PASS",
+    "L05": "PASS",
+    "L05_L06": "PASS",
+    "L06": "PASS",
+    "L07": "WITNESS_CONSTRUCTION_BLOCKED"
+  }
+}

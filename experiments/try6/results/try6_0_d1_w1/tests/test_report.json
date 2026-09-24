@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "all_nine_usable": false,
+    "category_above_15": true,
+    "category_below_5": true,
+    "category_between_5_15": true,
+    "category_crossing_15": true,
+    "category_crossing_5": true,
+    "holdout_guard": true,
+    "interface_invariance": true,
+    "keepout_residual_check": true,
+    "nine_subset_execution": true,
+    "no_GT": true,
+    "no_VLM": true,
+    "optional_removeSplitter_failure_handled": true,
+    "path_A_B_relief_agreement": true,
+    "reopen_parity": true,
+    "repeatability": true,
+    "source_subset_check": true,
+    "synthetic_valid_witness": true,
+    "topology_stability": true
+  },
+  "passed": 18,
+  "semantic_unit_tests": 7,
+  "total": 19
+}
