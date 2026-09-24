@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "boolean_safety": true,
+    "classifier_hash": true,
+    "cross_path": true,
+    "empty_witness_semantics": true,
+    "five_classified": true,
+    "five_source_hashes": true,
+    "frozen_manifests": true,
+    "frozen_tolerance": true,
+    "g5_legitimate_empty": true,
+    "holdout_guard": true,
+    "no_dummy": true,
+    "no_scientific_evaluation": true,
+    "protocol_hash": true,
+    "roundtrip": true,
+    "row_retention": true,
+    "synthetic_tests": true,
+    "worker_hash": true
+  },
+  "decision": "READY_FOR_D1_V2",
+  "independent_of_runner": true,
+  "passed": 17,
+  "scientific_alignment_conclusion": null,
+  "total": 17,
+  "validated_utc": "2026-09-24T00:56:17.936706+00:00"
+}

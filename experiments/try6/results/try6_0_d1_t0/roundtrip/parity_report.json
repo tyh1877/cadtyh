@@ -1,0 +1,206 @@
+{
+  "cross_paths": [
+    {
+      "fcstd_state": "VALID_SINGLE_SOLID",
+      "geometry_id": "G1_C1_FINAL",
+      "prior_brep_sha256": "42d9bd9737e77b07c43c79dcfebba0f4e893e8267c11cafa0aac93dfaf101f8f",
+      "prior_brep_state": "VALID_SINGLE_SOLID",
+      "state_parity": true
+    },
+    {
+      "fcstd_state": "VALID_SINGLE_SOLID",
+      "geometry_id": "G2_D0_P0",
+      "prior_brep_sha256": "4bca1e59d2e7393ab6f50660387cc5f1a98f3f172b4d0c3cb7090f7bce673ea3",
+      "prior_brep_state": "VALID_SINGLE_SOLID",
+      "state_parity": true
+    },
+    {
+      "fcstd_state": "VALID_SINGLE_SOLID",
+      "geometry_id": "G3_D0_P3",
+      "prior_brep_sha256": "5ec4b73c1028d339ce49e91c89880a0a23cd93e8651a7f9b5ccbc930dae70652",
+      "prior_brep_state": "VALID_SINGLE_SOLID",
+      "state_parity": true
+    },
+    {
+      "fcstd_state": "VALID_MULTI_SOLID",
+      "geometry_id": "G4_C0_DIRECT",
+      "prior_brep_sha256": "35a8a436846cc04b549d39263024c4fa1d1f81ce3676a01d4a17b2be80cbb4c6",
+      "prior_brep_state": "VALID_MULTI_SOLID",
+      "state_parity": true
+    },
+    {
+      "fcstd_state": "EFFECTIVELY_EMPTY",
+      "geometry_id": "G5_F0_COARSE",
+      "prior_brep_sha256": "79cc9aabc76bd6c334ee4511f98451f65c9029d6f7a698ae2a782221992bb3fe",
+      "prior_brep_state": "EFFECTIVELY_EMPTY",
+      "state_parity": true
+    }
+  ],
+  "roundtrips": [
+    {
+      "after": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 20,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 18772.87245631948
+      },
+      "before": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 20,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 18772.872456319485
+      },
+      "brep_sha256": "42d9bd9737e77b07c43c79dcfebba0f4e893e8267c11cafa0aac93dfaf101f8f",
+      "name": "G1_C1_FINAL_mutable",
+      "repeated_deterministic": true,
+      "serialization_volume_delta_mm3": -3.637978807091713e-12,
+      "solid_count_parity": true,
+      "state_parity": true,
+      "volume_parity_within_frozen_tolerance": true
+    },
+    {
+      "after": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 94,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 6,
+        "solid_count": 6,
+        "state": "VALID_MULTI_SOLID",
+        "volume_mm3": 7808.035066517686
+      },
+      "before": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 94,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 6,
+        "solid_count": 6,
+        "state": "VALID_MULTI_SOLID",
+        "volume_mm3": 7808.035066517666
+      },
+      "brep_sha256": "35a8a436846cc04b549d39263024c4fa1d1f81ce3676a01d4a17b2be80cbb4c6",
+      "name": "G4_C0_DIRECT_mutable",
+      "repeated_deterministic": true,
+      "serialization_volume_delta_mm3": 2.000888343900442e-11,
+      "solid_count_parity": true,
+      "state_parity": true,
+      "volume_parity_within_frozen_tolerance": true
+    },
+    {
+      "after": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": false,
+        "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+        "face_count": 0,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 0,
+        "solid_count": 0,
+        "state": "EFFECTIVELY_EMPTY",
+        "volume_mm3": 0.0
+      },
+      "before": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": false,
+        "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+        "face_count": 0,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 0,
+        "solid_count": 0,
+        "state": "EFFECTIVELY_EMPTY",
+        "volume_mm3": 0.0
+      },
+      "brep_sha256": "79cc9aabc76bd6c334ee4511f98451f65c9029d6f7a698ae2a782221992bb3fe",
+      "name": "G5_F0_COARSE_mutable",
+      "repeated_deterministic": true,
+      "serialization_volume_delta_mm3": 0.0,
+      "solid_count_parity": true,
+      "state_parity": true,
+      "volume_parity_within_frozen_tolerance": true
+    },
+    {
+      "after": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": false,
+        "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+        "face_count": 0,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 0,
+        "solid_count": 0,
+        "state": "EFFECTIVELY_EMPTY",
+        "volume_mm3": 0.0
+      },
+      "before": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": false,
+        "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+        "face_count": 0,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 0,
+        "solid_count": 0,
+        "state": "EFFECTIVELY_EMPTY",
+        "volume_mm3": 0.0
+      },
+      "brep_sha256": "d94d6764f1a229976a427da3d54079d14917079076fe7de18881302f3f5820d7",
+      "name": "S3_DERIVED_EMPTY",
+      "repeated_deterministic": true,
+      "serialization_volume_delta_mm3": 0.0,
+      "solid_count_parity": true,
+      "state_parity": true,
+      "volume_parity_within_frozen_tolerance": true
+    },
+    {
+      "after": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 6,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 0.9999999999999998
+      },
+      "before": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 6,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 0.9999999999999998
+      },
+      "brep_sha256": "a332088e480d28ebb45fbdc0dc40091a62d9b53e2463824e5594a2188912b9a4",
+      "name": "S1_SINGLE",
+      "repeated_deterministic": true,
+      "serialization_volume_delta_mm3": 0.0,
+      "solid_count_parity": true,
+      "state_parity": true,
+      "volume_parity_within_frozen_tolerance": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "after": {
+    "experiments/try6/results/try6_0_c1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "experiments/try6/results/try6_0_c2": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+    "experiments/try6/results/try6_0_d0": "33bcb7fd039d8bac4b06bec6df874ed5f75a018221a15368df1c052b4a2d4f16",
+    "experiments/try6/results/try6_0_d1": "f6677fa2bc4f6314587e2d01193f15831db8eae36b1ac75afffda020e6476f4a"
+  },
+  "allowed_brep_sha256": "5eef89d6f4469fcd60291fe8761a63cd5fd85b79d016ed9054aa88f0df6432a5",
+  "before": {
+    "experiments/try6/results/try6_0_c1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "experiments/try6/results/try6_0_c2": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+    "experiments/try6/results/try6_0_d0": "33bcb7fd039d8bac4b06bec6df874ed5f75a018221a15368df1c052b4a2d4f16",
+    "experiments/try6/results/try6_0_d1": "f6677fa2bc4f6314587e2d01193f15831db8eae36b1ac75afffda020e6476f4a"
+  },
+  "source_hashes": {
+    "G1_C1_FINAL": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411",
+    "G2_D0_P0": "c97f075ee23e65b413e6d9b16bdd7bec946fcec19e7efe40e902aeb5f1deed6f",
+    "G3_D0_P3": "4ffc23c51fd7858f0b99ea34fa998070d1a67141cb986db51918cefb2308beaf",
+    "G4_C0_DIRECT": "7edae1b431ce2aabd003092583568732d2db4594d55b0ac796da1bc71ede999b",
+    "G5_F0_COARSE": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69"
+  },
+  "unchanged": true
+}

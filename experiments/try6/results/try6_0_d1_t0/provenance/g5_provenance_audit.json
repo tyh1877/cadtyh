@@ -1,0 +1,50 @@
+{
+  "allowed": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 35,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 2,
+    "solid_count": 2,
+    "state": "VALID_MULTI_SOLID",
+    "volume_mm3": 15037.522908823934
+  },
+  "common_minus_full_volume_mm3": 0.00011489350436022505,
+  "common_volume_numerical_warning": true,
+  "complete_allowed_coverage": true,
+  "coverage_volume_mm3": 9698.134315929927,
+  "extraction": "full_link_minus_frozen_allowed_region",
+  "extraction_branch": "OCC_CUT_EXECUTED",
+  "full": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 22,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 1,
+    "solid_count": 1,
+    "state": "VALID_SINGLE_SOLID",
+    "volume_mm3": 9698.134201036422
+  },
+  "full_minus_allowed_volume_mm3": 0.0,
+  "geometry_id": "G5_F0_COARSE",
+  "mutable": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": false,
+    "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+    "face_count": 0,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 0,
+    "solid_count": 0,
+    "state": "EFFECTIVELY_EMPTY",
+    "volume_mm3": 0.0
+  },
+  "scaffold": null,
+  "source_path": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+  "source_sha256": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69",
+  "verified_empty_provenance": true
+}

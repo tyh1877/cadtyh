@@ -1,0 +1,39 @@
+{
+  "allowed_brep_sha256": "5eef89d6f4469fcd60291fe8761a63cd5fd85b79d016ed9054aa88f0df6432a5",
+  "classifier_implementation_sha256": "fa1e5c336d493ac2cd0ad80d058468559d1c6dec1b2ad545f25fdc3fddbdb0aa",
+  "created_utc": "2026-09-24T00:54:09.764246+00:00",
+  "final_commit_reference": "git rev-parse try6-d1-t0-ready",
+  "freecad_python": "D:\\software\\freeCAD\\install\\bin\\python.exe",
+  "freecad_version": [
+    "1",
+    "1",
+    "1",
+    "20260414 (Git shallow)",
+    "Unknown",
+    "2026/04/14 22:09:59",
+    "(HEAD detached at 0108fd4b4)",
+    "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"
+  ],
+  "frozen_manifest_hashes": {
+    "experiments/try6/results/try6_0_c1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "experiments/try6/results/try6_0_c2": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+    "experiments/try6/results/try6_0_d0": "33bcb7fd039d8bac4b06bec6df874ed5f75a018221a15368df1c052b4a2d4f16",
+    "experiments/try6/results/try6_0_d1": "f6677fa2bc4f6314587e2d01193f15831db8eae36b1ac75afffda020e6476f4a"
+  },
+  "frozen_tolerance_policy_sha256": "d59e7354d66334d355a7b326eee99880fdcbc58668f643720661461319646361",
+  "holdout_lock_sha256": "1e98bd92b6e3b5997ad959231df8b02bc5f9747463d7b776f3d244f46a306153",
+  "occ_version": "7.8.1",
+  "orchestrator_python": "D:\\CADtest\\papertest\\.venv\\Scripts\\python.exe",
+  "protocol_sha256": "46d09ba5df5121845768f09acb01b6341443732cf35ed64f1f0d3014d7eecd59",
+  "source_hashes": {
+    "G1_C1_FINAL": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411",
+    "G2_D0_P0": "c97f075ee23e65b413e6d9b16bdd7bec946fcec19e7efe40e902aeb5f1deed6f",
+    "G3_D0_P3": "4ffc23c51fd7858f0b99ea34fa998070d1a67141cb986db51918cefb2308beaf",
+    "G4_C0_DIRECT": "7edae1b431ce2aabd003092583568732d2db4594d55b0ac796da1bc71ede999b",
+    "G5_F0_COARSE": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69"
+  },
+  "starting_commit": "833bf6fd64d26edfe11c468e8a447615c959416a",
+  "technical_test_count": 29,
+  "worker_raw_sha256": "eb46581e7b6593b8dcf84f8a5625feff5b6e888f82cb3a5448c3f905253f9349",
+  "worker_sha256": "80d72c1dda7538d7e97031ccb5908d2f96571ef2a740d4beca28b9707f6a6e9c"
+}

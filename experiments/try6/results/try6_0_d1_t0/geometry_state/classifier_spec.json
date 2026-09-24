@@ -1,0 +1,19 @@
+{
+  "nonvolumetric_policy": "fail_closed_without_occ_cut",
+  "precedence": [
+    "missing_or_invalid_brep_is_INVALID_BREP",
+    "true_null_is_EFFECTIVELY_EMPTY_only_with_verified_subtraction_provenance",
+    "no_solids_and_volume_at_most_tolerance_is_EFFECTIVELY_EMPTY_only_with_verified_subtraction_provenance",
+    "no_solids_with_faces_or_shells_is_NONVOLUMETRIC_ONLY_otherwise_INVALID_BREP",
+    "one_valid_solid_is_VALID_SINGLE_SOLID_even_below_tolerance",
+    "multiple_valid_solids_are_VALID_MULTI_SOLID_even_below_tolerance"
+  ],
+  "states": [
+    "VALID_SINGLE_SOLID",
+    "VALID_MULTI_SOLID",
+    "EFFECTIVELY_EMPTY",
+    "NONVOLUMETRIC_ONLY",
+    "INVALID_BREP"
+  ],
+  "tolerance_mm3": 1e-06
+}

@@ -1,0 +1,38 @@
+{
+  "empty_provenance": "verified_full_minus_frozen_allowed_region_or_synthetic_subtraction",
+  "experiment_id": "try6_0_d1_t0_empty_brep_readiness",
+  "frozen_d1_protocol": "experiments/try6/protocol/try6_0_d1.json",
+  "frozen_geometry_set": "experiments/try6/results/try6_0_d1/frozen_inputs/geometry_set.json",
+  "frozen_kfde_construction": "experiments/try6/results/try6_0_c2/kfde/construction_report.json",
+  "nonvolumetric_boolean_policy": "fail_closed_without_occ_cut",
+  "numerical_tolerance_mm3": 1e-06,
+  "prohibited": [
+    "D1-v2 alignment",
+    "GT",
+    "VLM",
+    "final 96-case mechanics",
+    "formal holdout",
+    "KFDE/CAD changes",
+    "dummy geometry"
+  ],
+  "requirements_to_evidence": {
+    "BREP_roundtrip_and_repetition": "roundtrip/parity_report.json",
+    "G1_G5_independent_recomputation": "geometry_state/g1_g5_states.json",
+    "G5_provenance": "provenance/g5_provenance_audit.json",
+    "frozen_sources_and_holdout": "audit/frozen_state_audit.json and audit/holdout_audit.json",
+    "independent_readiness_gate": "audit/independent_validation.json",
+    "safe_boolean_and_empty_rows": "boolean_safety/operation_results.json",
+    "sixteen_technical_tests": "tests/test_report.json",
+    "state_precedence_and_tolerance": "geometry_state/classifier_spec.json",
+    "synthetic_and_boundary_cases": "geometry_state/synthetic_fixture_states.json"
+  },
+  "scope": "technical_readiness_only",
+  "state_precedence": [
+    "missing_or_invalid_brep_is_INVALID_BREP",
+    "true_null_is_EFFECTIVELY_EMPTY_only_with_verified_subtraction_provenance",
+    "no_solids_and_volume_at_most_tolerance_is_EFFECTIVELY_EMPTY_only_with_verified_subtraction_provenance",
+    "no_solids_with_faces_or_shells_is_NONVOLUMETRIC_ONLY_otherwise_INVALID_BREP",
+    "one_valid_solid_is_VALID_SINGLE_SOLID_even_below_tolerance",
+    "multiple_valid_solids_are_VALID_MULTI_SOLID_even_below_tolerance"
+  ]
+}

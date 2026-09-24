@@ -1,0 +1,240 @@
+{
+  "all_pass": true,
+  "count": 29,
+  "passed": 29,
+  "tests": [
+    {
+      "detail": null,
+      "pass": true,
+      "test": "frozen_tolerance"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "allowed_region_volumetric"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "five_sources_open_and_classify"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "G1_G4_volumetric"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "G5_full_vs_mutable"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "G5_provenance_coverage"
+    },
+    {
+      "detail": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": false,
+        "empty_reason": "TRUE_NULL_RESULT",
+        "face_count": 0,
+        "is_null": true,
+        "is_valid": true,
+        "shell_count": 0,
+        "solid_count": 0,
+        "state": "EFFECTIVELY_EMPTY",
+        "volume_mm3": 0.0
+      },
+      "pass": true,
+      "test": "fixture_S0_NULL"
+    },
+    {
+      "detail": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 6,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 0.9999999999999998
+      },
+      "pass": true,
+      "test": "fixture_S1_SINGLE"
+    },
+    {
+      "detail": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 12,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 2,
+        "solid_count": 2,
+        "state": "VALID_MULTI_SOLID",
+        "volume_mm3": 1.9999999999999991
+      },
+      "pass": true,
+      "test": "fixture_S2_MULTI"
+    },
+    {
+      "detail": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": false,
+        "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+        "face_count": 0,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 0,
+        "solid_count": 0,
+        "state": "EFFECTIVELY_EMPTY",
+        "volume_mm3": 0.0
+      },
+      "pass": true,
+      "test": "fixture_S3_DERIVED_EMPTY"
+    },
+    {
+      "detail": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": false,
+        "empty_reason": null,
+        "face_count": 1,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 0,
+        "solid_count": 0,
+        "state": "NONVOLUMETRIC_ONLY",
+        "volume_mm3": 0.0
+      },
+      "pass": true,
+      "test": "fixture_S4_FACE"
+    },
+    {
+      "detail": {
+        "below_tolerance_volumetric": true,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 6,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 5.000000000000005e-07
+      },
+      "pass": true,
+      "test": "fixture_S5_HALF_EPS"
+    },
+    {
+      "detail": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 6,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 1.0000000000000006e-06
+      },
+      "pass": true,
+      "test": "fixture_S5_EXACT_EPS"
+    },
+    {
+      "detail": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 6,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 2.000000000000001e-06
+      },
+      "pass": true,
+      "test": "fixture_S6_DOUBLE_EPS"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "null_without_provenance_fail_closed"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "missing_shape_invalid"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "corrupt_brep_rejected"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "tiny_real_solids_not_empty"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "empty_A_no_OCC"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "empty_B_unchanged"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "nonvolumetric_cut_fail_closed"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "invalid_cut_fail_closed"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "all_roundtrips_state_and_repeat"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "G5_frozen_brep_cross_path"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "all_five_cross_path"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "G5_deserialized_no_illegal_cut"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "empty_intersection_denominator_retained"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "empty_witness_ratio_NA"
+    },
+    {
+      "detail": null,
+      "pass": true,
+      "test": "no_dummy_geometry"
+    }
+  ]
+}

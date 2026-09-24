@@ -1,0 +1,109 @@
+{
+  "component_rows": [
+    {
+      "component_id": "L03_J03_00",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L03_J03_01",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L03_J03_02",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L03_J03_03",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L03_J03_04",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L03_J03_05",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L03_J03_06",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L05_FIXED_J04_00",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L06_J05_00",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L06_J05_01",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L06_J05_02",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L06_J05_03",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    },
+    {
+      "component_id": "L07_FIXED_J06_00",
+      "intersection_volume_mm3": 0.0,
+      "status": "EMPTY_MUTABLE_GEOMETRY",
+      "violation": false
+    }
+  ],
+  "empty_witness_semantics": {
+    "mutable_carrier_connectivity": "NOT_APPLICABLE_EMPTY_MUTABLE",
+    "mutable_volume_mm3": 0.0,
+    "removed_mutable_volume_mm3": 0.0,
+    "removed_ratio": "NOT_APPLICABLE_EMPTY_MUTABLE"
+  },
+  "g5": {
+    "branch": "EMPTY_A_NO_OCC_CUT",
+    "state": {
+      "below_tolerance_volumetric": false,
+      "can_boolean_cut": false,
+      "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+      "face_count": 0,
+      "is_null": false,
+      "is_valid": true,
+      "shell_count": 0,
+      "solid_count": 0,
+      "state": "EFFECTIVELY_EMPTY",
+      "volume_mm3": 0.0
+    }
+  },
+  "synthetic": {
+    "empty_A": "EMPTY_A_NO_OCC_CUT",
+    "empty_B": "EMPTY_B_NO_OCC_CUT",
+    "invalid_refused": true,
+    "nonvolumetric_refused": true
+  }
+}

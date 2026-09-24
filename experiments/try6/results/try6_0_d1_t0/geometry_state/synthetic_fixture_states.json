@@ -1,0 +1,130 @@
+[
+  {
+    "expected": "EFFECTIVELY_EMPTY",
+    "fixture": "S0_NULL",
+    "observed": {
+      "below_tolerance_volumetric": false,
+      "can_boolean_cut": false,
+      "empty_reason": "TRUE_NULL_RESULT",
+      "face_count": 0,
+      "is_null": true,
+      "is_valid": true,
+      "shell_count": 0,
+      "solid_count": 0,
+      "state": "EFFECTIVELY_EMPTY",
+      "volume_mm3": 0.0
+    }
+  },
+  {
+    "expected": "VALID_SINGLE_SOLID",
+    "fixture": "S1_SINGLE",
+    "observed": {
+      "below_tolerance_volumetric": false,
+      "can_boolean_cut": true,
+      "empty_reason": null,
+      "face_count": 6,
+      "is_null": false,
+      "is_valid": true,
+      "shell_count": 1,
+      "solid_count": 1,
+      "state": "VALID_SINGLE_SOLID",
+      "volume_mm3": 0.9999999999999998
+    }
+  },
+  {
+    "expected": "VALID_MULTI_SOLID",
+    "fixture": "S2_MULTI",
+    "observed": {
+      "below_tolerance_volumetric": false,
+      "can_boolean_cut": true,
+      "empty_reason": null,
+      "face_count": 12,
+      "is_null": false,
+      "is_valid": true,
+      "shell_count": 2,
+      "solid_count": 2,
+      "state": "VALID_MULTI_SOLID",
+      "volume_mm3": 1.9999999999999991
+    }
+  },
+  {
+    "expected": "EFFECTIVELY_EMPTY",
+    "fixture": "S3_DERIVED_EMPTY",
+    "observed": {
+      "below_tolerance_volumetric": false,
+      "can_boolean_cut": false,
+      "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+      "face_count": 0,
+      "is_null": false,
+      "is_valid": true,
+      "shell_count": 0,
+      "solid_count": 0,
+      "state": "EFFECTIVELY_EMPTY",
+      "volume_mm3": 0.0
+    }
+  },
+  {
+    "expected": "NONVOLUMETRIC_ONLY",
+    "fixture": "S4_FACE",
+    "observed": {
+      "below_tolerance_volumetric": false,
+      "can_boolean_cut": false,
+      "empty_reason": null,
+      "face_count": 1,
+      "is_null": false,
+      "is_valid": true,
+      "shell_count": 0,
+      "solid_count": 0,
+      "state": "NONVOLUMETRIC_ONLY",
+      "volume_mm3": 0.0
+    }
+  },
+  {
+    "expected": "VALID_SINGLE_SOLID",
+    "fixture": "S5_HALF_EPS",
+    "observed": {
+      "below_tolerance_volumetric": true,
+      "can_boolean_cut": true,
+      "empty_reason": null,
+      "face_count": 6,
+      "is_null": false,
+      "is_valid": true,
+      "shell_count": 1,
+      "solid_count": 1,
+      "state": "VALID_SINGLE_SOLID",
+      "volume_mm3": 5.000000000000005e-07
+    }
+  },
+  {
+    "expected": "VALID_SINGLE_SOLID",
+    "fixture": "S5_EXACT_EPS",
+    "observed": {
+      "below_tolerance_volumetric": false,
+      "can_boolean_cut": true,
+      "empty_reason": null,
+      "face_count": 6,
+      "is_null": false,
+      "is_valid": true,
+      "shell_count": 1,
+      "solid_count": 1,
+      "state": "VALID_SINGLE_SOLID",
+      "volume_mm3": 1.0000000000000006e-06
+    }
+  },
+  {
+    "expected": "VALID_SINGLE_SOLID",
+    "fixture": "S6_DOUBLE_EPS",
+    "observed": {
+      "below_tolerance_volumetric": false,
+      "can_boolean_cut": true,
+      "empty_reason": null,
+      "face_count": 6,
+      "is_null": false,
+      "is_valid": true,
+      "shell_count": 1,
+      "solid_count": 1,
+      "state": "VALID_SINGLE_SOLID",
+      "volume_mm3": 2.000000000000001e-06
+    }
+  }
+]
