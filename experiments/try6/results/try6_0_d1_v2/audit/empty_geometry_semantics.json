@@ -1,0 +1,29 @@
+{
+  "G5_full_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 22,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 1,
+    "solid_count": 1,
+    "state": "VALID_SINGLE_SOLID",
+    "volume_mm3": 9698.13420103643
+  },
+  "G5_mutable_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": false,
+    "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+    "face_count": 0,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 0,
+    "solid_count": 0,
+    "state": "EFFECTIVELY_EMPTY",
+    "volume_mm3": 0.0
+  },
+  "G5_rows": 13,
+  "all_G5_status_empty": true,
+  "no_G5_row_dropped": true
+}

@@ -1,6 +1,6 @@
 {
   "completed": 0,
-  "detail": "Traceback (most recent call last):\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_v2_witness.py\", line 183, in <module>\n    main(read(sys.argv[1]))\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_v2_witness.py\", line 86, in main\n    witness = preserved.fuse(relieved).removeSplitter()\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPart.OCCError: Bnd_Box is void\n",
+  "detail": "Traceback (most recent call last):\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_v2_witness.py\", line 200, in <module>\n    main(read(sys.argv[1]))\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_v2_witness.py\", line 116, in main\n    raise RuntimeError(\"removed-volume Boolean mismatch: \" + subset)\nRuntimeError: removed-volume Boolean mismatch: FULL\n",
   "no_silent_retry": true,
   "planned": 9,
   "returncode": 1,

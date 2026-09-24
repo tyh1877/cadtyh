@@ -1,0 +1,6 @@
+{
+  "URDF_sha256": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+  "interface_contract_sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d",
+  "sha256": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a",
+  "source": "experiments/try5A/scripts/freecad_motion_realization.py"
+}

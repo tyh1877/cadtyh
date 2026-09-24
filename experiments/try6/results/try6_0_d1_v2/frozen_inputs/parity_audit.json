@@ -1,0 +1,36 @@
+{
+  "component_hashes": {
+    "L03_J03_00": "fd8ce0eb51467ef088fe5d37b8c2d1bb7dd83c5bad3481b6157573b0980b180f",
+    "L03_J03_01": "034a2b439bf4ad1f82707eb9ad11cf74de9a0319c0abcd0d0417a25bec2b0d34",
+    "L03_J03_02": "0986766f8032b976541f11ad435df69f74755547040fbd752040c69e40182b4a",
+    "L03_J03_03": "6474691582403cbd7b3d1a8423559d4e097e5ad5d5d6af127f696b18e6278031",
+    "L03_J03_04": "f41fabae5c03866bbd6c6a91349fe4c7f111faaa4107e3b24449c655b4d0d316",
+    "L03_J03_05": "8338ce721966f9458f6c8f9efeabaa34199f386584dfe8df09845a7648de8b90",
+    "L03_J03_06": "87e9cd68a565eb0e97a059f21425dd4577a75d22a22d0410ad4a0b64c76cd3b5",
+    "L05_FIXED_J04_00": "e263427958d2f8fe74a54dc6ccfaf7fe6bca4e0086a0f9c7a086287a17d5886e",
+    "L06_J05_00": "0c3a82d97b831f1f769f9072b784e4327839c2315ad3900f0fafdbf2eaeeac37",
+    "L06_J05_01": "b2038d9ffad14e43924eb9a601e2b1c80bea32dbfb0b52318ae5af5a9bd4fcdd",
+    "L06_J05_02": "e0f4c050cff9ddb1035d68195e9dd5ad9089b362ba19c921f59241974ea4c253",
+    "L06_J05_03": "edb5ea44b4cacc71bb9a9588c55666d97078f212b200e554f5668d436fcc0560",
+    "L07_FIXED_J06_00": "3d6c7f2a3679da04085677e7925ab136efe8b74cd0617643acf24809e885f286"
+  },
+  "formal_holdout_accessed": false,
+  "frozen_manifest_hashes": {
+    "try6_0_c1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "try6_0_c2": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+    "try6_0_d0": "33bcb7fd039d8bac4b06bec6df874ed5f75a018221a15368df1c052b4a2d4f16",
+    "try6_0_d1": "f6677fa2bc4f6314587e2d01193f15831db8eae36b1ac75afffda020e6476f4a",
+    "try6_0_d1_t0": "ca6ab7c4bc78432f75ac5ef40413a6bc0a5bcaa48b9ade09c56058ae25700b17"
+  },
+  "geometry_source_hashes": {
+    "G1_C1_FINAL": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411",
+    "G2_D0_P0": "c97f075ee23e65b413e6d9b16bdd7bec946fcec19e7efe40e902aeb5f1deed6f",
+    "G3_D0_P3": "4ffc23c51fd7858f0b99ea34fa998070d1a67141cb986db51918cefb2308beaf",
+    "G4_C0_DIRECT": "7edae1b431ce2aabd003092583568732d2db4594d55b0ac796da1bc71ede999b",
+    "G5_F0_COARSE": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69"
+  },
+  "only_T0_empty_handling_changed": true,
+  "pose_mapping_sha256": "3369ce03c314ca35bb9602301cff9d9b4d0af8f4094af9fb58e50513472272f8",
+  "same_frozen_D1_protocol": true,
+  "status": "PASS"
+}

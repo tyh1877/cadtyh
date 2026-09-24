@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "65_rows_unique_complete": true,
+    "G5_full_vs_mutable": true,
+    "T0_classifier": true,
+    "URDF": true,
+    "descriptive_counts": true,
+    "exact_mechanics": true,
+    "frozen_D1_protocol": true,
+    "frozen_category_logic": true,
+    "frozen_pose_ids": true,
+    "frozen_prior_manifests": true,
+    "holdout_untouched": true,
+    "no_forbidden_evaluations": true,
+    "no_witness_science_promoted": true,
+    "pose_and_source_mapping": true,
+    "result_file_hashes": true,
+    "taxonomy_values": true,
+    "violation_and_taxonomy_consistency": true,
+    "witness_failure_retained": true
+  },
+  "decision": "DIAGNOSTIC_INCONCLUSIVE",
+  "independent_of_runner": true,
+  "passed": 18,
+  "phase_A_complete": true,
+  "scientific_mechanism_verdict_supported": false,
+  "total": 18,
+  "witness_complete": false
+}

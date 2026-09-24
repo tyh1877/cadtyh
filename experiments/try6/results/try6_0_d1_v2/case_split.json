@@ -1,0 +1,40 @@
+{
+  "KFDE_component_ids": [
+    "L03_J03_00",
+    "L03_J03_01",
+    "L03_J03_02",
+    "L03_J03_03",
+    "L03_J03_04",
+    "L03_J03_05",
+    "L03_J03_06",
+    "L05_FIXED_J04_00",
+    "L06_J05_00",
+    "L06_J05_01",
+    "L06_J05_02",
+    "L06_J05_03",
+    "L07_FIXED_J06_00"
+  ],
+  "accessed": false,
+  "alignment_case_count": 65,
+  "development_geometry_ids": [
+    "G1_C1_FINAL",
+    "G2_D0_P0",
+    "G3_D0_P3",
+    "G4_C0_DIRECT",
+    "G5_F0_COARSE"
+  ],
+  "evaluation_count": 0,
+  "formal_holdout_case_count": 32,
+  "formal_holdout_ids_not_read": true,
+  "witness_subsets": [
+    "FULL",
+    "L03",
+    "L05",
+    "L06",
+    "L07",
+    "L03_L05",
+    "L03_L06",
+    "L05_L06",
+    "L03_L05_L06"
+  ]
+}

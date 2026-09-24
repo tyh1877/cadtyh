@@ -1,0 +1,9 @@
+{
+  "G5_full_state": "VALID_SINGLE_SOLID",
+  "G5_mutable_state": "EFFECTIVELY_EMPTY",
+  "authority_contradiction_established": false,
+  "case_count": 13,
+  "full_exact_unintended_collision_cases": 0,
+  "mutable_KFDE_violations": 0,
+  "reason": "empty mutable scope is not a full-link authority contradiction"
+}

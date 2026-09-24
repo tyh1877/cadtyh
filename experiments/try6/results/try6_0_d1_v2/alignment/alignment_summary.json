@@ -1,0 +1,16 @@
+{
+  "ALIGNMENT_HIGH": false,
+  "ALIGNMENT_HIGH_threshold": 0.9,
+  "KFDE_violation_count_nonambiguous": 32,
+  "aligned_unsafe_count": 5,
+  "case_count": 65,
+  "counts": {
+    "ALIGNED_SAFE": 33,
+    "ALIGNED_UNSAFE": 5,
+    "KFDE_FALSE_POSITIVE_SUSPECT": 27
+  },
+  "descriptive_unsafe_alignment_rate": 0.15625,
+  "final_scientific_verdict_not_supported": true,
+  "not_general_statistical_precision": true,
+  "status": "PHASE_A_COMPLETE_WITNESS_INCOMPLETE"
+}

@@ -1,0 +1,12 @@
+{
+  "below_tolerance_volumetric": false,
+  "can_boolean_cut": true,
+  "empty_reason": null,
+  "face_count": 22,
+  "is_null": false,
+  "is_valid": true,
+  "shell_count": 1,
+  "solid_count": 1,
+  "state": "VALID_SINGLE_SOLID",
+  "volume_mm3": 9698.13420103643
+}

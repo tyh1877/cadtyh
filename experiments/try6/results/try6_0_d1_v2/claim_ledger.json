@@ -1,0 +1,13 @@
+{
+  "decision": "DIAGNOSTIC_INCONCLUSIVE",
+  "final_mechanism_claim": {
+    "evidence_type": "incomplete",
+    "reason": "witness phase 0/9"
+  },
+  "phase_A_65_rows": {
+    "artifact": "alignment/raw_alignment.json",
+    "evidence_type": "computed",
+    "field": "cases",
+    "use": "descriptive_only"
+  }
+}

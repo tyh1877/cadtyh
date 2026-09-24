@@ -1,0 +1,93 @@
+[
+  {
+    "component_id": "L03_J03_00",
+    "exact_full_pair_common_mm3": 0.0,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_01",
+    "exact_full_pair_common_mm3": 0.0,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_02",
+    "exact_full_pair_common_mm3": 0.0,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_03",
+    "exact_full_pair_common_mm3": 0.0,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_04",
+    "exact_full_pair_common_mm3": 0.0,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_05",
+    "exact_full_pair_common_mm3": 4.9590653035493215,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_06",
+    "exact_full_pair_common_mm3": 109.32533959436104,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L05_FIXED_J04_00",
+    "exact_full_pair_common_mm3": 210.70750377417568,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L05"
+  },
+  {
+    "component_id": "L06_J05_00",
+    "exact_full_pair_common_mm3": 631.0203004000464,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L06"
+  },
+  {
+    "component_id": "L06_J05_01",
+    "exact_full_pair_common_mm3": 631.0203004000464,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L06"
+  },
+  {
+    "component_id": "L06_J05_02",
+    "exact_full_pair_common_mm3": 631.0203004000464,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L06"
+  },
+  {
+    "component_id": "L06_J05_03",
+    "exact_full_pair_common_mm3": 631.0203004000464,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L06"
+  },
+  {
+    "component_id": "L07_FIXED_J06_00",
+    "exact_full_pair_common_mm3": 615.7521601035999,
+    "exact_taxonomy": "EXPECTED_INTERFACE_CONTACT",
+    "exact_unintended_collision": false,
+    "neighbor_id": "L07"
+  }
+]

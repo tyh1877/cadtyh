@@ -1,0 +1,93 @@
+[
+  {
+    "component_id": "L03_J03_00",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_01",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_02",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_03",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_04",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_05",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L03_J03_06",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L03"
+  },
+  {
+    "component_id": "L05_FIXED_J04_00",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L05"
+  },
+  {
+    "component_id": "L06_J05_00",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L06"
+  },
+  {
+    "component_id": "L06_J05_01",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L06"
+  },
+  {
+    "component_id": "L06_J05_02",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L06"
+  },
+  {
+    "component_id": "L06_J05_03",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L06"
+  },
+  {
+    "component_id": "L07_FIXED_J06_00",
+    "kfde_mutable_added_intersection_mm3": 0.0,
+    "kfde_status": "EMPTY_MUTABLE_GEOMETRY",
+    "kfde_violation": false,
+    "neighbor_id": "L07"
+  }
+]

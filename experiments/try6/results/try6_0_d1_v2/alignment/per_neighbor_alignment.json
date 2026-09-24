@@ -1,0 +1,59 @@
+{
+  "L03": {
+    "aligned_unsafe": 5,
+    "case_count": 35,
+    "counts": {
+      "ALIGNED_SAFE": 23,
+      "ALIGNED_UNSAFE": 5,
+      "KFDE_FALSE_POSITIVE_SUSPECT": 7
+    },
+    "descriptive_alignment_rate": 0.4166666666666667,
+    "exact_taxonomy_counts": {
+      "ADJACENT_UNINTENDED_COLLISION": 5,
+      "EXPECTED_INTERFACE_CONTACT": 30
+    },
+    "material_KFDE_false_positive_suspects": 7,
+    "nonambiguous_KFDE_violations": 12
+  },
+  "L05": {
+    "aligned_unsafe": 0,
+    "case_count": 5,
+    "counts": {
+      "ALIGNED_SAFE": 1,
+      "KFDE_FALSE_POSITIVE_SUSPECT": 4
+    },
+    "descriptive_alignment_rate": 0.0,
+    "exact_taxonomy_counts": {
+      "EXPECTED_INTERFACE_CONTACT": 5
+    },
+    "material_KFDE_false_positive_suspects": 4,
+    "nonambiguous_KFDE_violations": 4
+  },
+  "L06": {
+    "aligned_unsafe": 0,
+    "case_count": 20,
+    "counts": {
+      "ALIGNED_SAFE": 4,
+      "KFDE_FALSE_POSITIVE_SUSPECT": 16
+    },
+    "descriptive_alignment_rate": 0.0,
+    "exact_taxonomy_counts": {
+      "EXPECTED_INTERFACE_CONTACT": 20
+    },
+    "material_KFDE_false_positive_suspects": 16,
+    "nonambiguous_KFDE_violations": 16
+  },
+  "L07": {
+    "aligned_unsafe": 0,
+    "case_count": 5,
+    "counts": {
+      "ALIGNED_SAFE": 5
+    },
+    "descriptive_alignment_rate": null,
+    "exact_taxonomy_counts": {
+      "EXPECTED_INTERFACE_CONTACT": 5
+    },
+    "material_KFDE_false_positive_suspects": 0,
+    "nonambiguous_KFDE_violations": 0
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "alignment": {
+    "completed": 65,
+    "failed": 0,
+    "requested": 65
+  },
+  "witness": {
+    "completed": 0,
+    "failed": 9,
+    "first_failure": "OCC Bnd_Box is void in optional removeSplitter after valid preserved.fuse(relieved)",
+    "no_more_retries": true,
+    "requested_subsets": [
+      "FULL",
+      "L03",
+      "L05",
+      "L06",
+      "L07",
+      "L03_L05",
+      "L03_L06",
+      "L05_L06",
+      "L03_L05_L06"
+    ],
+    "technical_retry_failure": "Traceback (most recent call last):\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_v2_witness.py\", line 200, in <module>\n    main(read(sys.argv[1]))\n  File \"D:\\CADtest\\papertest\\experiments\\try6\\evaluation\\freecad_d1_v2_witness.py\", line 116, in main\n    raise RuntimeError(\"removed-volume Boolean mismatch: \" + subset)\nRuntimeError: removed-volume Boolean mismatch: FULL\n"
+  }
+}

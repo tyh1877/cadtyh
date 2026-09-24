@@ -1,0 +1,13 @@
+{
+  "source": "experiments/try6/results/try6_0_c1_v2/solver/theta_selected.json",
+  "evidence_type": "copied_frozen_parameter_names",
+  "active_parameters": [
+    "housing_width_mm",
+    "housing_height_mm",
+    "proximal_section_length_mm",
+    "transition_length_mm",
+    "distal_width_mm",
+    "distal_height_mm"
+  ],
+  "relief_expressibility_evaluated": false
+}

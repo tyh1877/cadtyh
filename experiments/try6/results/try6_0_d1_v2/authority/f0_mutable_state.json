@@ -1,0 +1,12 @@
+{
+  "below_tolerance_volumetric": false,
+  "can_boolean_cut": false,
+  "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+  "face_count": 0,
+  "is_null": false,
+  "is_valid": true,
+  "shell_count": 0,
+  "solid_count": 0,
+  "state": "EFFECTIVELY_EMPTY",
+  "volume_mm3": 0.0
+}

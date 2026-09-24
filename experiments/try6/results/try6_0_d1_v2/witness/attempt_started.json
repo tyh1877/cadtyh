@@ -1,0 +1,8 @@
+{
+  "GT_accessed": false,
+  "T0_classifier_sha256": "fa1e5c336d493ac2cd0ad80d058468559d1c6dec1b2ad545f25fdc3fddbdb0aa",
+  "frozen_D1_protocol_sha256": "b42413eda709c4b1c59755387d1076d5d24ff611c6c411c4300815b9559cb034",
+  "planned": 9,
+  "starting_commit": "66c9cced66bbaeeb670a1d2200a2e5034e941ee4",
+  "timestamp_utc": "2026-09-24T01:17:49.755848+00:00"
+}
