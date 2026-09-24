@@ -1,0 +1,17 @@
+{
+  "experiment_id": "try6_0_d1_v2_l04_kfde_exact_alignment_witness",
+  "science_protocol": "experiments/try6/protocol/try6_0_d1.json",
+  "technical_semantics": "experiments/try6/protocol/try6_0_d1_t0.json",
+  "scientific_amendments": [],
+  "only_change_from_d1_v1": "provenance-aware T0 empty BREP classification and safe Boolean handling",
+  "requirements_to_evidence": {
+    "frozen_sources_pose_mapping_holdout": "frozen_inputs/parity_audit.json",
+    "all_65_same_geometry_same_pose_rows": "alignment/alignment_65_rows.csv",
+    "independent_exact_taxonomy": "alignment/raw_alignment.json",
+    "G5_full_vs_mutable_authority": "authority/authority_summary.json",
+    "nine_fixed_witness_subsets": "witness/witness_summary.json",
+    "six_theta_capacity": "capacity/representation_capacity_report.json",
+    "no_leakage_and_complete_denominators": "audit/independent_validation.json"
+  },
+  "stop_after_d1_v2": true
+}
