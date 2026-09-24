@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import sys
 import time
@@ -36,8 +37,23 @@ def main(phase):
     lock = read(ROOT / "experiments/try5A/results/try5b1_a1_frozen_scaffold/formal_holdout_lock.json")
     if lock["accessed"] is not False or lock["evaluation_count"] != 0:
         raise RuntimeError("formal holdout lock violated")
-    if (RESULT / phase / "attempt_started.json").exists():
+    prior_attempt = (RESULT / phase / "attempt_started.json").exists()
+    technical_retry = phase == "witness" and sys.argv[2:] == ["--technical-retry"]
+    if prior_attempt and not technical_retry:
         raise FileExistsError("phase already attempted; no silent retry")
+    if technical_retry:
+        marker = read(RESULT / "witness/technical_retry_authorization.json")
+        if marker["retry_limit"] != 1 or (RESULT / "witness/technical_retry_started.json").exists():
+            raise FileExistsError("technical retry unavailable/already used")
+        first_failure = RESULT / "witness/failure.json"
+        import hashlib
+        if hashlib.sha256(first_failure.read_bytes()).hexdigest() != marker["first_failure_sha256"]:
+            raise RuntimeError("first failure artifact drift")
+        archive = ARTIFACT / "first_witness_failure"
+        archive.mkdir(parents=True, exist_ok=False)
+        for name in ("attempt_started.json", "failure.json", "stdout.txt", "stderr.txt"):
+            shutil.copy2(RESULT / "witness" / name, archive / name)
+        save(RESULT / "witness/technical_retry_started.json", marker)
     if phase == "witness":
         raw = read(RESULT / "alignment/raw_alignment.json")
         if raw["status"] != "PASS" or raw["case_count"] != 65 or len(raw["cases"]) != 65:
@@ -58,7 +74,8 @@ def main(phase):
     job_path = ARTIFACT / (phase + "_job.json")
     save(job_path, job)
     folder = RESULT / phase
-    save(folder / "attempt_started.json", {"timestamp_utc": datetime.now(timezone.utc).isoformat(),
+    if not prior_attempt:
+        save(folder / "attempt_started.json", {"timestamp_utc": datetime.now(timezone.utc).isoformat(),
          "starting_commit": pre["starting_commit"], "planned": planned,
          "frozen_D1_protocol_sha256": pre["frozen_D1_protocol_sha256"],
          "T0_classifier_sha256": pre["T0_classifier_sha256"], "GT_accessed": False})

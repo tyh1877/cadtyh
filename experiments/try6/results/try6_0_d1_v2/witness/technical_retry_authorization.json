@@ -1,0 +1,9 @@
+{
+  "first_failure_sha256": "f9c366126bcc3c2e464e1b4c918eaff68fc4710b8b6e20d1e40b93fbed3c4993",
+  "first_failure": "OCC Bnd_Box is void in optional removeSplitter after valid preserved.fuse(relieved)",
+  "diagnostic_evidence": "raw fused shape was valid, 3 solids, 17470.827612366193 mm3 before removeSplitter",
+  "technical_change": "If optional removeSplitter fails with Part.OCCError, retain the already valid raw fused BREP and record the branch; do not alter cut, keepout, allowed region, geometry sources, thresholds, or denominator",
+  "scientific_protocol_unchanged": true,
+  "retry_limit": 1,
+  "phase": "witness_only"
+}

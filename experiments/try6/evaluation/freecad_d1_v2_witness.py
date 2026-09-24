@@ -45,6 +45,20 @@ def slab_volume(shape, x0, x1, y0, y1, z0, z1):
     return float(shape.common(box).Volume)
 
 
+def fuse_without_changing_occupancy(a, b):
+    """Use a valid raw fuse if OCC's optional splitter cleanup fails."""
+    combined = a.fuse(b)
+    if not classify_volumetric_shape(combined).can_boolean_cut:
+        raise RuntimeError("fused BREP invalid")
+    try:
+        cleaned = combined.removeSplitter()
+    except Part.OCCError as exc:
+        return combined, "VALID_RAW_FUSE_SPLITTER_CLEANUP_FAILED: " + str(exc)
+    if not classify_volumetric_shape(cleaned).can_boolean_cut:
+        raise RuntimeError("splitter-cleaned BREP invalid")
+    return cleaned, "SPLITTER_CLEANUP_EXECUTED"
+
+
 def main(job):
     cfg = read(ROOT / job["science_protocol"])
     construction = read(ROOT / cfg["kfde_construction"])
@@ -80,10 +94,12 @@ def main(job):
         relieved_state = classify_volumetric_shape(relieved, verified_derived_empty=True)
         if relieved_state.state == "EFFECTIVELY_EMPTY":
             witness = preserved.copy()
+            fusion_status = "NO_MUTABLE_SOLID_TO_FUSE"
         elif not preserved.Solids:
             witness = relieved.copy()
+            fusion_status = "NO_PRESERVED_SOLID_TO_FUSE"
         else:
-            witness = preserved.fuse(relieved).removeSplitter()
+            witness, fusion_status = fuse_without_changing_occupancy(preserved, relieved)
         witness_state = classify_volumetric_shape(witness)
         if not witness_state.can_boolean_cut:
             raise RuntimeError("witness invalid: " + subset)
@@ -98,7 +114,7 @@ def main(job):
             ratio = v_removed/v_original if v_original > 0 else "NOT_APPLICABLE_EMPTY_MUTABLE"
         if abs(float(removed.Volume)-v_removed) > 1e-3:
             raise RuntimeError("removed-volume Boolean mismatch: " + subset)
-        group = scaffold.fuse(witness).removeSplitter()
+        group, group_fusion_status = fuse_without_changing_occupancy(scaffold, witness)
         b = source.BoundBox
         y0, y1, z0, z1 = b.YMin-1, b.YMax+1, b.ZMin-1, b.ZMax+1
         c1, c2 = cfg["witness_longitudinal_cut_stations_mm"]
@@ -148,6 +164,7 @@ def main(job):
                "mutable_state": mutable_state.state, "witness_body_volume_mm3": v_witness,
                "removed_volume_mm3": v_removed, "removed_ratio": ratio,
                "witness_body_valid": witness.isValid(), "witness_body_solid_count": len(witness.Solids),
+               "witness_fusion_status": fusion_status, "group_fusion_status": group_fusion_status,
                "fragment_count": max(0, len(witness.Solids)-1),
                "scaffold_fused_group_valid": group.isValid(),
                "scaffold_fused_group_solid_count": len(group.Solids),
