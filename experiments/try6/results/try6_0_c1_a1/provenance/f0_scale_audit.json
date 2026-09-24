@@ -1,0 +1,53 @@
+{
+  "F0_actual_BREP": {
+    "BREP_valid": true,
+    "FreeCAD_version": [
+      "1",
+      "1",
+      "1",
+      "20260414 (Git shallow)",
+      "Unknown",
+      "2026/04/14 22:09:59",
+      "(HEAD detached at 0108fd4b4)",
+      "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"
+    ],
+    "GT_accessed": false,
+    "bbox_mm": [
+      -11.5,
+      -9.0,
+      -11.5,
+      65.0,
+      9.0,
+      11.5
+    ],
+    "bbox_x_span_mm": 76.5,
+    "f0_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+    "f0_fcstd_sha256": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69",
+    "solid_count": 1,
+    "volume_mm3": 9698.134201036422
+  },
+  "F0_link_spec_interface_span_mm": 63.0,
+  "F0_link_spec_major_length_mm": 63.0,
+  "F0_round3_IR_major_length_mm": 63.0,
+  "F0_round3_body_scale": 0.72,
+  "URDF_J04_origin_m": [
+    0.063,
+    0.0,
+    0.0
+  ],
+  "exact_J03_J04_anchor_mm": 63.0,
+  "pre_anchor_nonkinematic_gauge": {
+    "observed_partial_width_template": "wrist_block base width 16 mm times dimensionless visual_scale",
+    "reason": "Only a width template; frozen F0 and distal frame still encode exact 63 mm. Replacing them would change shared F0/compiler/interface conditions.",
+    "usable_as_existing_clean_complete_F0_or_longitudinal_gauge": false
+  },
+  "source_chain": [
+    "sanitized URDF J04 origin 0.063 m",
+    "Try5A5 fresh_plan child-joint origin * 1000 -> interface_span_mm 63",
+    "L04 LinkCoarseSpec major_length_mm 63",
+    "round3_verified IR retains span/length 63 despite body_scale 0.72",
+    "FreeCAD link_shape uses distal contract origin 63 to construct body/interface",
+    "C1 builder opens F0 FCStd as FrozenScaffold and fuses into every candidate"
+  ],
+  "status": "CONTAMINATED"
+}

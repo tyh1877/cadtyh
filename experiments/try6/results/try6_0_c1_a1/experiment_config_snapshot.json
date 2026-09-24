@@ -1,0 +1,34 @@
+{
+  "experiment_id": "try6_0_c1_a1_l04_kinematic_metric_prior_ablation",
+  "formal_holdout_access": false,
+  "frozen_c1_v2_protocol": "experiments/try6/protocol/try6_0_c1_v2.json",
+  "frozen_c1_v2_result": "experiments/try6/results/try6_0_c1_v2",
+  "frozen_d1_v3_result": "experiments/try6/results/try6_0_d1_v3",
+  "frozen_f0_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+  "frozen_f0_ir": "experiments/try5A/results/try5a5/cad_ir/round3_verified/L04.json",
+  "frozen_f0_spec": "experiments/try5A/results/try5a5/link_coarse_specs.json",
+  "frozen_urdf": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+  "gate_order": [
+    "trace exact URDF metric to all generator and objective inputs",
+    "audit F0 and initial theta for anchor equivalence",
+    "identify an existing independent pre-anchor weak scale gauge if one exists",
+    "only if A1-N is clean freeze paired objective and condition parity",
+    "only after both candidate locks permit GT evaluation"
+  ],
+  "no_KFDE": true,
+  "no_VLM": true,
+  "phase": "PHASE_0_METRIC_PROVENANCE_GATE",
+  "requirements_to_evidence": {
+    "F0_exact_kinematic_scale": "provenance/f0_scale_audit.json",
+    "camera_ROI_profile_anchor_dependency": "provenance/registration_dependency_audit.json",
+    "forbidden_paths_and_functional_only_information": "provenance/forbidden_metric_paths.json",
+    "independent_fail_closed_decision": "audit/independent_validation.json",
+    "metric_dependency_traversal": "provenance/scale_provenance_audit.json",
+    "no_optimization_or_GT_or_holdout": "audit/leakage_audit.json and audit/holdout_audit.json"
+  },
+  "stop_if": {
+    "clean_visual_only_scale_treatment_unidentifiable": "NOANCHOR_BASELINE_NOT_IDENTIFIABLE",
+    "f0_or_other_noanchor_input_contains_exact_anchor_without_clean_preanchor_gauge": "NOANCHOR_BASELINE_CONTAMINATED",
+    "major_condition_asymmetry": "PAIRED_PROTOCOL_INVALID"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "BREP_valid": true,
+  "FreeCAD_version": [
+    "1",
+    "1",
+    "1",
+    "20260414 (Git shallow)",
+    "Unknown",
+    "2026/04/14 22:09:59",
+    "(HEAD detached at 0108fd4b4)",
+    "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"
+  ],
+  "GT_accessed": false,
+  "bbox_mm": [
+    -11.5,
+    -9.0,
+    -11.5,
+    65.0,
+    9.0,
+    11.5
+  ],
+  "bbox_x_span_mm": 76.5,
+  "f0_fcstd": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+  "f0_fcstd_sha256": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69",
+  "solid_count": 1,
+  "volume_mm3": 9698.134201036422
+}

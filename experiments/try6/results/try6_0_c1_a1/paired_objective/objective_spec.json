@@ -1,0 +1,5 @@
+{
+  "historical_objective_reuse_forbidden": true,
+  "reason": "F0/compiler exact anchor contamination blocks a valid A1-N before objective optimization",
+  "status": "NOT_FROZEN_OR_RUN"
+}

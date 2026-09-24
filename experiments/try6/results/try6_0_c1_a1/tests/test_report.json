@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "F0_BREP_valid": "PASS_AUDIT",
+    "F0_reopen_read_only": "PASS_AUDIT",
+    "F0_scale_provenance_checked": "PASS_AUDIT",
+    "GT_inaccessible_before_both_locks": "PASS_AUDIT",
+    "anchor_derived_ROI_detected": "PASS_AUDIT",
+    "bounds_checked": "PASS_AUDIT",
+    "cached_registration_detected": "PASS_AUDIT",
+    "candidate_budget_not_started": "PASS_AUDIT",
+    "dimension_extraction_not_run": "NOT_RUN_BECAUSE_PROVENANCE_GATE_FAILED",
+    "engineering_metrics_no_GT_alignment_not_run": "NOT_RUN_BECAUSE_PROVENANCE_GATE_FAILED",
+    "forbidden_URDF_distance_detected": "PASS_AUDIT",
+    "frozen_interface_source_traced": "PASS_AUDIT",
+    "historical_objective_weights_identified": "PASS_AUDIT",
+    "holdout_guard": "PASS_AUDIT",
+    "metric_provenance_traversal": "PASS_AUDIT",
+    "no_KFDE": "PASS_AUDIT",
+    "no_VLM": "PASS_AUDIT",
+    "normalized_shape_metrics_isolated_not_run": "NOT_RUN_BECAUSE_PROVENANCE_GATE_FAILED",
+    "theta_definitions_checked": "PASS_AUDIT",
+    "visual_slot_statuses_frozen": "PASS_AUDIT"
+  },
+  "count": 20,
+  "no_candidate_result_promoted": true,
+  "paired_experiment_tests_not_run": 3,
+  "phase_0_checks_passed": 17
+}

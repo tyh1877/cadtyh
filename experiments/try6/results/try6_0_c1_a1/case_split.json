@@ -1,0 +1,12 @@
+{
+  "accessed": false,
+  "conditions": [
+    "A1_N_no_anchor",
+    "A1_F_full_anchor"
+  ],
+  "conditions_executed": 0,
+  "evaluation_count": 0,
+  "formal_holdout_case_count": 32,
+  "formal_holdout_ids_not_read": true,
+  "pilot_link": "L04"
+}

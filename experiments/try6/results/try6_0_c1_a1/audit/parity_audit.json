@@ -1,0 +1,8 @@
+{
+  "frozen_prior_manifest_hashes": {
+    "C1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "D1_v3": "2a736c6c8b66de322fead62305e03758ff8dcd7bab3001f508205e8538f6be1d"
+  },
+  "no_C1_D1_KFDE_or_CAD_modification": true,
+  "status": "NOT_RUN_CAUSAL_GATE_FAILED"
+}

@@ -1,0 +1,65 @@
+{
+  "cached_registration_anchor_sha256": "00a5ac45f8f46c2d5dd894efc3f39074028c568a1674da82bef0e00e543f9313",
+  "cached_registration_usable_for_A1_N": false,
+  "historical_ROI_profile_independent_of_anchor": false,
+  "historical_camera_intrinsics_calibrated": false,
+  "normalized_u_objective_not_implemented_due_to_prior_F0_contamination": true,
+  "views": [
+    {
+      "ROI_axis_mm": [
+        12.0,
+        52.0
+      ],
+      "ROI_crop_xyxy_px": [
+        525,
+        405,
+        740,
+        528
+      ],
+      "anchor_mm": 63.0,
+      "computed_px_per_mm": 5.317460317460317,
+      "dependency": "raw pixel span / J04 URDF 63 mm; ROI and stations in mm transformed through this scale",
+      "profile_stations_mm": [
+        15.0,
+        30.0,
+        45.0
+      ],
+      "profile_widths_mm": [
+        12.035820895522388,
+        12.035820895522388,
+        15.044776119402986
+      ],
+      "stored_px_per_mm": 5.317460317460317,
+      "view": "right",
+      "visible_span_px": 335
+    },
+    {
+      "ROI_axis_mm": [
+        12.0,
+        52.0
+      ],
+      "ROI_crop_xyxy_px": [
+        616,
+        666,
+        784,
+        872
+      ],
+      "anchor_mm": 63.0,
+      "computed_px_per_mm": 5.111111111111111,
+      "dependency": "raw pixel span / J04 URDF 63 mm; ROI and stations in mm transformed through this scale",
+      "profile_stations_mm": [
+        15.0,
+        30.0,
+        45.0
+      ],
+      "profile_widths_mm": [
+        25.043478260869566,
+        25.043478260869566,
+        18.782608695652176
+      ],
+      "stored_px_per_mm": 5.111111111111111,
+      "view": "top",
+      "visible_span_px": 322
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "A1_N_cannot_be_clean_with_frozen_F0_and_compiler": true,
+  "observed_forbidden_shared_paths": [
+    "J04 joint origin",
+    "J03-J04 anchor",
+    "F0 interface span",
+    "F0 major length",
+    "F0 actual BREP",
+    "frozen scaffold",
+    "functional distal mount frame",
+    "CAD compiler loft endpoint",
+    "view registration scale",
+    "central ROI axis",
+    "profile station axis",
+    "profile target width",
+    "objective profile normalization"
+  ],
+  "only_intended_difference": "known J03-J04 metric anchor",
+  "status": "BLOCKED_BEFORE_PAIRED_RUN"
+}

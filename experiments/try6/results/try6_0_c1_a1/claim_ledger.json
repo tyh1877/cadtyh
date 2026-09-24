@@ -1,0 +1,14 @@
+{
+  "NOANCHOR_baseline_contaminated": {
+    "artifacts": [
+      "provenance/f0_scale_audit.json",
+      "provenance/registration_dependency_audit.json",
+      "provenance/scale_provenance_audit.json"
+    ],
+    "evidence_type": "computed_and_source_traced"
+  },
+  "anchor_benefit": {
+    "evidence_type": "not_evaluated",
+    "reason": "causal A1-N condition blocked before optimization"
+  }
+}

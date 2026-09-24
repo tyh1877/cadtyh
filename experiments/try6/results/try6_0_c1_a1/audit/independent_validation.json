@@ -1,0 +1,30 @@
+{
+  "GT_evaluations": 0,
+  "checks": {
+    "F0_BREP_observed": true,
+    "F0_scale_lineage": true,
+    "ROI_and_stations_anchor_derived": true,
+    "camera_scale_derived_from_anchor": true,
+    "compiler_and_scaffold_leak": true,
+    "conditional_protocol_stopped": true,
+    "decision_follows_gate": true,
+    "exact_URDF_anchor": true,
+    "functional_distal_anchor": true,
+    "holdout_untouched": true,
+    "no_GT_before_both_locks": true,
+    "no_clean_F0_gauge": true,
+    "no_forbidden_execution": true,
+    "objective_anchor_normalizer": true,
+    "prior_frozen_manifests": true,
+    "protocol_hash": true,
+    "provenance_rows_covered": true,
+    "tracked_result_hashes": true,
+    "twenty_named_tests_honest": true
+  },
+  "decision": "NOANCHOR_BASELINE_CONTAMINATED",
+  "independent_of_runner": true,
+  "paired_candidates_run": 0,
+  "passed": 19,
+  "scientific_anchor_effect_estimated": false,
+  "total": 19
+}

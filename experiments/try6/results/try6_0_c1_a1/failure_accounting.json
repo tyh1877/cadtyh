@@ -1,0 +1,10 @@
+{
+  "A1_F_proposed_candidates": 0,
+  "A1_F_valid_candidates": 0,
+  "A1_N_proposed_candidates": 0,
+  "A1_N_valid_candidates": 0,
+  "GT_evaluations": 0,
+  "candidate_locks": 0,
+  "phase_0_provenance_audit": "COMPLETE",
+  "reason": "NOANCHOR_BASELINE_CONTAMINATED"
+}

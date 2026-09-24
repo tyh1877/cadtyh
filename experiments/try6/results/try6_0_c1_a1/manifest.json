@@ -1,0 +1,60 @@
+{
+  "FreeCAD_version": [
+    "1",
+    "1",
+    "1",
+    "20260414 (Git shallow)",
+    "Unknown",
+    "2026/04/14 22:09:59",
+    "(HEAD detached at 0108fd4b4)",
+    "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"
+  ],
+  "created_utc": "2026-09-24T04:25:43.604098+00:00",
+  "decision": "NOANCHOR_BASELINE_CONTAMINATED",
+  "final_commit_reference": "git rev-parse try6-c1-a1-noanchor-contaminated",
+  "prior_manifest_sha256": {
+    "C1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "D1_v3": "2a736c6c8b66de322fead62305e03758ff8dcd7bab3001f508205e8538f6be1d"
+  },
+  "protocol_sha256": "3a7fffbcf596839481ecfc5b776087b8221d3dd29679348b652bf6256b655beb",
+  "python_environment": "D:\\CADtest\\papertest\\.venv\\Scripts\\python.exe",
+  "result_file_sha256": {
+    "report.md": "5c11bde7023d206b8afda71abca9986c3c229ae5a434ae096060fcb61a6c5a8d",
+    "audit/holdout_audit.json": "4d10d97e4649dbfc0a0e8ffb5177b4815ed90d11c3fbf64340d465de653078b7",
+    "audit/leakage_audit.json": "d2d80325e245b3eb4aa8cf66f4fdc82bb568c8467d73578373d13e263c265a79",
+    "audit/parity_audit.json": "afbae80c1f77948ebec428cf50285b5f0ec34c3eaa5e7e0dded333c9fe1956c2",
+    "audit/pre_gt_lock.json": "00c21256d9f58227a628cf61e4c536e6acfaf7353eb194d18926c400062a6619",
+    "case_split.json": "667be239d0755fcc5444b8e82fdd1ff38db7cadb2f4d406aa15e5c38879b9fdd",
+    "claim_ledger.json": "3b025a161092e950801c40cfa2d569deadff487efc222753bbb025d44dd011f4",
+    "condition_parity.json": "4a5095d3901658fec70d2f61941338b2f93079c19c723ef4d190a74975f12d2c",
+    "experiment_config_snapshot.json": "19ab5a0182e180607a568b19fbce2b3a2813c5d10c93f58e8f2f65575e322faf",
+    "failure_accounting.json": "b9e29ec285a9aa35d131868cc23bd797c69b4bcf5b353edef41716f66ea0be91",
+    "holdout_evaluation_log.json": "9ad5a38573ca79e8d2c6c2129a3b14ef95ef5bb5750cea26afe8ae1664895562",
+    "paired_objective/objective_spec.json": "d5da50c2b836aed74a6be1cadd3c4461a5c615793d9236efe289fff246ad3a5a",
+    "paired_objective/profile_station_spec.json": "8f91a53b5f82efd7d9d88d9c144426072c7d3fc78aa1a4069fdb97c237d8d5c9",
+    "paired_objective/roi_spec.json": "d14aa2e83e99ed8ab47266c3d5a00cf3a7150dc1cd23221d37e2d15c53c7074c",
+    "pre_run_manifest.json": "ddc27d5c7c2a51c59c9204bec31290f9e9055ba377ef4011812d6ce39b21f727",
+    "protocol.json": "19ab5a0182e180607a568b19fbce2b3a2813c5d10c93f58e8f2f65575e322faf",
+    "provenance/f0_geometry_state.json": "54963a37f1a2e253105203a4990cdff095f01d0969b66b65b7bf2f221b11bd6e",
+    "provenance/f0_scale_audit.json": "2ed0781ee4dcbba6ec3b52dd4ee279b49c8c3606f4492975d131e4ededf7d4d2",
+    "provenance/forbidden_metric_paths.json": "4071b41f603e12e6a4fcd36065d10b037bab5a2235b619a43bc9e1d12442df41",
+    "provenance/registration_dependency_audit.json": "c68bb31a189a2eca02b7954c34e40823e6667984f10518ad8462184b8cbfd947",
+    "provenance/scale_provenance_audit.json": "b1badb1649c02049425c332c416f18400216aad1e91dc68ecf046b250099434d",
+    "tests/test_report.json": "dea63fc9cb05beefda88fcf7083e08af336fef37b7b64c98afce20b347d5c72d"
+  },
+  "script_hashes": {
+    "C1_compiler": "ddbffdcd3742c8a310ca259043e4d539a9db094a637c584f6310feab07d9139b",
+    "C1_evidence_extractor": "0f8a2e7850dd337a41d53ec2f8940e43332fcc9219ea0dafd1f5043d6ef35023",
+    "C1_objective": "6d02e8266e1a45327c0bd6685ac7215cc54c052dea150f272048b85ee8f97adc",
+    "C1_solver": "20f9573008c31bc3c48904dd88092cd871fd202a0cd4636e013455e3917e4a0c",
+    "F0_builder": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a",
+    "F0_planner": "4945229e0452f98287874d23cc7131bd1e15287e9c396e60ae973ec84714b81c"
+  },
+  "source_hashes": {
+    "F0_FCStd": "628ba73cdc520bb49fa245b297d0efe9e6186245301a9988a32a41768f59ed69",
+    "F0_IR": "ec9bee11993e80137cd2a754ba4c006afb4801ac543e642abae3e3112777ce71",
+    "URDF": "8ca95e0955331f2f979d1e20e0ca9ae9ccfabb5dba580ffffae8ef4c44ce4664",
+    "registration": "00a5ac45f8f46c2d5dd894efc3f39074028c568a1674da82bef0e00e543f9313"
+  },
+  "starting_commit": "558e0eaa2216fddbd1d8c5c984bb91d773ba1de2"
+}
