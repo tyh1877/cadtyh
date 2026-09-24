@@ -1,0 +1,58 @@
+{
+  "changed_LOC_estimate": [
+    665,
+    1280
+  ],
+  "created_utc": "2026-09-24T04:43:56.251645+00:00",
+  "decision": "FACTOR_REFACTOR_TOO_LARGE",
+  "final_commit_reference": "git rev-parse try6-c1-mf0-refactor-too-large",
+  "prior_manifest_sha256": {
+    "C1_A1": "98b82dd2fbb5bee7d0979e5483794a2c5e9ae420596abcfedefe07cd51c490f1",
+    "C1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "D1_v3": "2a736c6c8b66de322fead62305e03758ff8dcd7bab3001f508205e8538f6be1d"
+  },
+  "protocol_sha256": "46a234009c0f314475bca0510aa8d4466dd5d4c0e15af6ea172425a935eed454",
+  "python_environment": "D:\\CADtest\\papertest\\.venv\\Scripts\\python.exe",
+  "result_file_sha256": {
+    "report.md": "485d1b9ca569f98cc255524c208c35b8b54dac0d2b8efa59fb224adb519c84fb",
+    "audit/holdout_audit.json": "4d10d97e4649dbfc0a0e8ffb5177b4815ed90d11c3fbf64340d465de653078b7",
+    "audit/no_gt.json": "51327ecda0cb97fd1016be7fcb626c16be5c88e54bf6a5390e241221a5c5547f",
+    "audit/no_kfde.json": "51327ecda0cb97fd1016be7fcb626c16be5c88e54bf6a5390e241221a5c5547f",
+    "audit/no_optimizer.json": "51327ecda0cb97fd1016be7fcb626c16be5c88e54bf6a5390e241221a5c5547f",
+    "audit/no_vlm.json": "51327ecda0cb97fd1016be7fcb626c16be5c88e54bf6a5390e241221a5c5547f",
+    "case_split.json": "b1688bab73ac410fe665489b2ae399e399ff83ca1b1fe51001e21b5b9ccec685",
+    "claim_ledger.json": "3a78aa361921427217a267e614ce02456f5528e6614f304cdf7b04554a2a28f3",
+    "condition_parity.json": "e5b5ad59e731e5ce6d2e16475cd23d65bea50dac33f9049ab38f21606953e035",
+    "experiment_config_snapshot.json": "f389806fe9551ad04d5631d14070d2f61495f64100e937dc1bc142e8cc36f12e",
+    "failure_accounting.json": "9ab64fb39775064b2555b1f3fd0147db617036d48555e82d7aa0f068d6547ca8",
+    "holdout_evaluation_log.json": "9ad5a38573ca79e8d2c6c2129a3b14ef95ef5bb5750cea26afe8ae1664895562",
+    "pre_run_manifest.json": "4a670674a560bb5095af966071bc48622b87ce43b92bd4dbe4b4c55d08fb19ba",
+    "protocol.json": "f389806fe9551ad04d5631d14070d2f61495f64100e937dc1bc142e8cc36f12e",
+    "provenance/hidden_scale_search.json": "223553690337378749d58096fe4511eed701c393099e263c0dcfc4d6bb7edc2c",
+    "provenance/metric_provenance_after.json": "6e6103ac6dd0b1f3bb3bb6f7a77cbd93c214a41e1b7518bc6a4b7c4453a4c712",
+    "provenance/metric_provenance_before.json": "67b34fa505d65dd09cd10d91059bee069c9828aa496bab9812bc6fe0a74372d0",
+    "refactor_budget/budget_decision.json": "93e81199f6b80b5d57803192b4b62676d8fbd3553c240ca09bf3605a3a41702a",
+    "refactor_budget/changed_modules.json": "71280fe2496b7e565191934f4aa46e462d575586acd902386040729ba10e27f4",
+    "refactor_budget/scope.json": "39592c01d9ddc751366d840cc70006b81744a9651a3ee927e7bee2e5fefcb839",
+    "representation/canonical_coordinate_spec.json": "7f6f54b36db5583d306424c8c472e5144e0d3107338fa5bf48f949067f24de63",
+    "representation/interface_spec.json": "9328218ef44f01e589dd2b3d077c9c77aa8ed00df168c2933bf87dd14acebc24",
+    "representation/scaffold_spec.json": "ada0e72f6966ecf1ea87bd6a1fdab4338021bbcbf9ba7dc1a877cfe8d8a43e36",
+    "representation/scale_boundary_spec.json": "cb3b059063773ccd52f578b0f0d31758c366a75c7467c7115060b90d941352f9",
+    "representation/shape_parameter_registry.json": "699d122be7f47cfc0a80e924352843017f0c842a7d815eedad4ab04c35937b0b",
+    "tests/test_report.json": "ff87c971dffc27fbffd43195b52baf41eea44684782457b9b98c825b21877947"
+  },
+  "source_sha256": {
+    "F0_planner": "4945229e0452f98287874d23cc7131bd1e15287e9c396e60ae973ec84714b81c",
+    "F0_scaffold_generator": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a",
+    "FreeCAD_compiler": "ddbffdcd3742c8a310ca259043e4d539a9db094a637c584f6310feab07d9139b",
+    "KFDG_contract": "a25718d01d65f77c88a6537dd9713fd5e44dccfe580774c10d6d0a83858f1407",
+    "KFDG_schema": "b02c1b2d4cec3577933be3d9d4289a1a51ce6a5cbdd6179525ad6e6e805546b5",
+    "functional_backbone": "ef8897268757ea3fc552de01c1f420c189c8687511e71c1b7dc1f309105163be",
+    "interface_contract": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d",
+    "parameter_bounds": "636905a1d4faceb5e731128cecf0baf241d6a1b34b8221b706d6319f36928ff5",
+    "parameter_registry": "26d1ddbb5ba8c9cbb4db6de79f5f6ea7ffc88e5397e16148420f9873453415ba",
+    "view_registration_evidence": "0f8a2e7850dd337a41d53ec2f8940e43332fcc9219ea0dafd1f5043d6ef35023",
+    "visual_objective": "6d02e8266e1a45327c0bd6685ac7215cc54c052dea150f272048b85ee8f97adc"
+  },
+  "starting_commit": "fafcc75cdffe22de87baddb26155d5922c3cbe92"
+}

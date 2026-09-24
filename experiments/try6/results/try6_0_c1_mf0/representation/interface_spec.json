@@ -1,0 +1,5 @@
+{
+  "cannot_close_READY_FOR_MF1": true,
+  "description": "joint axes/ownership may remain, but metric radii/clearances/placements are not factored",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED"
+}

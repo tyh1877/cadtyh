@@ -1,0 +1,12 @@
+{
+  "attempted_build_scales": [],
+  "completed_build_scales": [],
+  "decision": "FACTOR_REFACTOR_TOO_LARGE",
+  "reason": "preimplementation 7-of-7 core-layer semantic replacement gate",
+  "requested_build_scales": [
+    1,
+    60,
+    63,
+    70
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "affected_test_families": [
+    "KFDG/schema/authority",
+    "F0/interface geometry",
+    "FreeCAD feature-tree/reopen",
+    "visual evidence/registration",
+    "visual objective",
+    "24 MF0 build/provenance tests",
+    "historical C1-v2 parity"
+  ],
+  "changed_core_layers": [
+    "KFDG_functional_frames",
+    "F0_scaffold_generator",
+    "FreeCAD_compiler",
+    "parameter_registry",
+    "interface_geometry_contract",
+    "visual_objective",
+    "view_registration_evidence"
+  ],
+  "estimate_type": "preimplementation engineering estimate, not measured diff or implementation promise",
+  "estimated_changed_LOC_range_total": [
+    665,
+    1280
+  ],
+  "historical_API_wrapper_feasible_without_anchor_leak": false,
+  "why_wrapper_insufficient": "The current builder rejects non-63 s and fuses an exact-metric F0; scaling the finished CAD would preserve anchor-derived normalized scaffold and interface ratios inside the shape path."
+}

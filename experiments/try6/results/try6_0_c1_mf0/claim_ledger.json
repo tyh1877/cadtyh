@@ -1,0 +1,14 @@
+{
+  "anchor_benefit": {
+    "evidence_type": "not_evaluated",
+    "reason": "no MF1/no GT/no optimizer"
+  },
+  "factorization_feasible": {
+    "evidence_type": "not_tested",
+    "reason": "major rewrite gate stopped implementation"
+  },
+  "refactor_budget": {
+    "artifact": "refactor_budget/scope.json",
+    "evidence_type": "source_audit_plus_engineering_estimate"
+  }
+}

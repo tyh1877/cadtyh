@@ -1,0 +1,257 @@
+{
+  "metric_paths": 13,
+  "rows": [
+    {
+      "A1_N_disposition": "FORBIDDEN_METRIC_TRANSLATION",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "sanitized URDF J04 origin",
+      "name": "J04 joint origin",
+      "source": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+      "unit": "m",
+      "value": [
+        0.063,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "A1_N_disposition": "FORBIDDEN_METRIC_ANCHOR",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "J04 origin norm * 1000",
+      "name": "J03-J04 anchor",
+      "source": "experiments/try5A/inputs/sanitized_urdf/px100_sanitized.urdf",
+      "unit": "mm",
+      "value": 63.0
+    },
+    {
+      "A1_N_disposition": "CONTAMINATES_F0",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "J04 child origin -> planner span -> L04 coarse spec",
+      "name": "F0 interface span",
+      "source": "experiments/try5A/results/try5a5/link_coarse_specs.json",
+      "unit": "mm",
+      "value": 63.0
+    },
+    {
+      "A1_N_disposition": "CONTAMINATES_F0",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "J04 origin -> link spec -> round3 verified IR -> F0 CAD",
+      "name": "F0 major length",
+      "source": "experiments/try5A/results/try5a5/cad_ir/round3_verified/L04.json",
+      "unit": "mm",
+      "value": 63.0
+    },
+    {
+      "A1_N_disposition": "CONTAMINATES_F0",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "URDF-derived interface centers + 63 mm body span -> FreeCAD RigidGroup -> C1 frozen scaffold",
+      "name": "F0 actual BREP",
+      "source": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd",
+      "unit": "mm",
+      "value": [
+        -11.5,
+        -9.0,
+        -11.5,
+        65.0,
+        9.0,
+        11.5
+      ]
+    },
+    {
+      "A1_N_disposition": "CONTAMINATES_EVERY_CANDIDATE",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "candidate builder opens and fuses exact-metric F0",
+      "name": "frozen scaffold",
+      "source": "experiments/try6/scripts/freecad_c1_builder.py",
+      "unit": "FCStd",
+      "value": "experiments/try5A/artifacts/try5a5/round3_verified/links/L04/model.FCStd"
+    },
+    {
+      "A1_N_disposition": "FORBIDDEN_METRIC_TRANSLATION",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "URDF J04 origin -> functional backbone/KFDG distal port",
+      "name": "functional distal mount frame",
+      "source": "experiments/try6/results/try6_0_c1_v2/kfdg/canonical_kfdg.json",
+      "unit": "mm",
+      "value": [
+        63.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "A1_N_disposition": "CONTAMINATES_EVERY_CANDIDATE",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "job.anchor_distance_mm; compiler requires 63 and places TransitionEnd at anchor",
+      "name": "CAD compiler loft endpoint",
+      "source": "experiments/try6/scripts/freecad_c1_builder.py",
+      "unit": "mm",
+      "value": 63.0
+    },
+    {
+      "A1_N_disposition": "FORBIDDEN_CACHED_REGISTRATION",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "teal image bbox span / URDF 63 mm",
+      "name": "view registration scale",
+      "source": "experiments/try6/results/try6_0_c1_v2/visual_metric_evidence/view_registration_report.json",
+      "unit": "px/mm",
+      "value": {
+        "right": 5.317460317460317,
+        "top": 5.111111111111111
+      }
+    },
+    {
+      "A1_N_disposition": "FORBIDDEN_ANCHOR_DERIVED_ROI",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "12-52 mm * anchor-derived px/mm -> image crop",
+      "name": "central ROI axis",
+      "source": "experiments/try6/protocol/try6_0_c1_v2.json",
+      "unit": "mm",
+      "value": [
+        12.0,
+        52.0
+      ]
+    },
+    {
+      "A1_N_disposition": "FORBIDDEN_ANCHOR_DERIVED_STATIONS",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "15/30/45 mm * anchor-derived px/mm -> pixel samples",
+      "name": "profile station axis",
+      "source": "experiments/try6/protocol/try6_0_c1_v2.json",
+      "unit": "mm",
+      "value": [
+        15.0,
+        30.0,
+        45.0
+      ]
+    },
+    {
+      "A1_N_disposition": "FORBIDDEN_ANCHOR_DERIVED_TARGET",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "raw visible width pixels / anchor-derived px/mm",
+      "name": "profile target width",
+      "source": "experiments/try6/results/try6_0_c1_v2/visual_metric_evidence/visual_metric_evidence.json",
+      "unit": "mm",
+      "value": {
+        "right": [
+          12.035820895522388,
+          12.035820895522388,
+          15.044776119402986
+        ],
+        "top": [
+          25.043478260869566,
+          25.043478260869566,
+          18.782608695652176
+        ]
+      }
+    },
+    {
+      "A1_N_disposition": "FORBIDDEN_ANCHOR_DERIVED_NORMALIZER",
+      "contains_exact_kinematic_metric_information": true,
+      "dependency_chain": "profile error / self.anchor",
+      "name": "objective profile normalization",
+      "source": "experiments/try6/scripts/c1_v2_visual_objective.py",
+      "unit": "mm",
+      "value": 63.0
+    },
+    {
+      "A1_N_disposition": "MAY_REMAIN_IF_REEXTRACTED_WITHOUT_SCALE",
+      "contains_exact_kinematic_metric_information": false,
+      "dependency_chain": "raw images -> teal threshold connected component",
+      "name": "raw image/color mask",
+      "source": "experiments/try6/results/try6_0_c1/input_hashes.json",
+      "unit": "pixels",
+      "value": {
+        "right": "9141cb970531aaa7eed67ba94eb368ce025cc332926c78b3b693644956c06098",
+        "top": "a66f9e66dce938d322fd40bbca7e75b0bfe7b693690f791d64c9ab2ab7762a22"
+      }
+    },
+    {
+      "A1_N_disposition": "MAY_REMAIN",
+      "contains_exact_kinematic_metric_information": false,
+      "dependency_chain": "frozen appearance slots",
+      "name": "visual slot statuses",
+      "source": "experiments/try6/results/try6_0_c1_v2/kfdg/active_parameters.json",
+      "unit": "categorical",
+      "value": {
+        "main_housing": "PRESENT",
+        "profile_transition": "PRESENT",
+        "visible_pocket": "ABSENT"
+      }
+    },
+    {
+      "A1_N_disposition": "ABSOLUTE_METRIC_PRIOR_REQUIRES_SEPARATE_IDENTIFICATION",
+      "contains_exact_kinematic_metric_information": false,
+      "dependency_chain": "frozen parameter registry/template values; exact 63 not proven in six body values, but absolute-mm scale prior remains",
+      "name": "initial theta",
+      "source": "experiments/try6/results/try6_0_c1_v2/kfdg/active_parameters.json",
+      "unit": "mm",
+      "value": {
+        "distal_height_mm": 12.0,
+        "distal_width_mm": 14.0,
+        "fillet_radius_mm": 1.0,
+        "housing_height_mm": 16.0,
+        "housing_width_mm": 17.0,
+        "proximal_section_length_mm": 24.0,
+        "recess_depth_mm": 4.0,
+        "recess_length_mm": 12.0,
+        "transition_length_mm": 10.0
+      }
+    },
+    {
+      "A1_N_disposition": "SHARED_ABSOLUTE_METRIC_PRIOR",
+      "contains_exact_kinematic_metric_information": false,
+      "dependency_chain": "frozen physical-mm parameter bounds; no direct exact 63 arithmetic identified",
+      "name": "candidate bounds",
+      "source": "experiments/try6/results/try6_0_c1_v2/kfdg/active_parameters.json",
+      "unit": "mm",
+      "value": {
+        "distal_height_mm": [
+          8.0,
+          24.0
+        ],
+        "distal_width_mm": [
+          8.0,
+          22.0
+        ],
+        "housing_height_mm": [
+          10.0,
+          28.0
+        ],
+        "housing_width_mm": [
+          10.0,
+          24.0
+        ],
+        "proximal_section_length_mm": [
+          18.0,
+          32.0
+        ],
+        "transition_length_mm": [
+          4.0,
+          16.0
+        ]
+      }
+    },
+    {
+      "A1_N_disposition": "MAY_REMAIN_FUNCTIONAL_ONLY",
+      "contains_exact_kinematic_metric_information": false,
+      "dependency_chain": "URDF axes and frozen visual slots without translation magnitudes",
+      "name": "functional axes/topology",
+      "source": "experiments/try6/results/try6_0_c1_v2/kfdg/canonical_kfdg.json",
+      "unit": "unitless",
+      "value": {
+        "feature_types": [
+          "housing",
+          "profile_transition"
+        ],
+        "proximal_axis": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    }
+  ],
+  "source": "experiments/try6/results/try6_0_c1_a1/provenance/scale_provenance_audit.json",
+  "source_sha256": "b1badb1649c02049425c332c416f18400216aad1e91dc68ecf046b250099434d"
+}

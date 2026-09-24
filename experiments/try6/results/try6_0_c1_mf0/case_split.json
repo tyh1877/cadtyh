@@ -1,0 +1,13 @@
+{
+  "accessed": false,
+  "evaluation_count": 0,
+  "formal_holdout_case_count": 32,
+  "formal_holdout_ids_not_read": true,
+  "technical_scales_built": [],
+  "technical_scales_requested": [
+    1,
+    60,
+    63,
+    70
+  ]
+}

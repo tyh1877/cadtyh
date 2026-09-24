@@ -1,0 +1,5 @@
+{
+  "cannot_close_READY_FOR_MF1": true,
+  "description": "a single explicit s API is not implemented; current 63-mm guards remain",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED"
+}

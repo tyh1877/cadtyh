@@ -1,0 +1,32 @@
+{
+  "GT_evaluations": 0,
+  "anchor_benefit_estimated": false,
+  "checks": {
+    "F0_metric_interface_dependency": true,
+    "after_provenance_unavailable": true,
+    "budget_rule_applied": true,
+    "changed_LOC_estimate_honest": true,
+    "decision_follows_budget_gate": true,
+    "frozen_prior_manifests": true,
+    "holdout_untouched": true,
+    "no_false_factorized_artifacts": true,
+    "no_forbidden_evaluations": true,
+    "no_posthoc_scaling_shortcut": true,
+    "no_scale_builds": true,
+    "non63_compiler_block": true,
+    "objective_registration_metric_dependency": true,
+    "observed_code_dependencies": true,
+    "protocol_hash": true,
+    "seven_core_layers": true,
+    "seven_semantic_replacements_evidenced": true,
+    "source_hashes_unchanged": true,
+    "tracked_result_hashes": true,
+    "twenty_four_tests_honest": true
+  },
+  "core_layers_requiring_semantic_replacement": 7,
+  "decision": "FACTOR_REFACTOR_TOO_LARGE",
+  "independent_of_runner": true,
+  "metric_scale_instantiations": 0,
+  "passed": 20,
+  "total": 20
+}

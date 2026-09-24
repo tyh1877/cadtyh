@@ -1,0 +1,32 @@
+{
+  "count": 24,
+  "guard_checks_passed": 5,
+  "no_false_PASS_for_unbuilt_factorization": true,
+  "technical_build_tests_run": 0,
+  "tests": {
+    "BREP_validity": "NOT_RUN_BUDGET_GATE",
+    "FCStd_reopen": "NOT_RUN_BUDGET_GATE",
+    "arbitrary_s_build": "NOT_RUN_BUDGET_GATE",
+    "canonical_s1_build": "NOT_RUN_BUDGET_GATE",
+    "compiler_accepts_non63": "NOT_RUN_BUDGET_GATE",
+    "historical_s63_parity": "NOT_RUN_BUDGET_GATE",
+    "holdout_guard": "PASS_GUARD",
+    "image_objective_independent_of_s": "NOT_RUN_BUDGET_GATE",
+    "interface_scaling": "NOT_RUN_BUDGET_GATE",
+    "no_63_hard_requirement": "NOT_RUN_BUDGET_GATE",
+    "no_GT": "PASS_GUARD",
+    "no_KFDE": "PASS_GUARD",
+    "no_VLM": "PASS_GUARD",
+    "no_mm_ROI_shape_path": "NOT_RUN_BUDGET_GATE",
+    "no_mm_profile_stations_shape_path": "NOT_RUN_BUDGET_GATE",
+    "no_optimizer": "PASS_GUARD",
+    "no_px_per_mm_shape_path": "NOT_RUN_BUDGET_GATE",
+    "normalized_geometry_invariance": "NOT_RUN_BUDGET_GATE",
+    "normalized_ratio_invariance": "NOT_RUN_BUDGET_GATE",
+    "parameter_registry_dimensionless": "NOT_RUN_BUDGET_GATE",
+    "scaffold_scaling": "NOT_RUN_BUDGET_GATE",
+    "scale_equivariance": "NOT_RUN_BUDGET_GATE",
+    "single_metric_entry": "NOT_RUN_BUDGET_GATE",
+    "topology_invariance": "NOT_RUN_BUDGET_GATE"
+  }
+}

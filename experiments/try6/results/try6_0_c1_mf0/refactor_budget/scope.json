@@ -1,0 +1,177 @@
+{
+  "classification": "MAJOR_METHOD_REWRITE",
+  "core_layer_count": 7,
+  "core_layers": [
+    {
+      "estimated_changed_LOC_range": [
+        90,
+        170
+      ],
+      "existing_metric_dependency": "metric_anchor.distance_mm=63; distal frame_xyz_mm=[63,0,0]; schema/validator expect mm frame and authority hash",
+      "layer": "KFDG_functional_frames",
+      "legacy_wrapper_sufficient": false,
+      "required_change": "dimensionless proximal/distal u plus scale-free schema, provenance and validator",
+      "semantic_replacement": true,
+      "sources": [
+        "KFDG_contract",
+        "KFDG_schema",
+        "functional_backbone"
+      ]
+    },
+    {
+      "estimated_changed_LOC_range": [
+        170,
+        320
+      ],
+      "existing_metric_dependency": "URDF origin and interface_span_mm=63 plus many fixed-mm primitives/bore radii/clearances; frozen F0 FCStd is exact metric scaffold",
+      "layer": "F0_scaffold_generator",
+      "legacy_wrapper_sufficient": false,
+      "required_change": "rebuild normalized functional scaffold and all primitive ratios from scale-clean provenance; post-hoc dividing frozen F0 by 63 retains anchored shape ratios",
+      "semantic_replacement": true,
+      "sources": [
+        "F0_scaffold_generator",
+        "F0_planner"
+      ]
+    },
+    {
+      "estimated_changed_LOC_range": [
+        110,
+        210
+      ],
+      "existing_metric_dependency": "rejects s != 63, loft end x=s, parameters are mm; opens/fuses metric F0 and uses fixed-mm bore/mating tools",
+      "layer": "FreeCAD_compiler",
+      "legacy_wrapper_sufficient": false,
+      "required_change": "canonical unit feature tree, explicit s boundary, normalized interface/scaffold instantiation and arbitrary-s reopen",
+      "semantic_replacement": true,
+      "sources": [
+        "FreeCAD_compiler"
+      ]
+    },
+    {
+      "estimated_changed_LOC_range": [
+        45,
+        100
+      ],
+      "existing_metric_dependency": "six active values/bounds and functional anchor are absolute mm; current authority hashes bind them",
+      "layer": "parameter_registry",
+      "legacy_wrapper_sufficient": false,
+      "required_change": "ratio-valued schema, bounds/init provenance and deterministic theta_shape-to-metric map",
+      "semantic_replacement": true,
+      "sources": [
+        "parameter_registry",
+        "parameter_bounds"
+      ]
+    },
+    {
+      "estimated_changed_LOC_range": [
+        90,
+        180
+      ],
+      "existing_metric_dependency": "J04 origin 63, clearance 0.6 and radii/depths 3/16/26 etc baked into mating and protected cuts",
+      "layer": "interface_geometry_contract",
+      "legacy_wrapper_sufficient": false,
+      "required_change": "scale-free port identity/axis with all metric interface dimensions derived at the explicit s boundary",
+      "semantic_replacement": true,
+      "sources": [
+        "interface_contract",
+        "F0_scaffold_generator",
+        "FreeCAD_compiler"
+      ]
+    },
+    {
+      "estimated_changed_LOC_range": [
+        80,
+        150
+      ],
+      "existing_metric_dependency": "projects mesh with scale_px_per_mm; station targets in mm; profile loss divided by anchor",
+      "layer": "visual_objective",
+      "legacy_wrapper_sufficient": false,
+      "required_change": "new normalized image/link-coordinate projection and ROI/profile objective evaluated on unit shape",
+      "semantic_replacement": true,
+      "sources": [
+        "visual_objective"
+      ]
+    },
+    {
+      "estimated_changed_LOC_range": [
+        80,
+        150
+      ],
+      "existing_metric_dependency": "bbox/63 creates px/mm; 12-52 mm ROI and 15/30/45 mm stations cached downstream",
+      "layer": "view_registration_evidence",
+      "legacy_wrapper_sufficient": false,
+      "required_change": "re-extract dimensionless visible-envelope coordinates from frozen raw masks, including preregistered u fractions",
+      "semantic_replacement": true,
+      "sources": [
+        "view_registration_evidence"
+      ]
+    }
+  ],
+  "observed_dependency_checks": {
+    "F0_metric_origins_and_absolute_primitives": true,
+    "compiler_63_guard_and_F0_import": true,
+    "interface_metric_contract": true,
+    "metric_KFDG_frame": true,
+    "objective_px_per_mm": true,
+    "registration_anchor_mm": true,
+    "registry_mm_variables": true
+  },
+  "semantic_replacements_required": 7,
+  "source_snapshots": {
+    "F0_planner": {
+      "path": "experiments/try5A/scripts/run_whole_robot.py",
+      "sha256": "4945229e0452f98287874d23cc7131bd1e15287e9c396e60ae973ec84714b81c",
+      "source_line_count": 276
+    },
+    "F0_scaffold_generator": {
+      "path": "experiments/try5A/scripts/freecad_motion_realization.py",
+      "sha256": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a",
+      "source_line_count": 499
+    },
+    "FreeCAD_compiler": {
+      "path": "experiments/try6/scripts/freecad_c1_builder.py",
+      "sha256": "ddbffdcd3742c8a310ca259043e4d539a9db094a637c584f6310feab07d9139b",
+      "source_line_count": 180
+    },
+    "KFDG_contract": {
+      "path": "experiments/try6/scripts/r1_v3_contract.py",
+      "sha256": "a25718d01d65f77c88a6537dd9713fd5e44dccfe580774c10d6d0a83858f1407",
+      "source_line_count": 210
+    },
+    "KFDG_schema": {
+      "path": "experiments/try6/protocol/r1_v3_kfdg.schema.json",
+      "sha256": "b02c1b2d4cec3577933be3d9d4289a1a51ce6a5cbdd6179525ad6e6e805546b5",
+      "source_line_count": 376
+    },
+    "functional_backbone": {
+      "path": "experiments/try6/protocol/r1_functional_backbone.json",
+      "sha256": "ef8897268757ea3fc552de01c1f420c189c8687511e71c1b7dc1f309105163be",
+      "source_line_count": 16
+    },
+    "interface_contract": {
+      "path": "experiments/try5A/results/try5a5/motion_interface_contracts.json",
+      "sha256": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d",
+      "source_line_count": 781
+    },
+    "parameter_bounds": {
+      "path": "experiments/try6/protocol/parameter_bounds.json",
+      "sha256": "636905a1d4faceb5e731128cecf0baf241d6a1b34b8221b706d6319f36928ff5",
+      "source_line_count": 21
+    },
+    "parameter_registry": {
+      "path": "experiments/try6/protocol/r1_parameter_registry.json",
+      "sha256": "26d1ddbb5ba8c9cbb4db6de79f5f6ea7ffc88e5397e16148420f9873453415ba",
+      "source_line_count": 18
+    },
+    "view_registration_evidence": {
+      "path": "experiments/try6/scripts/extract_c1_v2_visual_evidence.py",
+      "sha256": "0f8a2e7850dd337a41d53ec2f8940e43332fcc9219ea0dafd1f5043d6ef35023",
+      "source_line_count": 135
+    },
+    "visual_objective": {
+      "path": "experiments/try6/scripts/c1_v2_visual_objective.py",
+      "sha256": "6d02e8266e1a45327c0bd6685ac7215cc54c052dea150f272048b85ee8f97adc",
+      "source_line_count": 113
+    }
+  }
+}

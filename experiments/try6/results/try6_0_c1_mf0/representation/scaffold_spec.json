@@ -1,0 +1,5 @@
+{
+  "cannot_close_READY_FOR_MF1": true,
+  "description": "historical F0 is metric; no valid independent normalized scaffold was created",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED"
+}

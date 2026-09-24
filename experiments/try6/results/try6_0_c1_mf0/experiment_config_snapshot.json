@@ -1,0 +1,36 @@
+{
+  "experiment_id": "try6_0_c1_mf0_l04_metric_factorization_feasibility",
+  "frozen_c1_a1_result": "experiments/try6/results/try6_0_c1_a1",
+  "frozen_c1_v2_result": "experiments/try6/results/try6_0_c1_v2",
+  "frozen_d1_v3_result": "experiments/try6/results/try6_0_d1_v3",
+  "guard": {
+    "GT_evaluations": 0,
+    "KFDE_calls": 0,
+    "VLM_calls": 0,
+    "formal_holdout_access": false,
+    "optimizer_runs": 0
+  },
+  "phase": "PRE_IMPLEMENTATION_REFACTOR_BUDGET_GATE",
+  "refactor_budget_rule": {
+    "MAJOR_METHOD_REWRITE": "At least five of the seven core layers require semantic replacement, or a legacy wrapper would retain the exact anchor inside the shape path.",
+    "PASSABLE_BOUNDED_REFACTOR": "Most existing scientific layers retain their semantic implementation, with a single explicit scale boundary and only bounded wrappers or local edits.",
+    "core_layers": [
+      "KFDG_functional_frames",
+      "F0_scaffold_generator",
+      "FreeCAD_compiler",
+      "parameter_registry",
+      "interface_geometry_contract",
+      "visual_objective",
+      "view_registration_evidence"
+    ],
+    "if_major_rewrite": "STOP_FACTOR_REFACTOR_TOO_LARGE_BEFORE_IMPLEMENTATION"
+  },
+  "required_evidence": {
+    "historical_metric_dependency_hashes": "provenance/metric_provenance_before.json",
+    "honest_unrun_s1_s60_s63_s70_tests": "tests/test_report.json",
+    "module_scope_and_LOC_estimate": "refactor_budget/scope.json and refactor_budget/changed_modules.json",
+    "no_GT_VLM_optimizer_KFDE_holdout": "audit/independent_validation.json",
+    "unimplemented_factorization_elements": "representation/canonical_coordinate_spec.json and representation/scaffold_spec.json",
+    "wrapper_vs_rewrite_judgment": "refactor_budget/budget_decision.json"
+  }
+}

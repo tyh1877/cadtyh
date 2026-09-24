@@ -1,0 +1,26 @@
+{
+  "FreeCAD_not_started": true,
+  "created_utc": "2026-09-24T04:43:56.250510+00:00",
+  "holdout_lock_sha256": "1e98bd92b6e3b5997ad959231df8b02bc5f9747463d7b776f3d244f46a306153",
+  "prior_manifest_sha256": {
+    "C1_A1": "98b82dd2fbb5bee7d0979e5483794a2c5e9ae420596abcfedefe07cd51c490f1",
+    "C1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "D1_v3": "2a736c6c8b66de322fead62305e03758ff8dcd7bab3001f508205e8538f6be1d"
+  },
+  "protocol_sha256": "46a234009c0f314475bca0510aa8d4466dd5d4c0e15af6ea172425a935eed454",
+  "python_environment": "D:\\CADtest\\papertest\\.venv\\Scripts\\python.exe",
+  "source_sha256": {
+    "F0_planner": "4945229e0452f98287874d23cc7131bd1e15287e9c396e60ae973ec84714b81c",
+    "F0_scaffold_generator": "713ecaf2866369016e3f657234b8f826e2d4916cbc713ebbe09d158321be009a",
+    "FreeCAD_compiler": "ddbffdcd3742c8a310ca259043e4d539a9db094a637c584f6310feab07d9139b",
+    "KFDG_contract": "a25718d01d65f77c88a6537dd9713fd5e44dccfe580774c10d6d0a83858f1407",
+    "KFDG_schema": "b02c1b2d4cec3577933be3d9d4289a1a51ce6a5cbdd6179525ad6e6e805546b5",
+    "functional_backbone": "ef8897268757ea3fc552de01c1f420c189c8687511e71c1b7dc1f309105163be",
+    "interface_contract": "faef589dc5090119e32e95e59c4689de5a66af8627e8a7a8fb79f432936a121d",
+    "parameter_bounds": "636905a1d4faceb5e731128cecf0baf241d6a1b34b8221b706d6319f36928ff5",
+    "parameter_registry": "26d1ddbb5ba8c9cbb4db6de79f5f6ea7ffc88e5397e16148420f9873453415ba",
+    "view_registration_evidence": "0f8a2e7850dd337a41d53ec2f8940e43332fcc9219ea0dafd1f5043d6ef35023",
+    "visual_objective": "6d02e8266e1a45327c0bd6685ac7215cc54c052dea150f272048b85ee8f97adc"
+  },
+  "starting_commit": "fafcc75cdffe22de87baddb26155d5922c3cbe92"
+}

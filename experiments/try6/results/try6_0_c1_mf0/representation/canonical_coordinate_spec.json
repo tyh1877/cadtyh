@@ -1,0 +1,5 @@
+{
+  "cannot_close_READY_FOR_MF1": true,
+  "description": "u=0/1 is a proposed interface coordinate only; no canonical feature tree exists",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED"
+}

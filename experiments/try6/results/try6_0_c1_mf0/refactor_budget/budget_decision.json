@@ -1,0 +1,22 @@
+{
+  "bounded_refactor_not_defensible": true,
+  "decision": "FACTOR_REFACTOR_TOO_LARGE",
+  "implementation_stopped_before_any_scientific_module_edit": true,
+  "major_method_rewrite": true,
+  "observed_semantic_replacements": 7,
+  "rule": {
+    "MAJOR_METHOD_REWRITE": "At least five of the seven core layers require semantic replacement, or a legacy wrapper would retain the exact anchor inside the shape path.",
+    "PASSABLE_BOUNDED_REFACTOR": "Most existing scientific layers retain their semantic implementation, with a single explicit scale boundary and only bounded wrappers or local edits.",
+    "core_layers": [
+      "KFDG_functional_frames",
+      "F0_scaffold_generator",
+      "FreeCAD_compiler",
+      "parameter_registry",
+      "interface_geometry_contract",
+      "visual_objective",
+      "view_registration_evidence"
+    ],
+    "if_major_rewrite": "STOP_FACTOR_REFACTOR_TOO_LARGE_BEFORE_IMPLEMENTATION"
+  },
+  "total_core_layers": 7
+}
