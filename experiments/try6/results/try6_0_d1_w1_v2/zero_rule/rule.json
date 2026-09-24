@@ -1,0 +1,10 @@
+{
+  "epsilon_abs_mm3": 1e-08,
+  "epsilon_abs_source": "frozen W0 synthetic-calibrated absolute_mm3",
+  "epsilon_rel": 1e-06,
+  "formula": "epsilon_zero_mm3=max(epsilon_abs_mm3, epsilon_rel*source_volume_mm3)",
+  "inclusive_negative_boundary": true,
+  "positive_relief_unchanged": true,
+  "spatial_hard_gates_first": true,
+  "subset_specific_exceptions": false
+}

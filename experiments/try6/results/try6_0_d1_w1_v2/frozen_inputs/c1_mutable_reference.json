@@ -1,0 +1,5 @@
+{
+  "extraction": "FrozenMatingEnvelopeCut minus frozen allowed region",
+  "source": "experiments/try6/artifacts/try6_0_c1_v2/cad/final.FCStd",
+  "source_sha256": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411"
+}

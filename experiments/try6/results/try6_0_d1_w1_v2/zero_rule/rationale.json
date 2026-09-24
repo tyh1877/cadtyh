@@ -1,0 +1,7 @@
+{
+  "chosen_by_user_protocol_before_real_run": true,
+  "first_relief_boundary_percent": 5.0,
+  "not_calibrated_to_W1_L07_observation": true,
+  "one_part_per_million_percent": 0.0001,
+  "scale_separation_factor": 50000
+}

@@ -1,0 +1,66 @@
+{
+  "cases": {
+    "cross_fifteen": {
+      "category": null,
+      "category_status": "RELIEF_CATEGORY_NUMERICALLY_AMBIGUOUS",
+      "endpoint_categories": [
+        "MODERATE_RELIEF",
+        "LARGE_RELIEF"
+      ],
+      "interval": [
+        0.1499,
+        0.1501
+      ],
+      "is_statistical_confidence_interval": false
+    },
+    "cross_five": {
+      "category": null,
+      "category_status": "RELIEF_CATEGORY_NUMERICALLY_AMBIGUOUS",
+      "endpoint_categories": [
+        "SMALL_RELIEF",
+        "MODERATE_RELIEF"
+      ],
+      "interval": [
+        0.0499,
+        0.0501
+      ],
+      "is_statistical_confidence_interval": false
+    },
+    "negative_exact_boundary": {
+      "normalization_applied": true,
+      "normalized_removed_volume_mm3": 0.0,
+      "raw_removed_volume_mm3": -0.001,
+      "status": "ZERO_RELIEF_WITHIN_ENGINEERING_TOLERANCE"
+    },
+    "negative_inside": {
+      "normalization_applied": true,
+      "normalized_removed_volume_mm3": 0.0,
+      "raw_removed_volume_mm3": -0.0005,
+      "status": "ZERO_RELIEF_WITHIN_ENGINEERING_TOLERANCE"
+    },
+    "negative_outside": {
+      "normalization_applied": false,
+      "normalized_removed_volume_mm3": null,
+      "raw_removed_volume_mm3": -0.002,
+      "status": "WITNESS_NUMERICALLY_UNSTABLE"
+    },
+    "positive_near_five": {
+      "normalization_applied": false,
+      "normalized_removed_volume_mm3": 49.99,
+      "raw_removed_volume_mm3": 49.99,
+      "status": "NONNEGATIVE_RETAINED"
+    },
+    "tiny_positive": {
+      "normalization_applied": false,
+      "normalized_removed_volume_mm3": 1e-12,
+      "raw_removed_volume_mm3": 1e-12,
+      "status": "NONNEGATIVE_RETAINED"
+    }
+  },
+  "epsilon_zero_mm3": 0.001,
+  "fixture_source_volume_mm3": 1000.0,
+  "status": "PASS",
+  "unittest_count": 9,
+  "unittest_stderr": "test_absolute_floor_dominates_small_source (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_absolute_floor_dominates_small_source) ... ok\ntest_cross_fifteen_remains_ambiguous (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_cross_fifteen_remains_ambiguous) ... ok\ntest_cross_five_remains_ambiguous (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_cross_five_remains_ambiguous) ... ok\ntest_negative_exact_boundary_inclusive (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_negative_exact_boundary_inclusive) ... ok\ntest_negative_inside (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_negative_inside) ... ok\ntest_negative_outside (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_negative_outside) ... ok\ntest_one_part_per_million_scale (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_one_part_per_million_scale) ... ok\ntest_positive_near_five_preserved (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_positive_near_five_preserved) ... ok\ntest_tiny_positive_preserved (experiments.try6.tests.test_d1_w1_v2_zero_rule.ZeroRuleTests.test_tiny_positive_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.000s\n\nOK\n",
+  "unittest_stdout": ""
+}

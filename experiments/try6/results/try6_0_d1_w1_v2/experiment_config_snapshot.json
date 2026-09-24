@@ -1,0 +1,49 @@
+{
+  "category_thresholds_source": "frozen D1 protocol: <=0.05, <=0.15, >0.15",
+  "experiment_id": "try6_0_d1_w1_v2_scale_aware_zero_relief",
+  "frozen_d1_protocol": "experiments/try6/protocol/try6_0_d1.json",
+  "frozen_geometry_set": "experiments/try6/results/try6_0_d1/frozen_inputs/geometry_set.json",
+  "frozen_kfde_construction": "experiments/try6/results/try6_0_c2/kfde/construction_report.json",
+  "frozen_paths": [
+    "UNION_THEN_SINGLE_CUT",
+    "ORDERED_SEQUENTIAL_CUT"
+  ],
+  "frozen_w0_calibration": "experiments/try6/results/try6_0_d1_w0/calibration/tolerance_calibration.json",
+  "frozen_w1_protocol": "experiments/try6/protocol/try6_0_d1_w1.json",
+  "frozen_w1_result": "experiments/try6/results/try6_0_d1_w1",
+  "hard_occupancy_policy_source": "frozen W1 protocol and W0 calibration, unchanged",
+  "prohibited": [
+    "D1-v3 science",
+    "alignment rerun",
+    "localization",
+    "six-DOF capacity",
+    "KFDE/CAD modification",
+    "GT",
+    "VLM",
+    "final 96-case mechanics",
+    "formal holdout"
+  ],
+  "rationale": "one part per million is 0.0001 percent of source volume, 50000 times below the first 5-percent relief boundary",
+  "repeats_per_path": 2,
+  "requirements_to_evidence": {
+    "W1_eight_subsets_parity": "summary/w1_comparison.json",
+    "fresh_nine_subsets_two_paths": "summary/engineering_witness_metrics.csv",
+    "frozen_input_parity": "frozen_inputs/parity_audit.json",
+    "independent_readiness": "audit/independent_validation.json",
+    "raw_vs_normalized_all_measurements": "summary/raw_vs_normalized_relief.csv",
+    "rule_and_synthetic_boundaries_before_real": "zero_rule/synthetic_tests.json",
+    "spatial_hard_gates": "witnesses/*/path_records.json"
+  },
+  "scope": "technical_readiness_only",
+  "zero_rule": {
+    "epsilon_abs_source": "frozen W0 synthetic-calibrated absolute_mm3",
+    "epsilon_rel": 1e-06,
+    "formula": "epsilon_zero_mm3=max(epsilon_abs_mm3, epsilon_rel*source_volume_mm3)",
+    "inclusive_negative_boundary": true,
+    "negative_inside": "ZERO_RELIEF_WITHIN_ENGINEERING_TOLERANCE",
+    "negative_outside": "WITNESS_NUMERICALLY_UNSTABLE",
+    "nonnegative": "retain exact measured nonnegative value",
+    "normalize_only_when": "all W1 spatial, validity, repeat, reopen, topology, and interface hard gates pass",
+    "subset_specific_exceptions": false
+  }
+}
