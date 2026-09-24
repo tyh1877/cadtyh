@@ -1,0 +1,21 @@
+{
+  "W0_FULL_observation": {
+    "accounting_error_mm3": 0.00772199615403224,
+    "accounting_limit_mm3": 1.3254148181032444e-06,
+    "alternate_path_parity": false,
+    "build_success": true,
+    "removed_unique_volume_mm3": 1302.0436373097718,
+    "reopen_parity": true,
+    "repeatability_pass": true,
+    "residual_keepout_mm3": 0.0,
+    "solid_count": 3,
+    "source_volume_mm3": 13154.148181032444,
+    "state": "VALID_MULTI_SOLID",
+    "subset": "FULL",
+    "technical_pass": false,
+    "witness_volume_mm3": 11852.112265718826
+  },
+  "frozen_D1_v2_first_failure": "valid raw fuse, optional removeSplitter Bnd_Box is void",
+  "frozen_D1_v2_second_failure": "removed-volume mismatch after raw fuse fallback",
+  "historical_results_not_overwritten": true
+}

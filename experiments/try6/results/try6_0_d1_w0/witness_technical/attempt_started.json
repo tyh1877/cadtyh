@@ -1,0 +1,6 @@
+{
+  "planned_subsets": 9,
+  "canonical_path": "UNION_THEN_SINGLE_CUT",
+  "calibration_sha256": "207dfae0b2f72b0048b0cf5ee53ad67417d3d8d5fede4ba077d411b394e81a07",
+  "one_run_only": true
+}

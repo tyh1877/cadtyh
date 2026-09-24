@@ -1,0 +1,12 @@
+{
+  "FULL_cleanup_statuses": [
+    "OPTIONAL_CLEANUP_FAILED: Bnd_Box is void",
+    "OPTIONAL_CLEANUP_FAILED: Bnd_Box is void",
+    "OPTIONAL_CLEANUP_FAILED: Bnd_Box is void",
+    "OPTIONAL_CLEANUP_FAILED: Bnd_Box is void"
+  ],
+  "OCC_internal_cause_proven": false,
+  "cleanup_required_for_canonical_witness": false,
+  "conclusion": "optional cleanup fails on valid multi-solid BREP; raw geometry remains valid but accounting still fails",
+  "raw_witness_valid": true
+}

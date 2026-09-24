@@ -1,0 +1,32 @@
+{
+  "READY_FOR_D1_V3": false,
+  "checks": {
+    "D1_v2_alignment_untouched": true,
+    "FULL_union_valid": true,
+    "KFDE_epsilon_not_changed": true,
+    "both_paths_repeated": true,
+    "canonical_path_preregistered": true,
+    "cleanup_non_authoritative": true,
+    "fail_closed_denominator": true,
+    "holdout_untouched": true,
+    "interface_scaffold_invariant": true,
+    "no_forbidden_evaluation": true,
+    "occupancy_residuals_zero": true,
+    "prior_frozen_manifests": true,
+    "protocol_and_implementation_hashes": true,
+    "raw_BREP_and_reopen_valid": true,
+    "raw_artifact_hash": true,
+    "stable_accounting_failure": true,
+    "synthetic_coverage": true,
+    "tolerance_calibrated_before_real": true,
+    "tracked_result_hashes": true,
+    "twenty_named_tests_honest": true
+  },
+  "decision": "BOOLEAN_ACCOUNTING_BLOCKED",
+  "independent_of_runner": true,
+  "passed": 20,
+  "real_subsets_requested": 9,
+  "real_subsets_tested": 1,
+  "scientific_relief_conclusion": null,
+  "total": 20
+}

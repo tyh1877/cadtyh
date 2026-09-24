@@ -1,0 +1,15 @@
+{
+  "D1_v2_formula_scope_issue": "D1-v2 compared pre-allowed source/fused assembled witness; W0 uses mutable-only scope and still finds a smaller but material inconsistency",
+  "OCC_precision_or_BREP_topology_suspected": true,
+  "canonical_R1_source_minus_witness_mm3": 1302.0359153136178,
+  "canonical_R2_unique_source_intersect_union_mm3": 1302.0436373097718,
+  "canonical_error_mm3": 0.00772199615403224,
+  "component_overlap_double_count_is_cause": false,
+  "evidence": "R2 uses exact union; component volume sum is not used",
+  "evidence_serialization": "BREP and FCStd volume/state parity pass for both paths",
+  "exact_OCC_internal_root_cause_proven": false,
+  "frozen_limit_mm3": 1.3254148181032444e-06,
+  "sequential_error_mm3": 0.007540241432252515,
+  "serialization_is_cause": false,
+  "source_scope": "FrozenMatingEnvelopeCut minus frozen allowed region; no preserved/interface fusion"
+}

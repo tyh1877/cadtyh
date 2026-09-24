@@ -1,0 +1,56 @@
+{
+  "after_sha256": {
+    "FrozenMatingEnvelopeTool": "274e02ed88ff3a4d5ee330f2695a41f04b8ad72676c56305e811a13eeb1efd14",
+    "FrozenProximalBoreTool": "e60bb9822d6af7cb5588ff01a1e2f1dc3e03c1655d57ae325e095207be6c201c",
+    "FrozenScaffold": "c93546376c422d6be6150db85cd9bf1fb1f83f7dbc15220b71e8d18d99d50cf6"
+  },
+  "before": {
+    "FrozenMatingEnvelopeTool": {
+      "sha256": "274e02ed88ff3a4d5ee330f2695a41f04b8ad72676c56305e811a13eeb1efd14",
+      "state": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 9,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 5013.667715863949
+      }
+    },
+    "FrozenProximalBoreTool": {
+      "sha256": "e60bb9822d6af7cb5588ff01a1e2f1dc3e03c1655d57ae325e095207be6c201c",
+      "state": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 3,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 1058.5910605536167
+      }
+    },
+    "FrozenScaffold": {
+      "sha256": "c93546376c422d6be6150db85cd9bf1fb1f83f7dbc15220b71e8d18d99d50cf6",
+      "state": {
+        "below_tolerance_volumetric": false,
+        "can_boolean_cut": true,
+        "empty_reason": null,
+        "face_count": 22,
+        "is_null": false,
+        "is_valid": true,
+        "shell_count": 1,
+        "solid_count": 1,
+        "state": "VALID_SINGLE_SOLID",
+        "volume_mm3": 9698.134201036422
+      }
+    }
+  },
+  "invariant": true,
+  "source_sha256_after": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411"
+}

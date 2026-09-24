@@ -1,0 +1,9 @@
+{
+  "FULL_union_valid": true,
+  "FULL_union_volume_mm3": 79381.32150148967,
+  "completed_unions": 1,
+  "overlap_double_count_avoided": true,
+  "planned_unions": 9,
+  "stopped_after_FULL_accounting_failure": true,
+  "sum_component_volumes_mm3_not_used_for_accounting": 128564.10897658207
+}

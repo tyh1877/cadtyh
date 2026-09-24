@@ -1,0 +1,15 @@
+{
+  "FULL_boolean_accounting_failure": {
+    "artifact": "witness_technical/FULL/path_records.json",
+    "evidence_type": "computed",
+    "field": "metrics.removed_consistency_error_mm3"
+  },
+  "nine_subset_readiness": {
+    "evidence_type": "incomplete",
+    "reason": "FULL failed; eight not run"
+  },
+  "synthetic_calibration": {
+    "artifact": "calibration/synthetic_cases.json",
+    "evidence_type": "computed"
+  }
+}

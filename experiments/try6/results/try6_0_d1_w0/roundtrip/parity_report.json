@@ -1,0 +1,6 @@
+{
+  "FULL_paths_tested": 4,
+  "all_BREP_pass": true,
+  "all_FCStd_pass": true,
+  "other_subsets_not_run": 8
+}

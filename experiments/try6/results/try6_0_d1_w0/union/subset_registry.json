@@ -1,0 +1,64 @@
+[
+  {
+    "selected_neighbors": [
+      "L03",
+      "L05",
+      "L06",
+      "L07"
+    ],
+    "subset": "FULL"
+  },
+  {
+    "selected_neighbors": [
+      "L03"
+    ],
+    "subset": "L03"
+  },
+  {
+    "selected_neighbors": [
+      "L05"
+    ],
+    "subset": "L05"
+  },
+  {
+    "selected_neighbors": [
+      "L06"
+    ],
+    "subset": "L06"
+  },
+  {
+    "selected_neighbors": [
+      "L07"
+    ],
+    "subset": "L07"
+  },
+  {
+    "selected_neighbors": [
+      "L03",
+      "L05"
+    ],
+    "subset": "L03_L05"
+  },
+  {
+    "selected_neighbors": [
+      "L03",
+      "L06"
+    ],
+    "subset": "L03_L06"
+  },
+  {
+    "selected_neighbors": [
+      "L05",
+      "L06"
+    ],
+    "subset": "L05_L06"
+  },
+  {
+    "selected_neighbors": [
+      "L03",
+      "L05",
+      "L06"
+    ],
+    "subset": "L03_L05_L06"
+  }
+]

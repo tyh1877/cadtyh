@@ -1,0 +1,10 @@
+subset,status,build_success,state,solid_count,source_mm3,witness_mm3,removed_unique_mm3,keepout_residual_mm3,accounting_error_mm3,repeatability_pass,reopen_parity
+FULL,FAILED_ACCOUNTING,True,VALID_MULTI_SOLID,3,13154.148181032444,11852.112265718826,1302.0436373097718,0.0,0.00772199615403224,True,True
+L03,NOT_RUN_AFTER_FAIL_CLOSED,,,,,,,,,,
+L05,NOT_RUN_AFTER_FAIL_CLOSED,,,,,,,,,,
+L06,NOT_RUN_AFTER_FAIL_CLOSED,,,,,,,,,,
+L07,NOT_RUN_AFTER_FAIL_CLOSED,,,,,,,,,,
+L03_L05,NOT_RUN_AFTER_FAIL_CLOSED,,,,,,,,,,
+L03_L06,NOT_RUN_AFTER_FAIL_CLOSED,,,,,,,,,,
+L05_L06,NOT_RUN_AFTER_FAIL_CLOSED,,,,,,,,,,
+L03_L05_L06,NOT_RUN_AFTER_FAIL_CLOSED,,,,,,,,,,

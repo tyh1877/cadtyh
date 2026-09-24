@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "exact_nine_subset_execution": false,
+    "holdout_guard": true,
+    "keepout_residual": true,
+    "no_GT": true,
+    "no_VLM": true,
+    "removeSplitter_failure_nonfatal": true,
+    "removed_volume_consistency": false,
+    "scaffold_interface_invariance": true,
+    "subset_of_source": true,
+    "synthetic_disjoint": true,
+    "synthetic_effectively_empty": true,
+    "synthetic_full_removal": true,
+    "synthetic_overlapping_union": true,
+    "synthetic_partial": true,
+    "synthetic_repeatability": true,
+    "synthetic_repeated_overlap": true,
+    "synthetic_roundtrip": true,
+    "synthetic_thin_positive": true,
+    "synthetic_touching": true,
+    "unrefined_BREP_valid": true
+  },
+  "decision": "BOOLEAN_ACCOUNTING_BLOCKED",
+  "passed": 18,
+  "total": 20
+}
