@@ -1,0 +1,19 @@
+{
+  "all_normalization_after_hard_gates": true,
+  "epsilon_abs_mm3": 1e-08,
+  "epsilon_rel": 1e-06,
+  "normalization_counts": {
+    "FULL": 0,
+    "L03": 0,
+    "L03_L05": 0,
+    "L03_L05_L06": 0,
+    "L03_L06": 0,
+    "L05": 0,
+    "L05_L06": 0,
+    "L06": 0,
+    "L07": 12
+  },
+  "positive_measurements_retained": true,
+  "rule_sha256": "9a469091768341e42239aabc6305ceacf161160e34469ab1fe511bcb409a7a39",
+  "subset_specific_exceptions": false
+}

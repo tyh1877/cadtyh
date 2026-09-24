@@ -1,0 +1,13 @@
+{
+  "after": {
+    "FrozenMatingEnvelopeTool": "274e02ed88ff3a4d5ee330f2695a41f04b8ad72676c56305e811a13eeb1efd14",
+    "FrozenProximalBoreTool": "e60bb9822d6af7cb5588ff01a1e2f1dc3e03c1655d57ae325e095207be6c201c",
+    "FrozenScaffold": "c93546376c422d6be6150db85cd9bf1fb1f83f7dbc15220b71e8d18d99d50cf6"
+  },
+  "before": {
+    "FrozenMatingEnvelopeTool": "274e02ed88ff3a4d5ee330f2695a41f04b8ad72676c56305e811a13eeb1efd14",
+    "FrozenProximalBoreTool": "e60bb9822d6af7cb5588ff01a1e2f1dc3e03c1655d57ae325e095207be6c201c",
+    "FrozenScaffold": "c93546376c422d6be6150db85cd9bf1fb1f83f7dbc15220b71e8d18d99d50cf6"
+  },
+  "invariant": true
+}

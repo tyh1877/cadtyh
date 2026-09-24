@@ -1,0 +1,15 @@
+{
+  "D1_scientific_mechanism": {
+    "evidence_type": "not_evaluated",
+    "reason": "W1-v2 readiness only"
+  },
+  "decision": "READY_FOR_D1_V3",
+  "nine_spatially_valid_witnesses": {
+    "artifact": "summary/engineering_witness_metrics.csv",
+    "evidence_type": "computed"
+  },
+  "scale_aware_zero_rule": {
+    "artifact": "summary/raw_vs_normalized_relief.csv",
+    "evidence_type": "computed"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "subsets": 9,
+  "paths": [
+    "UNION_THEN_SINGLE_CUT",
+    "ORDERED_SEQUENTIAL_CUT"
+  ],
+  "repeats_per_path": 2,
+  "fresh_run": true,
+  "rule_sha256": "9a469091768341e42239aabc6305ceacf161160e34469ab1fe511bcb409a7a39"
+}

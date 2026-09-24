@@ -1,0 +1,65 @@
+{
+  "FULL": {
+    "W1_status": "PASS",
+    "W1_v2_status": "PASS",
+    "new_category": "MODERATE_RELIEF",
+    "previous_category": "MODERATE_RELIEF",
+    "raw_geometry_consistent": true
+  },
+  "L03": {
+    "W1_status": "PASS",
+    "W1_v2_status": "PASS",
+    "new_category": "SMALL_RELIEF",
+    "previous_category": "SMALL_RELIEF",
+    "raw_geometry_consistent": true
+  },
+  "L03_L05": {
+    "W1_status": "PASS",
+    "W1_v2_status": "PASS",
+    "new_category": "SMALL_RELIEF",
+    "previous_category": "SMALL_RELIEF",
+    "raw_geometry_consistent": true
+  },
+  "L03_L05_L06": {
+    "W1_status": "PASS",
+    "W1_v2_status": "PASS",
+    "new_category": "MODERATE_RELIEF",
+    "previous_category": "MODERATE_RELIEF",
+    "raw_geometry_consistent": true
+  },
+  "L03_L06": {
+    "W1_status": "PASS",
+    "W1_v2_status": "PASS",
+    "new_category": "MODERATE_RELIEF",
+    "previous_category": "MODERATE_RELIEF",
+    "raw_geometry_consistent": true
+  },
+  "L05": {
+    "W1_status": "PASS",
+    "W1_v2_status": "PASS",
+    "new_category": "SMALL_RELIEF",
+    "previous_category": "SMALL_RELIEF",
+    "raw_geometry_consistent": true
+  },
+  "L05_L06": {
+    "W1_status": "PASS",
+    "W1_v2_status": "PASS",
+    "new_category": "MODERATE_RELIEF",
+    "previous_category": "MODERATE_RELIEF",
+    "raw_geometry_consistent": true
+  },
+  "L06": {
+    "W1_status": "PASS",
+    "W1_v2_status": "PASS",
+    "new_category": "MODERATE_RELIEF",
+    "previous_category": "MODERATE_RELIEF",
+    "raw_geometry_consistent": true
+  },
+  "L07": {
+    "W1_status": "WITNESS_NUMERICALLY_UNSTABLE",
+    "W1_v2_status": "PASS",
+    "new_category": "SMALL_RELIEF",
+    "previous_category": null,
+    "raw_geometry_consistent": true
+  }
+}

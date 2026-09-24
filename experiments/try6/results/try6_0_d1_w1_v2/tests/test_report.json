@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "all_nine_subsets": true,
+    "all_nine_usable": true,
+    "cross_fifteen_ambiguous": true,
+    "cross_five_ambiguous": true,
+    "eight_W1_categories_unchanged": true,
+    "holdout_guard": true,
+    "interface_invariance": true,
+    "keepout_removed": true,
+    "negative_beyond_blocked": true,
+    "negative_exact_boundary": true,
+    "negative_inside": true,
+    "no_GT": true,
+    "no_VLM": true,
+    "no_subset_special_case": true,
+    "repeat_reopen": true,
+    "robust_large": true,
+    "robust_moderate": true,
+    "robust_small": true,
+    "source_containment": true,
+    "tiny_positive_retained": true,
+    "topology_stability": true,
+    "two_paths_same_frozen_implementation": true
+  },
+  "passed": 22,
+  "synthetic_unit_tests": 9,
+  "total": 22
+}
