@@ -1,0 +1,49 @@
+{
+  "L03_supported_witness_connected": true,
+  "axis": "LOCAL_CAPACITY_MISSING",
+  "causal_priority": "secondary to KFDE semantic diagnosis; no C2 redesign performed",
+  "expressibility": "REQUIRES_LOCAL_FEATURE",
+  "frozen_interfaces_preserved": true,
+  "primary_decision_not_based_on_false_positive_relief": true,
+  "supported_C1_component_count": 1,
+  "supported_relief_bbox_mm": {
+    "max_mm": [
+      15.788779386048724,
+      7.0,
+      4.431119807209825
+    ],
+    "min_mm": [
+      11.78135960912183,
+      -7.0,
+      0.43107448733701204
+    ],
+    "size_mm": [
+      4.007419776926893,
+      14.0,
+      4.000045319872813
+    ]
+  },
+  "supported_relief_localization": {
+    "conservative_dominant_fraction_max": 1.0,
+    "conservative_dominant_fraction_min": 1.0,
+    "dominant_region": "PROXIMAL",
+    "fractions": {
+      "DISTAL": 0.0,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 1.0
+    },
+    "localization_robustness": "LOCALIZED_ROBUST",
+    "localized": true,
+    "partition_consistent_with_original_D1_1e-3_mm3": true,
+    "partition_error_mm3": 0.0,
+    "regions_mm3": {
+      "DISTAL": 0.0,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 66.6038559337737
+    },
+    "removed_volume_mm3": 66.6038559337737,
+    "status": "MEASURED"
+  },
+  "supported_relief_mm3": 66.6038559337737,
+  "topology_redesign_supported": false
+}

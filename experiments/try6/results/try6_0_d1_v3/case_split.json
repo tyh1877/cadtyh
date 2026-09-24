@@ -1,0 +1,18 @@
+{
+  "accessed": false,
+  "evaluation_count": 0,
+  "formal_holdout_case_count": 32,
+  "formal_holdout_ids_not_read": true,
+  "frozen_alignment_rows": 65,
+  "frozen_witness_subsets": [
+    "FULL",
+    "L03",
+    "L05",
+    "L06",
+    "L07",
+    "L03_L05",
+    "L03_L06",
+    "L05_L06",
+    "L03_L05_L06"
+  ]
+}

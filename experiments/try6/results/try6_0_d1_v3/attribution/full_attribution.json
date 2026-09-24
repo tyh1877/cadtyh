@@ -1,0 +1,30 @@
+{
+  "FULL_localization": {
+    "conservative_dominant_fraction_max": 0.9010550432897403,
+    "conservative_dominant_fraction_min": 0.9010499989030011,
+    "dominant_region": "DISTAL",
+    "fractions": {
+      "DISTAL": 0.9010525210930244,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 0.09894880564221403
+    },
+    "localization_robustness": "LOCALIZED_ROBUST",
+    "localized": true,
+    "partition_consistent_with_original_D1_1e-3_mm3": false,
+    "partition_error_mm3": 0.0017274671754421433,
+    "regions_mm3": {
+      "DISTAL": 1173.2097019711014,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 128.83566280584603
+    },
+    "removed_volume_mm3": 1302.0436373097718,
+    "status": "MEASURED"
+  },
+  "FULL_normalized_relief_ratio": 0.09898291378464794,
+  "FULL_unique_removed_mm3": 1302.0436373097718,
+  "interpretation": "FULL moderate relief is KFDE-demanded, not wholly mechanically required; C1 suspect-only occupancy dominates",
+  "numerical_partition_error_mm3": 0.001671830334544211,
+  "shared_mm3": 0.0,
+  "supported_only_mm3": 66.6038559337737,
+  "suspect_only_mm3": 1235.4414532063327
+}

@@ -1,0 +1,67 @@
+{
+  "W1_recorded_unique_removed_mm3": 128.83566280584603,
+  "accepted_witness_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_w1_v2/witnesses/L03/UNION_THEN_SINGLE_CUT_0.brep",
+    "sha256": "04485a96458764162f3a10872d9cdf3b873b1d63969201b104cd785ff13a092f"
+  },
+  "accepted_witness_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 55,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 1,
+    "solid_count": 1,
+    "state": "VALID_SINGLE_SOLID",
+    "volume_mm3": 13025.315072459223
+  },
+  "component_ids": [
+    "L03_J03_00",
+    "L03_J03_01",
+    "L03_J03_02",
+    "L03_J03_03",
+    "L03_J03_04",
+    "L03_J03_05",
+    "L03_J03_06"
+  ],
+  "localization": {
+    "conservative_dominant_fraction_max": 1.0,
+    "conservative_dominant_fraction_min": 1.0,
+    "dominant_region": "PROXIMAL",
+    "fractions": {
+      "DISTAL": 0.0,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 1.0
+    },
+    "localization_robustness": "LOCALIZED_ROBUST",
+    "localized": true,
+    "partition_consistent_with_original_D1_1e-3_mm3": true,
+    "partition_error_mm3": 0.0,
+    "regions_mm3": {
+      "DISTAL": 0.0,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 128.83566280584603
+    },
+    "removed_volume_mm3": 128.83566280584603,
+    "status": "MEASURED"
+  },
+  "removed_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_v3/geometry/removed/L03/unique_removed.brep",
+    "sha256": "a7c0f78786748e68abe4da04156bbacb0d25ead95d13ac5504d37f90b0886d43"
+  },
+  "removed_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 12,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 3,
+    "solid_count": 3,
+    "state": "VALID_MULTI_SOLID",
+    "volume_mm3": 128.83566280584603
+  },
+  "removed_volume_crosscheck_delta_mm3": 0.0,
+  "subset": "L03"
+}

@@ -1,0 +1,73 @@
+{
+  "W1_recorded_unique_removed_mm3": 1302.0436373097718,
+  "accepted_witness_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_w1_v2/witnesses/FULL/UNION_THEN_SINGLE_CUT_0.brep",
+    "sha256": "5cf1e4eaa36f01d2addc1b34d63f40419800142d0f11b32e0a2624b2957e0ba3"
+  },
+  "accepted_witness_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 96,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 3,
+    "solid_count": 3,
+    "state": "VALID_MULTI_SOLID",
+    "volume_mm3": 11852.112265718793
+  },
+  "component_ids": [
+    "L03_J03_00",
+    "L03_J03_01",
+    "L03_J03_02",
+    "L03_J03_03",
+    "L03_J03_04",
+    "L03_J03_05",
+    "L03_J03_06",
+    "L05_FIXED_J04_00",
+    "L06_J05_00",
+    "L06_J05_01",
+    "L06_J05_02",
+    "L06_J05_03",
+    "L07_FIXED_J06_00"
+  ],
+  "localization": {
+    "conservative_dominant_fraction_max": 0.9010550432897403,
+    "conservative_dominant_fraction_min": 0.9010499989030011,
+    "dominant_region": "DISTAL",
+    "fractions": {
+      "DISTAL": 0.9010525210930244,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 0.09894880564221403
+    },
+    "localization_robustness": "LOCALIZED_ROBUST",
+    "localized": true,
+    "partition_consistent_with_original_D1_1e-3_mm3": false,
+    "partition_error_mm3": 0.0017274671754421433,
+    "regions_mm3": {
+      "DISTAL": 1173.2097019711014,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 128.83566280584603
+    },
+    "removed_volume_mm3": 1302.0436373097718,
+    "status": "MEASURED"
+  },
+  "removed_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_v3/geometry/removed/FULL/unique_removed.brep",
+    "sha256": "3d962bdefed49ca16499221187df439420b1a098f9ff3993bbc9c957f8f69f10"
+  },
+  "removed_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 58,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 5,
+    "solid_count": 5,
+    "state": "VALID_MULTI_SOLID",
+    "volume_mm3": 1302.0436373097718
+  },
+  "removed_volume_crosscheck_delta_mm3": 0.0,
+  "subset": "FULL"
+}

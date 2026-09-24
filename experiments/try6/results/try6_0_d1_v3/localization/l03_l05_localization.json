@@ -1,0 +1,68 @@
+{
+  "W1_recorded_unique_removed_mm3": 589.0493577055959,
+  "accepted_witness_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_w1_v2/witnesses/L03_L05/UNION_THEN_SINGLE_CUT_0.brep",
+    "sha256": "91d3f5dc6f498d40c1f4716d1a283e67ef760c6643afb14313feb7cc52b9ee5a"
+  },
+  "accepted_witness_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 77,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 1,
+    "solid_count": 1,
+    "state": "VALID_SINGLE_SOLID",
+    "volume_mm3": 12565.104197770657
+  },
+  "component_ids": [
+    "L03_J03_00",
+    "L03_J03_01",
+    "L03_J03_02",
+    "L03_J03_03",
+    "L03_J03_04",
+    "L03_J03_05",
+    "L03_J03_06",
+    "L05_FIXED_J04_00"
+  ],
+  "localization": {
+    "conservative_dominant_fraction_max": 0.7812895656780051,
+    "conservative_dominant_fraction_min": 0.781279950024906,
+    "dominant_region": "DISTAL",
+    "fractions": {
+      "DISTAL": 0.7812847578384788,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 0.21871794123954805
+    },
+    "localization_robustness": "NOT_LOCALIZED_ROBUST",
+    "localized": false,
+    "partition_consistent_with_original_D1_1e-3_mm3": false,
+    "partition_error_mm3": 0.0015898901781383756,
+    "regions_mm3": {
+      "DISTAL": 460.215284789928,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 128.83566280584603
+    },
+    "removed_volume_mm3": 589.0493577055959,
+    "status": "MEASURED"
+  },
+  "removed_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_v3/geometry/removed/L03_L05/unique_removed.brep",
+    "sha256": "112c7078691330f645ada0f8dc40276ddc0fc24aadb4b677d398e28620dae87e"
+  },
+  "removed_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 43,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 8,
+    "solid_count": 8,
+    "state": "VALID_MULTI_SOLID",
+    "volume_mm3": 589.0493577055959
+  },
+  "removed_volume_crosscheck_delta_mm3": 0.0,
+  "subset": "L03_L05"
+}

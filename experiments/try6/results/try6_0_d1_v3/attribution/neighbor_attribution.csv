@@ -1,0 +1,5 @@
+neighbor,all_geometry_aligned_unsafe,all_geometry_KFDE_violations,C1_aligned_unsafe,C1_false_positive_suspects,normalized_relief_percent,relief_category,dominant_region,localized,expressibility,interpretation
+L03,5,12,1,1,0.9794105007801818,SMALL_RELIEF,PROXIMAL,True,REQUIRES_LOCAL_FEATURE,"One C1 exact-supported pose requires 66.60 mm3 local proximal relief; ROI x=11.78..15.79 mm within a 32 mm global pad, W1 L03 witness remains one solid and interfaces invariant. Frozen six theta lack a local pocket node."
+L05,0,4,0,1,3.498598820482212,SMALL_RELIEF,DISTAL,True,UNKNOWN,"No C1 mechanically supported unsafe component; KFDE-demanded relief is semantically suspect, not CAD-capacity evidence."
+L06,0,16,0,4,5.534118182267397,MODERATE_RELIEF,DISTAL,True,UNKNOWN,"No C1 mechanically supported unsafe component; KFDE-demanded relief is semantically suspect, not CAD-capacity evidence."
+L07,0,0,0,0,0.0,ZERO_RELIEF_WITHIN_ENGINEERING_TOLERANCE,,,UNKNOWN,Engineering-zero relief; no supported unsafe component.

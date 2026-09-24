@@ -1,0 +1,47 @@
+{
+  "decision_priority_source": "frozen D1 protocol decision_priority",
+  "experiment_id": "try6_0_d1_v3_l04_final_causal_attribution",
+  "frozen_alignment": "experiments/try6/results/try6_0_d1_v2/alignment/raw_alignment.json",
+  "frozen_d1_protocol": "experiments/try6/protocol/try6_0_d1.json",
+  "frozen_geometry_set": "experiments/try6/results/try6_0_d1/frozen_inputs/geometry_set.json",
+  "frozen_kfde_construction": "experiments/try6/results/try6_0_c2/kfde/construction_report.json",
+  "frozen_witness_path": "UNION_THEN_SINGLE_CUT",
+  "frozen_witness_result": "experiments/try6/results/try6_0_d1_w1_v2",
+  "localization": {
+    "axis": "frozen L04 local x",
+    "localized_threshold_source": "frozen D1 protocol witness_localized_one_longitudinal_third_min_fraction",
+    "regions": [
+      "PROXIMAL",
+      "MIDDLE",
+      "DISTAL"
+    ],
+    "secondary_axes": "not used because frozen protocol does not define unambiguous upper/lower/side partition",
+    "stations_source": "frozen D1 protocol witness_longitudinal_cut_stations_mm"
+  },
+  "prohibited": [
+    "new VLM",
+    "new GT",
+    "new exact sweep",
+    "new KFDE",
+    "new CAD",
+    "theta search",
+    "final 96-case mechanics",
+    "formal holdout",
+    "C2-v2",
+    "L03/L07 expansion"
+  ],
+  "removed_region_method": "recompute G_mutable.common(exact frozen component union) using the same W0 exact-union method; cross-check against W1-v2 accepted PATH_A witness and recorded unique-removed volume; no witness reconstruction",
+  "requirements_to_evidence": {
+    "decision_trace": "attribution/decision_trace.json",
+    "frozen_alignment_and_witness_parity": "frozen_evidence/parity_audit.json",
+    "independent_result_validation": "audit/independent_validation.json",
+    "nine_witness_localization": "localization/localization_summary.csv",
+    "six_theta_mapping_and_causal_order": "capacity/six_theta_geometry_support.json and capacity/representation_capacity_summary.json",
+    "supported_suspect_component_registry": "semantic_decomposition/supported_component_registry.json and semantic_decomposition/suspect_component_registry.json",
+    "unique_geometric_decomposition": "semantic_decomposition/decomposition_summary.json"
+  },
+  "scope": "frozen_evidence_scientific_diagnostic",
+  "semantic_union_method": "W0 exact_union over frozen component order, once per frozen C1 category; overlap reported and never double-counted",
+  "supported_geometry_rule": "use only G1_C1_FINAL rows classified ALIGNED_UNSAFE; do not transfer unsafe labels from G2-G5 to the C1 witness",
+  "suspect_geometry_rule": "use only G1_C1_FINAL rows classified KFDE_FALSE_POSITIVE_SUSPECT"
+}

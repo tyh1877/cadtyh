@@ -1,0 +1,42 @@
+{
+  "C1_builder_source": "experiments/try6/scripts/freecad_c1_builder.py",
+  "active_parameter_names": [
+    "housing_width_mm",
+    "housing_height_mm",
+    "proximal_section_length_mm",
+    "transition_length_mm",
+    "distal_width_mm",
+    "distal_height_mm"
+  ],
+  "active_parameter_source": "experiments/try6/results/try6_0_c1_v2/solver/theta_selected.json",
+  "builder_sha256": "ddbffdcd3742c8a310ca259043e4d539a9db094a637c584f6310feab07d9139b",
+  "frozen_KFDG_features": [
+    "housing",
+    "profile_transition"
+  ],
+  "frozen_KFDG_sha256": "832169747f0f8fcd2a6370f314d891d310fb674c5199a31731e79bacba703e2b",
+  "no_local_pocket_feature_in_frozen_KFDG": true,
+  "no_parameter_perturbation_or_theta_search_run": true,
+  "proximal_pad_control": "housing_width_mm/housing_height_mm affect full YZ pad cross-section; proximal_section_length_mm changes full pad length",
+  "proximal_pad_selected_length_mm": 32.0,
+  "source_sha256": "9d5ffcf14db18bac48c9b9160835030af3d432137e6e298b833146b946936dc5",
+  "supported_relief_bbox_mm": {
+    "max_mm": [
+      15.788779386048724,
+      7.0,
+      4.431119807209825
+    ],
+    "min_mm": [
+      11.78135960912183,
+      -7.0,
+      0.43107448733701204
+    ],
+    "size_mm": [
+      4.007419776926893,
+      14.0,
+      4.000045319872813
+    ]
+  },
+  "supported_relief_bbox_x_span_mm": 4.007419776926893,
+  "transition_control": "transition_length_mm and distal_width_mm/distal_height_mm affect loft sections; not a local proximal cut"
+}

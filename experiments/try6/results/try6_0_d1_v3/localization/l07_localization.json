@@ -1,0 +1,57 @@
+{
+  "W1_recorded_unique_removed_mm3": 0.0,
+  "accepted_witness_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_w1_v2/witnesses/L07/UNION_THEN_SINGLE_CUT_0.brep",
+    "sha256": "e6557d6b247d0c738d7fb96f43621e5fa7b2218a9dd323b079d69f0e4fb08cdc"
+  },
+  "accepted_witness_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 45,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 1,
+    "solid_count": 1,
+    "state": "VALID_SINGLE_SOLID",
+    "volume_mm3": 13154.148554984411
+  },
+  "component_ids": [
+    "L07_FIXED_J06_00"
+  ],
+  "localization": {
+    "dominant_region": null,
+    "fractions": {
+      "DISTAL": null,
+      "MIDDLE": null,
+      "PROXIMAL": null
+    },
+    "localized": null,
+    "partition_error_mm3": 0.0,
+    "regions_mm3": {
+      "DISTAL": 0.0,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 0.0
+    },
+    "removed_volume_mm3": 0.0,
+    "status": "NO_MEASURABLE_RELIEF"
+  },
+  "removed_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_v3/geometry/removed/L07/unique_removed.brep",
+    "sha256": "d94d6764f1a229976a427da3d54079d14917079076fe7de18881302f3f5820d7"
+  },
+  "removed_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": false,
+    "empty_reason": "NO_VOLUMETRIC_SOLID_AFTER_ALLOWED_REGION_REMOVAL",
+    "face_count": 0,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 0,
+    "solid_count": 0,
+    "state": "EFFECTIVELY_EMPTY",
+    "volume_mm3": 0.0
+  },
+  "removed_volume_crosscheck_delta_mm3": 0.0,
+  "subset": "L07"
+}

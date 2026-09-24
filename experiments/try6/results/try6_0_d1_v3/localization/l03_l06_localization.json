@@ -1,0 +1,71 @@
+{
+  "W1_recorded_unique_removed_mm3": 856.8048911933132,
+  "accepted_witness_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_w1_v2/witnesses/L03_L06/UNION_THEN_SINGLE_CUT_0.brep",
+    "sha256": "7f8537208ada87a21e517d60b6d123089e8230fd10b23812848b2c2806f48013"
+  },
+  "accepted_witness_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 71,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 1,
+    "solid_count": 1,
+    "state": "VALID_SINGLE_SOLID",
+    "volume_mm3": 12297.348936105438
+  },
+  "component_ids": [
+    "L03_J03_00",
+    "L03_J03_01",
+    "L03_J03_02",
+    "L03_J03_03",
+    "L03_J03_04",
+    "L03_J03_05",
+    "L03_J03_06",
+    "L06_J05_00",
+    "L06_J05_01",
+    "L06_J05_02",
+    "L06_J05_03"
+  ],
+  "localization": {
+    "conservative_dominant_fraction_max": 0.84963747810591,
+    "conservative_dominant_fraction_min": 0.8496309349577634,
+    "dominant_region": "DISTAL",
+    "fractions": {
+      "DISTAL": 0.84963420652605,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 0.15036756224209974
+    },
+    "localization_robustness": "LOCALIZED_ROBUST",
+    "localized": true,
+    "partition_consistent_with_original_D1_1e-3_mm3": false,
+    "partition_error_mm3": 0.0015154892021200794,
+    "regions_mm3": {
+      "DISTAL": 727.9707438766693,
+      "MIDDLE": 0.0,
+      "PROXIMAL": 128.83566280584603
+    },
+    "removed_volume_mm3": 856.8048911933132,
+    "status": "MEASURED"
+  },
+  "removed_brep": {
+    "path": "experiments/try6/artifacts/try6_0_d1_v3/geometry/removed/L03_L06/unique_removed.brep",
+    "sha256": "d5f0e5feef221f36b97fb7a86fcac80f88c438e080fa4f0709051ddcf066694e"
+  },
+  "removed_state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 37,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 4,
+    "solid_count": 4,
+    "state": "VALID_MULTI_SOLID",
+    "volume_mm3": 856.8048911933132
+  },
+  "removed_volume_crosscheck_delta_mm3": 0.0,
+  "subset": "L03_L06"
+}

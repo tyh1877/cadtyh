@@ -1,0 +1,19 @@
+{
+  "artifact": {
+    "path": "experiments/try6/artifacts/try6_0_d1_v3/geometry/decomposition/R_supported.brep",
+    "sha256": "4113d9020b4cbc4f75ac15947c4257aee95620ab42ffd6b46e776ad793c759de"
+  },
+  "state": {
+    "below_tolerance_volumetric": false,
+    "can_boolean_cut": true,
+    "empty_reason": null,
+    "face_count": 6,
+    "is_null": false,
+    "is_valid": true,
+    "shell_count": 2,
+    "solid_count": 2,
+    "state": "VALID_MULTI_SOLID",
+    "volume_mm3": 66.6038559337737
+  },
+  "volume_mm3": 66.6038559337737
+}

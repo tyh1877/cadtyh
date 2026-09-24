@@ -1,0 +1,26 @@
+[
+  {
+    "expressibility": "REQUIRES_LOCAL_FEATURE",
+    "mechanical_support_count_C1": 1,
+    "neighbor": "L03",
+    "reason": "One C1 exact-supported pose requires 66.60 mm3 local proximal relief; ROI x=11.78..15.79 mm within a 32 mm global pad, W1 L03 witness remains one solid and interfaces invariant. Frozen six theta lack a local pocket node."
+  },
+  {
+    "expressibility": "UNKNOWN",
+    "mechanical_support_count_C1": 0,
+    "neighbor": "L05",
+    "reason": "No C1 mechanically supported unsafe component; KFDE-demanded relief is semantically suspect, not CAD-capacity evidence."
+  },
+  {
+    "expressibility": "UNKNOWN",
+    "mechanical_support_count_C1": 0,
+    "neighbor": "L06",
+    "reason": "No C1 mechanically supported unsafe component; KFDE-demanded relief is semantically suspect, not CAD-capacity evidence."
+  },
+  {
+    "expressibility": "UNKNOWN",
+    "mechanical_support_count_C1": 0,
+    "neighbor": "L07",
+    "reason": "Engineering-zero relief; no supported unsafe component."
+  }
+]

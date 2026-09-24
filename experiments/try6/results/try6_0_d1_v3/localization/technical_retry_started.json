@@ -1,0 +1,8 @@
+{
+  "first_failure_sha256": "0286eace879fd2b6de9c8158c153c8d60570d3743039f97c3a8f217d03445294",
+  "new_worker_sha256": "68fe91dce9f68bb0a82792dfdb062c1699793319405ba35423c5458136c90541",
+  "original_worker_sha256": "905204eaaa014bd22fabc3e6cb72b69c6bff1ffa8bac5297158a3752662700b9",
+  "scientific_inputs_and_thresholds_unchanged": true,
+  "scientific_protocol_sha256": "9de0176e07e14581d25ed69b467b88b9bfcc2876ab45dc82b50acd44da840e19",
+  "technical_change": "Retain the original 21/42 mm partitions and 80-percent localization threshold. Record the raw partition discrepancy and an algebraic conservative bound on dominant-region fraction; do not silently discard or adjust regional volumes. If the bound straddles 80 percent, mark localization numerically ambiguous."
+}

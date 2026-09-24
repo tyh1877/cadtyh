@@ -1,0 +1,24 @@
+{
+  "alignment_rate": {
+    "artifact": "experiments/try6/results/try6_0_d1_v2/alignment/raw_alignment.json",
+    "evidence_type": "computed_frozen",
+    "field": "cases.alignment_category"
+  },
+  "final_decision": {
+    "artifact": "attribution/decision_trace.json",
+    "evidence_type": "inferred_from_computed"
+  },
+  "localization": {
+    "artifact": "localization/localization_summary.csv",
+    "evidence_type": "computed"
+  },
+  "six_theta_support": {
+    "artifact": "capacity/six_theta_geometry_support.json",
+    "evidence_type": "code_derived"
+  },
+  "supported_vs_suspect_relief": {
+    "artifact": "semantic_decomposition/decomposition_summary.json",
+    "evidence_type": "computed",
+    "field": "supported_only_mm3,suspect_only_mm3,shared_mm3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "KFDE_and_CAD_unchanged": true,
+  "alignment_frozen": true,
+  "formal_holdout_untouched": true,
+  "prior_manifest_sha256": {
+    "try6_0_c1_v2": "30664b7742e7d7f5e2a738ad34f7cbfab7ca3a1d6d59e75a102b8134500e8441",
+    "try6_0_c2": "f1c8710d0aec44bfcfe8a07089186e101d88a579696cfd021957ed253743876e",
+    "try6_0_d0": "33bcb7fd039d8bac4b06bec6df874ed5f75a018221a15368df1c052b4a2d4f16",
+    "try6_0_d1": "f6677fa2bc4f6314587e2d01193f15831db8eae36b1ac75afffda020e6476f4a",
+    "try6_0_d1_t0": "ca6ab7c4bc78432f75ac5ef40413a6bc0a5bcaa48b9ade09c56058ae25700b17",
+    "try6_0_d1_v2": "71837948a34c40d84040fdbc25df3063c4f45c4192c35552b9f248b64120d474",
+    "try6_0_d1_w0": "96ca28eba716ddb71737c7a346aab0696be11833f67e19458d5b9b1f5a2ac153",
+    "try6_0_d1_w1": "660a862b978b0248b8e925dbcd8ff321b6024b4880268ae8246dacc7c4ce1bd0",
+    "try6_0_d1_w1_v2": "0cde644b41aad0848afc89fa3378757a43bed83aa14121cef088462829396995"
+  },
+  "witness_frozen": true
+}

@@ -1,0 +1,6 @@
+{
+  "accepted_path": "UNION_THEN_SINGLE_CUT",
+  "manifest_sha256": "0cde644b41aad0848afc89fa3378757a43bed83aa14121cef088462829396995",
+  "metrics_sha256": "954fa9a3a2e2ec65836013b3cae086b5383771301e7d015d14cd0abacbe488cc",
+  "result_root": "experiments/try6/results/try6_0_d1_w1_v2"
+}

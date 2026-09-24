@@ -1,0 +1,28 @@
+{
+  "C1_shared_mm3": 0.0,
+  "C1_supported_count": 1,
+  "C1_supported_only_mm3": 66.6038559337737,
+  "C1_suspect_count": 6,
+  "C1_suspect_only_mm3": 1235.4414532063327,
+  "alignment_high_threshold_frozen": 0.9,
+  "alignment_rate_frozen": 0.15625,
+  "all_geometry_counts": {
+    "ALIGNED_SAFE": 33,
+    "ALIGNED_UNSAFE": 5,
+    "KFDE_FALSE_POSITIVE_SUSPECT": 27
+  },
+  "authority_contradiction": false,
+  "decision": "KFDE_SEMANTICS_MISALIGNED",
+  "mixed_label_not_selected_reason": "Frozen decision priority selects substantial semantic misalignment before a secondary local-capacity issue",
+  "next_method_implication": "KFDE semantic redesign",
+  "no_method_implemented": true,
+  "priority": [
+    "KFDE_AUTHORITY_INCONSISTENCY",
+    "KFDE_SEMANTICS_MISALIGNED",
+    "MIXED_KFDE_AND_REPRESENTATION_ISSUE",
+    "LOCAL_RELIEF_FEATURE_NEEDED",
+    "PARAMETRIC_TOPOLOGY_INSUFFICIENT",
+    "DIAGNOSTIC_INCONCLUSIVE"
+  ],
+  "representation_axis_secondary": "LOCAL_CAPACITY_MISSING"
+}
