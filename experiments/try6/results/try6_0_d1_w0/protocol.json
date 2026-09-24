@@ -1,0 +1,57 @@
+{
+  "accounting_tolerance_rule": {
+    "absolute_ceiling_mm3": 0.0001,
+    "absolute_floor_mm3": 1e-08,
+    "calibration_multiplier": 1000,
+    "formula": "max(absolute_floor, multiplier * max_synthetic_absolute_error) + max(relative_floor, multiplier * max_synthetic_relative_error) * max(1, source_volume_mm3)",
+    "must_freeze_before_real_subsets": true,
+    "not_KFDE_feasibility_epsilon": true,
+    "relative_ceiling": 1e-08,
+    "relative_floor": 1e-10
+  },
+  "calibration_cases": [
+    "DISJOINT",
+    "PARTIAL",
+    "FULL_REMOVAL",
+    "TOUCHING",
+    "OVERLAPPING_UNION",
+    "REPEATED_OVERLAP",
+    "THIN_POSITIVE",
+    "DERIVED_EMPTY"
+  ],
+  "calibration_repetitions": 3,
+  "candidate_paths": [
+    "UNION_THEN_SINGLE_CUT",
+    "ORDERED_SEQUENTIAL_CUT"
+  ],
+  "canonical_selection_rule": "UNION_THEN_SINGLE_CUT if synthetic calibration passes; sequential cut is corroboration only, never a real-result fallback",
+  "cleanup_policy": "optional diagnostic removeSplitter only; canonical witness always unrefined exact BREP",
+  "component_order": "frozen construction_report component order",
+  "experiment_id": "try6_0_d1_w0_boolean_reliability",
+  "frozen_d1_protocol": "experiments/try6/protocol/try6_0_d1.json",
+  "frozen_d1_v2_result": "experiments/try6/results/try6_0_d1_v2",
+  "frozen_geometry_set": "experiments/try6/results/try6_0_d1/frozen_inputs/geometry_set.json",
+  "frozen_kfde_construction": "experiments/try6/results/try6_0_c2/kfde/construction_report.json",
+  "frozen_t0_classifier": "experiments/try6/scripts/volumetric_geometry_state.py",
+  "prohibited": [
+    "D1-v3 science",
+    "alignment rerun",
+    "GT",
+    "VLM",
+    "final 96-case mechanics",
+    "formal holdout",
+    "KFDE/CAD modification",
+    "relief interpretation"
+  ],
+  "required_evidence": {
+    "D1_v2_failure_root_cause": "failure_audit/volume_consistency_analysis.json",
+    "calibration_and_frozen_tolerance": "calibration/tolerance_calibration.json",
+    "frozen_input_and_holdout_parity": "audit/frozen_state_audit.json",
+    "independent_readiness": "audit/independent_validation.json",
+    "nine_witness_invariants": "witness_technical/technical_summary.csv",
+    "synthetic_repeatability_and_roundtrip": "calibration/synthetic_cases.json",
+    "union_validity": "union/union_validation.csv"
+  },
+  "scope": "technical_readiness_only",
+  "union_rule": "left-fold exact OCC fuse over frozen component order, without removeSplitter; duplicate/overlapping occupancy is geometrically unioned, never summed"
+}

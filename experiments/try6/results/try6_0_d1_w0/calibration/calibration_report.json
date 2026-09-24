@@ -1,0 +1,19 @@
+{
+  "cases": [
+    "DISJOINT",
+    "PARTIAL",
+    "FULL_REMOVAL",
+    "TOUCHING",
+    "OVERLAPPING_UNION",
+    "REPEATED_OVERLAP",
+    "THIN_POSITIVE",
+    "DERIVED_EMPTY"
+  ],
+  "cleanup_failure_is_nonfatal": true,
+  "paths": [
+    "UNION_THEN_SINGLE_CUT",
+    "ORDERED_SEQUENTIAL_CUT"
+  ],
+  "repetitions": 3,
+  "synthetic_result": "PASS"
+}

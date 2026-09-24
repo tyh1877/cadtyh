@@ -1,0 +1,16 @@
+{
+  "BOOLEAN_ACCOUNTING_TOLERANCE": {
+    "absolute_mm3": 1e-08,
+    "formula": "max(absolute_floor, multiplier * max_synthetic_absolute_error) + max(relative_floor, multiplier * max_synthetic_relative_error) * max(1, source_volume_mm3)",
+    "relative": 1e-10
+  },
+  "KFDE_feasibility_epsilon_mm3_unchanged": 1e-06,
+  "calibration_ceilings_pass": true,
+  "frozen_before_real_witness": true,
+  "max_synthetic_absolute_error_mm3": 2.2737367544323206e-13,
+  "max_synthetic_relative_error": 2.273736754432321e-16,
+  "real_witness_inputs_not_opened_by_worker": true,
+  "repeatability_pass": true,
+  "serialization_parity_pass": true,
+  "status": "PASS"
+}

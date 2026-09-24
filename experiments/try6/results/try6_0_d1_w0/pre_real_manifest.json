@@ -1,0 +1,42 @@
+{
+  "Boolean_helper_sha256": "dd7b80b96719badf43c98de4e1d2a426255e0c3f9e0f660dcd2240ac872f1989",
+  "C1_source_sha256": "52b881b825feea636f096fc7fb03cbaf60393d4d7adeedebb1fc5bebc8566411",
+  "T0_classifier_sha256": "fa1e5c336d493ac2cd0ad80d058468559d1c6dec1b2ad545f25fdc3fddbdb0aa",
+  "allowed_region_sha256": "5eef89d6f4469fcd60291fe8761a63cd5fd85b79d016ed9054aa88f0df6432a5",
+  "calibration_sha256": "207dfae0b2f72b0048b0cf5ee53ad67417d3d8d5fede4ba077d411b394e81a07",
+  "canonical_path_sha256": "d4102ce2ee8f2a5a792b13d6abae71cffc6f3edd43e0b655e2a60df5dbeba2a2",
+  "component_sha256": {
+    "L03_J03_00": "fd8ce0eb51467ef088fe5d37b8c2d1bb7dd83c5bad3481b6157573b0980b180f",
+    "L03_J03_01": "034a2b439bf4ad1f82707eb9ad11cf74de9a0319c0abcd0d0417a25bec2b0d34",
+    "L03_J03_02": "0986766f8032b976541f11ad435df69f74755547040fbd752040c69e40182b4a",
+    "L03_J03_03": "6474691582403cbd7b3d1a8423559d4e097e5ad5d5d6af127f696b18e6278031",
+    "L03_J03_04": "f41fabae5c03866bbd6c6a91349fe4c7f111faaa4107e3b24449c655b4d0d316",
+    "L03_J03_05": "8338ce721966f9458f6c8f9efeabaa34199f386584dfe8df09845a7648de8b90",
+    "L03_J03_06": "87e9cd68a565eb0e97a059f21425dd4577a75d22a22d0410ad4a0b64c76cd3b5",
+    "L05_FIXED_J04_00": "e263427958d2f8fe74a54dc6ccfaf7fe6bca4e0086a0f9c7a086287a17d5886e",
+    "L06_J05_00": "0c3a82d97b831f1f769f9072b784e4327839c2315ad3900f0fafdbf2eaeeac37",
+    "L06_J05_01": "b2038d9ffad14e43924eb9a601e2b1c80bea32dbfb0b52318ae5af5a9bd4fcdd",
+    "L06_J05_02": "e0f4c050cff9ddb1035d68195e9dd5ad9089b362ba19c921f59241974ea4c253",
+    "L06_J05_03": "edb5ea44b4cacc71bb9a9588c55666d97078f212b200e554f5668d436fcc0560",
+    "L07_FIXED_J06_00": "3d6c7f2a3679da04085677e7925ab136efe8b74cd0617643acf24809e885f286"
+  },
+  "created_utc": "2026-09-24T01:41:11.705663+00:00",
+  "freecad_python": "D:\\software\\freeCAD\\install\\bin\\python.exe",
+  "freecad_version": [
+    "1",
+    "1",
+    "1",
+    "20260414 (Git shallow)",
+    "Unknown",
+    "2026/04/14 22:09:59",
+    "(HEAD detached at 0108fd4b4)",
+    "0108fd4b4850cc46e625b60e53cea7a7bbe69f8d"
+  ],
+  "frozen_D1_protocol_sha256": "b42413eda709c4b1c59755387d1076d5d24ff611c6c411c4300815b9559cb034",
+  "occ_version": "7.8.1",
+  "protocol_sha256": "232206e30b39111d12313ef900ffc9c8dc7587668631672f4c5e9f3e95b6c2b2",
+  "python_environment": "D:\\CADtest\\papertest\\.venv\\Scripts\\python.exe",
+  "starting_commit": "a3ee1e8f8be00be300948fb9d0f72fc419b9cb5b",
+  "subset_definitions_sha256": "4f2ea7e32d5916f20cac71294e8fc606412b44092d5b94f856652ec1b6a96a9b",
+  "synthetic_raw_sha256": "e7979328c93b360f01b47f86de0d61942b97eb1df26268e3ce949bbd73ea74dc"
+}

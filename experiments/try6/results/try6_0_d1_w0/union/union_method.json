@@ -1,0 +1,5 @@
+{
+  "component_order": "frozen construction_report component order",
+  "method": "left-fold exact OCC fuse over frozen component order, without removeSplitter; duplicate/overlapping occupancy is geometrically unioned, never summed",
+  "optional_cleanup_required": false
+}

@@ -1,0 +1,7 @@
+{
+  "paths": [
+    "UNION_THEN_SINGLE_CUT",
+    "ORDERED_SEQUENTIAL_CUT"
+  ],
+  "selection_rule": "UNION_THEN_SINGLE_CUT if synthetic calibration passes; sequential cut is corroboration only, never a real-result fallback"
+}
